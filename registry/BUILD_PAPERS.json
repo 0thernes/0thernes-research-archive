@@ -6,26 +6,31 @@
     "orcid": "0009-0006-8168-9648",
     "affiliation": "0thernes LLC"
   },
-  "updated_utc": "2026-11-21T09:19:00Z",
+  "updated_utc": "2026-11-21T09:34:00Z",
   "builds": [
     {
       "id": "0TH-BUILD-002",
       "slug": "planaria",
       "title": "PLANARIA: Progressive Holographic Executable Architecture (.hbin), Multi-Stratum Compilation, Autonomous Control-Flow Anastomosis, and Cryptographic Cellular Quorum",
       "domain": "Systems Architecture / Coding Theory / Formal Methods",
-      "date": "2026-11-18",
-      "version": "v2.0.0",
+      "date": "2026-11-21",
+      "version": "v2.1.0",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
       "affiliation": "0thernes LLC",
       "repository": "https://github.com/0thernes/planaria",
       "submodule_path": "repos/planaria",
-      "pinned_commit": "a98946311ccdf80d112c283cdb1a2ad7a9165d39",
+      "pinned_commit": "b12a1c997161d7fab635d056688276ae048bb308",
       "archived_artifacts": [
+        {
+          "path": "builds/0TH-BUILD-002_planaria/Donahue_2026_planaria.pdf",
+          "source_path": "dist/Donahue_2026_planaria.pdf",
+          "sha256": "4ace7864d3c5b119691d29ab2507afa22399e3a8a3c86ed3ee8f43e5c09306ae"
+        },
         {
           "path": "builds/0TH-BUILD-002_planaria/WHITE_PAPER.md",
           "source_path": "paper/WHITE_PAPER.md",
-          "sha256": "e0df3162727d5b0b1c53cd7122f636ec28e7c8bb2d70033c622a005f438bddcd"
+          "sha256": "91b82b1a94639cdc5bd4893297516dd7d8c5acf079acdaa1ee9b6576fbe57d3b"
         }
       ],
       "lean_verification": {
@@ -36,14 +41,15 @@
         "audited_theorems": 38,
         "axiom_allowlist": [
           "propext",
+          "Classical.choice",
           "Quot.sound"
         ],
         "entry_point": "lean/PlanariaProofs.lean",
-        "live_audit_status": "Build completed successfully (9 jobs); 0 sorry; all 38 #print axioms within [propext, Quot.sound] or empty"
+        "live_audit_status": "Build completed successfully (9 jobs); 0 warnings; 0 sorry; all 38 #print axioms within [propext, Classical.choice, Quot.sound] (7 zero-axiom constructive); GitHub CI #44890541291 (3/3 jobs GREEN); Software Heritage save #2675014"
       },
-      "summary": "Progressive Holographic Instruction Stratification (.hbin) architecture integrating GF(2^8) Reed-Solomon/Cauchy erasure coding, Merkle cellular authentication, multi-stratum VM execution, and quantum-temporal engine invariants, verified by 38 pure Lean 4 (v4.35.0) machine-checked proofs.",
-      "verification_boundary": "All 38 Lean 4 theorems (covering GF(256) arithmetic, Byzantine quorum thresholds, mitosis bounds, stratum anastomosis, xenograft ABI, and quantum-temporal norm/rewind invariants) compile cleanly in pure Lean 4.35.0 with zero Mathlib, zero native_decide, and zero sorry.",
-      "falsification_command": "cd repos/planaria/lean && lake build"
+      "summary": "Progressive Holographic Instruction Stratification (.hbin) architecture integrating GF(2^8) Reed-Solomon/Cauchy erasure coding, Depth-8 SHA-256-128 Merkle cellular authentication, Plang compiler, PVM-32 anastomosis VM, 4 compiled living .hbin species, WebGL2 3D temporal-quantum engine, 16-suite falsification harness, Ed25519 attestation, frozen 7-page AMS-LaTeX white paper PDF + standalone arXiv bundle, and 38 pure Lean 4 (v4.35.0) machine-checked proofs.",
+      "verification_boundary": "All 38 Lean 4 theorems (covering GF(256) arithmetic, Byzantine quorum thresholds, mitosis bounds, stratum anastomosis, xenograft ABI, and quantum-temporal norm/rewind/combinatorial invariants) compile cleanly in pure Lean 4.35.0 with zero Mathlib, zero native_decide, and zero sorry, strictly within [propext, Classical.choice, Quot.sound]. Runtime JS implementation, Monte Carlo survival curves, and WebGL2 3D engine are separately tested by the 16-suite falsification harness (npm test) and Ubuntu CI.",
+      "falsification_command": "cd repos/planaria && npm run build && npm test && cd lean && lake clean && lake build"
     },
     {
       "id": "0TH-BUILD-003",

@@ -2,11 +2,11 @@
 
 **Author:** Alexander Stephen Donahue (0thernes LLC) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
 **Public Embedded Pure Lean 4.35.0 Proofs Audited:** 116 theorems across 2,310 lines (zero Mathlib, zero `sorry`)  
-**Updated:** `2026-11-21T09:19:00Z`
+**Updated:** `2026-11-21T09:34:00Z`
 
 | ID | Date | Repo / Version | Embedded Lean 4 Proofs | Frozen White Paper / Audit | Dossier |
 |---|---|---|---|---|---|
-| `0TH-BUILD-002` | 2026-11-18 | [`planaria`](https://github.com/0thernes/planaria) `v2.0.0` | 38 theorems (7 files, 976 lines) | [WHITE_PAPER.md](../builds/0TH-BUILD-002_planaria/WHITE_PAPER.md) | [Evidence](../builds/0TH-BUILD-002_planaria/EVIDENCE.md) |
+| `0TH-BUILD-002` | 2026-11-21 | [`planaria`](https://github.com/0thernes/planaria) `v2.1.0` | 38 theorems (7 files, 976 lines) | [Donahue_2026_planaria.pdf](../builds/0TH-BUILD-002_planaria/Donahue_2026_planaria.pdf) | [Evidence](../builds/0TH-BUILD-002_planaria/EVIDENCE.md) |
 | `0TH-BUILD-003` | 2026-11-18 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) `v1.0.0` | 24 theorems (5 files, 614 lines) | [WHITE_PAPER.md](../builds/0TH-BUILD-003_ultrametrica/WHITE_PAPER.md) | [Evidence](../builds/0TH-BUILD-003_ultrametrica/EVIDENCE.md) |
 | `0TH-BUILD-004` | 2026-07-01 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) `2026-07-02-qa` | Audit / Methodology (non-Lean) | [WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md](../builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md) | [Evidence](../builds/0TH-BUILD-004_unsolved-mathematics/EVIDENCE.md) |
 | `0TH-BUILD-005` | 2026-06-27 | [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) `v0.14.3` | Audit / Methodology (non-Lean) | [cqm-alife-audit.pdf](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/cqm-alife-audit.pdf) | [Evidence](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/EVIDENCE.md) |
@@ -17,10 +17,10 @@
 
 ## 0TH-BUILD-002 — PLANARIA: Progressive Holographic Executable Architecture (.hbin), Multi-Stratum Compilation, Autonomous Control-Flow Anastomosis, and Cryptographic Cellular Quorum
 
-- **Repository:** https://github.com/0thernes/planaria (`v2.0.0`, pinned `a98946311ccd` at `repos/planaria`)
-- **Lean 4 Audit:** Build completed successfully (9 jobs); 0 sorry; all 38 #print axioms within [propext, Quot.sound] or empty
-- **Summary:** Progressive Holographic Instruction Stratification (.hbin) architecture integrating GF(2^8) Reed-Solomon/Cauchy erasure coding, Merkle cellular authentication, multi-stratum VM execution, and quantum-temporal engine invariants, verified by 38 pure Lean 4 (v4.35.0) machine-checked proofs.
-- **Verification Boundary:** All 38 Lean 4 theorems (covering GF(256) arithmetic, Byzantine quorum thresholds, mitosis bounds, stratum anastomosis, xenograft ABI, and quantum-temporal norm/rewind invariants) compile cleanly in pure Lean 4.35.0 with zero Mathlib, zero native_decide, and zero sorry.
+- **Repository:** https://github.com/0thernes/planaria (`v2.1.0`, pinned `b12a1c997161` at `repos/planaria`)
+- **Lean 4 Audit:** Build completed successfully (9 jobs); 0 warnings; 0 sorry; all 38 #print axioms within [propext, Classical.choice, Quot.sound] (7 zero-axiom constructive); GitHub CI #44890541291 (3/3 jobs GREEN); Software Heritage save #2675014
+- **Summary:** Progressive Holographic Instruction Stratification (.hbin) architecture integrating GF(2^8) Reed-Solomon/Cauchy erasure coding, Depth-8 SHA-256-128 Merkle cellular authentication, Plang compiler, PVM-32 anastomosis VM, 4 compiled living .hbin species, WebGL2 3D temporal-quantum engine, 16-suite falsification harness, Ed25519 attestation, frozen 7-page AMS-LaTeX white paper PDF + standalone arXiv bundle, and 38 pure Lean 4 (v4.35.0) machine-checked proofs.
+- **Verification Boundary:** All 38 Lean 4 theorems (covering GF(256) arithmetic, Byzantine quorum thresholds, mitosis bounds, stratum anastomosis, xenograft ABI, and quantum-temporal norm/rewind/combinatorial invariants) compile cleanly in pure Lean 4.35.0 with zero Mathlib, zero native_decide, and zero sorry, strictly within [propext, Classical.choice, Quot.sound]. Runtime JS implementation, Monte Carlo survival curves, and WebGL2 3D engine are separately tested by the 16-suite falsification harness (npm test) and Ubuntu CI.
 - **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-002_planaria/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-002_planaria/METADATA.json)
 
 ## 0TH-BUILD-003 — ULTRAMETRICA: Exact Non-Archimedean Holography, Recursive Adelic Valuation-Residue Symmetries, Tate-Curve BTZ Ollivier-Ricci Curvature, and Real-Time p-adic Quantum Gravity
