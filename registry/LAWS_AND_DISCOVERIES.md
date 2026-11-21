@@ -1,8 +1,8 @@
 # Tier III — Public Laws, Pre-Registered Empirical Claims, Discoveries & Open-Problem Atlases
 
 **Author:** Alexander Stephen Donahue (0thernes LLC) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
-**Totals:** 10 public registries · 36 SHA-256 frozen snapshots  
-**Updated:** `2026-11-21T09:06:23Z`
+**Totals:** 10 public registries · 39 SHA-256 frozen snapshots  
+**Updated:** `2026-11-21T23:05:41Z`
 
 > **Epistemic Discipline:** Tier III entries preserve binding architectural laws, SHA-256-locked pre-registrations, controlled empirical discoveries (including null/falsified results), finite computational certificates, and structured open-problem atlases. None of these are represented as Lean-proved general mathematical theorems.
 
@@ -17,7 +17,7 @@
 | `0TH-DISC-007` | 2026-11-12 | `technical_synthesis_compendium` | [`glitchling-jam`](https://github.com/0thernes/glitchling-jam) | Glitchling Master Compendium: 29-PDF Synthesis (1,932 Pages) Across Quantum 2050, Contextuality, NESTOR/HEPTARCH & Embodied A-Life | 3 | [Evidence](../discoveries/0TH-DISC-007_glitchling-master-compendium/EVIDENCE.md) |
 | `0TH-DISC-008` | 2026-11-05 | `architectural_synthesis_report` | [`dimension-omega-singularity`](https://github.com/0thernes/dimension-omega-singularity) | Dimension Omega Singularity: 3,000-Mechanism Architectural Synthesis Reports (Biologic Substrates, High-Weirdness & A-Life/Consciousness Indicators) | 3 | [Evidence](../discoveries/0TH-DISC-008_dimension-omega-3000-catalogs/EVIDENCE.md) |
 | `0TH-DISC-009` | 2026-07-05 | `computational_reference_atlas` | [`grimoire-algorithms-of-the-arcane`](https://github.com/0thernes/grimoire-algorithms-of-the-arcane) | Closed-Form Math Study Atlas (1,123 Anchored Tests) & Grimoire 1,000-Algorithm Verification Ledger | 3 | [Evidence](../discoveries/0TH-DISC-009_math-and-algorithm-atlases/EVIDENCE.md) |
-| `0TH-DISC-010` | 2026-11-21 | `formal_addenda_and_provenance_map` | [`hoggar-bound-lab`](https://github.com/0thernes/hoggar-bound-lab) | Hoggar Bound Lab: Provenance Map of 3 Historical Source Papers, Claim-to-Theorem Map & Conjecture E Addendum | 5 | [Evidence](../discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/EVIDENCE.md) |
+| `0TH-DISC-010` | 2026-11-21 | `formal_addenda_and_provenance_map` | [`hoggar-bound-lab`](https://github.com/0thernes/hoggar-bound-lab) | Hoggar Bound Lab: Provenance Map of 3 Historical Source Papers, Claim-to-Theorem Map & Conjecture E Addendum | 8 | [Evidence](../discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/EVIDENCE.md) |
 
 ---
 
@@ -86,7 +86,7 @@
 
 ## 0TH-DISC-010 — Hoggar Bound Lab: Provenance Map of 3 Historical Source Papers, Claim-to-Theorem Map & Conjecture E Addendum
 
-- **Epistemic Tier:** `formal_addenda_and_provenance_map` · **Repository:** https://github.com/0thernes/hoggar-bound-lab (`main` @ `7b0f7690c5a8`)
-- **Summary:** Preserved provenance records connecting the three historical source manuscripts (spectral-floor, c3-spectral-counterexample, independent-research-note), the Conjecture E addendum, and the v1.7.0 Proposition 16' QUBO SDP-dual certificate into the single canonical paper 0TH-2026-002 (v1.7.0), preventing accidental double-counting while indexing all 77 audited Lean 4.35.0 declarations.
-- **Verification Boundary:** Provenance & claim-mapping index accompanying 0TH-2026-002; all formal theorems in v1.7.0 (77 declarations in VerifyNewFormalizations.lean) are verified by Lean 4.35.0 inside repos/hoggar-bound-lab.
+- **Epistemic Tier:** `formal_addenda_and_provenance_map` · **Repository:** https://github.com/0thernes/hoggar-bound-lab (`main` @ `eb2d83ef72f8`)
+- **Summary:** Preserved provenance records connecting the three historical source manuscripts (spectral-floor, c3-spectral-counterexample, independent-research-note), the Conjecture E addendum, the v1.7.0 Proposition 16' QUBO SDP-dual certificate, and the v1.8.0 Theorem 16'' exact C3 binary optima (368/344), Theorem 13b infinite determinant family |Psi_{3m}>, and N=4..5 42-orbit exact-degree certificates into the single canonical paper 0TH-2026-002 (v1.8.0), preventing accidental double-counting while indexing all 100 audited Lean 4.35.0 declarations.
+- **Verification Boundary:** Provenance & claim-mapping index accompanying 0TH-2026-002; all formal theorems in v1.8.0 (100 declarations in VerifyNewFormalizations.lean) are verified by Lean 4.35.0 inside repos/hoggar-bound-lab, paired with the exact integer C/Python certificates archived alongside them.
 - **Dossier:** [`EVIDENCE.md`](../discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/EVIDENCE.md) · [`METADATA.json`](../discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/METADATA.json)
