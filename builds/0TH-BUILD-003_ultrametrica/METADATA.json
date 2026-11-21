@@ -1,58 +1,63 @@
 {
   "id": "0TH-BUILD-003",
   "slug": "ultrametrica",
-  "title": "ULTRAMETRICA: Exact Non-Archimedean Holography, Recursive Adelic Valuation-Residue Symmetries, Tate-Curve BTZ Ollivier-Ricci Curvature, and Lean 4 Formal Verification",
+  "title": "ULTRAMETRICA: Exact Non-Archimedean Holography, Recursive Adelic Valuation-Residue Symmetries, Tate-Curve BTZ & Curved Gauss-Bonnet Curvature, and Lean 4 Formal Verification",
   "domain": "Mathematical Physics / Non-Archimedean Analysis / Formal Methods",
   "date": "2026-11-21",
-  "version": "v1.2.0",
+  "version": "v1.3.0",
   "author": "Alexander Stephen Donahue",
   "orcid": "0009-0006-8168-9648",
   "affiliation": "0thernes LLC",
   "repository": "https://github.com/0thernes/ultrametrica",
   "submodule_path": "repos/ultrametrica",
-  "pinned_commit": "1465bd1fd7e5e172a3f99cc53802cda2136e37b1",
+  "pinned_commit": "e42e6affdce172dc72cdbd8f2ffbd5f211d234f5",
   "archived_artifacts": [
     {
       "path": "builds/0TH-BUILD-003_ultrametrica/Donahue_2026_Ultrametrica.pdf",
       "source_path": "dist/Donahue_2026_Ultrametrica.pdf",
-      "sha256": "2a6f73a8ace4b30b2feebea64acd94be1c75e5b663e739d12aae57cec26e8b5e"
+      "sha256": "d56f2ec54d3d04fecc885c1d010fd2045a12c4c05f3bacc444a452be263f1395"
     },
     {
       "path": "builds/0TH-BUILD-003_ultrametrica/WHITE_PAPER.md",
       "source_path": "paper/WHITE_PAPER.md",
-      "sha256": "009b30f25171d94e311a48c1afe0ed6a518e779d104eab7c40b9efb36a099674"
+      "sha256": "8f5aa748e3ad50c99a495ddcc92fef226598ae52893f26e186078c8954684c95"
     },
     {
       "path": "builds/0TH-BUILD-003_ultrametrica/arxiv_submission.tar.gz",
       "source_path": "dist/arxiv_submission.tar.gz",
-      "sha256": "9d361cae2f948b5a72451f925d73d9155b50faddc9466645eb5deb9599623a22"
+      "sha256": "aae1420e8947c69fd3511e8c6bc2419cabc1528b44b99f48b591bbd6931dca55"
     },
     {
       "path": "builds/0TH-BUILD-003_ultrametrica/CLAIMS.md",
       "source_path": "docs/CLAIMS.md",
-      "sha256": "6f9a7948810286f18f17a3af9880d95f7f100fee7bbc08e1595fb227ec4e041f"
+      "sha256": "352c533c500dd3bd90093f4fede7af06c78961cb26ed42b163e059b99f1648a5"
+    },
+    {
+      "path": "builds/0TH-BUILD-003_ultrametrica/AUDIT_AND_CONTRAST_ANALYSIS.md",
+      "source_path": "docs/AUDIT_AND_CONTRAST_ANALYSIS.md",
+      "sha256": "7a52b15d4242da361c37f5a971f28e9c9b9e8308bf067a8cce7fedf5c3fac438"
     },
     {
       "path": "builds/0TH-BUILD-003_ultrametrica/lean4-audit.txt",
       "source_path": "results/lean4-audit.txt",
-      "sha256": "00537c534bd9f7c597c5c0a91f0cdaaf6df29b10fc766c99985c889f83fc72b9"
+      "sha256": "832d293b298ccb88bbbc5724d864666f3131b08d2d8dbd5502ad3cc4e94afd1f"
     }
   ],
   "lean_verification": {
     "has_lean": true,
     "framework": "Pure Lean 4.35.0 (zero Mathlib, zero native_decide)",
     "modules": 6,
-    "lines": 1706,
-    "audited_theorems": 71,
+    "lines": 2267,
+    "audited_theorems": 101,
     "axiom_allowlist": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
     "entry_point": "lean/VerifyAxioms.lean",
-    "live_audit_status": "GitHub Actions CI GREEN (run #44897905339, 4/4 jobs incl. sha256sum + 6/6 mutants + Tectonic standalone arXiv) & Pages deploy GREEN (#44897991574); local lake clean && lake build EXIT 0 (7 jobs, 0 warnings); 71/71 #print axioms strictly within [propext, Classical.choice, Quot.sound] (7 zero-axiom constructive)"
+    "live_audit_status": "GitHub Actions CI GREEN (run #44905696592, 4/4 jobs incl. sha256sum 55/55 + 8/8 mutants + Exp A-H + Tectonic standalone arXiv) & Pages deploy GREEN (#44905696484); local lake clean && lake build EXIT 0 (7 jobs, 0 warnings); 101/101 #print axioms strictly within [propext, Classical.choice, Quot.sound] (8 zero-axiom constructive)"
   },
-  "summary": "Zero-dependency computational laboratory, live GitHub Pages WebGL2 + 48 kHz AudioWorklet observatory (https://0thernes.github.io/ultrametrica/), zero-warning 13-page AMS-LaTeX white paper PDF (4 vector figures), standalone arXiv bundle, 1-to-1 CLAIMS.md ledger, 53-file CHECKSUMS.sha256 manifest, and formal framework coupling discrete p-adic QFT on Z_p/p^n Z_p to Bruhat-Tits tree and rotating Tate-curve BTZ holography, verified by 71 pure Lean 4.35.0 universal & first-principles proofs (universal Monna involution & ball contiguity, subtree cyclic-shift ultrametric isometry, Kantorovich primal-dual 1-Wasserstein optimality for AdS and BTZ, arbitrary K-ball compacton-solitons, complex Hermitian Sherman-Morrison exactness, and Kerr flux parity), an independent exact-rational (Fraction & Q(i)) Python falsifier, 6/6 planted negative mutants killed, and large-N (N <= 625) intra-sector spectral falsification of GOE/GUE thermalization (modular picket-fence law).",
-  "verification_boundary": "All 71 audited Lean 4.35.0 declarations (1,706 lines) compile cleanly in pure Lean 4 core with zero Mathlib, zero native_decide, zero sorry, and strictly standard axioms ([propext, Classical.choice, Quot.sound] or empty). Independent exact-rational Python checks verify 7,033 conjugate Adelic pairs, 18 modular picket-fence sectors, 45 BTZ optimal-transport horizons, exact Q(i) Rank-1 Sherman-Morrison solves, and all 53 SHA-256 digests; floating-point FFT/PDE simulations, large-N Hermitian Jacobi spectra, and 6/6 planted negative mutants lie outside the Lean kernel boundary and are mapped 1-to-1 in docs/CLAIMS.md. No empirical discovery of new physical laws of nature is claimed.",
+  "summary": "Zero-dependency computational laboratory, live GitHub Pages WebGL2 + 48 kHz AudioWorklet observatory (https://0thernes.github.io/ultrametrica/), zero-warning 15-page AMS-LaTeX white paper PDF (5 vector figures), standalone arXiv bundle, 1-to-1 CLAIMS.md ledger, 7-layer AUDIT_AND_CONTRAST_ANALYSIS.md dossier (resolving 16 code/UI/audio/security/doc issues), 55-file CHECKSUMS.sha256 manifest, and formal framework coupling discrete p-adic QFT on Z_p/p^n Z_p to Bruhat-Tits tree and rotating Tate-curve BTZ holography, verified by 101 pure Lean 4.35.0 universal & first-principles proofs (universal Monna bijectivity & ball contiguity, concrete Bruhat-Tits Ultrametric instance, subtree cyclic-shift ultrametric isometry, universal Proposition 4.2 modular picket-fence law, cycle-graph metric bridge + Kantorovich primal-dual 1-Wasserstein optimality for AdS and BTZ, Euler characteristics chi=1,0, Theorem V non-perturbative curved AdS discrete Gauss-Bonnet conservation & supercritical pinch deficit, arbitrary K-ball compacton-solitons, complex Hermitian Sherman-Morrison exactness, and Kerr flux parity), an independent exact-rational (Fraction & Q(i)) Python falsifier (45 BTZ horizons + 60 curved Gauss-Bonnet plans), 8/8 planted negative mutants killed, and 8 reproducible experiments (Exp A-H up to N = 625 across alpha in [0.5, 2.0] and BF margin Delta = 0.5001).",
+  "verification_boundary": "All 101 audited Lean 4.35.0 declarations (2,267 lines) compile cleanly in pure Lean 4 core with zero Mathlib, zero native_decide, zero sorry, and strictly standard axioms ([propext, Classical.choice, Quot.sound] or empty). Independent exact-rational Python checks verify 7,033 conjugate Adelic pairs, 18 modular picket-fence sectors, 45 BTZ optimal-transport horizons, 60 curved AdS Gauss-Bonnet transport plans, exact Q(i) Rank-1 Sherman-Morrison solves, and all 55 SHA-256 digests; floating-point FFT/PDE simulations, large-N Hermitian Jacobi spectra (alpha in [0.5, 2.0]), BF margin tests, and 8/8 planted negative mutants lie outside the Lean kernel boundary and are mapped 1-to-1 in docs/CLAIMS.md and docs/AUDIT_AND_CONTRAST_ANALYSIS.md. No empirical discovery of new physical laws of nature is claimed.",
   "falsification_command": "cd repos/ultrametrica && npm run verify:all && python3 scripts/verify_exact.py --check-checksums && sha256sum -c CHECKSUMS.sha256 && (cd lean && lake clean && lake build && lake env lean VerifyAxioms.lean)"
 }
