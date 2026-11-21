@@ -86,7 +86,7 @@
 
 ## 0TH-DISC-010 — Hoggar Bound Lab: Provenance Map of 3 Historical Source Papers, Claim-to-Theorem Map & Conjecture E Addendum
 
-- **Epistemic Tier:** `formal_addenda_and_provenance_map` · **Repository:** https://github.com/0thernes/hoggar-bound-lab (`main` @ `5d4f48901812`)
-- **Summary:** Preserved provenance records connecting the three historical source manuscripts (spectral-floor, c3-spectral-counterexample, independent-research-note) and the Conjecture E addendum into the single canonical paper 0TH-2026-002 (v1.5.0), preventing accidental double-counting while indexing every formal claim.
-- **Verification Boundary:** Provenance & claim-mapping index accompanying 0TH-2026-002; all formal theorems in v1.5.0 are verified by Lean 4.35.0 inside repos/hoggar-bound-lab.
+- **Epistemic Tier:** `formal_addenda_and_provenance_map` · **Repository:** https://github.com/0thernes/hoggar-bound-lab (`main` @ `1f028ea86549`)
+- **Summary:** Preserved provenance records connecting the three historical source manuscripts (spectral-floor, c3-spectral-counterexample, independent-research-note) and the Conjecture E addendum into the single canonical paper 0TH-2026-002 (v1.6.0), preventing accidental double-counting while indexing all 49 newly audited Lean 4.35.0 declarations.
+- **Verification Boundary:** Provenance & claim-mapping index accompanying 0TH-2026-002; all formal theorems in v1.6.0 (49 declarations in VerifyNewFormalizations.lean) are verified by Lean 4.35.0 inside repos/hoggar-bound-lab.
 - **Dossier:** [`EVIDENCE.md`](../discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/EVIDENCE.md) · [`METADATA.json`](../discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/METADATA.json)
