@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you reference the 0thernes Research Archive or any archived paper, please cite the individual paper repository and this master registry."
+type: dataset
+title: "0thernes Research Archive: Machine-Checked Lean 4 Papers, Frozen Manuscripts, and Cryptographic Evidence"
+authors:
+  - family-names: "Donahue"
+    given-names: "Alexander Stephen"
+    orcid: "https://orcid.org/0009-0006-8168-9648"
+    alias: "0thernes"
+    affiliation: "0thernes LLC, Spokane, WA, USA"
+    email: "0_0@0thernes.art"
+version: "2026.11.20"
+date-released: "2026-11-20"
+repository-code: "https://github.com/0thernes/0thernes-research-archive"
+url: "https://github.com/0thernes/0thernes-research-archive"
+license: "MIT"
+keywords:
+  - "formal verification"
+  - "Lean 4"
+  - "Mathlib"
+  - "mathematical statistics"
+  - "quantum contextuality"
+  - "Kochen-Specker theorem"
+  - "reproducible research"
+  - "cryptographic provenance"

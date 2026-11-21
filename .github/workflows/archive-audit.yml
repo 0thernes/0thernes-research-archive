@@ -1,0 +1,27 @@
+name: Archive Cryptographic & Structural Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  audit:
+    name: Verify Checksums, ORCID, Axiom Policies & Submodule Pins
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout archive repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run full cryptographic & structural audit
+        run: python scripts/verify_archive.py
+
+      - name: Verify CHECKSUMS.sha256 with sha256sum
+        run: sha256sum -c CHECKSUMS.sha256

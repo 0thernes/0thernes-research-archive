@@ -1,0 +1,40 @@
+{
+  "id": "0TH-2026-004",
+  "slug": "kochen-specker-extremal-lab",
+  "title": "Certified exact minima of Kochen-Specker sets inside coordinate pools: 31 and 33 rays in dimension three, 18 in dimension four, 29 in dimension five",
+  "domain": "Quantum Foundations / Combinatorial Optimization",
+  "date_released": "2026-11-10",
+  "version": "v1.0.0",
+  "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction)",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/kochen-specker-extremal-lab",
+  "submodule_path": "repos/kochen-specker-extremal-lab",
+  "pinned_commit": "38108d26776a3356e56fe54b6338902602bf31e1",
+  "release_url": "https://github.com/0thernes/kochen-specker-extremal-lab/releases/tag/v1.0.0",
+  "pages_url": "https://0thernes.github.io/kochen-specker-extremal-lab/",
+  "pdf_archive_path": "papers/0TH-2026-004_kochen-specker-extremal-lab/ks-minimum.pdf",
+  "pdf_sha256": "8063949e478c41b93913bfd9ff39b2d598c07ed7f0e539af300aa7375f5ae967",
+  "arxiv_bundle_url": "https://github.com/0thernes/kochen-specker-extremal-lab/releases/download/v1.0.0/arxiv-source.zip",
+  "arxiv_bundle_sha256": "1e6d40ab2533ef8a07a3b0c1655d3352e11ec1f15d17ae6e9049efbc30d90907",
+  "lean_verification": {
+    "framework": "Lean 4 (zero Mathlib)",
+    "axiom_allowlist": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "entry_point": "lean/KS.lean",
+    "axiom_audit_file": "lean/KS/Audit.lean"
+  },
+  "ci_run_url": "https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/42811596518",
+  "preservation": {
+    "software_heritage": null,
+    "wayback_machine": null,
+    "doi": null
+  },
+  "core_result": "Certifies exact minimum Kochen-Specker set sizes inside finite coordinate pools: 31 in 3D integer pools (|c|<=2,3,4), 33 in 3D N-th roots of unity (N=6,12,18,24), 18 in 4D {0,+1,-1}, and 29 in 5D {0,+1,-1}, using Lean 4 proofs and independently checked DRUP unsatisfiability certificates.",
+  "verification_boundary": "Bound-2 3D minimum (31) and 4D minimum (18) are kernel-checked in pure Lean 4 without Mathlib; larger pools rest on independently checked DRUP certificates. Explicitly notes the general unrestricted minimal-KS problem remains open.",
+  "falsification_command": "cd repos/kochen-specker-extremal-lab/lean && lake build && lake env lean KS/Audit.lean"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "0TH-2026-005",
+  "slug": "contextuality-evidence-lab",
+  "title": "Contextuality Evidence Lab: Exact Sequential Certificates and a Constructive Setting-Bias Attack",
+  "domain": "Quantum Foundations / Statistical Hypothesis Testing",
+  "date_released": "2026-11-10",
+  "version": "v1.0.0",
+  "peer_review_status": "Research methods artifact & preprint (not peer reviewed; AI-assisted under human direction)",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/contextuality-evidence-lab",
+  "submodule_path": "repos/contextuality-evidence-lab",
+  "pinned_commit": "ef0682cd24ca248c5e502731c462272a4ac93432",
+  "release_url": "https://github.com/0thernes/contextuality-evidence-lab/releases/tag/v1.0.0",
+  "pages_url": "https://0thernes.github.io/contextuality-evidence-lab/",
+  "pdf_archive_path": "papers/0TH-2026-005_contextuality-evidence-lab/whitepaper.pdf",
+  "pdf_sha256": "8e34d2911a7cc5dc5a02176515364729118fe07cca54d8d9be16e4a818e95743",
+  "arxiv_bundle_url": "https://github.com/0thernes/contextuality-evidence-lab/releases/download/v1.0.0/contextuality-evidence-lab-v1.0.0.zip",
+  "arxiv_bundle_sha256": "5024173ca403642b8f6d1a46b60ae44e432c2f0616470784d92c0d68f1bf9000",
+  "lean_verification": {
+    "framework": "Lean 4",
+    "axiom_allowlist": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "entry_point": "lean/Evidence.lean",
+    "axiom_audit_file": "lean/Verification.lean"
+  },
+  "ci_run_url": "https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42815130874",
+  "preservation": {
+    "software_heritage": null,
+    "wayback_machine": null,
+    "doi": null
+  },
+  "core_result": "Proves a finite adaptive-tree sequential contextuality evidence theorem and a sharp setting-bias bound for the Peres-Mermin square, constructing an explicit classical adversary causing a miscalibrated 1% test to reject 97.24% of the time while the bias-aware test stays below 1%.",
+  "verification_boundary": "Adaptive-tree evidence bound, biased-setting classical cap (11/12), and counterexample are formally verified in Lean 4; paired with reproducible Moonlab/QGTL/QRNG/Eshkol simulation. Explicitly disclaims hardware contextuality or certified randomness.",
+  "falsification_command": "cd repos/contextuality-evidence-lab/lean && lake build && lake env lean Verification.lean"
+}

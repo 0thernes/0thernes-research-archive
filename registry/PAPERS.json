@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0.0",
+  "archive": {
+    "name": "0thernes Research Archive",
+    "repository": "https://github.com/0thernes/0thernes-research-archive",
+    "organization": "0thernes LLC",
+    "location": "Spokane, WA, USA",
+    "author": {
+      "full_name": "Alexander Stephen Donahue",
+      "short_name": "Alexander S. Donahue",
+      "alias": "0thernes",
+      "orcid": "0009-0006-8168-9648",
+      "orcid_url": "https://orcid.org/0009-0006-8168-9648",
+      "email": "0_0@0thernes.art",
+      "github": "https://github.com/0thernes",
+      "website": "https://0thernes.art"
+    },
+    "updated_utc": "2026-11-21T03:55:00Z"
+  },
+  "papers": [
+    {
+      "id": "0TH-2026-001",
+      "slug": "hoggar-bound",
+      "title": "A third-moment bound on the contextuality degree of multiqubit Pauli configurations",
+      "domain": "Quantum Foundations / Quantum Contextuality",
+      "date_released": "2026-11-09",
+      "version": "v1.0.0",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/hoggar-bound",
+      "submodule_path": "repos/hoggar-bound",
+      "pinned_commit": "c74135c429a0ef827c757df5fc76139aed62a819",
+      "release_url": "https://github.com/0thernes/hoggar-bound/releases/tag/v1.0.0",
+      "pages_url": null,
+      "pdf_archive_path": "papers/0TH-2026-001_hoggar-bound/main.pdf",
+      "pdf_sha256": "df01bbbd97f9d1d1a270d9e90b7cbbb848c8b449fe6107a54fd5b77bf764a1c3",
+      "arxiv_bundle_url": "https://github.com/0thernes/hoggar-bound/releases/download/v1.0.0/arxiv_source.tar.gz",
+      "arxiv_bundle_sha256": "35de9d7084f2e6704246c61070d2f45b8b25ac656abc9c8e01ec7180e4fbaa64",
+      "lean_verification": {
+        "framework": "Lean 4 / Mathlib",
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/HoggarBound.lean",
+        "axiom_audit_file": "lean/Audit/Axioms.lean"
+      },
+      "ci_run_url": null,
+      "preservation": {
+        "software_heritage": null,
+        "wayback_machine": null,
+        "doi": null
+      },
+      "core_result": "Proves a third-moment spectral lower bound on the contextuality degree of N-qubit Pauli configurations with a Kramers refinement for elliptic quadrics, attained on W(5,2) by the Hoggar SIC fiducial, with Lean 4 proofs, independent Python/C verification, and a Moonlab WASM demo.",
+      "verification_boundary": "Core spectral bound and numerical corollaries are machine-checked in Lean 4; independent Python/C suites verify finite configurations; superseded/extended into the unified manuscript in 0TH-2026-002 (hoggar-bound-lab).",
+      "falsification_command": "cd repos/hoggar-bound/lean && lake build && lake env lean Audit/Axioms.lean"
+    },
+    {
+      "id": "0TH-2026-002",
+      "slug": "hoggar-bound-lab",
+      "title": "Spectral bounds and their limits in Pauli contextuality: exact configurations and a proof of Jonah's Conjecture E",
+      "domain": "Quantum Foundations / Quantum Contextuality",
+      "date_released": "2026-11-10",
+      "version": "v1.4.0",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; listed on ORCID)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/hoggar-bound-lab",
+      "submodule_path": "repos/hoggar-bound-lab",
+      "pinned_commit": "2149cbfc5475efbd8e791547ddd9b040954cb8ed",
+      "release_url": "https://github.com/0thernes/hoggar-bound-lab/releases/tag/v1.4.0",
+      "pages_url": "https://0thernes.github.io/hoggar-bound-lab/",
+      "pdf_archive_path": "papers/0TH-2026-002_hoggar-bound-lab/unified-contextuality.pdf",
+      "pdf_sha256": "89532166e85088b98b157d5521785955c501f1b75e33f53e4d199a4ce58ea203",
+      "arxiv_bundle_url": "https://github.com/0thernes/hoggar-bound-lab/releases/download/v1.4.0/unified-arxiv-source.zip",
+      "arxiv_bundle_sha256": "5ce9058b78640a2ecadeac8c1259b67f9dd3d0764594a15b77b05d5a94849a73",
+      "lean_verification": {
+        "framework": "Lean 4.35.0",
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/HoggarBound.lean",
+        "axiom_audit_file": "lean/C3Verification.lean"
+      },
+      "ci_run_url": "https://github.com/0thernes/hoggar-bound-lab/actions/runs/42834831332",
+      "preservation": {
+        "software_heritage": "swh:1:snp:eae8dd29885ec4075b4a30e2edac1fea28d9d998",
+        "wayback_machine": "https://web.archive.org/web/20261110150849/https://0thernes.github.io/hoggar-bound-lab/paper/unified-contextuality.pdf?v=1.4.0",
+        "doi": null
+      },
+      "core_result": "Unified study combining Lean 4 verification of the spectral floor, exact contextuality degrees (75, 480, 729344) for new 4-, 5-, and 7-qubit configurations, a four-qubit cospectral C3 pair with distinct completion spectra, an all-qubit (N >= 4) Lean-checked C3 family, and a self-contained proof settling all nine vertex cases of Jonah's Conjecture E.",
+      "verification_boundary": "Spectral floor, saturated configurations, and all-qubit C3 family are kernel-checked in Lean 4; non-C3 vertex cases of Conjecture E have self-contained paper proofs checked by exact computation and seven automated adversarial review passes.",
+      "falsification_command": "cd repos/hoggar-bound-lab && bash scripts/run_all.sh"
+    },
+    {
+      "id": "0TH-2026-003",
+      "slug": "contextuality-tensor-lab",
+      "title": "Exact contextuality degrees for disjoint Mermin configurations",
+      "domain": "Quantum Foundations / Quantum Contextuality",
+      "date_released": "2026-11-10",
+      "version": "v0.1.0",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/contextuality-tensor-lab",
+      "submodule_path": "repos/contextuality-tensor-lab",
+      "pinned_commit": "f7a1e6e74f8590d9cee0aa4c01f9ea3800f7fe87",
+      "release_url": "https://github.com/0thernes/contextuality-tensor-lab/releases/tag/v0.1.0",
+      "pages_url": "https://0thernes.github.io/contextuality-tensor-lab/",
+      "pdf_archive_path": "papers/0TH-2026-003_contextuality-tensor-lab/contextuality-tensor.pdf",
+      "pdf_sha256": "2d0f0d2af4177a48d5691286b470b7b14d709646e1d1c4874ce04795408e8b6f",
+      "arxiv_bundle_url": "https://github.com/0thernes/contextuality-tensor-lab/releases/download/v0.1.0/contextuality-tensor-arxiv-source.zip",
+      "arxiv_bundle_sha256": "e7a592bbf563928246ae05e0bbba194cd7b8646a725c020ea61aa9f78ee2b054",
+      "lean_verification": {
+        "framework": "Lean 4",
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/ContextualityTensor.lean",
+        "axiom_audit_file": "lean/Verification.lean"
+      },
+      "ci_run_url": "https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42751584064",
+      "preservation": {
+        "software_heritage": "swh:1:rev:de48ed9002e930825f1cf5f140c8dc8cbfdc1ea0",
+        "wayback_machine": "https://web.archive.org/web/20261110040209/https://0thernes.github.io/contextuality-tensor-lab/paper/contextuality-tensor.pdf",
+        "doi": null
+      },
+      "core_result": "Proves exact arbitrary-copy contextuality degree formulas d_k = (7^k - 5^k)/2 for k disjoint Peres-Mermin squares and (6^k - 4^k)/2 for k Mermin pentagrams under full nonempty-union context families, answering Section 6 of Muller & Saniga (arXiv:2609.19862v1).",
+      "verification_boundary": "Exact multiplicative identity and attaining assignments are machine-checked in Lean 4 (153-declaration axiom audit strictly within standard axioms), paired with independent Python and JavaScript exact enumeration.",
+      "falsification_command": "cd repos/contextuality-tensor-lab/lean && lake build && lake env lean Verification.lean"
+    },
+    {
+      "id": "0TH-2026-004",
+      "slug": "kochen-specker-extremal-lab",
+      "title": "Certified exact minima of Kochen-Specker sets inside coordinate pools: 31 and 33 rays in dimension three, 18 in dimension four, 29 in dimension five",
+      "domain": "Quantum Foundations / Combinatorial Optimization",
+      "date_released": "2026-11-10",
+      "version": "v1.0.0",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/kochen-specker-extremal-lab",
+      "submodule_path": "repos/kochen-specker-extremal-lab",
+      "pinned_commit": "38108d26776a3356e56fe54b6338902602bf31e1",
+      "release_url": "https://github.com/0thernes/kochen-specker-extremal-lab/releases/tag/v1.0.0",
+      "pages_url": "https://0thernes.github.io/kochen-specker-extremal-lab/",
+      "pdf_archive_path": "papers/0TH-2026-004_kochen-specker-extremal-lab/ks-minimum.pdf",
+      "pdf_sha256": "8063949e478c41b93913bfd9ff39b2d598c07ed7f0e539af300aa7375f5ae967",
+      "arxiv_bundle_url": "https://github.com/0thernes/kochen-specker-extremal-lab/releases/download/v1.0.0/arxiv-source.zip",
+      "arxiv_bundle_sha256": "1e6d40ab2533ef8a07a3b0c1655d3352e11ec1f15d17ae6e9049efbc30d90907",
+      "lean_verification": {
+        "framework": "Lean 4 (zero Mathlib)",
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/KS.lean",
+        "axiom_audit_file": "lean/KS/Audit.lean"
+      },
+      "ci_run_url": "https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/42811596518",
+      "preservation": {
+        "software_heritage": null,
+        "wayback_machine": null,
+        "doi": null
+      },
+      "core_result": "Certifies exact minimum Kochen-Specker set sizes inside finite coordinate pools: 31 in 3D integer pools (|c|<=2,3,4), 33 in 3D N-th roots of unity (N=6,12,18,24), 18 in 4D {0,+1,-1}, and 29 in 5D {0,+1,-1}, using Lean 4 proofs and independently checked DRUP unsatisfiability certificates.",
+      "verification_boundary": "Bound-2 3D minimum (31) and 4D minimum (18) are kernel-checked in pure Lean 4 without Mathlib; larger pools rest on independently checked DRUP certificates. Explicitly notes the general unrestricted minimal-KS problem remains open.",
+      "falsification_command": "cd repos/kochen-specker-extremal-lab/lean && lake build && lake env lean KS/Audit.lean"
+    },
+    {
+      "id": "0TH-2026-005",
+      "slug": "contextuality-evidence-lab",
+      "title": "Contextuality Evidence Lab: Exact Sequential Certificates and a Constructive Setting-Bias Attack",
+      "domain": "Quantum Foundations / Statistical Hypothesis Testing",
+      "date_released": "2026-11-10",
+      "version": "v1.0.0",
+      "peer_review_status": "Research methods artifact & preprint (not peer reviewed; AI-assisted under human direction)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/contextuality-evidence-lab",
+      "submodule_path": "repos/contextuality-evidence-lab",
+      "pinned_commit": "ef0682cd24ca248c5e502731c462272a4ac93432",
+      "release_url": "https://github.com/0thernes/contextuality-evidence-lab/releases/tag/v1.0.0",
+      "pages_url": "https://0thernes.github.io/contextuality-evidence-lab/",
+      "pdf_archive_path": "papers/0TH-2026-005_contextuality-evidence-lab/whitepaper.pdf",
+      "pdf_sha256": "8e34d2911a7cc5dc5a02176515364729118fe07cca54d8d9be16e4a818e95743",
+      "arxiv_bundle_url": "https://github.com/0thernes/contextuality-evidence-lab/releases/download/v1.0.0/contextuality-evidence-lab-v1.0.0.zip",
+      "arxiv_bundle_sha256": "5024173ca403642b8f6d1a46b60ae44e432c2f0616470784d92c0d68f1bf9000",
+      "lean_verification": {
+        "framework": "Lean 4",
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/Evidence.lean",
+        "axiom_audit_file": "lean/Verification.lean"
+      },
+      "ci_run_url": "https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42815130874",
+      "preservation": {
+        "software_heritage": null,
+        "wayback_machine": null,
+        "doi": null
+      },
+      "core_result": "Proves a finite adaptive-tree sequential contextuality evidence theorem and a sharp setting-bias bound for the Peres-Mermin square, constructing an explicit classical adversary causing a miscalibrated 1% test to reject 97.24% of the time while the bias-aware test stays below 1%.",
+      "verification_boundary": "Adaptive-tree evidence bound, biased-setting classical cap (11/12), and counterexample are formally verified in Lean 4; paired with reproducible Moonlab/QGTL/QRNG/Eshkol simulation. Explicitly disclaims hardware contextuality or certified randomness.",
+      "falsification_command": "cd repos/contextuality-evidence-lab/lean && lake build && lake env lean Verification.lean"
+    },
+    {
+      "id": "0TH-2026-006",
+      "slug": "multinomial-tv-conjecture",
+      "title": "Resolution and Lean 4 Formal Verification of Conjecture 7.7 on the Second-Order Variance of Multinomial Discrete Total Variation",
+      "domain": "Mathematical Statistics / Probability Theory",
+      "date_released": "2026-11-20",
+      "version": "v1.0.0",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 100% Lean 4 kernel-verified)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/multinomial-tv-conjecture",
+      "submodule_path": "repos/multinomial-tv-conjecture",
+      "pinned_commit": "df6cab4b2b6cef7910f1990234741a328e52ea40",
+      "release_url": "https://github.com/0thernes/multinomial-tv-conjecture/releases/tag/v1.0.0",
+      "pages_url": null,
+      "pdf_archive_path": "papers/0TH-2026-006_multinomial-tv-conjecture/Donahue_2026_Conjecture_7_7_Multinomial_TV.pdf",
+      "pdf_sha256": "1a2f98651fd5fbd5a88a64b8162612ab841ba368fe4fcb112897073f9f15bd16",
+      "arxiv_bundle_url": "https://github.com/0thernes/multinomial-tv-conjecture/releases/download/v1.0.0/arxiv_submission.tar.gz",
+      "arxiv_bundle_sha256": "f5b5a415c4d2fa1631708574264837dae61ea672a987586676580910796ebac9",
+      "lean_verification": {
+        "framework": "Lean 4.35.0 / Mathlib v4.35.0",
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/MultinomialTVConjecture.lean",
+        "axiom_audit_file": "lean/VerifyAxioms.lean",
+        "core_lines": 4960,
+        "audited_theorems": 19
+      },
+      "ci_run_url": "https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/44862576204",
+      "preservation": {
+        "software_heritage": null,
+        "wayback_machine": null,
+        "doi": null
+      },
+      "core_result": "Proves Conjecture 7.7 (conj:atriangle) of Banic & Elezovic (arXiv:2610.17046v1, confirmed open in arXiv:2611.14735v1) via an exact 2D-to-1D combinatorial telescoping reduction, sharp non-asymptotic Stirling bounds, and cubic odd-Gaussian Euler-Maclaurin summation, establishing b_0 = 32*sqrt(3)/(81*pi), b_1 = b_2 = -22*sqrt(3)/(81*pi), d_0 = -4*sqrt(3)/(81*pi), a_triangle = 1/32 - 4*sqrt(3)/243, and gamma_2 = -1/(32*pi) - 8*sqrt(3)/(243*pi), rendering linear gamma(n) and cyclic gamma_c(n) unconditional for n >= 5.",
+      "verification_boundary": "Entire proof of Conjecture 7.7, exact nested-sum fidelity check (hAdj_eq_nested_sum), and unconditional gamma(n) & gamma_c(n) closed forms are 100% kernel-checked in Lean 4 (4,960 lines, 0 sorry, standard axioms only), independently verified in exact rational arithmetic (L=3..45, 0/1 error) and 80-digit Richardson extrapolation (< 3e-55 error).",
+      "falsification_command": "cd repos/multinomial-tv-conjecture/lean && lake build && lake env lean VerifyAxioms.lean && cd .. && python scripts/verify_conjecture.py"
+    }
+  ]
+}

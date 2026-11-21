@@ -1,0 +1,40 @@
+{
+  "id": "0TH-2026-001",
+  "slug": "hoggar-bound",
+  "title": "A third-moment bound on the contextuality degree of multiqubit Pauli configurations",
+  "domain": "Quantum Foundations / Quantum Contextuality",
+  "date_released": "2026-11-09",
+  "version": "v1.0.0",
+  "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction)",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/hoggar-bound",
+  "submodule_path": "repos/hoggar-bound",
+  "pinned_commit": "c74135c429a0ef827c757df5fc76139aed62a819",
+  "release_url": "https://github.com/0thernes/hoggar-bound/releases/tag/v1.0.0",
+  "pages_url": null,
+  "pdf_archive_path": "papers/0TH-2026-001_hoggar-bound/main.pdf",
+  "pdf_sha256": "df01bbbd97f9d1d1a270d9e90b7cbbb848c8b449fe6107a54fd5b77bf764a1c3",
+  "arxiv_bundle_url": "https://github.com/0thernes/hoggar-bound/releases/download/v1.0.0/arxiv_source.tar.gz",
+  "arxiv_bundle_sha256": "35de9d7084f2e6704246c61070d2f45b8b25ac656abc9c8e01ec7180e4fbaa64",
+  "lean_verification": {
+    "framework": "Lean 4 / Mathlib",
+    "axiom_allowlist": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "entry_point": "lean/HoggarBound.lean",
+    "axiom_audit_file": "lean/Audit/Axioms.lean"
+  },
+  "ci_run_url": null,
+  "preservation": {
+    "software_heritage": null,
+    "wayback_machine": null,
+    "doi": null
+  },
+  "core_result": "Proves a third-moment spectral lower bound on the contextuality degree of N-qubit Pauli configurations with a Kramers refinement for elliptic quadrics, attained on W(5,2) by the Hoggar SIC fiducial, with Lean 4 proofs, independent Python/C verification, and a Moonlab WASM demo.",
+  "verification_boundary": "Core spectral bound and numerical corollaries are machine-checked in Lean 4; independent Python/C suites verify finite configurations; superseded/extended into the unified manuscript in 0TH-2026-002 (hoggar-bound-lab).",
+  "falsification_command": "cd repos/hoggar-bound/lean && lake build && lake env lean Audit/Axioms.lean"
+}

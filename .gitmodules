@@ -1,0 +1,18 @@
+[submodule "repos/hoggar-bound"]
+	path = repos/hoggar-bound
+	url = https://github.com/0thernes/hoggar-bound.git
+[submodule "repos/hoggar-bound-lab"]
+	path = repos/hoggar-bound-lab
+	url = https://github.com/0thernes/hoggar-bound-lab.git
+[submodule "repos/contextuality-tensor-lab"]
+	path = repos/contextuality-tensor-lab
+	url = https://github.com/0thernes/contextuality-tensor-lab.git
+[submodule "repos/kochen-specker-extremal-lab"]
+	path = repos/kochen-specker-extremal-lab
+	url = https://github.com/0thernes/kochen-specker-extremal-lab.git
+[submodule "repos/contextuality-evidence-lab"]
+	path = repos/contextuality-evidence-lab
+	url = https://github.com/0thernes/contextuality-evidence-lab.git
+[submodule "repos/multinomial-tv-conjecture"]
+	path = repos/multinomial-tv-conjecture
+	url = https://github.com/0thernes/multinomial-tv-conjecture.git
