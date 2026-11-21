@@ -10,7 +10,7 @@
 - **Author:** Alexander Stephen Donahue (`Alexander S. Donahue`) · **0thernes LLC**, Spokane, WA, USA
 - **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)
 - **Contact:** `0_0@0thernes.art` · [0thernes.art](https://0thernes.art) · [github.com/0thernes](https://github.com/0thernes)
-- **Scope:** **21 public research entries** across **3 explicitly separated epistemic tiers** + **11 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
+- **Scope:** **22 public research entries** across **3 explicitly separated epistemic tiers** + **12 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 ---
 
@@ -31,7 +31,7 @@ Full Tier I registry: [`registry/PAPERS.md`](registry/PAPERS.md) · Machine-read
 
 ## Tier II — Public Build White Papers & Embedded Pure Lean 4 Suites (`registry/BUILD_PAPERS.json`)
 
-Public engineering and laboratory repositories containing embedded technical white papers, verification audits, and **70 additional live-compiled pure Lean 4 (`v4.35.0`, zero Mathlib, zero `sorry`) machine-checked invariants** (`[propext, Quot.sound]` or literally zero axioms):
+Public engineering and laboratory repositories containing embedded technical white papers, verification audits, and **116 additional live-compiled pure Lean 4 (`v4.35.0`, zero Mathlib, zero `sorry`) machine-checked invariants** (`[propext, Quot.sound]` or literally zero axioms):
 
 | ID | Date | Build Repo & Version | Embedded Pure Lean 4.35.0 Suite | Archived White Paper / Artifact | Dossier |
 |---|---|---|---|---|---|
@@ -40,6 +40,7 @@ Public engineering and laboratory repositories containing embedded technical whi
 | `0TH-BUILD-004` | 2026-07-01 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) `2026-07-02-qa` | Adversarial QA & Editorial Review (non-Lean) | [Collatz Case Study](builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md) · [QA Audit](builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md) · [Editorial Review](builds/0TH-BUILD-004_unsolved-mathematics/EDITORIAL-REVIEW-WHITEPAPER-2026-07-01.md) | [Evidence](builds/0TH-BUILD-004_unsolved-mathematics/EVIDENCE.md) |
 | `0TH-BUILD-005` | 2026-06-27 | [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) `v0.14.3` | A-Life Verification Audit PDF (non-Lean) | [cqm-alife-audit.pdf](builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/cqm-alife-audit.pdf) | [Evidence](builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/EVIDENCE.md) |
 | `0TH-BUILD-006` | 2026-11-10 | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) `main+research` | **8 zero-axiom `rfl` theorems** (`ClassicalGR.lean`, 0 axioms) | [ClassicalGR.lean](builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean) · [M5_SHADOW_ASYMMETRY.md](builds/0TH-BUILD-006_black-hole-simulation-lab/M5_SHADOW_ASYMMETRY.md) | [Evidence](builds/0TH-BUILD-006_black-hole-simulation-lab/EVIDENCE.md) |
+| `0TH-BUILD-007` | 2026-11-21 | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) `v2.1.0` | **46 audited theorems** (6 files, 686 lines, 0 `sorry`) | [WHITE_PAPER.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/WHITE_PAPER.md) · [RANKING.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/RANKING.md) · [VERIFICATION.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/VERIFICATION.md) | [Evidence](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/EVIDENCE.md) · [Web Atlas](https://0thernes.github.io/unsolved-problems-mega-atlas/) |
 
 *(Note: `0TH-BUILD-001` was removed from this public archive after its upstream repository became private; private/proprietary research builds are maintained separately outside this public repository.)*
 
@@ -80,11 +81,11 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 ## Cloning the Full Public Stack & Running the Cryptographic Audit
 
 ```bash
-# Clone the archive + all 11 pinned PUBLIC Lean 4 & white-paper repositories
+# Clone the archive + all 12 pinned PUBLIC Lean 4 & white-paper repositories
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 
-# Verify every SHA-256 digest, ORCID, axiom allowlist, and all 11 public submodule pins
+# Verify every SHA-256 digest, ORCID, axiom allowlist, and all 12 public submodule pins
 python scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
 ```

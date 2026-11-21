@@ -31,3 +31,6 @@
 [submodule "repos/black-hole-simulation-lab"]
 	path = repos/black-hole-simulation-lab
 	url = https://github.com/0thernes/black-hole-simulation-lab.git
+[submodule "repos/unsolved-problems-mega-atlas"]
+	path = repos/unsolved-problems-mega-atlas
+	url = https://github.com/0thernes/unsolved-problems-mega-atlas.git

@@ -1,8 +1,8 @@
 # Tier II — Public Build White Papers & Embedded Lean 4 Proof Suites
 
 **Author:** Alexander Stephen Donahue (0thernes LLC) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
-**Public Embedded Pure Lean 4.35.0 Proofs Audited:** 70 theorems across 1,624 lines (zero Mathlib, zero `sorry`)  
-**Updated:** `2026-11-21T09:06:23Z`
+**Public Embedded Pure Lean 4.35.0 Proofs Audited:** 116 theorems across 2,310 lines (zero Mathlib, zero `sorry`)  
+**Updated:** `2026-11-21T09:19:00Z`
 
 | ID | Date | Repo / Version | Embedded Lean 4 Proofs | Frozen White Paper / Audit | Dossier |
 |---|---|---|---|---|---|
@@ -11,6 +11,7 @@
 | `0TH-BUILD-004` | 2026-07-01 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) `2026-07-02-qa` | Audit / Methodology (non-Lean) | [WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md](../builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md) | [Evidence](../builds/0TH-BUILD-004_unsolved-mathematics/EVIDENCE.md) |
 | `0TH-BUILD-005` | 2026-06-27 | [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) `v0.14.3` | Audit / Methodology (non-Lean) | [cqm-alife-audit.pdf](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/cqm-alife-audit.pdf) | [Evidence](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/EVIDENCE.md) |
 | `0TH-BUILD-006` | 2026-11-10 | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) `main+research-branch` | 8 theorems (1 files, 34 lines) | [ClassicalGR.lean](../builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean) | [Evidence](../builds/0TH-BUILD-006_black-hole-simulation-lab/EVIDENCE.md) |
+| `0TH-BUILD-007` | 2026-11-21 | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) `v2.1.0` | 46 theorems (6 files, 686 lines) | [WHITE_PAPER.md](../builds/0TH-BUILD-007_unsolved-problems-mega-atlas/WHITE_PAPER.md) | [Evidence](../builds/0TH-BUILD-007_unsolved-problems-mega-atlas/EVIDENCE.md) |
 
 ---
 
@@ -53,3 +54,11 @@
 - **Summary:** GR-exact Schwarzschild/Kerr geodesic simulation lab with an 8-theorem zero-axiom Lean 4 certificate (proofs/ClassicalGR.lean on branch cursor/research-archive-and-starfield-b952) verifying photon-sphere u=1/3, critical potential 1/27, b_crit^2=27, ISCO E^2=8/9 & L^2=12, and BPT a=0 -> r=6, paired with exact Bardeen Kerr shadow asymmetry anchors (M5_SHADOW_ASYMMETRY.md) and 20+ GR source cards.
 - **Verification Boundary:** ClassicalGR.lean certifies exact rational Schwarzschild algebraic limits by pure kernel definitional reduction (rfl, zero axioms); it explicitly disclaims proving the full Einstein field equations. Kerr shadow asymmetry anchors are closed-form analytic_classical checks.
 - **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-006_black-hole-simulation-lab/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-006_black-hole-simulation-lab/METADATA.json)
+
+## 0TH-BUILD-007 — Unsolved Problems Mega-Atlas (V2.1.0): A Unified Cross-Disciplinary Taxonomy, 1,855-Node Knowledge Connectome, November 2026 AI Proof-Claim Verification Audit, Offline FTS5 RAG Engine, and Pure Lean 4.35.0 Formal Invariant Suite
+
+- **Repository:** https://github.com/0thernes/unsolved-problems-mega-atlas (`v2.1.0`, pinned `bc34a8660d1f` at `repos/unsolved-problems-mega-atlas`)
+- **Lean 4 Audit:** Build completed successfully (8 jobs); 0 warnings; 0 sorry; all 46 #print axioms within [propext, Quot.sound] or empty
+- **Summary:** Reproducible cross-disciplinary research infrastructure cataloging 1,855 strictly deduplicated unsolved, open, and hard problems across 8 Macro-Pillars x 28 Superdomains wired into 1 connected 5,597-edge knowledge graph, scored under unified 0thernes CSS (0-100) and Composite Titan Index, paired with a live Nov 20, 2026 AI proof-claim audit (12 unretired claims), SQLite 3 + FTS5 BM25 offline RAG + graph-hop CLI, JSON Schema Draft 2020-12, 13-test pytest suite, 12 PNG/SVG charts, 163-page vector PDF, GitHub Pages live explorer, and 46 Pure Lean 4.35.0 formal invariants.
+- **Verification Boundary:** All 46 Pure Lean 4.35.0 theorems (covering CSS bounds/monotonicity/300-year saturation, Titan Index, Near-Term Leverage, 4-Quadrant and 6-Era partitions, 8x28 taxonomy surjection, finite Handshaking Lemma, cross-partition edge hierarchy, and deduplication cardinality bounds) compile cleanly with zero Mathlib, zero sorry, and strictly constructive axioms ([propext, Quot.sound] or empty). Explicitly makes ZERO claim to prove or retire any of the 1,855 open problems; quantitative rubric inputs are disclosed solo-human + AI-assisted falsifiable editorial estimates, not peer-reviewed measurements.
+- **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-007_unsolved-problems-mega-atlas/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-007_unsolved-problems-mega-atlas/METADATA.json)
