@@ -1,0 +1,39 @@
+{
+  "id": "0TH-BUILD-004",
+  "slug": "unsolved-mathematics",
+  "title": "Adversarial Verification in AI-Assisted Collatz Research: An Eight-Hour Repository Case Study",
+  "domain": "Research Methodology / Adversarial Verification",
+  "date": "2026-07-01",
+  "version": "2026-07-02-qa",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/unsolved-mathematics",
+  "submodule_path": "repos/unsolved-mathematics",
+  "pinned_commit": "f32ae651500631df90685e57b673868a9ef39e31",
+  "archived_artifacts": [
+    {
+      "path": "builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md",
+      "source_path": "docs/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md",
+      "sha256": "30a5b117b5aa5eab3a6d38cf44fb19be9392f7f2ab4630d53dc140f87e864f96"
+    },
+    {
+      "path": "builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md",
+      "source_path": "docs/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md",
+      "sha256": "1bc3917ee115edf6b70dd2025f4ec2efd3140b3e4d7605b2f56ecfcc196c4b5d"
+    }
+  ],
+  "lean_verification": {
+    "has_lean": false,
+    "framework": "Empirical & repository-audit case study (no Lean proofs)",
+    "modules": 0,
+    "lines": 0,
+    "audited_theorems": 0,
+    "axiom_allowlist": [],
+    "entry_point": null,
+    "live_audit_status": "N/A (methodology & adversarial verification study)"
+  },
+  "summary": "Eight-hour multi-model empirical case study on adversarial QA and artifact grounding in AI-assisted mathematics research, accompanied by an independent QA audit and editorial review inside the Unsolved Mathematics Atlas.",
+  "verification_boundary": "Explicitly proves and claims no part of the Collatz Conjecture (status: OPEN). Serves as a reproducible methodological case study grounded in committed git artifacts.",
+  "falsification_command": "ls repos/unsolved-mathematics/problems/collatz-conjecture repos/unsolved-mathematics/docs"
+}

@@ -16,3 +16,18 @@
 [submodule "repos/multinomial-tv-conjecture"]
 	path = repos/multinomial-tv-conjecture
 	url = https://github.com/0thernes/multinomial-tv-conjecture.git
+[submodule "repos/cellulogonic-mecha"]
+	path = repos/cellulogonic-mecha
+	url = https://github.com/0thernes/cellulogonic-mecha.git
+[submodule "repos/planaria"]
+	path = repos/planaria
+	url = https://github.com/0thernes/planaria.git
+[submodule "repos/ultrametrica"]
+	path = repos/ultrametrica
+	url = https://github.com/0thernes/ultrametrica.git
+[submodule "repos/unsolved-mathematics"]
+	path = repos/unsolved-mathematics
+	url = https://github.com/0thernes/unsolved-mathematics.git
+[submodule "repos/cosmogonic-quantum-mechalogodrom"]
+	path = repos/cosmogonic-quantum-mechalogodrom
+	url = https://github.com/0thernes/cosmogonic-quantum-mechalogodrom.git

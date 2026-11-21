@@ -1,4 +1,4 @@
-# Master Paper Registry — 0thernes Research Archive
+# Master Paper Registry — Standalone Research Preprints
 
 **Author:** Alexander Stephen Donahue (0thernes LLC, Spokane, WA, USA)  
 **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648) · **GitHub:** https://github.com/0thernes · **Updated:** `2026-11-21T03:55:00Z`

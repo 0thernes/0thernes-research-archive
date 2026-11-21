@@ -1,0 +1,37 @@
+{
+  "id": "0TH-BUILD-003",
+  "slug": "ultrametrica",
+  "title": "ULTRAMETRICA: Exact Non-Archimedean Holography, Recursive Adelic Valuation-Residue Symmetries, Tate-Curve BTZ Ollivier-Ricci Curvature, and Real-Time p-adic Quantum Gravity",
+  "domain": "Mathematical Physics / Non-Archimedean Analysis / Formal Methods",
+  "date": "2026-11-18",
+  "version": "v1.0.0",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/ultrametrica",
+  "submodule_path": "repos/ultrametrica",
+  "pinned_commit": "68b0fcdf827905a0f7b179561041adf247c7a1fa",
+  "archived_artifacts": [
+    {
+      "path": "builds/0TH-BUILD-003_ultrametrica/WHITE_PAPER.md",
+      "source_path": "paper/WHITE_PAPER.md",
+      "sha256": "43258869c2f907eae0d787cf1370ddf41ec1b738cb0371ccb0c385b46cc66185"
+    }
+  ],
+  "lean_verification": {
+    "has_lean": true,
+    "framework": "Pure Lean 4.35.0 (zero Mathlib)",
+    "modules": 5,
+    "lines": 614,
+    "audited_theorems": 24,
+    "axiom_allowlist": [
+      "propext",
+      "Quot.sound"
+    ],
+    "entry_point": "lean/UltrametricaProofs.lean",
+    "live_audit_status": "Build completed successfully (7 jobs); 0 sorry; all 24 #print axioms within [propext, Quot.sound] or empty"
+  },
+  "summary": "Zero-dependency computational laboratory and formal framework for discrete p-adic QFT on Z_p/p^n Z_p coupled to Bruhat-Tits tree and rotating Tate-curve BTZ holography, with 24 pure Lean 4 (v4.35.0) machine-checked proofs covering adelic symmetry, holography curvature, exact Kozyrev nonlinear solitons, and Sherman-Morrison PSD bounds.",
+  "verification_boundary": "All 24 audited Lean 4 declarations compile cleanly in pure Lean 4.35.0 with zero Mathlib and zero sorry, strictly within [propext, Quot.sound]. Machine-precision numerical simulations complement the discrete algebraic theorems.",
+  "falsification_command": "cd repos/ultrametrica/lean && lake build"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "0TH-BUILD-005",
+  "slug": "cosmogonic-quantum-mechalogodrom",
+  "title": "Cosmogonic Quantum Mechalogodrom (CQM): Artificial Life Verification Audit & NHSI Research Papers Ledger",
+  "domain": "Artificial Life / Synthetic Cognition / Verification Audit",
+  "date": "2026-06-27",
+  "version": "v0.14.3",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/cosmogonic-quantum-mechalogodrom",
+  "submodule_path": "repos/cosmogonic-quantum-mechalogodrom",
+  "pinned_commit": "b0dcf153b93af839a8f7406795dd2e0e45777df4",
+  "archived_artifacts": [
+    {
+      "path": "builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/cqm-alife-audit.pdf",
+      "source_path": "docs/alife/cqm-alife-audit.pdf",
+      "sha256": "4da32c265babd974cfd66972763feeec1d52e5273af23da750ebb9736bb5705d"
+    }
+  ],
+  "lean_verification": {
+    "has_lean": false,
+    "framework": "Technical verification audit PDF (no Lean proofs)",
+    "modules": 0,
+    "lines": 0,
+    "audited_theorems": 0,
+    "axiom_allowlist": [],
+    "entry_point": null,
+    "live_audit_status": "N/A (A-Life verification audit PDF)"
+  },
+  "summary": "Formal verification audit PDF and NHSI applied-research papers ledger documenting operational functional markers and simulation validation in the Cosmogonic Quantum Mechalogodrom artificial life platform.",
+  "verification_boundary": "Explicitly disclaims sentience or consciousness; documents operational simulation markers and code-to-literature provenance.",
+  "falsification_command": "ls repos/cosmogonic-quantum-mechalogodrom/docs/alife/cqm-alife-audit.pdf"
+}

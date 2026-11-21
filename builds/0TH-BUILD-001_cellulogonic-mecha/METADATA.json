@@ -1,0 +1,37 @@
+{
+  "id": "0TH-BUILD-001",
+  "slug": "cellulogonic-mecha",
+  "title": "CELLULOGONIC MECHA: A Clean-Room Non-Equilibrium Chemiosmotic, Elastic-Membrane, Endosymbiotic & Bioelectric Cellular Artificial Life Laboratory with Machine-Checked Lean 4 Invariants",
+  "domain": "Artificial Life / Biophysical Simulation / Formal Methods",
+  "date": "2026-11-19",
+  "version": "v1.2.0",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/cellulogonic-mecha",
+  "submodule_path": "repos/cellulogonic-mecha",
+  "pinned_commit": "4feb922cce724357d54e411c1c254fc40bfdb474",
+  "archived_artifacts": [
+    {
+      "path": "builds/0TH-BUILD-001_cellulogonic-mecha/WHITE_PAPER.md",
+      "source_path": "paper/WHITE_PAPER.md",
+      "sha256": "be8cc5b528e1107f674c87dbfdfae0f36c8958ccc8a5d6f35925f82f353e0d22"
+    }
+  ],
+  "lean_verification": {
+    "has_lean": true,
+    "framework": "Pure Lean 4.35.0 (zero Mathlib)",
+    "modules": 8,
+    "lines": 1405,
+    "audited_theorems": 58,
+    "axiom_allowlist": [
+      "propext",
+      "Quot.sound"
+    ],
+    "entry_point": "lean/CellulogonicProofs.lean",
+    "live_audit_status": "Build completed successfully (10 jobs); 0 sorry; all 58 #print axioms within [propext, Quot.sound] or empty"
+  },
+  "summary": "Zero-dependency C11 cellular artificial-life laboratory coupling stoichiometric Chemoton thermodynamics, Stokes hydrodynamics, Canham-Helfrich elastic membranes, Mitchell chemiosmosis, nested endosymbiosis, and bioelectric morphogenesis, accompanied by 58 pure Lean 4 (v4.35.0) machine-checked biophysical invariants and 24 empirical falsification gates.",
+  "verification_boundary": "All 58 Lean 4 invariants compile cleanly in pure Lean 4.35.0 with zero Mathlib, zero sorry, and strictly constructive axioms ([propext, Quot.sound] or empty). Invariants certify exact mathematical properties of the discrete model equations rather than experimental biology.",
+  "falsification_command": "cd repos/cellulogonic-mecha/lean && lake build"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "0TH-BUILD-002",
+  "slug": "planaria",
+  "title": "PLANARIA: Progressive Holographic Executable Architecture (.hbin), Multi-Stratum Compilation, Autonomous Control-Flow Anastomosis, and Cryptographic Cellular Quorum",
+  "domain": "Systems Architecture / Coding Theory / Formal Methods",
+  "date": "2026-11-18",
+  "version": "v2.0.0",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/planaria",
+  "submodule_path": "repos/planaria",
+  "pinned_commit": "a98946311ccdf80d112c283cdb1a2ad7a9165d39",
+  "archived_artifacts": [
+    {
+      "path": "builds/0TH-BUILD-002_planaria/WHITE_PAPER.md",
+      "source_path": "paper/WHITE_PAPER.md",
+      "sha256": "e0df3162727d5b0b1c53cd7122f636ec28e7c8bb2d70033c622a005f438bddcd"
+    }
+  ],
+  "lean_verification": {
+    "has_lean": true,
+    "framework": "Pure Lean 4.35.0 (zero Mathlib, zero native_decide)",
+    "modules": 7,
+    "lines": 976,
+    "audited_theorems": 38,
+    "axiom_allowlist": [
+      "propext",
+      "Quot.sound"
+    ],
+    "entry_point": "lean/PlanariaProofs.lean",
+    "live_audit_status": "Build completed successfully (9 jobs); 0 sorry; all 38 #print axioms within [propext, Quot.sound] or empty"
+  },
+  "summary": "Progressive Holographic Instruction Stratification (.hbin) architecture integrating GF(2^8) Reed-Solomon/Cauchy erasure coding, Merkle cellular authentication, multi-stratum VM execution, and quantum-temporal engine invariants, verified by 38 pure Lean 4 (v4.35.0) machine-checked proofs.",
+  "verification_boundary": "All 38 Lean 4 theorems (covering GF(256) arithmetic, Byzantine quorum thresholds, mitosis bounds, stratum anastomosis, xenograft ABI, and quantum-temporal norm/rewind invariants) compile cleanly in pure Lean 4.35.0 with zero Mathlib, zero native_decide, and zero sorry.",
+  "falsification_command": "cd repos/planaria/lean && lake build"
+}
