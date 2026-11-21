@@ -40,3 +40,6 @@
 [submodule "repos/autophage"]
 	path = repos/autophage
 	url = https://github.com/0thernes/autophage.git
+[submodule "repos/cellulogonic-mecha"]
+	path = repos/cellulogonic-mecha
+	url = https://github.com/0thernes/cellulogonic-mecha.git

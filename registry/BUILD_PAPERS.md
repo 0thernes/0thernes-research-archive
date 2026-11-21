@@ -1,11 +1,12 @@
 # Tier II — Public Build White Papers & Embedded Lean 4 Proof Suites
 
 **Author:** Alexander Stephen Donahue (0thernes LLC) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
-**Public Embedded Pure Lean 4.35.0 Proofs Audited:** 220 theorems across 3,929 lines (zero Mathlib, zero `sorry`)  
-**Updated:** `2026-11-21T10:14:58Z`
+**Public Embedded Pure Lean 4.35.0 Proofs Audited:** 278 theorems across 5,367 lines (zero Mathlib, zero `sorry`)  
+**Updated:** `2026-11-21T10:31:51Z`
 
 | ID | Date | Repo / Version | Embedded Lean 4 Proofs | Frozen White Paper / Audit | Dossier |
 |---|---|---|---|---|---|
+| `0TH-BUILD-001` | 2026-11-21 | [`cellulogonic-mecha`](https://github.com/0thernes/cellulogonic-mecha) `v1.2.1` | 58 theorems (8 files, 1438 lines) | [WHITE_PAPER.md](../builds/0TH-BUILD-001_cellulogonic-mecha/WHITE_PAPER.md) | [Evidence](../builds/0TH-BUILD-001_cellulogonic-mecha/EVIDENCE.md) |
 | `0TH-BUILD-002` | 2026-11-21 | [`planaria`](https://github.com/0thernes/planaria) `v2.1.0` | 38 theorems (7 files, 976 lines) | [Donahue_2026_planaria.pdf](../builds/0TH-BUILD-002_planaria/Donahue_2026_planaria.pdf) | [Evidence](../builds/0TH-BUILD-002_planaria/EVIDENCE.md) |
 | `0TH-BUILD-003` | 2026-11-21 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) `v1.1.0` | 36 theorems (6 files, 642 lines) | [Donahue_2026_Ultrametrica.pdf](../builds/0TH-BUILD-003_ultrametrica/Donahue_2026_Ultrametrica.pdf) | [Evidence](../builds/0TH-BUILD-003_ultrametrica/EVIDENCE.md) |
 | `0TH-BUILD-004` | 2026-07-01 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) `2026-07-02-qa` | Audit / Methodology (non-Lean) | [WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md](../builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md) | [Evidence](../builds/0TH-BUILD-004_unsolved-mathematics/EVIDENCE.md) |
@@ -16,6 +17,14 @@
 | `0TH-BUILD-009` | 2026-11-21 | [`autophage`](https://github.com/0thernes/autophage) `v1.0.0` | 31 theorems (1 files, 394 lines) | [VERIFICATION.md](../builds/0TH-BUILD-009_autophage/VERIFICATION.md) | [Evidence](../builds/0TH-BUILD-009_autophage/EVIDENCE.md) |
 
 ---
+
+## 0TH-BUILD-001 — CELLULOGONIC MECHA v1.2.1: Non-Equilibrium Chemiosmotic, Elastic-Membrane, Endosymbiotic, Bioelectric & Morphogenetic-GRN Cellular Artificial Life Laboratory with 58 Pure Lean 4.35.0 Proofs
+
+- **Repository:** https://github.com/0thernes/cellulogonic-mecha (`v1.2.1`, pinned `75661bb1b901` at `repos/cellulogonic-mecha`)
+- **Lean 4 Audit:** GitHub Actions CI GREEN (run #44894602931, lean4-formal-verify + linux-c11-verify) & local lake build EXIT 0; 58/58 theorems (T01-T58), 0 sorryAx, 0 custom axioms, 0 warnings, strictly within [propext, Classical.choice, Quot.sound]; Software Heritage save #2675182
+- **Summary:** Clean-room zero-dependency C11+AVX2 continuous 3D off-lattice cellular artificial life and zero-blueprint developmental embryogenesis laboratory (Build 2 of the 4-build AUTOPHAGE -> Cellulogonic Mecha -> Asmodensius stack). Couples 8-species Chemoton stoichiometry, Canham-Helfrich elastic vesicles (Global Minimax Theorem T16), Mitchell chemiosmosis across 4 planetary solvents, nested serial endosymbiosis, Levin bioelectric colonies, Tardigrade TDP bioglass anhydrobiosis, ATP-pumped GHz Fröhlich-Pokorný microtubules, and 6 developmental embryogenesis mechanisms (3D Wnt/BMP/Shh GPS, conditional GRNs, Steinberg cadherin sorting, Netrin/Slit axon guidance + Hebbian pruning, Hippo + eutelic arrest, ATP-coupled CPG waves), accompanied by 58 pure Lean 4.35.0 theorems, 4-way cross-OS Win64/Linux AVX2/Scalar 0-bit SHA-256 parity (f20e16ec...4f26e918), 24/24 falsification gates + 8/8 planted mutants, N=24 Holm-Bonferroni paired stats, and a 60 FPS WebGL2 3D Observatory.
+- **Verification Boundary:** All 58 Lean 4.35.0 theorems (T01-T58) compile cleanly in pure Lean 4 with zero Mathlib, zero native_decide, zero sorry, and strictly standard axioms ([propext, Classical.choice, Quot.sound]). Lean theorems certify exact algebraic/combinatorial invariants of the discrete equations; runtime C11+AVX2 simulation, 4-way Win64/Linux SHA-256 bit-exactness, SHA-256-authenticated .cmbin snapshots, 24 falsification gates + 8 planted mutants, and N=24 paired permutation statistics (p_Holm <= 0.00080) are independently verified by the compiled test suite and Ubuntu CI. Models coarse-grained discrete quanta rather than atomistic wet-lab molecular dynamics; claims no new law of nature.
+- **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-001_cellulogonic-mecha/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-001_cellulogonic-mecha/METADATA.json)
 
 ## 0TH-BUILD-002 — PLANARIA: Progressive Holographic Executable Architecture (.hbin), Multi-Stratum Compilation, Autonomous Control-Flow Anastomosis, and Cryptographic Cellular Quorum
 
