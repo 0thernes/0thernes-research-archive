@@ -29,7 +29,7 @@ Certifies exact minimum Kochen-Specker set sizes inside finite coordinate pools:
 
 - **Framework:** Lean 4 (zero Mathlib)
 - **Library Entry Point:** `lean/KS.lean`
-- **Axiom Audit Script:** `lean/KS/Audit.lean`
+- **Primary Axiom Audit Script:** `lean/KS/Audit.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
 
 ## Verification Boundary (Honest Epistemic Scope)

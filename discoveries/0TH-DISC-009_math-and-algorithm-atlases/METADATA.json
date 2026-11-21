@@ -1,0 +1,37 @@
+{
+  "id": "0TH-DISC-009",
+  "slug": "math-and-algorithm-atlases",
+  "visibility": "PUBLIC",
+  "epistemic_tier": "computational_reference_atlas",
+  "title": "Closed-Form Math Study Atlas (1,123 Anchored Tests) & Grimoire 1,000-Algorithm Verification Ledger",
+  "domain": "Scientific Computing / Algorithms / Numerical Verification",
+  "date": "2026-07-05",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/grimoire-algorithms-of-the-arcane",
+  "branch": "main",
+  "pinned_commit": "edca7f8dc2f8bba27402a248301dd30d19ff1781",
+  "summary": "Combined reference index preserving the zero-dependency scientific workstation Math Study Atlas (professional-calculator @ aef7da08c0b0, 1,123 closed-form tests) and the Grimoire 1,000-algorithm source & verification ledger.",
+  "verification_boundary": "Computational reference atlases and closed-form regression suites; not formal theorem-prover proofs.",
+  "archived_artifacts": [
+    {
+      "path": "discoveries/0TH-DISC-009_math-and-algorithm-atlases/MATH_STUDY_ATLAS.md",
+      "source_path": "docs/MATH_STUDY_ATLAS.md@aef7da08c0b0fcd2dda0cc15783b279eafcbac96",
+      "bytes": 51318,
+      "sha256": "72445316a8188fd0dce985e9b77a3befd82c5af1824df13aba8548482a57c639"
+    },
+    {
+      "path": "discoveries/0TH-DISC-009_math-and-algorithm-atlases/SOURCE-LEDGER.md",
+      "source_path": "docs/SOURCE-LEDGER.md@edca7f8dc2f8bba27402a248301dd30d19ff1781",
+      "bytes": 4568,
+      "sha256": "6e2818426bc9617603ee82a24d78793daeec7c857af63c22fb2ec0df6ce13b81"
+    },
+    {
+      "path": "discoveries/0TH-DISC-009_math-and-algorithm-atlases/VERIFICATION.md",
+      "source_path": "docs/VERIFICATION.md@edca7f8dc2f8bba27402a248301dd30d19ff1781",
+      "bytes": 6867,
+      "sha256": "21cf4001faa683d4f4dc30ce4ac5bc4ef6241fde9834682002f49301ae5aa870"
+    }
+  ]
+}

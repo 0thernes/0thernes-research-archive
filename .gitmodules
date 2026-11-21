@@ -16,9 +16,6 @@
 [submodule "repos/multinomial-tv-conjecture"]
 	path = repos/multinomial-tv-conjecture
 	url = https://github.com/0thernes/multinomial-tv-conjecture.git
-[submodule "repos/cellulogonic-mecha"]
-	path = repos/cellulogonic-mecha
-	url = https://github.com/0thernes/cellulogonic-mecha.git
 [submodule "repos/planaria"]
 	path = repos/planaria
 	url = https://github.com/0thernes/planaria.git
@@ -31,3 +28,6 @@
 [submodule "repos/cosmogonic-quantum-mechalogodrom"]
 	path = repos/cosmogonic-quantum-mechalogodrom
 	url = https://github.com/0thernes/cosmogonic-quantum-mechalogodrom.git
+[submodule "repos/black-hole-simulation-lab"]
+	path = repos/black-hole-simulation-lab
+	url = https://github.com/0thernes/black-hole-simulation-lab.git

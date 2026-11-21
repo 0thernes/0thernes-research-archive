@@ -1,0 +1,412 @@
+{
+  "schema_version": "1.0.0",
+  "category": "Laws, Pre-Registered Empirical Claims, Discoveries & Open-Problem Atlases (Public)",
+  "author": {
+    "full_name": "Alexander Stephen Donahue",
+    "orcid": "0009-0006-8168-9648",
+    "affiliation": "0thernes LLC"
+  },
+  "updated_utc": "2026-11-21T09:06:23Z",
+  "discoveries": [
+    {
+      "id": "0TH-DISC-001",
+      "slug": "cosmogonic-laws-and-meta-analysis",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "binding_architectural_law_and_meta_analysis",
+      "title": "Cosmogonic Quantum Mechalogodrom: Social Contact Density Law (ADR 0016), CQM-25 Capability Law (ADR 0018), and 500-Checkpoint Peer-Review Meta-Analysis",
+      "domain": "Artificial Life / Experimental Governance / Capability Metrology",
+      "date": "2026-10-22",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/cosmogonic-quantum-mechalogodrom",
+      "branch": "main",
+      "pinned_commit": "b0dcf153b93af839a8f7406795dd2e0e45777df4",
+      "summary": "Formal architectural laws governing population contact density (ADR 0016) and the 25-axis CQM-25 capability taxonomy with mandatory controls and falsifiers (ADR 0018), paired with a 500-checkpoint meta-analysis framework, cross-surface fact ledger, Dome ecology verification, and organism intelligence causal audit.",
+      "verification_boundary": "Operational engineering and experimental metrology standards; explicitly disclaims sentience, consciousness, or external peer-reviewed certification.",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-001_cosmogonic-laws-and-meta-analysis/0016-social-contact-density-law-2026-07-11.md",
+          "source_path": "docs/adr/0016-social-contact-density-law-2026-07-11.md@b0dcf153b93af839a8f7406795dd2e0e45777df4",
+          "bytes": 2397,
+          "sha256": "7a7b2e1d0ce2767d670f4ff8d2000b91902d577fc5c185964f1ced3dd5d1cbe8"
+        },
+        {
+          "path": "discoveries/0TH-DISC-001_cosmogonic-laws-and-meta-analysis/0018-cqm-25-capability-law-2026-10-22.md",
+          "source_path": "docs/adr/0018-cqm-25-capability-law-2026-10-22.md@b0dcf153b93af839a8f7406795dd2e0e45777df4",
+          "bytes": 4542,
+          "sha256": "15c11cebebc762e377899048ac8697b3fcecf052f6681f3643ff55be1c401ad2"
+        },
+        {
+          "path": "discoveries/0TH-DISC-001_cosmogonic-laws-and-meta-analysis/PEER-REVIEW-META-ANALYSIS.md",
+          "source_path": "docs/PEER-REVIEW-META-ANALYSIS.md@b0dcf153b93af839a8f7406795dd2e0e45777df4",
+          "bytes": 16392,
+          "sha256": "2fbfe5a0325a338f2c9ed9f0cdcb9114d14aa2c56cc354eb5c668281f22078f7"
+        },
+        {
+          "path": "discoveries/0TH-DISC-001_cosmogonic-laws-and-meta-analysis/VERIFICATION-ANALYTICAL-DATA.md",
+          "source_path": "docs/VERIFICATION-ANALYTICAL-DATA.md@b0dcf153b93af839a8f7406795dd2e0e45777df4",
+          "bytes": 77930,
+          "sha256": "adec08840e27d4e9634403f2ec509a87c32e3abd11d345000686ad4e35f1eefa"
+        },
+        {
+          "path": "discoveries/0TH-DISC-001_cosmogonic-laws-and-meta-analysis/DOME-ECOLOGY-VERIFICATION-2026-07-14.md",
+          "source_path": "docs/reports/DOME-ECOLOGY-VERIFICATION-2026-07-14.md@b0dcf153b93af839a8f7406795dd2e0e45777df4",
+          "bytes": 37093,
+          "sha256": "a91729b5305cc9fb0c287a9dd86947ac2761f503f7d1ff5b8aaffc3f656d9c7b"
+        },
+        {
+          "path": "discoveries/0TH-DISC-001_cosmogonic-laws-and-meta-analysis/2026-07-10-OPERATIONAL-ORGANISM-INTELLIGENCE-CAUSAL-AUDIT.md",
+          "source_path": "docs/reports/2026-07-10-OPERATIONAL-ORGANISM-INTELLIGENCE-CAUSAL-AUDIT.md@b0dcf153b93af839a8f7406795dd2e0e45777df4",
+          "bytes": 14100,
+          "sha256": "aa23f3462ed769fee95539a27f38b040fc64aba884b2b4490eecc8deab50ec28"
+        }
+      ]
+    },
+    {
+      "id": "0TH-DISC-002",
+      "slug": "asmodensius-discoveries",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "empirical_discovery_ledger",
+      "title": "Asmodensius (Creature #1): Pre-Registered Controlled Empirical Discoveries & Null Results Ledger (DISCOVERIES.md, R20)",
+      "domain": "Artificial Life / Tokenless Synthetic Cognition / Controlled Experiments",
+      "date": "2026-11-17",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/Asmodensius",
+      "branch": "main",
+      "pinned_commit": "c72a4ec9a0cba60b302a796be48def072abe9f53",
+      "summary": "408-line open empirical discovery log documenting controlled experimental findings in a tokenless, LLM-free artificial organism (grown vs i.i.d. wiring foraging gain, dream confabulation of certainty, aleatoric/epistemic uncertainty conflation, volatility-scaled forgetting) alongside honest null results (N09/N13) and ~98 controlled run logs.",
+      "verification_boundary": "Empirical findings from controlled simulation experiments (not evidence of consciousness or sentience; explicitly reports negative/null outcomes alongside positive discoveries).",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-002_asmodensius-discoveries/DISCOVERIES.md",
+          "source_path": "creatures/001/DISCOVERIES.md@c72a4ec9a0cba60b302a796be48def072abe9f53",
+          "bytes": 33298,
+          "sha256": "1889145ea94e6562629a772bd753c0e706be62ecf8a63181777954b6076c3556"
+        },
+        {
+          "path": "discoveries/0TH-DISC-002_asmodensius-discoveries/STATUS-R20.md",
+          "source_path": "creatures/001/STATUS-R20.md@c72a4ec9a0cba60b302a796be48def072abe9f53",
+          "bytes": 651,
+          "sha256": "3a5c15276f3e1805c934e98324d2ed30041cafab963fea9d33c0596fc911ced9"
+        }
+      ]
+    },
+    {
+      "id": "0TH-DISC-003",
+      "slug": "neuralese-preregistered-claims",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "preregistered_empirical_claims",
+      "title": "NEURALESE: SHA-256-Locked Pre-Registrations & White-Box Mechanistic Interpretability Falsification Tables (v11\u2013v14x)",
+      "domain": "Mechanistic Interpretability / Empirical ML / Pre-Registered Testing",
+      "date": "2026-11-04",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/neuralese",
+      "branch": "main+gh-pages",
+      "pinned_commit": "2527d67355524c873be7acfa0b5560af0076f144",
+      "summary": "SHA-256-locked pre-registered experiments and falsification ledgers on TinyStories-8M (including PCI-analog, ignition, introspection proxies, R.out vs logit across 7/7 layers, float32 fidelity KL 2.4e-16) reporting both confirmed effects and explicitly falsified hypotheses (e.g., RelP non-first-order accuracy).",
+      "verification_boundary": "Pre-registered empirical benchmarks on small open-weight transformer models (TinyStories-1M/3M/8M); explicitly states operational proxies cannot prove or disprove consciousness.",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-003_neuralese-preregistered-claims/CLAIMS.md",
+          "source_path": "docs/CLAIMS.md@2527d67355524c873be7acfa0b5560af0076f144",
+          "bytes": 10219,
+          "sha256": "b71d84bc21b9ef10cfcdc4c17ce5461314dc5e277b98bbfb6189d58e6d8fe2cb"
+        },
+        {
+          "path": "discoveries/0TH-DISC-003_neuralese-preregistered-claims/CLAIMS-v14.md",
+          "source_path": "docs/CLAIMS-v14.md@2527d67355524c873be7acfa0b5560af0076f144",
+          "bytes": 5589,
+          "sha256": "a9aeae3e593c82939b929927fde39012481b81761b9e170d99522e0f8604752b"
+        },
+        {
+          "path": "discoveries/0TH-DISC-003_neuralese-preregistered-claims/CLAIMS-v14x.md",
+          "source_path": "docs/CLAIMS-v14x.md@2527d67355524c873be7acfa0b5560af0076f144",
+          "bytes": 4127,
+          "sha256": "6f8ea5c6593dbd4e1d3fa3a4b96dcac3d4d552680047d7ed5838ec3a2893550d"
+        },
+        {
+          "path": "discoveries/0TH-DISC-003_neuralese-preregistered-claims/REPORT-v14.md",
+          "source_path": "docs/REPORT-v14.md@2527d67355524c873be7acfa0b5560af0076f144",
+          "bytes": 1921,
+          "sha256": "6555d9dbf257a55abd1148bf6be5727fa70e0c0b6620e242d97efa6037e3007e"
+        },
+        {
+          "path": "discoveries/0TH-DISC-003_neuralese-preregistered-claims/PREREG-v11.md",
+          "source_path": "preview/frontier/data/PREREG-v11.md@47e6d65f752c093b1d47e0d8a68addf520dce994",
+          "bytes": 6065,
+          "sha256": "8b923ab4270a7dfef2262b24ee1dcc274de2a9579f9c186ffe71cff62ddbec93"
+        }
+      ]
+    },
+    {
+      "id": "0TH-DISC-004",
+      "slug": "neuralese-diffusion-claims",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "preregistered_empirical_claims",
+      "title": "Neuralese Diffusion: Pre-Registered Cross-Modality Diffusion Interpretability Claims & Falsifications (v1\u2013v2)",
+      "domain": "Generative Models / Mechanistic Interpretability / Empirical ML",
+      "date": "2026-10-27",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/neuralese-diffusion",
+      "branch": "main",
+      "pinned_commit": "13e3b0e22ea756da26c4e0a98c9eccf1bec92e98",
+      "summary": "Pre-registered claims and falsification ledgers across image, music, video, and 3D tiny diffusion models, transparently logging both verified behaviors and negative/falsified tests (e.g., prompt-swap R4 and video2 failures).",
+      "verification_boundary": "Empirical pre-registered claims on compact on-device diffusion models; honestly preserves falsified hypotheses.",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-004_neuralese-diffusion-claims/CLAIMS.md",
+          "source_path": "docs/CLAIMS.md@13e3b0e22ea756da26c4e0a98c9eccf1bec92e98",
+          "bytes": 2366,
+          "sha256": "4a2df4eded1d372b4d65795f4a3ebabc25ca994964445abc5382e0b3f48e7478"
+        },
+        {
+          "path": "discoveries/0TH-DISC-004_neuralese-diffusion-claims/CLAIMS-v2.md",
+          "source_path": "docs/CLAIMS-v2.md@13e3b0e22ea756da26c4e0a98c9eccf1bec92e98",
+          "bytes": 3680,
+          "sha256": "b963dfbd9f1388beeacb31f7dcc46fc34c70ff606bd829637ad2c5885399598c"
+        }
+      ]
+    },
+    {
+      "id": "0TH-DISC-005",
+      "slug": "unsolved-math-certificates-and-atlas",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "finite_computational_certificate_and_open_problem_atlas",
+      "title": "Unsolved Mathematics Atlas: 900+ Open-Problem Meta-Analyses, Finite Odd-Unit Lock Bridge Collapse Certificate & Collatz Failed-Attempts Atlas",
+      "domain": "Experimental Mathematics / Number Theory / Research Methodology",
+      "date": "2026-07-05",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/unsolved-mathematics",
+      "branch": "main+codex/collatz-catalog-qa-routing",
+      "pinned_commit": "f32ae651500631df90685e57b673868a9ef39e31",
+      "summary": "Structured 900+ open-problem dossier index alongside the finite machine-checkable Odd-Unit Lock Bridge Collapse Certificate (R=16..24, 250k & 1M stress scans) and the Collatz Failed-Attempts Atlas on branch codex/collatz-catalog-qa-routing (47e383d8a7e1).",
+      "verification_boundary": "CRITICAL SCOPE: The Odd-Unit Lock certificate is a finite computational check proving NO part of the Collatz Conjecture (status: OPEN). Raw drafts on branch codex/add-collatz-whitepaper-qa-audit (e45e5b097de4) are quarantined/debunked case-study artifacts documented by 0TH-BUILD-004.",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-005_unsolved-math-certificates-and-atlas/ODD-UNIT-LOCK-BRIDGE-CERTIFICATE.md",
+          "source_path": "problems/collatz-conjecture/experiments/ODD-UNIT-LOCK-BRIDGE-CERTIFICATE.md@47e383d8a7e154e6737b229aeaa5fd60bf837716",
+          "bytes": 4273,
+          "sha256": "65dbf872478415d3a498b8c98ed648e145e904e394ae5a1c3aeeaba67196fc2f"
+        },
+        {
+          "path": "discoveries/0TH-DISC-005_unsolved-math-certificates-and-atlas/COLLATZ-FAILED-ATTEMPTS-ATLAS-2026-07-05.md",
+          "source_path": "problems/collatz-conjecture/experiments/COLLATZ-FAILED-ATTEMPTS-ATLAS-2026-07-05.md@47e383d8a7e154e6737b229aeaa5fd60bf837716",
+          "bytes": 28249,
+          "sha256": "4c12da81ed08ddd9029f4391da3a6847dc5d54359ed7b640ae5139475d99a890"
+        },
+        {
+          "path": "discoveries/0TH-DISC-005_unsolved-math-certificates-and-atlas/by-status.md",
+          "source_path": "docs/indexes/by-status.md@f32ae651500631df90685e57b673868a9ef39e31",
+          "bytes": 12441,
+          "sha256": "a3dc9dce5e8c9d0c158a23fc9be5cd573fde0fb0256468e970255ddeb8c7bf77"
+        },
+        {
+          "path": "discoveries/0TH-DISC-005_unsolved-math-certificates-and-atlas/verification.md",
+          "source_path": "docs/indexes/verification.md@f32ae651500631df90685e57b673868a9ef39e31",
+          "bytes": 11962,
+          "sha256": "5f88327abb522229f2d6893bd70868ccc8a17248b6c1e03342a08482ffffe9c4"
+        }
+      ]
+    },
+    {
+      "id": "0TH-DISC-006",
+      "slug": "unsolved-black-hole-problems",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "open_problem_catalogue",
+      "title": "Unsolved Black-Hole Problems: Ranked 16-Problem Research Catalogue with CI-Enforced Citation Integrity & 6 Truth Tiers",
+      "domain": "Theoretical Physics / General Relativity / Quantum Gravity",
+      "date": "2026-06-14",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/unsolved-black-hole-problems",
+      "branch": "main",
+      "pinned_commit": "cf11c68c3953e0d73b13efdbf014ecaae9c947a8",
+      "summary": "Machine-validated, RAG-ready meta-analysis ranking 16 major unsolved problems in black-hole physics (originators, ~25 DOI/arXiv-pinned papers per problem, 6 epistemic truth tiers, automated citation validation).",
+      "verification_boundary": "AI-assisted literature catalogue directed and reviewed by Alexander S. Donahue; solves no open physics problem and labels all conjectures explicitly.",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-006_unsolved-black-hole-problems/README.md",
+          "source_path": "README.md@cf11c68c3953e0d73b13efdbf014ecaae9c947a8",
+          "bytes": 6964,
+          "sha256": "ca4faa86ae17048cf1f4a8f4c2b386eade88ae9f59bedbce9aa8cf5975630477"
+        },
+        {
+          "path": "discoveries/0TH-DISC-006_unsolved-black-hole-problems/AI_REVIEW.md",
+          "source_path": "docs/AI_REVIEW.md@cf11c68c3953e0d73b13efdbf014ecaae9c947a8",
+          "bytes": 3878,
+          "sha256": "8b354dff4d581b73bfdcfd674d0a723476fa0dbbd077599351b1c61837772fca"
+        },
+        {
+          "path": "discoveries/0TH-DISC-006_unsolved-black-hole-problems/AUDIT-2026-06-14.md",
+          "source_path": "docs/audits/AUDIT-2026-06-14.md@cf11c68c3953e0d73b13efdbf014ecaae9c947a8",
+          "bytes": 2977,
+          "sha256": "d6087a48b09999435e173e55bc798e764c4aa14033c57a77a208f51badcfaaf3"
+        }
+      ]
+    },
+    {
+      "id": "0TH-DISC-007",
+      "slug": "glitchling-master-compendium",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "technical_synthesis_compendium",
+      "title": "Glitchling Master Compendium: 29-PDF Synthesis (1,932 Pages) Across Quantum 2050, Contextuality, NESTOR/HEPTARCH & Embodied A-Life",
+      "domain": "Artificial Life / Quantum Simulation / Systems Engineering",
+      "date": "2026-11-12",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/glitchling-jam",
+      "branch": "main",
+      "pinned_commit": "2fb111f12e85a13f22357e74bbe9921a0884c935",
+      "summary": "Cross-corpus technical distillation of 29 internal research and architecture PDFs into 5 navigable engineering volumes under an explicit Principle P1 honesty contract (zero sentience claims; classical quantum simulation disclosure).",
+      "verification_boundary": "Engineering synthesis compendium referencing underlying PDFs and verified contextuality papers; separates formally proved contextuality theorems from simulated A-Life architectures.",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-007_glitchling-master-compendium/GLITCHLING_MASTER_COMPENDIUM.md",
+          "source_path": "GLITCHLING_MASTER_COMPENDIUM.md@2fb111f12e85a13f22357e74bbe9921a0884c935",
+          "bytes": 16595,
+          "sha256": "037babd27b523fccb8c4597b23a99d3cd4ef3cd51136878442fe35a3f106c1ed"
+        },
+        {
+          "path": "discoveries/0TH-DISC-007_glitchling-master-compendium/04_QUANTUM_2050_HYPERION_CONTEXTUALITY_KS.md",
+          "source_path": "docs/04_QUANTUM_2050_HYPERION_CONTEXTUALITY_KS.md@2fb111f12e85a13f22357e74bbe9921a0884c935",
+          "bytes": 13677,
+          "sha256": "a88ac69f64e3ecc266657ad7da02a47f1defa23e4465a654988e8df3d5617644"
+        },
+        {
+          "path": "discoveries/0TH-DISC-007_glitchling-master-compendium/05_EMBODIED_CORTEX_CQM_DOME_VERIFICATION.md",
+          "source_path": "docs/05_EMBODIED_CORTEX_CQM_DOME_VERIFICATION.md@2fb111f12e85a13f22357e74bbe9921a0884c935",
+          "bytes": 18264,
+          "sha256": "37b9d7296dd653747923299696f795784d44fb0896feec98d48d1aa46379d3f4"
+        }
+      ]
+    },
+    {
+      "id": "0TH-DISC-008",
+      "slug": "dimension-omega-3000-catalogs",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "architectural_synthesis_report",
+      "title": "Dimension Omega Singularity: 3,000-Mechanism Architectural Synthesis Reports (Biologic Substrates, High-Weirdness & A-Life/Consciousness Indicators)",
+      "domain": "Artificial Life / Computational Architecture / Exploratory Synthesis",
+      "date": "2026-11-05",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/dimension-omega-singularity",
+      "branch": "main",
+      "pinned_commit": "947054ec64878530d0f9abdddb9316494a9de34f",
+      "summary": "Three comprehensive architectural mechanism reports documenting 3,000 real-time mathematical operators and biological/quantum-inspired simulation modules wired into the Dimension Omega interactive 3D manifold.",
+      "verification_boundary": "Exploratory computational architecture and interactive simulation catalog; contains mathematical operators implemented in code rather than peer-reviewed mathematical theorems or consciousness claims.",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-008_dimension-omega-3000-catalogs/TSOTCHKE_1000_BIOLOGIC_SUBSTRATES_REPORT.md",
+          "source_path": "TSOTCHKE_1000_BIOLOGIC_SUBSTRATES_REPORT.md@947054ec64878530d0f9abdddb9316494a9de34f",
+          "bytes": 390189,
+          "sha256": "c4b721e396fc3615811d444e2b7fddfefb48d09dce06f64fee4b9b0394190de1"
+        },
+        {
+          "path": "discoveries/0TH-DISC-008_dimension-omega-3000-catalogs/SUPER_INTELLIGENCE_1000_HIGH_WEIRDNESS_REPORT.md",
+          "source_path": "SUPER_INTELLIGENCE_1000_HIGH_WEIRDNESS_REPORT.md@947054ec64878530d0f9abdddb9316494a9de34f",
+          "bytes": 433232,
+          "sha256": "8cc00e409b738c2af2df8320f6ae8d5f55d5c9bf5dc14ddf1e34f8cd7067ce61"
+        },
+        {
+          "path": "discoveries/0TH-DISC-008_dimension-omega-3000-catalogs/ALIFE_CONSCIOUSNESS_1000_CREATURE_REPORT.md",
+          "source_path": "ALIFE_CONSCIOUSNESS_1000_CREATURE_REPORT.md@947054ec64878530d0f9abdddb9316494a9de34f",
+          "bytes": 375684,
+          "sha256": "51287d4773b74bb5df4c95e3d028b4ef87a17deff82a955e4c9db97355f5cf22"
+        }
+      ]
+    },
+    {
+      "id": "0TH-DISC-009",
+      "slug": "math-and-algorithm-atlases",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "computational_reference_atlas",
+      "title": "Closed-Form Math Study Atlas (1,123 Anchored Tests) & Grimoire 1,000-Algorithm Verification Ledger",
+      "domain": "Scientific Computing / Algorithms / Numerical Verification",
+      "date": "2026-07-05",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/grimoire-algorithms-of-the-arcane",
+      "branch": "main",
+      "pinned_commit": "edca7f8dc2f8bba27402a248301dd30d19ff1781",
+      "summary": "Combined reference index preserving the zero-dependency scientific workstation Math Study Atlas (professional-calculator @ aef7da08c0b0, 1,123 closed-form tests) and the Grimoire 1,000-algorithm source & verification ledger.",
+      "verification_boundary": "Computational reference atlases and closed-form regression suites; not formal theorem-prover proofs.",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-009_math-and-algorithm-atlases/MATH_STUDY_ATLAS.md",
+          "source_path": "docs/MATH_STUDY_ATLAS.md@aef7da08c0b0fcd2dda0cc15783b279eafcbac96",
+          "bytes": 51318,
+          "sha256": "72445316a8188fd0dce985e9b77a3befd82c5af1824df13aba8548482a57c639"
+        },
+        {
+          "path": "discoveries/0TH-DISC-009_math-and-algorithm-atlases/SOURCE-LEDGER.md",
+          "source_path": "docs/SOURCE-LEDGER.md@edca7f8dc2f8bba27402a248301dd30d19ff1781",
+          "bytes": 4568,
+          "sha256": "6e2818426bc9617603ee82a24d78793daeec7c857af63c22fb2ec0df6ce13b81"
+        },
+        {
+          "path": "discoveries/0TH-DISC-009_math-and-algorithm-atlases/VERIFICATION.md",
+          "source_path": "docs/VERIFICATION.md@edca7f8dc2f8bba27402a248301dd30d19ff1781",
+          "bytes": 6867,
+          "sha256": "21cf4001faa683d4f4dc30ce4ac5bc4ef6241fde9834682002f49301ae5aa870"
+        }
+      ]
+    },
+    {
+      "id": "0TH-DISC-010",
+      "slug": "hoggar-component-map-and-addenda",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "formal_addenda_and_provenance_map",
+      "title": "Hoggar Bound Lab: Provenance Map of 3 Historical Source Papers, Claim-to-Theorem Map & Conjecture E Addendum",
+      "domain": "Quantum Foundations / Formal Verification Provenance",
+      "date": "2026-11-21",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/hoggar-bound-lab",
+      "branch": "main",
+      "pinned_commit": "5d4f48901812b0265d292ba5db7b76eba657e5a7",
+      "summary": "Preserved provenance records connecting the three historical source manuscripts (spectral-floor, c3-spectral-counterexample, independent-research-note) and the Conjecture E addendum into the single canonical paper 0TH-2026-002 (v1.5.0), preventing accidental double-counting while indexing every formal claim.",
+      "verification_boundary": "Provenance & claim-mapping index accompanying 0TH-2026-002; all formal theorems in v1.5.0 are verified by Lean 4.35.0 inside repos/hoggar-bound-lab.",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/PAPER-MAP.md",
+          "source_path": "publication/PAPER-MAP.md@5d4f48901812b0265d292ba5db7b76eba657e5a7",
+          "bytes": 8771,
+          "sha256": "1f16d76dd82e220141246be5f2eda735a8cbddc21370747d07d31d30f8b09556"
+        },
+        {
+          "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/ADDENDUM-conjecture-e.md",
+          "source_path": "publication/ADDENDUM-conjecture-e.md@5d4f48901812b0265d292ba5db7b76eba657e5a7",
+          "bytes": 22173,
+          "sha256": "5fcf47c91b7ef626aefe4dc96bf1c597b5b9585fe03ce8df9a1bbb04346943b6"
+        },
+        {
+          "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/CLAIMS.md",
+          "source_path": "docs/CLAIMS.md@5d4f48901812b0265d292ba5db7b76eba657e5a7",
+          "bytes": 29254,
+          "sha256": "ce83548a714322fcccd4f5b2bb524f7a1e9bb78941d92cbde17505b67db2893b"
+        },
+        {
+          "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/new-formalizations-lean-axioms.log",
+          "source_path": "results/new-formalizations-lean-axioms.log@5d4f48901812b0265d292ba5db7b76eba657e5a7",
+          "bytes": 3754,
+          "sha256": "5cded837f07474157b6781912d7d2cc2bcecafc8129196aa9a53c6194c4bc6b2"
+        }
+      ]
+    }
+  ]
+}

@@ -29,7 +29,7 @@ Proves a finite adaptive-tree sequential contextuality evidence theorem and a sh
 
 - **Framework:** Lean 4
 - **Library Entry Point:** `lean/Evidence.lean`
-- **Axiom Audit Script:** `lean/Verification.lean`
+- **Primary Axiom Audit Script:** `lean/Verification.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
 
 ## Verification Boundary (Honest Epistemic Scope)

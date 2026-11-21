@@ -6,45 +6,8 @@
     "orcid": "0009-0006-8168-9648",
     "affiliation": "0thernes LLC"
   },
-  "updated_utc": "2026-11-21T03:58:00Z",
+  "updated_utc": "2026-11-21T09:06:23Z",
   "builds": [
-    {
-      "id": "0TH-BUILD-001",
-      "slug": "cellulogonic-mecha",
-      "title": "CELLULOGONIC MECHA: A Clean-Room Non-Equilibrium Chemiosmotic, Elastic-Membrane, Endosymbiotic & Bioelectric Cellular Artificial Life Laboratory with Machine-Checked Lean 4 Invariants",
-      "domain": "Artificial Life / Biophysical Simulation / Formal Methods",
-      "date": "2026-11-19",
-      "version": "v1.2.0",
-      "author": "Alexander Stephen Donahue",
-      "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
-      "repository": "https://github.com/0thernes/cellulogonic-mecha",
-      "submodule_path": "repos/cellulogonic-mecha",
-      "pinned_commit": "4feb922cce724357d54e411c1c254fc40bfdb474",
-      "archived_artifacts": [
-        {
-          "path": "builds/0TH-BUILD-001_cellulogonic-mecha/WHITE_PAPER.md",
-          "source_path": "paper/WHITE_PAPER.md",
-          "sha256": "be8cc5b528e1107f674c87dbfdfae0f36c8958ccc8a5d6f35925f82f353e0d22"
-        }
-      ],
-      "lean_verification": {
-        "has_lean": true,
-        "framework": "Pure Lean 4.35.0 (zero Mathlib)",
-        "modules": 8,
-        "lines": 1405,
-        "audited_theorems": 58,
-        "axiom_allowlist": [
-          "propext",
-          "Quot.sound"
-        ],
-        "entry_point": "lean/CellulogonicProofs.lean",
-        "live_audit_status": "Build completed successfully (10 jobs); 0 sorry; all 58 #print axioms within [propext, Quot.sound] or empty"
-      },
-      "summary": "Zero-dependency C11 cellular artificial-life laboratory coupling stoichiometric Chemoton thermodynamics, Stokes hydrodynamics, Canham-Helfrich elastic membranes, Mitchell chemiosmosis, nested endosymbiosis, and bioelectric morphogenesis, accompanied by 58 pure Lean 4 (v4.35.0) machine-checked biophysical invariants and 24 empirical falsification gates.",
-      "verification_boundary": "All 58 Lean 4 invariants compile cleanly in pure Lean 4.35.0 with zero Mathlib, zero sorry, and strictly constructive axioms ([propext, Quot.sound] or empty). Invariants certify exact mathematical properties of the discrete model equations rather than experimental biology.",
-      "falsification_command": "cd repos/cellulogonic-mecha/lean && lake build"
-    },
     {
       "id": "0TH-BUILD-002",
       "slug": "planaria",
@@ -142,6 +105,11 @@
           "path": "builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md",
           "source_path": "docs/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md",
           "sha256": "1bc3917ee115edf6b70dd2025f4ec2efd3140b3e4d7605b2f56ecfcc196c4b5d"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/EDITORIAL-REVIEW-WHITEPAPER-2026-07-01.md",
+          "source_path": "docs/EDITORIAL-REVIEW-WHITEPAPER-2026-07-01.md",
+          "sha256": "fb3f01099f3a092e7d11caba8ba8b1c7f2e3fb55ca5a8b0eb30e9976e22c7eed"
         }
       ],
       "lean_verification": {
@@ -191,6 +159,51 @@
       "summary": "Formal verification audit PDF and NHSI applied-research papers ledger documenting operational functional markers and simulation validation in the Cosmogonic Quantum Mechalogodrom artificial life platform.",
       "verification_boundary": "Explicitly disclaims sentience or consciousness; documents operational simulation markers and code-to-literature provenance.",
       "falsification_command": "ls repos/cosmogonic-quantum-mechalogodrom/docs/alife/cqm-alife-audit.pdf"
+    },
+    {
+      "id": "0TH-BUILD-006",
+      "slug": "black-hole-simulation-lab",
+      "title": "Black Hole Simulation Lab: Exact Schwarzschild Lean 4 Certificates (ClassicalGR.lean) & Kerr Shadow Asymmetry Analytic Anchors",
+      "domain": "General Relativity / Computational Astrophysics / Formal Methods",
+      "date": "2026-11-10",
+      "version": "main+research-branch",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/black-hole-simulation-lab",
+      "submodule_path": "repos/black-hole-simulation-lab",
+      "pinned_commit": "050455db866d32eb115d0cd1a39f9b90a76fdd6f",
+      "secondary_branch_ref": "cursor/research-archive-and-starfield-b952 @ 9114db2f0876ea5acbe539acac77570e76da2d1c",
+      "archived_artifacts": [
+        {
+          "path": "builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean",
+          "source_path": "proofs/ClassicalGR.lean (branch cursor/research-archive-and-starfield-b952)",
+          "sha256": "ba61fa1c955601872c6ca6a91d43dfabc7fa5987dab1d1170fdf3eb5780352cd"
+        },
+        {
+          "path": "builds/0TH-BUILD-006_black-hole-simulation-lab/M5_SHADOW_ASYMMETRY.md",
+          "source_path": "docs/research/M5_SHADOW_ASYMMETRY.md",
+          "sha256": "a56a672d018de67694e41afea6e5f4fdf3119c94d007986e0adf9cb66d6e4b6b"
+        },
+        {
+          "path": "builds/0TH-BUILD-006_black-hole-simulation-lab/RESEARCH_PROGRAM.md",
+          "source_path": "docs/research/RESEARCH_PROGRAM.md",
+          "sha256": "51190094d2519142b452504364261a436ec4534383d8f85ba21b3298bb5ab44e"
+        }
+      ],
+      "lean_verification": {
+        "has_lean": true,
+        "framework": "Pure Lean 4.35.0 Core (zero Mathlib, zero axioms)",
+        "modules": 1,
+        "lines": 34,
+        "audited_theorems": 8,
+        "axiom_allowlist": [],
+        "entry_point": "builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean",
+        "live_audit_status": "Live lean 4.35.0 EXIT 0; all 8 rfl theorems depend on ZERO axioms (does not depend on any axioms)"
+      },
+      "summary": "GR-exact Schwarzschild/Kerr geodesic simulation lab with an 8-theorem zero-axiom Lean 4 certificate (proofs/ClassicalGR.lean on branch cursor/research-archive-and-starfield-b952) verifying photon-sphere u=1/3, critical potential 1/27, b_crit^2=27, ISCO E^2=8/9 & L^2=12, and BPT a=0 -> r=6, paired with exact Bardeen Kerr shadow asymmetry anchors (M5_SHADOW_ASYMMETRY.md) and 20+ GR source cards.",
+      "verification_boundary": "ClassicalGR.lean certifies exact rational Schwarzschild algebraic limits by pure kernel definitional reduction (rfl, zero axioms); it explicitly disclaims proving the full Einstein field equations. Kerr shadow asymmetry anchors are closed-form analytic_classical checks.",
+      "falsification_command": "lean builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean"
     }
   ]
 }

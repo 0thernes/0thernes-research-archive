@@ -1,0 +1,45 @@
+{
+  "id": "0TH-BUILD-006",
+  "slug": "black-hole-simulation-lab",
+  "title": "Black Hole Simulation Lab: Exact Schwarzschild Lean 4 Certificates (ClassicalGR.lean) & Kerr Shadow Asymmetry Analytic Anchors",
+  "domain": "General Relativity / Computational Astrophysics / Formal Methods",
+  "date": "2026-11-10",
+  "version": "main+research-branch",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/black-hole-simulation-lab",
+  "submodule_path": "repos/black-hole-simulation-lab",
+  "pinned_commit": "050455db866d32eb115d0cd1a39f9b90a76fdd6f",
+  "secondary_branch_ref": "cursor/research-archive-and-starfield-b952 @ 9114db2f0876ea5acbe539acac77570e76da2d1c",
+  "archived_artifacts": [
+    {
+      "path": "builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean",
+      "source_path": "proofs/ClassicalGR.lean (branch cursor/research-archive-and-starfield-b952)",
+      "sha256": "ba61fa1c955601872c6ca6a91d43dfabc7fa5987dab1d1170fdf3eb5780352cd"
+    },
+    {
+      "path": "builds/0TH-BUILD-006_black-hole-simulation-lab/M5_SHADOW_ASYMMETRY.md",
+      "source_path": "docs/research/M5_SHADOW_ASYMMETRY.md",
+      "sha256": "a56a672d018de67694e41afea6e5f4fdf3119c94d007986e0adf9cb66d6e4b6b"
+    },
+    {
+      "path": "builds/0TH-BUILD-006_black-hole-simulation-lab/RESEARCH_PROGRAM.md",
+      "source_path": "docs/research/RESEARCH_PROGRAM.md",
+      "sha256": "51190094d2519142b452504364261a436ec4534383d8f85ba21b3298bb5ab44e"
+    }
+  ],
+  "lean_verification": {
+    "has_lean": true,
+    "framework": "Pure Lean 4.35.0 Core (zero Mathlib, zero axioms)",
+    "modules": 1,
+    "lines": 34,
+    "audited_theorems": 8,
+    "axiom_allowlist": [],
+    "entry_point": "builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean",
+    "live_audit_status": "Live lean 4.35.0 EXIT 0; all 8 rfl theorems depend on ZERO axioms (does not depend on any axioms)"
+  },
+  "summary": "GR-exact Schwarzschild/Kerr geodesic simulation lab with an 8-theorem zero-axiom Lean 4 certificate (proofs/ClassicalGR.lean on branch cursor/research-archive-and-starfield-b952) verifying photon-sphere u=1/3, critical potential 1/27, b_crit^2=27, ISCO E^2=8/9 & L^2=12, and BPT a=0 -> r=6, paired with exact Bardeen Kerr shadow asymmetry anchors (M5_SHADOW_ASYMMETRY.md) and 20+ GR source cards.",
+  "verification_boundary": "ClassicalGR.lean certifies exact rational Schwarzschild algebraic limits by pure kernel definitional reduction (rfl, zero axioms); it explicitly disclaims proving the full Einstein field equations. Kerr shadow asymmetry anchors are closed-form analytic_classical checks.",
+  "falsification_command": "lean builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean"
+}

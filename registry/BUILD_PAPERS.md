@@ -1,26 +1,18 @@
-# Build White Papers & Embedded Lean 4 Proof Suites
+# Tier II — Public Build White Papers & Embedded Lean 4 Proof Suites
 
 **Author:** Alexander Stephen Donahue (0thernes LLC) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
-**Embedded Pure Lean 4.35.0 Proofs Audited:** 120 theorems across 2,995 lines (zero Mathlib, zero `sorry`)  
-**Updated:** `2026-11-21T03:58:00Z`
+**Public Embedded Pure Lean 4.35.0 Proofs Audited:** 70 theorems across 1,624 lines (zero Mathlib, zero `sorry`)  
+**Updated:** `2026-11-21T09:06:23Z`
 
 | ID | Date | Repo / Version | Embedded Lean 4 Proofs | Frozen White Paper / Audit | Dossier |
 |---|---|---|---|---|---|
-| `0TH-BUILD-001` | 2026-11-19 | [`cellulogonic-mecha`](https://github.com/0thernes/cellulogonic-mecha) `v1.2.0` | 58 theorems (8 files, 1405 lines) | [WHITE_PAPER.md](../builds/0TH-BUILD-001_cellulogonic-mecha/WHITE_PAPER.md) | [Evidence](../builds/0TH-BUILD-001_cellulogonic-mecha/EVIDENCE.md) |
 | `0TH-BUILD-002` | 2026-11-18 | [`planaria`](https://github.com/0thernes/planaria) `v2.0.0` | 38 theorems (7 files, 976 lines) | [WHITE_PAPER.md](../builds/0TH-BUILD-002_planaria/WHITE_PAPER.md) | [Evidence](../builds/0TH-BUILD-002_planaria/EVIDENCE.md) |
 | `0TH-BUILD-003` | 2026-11-18 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) `v1.0.0` | 24 theorems (5 files, 614 lines) | [WHITE_PAPER.md](../builds/0TH-BUILD-003_ultrametrica/WHITE_PAPER.md) | [Evidence](../builds/0TH-BUILD-003_ultrametrica/EVIDENCE.md) |
 | `0TH-BUILD-004` | 2026-07-01 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) `2026-07-02-qa` | Audit / Methodology (non-Lean) | [WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md](../builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md) | [Evidence](../builds/0TH-BUILD-004_unsolved-mathematics/EVIDENCE.md) |
 | `0TH-BUILD-005` | 2026-06-27 | [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) `v0.14.3` | Audit / Methodology (non-Lean) | [cqm-alife-audit.pdf](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/cqm-alife-audit.pdf) | [Evidence](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/EVIDENCE.md) |
+| `0TH-BUILD-006` | 2026-11-10 | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) `main+research-branch` | 8 theorems (1 files, 34 lines) | [ClassicalGR.lean](../builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean) | [Evidence](../builds/0TH-BUILD-006_black-hole-simulation-lab/EVIDENCE.md) |
 
 ---
-
-## 0TH-BUILD-001 — CELLULOGONIC MECHA: A Clean-Room Non-Equilibrium Chemiosmotic, Elastic-Membrane, Endosymbiotic & Bioelectric Cellular Artificial Life Laboratory with Machine-Checked Lean 4 Invariants
-
-- **Repository:** https://github.com/0thernes/cellulogonic-mecha (`v1.2.0`, pinned `4feb922cce72` at `repos/cellulogonic-mecha`)
-- **Lean 4 Audit:** Build completed successfully (10 jobs); 0 sorry; all 58 #print axioms within [propext, Quot.sound] or empty
-- **Summary:** Zero-dependency C11 cellular artificial-life laboratory coupling stoichiometric Chemoton thermodynamics, Stokes hydrodynamics, Canham-Helfrich elastic membranes, Mitchell chemiosmosis, nested endosymbiosis, and bioelectric morphogenesis, accompanied by 58 pure Lean 4 (v4.35.0) machine-checked biophysical invariants and 24 empirical falsification gates.
-- **Verification Boundary:** All 58 Lean 4 invariants compile cleanly in pure Lean 4.35.0 with zero Mathlib, zero sorry, and strictly constructive axioms ([propext, Quot.sound] or empty). Invariants certify exact mathematical properties of the discrete model equations rather than experimental biology.
-- **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-001_cellulogonic-mecha/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-001_cellulogonic-mecha/METADATA.json)
 
 ## 0TH-BUILD-002 — PLANARIA: Progressive Holographic Executable Architecture (.hbin), Multi-Stratum Compilation, Autonomous Control-Flow Anastomosis, and Cryptographic Cellular Quorum
 
@@ -53,3 +45,11 @@
 - **Summary:** Formal verification audit PDF and NHSI applied-research papers ledger documenting operational functional markers and simulation validation in the Cosmogonic Quantum Mechalogodrom artificial life platform.
 - **Verification Boundary:** Explicitly disclaims sentience or consciousness; documents operational simulation markers and code-to-literature provenance.
 - **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/METADATA.json)
+
+## 0TH-BUILD-006 — Black Hole Simulation Lab: Exact Schwarzschild Lean 4 Certificates (ClassicalGR.lean) & Kerr Shadow Asymmetry Analytic Anchors
+
+- **Repository:** https://github.com/0thernes/black-hole-simulation-lab (`main+research-branch`, pinned `050455db866d` at `repos/black-hole-simulation-lab`)
+- **Lean 4 Audit:** Live lean 4.35.0 EXIT 0; all 8 rfl theorems depend on ZERO axioms (does not depend on any axioms)
+- **Summary:** GR-exact Schwarzschild/Kerr geodesic simulation lab with an 8-theorem zero-axiom Lean 4 certificate (proofs/ClassicalGR.lean on branch cursor/research-archive-and-starfield-b952) verifying photon-sphere u=1/3, critical potential 1/27, b_crit^2=27, ISCO E^2=8/9 & L^2=12, and BPT a=0 -> r=6, paired with exact Bardeen Kerr shadow asymmetry anchors (M5_SHADOW_ASYMMETRY.md) and 20+ GR source cards.
+- **Verification Boundary:** ClassicalGR.lean certifies exact rational Schwarzschild algebraic limits by pure kernel definitional reduction (rfl, zero axioms); it explicitly disclaims proving the full Einstein field equations. Kerr shadow asymmetry anchors are closed-form analytic_classical checks.
+- **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-006_black-hole-simulation-lab/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-006_black-hole-simulation-lab/METADATA.json)

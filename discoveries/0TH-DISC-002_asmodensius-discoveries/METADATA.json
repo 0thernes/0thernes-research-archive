@@ -1,0 +1,31 @@
+{
+  "id": "0TH-DISC-002",
+  "slug": "asmodensius-discoveries",
+  "visibility": "PUBLIC",
+  "epistemic_tier": "empirical_discovery_ledger",
+  "title": "Asmodensius (Creature #1): Pre-Registered Controlled Empirical Discoveries & Null Results Ledger (DISCOVERIES.md, R20)",
+  "domain": "Artificial Life / Tokenless Synthetic Cognition / Controlled Experiments",
+  "date": "2026-11-17",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/Asmodensius",
+  "branch": "main",
+  "pinned_commit": "c72a4ec9a0cba60b302a796be48def072abe9f53",
+  "summary": "408-line open empirical discovery log documenting controlled experimental findings in a tokenless, LLM-free artificial organism (grown vs i.i.d. wiring foraging gain, dream confabulation of certainty, aleatoric/epistemic uncertainty conflation, volatility-scaled forgetting) alongside honest null results (N09/N13) and ~98 controlled run logs.",
+  "verification_boundary": "Empirical findings from controlled simulation experiments (not evidence of consciousness or sentience; explicitly reports negative/null outcomes alongside positive discoveries).",
+  "archived_artifacts": [
+    {
+      "path": "discoveries/0TH-DISC-002_asmodensius-discoveries/DISCOVERIES.md",
+      "source_path": "creatures/001/DISCOVERIES.md@c72a4ec9a0cba60b302a796be48def072abe9f53",
+      "bytes": 33298,
+      "sha256": "1889145ea94e6562629a772bd753c0e706be62ecf8a63181777954b6076c3556"
+    },
+    {
+      "path": "discoveries/0TH-DISC-002_asmodensius-discoveries/STATUS-R20.md",
+      "source_path": "creatures/001/STATUS-R20.md@c72a4ec9a0cba60b302a796be48def072abe9f53",
+      "bytes": 651,
+      "sha256": "3a5c15276f3e1805c934e98324d2ed30041cafab963fea9d33c0596fc911ced9"
+    }
+  ]
+}

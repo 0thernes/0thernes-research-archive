@@ -29,7 +29,7 @@ Proves a third-moment spectral lower bound on the contextuality degree of N-qubi
 
 - **Framework:** Lean 4 / Mathlib
 - **Library Entry Point:** `lean/HoggarBound.lean`
-- **Axiom Audit Script:** `lean/Audit/Axioms.lean`
+- **Primary Axiom Audit Script:** `lean/Audit/Axioms.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
 
 ## Verification Boundary (Honest Epistemic Scope)

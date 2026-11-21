@@ -1,0 +1,43 @@
+{
+  "id": "0TH-DISC-010",
+  "slug": "hoggar-component-map-and-addenda",
+  "visibility": "PUBLIC",
+  "epistemic_tier": "formal_addenda_and_provenance_map",
+  "title": "Hoggar Bound Lab: Provenance Map of 3 Historical Source Papers, Claim-to-Theorem Map & Conjecture E Addendum",
+  "domain": "Quantum Foundations / Formal Verification Provenance",
+  "date": "2026-11-21",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/hoggar-bound-lab",
+  "branch": "main",
+  "pinned_commit": "5d4f48901812b0265d292ba5db7b76eba657e5a7",
+  "summary": "Preserved provenance records connecting the three historical source manuscripts (spectral-floor, c3-spectral-counterexample, independent-research-note) and the Conjecture E addendum into the single canonical paper 0TH-2026-002 (v1.5.0), preventing accidental double-counting while indexing every formal claim.",
+  "verification_boundary": "Provenance & claim-mapping index accompanying 0TH-2026-002; all formal theorems in v1.5.0 are verified by Lean 4.35.0 inside repos/hoggar-bound-lab.",
+  "archived_artifacts": [
+    {
+      "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/PAPER-MAP.md",
+      "source_path": "publication/PAPER-MAP.md@5d4f48901812b0265d292ba5db7b76eba657e5a7",
+      "bytes": 8771,
+      "sha256": "1f16d76dd82e220141246be5f2eda735a8cbddc21370747d07d31d30f8b09556"
+    },
+    {
+      "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/ADDENDUM-conjecture-e.md",
+      "source_path": "publication/ADDENDUM-conjecture-e.md@5d4f48901812b0265d292ba5db7b76eba657e5a7",
+      "bytes": 22173,
+      "sha256": "5fcf47c91b7ef626aefe4dc96bf1c597b5b9585fe03ce8df9a1bbb04346943b6"
+    },
+    {
+      "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/CLAIMS.md",
+      "source_path": "docs/CLAIMS.md@5d4f48901812b0265d292ba5db7b76eba657e5a7",
+      "bytes": 29254,
+      "sha256": "ce83548a714322fcccd4f5b2bb524f7a1e9bb78941d92cbde17505b67db2893b"
+    },
+    {
+      "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/new-formalizations-lean-axioms.log",
+      "source_path": "results/new-formalizations-lean-axioms.log@5d4f48901812b0265d292ba5db7b76eba657e5a7",
+      "bytes": 3754,
+      "sha256": "5cded837f07474157b6781912d7d2cc2bcecafc8129196aa9a53c6194c4bc6b2"
+    }
+  ]
+}

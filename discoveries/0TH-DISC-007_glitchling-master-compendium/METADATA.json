@@ -1,0 +1,37 @@
+{
+  "id": "0TH-DISC-007",
+  "slug": "glitchling-master-compendium",
+  "visibility": "PUBLIC",
+  "epistemic_tier": "technical_synthesis_compendium",
+  "title": "Glitchling Master Compendium: 29-PDF Synthesis (1,932 Pages) Across Quantum 2050, Contextuality, NESTOR/HEPTARCH & Embodied A-Life",
+  "domain": "Artificial Life / Quantum Simulation / Systems Engineering",
+  "date": "2026-11-12",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/glitchling-jam",
+  "branch": "main",
+  "pinned_commit": "2fb111f12e85a13f22357e74bbe9921a0884c935",
+  "summary": "Cross-corpus technical distillation of 29 internal research and architecture PDFs into 5 navigable engineering volumes under an explicit Principle P1 honesty contract (zero sentience claims; classical quantum simulation disclosure).",
+  "verification_boundary": "Engineering synthesis compendium referencing underlying PDFs and verified contextuality papers; separates formally proved contextuality theorems from simulated A-Life architectures.",
+  "archived_artifacts": [
+    {
+      "path": "discoveries/0TH-DISC-007_glitchling-master-compendium/GLITCHLING_MASTER_COMPENDIUM.md",
+      "source_path": "GLITCHLING_MASTER_COMPENDIUM.md@2fb111f12e85a13f22357e74bbe9921a0884c935",
+      "bytes": 16595,
+      "sha256": "037babd27b523fccb8c4597b23a99d3cd4ef3cd51136878442fe35a3f106c1ed"
+    },
+    {
+      "path": "discoveries/0TH-DISC-007_glitchling-master-compendium/04_QUANTUM_2050_HYPERION_CONTEXTUALITY_KS.md",
+      "source_path": "docs/04_QUANTUM_2050_HYPERION_CONTEXTUALITY_KS.md@2fb111f12e85a13f22357e74bbe9921a0884c935",
+      "bytes": 13677,
+      "sha256": "a88ac69f64e3ecc266657ad7da02a47f1defa23e4465a654988e8df3d5617644"
+    },
+    {
+      "path": "discoveries/0TH-DISC-007_glitchling-master-compendium/05_EMBODIED_CORTEX_CQM_DOME_VERIFICATION.md",
+      "source_path": "docs/05_EMBODIED_CORTEX_CQM_DOME_VERIFICATION.md@2fb111f12e85a13f22357e74bbe9921a0884c935",
+      "bytes": 18264,
+      "sha256": "37b9d7296dd653747923299696f795784d44fb0896feec98d48d1aa46379d3f4"
+    }
+  ]
+}

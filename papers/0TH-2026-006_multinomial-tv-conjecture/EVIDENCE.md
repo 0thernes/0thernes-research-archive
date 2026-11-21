@@ -29,7 +29,7 @@ Proves Conjecture 7.7 (conj:atriangle) of Banic & Elezovic (arXiv:2610.17046v1, 
 
 - **Framework:** Lean 4.35.0 / Mathlib v4.35.0
 - **Library Entry Point:** `lean/MultinomialTVConjecture.lean`
-- **Axiom Audit Script:** `lean/VerifyAxioms.lean`
+- **Primary Axiom Audit Script:** `lean/VerifyAxioms.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
 
 ## Verification Boundary (Honest Epistemic Scope)

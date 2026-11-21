@@ -15,6 +15,8 @@
 | Artifact SHA-256 | `30a5b117b5aa5eab3a6d38cf44fb19be9392f7f2ab4630d53dc140f87e864f96` |
 | Archived Artifact | `builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md` (from `docs/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md`) |
 | Artifact SHA-256 | `1bc3917ee115edf6b70dd2025f4ec2efd3140b3e4d7605b2f56ecfcc196c4b5d` |
+| Archived Artifact | `builds/0TH-BUILD-004_unsolved-mathematics/EDITORIAL-REVIEW-WHITEPAPER-2026-07-01.md` (from `docs/EDITORIAL-REVIEW-WHITEPAPER-2026-07-01.md`) |
+| Artifact SHA-256 | `fb3f01099f3a092e7d11caba8ba8b1c7f2e3fb55ca5a8b0eb30e9976e22c7eed` |
 
 ## Summary
 

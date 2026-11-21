@@ -1,0 +1,37 @@
+{
+  "id": "0TH-DISC-006",
+  "slug": "unsolved-black-hole-problems",
+  "visibility": "PUBLIC",
+  "epistemic_tier": "open_problem_catalogue",
+  "title": "Unsolved Black-Hole Problems: Ranked 16-Problem Research Catalogue with CI-Enforced Citation Integrity & 6 Truth Tiers",
+  "domain": "Theoretical Physics / General Relativity / Quantum Gravity",
+  "date": "2026-06-14",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/unsolved-black-hole-problems",
+  "branch": "main",
+  "pinned_commit": "cf11c68c3953e0d73b13efdbf014ecaae9c947a8",
+  "summary": "Machine-validated, RAG-ready meta-analysis ranking 16 major unsolved problems in black-hole physics (originators, ~25 DOI/arXiv-pinned papers per problem, 6 epistemic truth tiers, automated citation validation).",
+  "verification_boundary": "AI-assisted literature catalogue directed and reviewed by Alexander S. Donahue; solves no open physics problem and labels all conjectures explicitly.",
+  "archived_artifacts": [
+    {
+      "path": "discoveries/0TH-DISC-006_unsolved-black-hole-problems/README.md",
+      "source_path": "README.md@cf11c68c3953e0d73b13efdbf014ecaae9c947a8",
+      "bytes": 6964,
+      "sha256": "ca4faa86ae17048cf1f4a8f4c2b386eade88ae9f59bedbce9aa8cf5975630477"
+    },
+    {
+      "path": "discoveries/0TH-DISC-006_unsolved-black-hole-problems/AI_REVIEW.md",
+      "source_path": "docs/AI_REVIEW.md@cf11c68c3953e0d73b13efdbf014ecaae9c947a8",
+      "bytes": 3878,
+      "sha256": "8b354dff4d581b73bfdcfd674d0a723476fa0dbbd077599351b1c61837772fca"
+    },
+    {
+      "path": "discoveries/0TH-DISC-006_unsolved-black-hole-problems/AUDIT-2026-06-14.md",
+      "source_path": "docs/audits/AUDIT-2026-06-14.md@cf11c68c3953e0d73b13efdbf014ecaae9c947a8",
+      "bytes": 2977,
+      "sha256": "d6087a48b09999435e173e55bc798e764c4aa14033c57a77a208f51badcfaaf3"
+    }
+  ]
+}

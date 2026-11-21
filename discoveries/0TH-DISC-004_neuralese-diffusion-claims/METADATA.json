@@ -1,0 +1,31 @@
+{
+  "id": "0TH-DISC-004",
+  "slug": "neuralese-diffusion-claims",
+  "visibility": "PUBLIC",
+  "epistemic_tier": "preregistered_empirical_claims",
+  "title": "Neuralese Diffusion: Pre-Registered Cross-Modality Diffusion Interpretability Claims & Falsifications (v1\u2013v2)",
+  "domain": "Generative Models / Mechanistic Interpretability / Empirical ML",
+  "date": "2026-10-27",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "0thernes LLC",
+  "repository": "https://github.com/0thernes/neuralese-diffusion",
+  "branch": "main",
+  "pinned_commit": "13e3b0e22ea756da26c4e0a98c9eccf1bec92e98",
+  "summary": "Pre-registered claims and falsification ledgers across image, music, video, and 3D tiny diffusion models, transparently logging both verified behaviors and negative/falsified tests (e.g., prompt-swap R4 and video2 failures).",
+  "verification_boundary": "Empirical pre-registered claims on compact on-device diffusion models; honestly preserves falsified hypotheses.",
+  "archived_artifacts": [
+    {
+      "path": "discoveries/0TH-DISC-004_neuralese-diffusion-claims/CLAIMS.md",
+      "source_path": "docs/CLAIMS.md@13e3b0e22ea756da26c4e0a98c9eccf1bec92e98",
+      "bytes": 2366,
+      "sha256": "4a2df4eded1d372b4d65795f4a3ebabc25ca994964445abc5382e0b3f48e7478"
+    },
+    {
+      "path": "discoveries/0TH-DISC-004_neuralese-diffusion-claims/CLAIMS-v2.md",
+      "source_path": "docs/CLAIMS-v2.md@13e3b0e22ea756da26c4e0a98c9eccf1bec92e98",
+      "bytes": 3680,
+      "sha256": "b963dfbd9f1388beeacb31f7dcc46fc34c70ff606bd829637ad2c5885399598c"
+    }
+  ]
+}

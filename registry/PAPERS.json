@@ -15,7 +15,7 @@
       "github": "https://github.com/0thernes",
       "website": "https://0thernes.art"
     },
-    "updated_utc": "2026-11-21T03:55:00Z"
+    "updated_utc": "2026-11-21T09:06:23Z"
   },
   "papers": [
     {
@@ -63,40 +63,71 @@
       "slug": "hoggar-bound-lab",
       "title": "Spectral bounds and their limits in Pauli contextuality: exact configurations and a proof of Jonah's Conjecture E",
       "domain": "Quantum Foundations / Quantum Contextuality",
-      "date_released": "2026-11-10",
-      "version": "v1.4.0",
+      "date_released": "2026-11-21",
+      "version": "v1.5.0",
       "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; listed on ORCID)",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
       "affiliation": "0thernes LLC",
       "repository": "https://github.com/0thernes/hoggar-bound-lab",
       "submodule_path": "repos/hoggar-bound-lab",
-      "pinned_commit": "2149cbfc5475efbd8e791547ddd9b040954cb8ed",
-      "release_url": "https://github.com/0thernes/hoggar-bound-lab/releases/tag/v1.4.0",
+      "pinned_commit": "5d4f48901812b0265d292ba5db7b76eba657e5a7",
+      "release_url": "https://github.com/0thernes/hoggar-bound-lab/releases/tag/v1.5.0",
       "pages_url": "https://0thernes.github.io/hoggar-bound-lab/",
       "pdf_archive_path": "papers/0TH-2026-002_hoggar-bound-lab/unified-contextuality.pdf",
       "pdf_sha256": "89532166e85088b98b157d5521785955c501f1b75e33f53e4d199a4ce58ea203",
       "arxiv_bundle_url": "https://github.com/0thernes/hoggar-bound-lab/releases/download/v1.4.0/unified-arxiv-source.zip",
       "arxiv_bundle_sha256": "5ce9058b78640a2ecadeac8c1259b67f9dd3d0764594a15b77b05d5a94849a73",
       "lean_verification": {
-        "framework": "Lean 4.35.0",
+        "framework": "Lean 4.35.0 / Mathlib v4.35.0",
         "axiom_allowlist": [
           "propext",
           "Classical.choice",
           "Quot.sound"
         ],
         "entry_point": "lean/HoggarBound.lean",
-        "axiom_audit_file": "lean/C3Verification.lean"
+        "axiom_audit_file": "lean/VerifyNewFormalizations.lean",
+        "additional_audit_files": [
+          "lean/C3Verification.lean",
+          "lean/IndependentVerification.lean",
+          "lean/SaturatedVerification.lean",
+          "lean/SaturatedSevenVerification.lean",
+          "lean/StabilityVerification.lean"
+        ],
+        "v150_new_lines": 6071,
+        "v150_audited_theorems": 37
       },
-      "ci_run_url": "https://github.com/0thernes/hoggar-bound-lab/actions/runs/42834831332",
+      "ci_run_url": "https://github.com/0thernes/hoggar-bound-lab/actions/runs/44888403135",
       "preservation": {
         "software_heritage": "swh:1:snp:eae8dd29885ec4075b4a30e2edac1fea28d9d998",
         "wayback_machine": "https://web.archive.org/web/20261110150849/https://0thernes.github.io/hoggar-bound-lab/paper/unified-contextuality.pdf?v=1.4.0",
         "doi": null
       },
-      "core_result": "Unified study combining Lean 4 verification of the spectral floor, exact contextuality degrees (75, 480, 729344) for new 4-, 5-, and 7-qubit configurations, a four-qubit cospectral C3 pair with distinct completion spectra, an all-qubit (N >= 4) Lean-checked C3 family, and a self-contained proof settling all nine vertex cases of Jonah's Conjecture E.",
-      "verification_boundary": "Spectral floor, saturated configurations, and all-qubit C3 family are kernel-checked in Lean 4; non-C3 vertex cases of Conjecture E have self-contained paper proofs checked by exact computation and seven automated adversarial review passes.",
-      "falsification_command": "cd repos/hoggar-bound-lab && bash scripts/run_all.sh"
+      "core_result": "Unified study with complete Lean 4.35.0 formalizations of the spectral floor, Theorem 2 (Kramers / quaternionic floor and elliptic quadrics Q-(2N-1,2)), Theorems 3-4 (5-way saturation equivalences and (2^N-1)|S| = square), exact contextuality degrees (75, 480, 729344) for 4-, 5-, and 7-qubit configurations, a four-qubit cospectral C3 pair with distinct completion spectra, Lemmas 20-21 (Jordan restriction and universal cubic-trace identity), and Theorem 19: a full machine-checked Lean 4 proof of Jonah's Conjecture E across all nine vertex cases (C1, C3, C5, C6, C8, C11, C12, C14, C15) for every N >= 4.",
+      "verification_boundary": "As of v1.5.0, the spectral floor, Kramers quaternionic floor, 5-way saturation equivalences, saturated configurations, four-qubit C3 certificate, all-qubit C3 family, Lemmas 20-21, and Theorem 19 (Jonah's Conjecture E in all 9 vertex cases for every N >= 4) are all kernel-checked in Lean 4.35.0 with zero sorry, zero native_decide, and strictly standard axioms [propext, Classical.choice, Quot.sound]. Historical source manuscripts remain preserved inside the repository as component records of this single combined study (see publication/PAPER-MAP.md).",
+      "falsification_command": "cd repos/hoggar-bound-lab/lean && lake build HoggarBound.Kramers HoggarBound.SaturationTheory HoggarBound.ConjectureE && lake env lean VerifyNewFormalizations.lean && cd .. && bash scripts/run_all.sh",
+      "component_manuscripts": [
+        {
+          "title": "A machine-checked spectral floor for Pauli contextuality, and new configurations that attain it",
+          "historical_release": "v1.1.0 / v1.1.1",
+          "repo_path": "paper/spectral-floor.pdf",
+          "note": "Historical source study folded into unified-contextuality.pdf (not a separate journal submission)."
+        },
+        {
+          "title": "Cospectral Pauli carriers with different completion spectra: an exact four-qubit C3 certificate",
+          "historical_release": "v0.2.0-c3-certificate",
+          "repo_path": "paper/c3-spectral-counterexample.pdf",
+          "sha256": "5be6ba1318ce5cfeebf3a89b79dcfd428f87e228234e2f5075b14807a7f34836",
+          "note": "Historical 42-declaration C3 study folded into unified-contextuality.pdf."
+        },
+        {
+          "title": "A verified spectral bound for Pauli contextuality: independent validation and critical synthesis",
+          "historical_release": "v0.1.0-independent-verification",
+          "repo_path": "paper/independent-research-note.pdf",
+          "sha256": "05d11c8f312f8ea80cca8360426cbc11d85a2aa590ef2f7f589d4b921078ab9d",
+          "note": "Historical independent validation companion folded into unified-contextuality.pdf."
+        }
+      ]
     },
     {
       "id": "0TH-2026-003",

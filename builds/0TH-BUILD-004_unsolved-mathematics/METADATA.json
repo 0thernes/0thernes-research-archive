@@ -21,6 +21,11 @@
       "path": "builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md",
       "source_path": "docs/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md",
       "sha256": "1bc3917ee115edf6b70dd2025f4ec2efd3140b3e4d7605b2f56ecfcc196c4b5d"
+    },
+    {
+      "path": "builds/0TH-BUILD-004_unsolved-mathematics/EDITORIAL-REVIEW-WHITEPAPER-2026-07-01.md",
+      "source_path": "docs/EDITORIAL-REVIEW-WHITEPAPER-2026-07-01.md",
+      "sha256": "fb3f01099f3a092e7d11caba8ba8b1c7f2e3fb55ca5a8b0eb30e9976e22c7eed"
     }
   ],
   "lean_verification": {

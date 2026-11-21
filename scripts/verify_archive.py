@@ -3,17 +3,20 @@
 Cryptographic & structural integrity auditor for the 0thernes Research Archive.
 
 Checks:
-  1. Schema validity and canonical ORCID (0009-0006-8168-9648) on every entry
-     across BOTH registry/PAPERS.json (standalone research preprints) and
-     registry/BUILD_PAPERS.json (build white papers & embedded Lean 4 suites).
-  2. Byte-for-byte SHA-256 verification of every archived frozen PDF and white
-     paper artifact against registry manifests and CHECKSUMS.sha256.
-  3. Presence of per-entry METADATA.json and EVIDENCE.md dossiers.
-  4. Exact Git submodule commit pin matching registry manifests for all pinned repos.
+  1. Schema validity and canonical ORCID (0009-0006-8168-9648) on every entry across:
+     - Tier I:   registry/PAPERS.json (standalone research preprints)
+     - Tier II:  registry/BUILD_PAPERS.json (build white papers & embedded Lean 4 suites)
+     - Tier III: registry/LAWS_AND_DISCOVERIES.json (public laws, pre-registered claims,
+                 empirical discoveries, finite certificates & open-problem atlases)
+  2. Byte-for-byte SHA-256 verification of every archived frozen PDF, Lean file, white
+     paper, and discovery snapshot against registry manifests and CHECKSUMS.sha256.
+  3. Presence of per-entry METADATA.json and EVIDENCE.md dossiers across all tiers.
+  4. Exact Git submodule commit pin matching registry manifests for all public pinned repos.
+  5. Strict standard Lean axiom allowlist ([propext, Classical.choice, Quot.sound]).
 
 Optional flags:
-  --sync   Regenerate per-entry METADATA.json, EVIDENCE.md, registry/PAPERS.md,
-           registry/BUILD_PAPERS.md, and CHECKSUMS.sha256 before verifying.
+  --sync   Regenerate per-entry METADATA.json, EVIDENCE.md, registry markdown indexes,
+           and CHECKSUMS.sha256 before verifying.
 """
 
 from __future__ import annotations
@@ -72,24 +75,34 @@ def render_evidence_md(paper: dict) -> str:
         "",
         f"- **Framework:** {lv['framework']}",
         f"- **Library Entry Point:** `{lv['entry_point']}`",
-        f"- **Axiom Audit Script:** `{lv['axiom_audit_file']}`",
+        f"- **Primary Axiom Audit Script:** `{lv['axiom_audit_file']}`",
         f"- **Permitted Axioms:** `{', '.join(lv['axiom_allowlist'])}`",
-        "",
-        "## Verification Boundary (Honest Epistemic Scope)",
-        "",
-        paper["verification_boundary"],
-        "",
-        "## Independent Reproduction & Falsification Protocol",
-        "",
-        "To verify or attempt to falsify this paper from scratch:",
-        "",
-        "```bash",
-        "git clone --recursive https://github.com/0thernes/0thernes-research-archive.git",
-        "cd 0thernes-research-archive",
-        paper["falsification_command"],
-        "```",
-        "",
     ]
+    if lv.get("additional_audit_files"):
+        lines.append(f"- **Additional Audit Scripts:** `{', '.join(lv['additional_audit_files'])}`")
+    if paper.get("component_manuscripts"):
+        lines.extend(["", "## Preserved Component Manuscripts (Historical Provenance)", ""])
+        for cm in paper["component_manuscripts"]:
+            lines.append(f"- **{cm['title']}** (`{cm['historical_release']}`, `{cm['repo_path']}`): {cm['note']}")
+    lines.extend(
+        [
+            "",
+            "## Verification Boundary (Honest Epistemic Scope)",
+            "",
+            paper["verification_boundary"],
+            "",
+            "## Independent Reproduction & Falsification Protocol",
+            "",
+            "To verify or attempt to falsify this paper from scratch:",
+            "",
+            "```bash",
+            "git clone --recursive https://github.com/0thernes/0thernes-research-archive.git",
+            "cd 0thernes-research-archive",
+            paper["falsification_command"],
+            "```",
+            "",
+        ]
+    )
     return "\n".join(lines)
 
 
@@ -110,6 +123,8 @@ def render_build_evidence_md(b: dict) -> str:
         f"| Source Repository | {b['repository']} |",
         f"| Pinned Git Submodule | `{b['submodule_path']}` @ `{b['pinned_commit']}` |",
     ]
+    if b.get("secondary_branch_ref"):
+        lines.append(f"| Additional Branch Ref | `{b['secondary_branch_ref']}` |")
     for art in b["archived_artifacts"]:
         lines.append(f"| Archived Artifact | `{art['path']}` (from `{art['source_path']}`) |")
         lines.append(f"| Artifact SHA-256 | `{art['sha256']}` |")
@@ -126,7 +141,7 @@ def render_build_evidence_md(b: dict) -> str:
             f"- **Lean Modules / Lines:** {lv['modules']} files / {lv['lines']} lines",
             f"- **Audited Theorems (`#print axioms`):** {lv['audited_theorems']}",
             f"- **Entry Point:** `{lv['entry_point'] or 'N/A'}`",
-            f"- **Permitted Axioms:** `{', '.join(lv['axiom_allowlist']) if lv['axiom_allowlist'] else 'N/A'}`",
+            f"- **Permitted Axioms:** `{', '.join(lv['axiom_allowlist']) if lv['axiom_allowlist'] else ('NONE (zero axioms)' if lv['has_lean'] else 'N/A')}`",
             f"- **Live Audit Status:** {lv['live_audit_status']}",
             "",
             "## Verification Boundary",
@@ -146,11 +161,46 @@ def render_build_evidence_md(b: dict) -> str:
     return "\n".join(lines)
 
 
+def render_disc_evidence_md(d: dict) -> str:
+    lines = [
+        f"# Discovery / Law / Pre-Registered Evidence Dossier — `{d['id']}`",
+        "",
+        f"**Title:** {d['title']}  ",
+        f"**Author:** {d['author']} ({d['affiliation']}, ORCID [`{d['orcid']}`](https://orcid.org/{d['orcid']}))  ",
+        f"**Epistemic Tier:** `{d['epistemic_tier']}`  ",
+        f"**Domain:** {d['domain']} · **Date:** {d['date']}",
+        "",
+        "## Source Provenance & Frozen Snapshots",
+        "",
+        "| Field | Value |",
+        "|---|---|",
+        f"| Source Repository | {d['repository']} |",
+        f"| Branch / Ref | `{d['branch']}` @ `{d['pinned_commit']}` |",
+    ]
+    for art in d["archived_artifacts"]:
+        lines.append(f"| Frozen Snapshot | `{art['path']}` (from `{art['source_path']}`) |")
+        lines.append(f"| Snapshot SHA-256 | `{art['sha256']}` |")
+    lines.extend(
+        [
+            "",
+            "## Summary",
+            "",
+            d["summary"],
+            "",
+            "## Verification Boundary (Honest Epistemic Scope)",
+            "",
+            d["verification_boundary"],
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
 def render_papers_md(data: dict) -> str:
     arch = data["archive"]
     author = arch["author"]
     lines = [
-        "# Master Paper Registry — Standalone Research Preprints",
+        "# Master Paper Registry — Tier I: Standalone Research Preprints",
         "",
         f"**Author:** {author['full_name']} ({arch['organization']}, {arch['location']})  ",
         f"**ORCID:** [`{author['orcid']}`]({author['orcid_url']}) · **GitHub:** {author['github']} · **Updated:** `{arch['updated_utc']}`",
@@ -192,10 +242,10 @@ def render_builds_md(bdata: dict) -> str:
     total_lean_thms = sum(b["lean_verification"]["audited_theorems"] for b in bdata["builds"])
     total_lean_lines = sum(b["lean_verification"]["lines"] for b in bdata["builds"])
     lines = [
-        "# Build White Papers & Embedded Lean 4 Proof Suites",
+        "# Tier II — Public Build White Papers & Embedded Lean 4 Proof Suites",
         "",
         f"**Author:** {author['full_name']} ({author['affiliation']}) · **ORCID:** [`{author['orcid']}`](https://orcid.org/{author['orcid']})  ",
-        f"**Embedded Pure Lean 4.35.0 Proofs Audited:** {total_lean_thms} theorems across {total_lean_lines:,} lines (zero Mathlib, zero `sorry`)  ",
+        f"**Public Embedded Pure Lean 4.35.0 Proofs Audited:** {total_lean_thms} theorems across {total_lean_lines:,} lines (zero Mathlib, zero `sorry`)  ",
         f"**Updated:** `{bdata['updated_utc']}`",
         "",
         "| ID | Date | Repo / Version | Embedded Lean 4 Proofs | Frozen White Paper / Audit | Dossier |",
@@ -237,7 +287,50 @@ def render_builds_md(bdata: dict) -> str:
     return "\n".join(lines)
 
 
-def sync_derived_files(root: Path, data: dict, bdata: dict | None) -> None:
+def render_discoveries_md(ddata: dict) -> str:
+    author = ddata["author"]
+    total_snaps = sum(len(d["archived_artifacts"]) for d in ddata["discoveries"])
+    lines = [
+        "# Tier III — Public Laws, Pre-Registered Empirical Claims, Discoveries & Open-Problem Atlases",
+        "",
+        f"**Author:** {author['full_name']} ({author['affiliation']}) · **ORCID:** [`{author['orcid']}`](https://orcid.org/{author['orcid']})  ",
+        f"**Totals:** {len(ddata['discoveries'])} public registries · {total_snaps} SHA-256 frozen snapshots  ",
+        f"**Updated:** `{ddata['updated_utc']}`",
+        "",
+        "> **Epistemic Discipline:** Tier III entries preserve binding architectural laws, SHA-256-locked pre-registrations, controlled empirical discoveries (including null/falsified results), finite computational certificates, and structured open-problem atlases. None of these are represented as Lean-proved general mathematical theorems.",
+        "",
+        "| ID | Date | Epistemic Tier | Source Repo | Title | Snapshots | Dossier |",
+        "|---|---|---|---|---|---:|---|",
+    ]
+    for d in ddata["discoveries"]:
+        first_art = d["archived_artifacts"][0]["path"]
+        ddir = Path(first_art).parent.as_posix()
+        lines.append(
+            f"| `{d['id']}` | {d['date']} | `{d['epistemic_tier']}` | "
+            f"[`{d['repository'].split('/')[-1]}`]({d['repository']}) | {d['title']} | "
+            f"{len(d['archived_artifacts'])} | [Evidence](../{ddir}/EVIDENCE.md) |"
+        )
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    for d in ddata["discoveries"]:
+        first_art = d["archived_artifacts"][0]["path"]
+        ddir = Path(first_art).parent.as_posix()
+        lines.extend(
+            [
+                f"## {d['id']} — {d['title']}",
+                "",
+                f"- **Epistemic Tier:** `{d['epistemic_tier']}` · **Repository:** {d['repository']} (`{d['branch']}` @ `{d['pinned_commit'][:12]}`)",
+                f"- **Summary:** {d['summary']}",
+                f"- **Verification Boundary:** {d['verification_boundary']}",
+                f"- **Dossier:** [`EVIDENCE.md`](../{ddir}/EVIDENCE.md) · [`METADATA.json`](../{ddir}/METADATA.json)",
+                "",
+            ]
+        )
+    return "\n".join(lines)
+
+
+def sync_derived_files(root: Path, data: dict, bdata: dict | None, ddata: dict | None) -> None:
     checksum_entries: list[tuple[str, str]] = []
 
     for paper in data["papers"]:
@@ -255,9 +348,7 @@ def sync_derived_files(root: Path, data: dict, bdata: dict | None) -> None:
         checksum_entries.append((sha256_file(pdf_abs), pdf_rel))
         checksum_entries.append((sha256_file(meta_path), meta_path.relative_to(root).as_posix()))
 
-    papers_md = root / "registry" / "PAPERS.md"
-    papers_md.write_text(render_papers_md(data), encoding="utf-8", newline="\n")
-
+    (root / "registry" / "PAPERS.md").write_text(render_papers_md(data), encoding="utf-8", newline="\n")
     reg_json = root / "registry" / "PAPERS.json"
     reg_json.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
     checksum_entries.append((sha256_file(reg_json), "registry/PAPERS.json"))
@@ -279,12 +370,32 @@ def sync_derived_files(root: Path, data: dict, bdata: dict | None) -> None:
                 art_abs = root / art["path"]
                 checksum_entries.append((sha256_file(art_abs), art["path"]))
 
-        builds_md = root / "registry" / "BUILD_PAPERS.md"
-        builds_md.write_text(render_builds_md(bdata), encoding="utf-8", newline="\n")
-
+        (root / "registry" / "BUILD_PAPERS.md").write_text(render_builds_md(bdata), encoding="utf-8", newline="\n")
         breg_json = root / "registry" / "BUILD_PAPERS.json"
         breg_json.write_text(json.dumps(bdata, indent=2) + "\n", encoding="utf-8", newline="\n")
         checksum_entries.append((sha256_file(breg_json), "registry/BUILD_PAPERS.json"))
+
+    if ddata is not None:
+        for d in ddata["discoveries"]:
+            first_rel = d["archived_artifacts"][0]["path"]
+            ddir = (root / first_rel).parent
+            ddir.mkdir(parents=True, exist_ok=True)
+
+            meta_path = ddir / "METADATA.json"
+            meta_path.write_text(json.dumps(d, indent=2) + "\n", encoding="utf-8", newline="\n")
+
+            ev_path = ddir / "EVIDENCE.md"
+            ev_path.write_text(render_disc_evidence_md(d), encoding="utf-8", newline="\n")
+
+            checksum_entries.append((sha256_file(meta_path), meta_path.relative_to(root).as_posix()))
+            for art in d["archived_artifacts"]:
+                art_abs = root / art["path"]
+                checksum_entries.append((sha256_file(art_abs), art["path"]))
+
+        (root / "registry" / "LAWS_AND_DISCOVERIES.md").write_text(render_discoveries_md(ddata), encoding="utf-8", newline="\n")
+        dreg_json = root / "registry" / "LAWS_AND_DISCOVERIES.json"
+        dreg_json.write_text(json.dumps(ddata, indent=2) + "\n", encoding="utf-8", newline="\n")
+        checksum_entries.append((sha256_file(dreg_json), "registry/LAWS_AND_DISCOVERIES.json"))
 
     checksums_path = root / "CHECKSUMS.sha256"
     checksums_path.write_text(
@@ -293,8 +404,9 @@ def sync_derived_files(root: Path, data: dict, bdata: dict | None) -> None:
         newline="\n",
     )
     bcount = len(bdata["builds"]) if bdata else 0
+    dcount = len(ddata["discoveries"]) if ddata else 0
     print(
-        f"Synced {len(data['papers'])} standalone papers + {bcount} build white-paper dossiers, "
+        f"Synced {len(data['papers'])} Tier-I papers + {bcount} Tier-II builds + {dcount} Tier-III discoveries, "
         f"registry markdowns, and CHECKSUMS.sha256 ({len(checksum_entries)} hashed files)."
     )
 
@@ -316,7 +428,7 @@ def get_git_submodule_commits(root: Path) -> dict[str, str]:
     return pins
 
 
-def verify_archive(root: Path, data: dict, bdata: dict | None) -> None:
+def verify_archive(root: Path, data: dict, bdata: dict | None, ddata: dict | None) -> None:
     errors: list[str] = []
 
     if data["archive"]["author"]["orcid"] != EXPECTED_ORCID:
@@ -330,30 +442,22 @@ def verify_archive(root: Path, data: dict, bdata: dict | None) -> None:
         if pid in seen_ids:
             errors.append(f"Duplicate ID: {pid}")
         seen_ids.add(pid)
-
         if p.get("orcid") != EXPECTED_ORCID:
             errors.append(f"{pid}: ORCID mismatch ({p.get('orcid')})")
-
         axioms = set(p["lean_verification"]["axiom_allowlist"])
         if not axioms.issubset(ALLOWED_AXIOMS):
             errors.append(f"{pid}: Non-standard axioms in allowlist: {axioms - ALLOWED_AXIOMS}")
-
         if not p.get("verification_boundary"):
             errors.append(f"{pid}: Missing verification_boundary")
-
         pdf_path = root / p["pdf_archive_path"]
         if not pdf_path.exists():
             errors.append(f"{pid}: Missing archived PDF {p['pdf_archive_path']}")
-        else:
-            actual = sha256_file(pdf_path)
-            if actual != p["pdf_sha256"]:
-                errors.append(f"{pid}: PDF SHA-256 mismatch! expected={p['pdf_sha256']} actual={actual}")
-
+        elif sha256_file(pdf_path) != p["pdf_sha256"]:
+            errors.append(f"{pid}: PDF SHA-256 mismatch")
         pdir = pdf_path.parent
         for req in ("METADATA.json", "EVIDENCE.md"):
             if not (pdir / req).exists():
                 errors.append(f"{pid}: Missing {pdir.relative_to(root).as_posix()}/{req}")
-
         sub = p["submodule_path"]
         if git_pins and sub in git_pins:
             if git_pins[sub] != p["pinned_commit"]:
@@ -369,37 +473,54 @@ def verify_archive(root: Path, data: dict, bdata: dict | None) -> None:
             if bid in seen_ids:
                 errors.append(f"Duplicate ID: {bid}")
             seen_ids.add(bid)
-
             if b.get("orcid") != EXPECTED_ORCID:
                 errors.append(f"{bid}: ORCID mismatch ({b.get('orcid')})")
-
             axioms = set(b["lean_verification"]["axiom_allowlist"])
             if not axioms.issubset(ALLOWED_AXIOMS):
                 errors.append(f"{bid}: Non-standard axioms in allowlist: {axioms - ALLOWED_AXIOMS}")
-
             if not b.get("verification_boundary"):
                 errors.append(f"{bid}: Missing verification_boundary")
-
             for art in b["archived_artifacts"]:
                 ap = root / art["path"]
                 if not ap.exists():
                     errors.append(f"{bid}: Missing archived artifact {art['path']}")
-                else:
-                    actual = sha256_file(ap)
-                    if actual != art["sha256"]:
-                        errors.append(f"{bid}: Artifact SHA-256 mismatch for {art['path']}: {actual} != {art['sha256']}")
-
+                elif sha256_file(ap) != art["sha256"]:
+                    errors.append(f"{bid}: Artifact SHA-256 mismatch for {art['path']}")
             bdir = (root / b["archived_artifacts"][0]["path"]).parent
             for req in ("METADATA.json", "EVIDENCE.md"):
                 if not (bdir / req).exists():
                     errors.append(f"{bid}: Missing {bdir.relative_to(root).as_posix()}/{req}")
-
             sub = b["submodule_path"]
             if git_pins and sub in git_pins:
                 if git_pins[sub] != b["pinned_commit"]:
                     errors.append(f"{bid}: Submodule {sub} pinned at {git_pins[sub]}, expected {b['pinned_commit']}")
             elif git_pins:
                 errors.append(f"{bid}: Submodule {sub} not found in git index")
+
+    dcount = 0
+    if ddata is not None:
+        dcount = len(ddata["discoveries"])
+        for d in ddata["discoveries"]:
+            did = d["id"]
+            if did in seen_ids:
+                errors.append(f"Duplicate ID: {did}")
+            seen_ids.add(did)
+            if d.get("orcid") != EXPECTED_ORCID:
+                errors.append(f"{did}: ORCID mismatch ({d.get('orcid')})")
+            if d.get("visibility") != "PUBLIC":
+                errors.append(f"{did}: Non-PUBLIC entry found in public archive!")
+            if not d.get("verification_boundary"):
+                errors.append(f"{did}: Missing verification_boundary")
+            for art in d["archived_artifacts"]:
+                ap = root / art["path"]
+                if not ap.exists():
+                    errors.append(f"{did}: Missing archived snapshot {art['path']}")
+                elif sha256_file(ap) != art["sha256"]:
+                    errors.append(f"{did}: Snapshot SHA-256 mismatch for {art['path']}")
+            ddir = (root / d["archived_artifacts"][0]["path"]).parent
+            for req in ("METADATA.json", "EVIDENCE.md"):
+                if not (ddir / req).exists():
+                    errors.append(f"{did}: Missing {ddir.relative_to(root).as_posix()}/{req}")
 
     checksums_path = root / "CHECKSUMS.sha256"
     if not checksums_path.exists():
@@ -412,10 +533,8 @@ def verify_archive(root: Path, data: dict, bdata: dict | None) -> None:
             target = root / rel_path
             if not target.exists():
                 errors.append(f"CHECKSUMS.sha256 references missing file: {rel_path}")
-            else:
-                actual_hash = sha256_file(target)
-                if actual_hash != expected_hash:
-                    errors.append(f"CHECKSUMS.sha256 mismatch for {rel_path}")
+            elif sha256_file(target) != expected_hash:
+                errors.append(f"CHECKSUMS.sha256 mismatch for {rel_path}")
 
     if errors:
         print("ARCHIVE AUDIT FAILED:")
@@ -424,9 +543,9 @@ def verify_archive(root: Path, data: dict, bdata: dict | None) -> None:
         sys.exit(1)
 
     print(
-        f"PASS: Verified {len(data['papers'])} standalone papers + {bcount} build white-paper dossiers, "
+        f"PASS: Verified {len(data['papers'])} Tier-I papers + {bcount} Tier-II builds + {dcount} Tier-III discoveries, "
         f"all SHA-256 digests, CHECKSUMS.sha256, ORCID {EXPECTED_ORCID}, axiom allowlists, "
-        f"and {len(git_pins)} pinned Git submodules."
+        f"and {len(git_pins)} pinned PUBLIC Git submodules."
     )
 
 
@@ -439,10 +558,12 @@ def main() -> None:
     data = json.loads((root / "registry" / "PAPERS.json").read_text(encoding="utf-8"))
     bpath = root / "registry" / "BUILD_PAPERS.json"
     bdata = json.loads(bpath.read_text(encoding="utf-8")) if bpath.exists() else None
+    dpath = root / "registry" / "LAWS_AND_DISCOVERIES.json"
+    ddata = json.loads(dpath.read_text(encoding="utf-8")) if dpath.exists() else None
 
     if args.sync:
-        sync_derived_files(root, data, bdata)
-    verify_archive(root, data, bdata)
+        sync_derived_files(root, data, bdata, ddata)
+    verify_archive(root, data, bdata, ddata)
 
 
 if __name__ == "__main__":

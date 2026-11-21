@@ -29,7 +29,7 @@ Proves exact arbitrary-copy contextuality degree formulas d_k = (7^k - 5^k)/2 fo
 
 - **Framework:** Lean 4
 - **Library Entry Point:** `lean/ContextualityTensor.lean`
-- **Axiom Audit Script:** `lean/Verification.lean`
+- **Primary Axiom Audit Script:** `lean/Verification.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
 
 ## Verification Boundary (Honest Epistemic Scope)
