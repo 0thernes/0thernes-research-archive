@@ -143,6 +143,7 @@ def render_build_evidence_md(b: dict) -> str:
             f"- **Entry Point:** `{lv['entry_point'] or 'N/A'}`",
             f"- **Permitted Axioms:** `{', '.join(lv['axiom_allowlist']) if lv['axiom_allowlist'] else ('NONE (zero axioms)' if lv['has_lean'] else 'N/A')}`",
             f"- **Live Audit Status:** {lv['live_audit_status']}",
+            *( [f"- **Reflection Axiom Disclosure:** {lv['reflection_axioms_note']}"] if lv.get("reflection_axioms_note") else [] ),
             "",
             "## Verification Boundary",
             "",

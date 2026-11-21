@@ -10,7 +10,7 @@
 - **Author:** Alexander Stephen Donahue (`Alexander S. Donahue`) · **0thernes LLC**, Spokane, WA, USA
 - **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)
 - **Contact:** `0_0@0thernes.art` · [0thernes.art](https://0thernes.art) · [github.com/0thernes](https://github.com/0thernes)
-- **Scope:** **22 public research entries** across **3 explicitly separated epistemic tiers** + **12 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
+- **Scope:** **24 public research entries** across **3 explicitly separated epistemic tiers** + **14 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 ---
 
@@ -31,16 +31,18 @@ Full Tier I registry: [`registry/PAPERS.md`](registry/PAPERS.md) · Machine-read
 
 ## Tier II — Public Build White Papers & Embedded Pure Lean 4 Suites (`registry/BUILD_PAPERS.json`)
 
-Public engineering and laboratory repositories containing embedded technical white papers, verification audits, and **128 additional live-compiled pure Lean 4 (`v4.35.0`, zero Mathlib, zero `sorry`) machine-checked invariants** (`[propext, Classical.choice, Quot.sound]` or literally zero axioms):
+Public engineering and laboratory repositories containing embedded technical white papers, verification audits, and **220 additional live-compiled Lean 4 (`v4.35.0`, zero Mathlib, zero `sorry`) machine-checked invariants** (189 strictly within `[propext, Classical.choice, Quot.sound]` or zero axioms, plus 31 `bv_decide`-reflected bitvector theorems in `autophage`):
 
 | ID | Date | Build Repo & Version | Embedded Pure Lean 4.35.0 Suite | Archived White Paper / Artifact | Dossier |
 |---|---|---|---|---|---|
-| `0TH-BUILD-002` | 2026-11-18 | [`planaria`](https://github.com/0thernes/planaria) `v2.0.0` | **38 audited theorems** (7 files, 976 lines, 0 `sorry`) | [WHITE_PAPER.md](builds/0TH-BUILD-002_planaria/WHITE_PAPER.md) | [Evidence](builds/0TH-BUILD-002_planaria/EVIDENCE.md) |
+| `0TH-BUILD-002` | 2026-11-21 | [`planaria`](https://github.com/0thernes/planaria) `v2.1.0` | **38 audited theorems** (7 files, 976 lines, 0 `sorry`) | [Donahue_2026_planaria.pdf](builds/0TH-BUILD-002_planaria/Donahue_2026_planaria.pdf) · [WHITE_PAPER.md](builds/0TH-BUILD-002_planaria/WHITE_PAPER.md) | [Evidence](builds/0TH-BUILD-002_planaria/EVIDENCE.md) |
 | `0TH-BUILD-003` | 2026-11-21 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) `v1.1.0` | **36 audited theorems** (6 files, 642 lines, 0 `sorry`) | [Donahue_2026_Ultrametrica.pdf](builds/0TH-BUILD-003_ultrametrica/Donahue_2026_Ultrametrica.pdf) · [WHITE_PAPER.md](builds/0TH-BUILD-003_ultrametrica/WHITE_PAPER.md) | [Evidence](builds/0TH-BUILD-003_ultrametrica/EVIDENCE.md) |
 | `0TH-BUILD-004` | 2026-07-01 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) `2026-07-02-qa` | Adversarial QA & Editorial Review (non-Lean) | [Collatz Case Study](builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md) · [QA Audit](builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md) · [Editorial Review](builds/0TH-BUILD-004_unsolved-mathematics/EDITORIAL-REVIEW-WHITEPAPER-2026-07-01.md) | [Evidence](builds/0TH-BUILD-004_unsolved-mathematics/EVIDENCE.md) |
 | `0TH-BUILD-005` | 2026-06-27 | [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) `v0.14.3` | A-Life Verification Audit PDF (non-Lean) | [cqm-alife-audit.pdf](builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/cqm-alife-audit.pdf) | [Evidence](builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/EVIDENCE.md) |
 | `0TH-BUILD-006` | 2026-11-10 | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) `main+research` | **8 zero-axiom `rfl` theorems** (`ClassicalGR.lean`, 0 axioms) | [ClassicalGR.lean](builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean) · [M5_SHADOW_ASYMMETRY.md](builds/0TH-BUILD-006_black-hole-simulation-lab/M5_SHADOW_ASYMMETRY.md) | [Evidence](builds/0TH-BUILD-006_black-hole-simulation-lab/EVIDENCE.md) |
 | `0TH-BUILD-007` | 2026-11-21 | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) `v2.1.0` | **46 audited theorems** (6 files, 686 lines, 0 `sorry`) | [WHITE_PAPER.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/WHITE_PAPER.md) · [RANKING.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/RANKING.md) · [VERIFICATION.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/VERIFICATION.md) | [Evidence](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/EVIDENCE.md) · [Web Atlas](https://0thernes.github.io/unsolved-problems-mega-atlas/) |
+| `0TH-BUILD-008` | 2026-11-21 | [`cellular-engine-omega`](https://github.com/0thernes/cellular-engine-omega) `v4.2.0` | **61 audited theorems** (12 files, 1,197 lines, 0 `sorry`) | [Frontier Theorems & Conjectures](builds/0TH-BUILD-008_cellular-engine-omega/CELLULAR_BLEEDING_EDGE_THEOREMS_CONJECTURES_AND_HARD_PROBLEMS.md) · [VERIFICATION.md](builds/0TH-BUILD-008_cellular-engine-omega/VERIFICATION.md) | [Evidence](builds/0TH-BUILD-008_cellular-engine-omega/EVIDENCE.md) · [CI](https://github.com/0thernes/cellular-engine-omega/actions/runs/44887931871) |
+| `0TH-BUILD-009` | 2026-11-21 | [`autophage`](https://github.com/0thernes/autophage) `v1.0.0` | **31 audited theorems** (1 file, 394 lines, 0 `sorry`, `bv_decide`) | [VERIFICATION.md](builds/0TH-BUILD-009_autophage/VERIFICATION.md) · [ARCHITECTURE.md](builds/0TH-BUILD-009_autophage/ARCHITECTURE.md) | [Evidence](builds/0TH-BUILD-009_autophage/EVIDENCE.md) · [CI](https://github.com/0thernes/autophage/actions/runs/44887958546) |
 
 *(Note: `0TH-BUILD-001` was removed from this public archive after its upstream repository became private; private/proprietary research builds are maintained separately outside this public repository.)*
 
@@ -81,11 +83,11 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 ## Cloning the Full Public Stack & Running the Cryptographic Audit
 
 ```bash
-# Clone the archive + all 12 pinned PUBLIC Lean 4 & white-paper repositories
+# Clone the archive + all 14 pinned PUBLIC Lean 4 & white-paper repositories
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 
-# Verify every SHA-256 digest, ORCID, axiom allowlist, and all 12 public submodule pins
+# Verify every SHA-256 digest, ORCID, axiom allowlist, and all 14 public submodule pins
 python scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
 ```

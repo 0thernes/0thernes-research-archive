@@ -34,3 +34,9 @@
 [submodule "repos/unsolved-problems-mega-atlas"]
 	path = repos/unsolved-problems-mega-atlas
 	url = https://github.com/0thernes/unsolved-problems-mega-atlas.git
+[submodule "repos/cellular-engine-omega"]
+	path = repos/cellular-engine-omega
+	url = https://github.com/0thernes/cellular-engine-omega.git
+[submodule "repos/autophage"]
+	path = repos/autophage
+	url = https://github.com/0thernes/autophage.git

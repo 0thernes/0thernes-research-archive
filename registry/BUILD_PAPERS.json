@@ -6,7 +6,7 @@
     "orcid": "0009-0006-8168-9648",
     "affiliation": "0thernes LLC"
   },
-  "updated_utc": "2026-11-21T09:49:00Z",
+  "updated_utc": "2026-11-21T10:14:58Z",
   "builds": [
     {
       "id": "0TH-BUILD-002",
@@ -268,6 +268,107 @@
       "summary": "Reproducible cross-disciplinary research infrastructure cataloging 1,855 strictly deduplicated unsolved, open, and hard problems across 8 Macro-Pillars x 28 Superdomains wired into 1 connected 5,597-edge knowledge graph, scored under unified 0thernes CSS (0-100) and Composite Titan Index, paired with a live Nov 20, 2026 AI proof-claim audit (12 unretired claims), SQLite 3 + FTS5 BM25 offline RAG + graph-hop CLI, JSON Schema Draft 2020-12, 13-test pytest suite, 12 PNG/SVG charts, 163-page vector PDF, GitHub Pages live explorer, and 46 Pure Lean 4.35.0 formal invariants.",
       "verification_boundary": "All 46 Pure Lean 4.35.0 theorems (covering CSS bounds/monotonicity/300-year saturation, Titan Index, Near-Term Leverage, 4-Quadrant and 6-Era partitions, 8x28 taxonomy surjection, finite Handshaking Lemma, cross-partition edge hierarchy, and deduplication cardinality bounds) compile cleanly with zero Mathlib, zero sorry, and strictly constructive axioms ([propext, Quot.sound] or empty). Explicitly makes ZERO claim to prove or retire any of the 1,855 open problems; quantitative rubric inputs are disclosed solo-human + AI-assisted falsifiable editorial estimates, not peer-reviewed measurements.",
       "falsification_command": "cd repos/unsolved-problems-mega-atlas/lean && lake build && cd .. && pytest -v && python scripts/audit_atlas.py --check-lean"
+    },
+    {
+      "id": "0TH-BUILD-008",
+      "slug": "cellular-engine-omega",
+      "title": "CELLULAR ENGINE OMEGA v4.2: Deep Strata Biophysics, Bio-Frostbite Interaction Nets & Virtual-Cell Singularity with 61 Pure Lean 4.35.0 Theorems",
+      "domain": "Biophysics / Artificial Life / Formal Methods",
+      "date": "2026-11-21",
+      "version": "v4.2.0",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/cellular-engine-omega",
+      "submodule_path": "repos/cellular-engine-omega",
+      "pinned_commit": "9f0802789219929a05a00fc6b97d82a69c359946",
+      "archived_artifacts": [
+        {
+          "path": "builds/0TH-BUILD-008_cellular-engine-omega/CELLULAR_BLEEDING_EDGE_THEOREMS_CONJECTURES_AND_HARD_PROBLEMS.md",
+          "source_path": "docs/CELLULAR_BLEEDING_EDGE_THEOREMS_CONJECTURES_AND_HARD_PROBLEMS.md",
+          "sha256": "3f95f13e3a056b8ef2cd56f591b2571e6f1f23eeffbdc83e71aab0dc285af0fe"
+        },
+        {
+          "path": "builds/0TH-BUILD-008_cellular-engine-omega/VERIFICATION.md",
+          "source_path": "VERIFICATION.md",
+          "sha256": "01122f440f1e94483e12f974ed95410e9a6bd12ee078368fc2287c5278a4c6b2"
+        },
+        {
+          "path": "builds/0TH-BUILD-008_cellular-engine-omega/lean4-omega-audit.txt",
+          "source_path": "results/lean4-omega-audit.txt",
+          "sha256": "d2d57f71aa2882589e9139bf9766c4f83788d769d5bb9f8d9cd6c50c47edcad2"
+        },
+        {
+          "path": "builds/0TH-BUILD-008_cellular-engine-omega/README.md",
+          "source_path": "README.md",
+          "sha256": "685efc76f55b9409b9a8d82a72353a86d8f80412d09a216f9097027a6bc48328"
+        }
+      ],
+      "lean_verification": {
+        "has_lean": true,
+        "framework": "Pure Lean 4.35.0 (zero Mathlib, zero native_decide)",
+        "modules": 12,
+        "lines": 1197,
+        "audited_theorems": 61,
+        "axiom_allowlist": [
+          "propext",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/OmegaCellularProofs.lean",
+        "live_audit_status": "Ubuntu CI GREEN (run 44887931871) & local lake build EXIT 0; 61/61 theorems (O01-O59 + O01b + O41b), 0 sorryAx, strictly [propext, Quot.sound] or empty"
+      },
+      "summary": "Clean-room native C11+AVX2 16-testbed cellular biophysics and Bio-Frostbite interaction-net engine accompanied by 61 universally quantified pure Lean 4.35.0 theorems (Purcell gauge geometry, Hopfield-Ninio/Eigen proofreading, Turing/Feinberg CRNT, TUR speed limits, C11-to-Lean4 differential trace conservation O59) and 5 frontier cellular treatises.",
+      "verification_boundary": "All 61 Lean 4.35.0 theorems compile cleanly in pure Lean 4 with zero Mathlib, zero sorry, and strictly constructive axioms ([propext, Quot.sound] or empty). Theorems certify mathematical invariants and rewrite confluence of the discrete models; runtime C11 execution is verified via 43 falsification gates and 10 planted negative mutants.",
+      "falsification_command": "cd repos/cellular-engine-omega/lean && lake build"
+    },
+    {
+      "id": "0TH-BUILD-009",
+      "slug": "autophage",
+      "title": "AUTOPHAGE v1.0: Bare-Metal Polymorphic x86-64 Galois-Field Genetic Engine with 31 Lean 4.35.0 Formal Theorems",
+      "domain": "Systems Architecture / Coding Theory / Artificial Life / Formal Methods",
+      "date": "2026-11-21",
+      "version": "v1.0.0",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "0thernes LLC",
+      "repository": "https://github.com/0thernes/autophage",
+      "submodule_path": "repos/autophage",
+      "pinned_commit": "185bd16c9c2dfcfacc1a7ef3caf99b78c1c0f44a",
+      "archived_artifacts": [
+        {
+          "path": "builds/0TH-BUILD-009_autophage/VERIFICATION.md",
+          "source_path": "VERIFICATION.md",
+          "sha256": "e4655c7e9b6a81a58be611a82aeeed8d4a6771d84c40b39035dcebc92b0a5285"
+        },
+        {
+          "path": "builds/0TH-BUILD-009_autophage/ARCHITECTURE.md",
+          "source_path": "ARCHITECTURE.md",
+          "sha256": "7f2d694d0ef1a9dfc63592aa6fa507930aeeece9fac4abfe2c0ef5ab7c8a0c80"
+        },
+        {
+          "path": "builds/0TH-BUILD-009_autophage/README.md",
+          "source_path": "README.md",
+          "sha256": "9f457c4271a75e037156ff3336a43850d0b14c155ed0ff7c57bfec78287c1285"
+        }
+      ],
+      "lean_verification": {
+        "has_lean": true,
+        "framework": "Lean 4.35.0 Core + built-in bv_decide bitvector solver (zero Mathlib)",
+        "modules": 1,
+        "lines": 394,
+        "audited_theorems": 31,
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "reflection_axioms_note": "BitVec identities invoke Lean 4's built-in bv_decide SAT reflection axioms (._native.bv_decide.*); explicitly separated from pure kernel-only proofs.",
+        "entry_point": "lean/AutophageProofs.lean",
+        "live_audit_status": "Ubuntu CI GREEN (run 44887958546) & local lean EXIT 0; 31/31 theorems (T01-T30 + T05a), 0 sorry (uses built-in bv_decide reflection on BitVec identities)"
+      },
+      "summary": "Bare-metal polymorphic x86-64 Galois-field genetic engine with 31 Lean 4.35.0 theorems covering GFNI affine involutions, Weismann roundtrip, GF(256)/Cauchy ECC recovery, 64-bit Toffoli/Fredkin symplectic reversibility and Landauer erasure, 2-adic Strong Triangle Inequality, JIT bounds, and thermodynamic monotonicity.",
+      "verification_boundary": "Compiles cleanly in Lean 4.35.0 on Ubuntu CI with 0 sorry and 0 custom user axioms; transparently discloses reliance on Lean 4's built-in bv_decide native bitvector reflection axioms for finite BitVec theorems. Runtime verified by 18 silicon falsification gates and 6 planted negative mutants on Win64 and Linux.",
+      "falsification_command": "cd repos/autophage/lean && lean AutophageProofs.lean"
     }
   ]
 }

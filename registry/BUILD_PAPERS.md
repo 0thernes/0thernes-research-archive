@@ -1,8 +1,8 @@
 # Tier II — Public Build White Papers & Embedded Lean 4 Proof Suites
 
 **Author:** Alexander Stephen Donahue (0thernes LLC) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
-**Public Embedded Pure Lean 4.35.0 Proofs Audited:** 128 theorems across 2,338 lines (zero Mathlib, zero `sorry`)  
-**Updated:** `2026-11-21T09:49:00Z`
+**Public Embedded Pure Lean 4.35.0 Proofs Audited:** 220 theorems across 3,929 lines (zero Mathlib, zero `sorry`)  
+**Updated:** `2026-11-21T10:14:58Z`
 
 | ID | Date | Repo / Version | Embedded Lean 4 Proofs | Frozen White Paper / Audit | Dossier |
 |---|---|---|---|---|---|
@@ -12,6 +12,8 @@
 | `0TH-BUILD-005` | 2026-06-27 | [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) `v0.14.3` | Audit / Methodology (non-Lean) | [cqm-alife-audit.pdf](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/cqm-alife-audit.pdf) | [Evidence](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/EVIDENCE.md) |
 | `0TH-BUILD-006` | 2026-11-10 | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) `main+research-branch` | 8 theorems (1 files, 34 lines) | [ClassicalGR.lean](../builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean) | [Evidence](../builds/0TH-BUILD-006_black-hole-simulation-lab/EVIDENCE.md) |
 | `0TH-BUILD-007` | 2026-11-21 | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) `v2.1.0` | 46 theorems (6 files, 686 lines) | [WHITE_PAPER.md](../builds/0TH-BUILD-007_unsolved-problems-mega-atlas/WHITE_PAPER.md) | [Evidence](../builds/0TH-BUILD-007_unsolved-problems-mega-atlas/EVIDENCE.md) |
+| `0TH-BUILD-008` | 2026-11-21 | [`cellular-engine-omega`](https://github.com/0thernes/cellular-engine-omega) `v4.2.0` | 61 theorems (12 files, 1197 lines) | [CELLULAR_BLEEDING_EDGE_THEOREMS_CONJECTURES_AND_HARD_PROBLEMS.md](../builds/0TH-BUILD-008_cellular-engine-omega/CELLULAR_BLEEDING_EDGE_THEOREMS_CONJECTURES_AND_HARD_PROBLEMS.md) | [Evidence](../builds/0TH-BUILD-008_cellular-engine-omega/EVIDENCE.md) |
+| `0TH-BUILD-009` | 2026-11-21 | [`autophage`](https://github.com/0thernes/autophage) `v1.0.0` | 31 theorems (1 files, 394 lines) | [VERIFICATION.md](../builds/0TH-BUILD-009_autophage/VERIFICATION.md) | [Evidence](../builds/0TH-BUILD-009_autophage/EVIDENCE.md) |
 
 ---
 
@@ -62,3 +64,19 @@
 - **Summary:** Reproducible cross-disciplinary research infrastructure cataloging 1,855 strictly deduplicated unsolved, open, and hard problems across 8 Macro-Pillars x 28 Superdomains wired into 1 connected 5,597-edge knowledge graph, scored under unified 0thernes CSS (0-100) and Composite Titan Index, paired with a live Nov 20, 2026 AI proof-claim audit (12 unretired claims), SQLite 3 + FTS5 BM25 offline RAG + graph-hop CLI, JSON Schema Draft 2020-12, 13-test pytest suite, 12 PNG/SVG charts, 163-page vector PDF, GitHub Pages live explorer, and 46 Pure Lean 4.35.0 formal invariants.
 - **Verification Boundary:** All 46 Pure Lean 4.35.0 theorems (covering CSS bounds/monotonicity/300-year saturation, Titan Index, Near-Term Leverage, 4-Quadrant and 6-Era partitions, 8x28 taxonomy surjection, finite Handshaking Lemma, cross-partition edge hierarchy, and deduplication cardinality bounds) compile cleanly with zero Mathlib, zero sorry, and strictly constructive axioms ([propext, Quot.sound] or empty). Explicitly makes ZERO claim to prove or retire any of the 1,855 open problems; quantitative rubric inputs are disclosed solo-human + AI-assisted falsifiable editorial estimates, not peer-reviewed measurements.
 - **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-007_unsolved-problems-mega-atlas/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-007_unsolved-problems-mega-atlas/METADATA.json)
+
+## 0TH-BUILD-008 — CELLULAR ENGINE OMEGA v4.2: Deep Strata Biophysics, Bio-Frostbite Interaction Nets & Virtual-Cell Singularity with 61 Pure Lean 4.35.0 Theorems
+
+- **Repository:** https://github.com/0thernes/cellular-engine-omega (`v4.2.0`, pinned `9f0802789219` at `repos/cellular-engine-omega`)
+- **Lean 4 Audit:** Ubuntu CI GREEN (run 44887931871) & local lake build EXIT 0; 61/61 theorems (O01-O59 + O01b + O41b), 0 sorryAx, strictly [propext, Quot.sound] or empty
+- **Summary:** Clean-room native C11+AVX2 16-testbed cellular biophysics and Bio-Frostbite interaction-net engine accompanied by 61 universally quantified pure Lean 4.35.0 theorems (Purcell gauge geometry, Hopfield-Ninio/Eigen proofreading, Turing/Feinberg CRNT, TUR speed limits, C11-to-Lean4 differential trace conservation O59) and 5 frontier cellular treatises.
+- **Verification Boundary:** All 61 Lean 4.35.0 theorems compile cleanly in pure Lean 4 with zero Mathlib, zero sorry, and strictly constructive axioms ([propext, Quot.sound] or empty). Theorems certify mathematical invariants and rewrite confluence of the discrete models; runtime C11 execution is verified via 43 falsification gates and 10 planted negative mutants.
+- **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-008_cellular-engine-omega/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-008_cellular-engine-omega/METADATA.json)
+
+## 0TH-BUILD-009 — AUTOPHAGE v1.0: Bare-Metal Polymorphic x86-64 Galois-Field Genetic Engine with 31 Lean 4.35.0 Formal Theorems
+
+- **Repository:** https://github.com/0thernes/autophage (`v1.0.0`, pinned `185bd16c9c2d` at `repos/autophage`)
+- **Lean 4 Audit:** Ubuntu CI GREEN (run 44887958546) & local lean EXIT 0; 31/31 theorems (T01-T30 + T05a), 0 sorry (uses built-in bv_decide reflection on BitVec identities)
+- **Summary:** Bare-metal polymorphic x86-64 Galois-field genetic engine with 31 Lean 4.35.0 theorems covering GFNI affine involutions, Weismann roundtrip, GF(256)/Cauchy ECC recovery, 64-bit Toffoli/Fredkin symplectic reversibility and Landauer erasure, 2-adic Strong Triangle Inequality, JIT bounds, and thermodynamic monotonicity.
+- **Verification Boundary:** Compiles cleanly in Lean 4.35.0 on Ubuntu CI with 0 sorry and 0 custom user axioms; transparently discloses reliance on Lean 4's built-in bv_decide native bitvector reflection axioms for finite BitVec theorems. Runtime verified by 18 silicon falsification gates and 6 planted negative mutants on Win64 and Linux.
+- **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-009_autophage/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-009_autophage/METADATA.json)
