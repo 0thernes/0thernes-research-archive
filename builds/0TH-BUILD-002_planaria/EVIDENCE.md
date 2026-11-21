@@ -18,7 +18,7 @@
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/VERIFICATION.md` (from `VERIFICATION.md`) |
 | Artifact SHA-256 | `eb8cd6058f417c2431900048701f529e3a8ffb5cf6e2e8a8c86abc8d3b47d675` |
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/lean4-audit.txt` (from `results/lean4-audit.txt`) |
-| Artifact SHA-256 | `aff959bdea08d4ddef065969664ca32647877e9d17f416838435d52c3b8d2081` |
+| Artifact SHA-256 | `736c60670a2b88945f8aea0d879d1a459e05c078108d4e201b7c8fb12705489c` |
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/arxiv_submission.tar.gz` (from `dist/arxiv_submission.tar.gz`) |
 | Artifact SHA-256 | `dedf23610126025f99361b818ad8888c0b9c58932b0c5641b1a4d82e4eb944f7` |
 
