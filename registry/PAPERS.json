@@ -15,7 +15,7 @@
       "github": "https://github.com/0thernes",
       "website": "https://0thernes.art"
     },
-    "updated_utc": "2026-11-21T09:06:23Z"
+    "updated_utc": "2026-11-21T13:30:00Z"
   },
   "papers": [
     {
@@ -64,20 +64,20 @@
       "title": "Spectral bounds and their limits in Pauli contextuality: exact configurations and a proof of Jonah's Conjecture E",
       "domain": "Quantum Foundations / Quantum Contextuality",
       "date_released": "2026-11-21",
-      "version": "v1.6.0",
+      "version": "v1.7.0",
       "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; listed on ORCID)",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
       "affiliation": "0thernes LLC",
       "repository": "https://github.com/0thernes/hoggar-bound-lab",
       "submodule_path": "repos/hoggar-bound-lab",
-      "pinned_commit": "1f028ea8654997a12453e84701f759b073fb2085",
-      "release_url": "https://github.com/0thernes/hoggar-bound-lab/releases/tag/v1.6.0",
+      "pinned_commit": "7b0f7690c5a83d436315b7b18f950509078ecc29",
+      "release_url": "https://github.com/0thernes/hoggar-bound-lab/releases/tag/v1.7.0",
       "pages_url": "https://0thernes.github.io/hoggar-bound-lab/",
       "pdf_archive_path": "papers/0TH-2026-002_hoggar-bound-lab/unified-contextuality.pdf",
-      "pdf_sha256": "0530863d7e6feaa55fdf1a3314855d7cd557261081a6ecf77193548c5e8089d2",
-      "arxiv_bundle_url": "https://github.com/0thernes/hoggar-bound-lab/releases/download/v1.6.0/unified-arxiv-source.zip",
-      "arxiv_bundle_sha256": "3f2d448a05156591c2f2d60ebe00d61cdd27ea2bb4a6bad70df12cc8aa58b17b",
+      "pdf_sha256": "62fac6aa4c0f83b57b26786318426087bb5be2a53d4b7e9c29791550ab483961",
+      "arxiv_bundle_url": "https://github.com/0thernes/hoggar-bound-lab/releases/download/v1.7.0/unified-arxiv-source.zip",
+      "arxiv_bundle_sha256": "93d87bbecf73c0127ca92c41093ae192d10272f52aeb396439d6b657fade62e3",
       "lean_verification": {
         "framework": "Lean 4.35.0 / Mathlib v4.35.0",
         "axiom_allowlist": [
@@ -94,18 +94,18 @@
           "lean/SaturatedSevenVerification.lean",
           "lean/StabilityVerification.lean"
         ],
-        "v160_new_library_lines": 7686,
-        "v160_audited_theorems": 49
+        "v170_new_library_lines": 9728,
+        "v170_audited_theorems": 77
       },
-      "ci_run_url": "https://github.com/0thernes/hoggar-bound-lab/actions/runs/44893871335",
+      "ci_run_url": "https://github.com/0thernes/hoggar-bound-lab/actions/runs/44908422882",
       "preservation": {
-        "software_heritage": "swh:1:snp:07ed74047cfdffb78f4e0a64e7461199a8bb0cf9",
+        "software_heritage": "swh:1:snp:4fb332121197dd97e4d57c082c3cd32457692b41",
         "wayback_machine": "https://web.archive.org/web/20261110150849/https://0thernes.github.io/hoggar-bound-lab/paper/unified-contextuality.pdf?v=1.4.0",
         "doi": null
       },
-      "core_result": "Unified study with complete Lean 4.35.0 formalizations of the spectral floor (Theorem 1), Theorem 2 (Kramers / quaternionic floor and elliptic quadrics Q-(2N-1,2)), Theorems 3-4 (5-way saturation equivalences and (2^N-1)|S| = square), exact contextuality degrees (75, 480, 729344) for 4-, 5-, and 7-qubit configurations, a four-qubit cospectral C3 pair with distinct completion spectra (Theorem 14) and separated binary completion minima (Corollary 16: <=344 < 347), general cone lift and case C11 from C3 (Corollary 18), Lemmas 20-21, Theorem 22 (universal cubic-trace identity) and Table 8 outside character sums, and Theorem 19: a full machine-checked Lean 4 proof of Jonah's Conjecture E across all nine vertex cases (C1, C3, C5, C6, C8, C11, C12, C14, C15) for every N >= 4 (plus N >= 3 for C1, C3, C6, C11), accompanied by 97 exact integer checks of Theorem 22.",
-      "verification_boundary": "As of v1.6.0, the spectral floor, Kramers quaternionic floor, 5-way saturation equivalences, saturated configurations (75, 480, 729344), four-qubit C3 spectral certificate (42 decls) and binary minima separation (Corollary 16), all-qubit C3 family (74 decls), general cone lift and case C11 (Corollary 18), Lemmas 20-21, Theorem 22 (universal cubic-trace identity), and Theorem 19 (Jonah's Conjecture E in all 9 vertex cases for every N >= 4) are all kernel-checked in Lean 4.35.0 (49 audited declarations in VerifyNewFormalizations.lean, 7,686 new library lines, zero sorry, zero native_decide, strictly standard axioms [propext, Classical.choice, Quot.sound]). Remaining outside Lean: state-to-mask identifications of Table 1, Propositions 3, 4, 6 and 8-11, exhaustive enumerations of Theorems 12-13, printed C3 factorizations and relaxation gap 32, and Clifford orbit transport across hyperplane classes via Jonah [J3, Theorem B4]. Historical source manuscripts remain preserved inside the repository as component records of this single combined study (see publication/PAPER-MAP.md).",
-      "falsification_command": "cd repos/hoggar-bound-lab/lean && lake build HoggarBound.Kramers HoggarBound.SaturationTheory HoggarBound.ConjectureE HoggarBound.ConjectureEExtras && lake env lean VerifyNewFormalizations.lean && cd .. && python scripts/conjecture_e_trace_formula.py && bash scripts/run_all.sh",
+      "core_result": "Unified study with complete Lean 4.35.0 formalizations of the spectral floor and its asymptotic 1/2 Filter.Tendsto limits (Theorem 1, Corollary A), Theorem 2 (Kramers / quaternionic floor and elliptic quadrics Q-(2N-1,2)), Theorems 3-4 (5-way saturation equivalences and (2^N-1)|S| = square), quantum-metric and two-character theorems (Propositions 3, 8, 10), exact contextuality degrees (75, 480, 729344) for 4-, 5-, and 7-qubit configurations, a four-qubit cospectral C3 pair with distinct completion spectra (Theorem 14) and tightened two-sided binary completion enclosures 330 <= min_y F(sigma_1, y) <= 344 < 347 <= min_y F(sigma_0, y) <= 368 (Corollary 16 & Proposition 16' via exact zero-sum QUBO SDP dual), general cone lift and case C11 from C3 (Corollary 18), signed-Clifford orbit transport, Lemmas 20-21, Theorem 22 (universal cubic-trace identity) and Table 8 outside character sums, and Theorem 19: a full machine-checked Lean 4 proof of Jonah's Conjecture E at the canonical Hermitian eigenvalue-multiset level across all nine vertex cases (C1, C3, C5, C6, C8, C11, C12, C14, C15) for every N >= 4 (plus N >= 3 for C1, C3, C6, C11), accompanied by 136 exact integer checks of Theorem 22 through six qubits and 15 exact checks of Proposition 16'.",
+      "verification_boundary": "As of v1.7.0, the spectral floor and asymptotic 1/2 limits, Kramers quaternionic floor, 5-way saturation equivalences, Propositions 3/8/10, saturated configurations (75, 480, 729344), four-qubit C3 spectral certificate (42 decls) and tightened two-sided binary enclosures [347,368] & [330,344] (Corollary 16 & Proposition 16'), all-qubit C3 family (74 decls), general cone lift and case C11 (Corollary 18), signed-Clifford orbit transport, Lemmas 20-21, Theorem 22 (universal cubic-trace identity), and eigenvalue-multiset Theorem 19 (Jonah's Conjecture E in all 9 vertex cases for every N >= 4) are all kernel-checked in Lean 4.35.0 (77 audited declarations in VerifyNewFormalizations.lean, 9,728 library lines across 7 modules, zero sorry, zero native_decide, strictly standard axioms [propext, Classical.choice, Quot.sound]). Remaining outside Lean: state-to-mask identifications of Table 1, Propositions 4, 6, 9 and 11, exhaustive enumerations of Theorems 12-13, printed C3 factorizations and relaxation gap 32, and the single-orbit group-transitivity classification of Jonah [J3, Theorem B4]. Historical source manuscripts remain preserved inside the repository as component records of this single combined study (see publication/PAPER-MAP.md).",
+      "falsification_command": "cd repos/hoggar-bound-lab/lean && lake build HoggarBound.Kramers HoggarBound.SaturationTheory HoggarBound.ConjectureE HoggarBound.ConjectureEExtras HoggarBound.AuditUpgrades && lake env lean VerifyNewFormalizations.lean && cd .. && python scripts/conjecture_e_trace_formula.py && python scripts/conjecture_e_trace_formula.py 6 && python scripts/c3_sdp_dual_check.py",
       "component_manuscripts": [
         {
           "title": "A machine-checked spectral floor for Pauli contextuality, and new configurations that attain it",

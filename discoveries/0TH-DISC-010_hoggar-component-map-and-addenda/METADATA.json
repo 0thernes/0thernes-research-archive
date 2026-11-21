@@ -11,33 +11,39 @@
   "affiliation": "0thernes LLC",
   "repository": "https://github.com/0thernes/hoggar-bound-lab",
   "branch": "main",
-  "pinned_commit": "1f028ea8654997a12453e84701f759b073fb2085",
-  "summary": "Preserved provenance records connecting the three historical source manuscripts (spectral-floor, c3-spectral-counterexample, independent-research-note) and the Conjecture E addendum into the single canonical paper 0TH-2026-002 (v1.6.0), preventing accidental double-counting while indexing all 49 newly audited Lean 4.35.0 declarations.",
-  "verification_boundary": "Provenance & claim-mapping index accompanying 0TH-2026-002; all formal theorems in v1.6.0 (49 declarations in VerifyNewFormalizations.lean) are verified by Lean 4.35.0 inside repos/hoggar-bound-lab.",
+  "pinned_commit": "7b0f7690c5a83d436315b7b18f950509078ecc29",
+  "summary": "Preserved provenance records connecting the three historical source manuscripts (spectral-floor, c3-spectral-counterexample, independent-research-note), the Conjecture E addendum, and the v1.7.0 Proposition 16' QUBO SDP-dual certificate into the single canonical paper 0TH-2026-002 (v1.7.0), preventing accidental double-counting while indexing all 77 audited Lean 4.35.0 declarations.",
+  "verification_boundary": "Provenance & claim-mapping index accompanying 0TH-2026-002; all formal theorems in v1.7.0 (77 declarations in VerifyNewFormalizations.lean) are verified by Lean 4.35.0 inside repos/hoggar-bound-lab.",
   "archived_artifacts": [
     {
       "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/PAPER-MAP.md",
-      "source_path": "publication/PAPER-MAP.md@1f028ea8654997a12453e84701f759b073fb2085",
+      "source_path": "publication/PAPER-MAP.md@7b0f7690c5a83d436315b7b18f950509078ecc29",
       "bytes": 9205,
       "sha256": "005a9db9e2ba884ee041042b6714447f624d0d9a6d1359baa1f89e34266ac2ce"
     },
     {
       "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/ADDENDUM-conjecture-e.md",
-      "source_path": "publication/ADDENDUM-conjecture-e.md@1f028ea8654997a12453e84701f759b073fb2085",
+      "source_path": "publication/ADDENDUM-conjecture-e.md@7b0f7690c5a83d436315b7b18f950509078ecc29",
       "bytes": 22467,
       "sha256": "daffa4f7f4cf71bef1104b2145aa453d905a76dba5b97a392b6266db99a6aa61"
     },
     {
       "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/CLAIMS.md",
-      "source_path": "docs/CLAIMS.md@1f028ea8654997a12453e84701f759b073fb2085",
-      "bytes": 33003,
-      "sha256": "7ae8d394e1e9d1ca1b2c5cecb8030390d8bb13082ce2831ae0cd724e675b4566"
+      "source_path": "docs/CLAIMS.md@7b0f7690c5a83d436315b7b18f950509078ecc29",
+      "bytes": 35084,
+      "sha256": "a712ad9161310dcd36995edd30060bbffc2e12380f3d8a7c0846b0eb54e17611"
     },
     {
       "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/new-formalizations-lean-axioms.log",
-      "source_path": "results/new-formalizations-lean-axioms.log@1f028ea8654997a12453e84701f759b073fb2085",
-      "bytes": 5090,
-      "sha256": "c3d7cfabbe16a3013aa0cc8912ef264ca6ebb1300318e2753aa3f4555057b846"
+      "source_path": "results/new-formalizations-lean-axioms.log@7b0f7690c5a83d436315b7b18f950509078ecc29",
+      "bytes": 8393,
+      "sha256": "a9f568a97328aca269e93107d2f34570f6bb603a831dbaca0c63cdbccd06706a"
+    },
+    {
+      "path": "discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/c3_sdp_dual_check.json",
+      "source_path": "results/c3_sdp_dual_check.json@7b0f7690c5a83d436315b7b18f950509078ecc29",
+      "bytes": 2197,
+      "sha256": "f913fb29c5826ec2ffacf8e2109830094ffa2d038bf5ee28922199684aaab4d8"
     }
   ]
 }
