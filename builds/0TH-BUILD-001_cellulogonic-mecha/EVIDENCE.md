@@ -10,13 +10,17 @@
 | Field | Value |
 |---|---|
 | Source Repository | https://github.com/0thernes/cellulogonic-mecha |
-| Pinned Git Submodule | `repos/cellulogonic-mecha` @ `75661bb1b9019b1162662bd4a9382653ff541bda` |
+| Pinned Git Submodule | `repos/cellulogonic-mecha` @ `73ee3216a509a908ecf6e9d76ca5b5cb467e2138` |
+| Archived Artifact | `builds/0TH-BUILD-001_cellulogonic-mecha/Donahue_2026_cellulogonic_mecha.pdf` (from `dist/Donahue_2026_cellulogonic_mecha.pdf`) |
+| Artifact SHA-256 | `925ce254ac007cab79bc5ce660ab3694b145395db8b194a23537f70224b26448` |
 | Archived Artifact | `builds/0TH-BUILD-001_cellulogonic-mecha/WHITE_PAPER.md` (from `paper/WHITE_PAPER.md`) |
 | Artifact SHA-256 | `3ecadb2ec9b017507c895a2796f3409883c91f9c14057379c2f41789f7faab1d` |
 | Archived Artifact | `builds/0TH-BUILD-001_cellulogonic-mecha/VERIFICATION.md` (from `VERIFICATION.md`) |
 | Artifact SHA-256 | `bb0f0beab3114c03d079836d4f0687d84a1966f6e99de8b432f321cecf353d87` |
 | Archived Artifact | `builds/0TH-BUILD-001_cellulogonic-mecha/lean4-audit.txt` (from `results/lean4-audit.txt`) |
 | Artifact SHA-256 | `0e34cac22eeb75bc75b2d67dbf45c364edeb76afc8a2021dfc3aa36ac593746b` |
+| Archived Artifact | `builds/0TH-BUILD-001_cellulogonic-mecha/arxiv_submission.tar.gz` (from `dist/arxiv_submission.tar.gz`) |
+| Artifact SHA-256 | `9b43f5932936d3d524272a460b31d932df86357e980e0881e3d7af6aebd2ce4c` |
 
 ## Summary
 
@@ -29,7 +33,7 @@ Clean-room zero-dependency C11+AVX2 continuous 3D off-lattice cellular artificia
 - **Audited Theorems (`#print axioms`):** 58
 - **Entry Point:** `lean/CellulogonicProofs.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
-- **Live Audit Status:** GitHub Actions CI GREEN (run #44894602931, lean4-formal-verify + linux-c11-verify) & local lake build EXIT 0; 58/58 theorems (T01-T58), 0 sorryAx, 0 custom axioms, 0 warnings, strictly within [propext, Classical.choice, Quot.sound]; Software Heritage save #2675182
+- **Live Audit Status:** GitHub Actions CI GREEN (run #44903924086: linux-c11-verify + lean4-formal-verify + Tectonic AMS-LaTeX PDF & arXiv bundle) & local lake build EXIT 0; 58/58 theorems (T01-T58), 0 sorryAx, 0 custom axioms, 0 warnings, strictly within [propext, Classical.choice, Quot.sound]; Software Heritage full snapshot #2675549 (swh:1:snp:c6e2698ea3b084318540254a5b90840b0f757d00)
 
 ## Verification Boundary
 
