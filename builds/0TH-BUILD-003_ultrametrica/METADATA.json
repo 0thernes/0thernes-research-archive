@@ -1,37 +1,48 @@
 {
   "id": "0TH-BUILD-003",
   "slug": "ultrametrica",
-  "title": "ULTRAMETRICA: Exact Non-Archimedean Holography, Recursive Adelic Valuation-Residue Symmetries, Tate-Curve BTZ Ollivier-Ricci Curvature, and Real-Time p-adic Quantum Gravity",
+  "title": "ULTRAMETRICA: Exact Non-Archimedean Holography, Recursive Adelic Valuation-Residue Symmetries, Tate-Curve BTZ Ollivier-Ricci Curvature, and Lean 4 Formal Verification",
   "domain": "Mathematical Physics / Non-Archimedean Analysis / Formal Methods",
-  "date": "2026-11-18",
-  "version": "v1.0.0",
+  "date": "2026-11-21",
+  "version": "v1.1.0",
   "author": "Alexander Stephen Donahue",
   "orcid": "0009-0006-8168-9648",
   "affiliation": "0thernes LLC",
   "repository": "https://github.com/0thernes/ultrametrica",
   "submodule_path": "repos/ultrametrica",
-  "pinned_commit": "68b0fcdf827905a0f7b179561041adf247c7a1fa",
+  "pinned_commit": "3fe39163a838f6d6b9dab3d75cedb4aea9b3bf0f",
   "archived_artifacts": [
+    {
+      "path": "builds/0TH-BUILD-003_ultrametrica/Donahue_2026_Ultrametrica.pdf",
+      "source_path": "dist/Donahue_2026_Ultrametrica.pdf",
+      "sha256": "7ce392ff2c772c6714d67737fc0c1d14e19a2a891193b71cb65de2f6aefb653c"
+    },
     {
       "path": "builds/0TH-BUILD-003_ultrametrica/WHITE_PAPER.md",
       "source_path": "paper/WHITE_PAPER.md",
       "sha256": "43258869c2f907eae0d787cf1370ddf41ec1b738cb0371ccb0c385b46cc66185"
+    },
+    {
+      "path": "builds/0TH-BUILD-003_ultrametrica/arxiv_submission.tar.gz",
+      "source_path": "dist/arxiv_submission.tar.gz",
+      "sha256": "d53caf2d51ca5434ca072b70d9de4acda2e06d43f90c36676096c02dd371a269"
     }
   ],
   "lean_verification": {
     "has_lean": true,
     "framework": "Pure Lean 4.35.0 (zero Mathlib)",
-    "modules": 5,
-    "lines": 614,
-    "audited_theorems": 24,
+    "modules": 6,
+    "lines": 642,
+    "audited_theorems": 36,
     "axiom_allowlist": [
       "propext",
+      "Classical.choice",
       "Quot.sound"
     ],
-    "entry_point": "lean/UltrametricaProofs.lean",
-    "live_audit_status": "Build completed successfully (7 jobs); 0 sorry; all 24 #print axioms within [propext, Quot.sound] or empty"
+    "entry_point": "lean/VerifyAxioms.lean",
+    "live_audit_status": "Build completed successfully (7 jobs); 0 sorry; all 36 #print axioms in VerifyAxioms.lean strictly within [propext, Classical.choice, Quot.sound] (14 zero-axiom)"
   },
-  "summary": "Zero-dependency computational laboratory and formal framework for discrete p-adic QFT on Z_p/p^n Z_p coupled to Bruhat-Tits tree and rotating Tate-curve BTZ holography, with 24 pure Lean 4 (v4.35.0) machine-checked proofs covering adelic symmetry, holography curvature, exact Kozyrev nonlinear solitons, and Sherman-Morrison PSD bounds.",
-  "verification_boundary": "All 24 audited Lean 4 declarations compile cleanly in pure Lean 4.35.0 with zero Mathlib and zero sorry, strictly within [propext, Quot.sound]. Machine-precision numerical simulations complement the discrete algebraic theorems.",
-  "falsification_command": "cd repos/ultrametrica/lean && lake build"
+  "summary": "Zero-dependency computational laboratory, zero-warning AMS-LaTeX white paper PDF, standalone arXiv bundle, and formal framework coupling discrete p-adic QFT on Z_p/p^n Z_p to Bruhat-Tits tree and rotating Tate-curve BTZ holography, verified by 36 pure Lean 4 (v4.35.0) machine-checked proofs and an independent exact-rational (fractions.Fraction & Q(i)) Python falsifier.",
+  "verification_boundary": "All 36 audited Lean 4 declarations compile cleanly in pure Lean 4.35.0 with zero Mathlib and zero sorry, strictly within [propext, Classical.choice, Quot.sound] (14 zero-axiom). Independent exact-rational Python checks verify 7,033 conjugate Adelic pairs, 45 BTZ optimal-transport horizons, and exact Q(i) Rank-1 Sherman-Morrison solves with zero rounding error; floating-point FFT/PDE simulations complement the exact discrete algebraic theorems. No empirical discovery of new physical laws of nature is claimed.",
+  "falsification_command": "cd repos/ultrametrica && npm test && python3 scripts/verify_exact.py && (cd lean && lake build && lake env lean VerifyAxioms.lean)"
 }

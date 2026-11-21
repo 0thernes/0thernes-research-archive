@@ -1,13 +1,13 @@
 # Tier II — Public Build White Papers & Embedded Lean 4 Proof Suites
 
 **Author:** Alexander Stephen Donahue (0thernes LLC) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
-**Public Embedded Pure Lean 4.35.0 Proofs Audited:** 116 theorems across 2,310 lines (zero Mathlib, zero `sorry`)  
-**Updated:** `2026-11-21T09:34:00Z`
+**Public Embedded Pure Lean 4.35.0 Proofs Audited:** 128 theorems across 2,338 lines (zero Mathlib, zero `sorry`)  
+**Updated:** `2026-11-21T09:49:00Z`
 
 | ID | Date | Repo / Version | Embedded Lean 4 Proofs | Frozen White Paper / Audit | Dossier |
 |---|---|---|---|---|---|
 | `0TH-BUILD-002` | 2026-11-21 | [`planaria`](https://github.com/0thernes/planaria) `v2.1.0` | 38 theorems (7 files, 976 lines) | [Donahue_2026_planaria.pdf](../builds/0TH-BUILD-002_planaria/Donahue_2026_planaria.pdf) | [Evidence](../builds/0TH-BUILD-002_planaria/EVIDENCE.md) |
-| `0TH-BUILD-003` | 2026-11-18 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) `v1.0.0` | 24 theorems (5 files, 614 lines) | [WHITE_PAPER.md](../builds/0TH-BUILD-003_ultrametrica/WHITE_PAPER.md) | [Evidence](../builds/0TH-BUILD-003_ultrametrica/EVIDENCE.md) |
+| `0TH-BUILD-003` | 2026-11-21 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) `v1.1.0` | 36 theorems (6 files, 642 lines) | [Donahue_2026_Ultrametrica.pdf](../builds/0TH-BUILD-003_ultrametrica/Donahue_2026_Ultrametrica.pdf) | [Evidence](../builds/0TH-BUILD-003_ultrametrica/EVIDENCE.md) |
 | `0TH-BUILD-004` | 2026-07-01 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) `2026-07-02-qa` | Audit / Methodology (non-Lean) | [WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md](../builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md) | [Evidence](../builds/0TH-BUILD-004_unsolved-mathematics/EVIDENCE.md) |
 | `0TH-BUILD-005` | 2026-06-27 | [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) `v0.14.3` | Audit / Methodology (non-Lean) | [cqm-alife-audit.pdf](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/cqm-alife-audit.pdf) | [Evidence](../builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/EVIDENCE.md) |
 | `0TH-BUILD-006` | 2026-11-10 | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) `main+research-branch` | 8 theorems (1 files, 34 lines) | [ClassicalGR.lean](../builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean) | [Evidence](../builds/0TH-BUILD-006_black-hole-simulation-lab/EVIDENCE.md) |
@@ -23,12 +23,12 @@
 - **Verification Boundary:** All 38 Lean 4 theorems (covering GF(256) arithmetic, Byzantine quorum thresholds, mitosis bounds, stratum anastomosis, xenograft ABI, and quantum-temporal norm/rewind/combinatorial invariants) compile cleanly in pure Lean 4.35.0 with zero Mathlib, zero native_decide, and zero sorry, strictly within [propext, Classical.choice, Quot.sound]. Runtime JS implementation, Monte Carlo survival curves, and WebGL2 3D engine are separately tested by the 16-suite falsification harness (npm test) and Ubuntu CI.
 - **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-002_planaria/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-002_planaria/METADATA.json)
 
-## 0TH-BUILD-003 — ULTRAMETRICA: Exact Non-Archimedean Holography, Recursive Adelic Valuation-Residue Symmetries, Tate-Curve BTZ Ollivier-Ricci Curvature, and Real-Time p-adic Quantum Gravity
+## 0TH-BUILD-003 — ULTRAMETRICA: Exact Non-Archimedean Holography, Recursive Adelic Valuation-Residue Symmetries, Tate-Curve BTZ Ollivier-Ricci Curvature, and Lean 4 Formal Verification
 
-- **Repository:** https://github.com/0thernes/ultrametrica (`v1.0.0`, pinned `68b0fcdf8279` at `repos/ultrametrica`)
-- **Lean 4 Audit:** Build completed successfully (7 jobs); 0 sorry; all 24 #print axioms within [propext, Quot.sound] or empty
-- **Summary:** Zero-dependency computational laboratory and formal framework for discrete p-adic QFT on Z_p/p^n Z_p coupled to Bruhat-Tits tree and rotating Tate-curve BTZ holography, with 24 pure Lean 4 (v4.35.0) machine-checked proofs covering adelic symmetry, holography curvature, exact Kozyrev nonlinear solitons, and Sherman-Morrison PSD bounds.
-- **Verification Boundary:** All 24 audited Lean 4 declarations compile cleanly in pure Lean 4.35.0 with zero Mathlib and zero sorry, strictly within [propext, Quot.sound]. Machine-precision numerical simulations complement the discrete algebraic theorems.
+- **Repository:** https://github.com/0thernes/ultrametrica (`v1.1.0`, pinned `3fe39163a838` at `repos/ultrametrica`)
+- **Lean 4 Audit:** Build completed successfully (7 jobs); 0 sorry; all 36 #print axioms in VerifyAxioms.lean strictly within [propext, Classical.choice, Quot.sound] (14 zero-axiom)
+- **Summary:** Zero-dependency computational laboratory, zero-warning AMS-LaTeX white paper PDF, standalone arXiv bundle, and formal framework coupling discrete p-adic QFT on Z_p/p^n Z_p to Bruhat-Tits tree and rotating Tate-curve BTZ holography, verified by 36 pure Lean 4 (v4.35.0) machine-checked proofs and an independent exact-rational (fractions.Fraction & Q(i)) Python falsifier.
+- **Verification Boundary:** All 36 audited Lean 4 declarations compile cleanly in pure Lean 4.35.0 with zero Mathlib and zero sorry, strictly within [propext, Classical.choice, Quot.sound] (14 zero-axiom). Independent exact-rational Python checks verify 7,033 conjugate Adelic pairs, 45 BTZ optimal-transport horizons, and exact Q(i) Rank-1 Sherman-Morrison solves with zero rounding error; floating-point FFT/PDE simulations complement the exact discrete algebraic theorems. No empirical discovery of new physical laws of nature is claimed.
 - **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-003_ultrametrica/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-003_ultrametrica/METADATA.json)
 
 ## 0TH-BUILD-004 — Adversarial Verification in AI-Assisted Collatz Research: An Eight-Hour Repository Case Study
