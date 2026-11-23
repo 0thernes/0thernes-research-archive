@@ -1,7 +1,7 @@
 # Master Paper Registry — Tier I: Standalone Research Preprints
 
 **Author:** Alexander Stephen Donahue (0thernes LLC, Spokane, WA, USA)  
-**ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648) · **GitHub:** https://github.com/0thernes · **Updated:** `2026-11-21T23:05:41Z`
+**ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648) · **GitHub:** https://github.com/0thernes · **Updated:** `2026-11-23T16:46:00Z`
 
 | ID | Date | Version | Domain | Title | Frozen PDF SHA-256 (prefix) | Repo / Evidence |
 |---|---|---|---|---|---|---|
@@ -11,6 +11,8 @@
 | `0TH-2026-004` | 2026-11-10 | `v1.0.0` | Quantum Foundations / Combinatorial Optimization | [Certified exact minima of Kochen-Specker sets inside coordinate pools: 31 and 33 rays in dimension three, 18 in dimension four, 29 in dimension five](../papers/0TH-2026-004_kochen-specker-extremal-lab/ks-minimum.pdf) | `8063949e478c…` | [Repo](https://github.com/0thernes/kochen-specker-extremal-lab) · [Evidence](../papers/0TH-2026-004_kochen-specker-extremal-lab/EVIDENCE.md) |
 | `0TH-2026-005` | 2026-11-10 | `v1.0.0` | Quantum Foundations / Statistical Hypothesis Testing | [Contextuality Evidence Lab: Exact Sequential Certificates and a Constructive Setting-Bias Attack](../papers/0TH-2026-005_contextuality-evidence-lab/whitepaper.pdf) | `8e34d2911a7c…` | [Repo](https://github.com/0thernes/contextuality-evidence-lab) · [Evidence](../papers/0TH-2026-005_contextuality-evidence-lab/EVIDENCE.md) |
 | `0TH-2026-006` | 2026-11-20 | `v1.0.0` | Mathematical Statistics / Probability Theory | [Resolution and Lean 4 Formal Verification of Conjecture 7.7 on the Second-Order Variance of Multinomial Discrete Total Variation](../papers/0TH-2026-006_multinomial-tv-conjecture/Donahue_2026_Conjecture_7_7_Multinomial_TV.pdf) | `1a2f98651fd5…` | [Repo](https://github.com/0thernes/multinomial-tv-conjecture) · [Evidence](../papers/0TH-2026-006_multinomial-tv-conjecture/EVIDENCE.md) |
+| `0TH-2026-007` | 2026-11-23 | `v1.0.0` | Computational Neuroscience / Biophysical Verification | [Formally Verified Biophysical Invariants, Multi-Language Differential Oracles, and Pre-Registered Monte Carlo Simulation of the Human Synaptic Bouton](../papers/0TH-2026-007_human-synaptic-bouton-verification/Donahue_2026_human_synaptic_bouton_verification.pdf) | `4ef364f10516…` | [Repo](https://github.com/0thernes/human-synapse-bouton-lab) · [Evidence](../papers/0TH-2026-007_human-synaptic-bouton-verification/EVIDENCE.md) |
+| `0TH-2026-008` | 2026-11-23 | `v1.0.0` | Interdisciplinary Neuroscience / Philosophy of Mind / Open Problems | [Open Hard Problems Across Eleven Neuro-Scientific Disciplines, Deductive-Inductive-Abductive Frontiers of Sentience, and a Six-Class Forensic Audit](../papers/0TH-2026-008_open-hard-problems-consciousness-frontier/Donahue_2026_open_hard_problems_consciousness_frontier.pdf) | `69fd84374eed…` | [Repo](https://github.com/0thernes/human-synapse-bouton-lab) · [Evidence](../papers/0TH-2026-008_open-hard-problems-consciousness-frontier/EVIDENCE.md) |
 
 ---
 
@@ -73,3 +75,23 @@
 - **Summary:** Proves Conjecture 7.7 (conj:atriangle) of Banic & Elezovic (arXiv:2610.17046v1, confirmed open in arXiv:2611.14735v1) via an exact 2D-to-1D combinatorial telescoping reduction, sharp non-asymptotic Stirling bounds, and cubic odd-Gaussian Euler-Maclaurin summation, establishing b_0 = 32*sqrt(3)/(81*pi), b_1 = b_2 = -22*sqrt(3)/(81*pi), d_0 = -4*sqrt(3)/(81*pi), a_triangle = 1/32 - 4*sqrt(3)/243, and gamma_2 = -1/(32*pi) - 8*sqrt(3)/(243*pi), rendering linear gamma(n) and cyclic gamma_c(n) unconditional for n >= 5.
 - **Verification Boundary:** Entire proof of Conjecture 7.7, exact nested-sum fidelity check (hAdj_eq_nested_sum), and unconditional gamma(n) & gamma_c(n) closed forms are 100% kernel-checked in Lean 4 (4,960 lines, 0 sorry, standard axioms only), independently verified in exact rational arithmetic (L=3..45, 0/1 error) and 80-digit Richardson extrapolation (< 3e-55 error).
 - **Dossier:** [`EVIDENCE.md`](../papers/0TH-2026-006_multinomial-tv-conjecture/EVIDENCE.md) · [`METADATA.json`](../papers/0TH-2026-006_multinomial-tv-conjecture/METADATA.json)
+
+## 0TH-2026-007 — Formally Verified Biophysical Invariants, Multi-Language Differential Oracles, and Pre-Registered Monte Carlo Simulation of the Human Synaptic Bouton
+
+- **Domain:** Computational Neuroscience / Biophysical Verification · **Release:** [`v1.0.0`](https://github.com/0thernes/human-synapse-bouton-lab/releases/tag/v1.0.0) (2026-11-23)
+- **Pinned Commit:** `6bdb7d5d0517cbf154f599e981cdf77b58ff9f15` (`repos/human-synapse-bouton-lab`)
+- **Frozen PDF:** [`papers/0TH-2026-007_human-synaptic-bouton-verification/Donahue_2026_human_synaptic_bouton_verification.pdf`](../papers/0TH-2026-007_human-synaptic-bouton-verification/Donahue_2026_human_synaptic_bouton_verification.pdf) (SHA-256: `4ef364f105162e5bf21facbb80483be687b2d2d4641a19ccdffc9823163b1170`)
+- **Lean 4 Audit:** Lean 4.35.0 (zero Mathlib, 6 independent kernels via lake comparator --paranoid) · Allowlist: `propext, Quot.sound`
+- **Summary:** Proves 18 exact algebraic biophysical invariants across 6 synaptic domains in pure Lean 4.35.0 (replayed by 6 independent kernels: lean, leanchecker-paranoid, lean4lean, nanoda, con-leche, con-ron), validates TypeScript and Rust kernels against a 50-digit mpmath oracle over 1,000 random inputs (0 mismatches within 1e-10), confirms pre-registered nanocolumn and Ca2+ nanodomain hypotheses (p_Holm=0.0005), and honestly refutes pre-registered 40 Hz mitochondrial ATP sustainability (burn 1,284,000 > supply 950,000 ATP/s; f_crit=29.5625 Hz).
+- **Verification Boundary:** The 18 algebraic invariants and 19 non-vacuity witnesses are 100% kernel-checked in pure Lean 4.35.0 (zero sorry, zero Classical.choice); RK4 Hodgkin-Huxley ODE and ChaCha8Rng Monte Carlo trajectories are explicitly labeled numerical_approximation; pre-registered H3 (40 Hz) is reported as refuted and H3b (20 Hz) as post-hoc exploratory.
+- **Dossier:** [`EVIDENCE.md`](../papers/0TH-2026-007_human-synaptic-bouton-verification/EVIDENCE.md) · [`METADATA.json`](../papers/0TH-2026-007_human-synaptic-bouton-verification/METADATA.json)
+
+## 0TH-2026-008 — Open Hard Problems Across Eleven Neuro-Scientific Disciplines, Deductive-Inductive-Abductive Frontiers of Sentience, and a Six-Class Forensic Audit
+
+- **Domain:** Interdisciplinary Neuroscience / Philosophy of Mind / Open Problems · **Release:** [`v1.0.0`](https://github.com/0thernes/human-synapse-bouton-lab/releases/tag/v1.0.0) (2026-11-23)
+- **Pinned Commit:** `6bdb7d5d0517cbf154f599e981cdf77b58ff9f15` (`repos/human-synapse-bouton-lab`)
+- **Frozen PDF:** [`papers/0TH-2026-008_open-hard-problems-consciousness-frontier/Donahue_2026_open_hard_problems_consciousness_frontier.pdf`](../papers/0TH-2026-008_open-hard-problems-consciousness-frontier/Donahue_2026_open_hard_problems_consciousness_frontier.pdf) (SHA-256: `69fd84374eedd70f089daf02dffa48fbb63799db5fec32b6c0563b391d39005a`)
+- **Lean 4 Audit:** Lean 4.35.0 (zero Mathlib, 6 independent kernels via lake comparator --paranoid) · Allowlist: `propext, Quot.sound`
+- **Summary:** Synthesizes an explicit 11-discipline open-problems roadmap (Math, Physics, Chemistry, Biology, Neuroscience, Neuropsychology, NeuroCS, NeuroMath, Neurochemistry, Neurobiology, Neurophysics), formally proves discrete bipartite non-factorizability vs. zero-integration boundaries (T17-T18) in Lean 4.35.0, builds a deductive/inductive/abductive epistemic matrix for consciousness and sentience frontiers, and records a complete six-class forensic audit (F01-F10) of bugs, errors, issues, problems, dilemmas, conflicts, and epistemic blind spots.
+- **Verification Boundary:** Formal Lean 4 theorems T17-T18 apply solely to discrete finite-state bipartite coupling determinants and explicitly do NOT prove, measure, or detect phenomenal consciousness, subjective experience, or sentience; all philosophical and empirical cross-disciplinary gaps remain explicitly labeled open.
+- **Dossier:** [`EVIDENCE.md`](../papers/0TH-2026-008_open-hard-problems-consciousness-frontier/EVIDENCE.md) · [`METADATA.json`](../papers/0TH-2026-008_open-hard-problems-consciousness-frontier/METADATA.json)

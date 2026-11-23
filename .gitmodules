@@ -43,3 +43,6 @@
 [submodule "repos/cellulogonic-mecha"]
 	path = repos/cellulogonic-mecha
 	url = https://github.com/0thernes/cellulogonic-mecha.git
+[submodule "repos/human-synapse-bouton-lab"]
+	path = repos/human-synapse-bouton-lab
+	url = https://github.com/0thernes/human-synapse-bouton-lab.git

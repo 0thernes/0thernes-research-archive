@@ -1,0 +1,44 @@
+{
+  "id": "0TH-2026-007",
+  "slug": "human-synaptic-bouton-verification",
+  "title": "Formally Verified Biophysical Invariants, Multi-Language Differential Oracles, and Pre-Registered Monte Carlo Simulation of the Human Synaptic Bouton",
+  "domain": "Computational Neuroscience / Biophysical Verification",
+  "date_released": "2026-11-23",
+  "version": "v1.0.0",
+  "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 verified)",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "Independent Researcher, Spokane, WA, USA",
+  "repository": "https://github.com/0thernes/human-synapse-bouton-lab",
+  "submodule_path": "repos/human-synapse-bouton-lab",
+  "pinned_commit": "6bdb7d5d0517cbf154f599e981cdf77b58ff9f15",
+  "release_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/tag/v1.0.0",
+  "pages_url": "https://0thernes.github.io/human-synapse-bouton-lab/",
+  "pdf_archive_path": "papers/0TH-2026-007_human-synaptic-bouton-verification/Donahue_2026_human_synaptic_bouton_verification.pdf",
+  "pdf_sha256": "4ef364f105162e5bf21facbb80483be687b2d2d4641a19ccdffc9823163b1170",
+  "arxiv_bundle_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/download/v1.0.0/arxiv_wp1_synaptic_bouton.tar.gz",
+  "arxiv_bundle_sha256": "e42fa09b656a08b68fd0d0ac0e01a1b29706a35e5d0ee3d6e722165ec8fe667b",
+  "lean_verification": {
+    "framework": "Lean 4.35.0 (zero Mathlib, 6 independent kernels via lake comparator --paranoid)",
+    "axiom_allowlist": [
+      "propext",
+      "Quot.sound"
+    ],
+    "entry_point": "lean/Solution.lean",
+    "axiom_audit_file": "lean/VerifyAxioms.lean",
+    "additional_audit_files": [
+      "lean/Challenge.lean",
+      "lean/NonVacuity.lean"
+    ],
+    "audited_theorems": 18
+  },
+  "ci_run_url": "https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45218417682",
+  "preservation": {
+    "software_heritage": "swh:1:snp:1a278fff55465dbe8d0b870408b6468822eb3e8b",
+    "wayback_machine": null,
+    "doi": null
+  },
+  "core_result": "Proves 18 exact algebraic biophysical invariants across 6 synaptic domains in pure Lean 4.35.0 (replayed by 6 independent kernels: lean, leanchecker-paranoid, lean4lean, nanoda, con-leche, con-ron), validates TypeScript and Rust kernels against a 50-digit mpmath oracle over 1,000 random inputs (0 mismatches within 1e-10), confirms pre-registered nanocolumn and Ca2+ nanodomain hypotheses (p_Holm=0.0005), and honestly refutes pre-registered 40 Hz mitochondrial ATP sustainability (burn 1,284,000 > supply 950,000 ATP/s; f_crit=29.5625 Hz).",
+  "verification_boundary": "The 18 algebraic invariants and 19 non-vacuity witnesses are 100% kernel-checked in pure Lean 4.35.0 (zero sorry, zero Classical.choice); RK4 Hodgkin-Huxley ODE and ChaCha8Rng Monte Carlo trajectories are explicitly labeled numerical_approximation; pre-registered H3 (40 Hz) is reported as refuted and H3b (20 Hz) as post-hoc exploratory.",
+  "falsification_command": "cd repos/human-synapse-bouton-lab/lean && lake build --wfail && lake env lean VerifyAxioms.lean && lake env leanchecker Solution && cd .. && npm ci && npm run build && npm test && cargo test --locked && uv run pytest -v python/tests/"
+}

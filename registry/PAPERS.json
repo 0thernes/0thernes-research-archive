@@ -15,7 +15,7 @@
       "github": "https://github.com/0thernes",
       "website": "https://0thernes.art"
     },
-    "updated_utc": "2026-11-21T23:05:41Z"
+    "updated_utc": "2026-11-23T16:46:00Z"
   },
   "papers": [
     {
@@ -290,6 +290,94 @@
       "core_result": "Proves Conjecture 7.7 (conj:atriangle) of Banic & Elezovic (arXiv:2610.17046v1, confirmed open in arXiv:2611.14735v1) via an exact 2D-to-1D combinatorial telescoping reduction, sharp non-asymptotic Stirling bounds, and cubic odd-Gaussian Euler-Maclaurin summation, establishing b_0 = 32*sqrt(3)/(81*pi), b_1 = b_2 = -22*sqrt(3)/(81*pi), d_0 = -4*sqrt(3)/(81*pi), a_triangle = 1/32 - 4*sqrt(3)/243, and gamma_2 = -1/(32*pi) - 8*sqrt(3)/(243*pi), rendering linear gamma(n) and cyclic gamma_c(n) unconditional for n >= 5.",
       "verification_boundary": "Entire proof of Conjecture 7.7, exact nested-sum fidelity check (hAdj_eq_nested_sum), and unconditional gamma(n) & gamma_c(n) closed forms are 100% kernel-checked in Lean 4 (4,960 lines, 0 sorry, standard axioms only), independently verified in exact rational arithmetic (L=3..45, 0/1 error) and 80-digit Richardson extrapolation (< 3e-55 error).",
       "falsification_command": "cd repos/multinomial-tv-conjecture/lean && lake build && lake env lean VerifyAxioms.lean && cd .. && python scripts/verify_conjecture.py"
+    },
+    {
+      "id": "0TH-2026-007",
+      "slug": "human-synaptic-bouton-verification",
+      "title": "Formally Verified Biophysical Invariants, Multi-Language Differential Oracles, and Pre-Registered Monte Carlo Simulation of the Human Synaptic Bouton",
+      "domain": "Computational Neuroscience / Biophysical Verification",
+      "date_released": "2026-11-23",
+      "version": "v1.0.0",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 verified)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/human-synapse-bouton-lab",
+      "submodule_path": "repos/human-synapse-bouton-lab",
+      "pinned_commit": "6bdb7d5d0517cbf154f599e981cdf77b58ff9f15",
+      "release_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/tag/v1.0.0",
+      "pages_url": "https://0thernes.github.io/human-synapse-bouton-lab/",
+      "pdf_archive_path": "papers/0TH-2026-007_human-synaptic-bouton-verification/Donahue_2026_human_synaptic_bouton_verification.pdf",
+      "pdf_sha256": "4ef364f105162e5bf21facbb80483be687b2d2d4641a19ccdffc9823163b1170",
+      "arxiv_bundle_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/download/v1.0.0/arxiv_wp1_synaptic_bouton.tar.gz",
+      "arxiv_bundle_sha256": "e42fa09b656a08b68fd0d0ac0e01a1b29706a35e5d0ee3d6e722165ec8fe667b",
+      "lean_verification": {
+        "framework": "Lean 4.35.0 (zero Mathlib, 6 independent kernels via lake comparator --paranoid)",
+        "axiom_allowlist": [
+          "propext",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/Solution.lean",
+        "axiom_audit_file": "lean/VerifyAxioms.lean",
+        "additional_audit_files": [
+          "lean/Challenge.lean",
+          "lean/NonVacuity.lean"
+        ],
+        "audited_theorems": 18
+      },
+      "ci_run_url": "https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45218417682",
+      "preservation": {
+        "software_heritage": "swh:1:snp:1a278fff55465dbe8d0b870408b6468822eb3e8b",
+        "wayback_machine": null,
+        "doi": null
+      },
+      "core_result": "Proves 18 exact algebraic biophysical invariants across 6 synaptic domains in pure Lean 4.35.0 (replayed by 6 independent kernels: lean, leanchecker-paranoid, lean4lean, nanoda, con-leche, con-ron), validates TypeScript and Rust kernels against a 50-digit mpmath oracle over 1,000 random inputs (0 mismatches within 1e-10), confirms pre-registered nanocolumn and Ca2+ nanodomain hypotheses (p_Holm=0.0005), and honestly refutes pre-registered 40 Hz mitochondrial ATP sustainability (burn 1,284,000 > supply 950,000 ATP/s; f_crit=29.5625 Hz).",
+      "verification_boundary": "The 18 algebraic invariants and 19 non-vacuity witnesses are 100% kernel-checked in pure Lean 4.35.0 (zero sorry, zero Classical.choice); RK4 Hodgkin-Huxley ODE and ChaCha8Rng Monte Carlo trajectories are explicitly labeled numerical_approximation; pre-registered H3 (40 Hz) is reported as refuted and H3b (20 Hz) as post-hoc exploratory.",
+      "falsification_command": "cd repos/human-synapse-bouton-lab/lean && lake build --wfail && lake env lean VerifyAxioms.lean && lake env leanchecker Solution && cd .. && npm ci && npm run build && npm test && cargo test --locked && uv run pytest -v python/tests/"
+    },
+    {
+      "id": "0TH-2026-008",
+      "slug": "open-hard-problems-consciousness-frontier",
+      "title": "Open Hard Problems Across Eleven Neuro-Scientific Disciplines, Deductive-Inductive-Abductive Frontiers of Sentience, and a Six-Class Forensic Audit",
+      "domain": "Interdisciplinary Neuroscience / Philosophy of Mind / Open Problems",
+      "date_released": "2026-11-23",
+      "version": "v1.0.0",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; algebraic coupling bounds Lean 4.35.0 verified)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/human-synapse-bouton-lab",
+      "submodule_path": "repos/human-synapse-bouton-lab",
+      "pinned_commit": "6bdb7d5d0517cbf154f599e981cdf77b58ff9f15",
+      "release_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/tag/v1.0.0",
+      "pages_url": "https://0thernes.github.io/human-synapse-bouton-lab/",
+      "pdf_archive_path": "papers/0TH-2026-008_open-hard-problems-consciousness-frontier/Donahue_2026_open_hard_problems_consciousness_frontier.pdf",
+      "pdf_sha256": "69fd84374eedd70f089daf02dffa48fbb63799db5fec32b6c0563b391d39005a",
+      "arxiv_bundle_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/download/v1.0.0/arxiv_wp2_open_problems_consciousness.tar.gz",
+      "arxiv_bundle_sha256": "2beaacbfacc5d4f36562110211bddad15638ecd695cac725b656e32e0d6affb0",
+      "lean_verification": {
+        "framework": "Lean 4.35.0 (zero Mathlib, 6 independent kernels via lake comparator --paranoid)",
+        "axiom_allowlist": [
+          "propext",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/Solution.lean",
+        "axiom_audit_file": "lean/VerifyAxioms.lean",
+        "additional_audit_files": [
+          "lean/Challenge.lean",
+          "lean/NonVacuity.lean"
+        ],
+        "audited_theorems": 18
+      },
+      "ci_run_url": "https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45218417682",
+      "preservation": {
+        "software_heritage": "swh:1:snp:1a278fff55465dbe8d0b870408b6468822eb3e8b",
+        "wayback_machine": null,
+        "doi": null
+      },
+      "core_result": "Synthesizes an explicit 11-discipline open-problems roadmap (Math, Physics, Chemistry, Biology, Neuroscience, Neuropsychology, NeuroCS, NeuroMath, Neurochemistry, Neurobiology, Neurophysics), formally proves discrete bipartite non-factorizability vs. zero-integration boundaries (T17-T18) in Lean 4.35.0, builds a deductive/inductive/abductive epistemic matrix for consciousness and sentience frontiers, and records a complete six-class forensic audit (F01-F10) of bugs, errors, issues, problems, dilemmas, conflicts, and epistemic blind spots.",
+      "verification_boundary": "Formal Lean 4 theorems T17-T18 apply solely to discrete finite-state bipartite coupling determinants and explicitly do NOT prove, measure, or detect phenomenal consciousness, subjective experience, or sentience; all philosophical and empirical cross-disciplinary gaps remain explicitly labeled open.",
+      "falsification_command": "cd repos/human-synapse-bouton-lab/lean && lake build --wfail && lake env lean VerifyAxioms.lean && lake env leanchecker Solution"
     }
   ]
 }

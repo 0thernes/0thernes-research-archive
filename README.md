@@ -10,7 +10,7 @@
 - **Author:** Alexander Stephen Donahue (`Alexander S. Donahue`) · **0thernes LLC**, Spokane, WA, USA
 - **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)
 - **Contact:** `0_0@0thernes.art` · [0thernes.art](https://0thernes.art) · [github.com/0thernes](https://github.com/0thernes)
-- **Scope:** **25 public research entries** across **3 explicitly separated epistemic tiers** + **15 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
+- **Scope:** **27 public research entries** across **3 explicitly separated epistemic tiers** + **16 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 ---
 
@@ -18,6 +18,8 @@
 
 | ID | Date | Domain | Paper & Frozen PDF | Version | Lean 4 Verification | Evidence & Source Repo |
 |---|---|---|---|---|---|---|
+| `0TH-2026-008` | 2026-11-23 | Interdisciplinary Neuroscience / Philosophy of Mind | [Open Hard Problems Across Eleven Neuro-Scientific Disciplines, Deductive-Inductive-Abductive Frontiers of Sentience, and a Six-Class Forensic Audit](papers/0TH-2026-008_open-hard-problems-consciousness-frontier/Donahue_2026_open_hard_problems_consciousness_frontier.pdf) | `v1.0.0` | Lean 4.35.0 (zero Mathlib, 6 independent kernels via `lake comparator --paranoid`, axioms `⊆ [propext, Quot.sound]`; T17–T18 discrete coupling bounds) | [Repo](https://github.com/0thernes/human-synapse-bouton-lab) · [Evidence](papers/0TH-2026-008_open-hard-problems-consciousness-frontier/EVIDENCE.md) · [Lab](https://0thernes.github.io/human-synapse-bouton-lab/) · [CI](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45218417682) |
+| `0TH-2026-007` | 2026-11-23 | Computational Neuroscience / Biophysical Verification | [Formally Verified Biophysical Invariants, Multi-Language Differential Oracles, and Pre-Registered Monte Carlo Simulation of the Human Synaptic Bouton](papers/0TH-2026-007_human-synaptic-bouton-verification/Donahue_2026_human_synaptic_bouton_verification.pdf) | `v1.0.0` | **Lean 4.35.0** (zero Mathlib, 18 theorems + 19 non-vacuity witnesses, **6 independent kernels**: `lean`, `leanchecker-paranoid`, `lean4lean`, `nanoda`, `con-leche`, `con-ron`, zero `Classical.choice`) | [Repo](https://github.com/0thernes/human-synapse-bouton-lab) · [Evidence](papers/0TH-2026-007_human-synaptic-bouton-verification/EVIDENCE.md) · [Lab](https://0thernes.github.io/human-synapse-bouton-lab/) · [CI](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45218417682) |
 | `0TH-2026-006` | 2026-11-20 | Mathematical Statistics | [Resolution and Lean 4 Formal Verification of Conjecture 7.7 on the Second-Order Variance of Multinomial Discrete Total Variation](papers/0TH-2026-006_multinomial-tv-conjecture/Donahue_2026_Conjecture_7_7_Multinomial_TV.pdf) | `v1.0.0` | Lean 4.35.0 / Mathlib (4,960 lines, 19 audited theorems, standard axioms) | [Repo](https://github.com/0thernes/multinomial-tv-conjecture) · [Evidence](papers/0TH-2026-006_multinomial-tv-conjecture/EVIDENCE.md) · [CI](https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/44862576204) |
 | `0TH-2026-005` | 2026-11-10 | Quantum Foundations / Statistics | [Contextuality Evidence Lab: Exact Sequential Certificates and a Constructive Setting-Bias Attack](papers/0TH-2026-005_contextuality-evidence-lab/whitepaper.pdf) | `v1.0.0` | Lean 4 finite adaptive-tree & bias-cap proofs (standard axioms) | [Repo](https://github.com/0thernes/contextuality-evidence-lab) · [Evidence](papers/0TH-2026-005_contextuality-evidence-lab/EVIDENCE.md) · [Lab](https://0thernes.github.io/contextuality-evidence-lab/) |
 | `0TH-2026-004` | 2026-11-10 | Quantum Foundations / Combinatorics | [Certified exact minima of Kochen-Specker sets inside coordinate pools (31, 33, 18, 29)](papers/0TH-2026-004_kochen-specker-extremal-lab/ks-minimum.pdf) | `v1.0.0` | Pure Lean 4 (no Mathlib) + checked DRUP UNSAT proofs | [Repo](https://github.com/0thernes/kochen-specker-extremal-lab) · [Evidence](papers/0TH-2026-004_kochen-specker-extremal-lab/EVIDENCE.md) · [Site](https://0thernes.github.io/kochen-specker-extremal-lab/) |
@@ -82,11 +84,11 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 ## Cloning the Full Public Stack & Running the Cryptographic Audit
 
 ```bash
-# Clone the archive + all 15 pinned PUBLIC Lean 4 & white-paper repositories
+# Clone the archive + all 16 pinned PUBLIC Lean 4 & white-paper repositories
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 
-# Verify every SHA-256 digest, ORCID, axiom allowlist, and all 15 public submodule pins
+# Verify every SHA-256 digest, ORCID, axiom allowlist, and all 16 public submodule pins
 python scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
 ```
