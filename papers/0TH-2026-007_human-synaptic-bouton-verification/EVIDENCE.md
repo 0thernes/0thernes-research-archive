@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45234241381 |
 | Software Heritage SWHID | `swh:1:snp:458adcd73c9a78054486147094950e2be6774271` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24477928 |
 
 ## Core Result
 

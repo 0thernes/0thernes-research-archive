@@ -36,7 +36,7 @@
   "preservation": {
     "software_heritage": "swh:1:snp:458adcd73c9a78054486147094950e2be6774271",
     "wayback_machine": null,
-    "doi": null
+    "doi": "10.5281/zenodo.24477928"
   },
   "core_result": "Proves 18 exact algebraic biophysical invariants across 6 synaptic domains in pure Lean 4.35.0 (Palomar module headers, replayed by 6 independent kernels: lean, leanchecker-paranoid, lean4lean, nanoda, con-leche, con-ron), validates TypeScript and Rust kernels against a 50-digit mpmath oracle over 1,000 random inputs (0 mismatches within 1e-10), kills 6/6 core mutants, verifies 23/23 citations live against Crossref (0 retractions), seals root MANIFEST.sha256 with a DigiCert RFC 3161 timestamp, confirms pre-registered nanocolumn and Ca2+ nanodomain hypotheses (p_Holm=0.0005), and honestly refutes pre-registered 40 Hz mitochondrial ATP sustainability (burn 1,284,000 > supply 950,000 ATP/s; f_crit=29.5625 Hz).",
   "verification_boundary": "The 18 algebraic invariants and 19 non-vacuity witnesses are 100% kernel-checked in pure Lean 4.35.0 (zero sorry, zero Classical.choice); RK4 Hodgkin-Huxley ODE and ChaCha8Rng Monte Carlo trajectories are explicitly labeled numerical_approximation; pre-registered H3 (40 Hz) is reported as refuted and H3b (20 Hz) as post-hoc exploratory.",
