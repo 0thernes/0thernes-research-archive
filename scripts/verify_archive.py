@@ -348,6 +348,11 @@ def sync_derived_files(root: Path, data: dict, bdata: dict | None, ddata: dict |
 
         checksum_entries.append((sha256_file(pdf_abs), pdf_rel))
         checksum_entries.append((sha256_file(meta_path), meta_path.relative_to(root).as_posix()))
+        for cm in paper.get("component_manuscripts", []):
+            cm_name = Path(cm["repo_path"]).name
+            cm_abs = pdir / cm_name
+            if cm_abs != pdf_abs and cm_abs.exists():
+                checksum_entries.append((sha256_file(cm_abs), cm_abs.relative_to(root).as_posix()))
 
     (root / "registry" / "PAPERS.md").write_text(render_papers_md(data), encoding="utf-8", newline="\n")
     reg_json = root / "registry" / "PAPERS.json"
@@ -456,6 +461,17 @@ def verify_archive(root: Path, data: dict, bdata: dict | None, ddata: dict | Non
         elif sha256_file(pdf_path) != p["pdf_sha256"]:
             errors.append(f"{pid}: PDF SHA-256 mismatch")
         pdir = pdf_path.parent
+        declared_pdfs = {pdf_path.name}
+        for cm in p.get("component_manuscripts", []):
+            cm_name = Path(cm["repo_path"]).name
+            declared_pdfs.add(cm_name)
+            cm_abs = pdir / cm_name
+            if cm_abs != pdf_path and cm_abs.exists():
+                if sha256_file(cm_abs) != cm["sha256"]:
+                    errors.append(f"{pid}: Companion PDF SHA-256 mismatch for {cm_name}")
+        for disk_pdf in sorted(pdir.glob("*.pdf")):
+            if disk_pdf.name not in declared_pdfs:
+                errors.append(f"{pid}: Unregistered PDF in archive directory: {disk_pdf.relative_to(root).as_posix()}")
         for req in ("METADATA.json", "EVIDENCE.md"):
             if not (pdir / req).exists():
                 errors.append(f"{pid}: Missing {pdir.relative_to(root).as_posix()}/{req}")

@@ -7,10 +7,15 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+concurrency:
+  group: archive-audit-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   audit:
     name: Verify Checksums, ORCID, Axiom Policies & Submodule Pins
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout archive repository
         uses: actions/checkout@v4

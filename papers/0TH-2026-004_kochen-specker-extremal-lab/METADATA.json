@@ -4,22 +4,22 @@
   "title": "Certified exact minima of Kochen-Specker sets inside coordinate pools: 31 and 33 rays in dimension three, 18 in dimension four, 29 in dimension five",
   "domain": "Quantum Foundations / Combinatorial Optimization",
   "date_released": "2026-11-24",
-  "version": "v1.5.0",
+  "version": "v1.6.0",
   "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 repository CI verified)",
   "author": "Alexander Stephen Donahue",
   "orcid": "0009-0006-8168-9648",
   "affiliation": "Independent Researcher, Spokane, WA, USA",
   "repository": "https://github.com/0thernes/kochen-specker-extremal-lab",
   "submodule_path": "repos/kochen-specker-extremal-lab",
-  "pinned_commit": "37fdb8902ec8a09f4e338b8ccc3cdc8d0e63f925",
-  "release_url": "https://github.com/0thernes/kochen-specker-extremal-lab/releases/tag/v1.5.0",
+  "pinned_commit": "eeb9b162f8e915d207b01bced6473dc4359fcd39",
+  "release_url": "https://github.com/0thernes/kochen-specker-extremal-lab/releases/tag/v1.6.0",
   "pages_url": "https://0thernes.github.io/kochen-specker-extremal-lab/",
   "pdf_archive_path": "papers/0TH-2026-004_kochen-specker-extremal-lab/ks-minimum.pdf",
-  "pdf_sha256": "99db53f5237d1e6f86d78029cc33626036a470dece87c5a19a794b7cc7ce839e",
+  "pdf_sha256": "e5819598f87da2324c711e35080844e4a7c0b682973a6468963ba38a08d4c62a",
   "arxiv_bundle_url": "https://github.com/0thernes/kochen-specker-extremal-lab/releases/download/v1.0.0/arxiv-source.zip",
   "arxiv_bundle_sha256": "1e6d40ab2533ef8a07a3b0c1655d3352e11ec1f15d17ae6e9049efbc30d90907",
   "lean_verification": {
-    "framework": "Lean 4.35.0 (zero Mathlib, 30 explicit #print axioms + exhaustive 149-theorem Lean.collectAxioms audit in KS/Audit.lean, 6 independent kernels via lake comparator --paranoid in repository CI, Sigstore Rekor logIndex 4083157263)",
+    "framework": "Lean 4.35.0 (zero Mathlib, 30 explicit #print axioms + exhaustive 149-theorem Lean.collectAxioms audit in KS/Audit.lean, 6 independent kernels via lake comparator --paranoid in repository CI, Sigstore Rekor logIndex 4084127176)",
     "axiom_allowlist": [
       "propext",
       "Classical.choice",
@@ -32,13 +32,13 @@
       "lean/Solution.lean"
     ]
   },
-  "ci_run_url": "https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45445918875",
+  "ci_run_url": "https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45454586066",
   "preservation": {
-    "software_heritage": "swh:1:snp:291b084d3e39a0dc092509518a1039526ceab54d",
+    "software_heritage": "swh:1:snp:d03c26e1da8a91a43811646473bda40cd5331012",
     "wayback_machine": null,
     "doi": null
   },
   "core_result": "Certifies exact minimum Kochen-Specker set sizes inside finite coordinate pools: 31 in 3D integer pools (|c|<=2,3,4), 33 in 3D N-th roots of unity (N=6,12,18,24), 18 in 4D {0,+1,-1}, and 29 in 5D {0,+1,-1}, using Lean 4 proofs and independently checked DRUP unsatisfiability certificates.",
-  "verification_boundary": "Bound-2 3D minimum (31) and 4D minimum (18), plus non-vacuity 30-ray and 17-ray witnesses, are kernel-checked in pure Lean 4.35.0 without Mathlib (exhaustive 149-theorem KS namespace axiom audit + 30 explicit #print axioms, 0 disallowed axioms) and replayed across 6 independent kernels (lean, leanchecker-paranoid, lean4lean, nanoda, con-leche, con-ron) via lake comparator --paranoid in CI (run 45445918875, Sigstore Rekor logIndex 4083157263; Release v1.5.0 Rekor logIndex 4082948681); C11 DRUP/QGTL/QRNG engines pass ASan/LSan/UBSan and gitleaks reports zero leaks; larger pools rest on independently checked DRUP certificates. Explicitly notes the general unrestricted minimal-KS problem remains open.",
+  "verification_boundary": "Bound-2 3D minimum (31) and 4D minimum (18), plus non-vacuity 30-ray and 17-ray witnesses, are kernel-checked in pure Lean 4.35.0 without Mathlib (exhaustive 149-theorem KS namespace axiom audit + 30 explicit #print axioms, 0 disallowed axioms) and replayed across 6 independent kernels (lean, leanchecker-paranoid, lean4lean, nanoda, con-leche, con-ron) via lake comparator --paranoid in CI (run 45454586066, Sigstore Rekor logIndex 4084127176; Release v1.6.0 Rekor logIndex 4084062522); zero-warning C11 DRUP/QGTL/QRNG engines pass ASan/LSan/UBSan, ruff finds 0 bugbears, and gitleaks reports zero leaks; larger pools rest on independently checked DRUP certificates. Explicitly notes the general unrestricted minimal-KS problem remains open.",
   "falsification_command": "cd repos/kochen-specker-extremal-lab/lean && lake build && lake env lean KS/Audit.lean && lake comparator --config comparator.json --paranoid"
 }
