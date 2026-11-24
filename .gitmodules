@@ -46,3 +46,6 @@
 [submodule "repos/human-synapse-bouton-lab"]
 	path = repos/human-synapse-bouton-lab
 	url = https://github.com/0thernes/human-synapse-bouton-lab.git
+[submodule "repos/pauli-contextuality-lab"]
+	path = repos/pauli-contextuality-lab
+	url = https://github.com/0thernes/pauli-contextuality-lab.git

@@ -34,7 +34,7 @@ Proves exact arbitrary-copy contextuality degree formulas d_k = (7^k - 5^k)/2 fo
 
 ## Verification Boundary (Honest Epistemic Scope)
 
-Exact multiplicative identity and attaining assignments are machine-checked in Lean 4 (153-declaration axiom audit strictly within standard axioms), paired with independent Python and JavaScript exact enumeration.
+Exact multiplicative identity and attaining assignments are machine-checked in Lean 4 (153-declaration axiom audit strictly within standard axioms), paired with independent Python and JavaScript exact enumeration. Superseded GitHub repository archived read-only on 2026-11-24 and consolidated into 0TH-2026-009 (0thernes/pauli-contextuality-lab); this historical snapshot remains cryptographically pinned.
 
 ## Independent Reproduction & Falsification Protocol
 

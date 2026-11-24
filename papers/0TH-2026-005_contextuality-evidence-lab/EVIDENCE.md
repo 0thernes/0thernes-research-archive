@@ -34,7 +34,7 @@ Proves a finite adaptive-tree sequential contextuality evidence theorem and a sh
 
 ## Verification Boundary (Honest Epistemic Scope)
 
-Adaptive-tree evidence bound, biased-setting classical cap (11/12), and counterexample are formally verified in Lean 4; paired with reproducible Moonlab/QGTL/QRNG/Eshkol simulation. Explicitly disclaims hardware contextuality or certified randomness.
+Adaptive-tree evidence bound, biased-setting classical cap (11/12), and counterexample are formally verified in Lean 4; paired with reproducible Moonlab/QGTL/QRNG/Eshkol simulation. Explicitly disclaims hardware contextuality or certified randomness. Superseded GitHub repository archived read-only on 2026-11-24 and consolidated into 0TH-2026-009 (0thernes/pauli-contextuality-lab); this historical snapshot remains cryptographically pinned.
 
 ## Independent Reproduction & Falsification Protocol
 

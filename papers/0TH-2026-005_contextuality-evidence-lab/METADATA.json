@@ -35,6 +35,6 @@
     "doi": null
   },
   "core_result": "Proves a finite adaptive-tree sequential contextuality evidence theorem and a sharp setting-bias bound for the Peres-Mermin square, constructing an explicit classical adversary causing a miscalibrated 1% test to reject 97.24% of the time while the bias-aware test stays below 1%.",
-  "verification_boundary": "Adaptive-tree evidence bound, biased-setting classical cap (11/12), and counterexample are formally verified in Lean 4; paired with reproducible Moonlab/QGTL/QRNG/Eshkol simulation. Explicitly disclaims hardware contextuality or certified randomness.",
+  "verification_boundary": "Adaptive-tree evidence bound, biased-setting classical cap (11/12), and counterexample are formally verified in Lean 4; paired with reproducible Moonlab/QGTL/QRNG/Eshkol simulation. Explicitly disclaims hardware contextuality or certified randomness. Superseded GitHub repository archived read-only on 2026-11-24 and consolidated into 0TH-2026-009 (0thernes/pauli-contextuality-lab); this historical snapshot remains cryptographically pinned.",
   "falsification_command": "cd repos/contextuality-evidence-lab/lean && lake build && lake env lean Verification.lean"
 }

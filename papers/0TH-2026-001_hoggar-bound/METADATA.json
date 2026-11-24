@@ -35,6 +35,6 @@
     "doi": null
   },
   "core_result": "Proves a third-moment spectral lower bound on the contextuality degree of N-qubit Pauli configurations with a Kramers refinement for elliptic quadrics, attained on W(5,2) by the Hoggar SIC fiducial, with Lean 4 proofs, independent Python/C verification, and a Moonlab WASM demo.",
-  "verification_boundary": "Core spectral bound and numerical corollaries are machine-checked in Lean 4; independent Python/C suites verify finite configurations; superseded/extended into the unified manuscript in 0TH-2026-002 (hoggar-bound-lab).",
+  "verification_boundary": "Core spectral bound and numerical corollaries are machine-checked in Lean 4; independent Python/C suites verify finite configurations; superseded/extended into the unified manuscript in 0TH-2026-002 (hoggar-bound-lab). Superseded GitHub repository archived read-only on 2026-11-24 and consolidated into 0TH-2026-009 (0thernes/pauli-contextuality-lab); this historical snapshot remains cryptographically pinned.",
   "falsification_command": "cd repos/hoggar-bound/lean && lake build && lake env lean Audit/Axioms.lean"
 }
