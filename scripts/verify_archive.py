@@ -481,6 +481,15 @@ def verify_archive(root: Path, data: dict, bdata: dict | None, ddata: dict | Non
                 errors.append(f"{pid}: Submodule {sub} pinned at {git_pins[sub]}, expected {p['pinned_commit']}")
         elif git_pins:
             errors.append(f"{pid}: Submodule {sub} not found in git index")
+        readme_path = root / "README.md"
+        if readme_path.exists():
+            readme_txt = readme_path.read_text(encoding="utf-8")
+            row_prefix = f"| `{pid}` |"
+            matching = [ln for ln in readme_txt.splitlines() if ln.startswith(row_prefix)]
+            if not matching:
+                errors.append(f"{pid}: Missing Tier-I table row in README.md")
+            elif f"`{p['version']}`" not in matching[0]:
+                errors.append(f"{pid}: README.md version does not match PAPERS.json ({p['version']})")
 
     bcount = 0
     if bdata is not None:
