@@ -466,20 +466,20 @@
       "title": "Positive-Characteristic Dichotomy and Optimal Three-Register Exponents in Passive Catalytic Register Programs",
       "domain": "Computational Complexity / Algebraic Complexity / Formal Verification",
       "date_released": "2026-11-24",
-      "version": "v1.0.0",
+      "version": "v1.0.1",
       "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 7-kernel Lean 4.35.0 & cross-platform CI verified)",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
       "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/catalytic-register-frontiers",
       "submodule_path": "repos/catalytic-register-frontiers",
-      "pinned_commit": "8dcb2587377c61fdb3b3718db1ab2d0de4d245c3",
-      "release_url": "https://github.com/0thernes/catalytic-register-frontiers/releases/tag/v1.0.0",
+      "pinned_commit": "4bfeabb05a960450114f975f477259ccf189cdf1",
+      "release_url": "https://github.com/0thernes/catalytic-register-frontiers/releases/tag/v1.0.1",
       "pages_url": "https://0thernes.github.io/catalytic-register-frontiers/",
       "pdf_archive_path": "papers/0TH-2026-010_catalytic-register-frontiers/Donahue_2026_catalytic_register_frontiers.pdf",
-      "pdf_sha256": "9ef502a7dcea144b263f4afcf498f7607542703b102786b3386f54c7545bcff1",
-      "arxiv_bundle_url": "https://github.com/0thernes/catalytic-register-frontiers/releases/download/v1.0.0/arxiv_submission.tar.gz",
-      "arxiv_bundle_sha256": "a309827948f14f33b22c79a4e2409a7a43a9174b82fc7d7441207d245b9b03f4",
+      "pdf_sha256": "ec4b07e420732f83e8dabc3370f8b19516934a71df371e7fda3e59b76ceeabc9",
+      "arxiv_bundle_url": "https://github.com/0thernes/catalytic-register-frontiers/releases/download/v1.0.1/arxiv_submission.tar.gz",
+      "arxiv_bundle_sha256": "02f75d98665c48386caf0f8005d822dc31f1dbcbbbee79f43225beda2f857b93",
       "lean_verification": {
         "framework": "Lean 4.35.0 (zero Mathlib, 14 module files, 8,069 lines, 20 exported theorems + prove_all + concrete 0 != 1 NonVacuity = 22 audited declarations; verified across lean, leanchecker, leanchecker-paranoid, con-leche, con-ron, nanoda_bin, and Ubuntu CI lake check --paranoid incl. lean4lean 59,800 decls; Sigstore Rekor logIndex 4087684280 & Release Rekor 4087690760)",
         "axiom_allowlist": [
@@ -499,7 +499,7 @@
       "preservation": {
         "software_heritage": "swh:1:snp:f960eeda6f145e54c0ac52538ace866a16e24085",
         "wayback_machine": null,
-        "doi": null
+        "doi": "10.5281/zenodo.24517198"
       },
       "core_result": "Resolves two open structural questions of Vinciguerra (arXiv:2609.18692): (1) proves the complete base-p digit-sum dichotomy for two-register passive catalytic programs over every prime field F_p (f in RP^{pass}_{F_p}(2,t) iff s_p(d) <= min(p-1, t-1) for all d >= 2 with alpha_d != 0), collapsing characteristic-0 lower bounds via x^{p^m} in 2 accesses while proving permanent impossibility whenever s_p(d) >= p (e.g., x^3 over F_2), plus sharp F_4 separation (t_min(5)=3, t_min(3)=4, x^7 impossible) and literal commutative-ring/F_4-algebra soundness bridges; (2) proves strictly bilinear 2-access Frobenius collapse x^{2^k} over any char-2 commutative ring in k+1 registers (4k-2 ops, and k+2 registers with strictly distinct operands); (3) breaks Vinciguerra's 3-register exponent log_5 4 ~ 0.861353 down to the unique global integer minimizer log_13 8 ~ 0.810714 (certified via explicit Pascal-row shear loops for x^7..x^15 and universal Nat optimality forall t >= 4, t != 8), formalizing complete 4-register passive powering for all N >= 1 (T3h) and algebraic product-ring streaming frequency moments F_D (T3i) in Lean 4.35, while quadratic-shear prog5_x7 sharpens non-commutative matrix powering to O(N^{log_7 5}) with zero extra scalar registers; and (4) proves a balanced zero-workspace bilinear multilinear product x_0...x_{d-1} in log_2 d + 2 registers and (7d^2-4)/3 ops. Accompanied by 8/8 strict monotonic-ID verified CaDiCaL 2.1.2 LRAT UNSAT certificates (18,932 steps) contrasting Boolean XAG rigidity, 22/22 pytest suites, 100.0% Build Standard v1.1.0 compliance (62/62), live GitHub Pages SVG Blueprint, DigiCert RFC 3161 TSA, OpenTimestamps, and Sigstore SLSA attestations.",
       "verification_boundary": "All 20 headline theorems, corollaries (including complete 4-register powering T3h and algebraic product-ring streaming pass bound T3i), literal commutative-ring soundness bridges (T1s, T1es), and concrete 0 != 1 non-vacuity witnesses (ModP 2/5/7/11/13, Fin 3 -> ModP 13, GF4, Int) are 100% machine-checked in zero-Mathlib Lean 4.35.0 across 14 module files (8,069 lines, 0 warnings, 0 forbidden tokens, strictly standard axioms) and verified on Ubuntu CI run 45500957443 via lake check --paranoid (lean4lean 59,800 decls, nanoda, con-leche 59,803, con-ron 59,803, leanchecker-paranoid, lean) + Windows CI; exact arithmetic, Corollary 5.4 non-commutative matrix lifts, and 8/8 LRAT UNSAT certificates are verified in Tier-2 Python/CaDiCaL; streaming bit-space accounting (Cor. 5.3) and general non-commutative matrix lifting (Cor. 5.4) remain Tier-3 paper reductions; uniform D_{3,Q}^{pass}(t) = 2t - 3, r >= 4 loops, general F_{p^e} closed form, and Boyar-Find remain Tier-4 open problems. No peer review or external DOI is claimed.",

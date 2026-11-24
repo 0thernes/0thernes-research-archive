@@ -3,7 +3,7 @@
 **Title:** Positive-Characteristic Dichotomy and Optimal Three-Register Exponents in Passive Catalytic Register Programs  
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Computational Complexity / Algebraic Complexity / Formal Verification  
-**Version / Date:** `v1.0.0` (2026-11-24)  
+**Version / Date:** `v1.0.1` (2026-11-24)  
 **Status:** Research preprint (not peer reviewed; AI-assisted under human direction; 7-kernel Lean 4.35.0 & cross-platform CI verified)
 
 ## Cryptographic Identity & Provenance
@@ -11,15 +11,15 @@
 | Field | Value |
 |---|---|
 | Source Repository | https://github.com/0thernes/catalytic-register-frontiers |
-| Pinned Git Submodule | `repos/catalytic-register-frontiers` @ `8dcb2587377c61fdb3b3718db1ab2d0de4d245c3` |
-| GitHub Release | https://github.com/0thernes/catalytic-register-frontiers/releases/tag/v1.0.0 |
+| Pinned Git Submodule | `repos/catalytic-register-frontiers` @ `4bfeabb05a960450114f975f477259ccf189cdf1` |
+| GitHub Release | https://github.com/0thernes/catalytic-register-frontiers/releases/tag/v1.0.1 |
 | Frozen Archived PDF | `papers/0TH-2026-010_catalytic-register-frontiers/Donahue_2026_catalytic_register_frontiers.pdf` |
-| Frozen PDF SHA-256 | `9ef502a7dcea144b263f4afcf498f7607542703b102786b3386f54c7545bcff1` |
-| arXiv / Source Bundle SHA-256 | `a309827948f14f33b22c79a4e2409a7a43a9174b82fc7d7441207d245b9b03f4` |
+| Frozen PDF SHA-256 | `ec4b07e420732f83e8dabc3370f8b19516934a71df371e7fda3e59b76ceeabc9` |
+| arXiv / Source Bundle SHA-256 | `02f75d98665c48386caf0f8005d822dc31f1dbcbbbee79f43225beda2f857b93` |
 | CI Verification Run | https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45500957443 |
 | Software Heritage SWHID | `swh:1:snp:f960eeda6f145e54c0ac52538ace866a16e24085` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24517198 |
 
 ## Core Result
 
