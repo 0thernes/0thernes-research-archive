@@ -3,7 +3,7 @@
 **Title:** Certified exact minima of Kochen-Specker sets inside coordinate pools: 31 and 33 rays in dimension three, 18 in dimension four, 29 in dimension five  
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Quantum Foundations / Combinatorial Optimization  
-**Version / Date:** `v1.3.0` (2026-11-24)  
+**Version / Date:** `v1.4.0` (2026-11-24)  
 **Status:** Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 repository CI verified)
 
 ## Cryptographic Identity & Provenance
@@ -11,13 +11,13 @@
 | Field | Value |
 |---|---|
 | Source Repository | https://github.com/0thernes/kochen-specker-extremal-lab |
-| Pinned Git Submodule | `repos/kochen-specker-extremal-lab` @ `f113f7cf729365b30de39747e8ed4cdb842ae439` |
-| GitHub Release | https://github.com/0thernes/kochen-specker-extremal-lab/releases/tag/v1.3.0 |
+| Pinned Git Submodule | `repos/kochen-specker-extremal-lab` @ `acb6a92e19db406ab4ced65e701e4916b0fc0a30` |
+| GitHub Release | https://github.com/0thernes/kochen-specker-extremal-lab/releases/tag/v1.4.0 |
 | Frozen Archived PDF | `papers/0TH-2026-004_kochen-specker-extremal-lab/ks-minimum.pdf` |
-| Frozen PDF SHA-256 | `9d0fe656f29d6a66eb4c2d72830650188d7883ef6569fbd5113a163006e0498e` |
+| Frozen PDF SHA-256 | `ad26de50e0557afa91d04904668a5513b2dfb161e9f8914d105e8db1699a91ff` |
 | arXiv / Source Bundle SHA-256 | `1e6d40ab2533ef8a07a3b0c1655d3352e11ec1f15d17ae6e9049efbc30d90907` |
-| CI Verification Run | https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45414128235 |
-| Software Heritage SWHID | `swh:1:snp:5acddcceee0b64c3da5b3150a2ab794a9df2f6ba` |
+| CI Verification Run | https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45427341833 |
+| Software Heritage SWHID | `swh:1:snp:4db847d14a2a9c781d6e8f0e9b936deaab24ddcc` |
 | Wayback Machine Snapshot | Not yet captured |
 | External DOI | None claimed |
 
