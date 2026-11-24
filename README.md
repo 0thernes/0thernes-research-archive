@@ -10,7 +10,7 @@
 - **Author:** Alexander Stephen Donahue (`Alexander S. Donahue`) · **0thernes LLC**, Spokane, WA, USA
 - **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)
 - **Contact:** `0_0@0thernes.art` · [0thernes.art](https://0thernes.art) · [github.com/0thernes](https://github.com/0thernes)
-- **Scope:** **28 public research entries** across **3 explicitly separated epistemic tiers** + **17 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
+- **Scope:** **29 public research entries** across **3 explicitly separated epistemic tiers** + **18 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 ---
 
@@ -18,6 +18,7 @@
 
 | ID | Date | Domain | Paper & Frozen PDF | Version | Lean 4 Verification | Evidence & Source Repo |
 |---|---|---|---|---|---|---|
+| `0TH-2026-010` | 2026-11-24 | Computational Complexity / Algebraic Complexity | [Positive-Characteristic Dichotomy and Optimal Three-Register Exponents in Passive Catalytic Register Programs](papers/0TH-2026-010_catalytic-register-frontiers/Donahue_2026_catalytic_register_frontiers.pdf) | `v1.0.0` | **Zero-Mathlib Lean 4.35.0** (14 modules, 8,069 lines, **20 theorems + `NonVacuity` = 22 audited decls**, 0 warnings, standard axioms; **7 kernels incl. Ubuntu `lake check --paranoid` `lean4lean` 59,800 decls**, Sigstore Rekor `4087684280` & Release `4087690760`) + 8/8 LRAT UNSAT certs | [Repo](https://github.com/0thernes/catalytic-register-frontiers) · [Evidence](papers/0TH-2026-010_catalytic-register-frontiers/EVIDENCE.md) · [Blueprint](https://0thernes.github.io/catalytic-register-frontiers/) · [CI](https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45500957443) |
 | `0TH-2026-009` | 2026-11-24 | Quantum Foundations / Quantum Contextuality | [Pauli Contextuality Lab: Unified Lean 4.35.0 Formalization of Spectral Bounds, Disjoint Mermin Configurations, and Sequential Contextuality Evidence](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf) ([C3 PDF](papers/0TH-2026-009_pauli-contextuality-lab/c3-spectral-counterexample.pdf) · [Track 2 PDF](papers/0TH-2026-009_pauli-contextuality-lab/contextuality-tensor.pdf) · [Track 3 PDF](papers/0TH-2026-009_pauli-contextuality-lab/whitepaper.pdf)) | `v2.5.0` | **Lean 4.35.0 / Mathlib v4.35.0** (160 explicit `#print axioms` + **2,206-theorem exhaustive axiom audit** across all 4 namespaces, 0 warnings, 0 Batteries linter errors; **12 cross-track targets verified by all 6 independent kernels** via `lake comparator --paranoid`, standard axioms, Sigstore Rekor `4084450987`) | [Repo](https://github.com/0thernes/pauli-contextuality-lab) · [Evidence](papers/0TH-2026-009_pauli-contextuality-lab/EVIDENCE.md) · [Blueprint & Labs](https://0thernes.github.io/pauli-contextuality-lab/) · [Lean CI](https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45454574790) |
 | `0TH-2026-008` | 2026-11-23 | Interdisciplinary Neuroscience / Philosophy of Mind | [Open Hard Problems Across Eleven Neuro-Scientific Disciplines, Deductive-Inductive-Abductive Frontiers of Sentience, and a Six-Class Forensic Audit](papers/0TH-2026-008_open-hard-problems-consciousness-frontier/Donahue_2026_open_hard_problems_consciousness_frontier.pdf) | `v1.1.0` | Lean 4.35.0 (zero Mathlib, Palomar `module` headers, 6 independent kernels via `lake comparator --paranoid`, axioms `⊆ [propext, Quot.sound]`; T17–T18 discrete coupling bounds) | [Repo](https://github.com/0thernes/human-synapse-bouton-lab) · [Evidence](papers/0TH-2026-008_open-hard-problems-consciousness-frontier/EVIDENCE.md) · [Lab](https://0thernes.github.io/human-synapse-bouton-lab/) · [CI](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45234241381) |
 | `0TH-2026-007` | 2026-11-23 | Computational Neuroscience / Biophysical Verification | [Formally Verified Biophysical Invariants, Multi-Language Differential Oracles, and Pre-Registered Monte Carlo Simulation of the Human Synaptic Bouton](papers/0TH-2026-007_human-synaptic-bouton-verification/Donahue_2026_human_synaptic_bouton_verification.pdf) | `v1.1.0` | **Lean 4.35.0** (zero Mathlib, Palomar `module` headers, 18 theorems + 19 non-vacuity witnesses, **6 independent kernels**: `lean`, `leanchecker-paranoid`, `lean4lean`, `nanoda`, `con-leche`, `con-ron`, zero `Classical.choice`) | [Repo](https://github.com/0thernes/human-synapse-bouton-lab) · [Evidence](papers/0TH-2026-007_human-synaptic-bouton-verification/EVIDENCE.md) · [Lab](https://0thernes.github.io/human-synapse-bouton-lab/) · [CI](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45234241381) |
@@ -85,7 +86,7 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 ## Cloning the Full Public Stack & Running the Cryptographic Audit
 
 ```bash
-# Clone the archive + all 17 pinned PUBLIC Lean 4 & white-paper repositories
+# Clone the archive + all 18 pinned PUBLIC Lean 4 & white-paper repositories
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 

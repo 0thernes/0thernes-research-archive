@@ -49,3 +49,6 @@
 [submodule "repos/pauli-contextuality-lab"]
 	path = repos/pauli-contextuality-lab
 	url = https://github.com/0thernes/pauli-contextuality-lab.git
+[submodule "repos/catalytic-register-frontiers"]
+	path = repos/catalytic-register-frontiers
+	url = https://github.com/0thernes/catalytic-register-frontiers.git
