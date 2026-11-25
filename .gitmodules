@@ -55,3 +55,6 @@
 [submodule "repos/secmesh-pqsi"]
 	path = repos/secmesh-pqsi
 	url = https://github.com/0thernes/secmesh-pqsi.git
+[submodule "repos/coded-pir-mlwe-complexity-lab"]
+	path = repos/coded-pir-mlwe-complexity-lab
+	url = https://github.com/0thernes/coded-pir-mlwe-complexity-lab.git

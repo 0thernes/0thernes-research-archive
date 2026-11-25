@@ -1,0 +1,48 @@
+# Evidence & Falsification Dossier — `0TH-2026-012`
+
+**Title:** Koszul-Veronese Byzantine Private Information Retrieval, MLWE Reduction Tightness, and Machine-Checked Complexity-Barrier Bridges  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Domain:** Information Theory / Post-Quantum Cryptography / Computational Complexity  
+**Version / Date:** `v1.0.0` (2026-11-25)  
+**Status:** Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 & cross-platform CI verified)
+
+## Cryptographic Identity & Provenance
+
+| Field | Value |
+|---|---|
+| Source Repository | https://github.com/0thernes/coded-pir-mlwe-complexity-lab |
+| Pinned Git Submodule | `repos/coded-pir-mlwe-complexity-lab` @ `719caab37531e40ff1546c15e91bc855ed0b211c` |
+| GitHub Release | https://github.com/0thernes/coded-pir-mlwe-complexity-lab/releases/tag/v1.0.0 |
+| Frozen Archived PDF | `papers/0TH-2026-012_coded-pir-mlwe-complexity-lab/Donahue_2026_coded_pir_mlwe_complexity_frontier.pdf` |
+| Frozen PDF SHA-256 | `2eba678eaaf910931a7c29bedca90631a5760f24db80b9ef710a192c70697362` |
+| arXiv / Source Bundle SHA-256 | `8bacb6f499342ee7bd26c72c07b77e2546d707de2f40b94121ddd4dd36219405` |
+| CI Verification Run | https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45695797431 |
+| Software Heritage SWHID | `Pending manual Save Code Now` |
+| Wayback Machine Snapshot | Not yet captured |
+| External DOI | None claimed |
+
+## Core Result
+
+Machine-checks 14 zero-Mathlib Lean 4.35.0 theorems (T1a-T3d) spanning Coded/Byzantine PIR (CS-053), Module-LWE reduction tightness (CS-026), and complexity-theoretic barriers around P != NP (CS-001/CS-051). Pillar I (CS-053): resolves the open Schur-product syzygy rank problem of Sun-Tao-Xu-Zhang (arXiv:2603.10769) via shifted-difference Koszul-Veronese moment annihilation over any CommRing with exact Pascal savings K*C(T,T') = lambda* + (K-T')*C(T-1,T'), raising Example VII.A (6,3,3) from 4/7 to 10/17 (T1a); proves K<->T symmetry and universal strict domination over Sun-Zhang (arXiv:2610.37412) LFSR capacity by (K-1)(T-1)E^2 > 0 in both single-file and P-out-of-M multi-file regimes (T1b); establishes Byzantine-robust double-counting converse reduction, exact unrestricted capacity at E=K+1 (breaking E>=KT for all K>=2), and kernel-certifies an explicit F_11 zero-error Byzantine rate-2/5 witness at (M=2,N=6,K=2,T=2,B=1,E=4) with all 90 exact matrix inverses checked without native_decide (T1c); proves sharp flag-privacy thresholds and overlap feasibility Ew <= K*delta*sigma (T1d); kernel-certifies ([propext] alone) a 330-orbit scale-128 pure-integer 12-variable polymatroid h_uncond satisfying all 270,336 elemental Shannon inequalities, 99 PIR equalities (all 89 full T=2 privacy equalities), 1,485 singleton Ingletons, and 3,814,209 retrieval-subsystem Ingletons at 8/13 > 3/5 (T1e); and proves projective P^3 linear impossibility over any SimpleField F (T1f). Pillar II (CS-026): proves determinant-ideal secret independence det(B)=q^m over any CommRing refuting Luo arXiv:2604.15858 (T2a); proves ring-universal anti-periodic DFT even-mode cancellation f_hat(2k)=0 explaining Chen ePrint 2024/555 Step 9 (T2b); certifies FIPS 203 CBD2/CBD3 exact moments, cyclotomic trace-orthogonality, and 60-digit 4.96x Renyi-2 tightness cliff from ML-KEM-512 (7.63 bits) to ML-KEM-1024 (37.84 bits) (T2c); and establishes QGTL shifted-LWE Berry curvature symmetry vanishing at e0=0 and bias witness -512 != 0 at e0=1 (T2d). Pillar III (CS-001/CS-051): formalizes constructive multilinear-extension uniqueness over any field (Algebrization core, T3a), LWE PRF -> Natural Proofs obstruction (T3b), Katz-Trevisan B-Byzantine PIR <-> LDC minimum Hamming distance 2B+1 (T3c), and sharp FIPS 203 Compress_1 margin |e| <= 831 (failing sharply at +832) bounding additive single-server MLWE-PIR depth (T3d). Verified across 6/6 Lean kernels, zero-warning C11 + ASan/UBSan + 512/512 fuzz (40/40 unit tests), Eshkol v1.3.6 dual-number AD (3/3, <2e-13), 14/14 pytest (6/6 core mutants killed), 23/23 live HTTP-200 citations, 100.0% Build Standard v1.2.0 (68/68), and an 11-page 0-overfull AMS-LaTeX preprint + clean-room arXiv tarball.
+
+## Lean 4 Formal Verification & Axiom Allowlist
+
+- **Framework:** Lean 4.35.0 (zero Mathlib, 12 files, 2,615 lines, 14 exported theorems T1a-T3d + prove_all_triad_theorems + concrete SimpleField (Fin 5)/(Fin 11) & finite-structure NonVacuity = 16 audited declarations, zero sorry, zero native_decide, O(log N) balanced-tree kernel certificates; all 6 independent kernels passed on Ubuntu CI run 45695797431 via lake comparator --config comparator.json --paranoid inside bubblewrap: Lean paranoid, lean4lean 1,911 decls, nanoda, con-leche --verified 1,914 decls, con-ron --verified 1,914 decls, Lean default; Sigstore Rekor logIndex 4111094089 / GitHub attestation 72352014)
+- **Library Entry Point:** `lean/Solution.lean`
+- **Primary Axiom Audit Script:** `lean/VerifyAxioms.lean`
+- **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
+- **Additional Audit Scripts:** `lean/Challenge.lean, lean/PalomarChallenge.lean, lean/PalomarSolution.lean, lean/TriadFrontier/NonVacuity.lean`
+
+## Verification Boundary (Honest Epistemic Scope)
+
+All 14 headline theorems (T1a-T3d), master conjunction, and concrete NonVacuity witnesses (SimpleField (Fin 5), SimpleField (Fin 11), CommRing Int, anti-periodic D=3, 2-var Boolean XOR, 3-rep LDC) are 100% kernel-checked in zero-Mathlib Lean 4.35.0 across all 6 independent kernels on Ubuntu CI run 45695797431 (zero sorry, zero native_decide, zero warnings, strictly within [propext, Classical.choice, Quot.sound]; T1e uses [propext] alone). Transcendental 60-digit Renyi-2 curves and continuous DFT/QGTL spectra are verified in Tier-2 exact Python, C11, and Eshkol dual-number AD (<2e-13). Explicitly affirms that P != NP (CS-001), non-linear C(2,4,2,2) in [3/5, 8/13], general M >= 3 non-LFSR PIR capacity, arbitrary T >= 4 zero-error schemes, and worst-case quantum MLWE lower bounds remain completely OPEN. Claims no external peer review or external DOI; Software Heritage Save Code Now awaits manual browser PoW completion.
+
+## Independent Reproduction & Falsification Protocol
+
+To verify or attempt to falsify this paper from scratch:
+
+```bash
+git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
+cd 0thernes-research-archive
+cd repos/coded-pir-mlwe-complexity-lab && make -C native clean test && node eshkol/run_eshkol_ad.mjs && PYTHONPATH=python pytest tests/test_all.py -v && python scripts/check_readme_axioms.py && cd lean && lake build && lake env lean VerifyAxioms.lean && lake comparator --config comparator.json --paranoid
+```
