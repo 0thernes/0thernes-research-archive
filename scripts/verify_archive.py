@@ -82,8 +82,10 @@ def render_evidence_md(paper: dict) -> str:
         lines.append(f"- **Additional Audit Scripts:** `{', '.join(lv['additional_audit_files'])}`")
     if paper.get("component_manuscripts"):
         lines.extend(["", "## Preserved Component Manuscripts (Historical Provenance)", ""])
-        for cm in paper["component_manuscripts"]:
-            lines.append(f"- **{cm['title']}** (`{cm['historical_release']}`, `{cm['repo_path']}`): {cm['note']}")
+        lines.extend(
+            f"- **{cm['title']}** (`{cm['historical_release']}`, `{cm['repo_path']}`): {cm['note']}"
+            for cm in paper["component_manuscripts"]
+        )
     lines.extend(
         [
             "",
@@ -466,15 +468,18 @@ def verify_archive(root: Path, data: dict, bdata: dict | None, ddata: dict | Non
             cm_name = Path(cm["repo_path"]).name
             declared_pdfs.add(cm_name)
             cm_abs = pdir / cm_name
-            if cm_abs != pdf_path and cm_abs.exists():
-                if sha256_file(cm_abs) != cm["sha256"]:
-                    errors.append(f"{pid}: Companion PDF SHA-256 mismatch for {cm_name}")
-        for disk_pdf in sorted(pdir.glob("*.pdf")):
-            if disk_pdf.name not in declared_pdfs:
-                errors.append(f"{pid}: Unregistered PDF in archive directory: {disk_pdf.relative_to(root).as_posix()}")
-        for req in ("METADATA.json", "EVIDENCE.md"):
-            if not (pdir / req).exists():
-                errors.append(f"{pid}: Missing {pdir.relative_to(root).as_posix()}/{req}")
+            if cm_abs != pdf_path and cm_abs.exists() and sha256_file(cm_abs) != cm["sha256"]:
+                errors.append(f"{pid}: Companion PDF SHA-256 mismatch for {cm_name}")
+        errors.extend(
+            f"{pid}: Unregistered PDF in archive directory: {disk_pdf.relative_to(root).as_posix()}"
+            for disk_pdf in sorted(pdir.glob("*.pdf"))
+            if disk_pdf.name not in declared_pdfs
+        )
+        errors.extend(
+            f"{pid}: Missing {pdir.relative_to(root).as_posix()}/{req}"
+            for req in ("METADATA.json", "EVIDENCE.md")
+            if not (pdir / req).exists()
+        )
         sub = p["submodule_path"]
         if git_pins and sub in git_pins:
             if git_pins[sub] != p["pinned_commit"]:
@@ -513,9 +518,11 @@ def verify_archive(root: Path, data: dict, bdata: dict | None, ddata: dict | Non
                 elif sha256_file(ap) != art["sha256"]:
                     errors.append(f"{bid}: Artifact SHA-256 mismatch for {art['path']}")
             bdir = (root / b["archived_artifacts"][0]["path"]).parent
-            for req in ("METADATA.json", "EVIDENCE.md"):
-                if not (bdir / req).exists():
-                    errors.append(f"{bid}: Missing {bdir.relative_to(root).as_posix()}/{req}")
+            errors.extend(
+                f"{bid}: Missing {bdir.relative_to(root).as_posix()}/{req}"
+                for req in ("METADATA.json", "EVIDENCE.md")
+                if not (bdir / req).exists()
+            )
             sub = b["submodule_path"]
             if git_pins and sub in git_pins:
                 if git_pins[sub] != b["pinned_commit"]:
@@ -544,9 +551,11 @@ def verify_archive(root: Path, data: dict, bdata: dict | None, ddata: dict | Non
                 elif sha256_file(ap) != art["sha256"]:
                     errors.append(f"{did}: Snapshot SHA-256 mismatch for {art['path']}")
             ddir = (root / d["archived_artifacts"][0]["path"]).parent
-            for req in ("METADATA.json", "EVIDENCE.md"):
-                if not (ddir / req).exists():
-                    errors.append(f"{did}: Missing {ddir.relative_to(root).as_posix()}/{req}")
+            errors.extend(
+                f"{did}: Missing {ddir.relative_to(root).as_posix()}/{req}"
+                for req in ("METADATA.json", "EVIDENCE.md")
+                if not (ddir / req).exists()
+            )
 
     checksums_path = root / "CHECKSUMS.sha256"
     if not checksums_path.exists():

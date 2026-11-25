@@ -11,6 +11,9 @@ concurrency:
   group: archive-audit-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   audit:
     name: Verify Checksums, ORCID, Axiom Policies & Submodule Pins
