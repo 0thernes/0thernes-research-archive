@@ -1,8 +1,8 @@
 # Tier III — Public Laws, Pre-Registered Empirical Claims, Discoveries & Open-Problem Atlases
 
-**Author:** Alexander Stephen Donahue (0thernes LLC) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
 **Totals:** 10 public registries · 39 SHA-256 frozen snapshots  
-**Updated:** `2026-11-21T23:05:41Z`
+**Updated:** `2026-11-25T23:59:00Z`
 
 > **Epistemic Discipline:** Tier III entries preserve binding architectural laws, SHA-256-locked pre-registrations, controlled empirical discoveries (including null/falsified results), finite computational certificates, and structured open-problem atlases. None of these are represented as Lean-proved general mathematical theorems.
 

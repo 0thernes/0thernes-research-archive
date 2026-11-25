@@ -1,0 +1,6 @@
+---
+description: Canonical project instructions and Build Standard v1.2.0 rules for 0thernes-research-archive
+alwaysApply: true
+---
+
+Follow `AGENTS.md` in the repository root as the single source of truth for cryptographic verification (`scripts/verify_archive.py`), public-only privacy firewall rules, Build Standard v1.2.0 (`R1`–`R8`), and identity conventions (`Independent Researcher, Spokane, WA, USA`).

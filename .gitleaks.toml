@@ -1,0 +1,11 @@
+title = "gitleaks config for 0thernes-research-archive"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Exclude audit scripts' own secret regex definitions"
+paths = [
+  '''^scripts/audit-repo\.sh$''',
+  '''^scripts/Audit-Repo\.ps1$''',
+]

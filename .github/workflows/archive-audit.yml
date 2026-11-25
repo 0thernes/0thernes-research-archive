@@ -3,8 +3,6 @@ name: Archive Cryptographic & Structural Audit
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
 
 concurrency:
@@ -15,10 +13,14 @@ permissions:
   contents: read
 
 jobs:
-  audit:
-    name: Verify Checksums, ORCID, Axiom Policies & Submodule Pins
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+  audit-matrix:
+    name: Verify Checksums, ORCID, Axiom Policies & Tests (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - name: Checkout archive repository
         uses: actions/checkout@v4
@@ -28,8 +30,42 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install pinned Python dependencies
+        run: python -m pip install -r requirements.txt
+
       - name: Run full cryptographic & structural audit
         run: python scripts/verify_archive.py
 
-      - name: Verify CHECKSUMS.sha256 with sha256sum
+      - name: Run archive pytest suite
+        run: python -m pytest -v tests/
+
+      - name: Build static archive portal
+        run: python scripts/build_site.py
+
+      - name: Verify CHECKSUMS.sha256 with sha256sum (Unix)
+        if: runner.os != 'Windows'
         run: sha256sum -c CHECKSUMS.sha256
+
+  lint-and-standard:
+    name: Report-Only Linters, Secret Scan & Build Standard Audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned Python dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Report-only linters (ruff & mypy)
+        continue-on-error: true
+        run: |
+          python -m ruff check scripts/ tests/
+          python -m mypy --ignore-missing-imports scripts/
+      - name: Build Standard v1.2.0 repo audit
+        run: bash scripts/audit-repo.sh .
+      - name: Secret scan (gitleaks, report-only)
+        uses: gitleaks/gitleaks-action@v2
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

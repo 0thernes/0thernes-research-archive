@@ -1,0 +1,44 @@
+name: Release Checksums & SLSA Provenance Attestation
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect registry manifests and generate SHA256SUMS
+        run: |
+          mkdir -p release-dist
+          cp registry/PAPERS.json release-dist/
+          cp registry/BUILD_PAPERS.json release-dist/
+          cp registry/LAWS_AND_DISCOVERIES.json release-dist/
+          cp CHECKSUMS.sha256 release-dist/
+          cp data/MANIFEST.sha256 release-dist/data-MANIFEST.sha256
+          cp CITATION.cff release-dist/
+          (cd release-dist && sha256sum * > SHA256SUMS)
+          cat release-dist/SHA256SUMS
+      - name: Generate Sigstore SLSA build provenance attestations
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: release-dist/*
+      - name: Publish GitHub Release with SHA256SUMS
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          gh release create "$TAG" release-dist/* \
+            --title "0thernes Research Archive $TAG" \
+            --notes "Automated archival snapshot $TAG with registry JSON manifests, CHECKSUMS.sha256, SHA256SUMS, and Sigstore SLSA provenance attestations." \
+            || gh release upload "$TAG" release-dist/* --clobber

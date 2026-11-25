@@ -1,0 +1,117 @@
+# yaml-language-server: $schema=./repo-standard.schema.json
+# Project manifest for Build Standard for LLMs v1.2.0.
+standard: "1.2.0"
+name: "0thernes-research-archive"
+description: "Cryptographically audited master vault of 31 public Lean 4-verified research preprints, build white papers, laws, pre-registered empirical claims, frozen PDFs, SHA-256 manifests, and 20 pinned public Git submodules authored by Alexander Stephen Donahue."
+owner: "Alexander S. Donahue (0thernes)"
+year: "2026"
+project_type: research
+stack: [python]
+flags:
+  public: true
+  package: false
+  visual: false
+  ui: false
+  native: false
+  ai: false
+  personal_data: false
+  service: false
+  deployed: false
+  api: false
+  perf: false
+  concurrent: false
+  numeric: false
+  experimental: true
+  ml: false
+  formal: false
+items:
+  A01: {status: done, evidence: "README.md"}
+  A02: {status: done, evidence: "README.md badge ribbon"}
+  A03: {status: done, evidence: "README.md Quickstart"}
+  A04: {status: done, evidence: "README.md Usage Examples"}
+  A05: {status: n/a, note: "Cryptographic research registry vault, no interactive UI"}
+  A06: {status: done, evidence: "LICENSE"}
+  A07: {status: done, evidence: "CHANGELOG.md"}
+  A08: {status: done, evidence: "VERSION (2026.11.25) matches CHANGELOG.md and CITATION.cff"}
+  A09: {status: done, evidence: "tests/test_archive_integrity.py"}
+  A10: {status: done, evidence: ".github/workflows/archive-audit.yml"}
+  A11: {status: done, evidence: ".github/workflows/release.yml"}
+  A12: {status: done, evidence: ".gitignore"}
+  A13: {status: done, evidence: ".gitattributes and .editorconfig"}
+  A14: {status: done, evidence: "CONTRIBUTING.md"}
+  A15: {status: done, evidence: "CODE_OF_CONDUCT.md"}
+  A16: {status: done, evidence: "SECURITY.md"}
+  A17: {status: done, evidence: "SUPPORT.md"}
+  A18: {status: done, evidence: ".github/ISSUE_TEMPLATE/{bug,feature,question,config}.yml; zero PR template (R4)"}
+  A19: {status: done, evidence: "GitHub About description and topics set"}
+  A20: {status: done, evidence: "docs/index.md and docs/architecture.md"}
+  A21: {status: done, evidence: "docs/adr/0001-three-tier-epistemic-archive.md"}
+  A22: {status: done, evidence: "CITATION.cff"}
+  A23: {status: done, evidence: "main branch with verified author identity"}
+  A24: {status: done, evidence: "Zero secrets, build caches, .env, or >5 MB files tracked"}
+  A25: {status: done, evidence: ".github/workflows/archive-audit.yml runs ubuntu-latest, windows-latest, macos-latest"}
+  A26: {status: done, evidence: "docs/media/social-preview.svg"}
+  A27: {status: done, evidence: ".github/workflows/pages.yml"}
+  A28: {status: n/a, note: "Research archive registry, not an installable package"}
+  A29: {status: done, evidence: "ROADMAP.md"}
+  A30: {status: done, evidence: ".github/labels.tsv with all 10 finding classes"}
+  A31: {status: done, evidence: "justfile"}
+  A32: {status: done, evidence: "AGENTS.md, CLAUDE.md, GEMINI.md, .cursor/rules/build-standard.mdc, llms.txt, llms-full.txt"}
+  A33: {status: done, evidence: "docs/configuration.md"}
+  A34: {status: n/a, note: "Not a long-running service"}
+  A35: {status: done, evidence: "docs/operations.md documents git bundle and offsite mirror"}
+  A36: {status: n/a, note: "Static GitHub Pages only; no backend service"}
+  A37: {status: n/a, note: "No speed or latency performance claims"}
+  A38: {status: n/a, note: "No interactive application UI"}
+  A39: {status: done, evidence: "NOTICE and THIRD_PARTY_NOTICES.md"}
+  A40: {status: n/a, note: "Verification scripts call no AI models"}
+  A41: {status: n/a, note: "Not a software library or API"}
+  A42: {status: done, evidence: "README.md Maintenance Status and repostatus badge"}
+  A43: {status: n/a, note: "Archive vault; verification examples live in README Usage"}
+  A44: {status: done, evidence: "docs/faq.md and docs/glossary.md"}
+  A45: {status: n/a, note: "Collects, stores, and processes zero personal data"}
+  B01: {status: done, evidence: "justfile reproduce recipe and REPLICATION.md"}
+  B02: {status: done, evidence: "requirements.txt"}
+  B03: {status: done, evidence: "Deterministic registry generation and SHA-256 verification"}
+  B04: {status: done, evidence: "CLAIMS.md"}
+  B05: {status: done, evidence: "Claims C1-C4 mapped to scripts/verify_archive.py and tests/test_archive_integrity.py"}
+  B06: {status: done, evidence: "Negative tamper-detection tests in tests/test_archive_integrity.py"}
+  B07: {status: done, evidence: "Regression tests for privacy firewall, R4 banned files, and LLC cleanup"}
+  B08: {status: done, evidence: "Byte-exact SHA-256 checksums across all 31 entries"}
+  B09: {status: n/a, note: "No external network API"}
+  B10: {status: done, evidence: "Hypothesis property-based hash & metadata checks in tests/test_archive_integrity.py"}
+  B11: {status: done, evidence: "Differential verification comparing Python sha256_file vs CHECKSUMS.sha256 & git ls-files submodule pins"}
+  B12: {status: done, evidence: "External sha256sum -c CHECKSUMS.sha256 oracle in CI"}
+  B13: {status: done, evidence: "Mutant-killing digest & axiom-allowlist tests in tests/test_archive_integrity.py"}
+  B14: {status: done, evidence: "Metamorphic idempotence check of verify_archive.py --sync"}
+  B15: {status: n/a, note: "No native C/C++/asm code"}
+  B16: {status: n/a, note: "No native C/C++/asm code"}
+  B17: {status: done, evidence: "ruff check (report-only) in .github/workflows/archive-audit.yml"}
+  B18: {status: done, evidence: "mypy (report-only) in .github/workflows/archive-audit.yml"}
+  B19: {status: n/a, note: "Deterministic single-threaded cryptographic verification"}
+  B20: {status: n/a, note: "No floating-point numerical computation"}
+  B21: {status: n/a, note: "No networked service"}
+  B22: {status: n/a, note: "Lean 4 proofs live inside pinned Tier I & Tier II submodules verified by their own CI"}
+  B23: {status: n/a, note: "Archive vault, not a distributed protocol"}
+  B24: {status: n/a, note: "Python archival tooling"}
+  B25: {status: n/a, note: "No unsafe systems code"}
+  B26: {status: n/a, note: "No speed or performance claims"}
+  B27: {status: n/a, note: "No speed or performance claims"}
+  B28: {status: done, evidence: "Deterministic SHA-256 verification and fixed-seed Hypothesis controls"}
+  B29: {status: n/a, note: "Cryptographic provenance registry, not statistical hypothesis testing"}
+  B30: {status: n/a, note: "Exact cryptographic hashes, not sample confidence intervals"}
+  B31: {status: n/a, note: "No multi-arm statistical testing"}
+  B32: {status: n/a, note: "Archive registry, not a prospective empirical trial"}
+  B33: {status: n/a, note: "No ML models trained or evaluated"}
+  B34: {status: n/a, note: "No generative AI calls"}
+  B35: {status: done, evidence: "gitleaks report-only scan in .github/workflows/archive-audit.yml"}
+  B36: {status: done, evidence: "docs/threat-model.md"}
+  B37: {status: done, evidence: ".github/workflows/release.yml generates SHA256SUMS"}
+  B38: {status: done, evidence: ".github/workflows/release.yml runs actions/attest-build-provenance"}
+  B39: {status: done, evidence: "data/MANIFEST.sha256 and CHECKSUMS.sha256"}
+  B40: {status: done, evidence: "docs/run-log.md"}
+  B41: {status: done, evidence: "LIMITATIONS.md (including Real vs. Metaphor)"}
+  B42: {status: done, evidence: "CLAIMS.md What Would Prove Us Wrong"}
+  B43: {status: done, evidence: "REPLICATION.md"}
+  B44: {status: done, evidence: "REPLICATION.md dated replication table"}
+  B45: {status: done, evidence: "docs/reviews/red-team-2026-11-25.md"}

@@ -425,6 +425,7 @@ def get_git_submodule_commits(root: Path) -> dict[str, str]:
         cwd=root,
         capture_output=True,
         text=True,
+        encoding="utf-8",
         check=False,
     )
     pins: dict[str, str] = {}
@@ -529,6 +530,15 @@ def verify_archive(root: Path, data: dict, bdata: dict | None, ddata: dict | Non
                     errors.append(f"{bid}: Submodule {sub} pinned at {git_pins[sub]}, expected {b['pinned_commit']}")
             elif git_pins:
                 errors.append(f"{bid}: Submodule {sub} not found in git index")
+            readme_path = root / "README.md"
+            if readme_path.exists():
+                readme_txt = readme_path.read_text(encoding="utf-8")
+                row_prefix = f"| `{bid}` |"
+                matching = [ln for ln in readme_txt.splitlines() if ln.startswith(row_prefix)]
+                if not matching:
+                    errors.append(f"{bid}: Missing Tier-II table row in README.md")
+                elif b["version"].startswith("v") and f"`{b['version']}`" not in matching[0]:
+                    errors.append(f"{bid}: README.md version does not match BUILD_PAPERS.json ({b['version']})")
 
     dcount = 0
     if ddata is not None:

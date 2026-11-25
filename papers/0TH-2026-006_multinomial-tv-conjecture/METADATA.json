@@ -3,40 +3,44 @@
   "slug": "multinomial-tv-conjecture",
   "title": "Resolution and Lean 4 Formal Verification of Conjecture 7.7 on the Second-Order Variance of Multinomial Discrete Total Variation",
   "domain": "Mathematical Statistics / Probability Theory",
-  "date_released": "2026-11-20",
-  "version": "v1.0.0",
-  "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 100% Lean 4 kernel-verified)",
+  "date_released": "2026-11-25",
+  "version": "v2.0.0",
+  "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 & cross-platform CI verified)",
   "author": "Alexander Stephen Donahue",
   "orcid": "0009-0006-8168-9648",
-  "affiliation": "0thernes LLC",
+  "affiliation": "Independent Researcher, Spokane, WA, USA",
   "repository": "https://github.com/0thernes/multinomial-tv-conjecture",
   "submodule_path": "repos/multinomial-tv-conjecture",
-  "pinned_commit": "df6cab4b2b6cef7910f1990234741a328e52ea40",
-  "release_url": "https://github.com/0thernes/multinomial-tv-conjecture/releases/tag/v1.0.0",
-  "pages_url": null,
+  "pinned_commit": "18d95f0f7446f355f54bf9f6a50189b87e88d7d8",
+  "release_url": "https://github.com/0thernes/multinomial-tv-conjecture/releases/tag/v2.0.0",
+  "pages_url": "https://0thernes.github.io/multinomial-tv-conjecture/",
   "pdf_archive_path": "papers/0TH-2026-006_multinomial-tv-conjecture/Donahue_2026_Conjecture_7_7_Multinomial_TV.pdf",
-  "pdf_sha256": "1a2f98651fd5fbd5a88a64b8162612ab841ba368fe4fcb112897073f9f15bd16",
-  "arxiv_bundle_url": "https://github.com/0thernes/multinomial-tv-conjecture/releases/download/v1.0.0/arxiv_submission.tar.gz",
-  "arxiv_bundle_sha256": "f5b5a415c4d2fa1631708574264837dae61ea672a987586676580910796ebac9",
+  "pdf_sha256": "02000c0e996ef47aa7ab46bd523bf189bb05371dae33a22fc2f89f8c64a11a86",
+  "arxiv_bundle_url": "https://github.com/0thernes/multinomial-tv-conjecture/releases/download/v2.0.0/arxiv_submission.tar.gz",
+  "arxiv_bundle_sha256": "76db6bd1a40a5d62b0ebac96616730aa001cb8f596c71ca599084765851fa806",
   "lean_verification": {
-    "framework": "Lean 4.35.0 / Mathlib v4.35.0",
+    "framework": "Lean 4.35.0 / Mathlib v4.35.0 (autoImplicit = false, 10 files, 5,445 lines, 43 explicit #print axioms + exhaustive 576-theorem Lean.collectAxioms audit across MultinomialTV, 18 NonVacuity witnesses, 0 Batteries linter warnings; all 6 independent kernels passed on sandboxed Ubuntu 24.04 CI run 45723630668 via lake comparator --paranoid: Lean paranoid, lean4lean 41,718 decls, Rust nanoda, con-leche 41,721 decls, con-ron 41,721 decls, Lean default; Sigstore Rekor logIndex 4114226539 / GitHub attestation 72417729; interactive Lean Blueprint at /blueprint/)",
     "axiom_allowlist": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "entry_point": "lean/MultinomialTVConjecture.lean",
+    "entry_point": "lean/Solution.lean",
     "axiom_audit_file": "lean/VerifyAxioms.lean",
-    "core_lines": 4960,
-    "audited_theorems": 19
+    "additional_audit_files": [
+      "lean/Challenge.lean",
+      "lean/MultinomialTVConjecture/NonVacuity.lean"
+    ],
+    "core_lines": 5445,
+    "audited_theorems": 576
   },
-  "ci_run_url": "https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/44862576204",
+  "ci_run_url": "https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/45723630668",
   "preservation": {
     "software_heritage": null,
     "wayback_machine": null,
     "doi": null
   },
-  "core_result": "Proves Conjecture 7.7 (conj:atriangle) of Banic & Elezovic (arXiv:2610.17046v1, confirmed open in arXiv:2611.14735v1) via an exact 2D-to-1D combinatorial telescoping reduction, sharp non-asymptotic Stirling bounds, and cubic odd-Gaussian Euler-Maclaurin summation, establishing b_0 = 32*sqrt(3)/(81*pi), b_1 = b_2 = -22*sqrt(3)/(81*pi), d_0 = -4*sqrt(3)/(81*pi), a_triangle = 1/32 - 4*sqrt(3)/243, and gamma_2 = -1/(32*pi) - 8*sqrt(3)/(243*pi), rendering linear gamma(n) and cyclic gamma_c(n) unconditional for n >= 5.",
-  "verification_boundary": "Entire proof of Conjecture 7.7, exact nested-sum fidelity check (hAdj_eq_nested_sum), and unconditional gamma(n) & gamma_c(n) closed forms are 100% kernel-checked in Lean 4 (4,960 lines, 0 sorry, standard axioms only), independently verified in exact rational arithmetic (L=3..45, 0/1 error) and 80-digit Richardson extrapolation (< 3e-55 error).",
-  "falsification_command": "cd repos/multinomial-tv-conjecture/lean && lake build && lake env lean VerifyAxioms.lean && cd .. && python scripts/verify_conjecture.py"
+  "core_result": "Proves Conjecture 7.7 (conj:atriangle) of Banic & Elezovic (arXiv:2610.17046v1, confirmed open in arXiv:2611.14735v1) via an exact 2D-to-1D combinatorial telescoping reduction, sharp non-asymptotic Stirling bounds, and cubic odd-Gaussian Euler-Maclaurin summation, establishing b_0 = 32*sqrt(3)/(81*pi), b_1 = b_2 = -22*sqrt(3)/(81*pi), d_0 = -4*sqrt(3)/(81*pi), a_triangle = 1/32 - 4*sqrt(3)/243, and gamma_2 = -1/(32*pi) - 8*sqrt(3)/(243*pi), rendering linear gamma(n) and cyclic gamma_c(n) unconditional for n >= 5. Hardened in v2.0.0 with Palomar Challenge/Solution isolation, 18 NonVacuity witnesses, exhaustive 576-theorem axiom audit, 6-kernel Ubuntu bubblewrap CI replay, 24/24 pytest (Hypothesis, negative, mutant-killing, multi-precision 50/80/120 dps), 18/18 live HTTP-200 citations, deterministic standalone arXiv tarball with vector figures, interactive Lean Blueprint, Sigstore Rekor attestation (4114226539), and 100.0% (64/64) Build Standard v1.2.0 compliance.",
+  "verification_boundary": "Entire proof of Conjecture 7.7, exact nested-sum fidelity check (hAdj_eq_nested_sum), 18 NonVacuity witnesses, and unconditional gamma(n) & gamma_c(n) closed forms are 100% kernel-checked in Lean 4.35.0 (5,445 lines, autoImplicit = false, 576 exhaustively audited theorems, 0 sorry, 0 Batteries warnings, strictly [propext, Classical.choice, Quot.sound]) and replayed across all 6 independent kernels on sandboxed Ubuntu CI (run 45723630668), independently verified in exact rational arithmetic (L=3..45, 0/1 error) and 80-digit 28-point Richardson extrapolation (< 2.67e-55 error). Claims no external peer review or external DOI; Software Heritage Save Code Now awaits manual browser PoW completion.",
+  "falsification_command": "cd repos/multinomial-tv-conjecture/lean && lake exe cache get && lake build && lake env lean VerifyAxioms.lean && lake exe runLinter MultinomialTVConjecture && lake comparator --config comparator.json --paranoid && cd .. && python scripts/verify_conjecture.py && pytest -v tests/"
 }

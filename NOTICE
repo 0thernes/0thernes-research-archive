@@ -1,0 +1,7 @@
+0thernes Research Archive
+Copyright 2026 Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA)
+ORCID: https://orcid.org/0009-0006-8168-9648
+Repository: https://github.com/0thernes/0thernes-research-archive
+
+Archive scripts, metadata schemas, and index tooling are licensed under the MIT License (see `LICENSE`).
+Individual archived manuscripts, PDFs, and pinned submodules under `papers/`, `builds/`, `discoveries/`, and `repos/` retain their respective licenses (typically Apache-2.0 or MIT for code/Lean and CC-BY-4.0 for manuscripts and datasets; see `THIRD_PARTY_NOTICES.md`).

@@ -1,0 +1,15 @@
+# 0thernes-research-archive
+
+> Permanent, cryptographically audited master vault of 31 public research entries across 3 explicitly separated epistemic tiers (12 Tier I standalone preprints, 9 Tier II build white papers & embedded Lean 4 suites, 10 Tier III laws/discoveries/atlases) + 20 pinned public Git submodules authored by Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA; ORCID 0009-0006-8168-9648).
+
+## Key Entry Points
+- [README.md](README.md): Master registry tables, Quickstart, Usage, Maintenance Status.
+- [AGENTS.md](AGENTS.md): Canonical instructions, privacy firewall, and Build Standard v1.2.0 rules.
+- [CLAIMS.md](CLAIMS.md): Numbered archive integrity claims and falsification protocol.
+- [LIMITATIONS.md](LIMITATIONS.md): Epistemic boundaries and real-vs-metaphor disclosures.
+- [REPLICATION.md](REPLICATION.md): Clean-clone cryptographic verification steps and log.
+- [registry/PAPERS.json](registry/PAPERS.json): Machine-readable Tier I standalone research preprints registry.
+- [registry/BUILD_PAPERS.json](registry/BUILD_PAPERS.json): Machine-readable Tier II public build white papers & Lean 4 suites.
+- [registry/LAWS_AND_DISCOVERIES.json](registry/LAWS_AND_DISCOVERIES.json): Machine-readable Tier III laws, pre-registered claims, discoveries, and atlases.
+- [CHECKSUMS.sha256](CHECKSUMS.sha256): Byte-exact SHA-256 manifest for all frozen artifacts.
+- [scripts/verify_archive.py](scripts/verify_archive.py): Standalone cryptographic, ORCID, axiom-allowlist, and submodule-pin auditor.
