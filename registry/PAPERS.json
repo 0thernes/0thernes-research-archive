@@ -504,6 +504,62 @@
       "core_result": "Resolves two open structural questions of Vinciguerra (arXiv:2609.18692): (1) proves the complete base-p digit-sum dichotomy for two-register passive catalytic programs over every prime field F_p (f in RP^{pass}_{F_p}(2,t) iff s_p(d) <= min(p-1, t-1) for all d >= 2 with alpha_d != 0), collapsing characteristic-0 lower bounds via x^{p^m} in 2 accesses while proving permanent impossibility whenever s_p(d) >= p (e.g., x^3 over F_2), plus sharp F_4 separation (t_min(5)=3, t_min(3)=4, x^7 impossible) and literal commutative-ring/F_4-algebra soundness bridges; (2) proves strictly bilinear 2-access Frobenius collapse x^{2^k} over any char-2 commutative ring in k+1 registers (4k-2 ops, and k+2 registers with strictly distinct operands); (3) breaks Vinciguerra's 3-register exponent log_5 4 ~ 0.861353 down to the unique global integer minimizer log_13 8 ~ 0.810714 (certified via explicit Pascal-row shear loops for x^7..x^15 and universal Nat optimality forall t >= 4, t != 8), formalizing complete 4-register passive powering for all N >= 1 (T3h) and algebraic product-ring streaming frequency moments F_D (T3i) in Lean 4.35, while quadratic-shear prog5_x7 sharpens non-commutative matrix powering to O(N^{log_7 5}) with zero extra scalar registers; and (4) proves a balanced zero-workspace bilinear multilinear product x_0...x_{d-1} in log_2 d + 2 registers and (7d^2-4)/3 ops. Accompanied by 8/8 strict monotonic-ID verified CaDiCaL 2.1.2 LRAT UNSAT certificates (18,932 steps) contrasting Boolean XAG rigidity, 22/22 pytest suites, 100.0% Build Standard v1.1.0 compliance (62/62), live GitHub Pages SVG Blueprint, DigiCert RFC 3161 TSA, OpenTimestamps, and Sigstore SLSA attestations.",
       "verification_boundary": "All 20 headline theorems, corollaries (including complete 4-register powering T3h and algebraic product-ring streaming pass bound T3i), literal commutative-ring soundness bridges (T1s, T1es), and concrete 0 != 1 non-vacuity witnesses (ModP 2/5/7/11/13, Fin 3 -> ModP 13, GF4, Int) are 100% machine-checked in zero-Mathlib Lean 4.35.0 across 14 module files (8,069 lines, 0 warnings, 0 forbidden tokens, strictly standard axioms) and verified on Ubuntu CI run 45500957443 via lake check --paranoid (lean4lean 59,800 decls, nanoda, con-leche 59,803, con-ron 59,803, leanchecker-paranoid, lean) + Windows CI; exact arithmetic, Corollary 5.4 non-commutative matrix lifts, and 8/8 LRAT UNSAT certificates are verified in Tier-2 Python/CaDiCaL; streaming bit-space accounting (Cor. 5.3) and general non-commutative matrix lifting (Cor. 5.4) remain Tier-3 paper reductions; uniform D_{3,Q}^{pass}(t) = 2t - 3, r >= 4 loops, general F_{p^e} closed form, and Boyar-Find remain Tier-4 open problems. No peer review or external DOI is claimed.",
       "falsification_command": "cd repos/catalytic-register-frontiers && bash scripts/run_all.sh all"
+    },
+    {
+      "id": "0TH-2026-011",
+      "slug": "secmesh-pqsi",
+      "title": "SecMesh-PQSI: Formal Algebraic and Information-Theoretic Foundations and Cryptographic Defense Engine for Post-Quantum and Post-Super-Intelligence Meshes",
+      "domain": "Cryptography / Post-Quantum Security / Information Theory / Quantum Geometry",
+      "date_released": "2026-11-25",
+      "version": "v1.0.1",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 & cross-platform CI verified)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/secmesh-pqsi",
+      "submodule_path": "repos/secmesh-pqsi",
+      "pinned_commit": "a5ec809751b2f90197b4af8bf874ad9120b76573",
+      "release_url": "https://github.com/0thernes/secmesh-pqsi/releases/tag/v1.0.1",
+      "pages_url": "https://0thernes.github.io/secmesh-pqsi/",
+      "pdf_archive_path": "papers/0TH-2026-011_secmesh-pqsi/Donahue_2026_secmesh_pqsi_formal_foundations.pdf",
+      "pdf_sha256": "5b39a8bd2e45235e0d016d02cf4de4f680a5a2ac66fffd710ec0fb13dcccd9f4",
+      "arxiv_bundle_url": "https://github.com/0thernes/secmesh-pqsi/releases/download/v1.0.1/arxiv_submission.tar.gz",
+      "arxiv_bundle_sha256": "7761b855cd6c1aefc40e5591352cb129faf5a5c58f84e0e518b2bb258365b78d",
+      "lean_verification": {
+        "framework": "Lean 4.35.0 (zero Mathlib, 12 files, 3,501 lines, 21 exported theorems T1a-T5d + prove_all + concrete SimpleField (Fin 5) NonVacuity = 44 audited Solution/Palomar declarations; all 6 independent kernels passed on Ubuntu CI run 45673196390 via lake comparator --paranoid: Lean paranoid, lean4lean 3,549 decls, nanoda, con-leche 3,552 decls, con-ron 3,552 decls, Lean default; Sigstore SLSA build provenance attested)",
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/Solution.lean",
+        "axiom_audit_file": "lean/VerifyAxioms.lean",
+        "additional_audit_files": [
+          "lean/Challenge.lean",
+          "lean/PalomarChallenge.lean",
+          "lean/PalomarSolution.lean",
+          "lean/SecMeshPQSI/NonVacuity.lean"
+        ],
+        "audited_theorems": 44
+      },
+      "ci_run_url": "https://github.com/0thernes/secmesh-pqsi/actions/runs/45673196390",
+      "preservation": {
+        "software_heritage": null,
+        "wayback_machine": null,
+        "doi": null
+      },
+      "core_result": "Clean-room cryptographic refactoring of legacy BoogerCheeseOnRye/SecMesh@aff7dc6 rebuilt atop Tsotchke's MIT/Apache-2.0 stack (moonlab, quantum_geometric_tensor, eshkol, rosette-wire, pq-consensus-bandwidth, libirrep) into a Post-Quantum + Post-Super-Intelligence (information-theoretic) defense engine. Uncovers and resolves 10 defects in legacy SecMesh v1 and machine-checks 21 zero-Mathlib Lean 4.35.0 theorems across 5 families: (T1) finite-key DI-QKD forensics (S=354/125 > 2*sqrt(2) excess 316, 4x range-2 Hoeffding error, quarter-circle duality u^2+v^2=1 with max H_vN-H_min gap +0.235703 at S=2.699192, 93/256 deNoise bias & 70/256 weight-4 fragility, 5-lane composable epsilon); (T2) unconditional PSI triad (Shannon OTP bijection, k-factor XOR dual-survivability, constructive Toeplitz 2-universality, Cauchy-Schwarz LHL, general-field Carter-Wegman degree-d bound); (T3) Shamir (t,n) exact secrecy, Byzantine Singleton tightness n >= t + 2b, and CS-053 PIR capacity gap T^2 > 0; (T4) D-dim QGT PSD Lagrange/trace uncertainty, a new exact closed-form QGT Concurrence Surplus identity det(g) - (1/4)Omega^2 = (C^2/4)sin^2(theta/2) bridging QGTL to Horodecki CHSH (60-digit residual 3.3e-60), and general group-algebra involution proof certifying Bravyi [[144,12,12]] Gross BB qLDPC (5,184 CSS checks, weight 6, k=12); and (T5) FIPS 203 q=3329 / zeta=17 NTT invariants, zero-overflow Montgomery reduction, exact Compress_1 margin |e| <= 831 (tight at +832), and complete-graph K_N bandwidth ceiling optimality (<1.75% IT-MAC hedge overhead). Accompanied by bit-exact C11 Moonlab <-> OpenSSL 3.5.5 FIPS 203 ML-KEM-768 interop (40/40 C11 + ASan/UBSan + 500/500 fuzz, 12/12 Node 25, 11/11 pytest, 32/32 live HTTP-200 citations), 100.0% Build Standard v1.2.0 compliance (76/76), and two zero-overfull AMS-LaTeX white papers.",
+      "verification_boundary": "All 21 algebraic, combinatorial, and information-theoretic theorems (T1a-T5d) plus SimpleField (Fin 5) NonVacuity are 100% kernel-checked in zero-Mathlib Lean 4.35.0 across all 6 independent kernels on Ubuntu CI run 45673196390 (zero sorry, zero native_decide, zero warnings, strictly within [propext, Classical.choice, Quot.sound]); transcendental curves are cross-verified to 60-digit Decimal precision in Python and differentially across C11 and Node 25 (<1e-11). Explicitly disclaims physical photonic loophole-free QKD (software E91 is a mathematical finite-key simulator), requires an independent physical/pre-shared pad for unconditional PSI confidentiality, separates open Mega Atlas conjectures (QC-021, CS-026/028/031/050/053/054/061, QC-034/042) from proved theorems, and claims no external peer review, FIPS 140-3 certification, or external DOI. Software Heritage Save Code Now awaits manual browser PoW completion.",
+      "falsification_command": "cd repos/secmesh-pqsi && make -C native test && node node/tests/test_secmesh_v2.mjs && cd lean && lake build && lake env lean VerifyAxioms.lean && lake comparator --config palomar_comparator.json --paranoid",
+      "component_manuscripts": [
+        {
+          "title": "SecMesh-PQSI: Cryptographic Systems Architecture, Tsotchke Stack Integration, Threat Model, and Pre-Registered Empirical Defense Evaluation (White Paper II, v1.0.1)",
+          "historical_release": "v1.0.1",
+          "repo_path": "dist/Donahue_2026_secmesh_pqsi_architecture.pdf",
+          "sha256": "e4b3503a3b7a6b21d5271869ec69c539877b5afe6c822c1b6e3755a46b23022c",
+          "note": "Companion 5-page systems architecture, Tsotchke 30-repo audit, STRIDE+PQ+PSI threat model, and pre-registered 30-seed simulation white paper (0 overfull hboxes); archived in papers/0TH-2026-011_secmesh-pqsi/Donahue_2026_secmesh_pqsi_architecture.pdf."
+        }
+      ]
     }
   ]
 }

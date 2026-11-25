@@ -10,7 +10,7 @@
 - **Author:** Alexander Stephen Donahue (`Alexander S. Donahue`) · **0thernes LLC**, Spokane, WA, USA
 - **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)
 - **Contact:** `0_0@0thernes.art` · [0thernes.art](https://0thernes.art) · [github.com/0thernes](https://github.com/0thernes)
-- **Scope:** **29 public research entries** across **3 explicitly separated epistemic tiers** + **18 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
+- **Scope:** **30 public research entries** across **3 explicitly separated epistemic tiers** + **19 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 ---
 
@@ -18,6 +18,7 @@
 
 | ID | Date | Domain | Paper & Frozen PDF | Version | Lean 4 Verification | Evidence & Source Repo |
 |---|---|---|---|---|---|---|
+| `0TH-2026-011` | 2026-11-25 | Cryptography / Post-Quantum Security / Quantum Geometry | [SecMesh-PQSI: Formal Algebraic and Information-Theoretic Foundations](papers/0TH-2026-011_secmesh-pqsi/Donahue_2026_secmesh_pqsi_formal_foundations.pdf) ([Architecture WP II](papers/0TH-2026-011_secmesh-pqsi/Donahue_2026_secmesh_pqsi_architecture.pdf)) | `v1.0.1` | **Zero-Mathlib Lean 4.35.0** (12 files, 3,501 lines, **21 theorems `T1a`–`T5d` + `SimpleField (Fin 5)` `NonVacuity` = 44 audited decls**, 0 warnings, standard axioms; **all 6 independent kernels passed on Ubuntu CI `lake comparator --paranoid`** incl. `lean4lean` 3,549 decls & `con-leche`/`con-ron` 3,552 decls, Sigstore SLSA attested) + C11 Moonlab ↔ OpenSSL 3.5.5 FIPS 203 interop (40/40 C11 ASan/UBSan, 12/12 Node 25, 11/11 pytest, 76/76 Build Standard v1.2.0) | [Repo](https://github.com/0thernes/secmesh-pqsi) · [Evidence](papers/0TH-2026-011_secmesh-pqsi/EVIDENCE.md) · [Console](https://0thernes.github.io/secmesh-pqsi/) · [CI](https://github.com/0thernes/secmesh-pqsi/actions/runs/45673196390) |
 | `0TH-2026-010` | 2026-11-24 | Computational Complexity / Algebraic Complexity | [Positive-Characteristic Dichotomy and Optimal Three-Register Exponents in Passive Catalytic Register Programs](papers/0TH-2026-010_catalytic-register-frontiers/Donahue_2026_catalytic_register_frontiers.pdf) | `v1.0.1` | **Zero-Mathlib Lean 4.35.0** (14 modules, 8,069 lines, **20 theorems + `NonVacuity` = 22 audited decls**, 0 warnings, standard axioms; **7 kernels incl. Ubuntu `lake check --paranoid` `lean4lean` 59,800 decls**, Sigstore Rekor `4087684280` & Release `4087690760`, Zenodo DOI `10.5281/zenodo.24517198`) + 8/8 LRAT UNSAT certs | [Repo](https://github.com/0thernes/catalytic-register-frontiers) · [DOI](https://doi.org/10.5281/zenodo.24517198) · [Evidence](papers/0TH-2026-010_catalytic-register-frontiers/EVIDENCE.md) · [Blueprint](https://0thernes.github.io/catalytic-register-frontiers/) · [CI](https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45500957443) |
 | `0TH-2026-009` | 2026-11-24 | Quantum Foundations / Quantum Contextuality | [Pauli Contextuality Lab: Unified Lean 4.35.0 Formalization of Spectral Bounds, Disjoint Mermin Configurations, and Sequential Contextuality Evidence](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf) ([C3 PDF](papers/0TH-2026-009_pauli-contextuality-lab/c3-spectral-counterexample.pdf) · [Track 2 PDF](papers/0TH-2026-009_pauli-contextuality-lab/contextuality-tensor.pdf) · [Track 3 PDF](papers/0TH-2026-009_pauli-contextuality-lab/whitepaper.pdf)) | `v2.7.0` | **Lean 4.35.0 / Mathlib v4.35.0** (160 explicit `#print axioms` + **2,206-theorem exhaustive axiom audit** across all 4 namespaces, 0 warnings, 0 Batteries linter errors; **12 cross-track targets verified by all 6 independent kernels** via `lake comparator --paranoid`, standard axioms, Sigstore Rekor `4089266738`) | [Repo](https://github.com/0thernes/pauli-contextuality-lab) · [Evidence](papers/0TH-2026-009_pauli-contextuality-lab/EVIDENCE.md) · [Blueprint & Labs](https://0thernes.github.io/pauli-contextuality-lab/) · [Lean CI](https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45516962454) |
 | `0TH-2026-008` | 2026-11-23 | Interdisciplinary Neuroscience / Philosophy of Mind | [Open Hard Problems Across Eleven Neuro-Scientific Disciplines, Deductive-Inductive-Abductive Frontiers of Sentience, and a Six-Class Forensic Audit](papers/0TH-2026-008_open-hard-problems-consciousness-frontier/Donahue_2026_open_hard_problems_consciousness_frontier.pdf) | `v1.2.0` | Lean 4.35.0 (zero Mathlib, Palomar `module` headers, 6 independent kernels via `lake comparator --paranoid`, axioms `⊆ [propext, Quot.sound]`; T17–T18 discrete coupling bounds) | [Repo](https://github.com/0thernes/human-synapse-bouton-lab) · [Evidence](papers/0TH-2026-008_open-hard-problems-consciousness-frontier/EVIDENCE.md) · [Lab](https://0thernes.github.io/human-synapse-bouton-lab/) · [CI](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45277848703) |
@@ -86,11 +87,11 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 ## Cloning the Full Public Stack & Running the Cryptographic Audit
 
 ```bash
-# Clone the archive + all 18 pinned PUBLIC Lean 4 & white-paper repositories
+# Clone the archive + all 19 pinned PUBLIC Lean 4 & white-paper repositories
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 
-# Verify every SHA-256 digest, ORCID, axiom allowlist, and all 18 public submodule pins
+# Verify every SHA-256 digest, ORCID, axiom allowlist, and all 19 public submodule pins
 python scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
 ```

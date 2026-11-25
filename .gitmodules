@@ -52,3 +52,6 @@
 [submodule "repos/catalytic-register-frontiers"]
 	path = repos/catalytic-register-frontiers
 	url = https://github.com/0thernes/catalytic-register-frontiers.git
+[submodule "repos/secmesh-pqsi"]
+	path = repos/secmesh-pqsi
+	url = https://github.com/0thernes/secmesh-pqsi.git
