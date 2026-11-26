@@ -368,36 +368,38 @@ def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
         for rec in tracked.values()
     ]
 
-    # Reuse prior timestamp in offline mode if unchanged to keep idempotence clean
-    mirror_json_path = root / "registry" / "LIVE_ECOSYSTEM_MIRROR.json"
-    if offline and mirror_json_path.exists():
-        prev = json.loads(mirror_json_path.read_text(encoding="utf-8"))
-        synced_utc = prev.get("synced_utc", datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
-    else:
-        synced_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    counts = {
+        "tier1_papers": len(papers_data["papers"]),
+        "tier2_builds": len(builds_data["builds"]),
+        "tier3_discoveries": len(discs_data["discoveries"]),
+        "total_entries": (
+            len(papers_data["papers"])
+            + len(builds_data["builds"])
+            + len(discs_data["discoveries"])
+        ),
+        "unique_public_repositories": len(mirror_repos),
+        "pinned_submodules": count_git_submodules(root),
+        "exact_pin_match": sum(1 for r in mirror_repos if r["sync_status"] == "EXACT_PIN_MATCH"),
+        "ahead_of_pin": sum(1 for r in mirror_repos if r["sync_status"] == "AHEAD_OF_PIN"),
+        "historical_archived": sum(1 for r in mirror_repos if r["sync_status"] == "HISTORICAL_ARCHIVED"),
+        "api_errors": sum(1 for r in mirror_repos if r["sync_status"] == "API_ERROR"),
+    }
 
-    mirror = {
+    # Zero-noise idempotence: preserve synced_utc whenever upstream state & counts are unchanged
+    mirror_json_path = root / "registry" / "LIVE_ECOSYSTEM_MIRROR.json"
+    synced_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    if mirror_json_path.exists():
+        prev = json.loads(mirror_json_path.read_text(encoding="utf-8"))
+        if offline or (prev.get("repositories") == mirror_repos and prev.get("counts") == counts):
+            synced_utc = prev.get("synced_utc", synced_utc)
+
+    mirror: dict[str, Any] = {
         "schema_version": "1.0.0",
         "canonical_hub": f"https://github.com/{OWNER}/{ARCHIVE_SLUG}",
         "synced_utc": synced_utc,
         "sync_mode": "offline" if offline else "live-github-api",
         "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
-        "counts": {
-            "tier1_papers": len(papers_data["papers"]),
-            "tier2_builds": len(builds_data["builds"]),
-            "tier3_discoveries": len(discs_data["discoveries"]),
-            "total_entries": (
-                len(papers_data["papers"])
-                + len(builds_data["builds"])
-                + len(discs_data["discoveries"])
-            ),
-            "unique_public_repositories": len(mirror_repos),
-            "pinned_submodules": count_git_submodules(root),
-            "exact_pin_match": sum(1 for r in mirror_repos if r["sync_status"] == "EXACT_PIN_MATCH"),
-            "ahead_of_pin": sum(1 for r in mirror_repos if r["sync_status"] == "AHEAD_OF_PIN"),
-            "historical_archived": sum(1 for r in mirror_repos if r["sync_status"] == "HISTORICAL_ARCHIVED"),
-            "api_errors": sum(1 for r in mirror_repos if r["sync_status"] == "API_ERROR"),
-        },
+        "counts": counts,
         "repositories": mirror_repos,
     }
 
@@ -415,7 +417,7 @@ def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
         len(papers_data["papers"]),
         len(builds_data["builds"]),
         len(discs_data["discoveries"]),
-        mirror["counts"]["pinned_submodules"],
+        counts["pinned_submodules"],
     )
     return mirror
 
