@@ -408,8 +408,9 @@
       },
       "limits": [
         "There is no Lean proof (a B(3,3) Lean module was stopped after 49 minutes without a verdict and is not in the repository). B(3,3) rests on the Python CNF encoder with SAT proofs checked by the project's DRUP checker and by drat-trim/LRAT, and on a search-tree certificate replayed by the project's JavaScript verifier; B(3,4) rests on the encoder and the project's DRUP checker.",
+        "The SAT encodings are sound only by paper lemmas of paper/PROOFS.md, not checked by machine: Lemma 1 (colouring cuts), Lemma 3 (conditions C1/C2 for critical sets) and Lemma 6 (symmetry normal form).",
         "For B(3,4) no proof file is tracked in git and no third-party checker was run.",
-        "Kernaghan arXiv:2603.16988v10 (23 Nov 2026) also certifies the minimum 31 for the 145-ray pool.",
+        "Kernaghan (arXiv:2603.16988) already listed the minimum 31 for the 145-ray pool {0, ±1, ±2, ±3} (50 triads) in v1 of 17 Mar 2026 (Table 2), without a certificate; v10 (23 Nov 2026) certifies it.",
         "A ProblemHive forum note (post p/xfkay, October 2026, reference [33] of the repository paper) reported the minimum 31 for integer coordinates up to 3 and 4, without a certificate.",
         "The unrestricted minimum in dimension three is not affected."
       ],
@@ -465,11 +466,11 @@
         "date": "2026-11-26",
         "rebuild": "PASS",
         "fidelity": "NOT_AUDITED",
-        "prior_work": "NONE_FOUND"
+        "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
         "There is no Lean proof, and no third-party proof checker was run.",
-        "The case split and cube decomposition are paper arguments, not checked by machine.",
+        "The case split (Lemma 7), the cube decomposition and the lemmas behind the SAT encoding (Lemma 1 colouring cuts, Lemma 3 conditions C1/C2, Lemma 6 symmetry normal form) are paper arguments, not checked by machine.",
         "Proof files are not tracked in git; re-checking means regenerating them (hours, per the README).",
         "The value 29 was reported earlier, without a proof that nothing smaller exists, as the smallest critical set generated from the components 0, ±1 in dimension five (Pavičić and Megill, Phys. Rev. A 106, L060203 (2022), arXiv:2202.08197); the new part is the lower bound inside this pool.",
         "Not re-run by this audit.",
@@ -2029,7 +2030,7 @@
       "key": "T12-T19",
       "status": "ACTIVE",
       "title": "Conservation and monotonicity facts for the repository's discrete vesicle, ATP and SNARE models",
-      "statement": "For the repository's definitions: every valid vesicle-pool step list keeps rrp + recycling + reserve; if s < b + f·c, the store (a₀ + s·t) ∸ (b + f·c)·t is below a₀ when a₀, t > 0 and is 0 for t ≥ ⌊a₀/D⌋ + 1, D = b + f·c − s; leak lowers the sustainable rate; (8n)/8 = n; the clamped SNARE barrier is non-increasing in Ca²⁺ and SNARE counts.",
+      "statement": "For the repository's definitions: every valid vesicle-pool step list keeps rrp+recycling+reserve; if s<b+f·c, the store (a₀+s·t)∸(b+f·c)·t is below a₀ when a₀,t>0 and is 0 for t≥⌊a₀/D⌋+1, D=b+f·c−s; if b,c>0 and b+f·c≤s, then f·c<s, (s−b)·c<s·c, and ⌊(s−b)/c⌋<⌊s/c⌋ when c≤b; (8n)/8=n; the clamped SNARE barrier is non-increasing in Ca²⁺ and SNARE counts.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "True by construction of self-defined update rules; the H3 simulation outcome itself rests on Rust code outside Lean.",
@@ -2087,7 +2088,7 @@
       "limits": [
         "T15 is an upper bound on the zero time, not an exact hitting time; it equals 3 s only for the deterministic mean-rate H3 constants, while the simulator jitters the rate each second.",
         "The ATP and SNARE constants are the author's and are not found in the cited sources; the Lean definitions are hand-written analogues of the TypeScript/Rust engines with no tested link.",
-        "T17 contains no kinesin model; T18 and T19 are non-strict.",
+        "T17 contains no kinesin model; the SNARE-barrier claims of T18 and T19 are non-strict (T19's only strict part is the zipper energy 115·n₁ < 115·n₂).",
         "No part of NEURO-001 (consciousness) or NEURO-019 (20 W credit assignment) is addressed."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -3877,7 +3878,8 @@
       "limits": [
         "The 42 assessors and the 7 box-kites are due to de Marrais (arXiv:math/0011260, 2000); this is a formal re-verification.",
         "The 'no edges between components' conjunct holds by the definition of the adjacency predicate.",
-        "In Lean the adjacency is the sign identity σ(i,k)σ(j,l) = σ(i,l)σ(j,k) with i⊕j = k⊕l, i ≠ k, j ≠ l. Its equivalence with (e_i+e_j)(e_k ± e_l) = 0 for some sign follows by expanding the product and is not proved in Lean."
+        "In Lean the adjacency is the sign identity σ(i,k)σ(j,l) = σ(i,l)σ(j,k) with i⊕j = k⊕l, i ≠ k, j ≠ l. Its equivalence with (e_i+e_j)(e_k ± e_l) = 0 for some sign follows by expanding the product and is not proved in Lean.",
+        "Norm-multiplicativity of span{e_0,…,e_8} is checked through the Boolean predicate isNormMultMask 4 511, which tests the cross-term cancellation σ(a,c)σ(b,d) + σ(a,d)σ(b,c) = 0 over basis quadruples with a⊕b = c⊕d. Its equivalence with |xy|² = |x|²|y|² for all x, y in the span follows by expanding the norm and is not proved in Lean."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -3998,7 +4000,7 @@
       "key": "INV-1",
       "status": "ACTIVE",
       "title": "Lean invariants of the CELLULOGONIC MECHA discrete reaction, membrane and development model",
-      "statement": "For the integer model in lean/CellulogonicProofs/Spec.lean: each of the 19 tabulated reactions has zero mass delta and an exact first-law energy balance for all 4 solvents and every rotor stoichiometry nH; heat per reaction is positive when nH ≥ minCRing sv; other theorems give the budding inequality (x²+y²)³ ≤ 2(x³+y³)² for x, y > 0, power-scaling bounds, a Fröhlich update bounded by 1000, and a contact-exchange energy decrease. They concern the Lean model, not src/*.c.",
+      "statement": "In the integer model lean/CellulogonicProofs/Spec.lean: all 19 tabulated reactions have zero mass delta and an exact first-law balance for all 4 solvents and every rotor stoichiometry nH; heat is positive when nH ≥ minCRing sv; other theorems give (x²+y²)³ ≤ 2(x³+y³)² for x, y > 0, conditional power-scaling bounds, a Fröhlich update ≤ 1000 when coherence ≤ 1000, and a contact-exchange energy decrease when k > 0 and jAA+jBB < 2jAB. Not about src/*.c.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Lean proves Spec.lean, not the C11 engine; C behaviour, parity and statistics rest on CI tests outside Lean.",
