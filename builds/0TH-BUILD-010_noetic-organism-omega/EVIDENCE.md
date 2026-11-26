@@ -47,7 +47,7 @@ Hardened through 3 full audit cycles under dual Apache-2.0 / CC-BY-4.0 licenses 
 
 ## Verification Boundary
 
-All 54 Lean 4.35.0 theorems (N01-N54 across 6 files / 821 lines) certify discrete conservation, Ring-0 ACL, b1.58 packing, Wilcoxon DP, and LiveC11Receipt invariants with zero Mathlib, zero native_decide, zero sorry outside isolated Challenge.lean, and strictly [propext, Classical.choice, Quot.sound], verified across all 6 independent kernels on Ubuntu CI (#45752970555, SLSA #72487253 / Rekor 4117921487). All 14 Butlin indicators, 10 consciousness-framework checks, and 5 CQM items are strictly INDICATOR-ONLY computational proxies; makes zero claims of qualia, phenomenal consciousness, sentience, moral patienthood, peer review, or retiring any of the 1,900 overarching Mega-Atlas open problems.
+The 54 Lean 4.35.0 theorems (N01-N54 across 6 files / 821 lines) comprise about 14 general lemmas about a 10-field Int ledger model and small helper functions, 18 closed numeral identities (for example 825 - 5 = 820), 3 decide-checks of constants exported by one C11 run, 5 concrete witnesses and 14 one-step arithmetic or definitional facts with zero Mathlib, zero native_decide, zero sorry outside isolated Challenge.lean, and strictly [propext, Classical.choice, Quot.sound], verified across all 6 independent kernels on Ubuntu CI (#45752970555, SLSA #72487253 / Rekor 4117921487). All 14 Butlin indicators, 10 consciousness-framework checks, and 5 CQM items are strictly INDICATOR-ONLY computational proxies; makes zero claims of qualia, phenomenal consciousness, sentience, moral patienthood, peer review, or retiring any of the 1,900 overarching Mega-Atlas open problems.
 
 ## Independent Reproduction & Falsification Protocol
 

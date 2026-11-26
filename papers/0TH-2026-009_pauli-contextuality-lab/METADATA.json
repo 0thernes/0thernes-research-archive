@@ -19,7 +19,7 @@
   "arxiv_bundle_url": null,
   "arxiv_bundle_sha256": "N/A (canonical TeX sources in repo papers/spectral-bounds/unified-contextuality.tex & papers/disjoint-mermin/contextuality-tensor.tex)",
   "lean_verification": {
-    "framework": "Lean 4.35.0 / Mathlib v4.35.0 (166 explicit #print axioms including HoggarBound.Stability + 2,206-theorem-constant Lean.collectAxioms audit over the 43 modules imported by VerifyAll.lean (1,175 authored theorem/lemma declarations across all 60 files); 0 Batteries linter errors across HoggarBound.Bound, HoggarBound.Stability, ContextualityTensor, Evidence; 12 headline targets verified across 6 independent kernels via lake comparator --paranoid in Ubuntu 24.04 CI)",
+    "framework": "Lean 4.35.0 / Mathlib v4.35.0 (166 explicit #print axioms including HoggarBound.Stability + 2,206-theorem-constant Lean.collectAxioms audit over the 43 modules imported by VerifyAll.lean (1,175 authored theorem/lemma declarations across all 60 files); 0 Batteries linter errors across HoggarBound.Bound, HoggarBound.Stability, ContextualityTensor, Evidence; 12 headline targets verified across 6 independent kernels via lake comparator --paranoid in Ubuntu CI)",
     "axiom_allowlist": [
       "propext",
       "Classical.choice",

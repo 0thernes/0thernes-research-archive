@@ -26,7 +26,7 @@
 
 ## Summary
 
-Zero-dependency Node.js ESM, Python 3, and WebGL 2.0 multi-scale Artificial Life cockpit supervising 8 live local endpoints across all 7 public A-Life repositories on 127.0.0.1:8790. Enforces strict D7RO render-only observer isolation (preserving #ifdef PICK hit-testing), fail-closed loopback HTTP/WebSocket CSRF/CSWSH & path-traversal defenses, bounded 1..1,000,000 bare-metal launch controls, deterministic 112-trait spectral differential with 8-axis cosine coherence, and <= 240-sample omnitemporal ring cap. Verified by 12/12 Node tests (250 prop_check), 5/5 Python tests (120 trials), 6/6 (100%) surgical mutants killed, 8-page zero-overflow AMS-LaTeX PDF (16/16 live refs), SLSA #72484379, and 100.0% (72/72, 30/30 Core) Build Standard v1.2.0.
+Zero-dependency Node.js ESM, Python 3, and WebGL 2.0 multi-scale Artificial Life cockpit supervising 8 live local endpoints across all 7 public A-Life repositories on 127.0.0.1:8790. Keeps the displayed T1/T2-to-T3/T4 coupling cells fixed at D7RO with strength 0 (preserving #ifdef PICK hit-testing); no code path writing T1/T2 data into Asmodensius was found by inspection, but no automated test checks this, fail-closed loopback HTTP/WebSocket CSRF/CSWSH & path-traversal defenses, bounded 1..1,000,000 bare-metal launch controls, deterministic 112-trait spectral differential with 8-axis cosine coherence, and <= 240-sample omnitemporal ring cap. Verified by 12/12 Node tests (250 prop_check), 5/5 Python tests (120 trials), 6/6 (100%) surgical mutants killed, 8-page zero-overflow AMS-LaTeX PDF (16/16 live refs), SLSA #72484379, and a 72/72 (30/30 Core) Build Standard v1.2.0 artifact-presence checklist.
 
 ## Embedded Lean 4 Proof Suite Audit
 
@@ -35,7 +35,7 @@ Zero-dependency Node.js ESM, Python 3, and WebGL 2.0 multi-scale Artificial Life
 - **Audited Theorems (`#print axioms`):** 0
 - **Entry Point:** `N/A`
 - **Permitted Axioms:** `N/A`
-- **Live Audit Status:** GitHub Actions CI GREEN (run #45751750665, 4/4 jobs: ubuntu-latest + windows-latest 12/12 Node tests incl. 250 prop_check trials & Node<->Python --dry-run differential parity + 5/5 Python relay tests 120 trials + 0-error static lint + 6/6 100.0% surgical mutation kills + 8-page 0-overfull Tectonic AMS-LaTeX PDF & clean-room arXiv tarball with 16/16 live citations + SLSA provenance #72484379 / Rekor 4117670475 + 100.0% 72/72 Build Standard v1.2.0); Release v6.7.0 & SWH snapshot swh:1:snp:045edd61e0805b3778e40f5230062e8cc245bb60 archived
+- **Live Audit Status:** GitHub Actions CI GREEN (run #45751750665, 4/4 jobs: ubuntu-latest + windows-latest 12/12 Node tests incl. 250 prop_check trials & Node<->Python --dry-run differential parity + 5/5 Python relay tests 120 trials + 0-error static lint + 6/6 100.0% surgical mutation kills + 8-page 0-overfull Tectonic AMS-LaTeX PDF & clean-room arXiv tarball with 16 citations (a 2026-11-26 Crossref check found that the DOI given for Bedau, Snyder and Packard 1998 resolves to a different chapter) + SLSA provenance #72484379 / Rekor 4117670475 + 100.0% 72/72 Build Standard v1.2.0); Release v6.7.0 & SWH snapshot swh:1:snp:045edd61e0805b3778e40f5230062e8cc245bb60 archived
 
 ## Verification Boundary
 

@@ -37,7 +37,7 @@ Zero-dependency bare-metal polyglot multi-colony AI civilization unifying Zig 0.
 - **Audited Theorems (`#print axioms`):** 65
 - **Entry Point:** `lean/VerifyAxioms.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
-- **Live Audit Status:** GitHub Actions CI GREEN (run #45826608002, 3/3 jobs: Zig 0.17.1 + Rust 8-crate 21/21 unit tests + freestanding ELF64/ELF32 + Python exact oracle; Pure Lean 4.35.0 65/65 theorems via VerifyAxioms.lean + live negative tamper rejection; 6-page 0-warning Tectonic AMS-LaTeX PDF & clean-room arXiv tarball); Win64 silicon 33/33 gates + 38/38 planted mutants + 12/12 native DLLs + 5/5 RTX 5070 Ti Blackwell PTX kernels (20.21 GB/s pinned paging) + QEMU Ring-0 boot + Win32 Job Objects; Release v0.7.0 & Software Heritage Save Code Now #2696917 accepted; 65/65 audited declarations (43 zero-axiom, 22 strictly within [propext, Classical.choice, Quot.sound], 0 sorry, 0 warnings)
+- **Live Audit Status:** GitHub Actions CI GREEN (run #45826608002, 3/3 jobs: Zig 0.17.1 + Rust 8-crate 21/21 unit tests + freestanding ELF64/ELF32 + Python exact oracle; Pure Lean 4.35.0 65/65 theorems via VerifyAxioms.lean + live negative tamper rejection; 6-page 0-warning Tectonic AMS-LaTeX PDF & clean-room arXiv tarball); Win64 silicon 33/33 gates + 38/38 planted mutants + 12/12 native DLLs + 5/5 RTX 5070 Ti Blackwell PTX kernels (20.21 GB/s pinned paging) + QEMU Ring-0 boot + Win32 Job Objects; Release v0.7.0 & Software Heritage Save Code Now #2696917 accepted; 65/65 audited declarations (45 zero-axiom, 20 strictly within [propext, Classical.choice, Quot.sound], 0 sorry, 0 warnings; 39 of 65 are closed literal/constant statements)
 
 ## Verification Boundary
 

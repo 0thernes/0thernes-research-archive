@@ -2,7 +2,7 @@
 
 **Title:** ALife Framework v3.0.0: Deterministic Fixed-Arena Artificial-Life Architecture, 82 Constructive Six-Kernel Lean 4.35.0 Formal Invariants, 0-ULP WASM Parity, and Multi-Stratum Scientific Integrity Verification  
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
-**Domain:** Artificial Life / Formal Verification / Computational Biophysics / Quantum Contextuality  
+**Domain:** Artificial Life / Formal Verification / Computational Biophysics  
 **Version / Date:** `v3.0.0` (2026-11-26)
 
 ## Cryptographic Identity & Provenance
@@ -47,7 +47,7 @@ Deterministic L0-L10 artificial-life research kernel and WebGL2 raymarched PBR o
 
 ## Verification Boundary
 
-All 82 audited Lean 4.35.0 declarations (13 files, 1,485 lines, zero Mathlib, zero Classical.choice, zero native_decide, zero sorry outside isolated lean/PalomarChallenge.lean, axioms strictly within [propext, Quot.sound]) certify discrete integer micro-joule ledger conservation, exact 4:1 C/N stoichiometry, basis-point HEPTARCH anti-dictatorship & WCAG <= 3 Hz flash clamp, finite contextuality witnesses (Hoggar 315>189, CEGA-18 parity <=8, KCBS, Tsirelson hierarchy, srg(16,6,2,2) Jordan gap 384), GF(2^4) RS[15,11] & Monarch/Hodge identities, and registry/cube partitions across all 6 independent kernels on Ubuntu CI (#45824894491). Continuous IEEE-754 float64 dynamics, 0-ULP WASM/exporter parity, 825-check statistical harnesses, and 10/10 Playwright E2E tests lie outside the Lean kernel boundary and are verified by cross-OS CI. Explicitly retires 0/1,900 overarching Mega-Atlas open problems, labels FMO photosynthesis a classical Forster/Lindblad transport proxy, labels Butlin-14 and PCI* architectural indicators only, and makes no claims of phenomenal sentience or external peer review.
+All 82 audited Lean 4.35.0 declarations (13 files, 1,485 lines, zero Mathlib, zero Classical.choice, zero native_decide, zero sorry outside isolated lean/PalomarChallenge.lean, axioms strictly within [propext, Quot.sound]) certify discrete integer micro-joule ledger conservation, exact 4:1 C/N stoichiometry, basis-point HEPTARCH anti-dictatorship & WCAG <= 3 Hz flash clamp, an abstract CEGA-18 parity lemma, Monarch/Hodge identities, and arithmetic checks on hard-coded constants (contextuality numbers, RS[15,11] parameters, registry/cube counts), all for a hand-written integer model not linked to the runtime code across all 6 independent kernels on Ubuntu CI (#45824894491). Continuous IEEE-754 float64 dynamics, 0-ULP WASM/exporter parity, 825-check statistical harnesses, and 10/10 Playwright E2E tests lie outside the Lean kernel boundary and are verified by cross-OS CI. Explicitly retires 0/1,900 overarching Mega-Atlas open problems, labels FMO photosynthesis a classical Forster/Lindblad transport proxy, labels Butlin-14 and PCI* architectural indicators only, and makes no claims of phenomenal sentience or external peer review.
 
 ## Independent Reproduction & Falsification Protocol
 

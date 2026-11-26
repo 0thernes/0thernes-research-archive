@@ -27,7 +27,7 @@ Unifies six coupled non-Hermitian and topological frontiers across 98 zero-Mathl
 
 ## Lean 4 Formal Verification & Axiom Allowlist
 
-- **Framework:** Pure Lean 4.35.0 (zero Mathlib, 14 sorry-free files, 98 audited declarations strictly within [propext, Classical.choice, Quot.sound], autoImplicit = false, zero native_decide, 7 NonVacuity witnesses, 7 AdversarialTests refutations, 9 Palomar comparator targets verified across all 6 independent kernels via lake comparator --config comparator.json --paranoid inside bubblewrap on Ubuntu 24.04 CI with SLSA attestation)
+- **Framework:** Pure Lean 4.35.0 (zero Mathlib, 14 sorry-free files, 98 audited declarations strictly within [propext, Classical.choice, Quot.sound], autoImplicit = false, zero native_decide, 7 NonVacuity witnesses, 7 AdversarialTests refutations, 9 Palomar comparator targets verified across all 6 independent kernels via lake comparator --config comparator.json --paranoid inside bubblewrap on Ubuntu CI with SLSA attestation)
 - **Library Entry Point:** `lean/Solution.lean`
 - **Primary Axiom Audit Script:** `lean/VerifyAxioms.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
@@ -35,7 +35,7 @@ Unifies six coupled non-Hermitian and topological frontiers across 98 zero-Mathl
 
 ## Verification Boundary (Honest Epistemic Scope)
 
-All 98 exported declarations across Pillars I-VI, NonVacuity (7), AdversarialTests (7), and Palomar comparator contracts (9) are kernel-checked in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound] across all 6 independent kernels on Ubuntu 24.04 CI. The identification of the Lean identities with Bloch Hamiltonians, knot determinants, sliceness, Alexander and Jones polynomials, winding numbers, Petermann SNR, pseudo-Hermitian metrics, the frozen-state count for all L and the rho^2 growth rate is paper-level, not formalized. Continuous-parameter QR eigensolves, 2D Chase PDE evolution, and 20-seed confirmatory statistics are verified numerically, differentially against safe Rust, and statistically rather than in Lean real analysis. Explicitly records 0/1,900 full solutions to overarching problems in 0thernes/unsolved-problems-mega-atlas (docs/MEGA_ATLAS_CROSSCHECK.md); claims no external peer review or external DOI.
+All 98 exported declarations across Pillars I-VI, NonVacuity (7), AdversarialTests (7), and Palomar comparator contracts (9) are kernel-checked in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound] across all 6 independent kernels on Ubuntu CI. The identification of the Lean identities with Bloch Hamiltonians, knot determinants, sliceness, Alexander and Jones polynomials, winding numbers, Petermann SNR, pseudo-Hermitian metrics, the frozen-state count for all L and the rho^2 growth rate is paper-level, not formalized. Continuous-parameter QR eigensolves, 2D Chase PDE evolution, and 20-seed confirmatory statistics are verified numerically, differentially against safe Rust, and statistically rather than in Lean real analysis. Explicitly records 0/1,900 full solutions to overarching problems in 0thernes/unsolved-problems-mega-atlas (docs/MEGA_ATLAS_CROSSCHECK.md); claims no external peer review or external DOI.
 
 ## Independent Reproduction & Falsification Protocol
 

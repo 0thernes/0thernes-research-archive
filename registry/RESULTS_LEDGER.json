@@ -36,7 +36,9 @@
     "0TH-2026-003": "Superseded snapshot; the disjoint Mermin degree formulas are consolidated into 0TH-2026-009 Track 2, so ledger records belong to that entry to avoid double counting.",
     "0TH-2026-005": "Archived snapshot consolidated into 0TH-2026-009, whose lean/Evidence modules contain the same theorems; its results belong to that entry's ledger records.",
     "0TH-2026-008": "Companion survey paper sharing 0TH-2026-007's repository and Lean suite; its only formal content (T22-T24, A05) is elementary 2x2 determinant algebra already recorded under 0TH-2026-007.",
-    "0TH-BUILD-006": "No machine-checked result at the pinned commit. Its Lean file (eight literal arithmetic identities) is on an unmerged branch; the build itself is a C++ ray-tracing lab."
+    "0TH-BUILD-005": "No Lean and no machine-checked invariant at the pinned commit; the only archived artifact is a literature source-review catalog whose hub description ('formal verification audit ... simulation validation') failed fidelity. The software test suite passes in CI run 42100232980 but is not cited by the hub and was not re-run here, so no ENGINEERING_INVARIANTS record is written.",
+    "0TH-BUILD-006": "No machine-checked result at the pinned commit. Its Lean file (eight literal arithmetic identities) is on an unmerged branch; the build itself is a C++ ray-tracing lab.",
+    "0TH-BUILD-014": "No machine-checked result at the pinned commit. The repository is a local artificial-life telemetry hub whose invariants are checked by unit, seeded-random and mutation tests, not by proofs; the 327 Lean proofs it displays belong to six other archived repositories."
   },
   "results": [
     {
@@ -2506,6 +2508,2773 @@
         "d(W(3,2)) is not determined exactly in Lean."
       ],
       "check": "cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean"
+    },
+    {
+      "n": 52,
+      "archive_id": "0TH-2026-018",
+      "key": "T2d",
+      "status": "ACTIVE",
+      "title": "Even-Laplacian parity for quadratic-plus-periodic integer functions on the triangular lattice",
+      "statement": "Let M ≥ 1, ψ doubly periodic with periods ≥ 1, and u: ℤ² → ℤ with M·u = Ax² + Bxy + Cy² + Dx + Ey + ψ. If M·K = 4A − 2B + 4C and the six-neighbour triangular-lattice Laplacian of u is ≤ K everywhere, then K is even; so K = 5 is impossible in this class. Explicit functions attain constant Laplacian 4 and 2.",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "evidence_note": "Elementary: the hypotheses force constant Laplacian, and integer-valued quadratics have even A₂ Laplacian.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t2d_triangular_a2_even_laplacian_rigidity_and_obstruction",
+          "file": "lean/PalomarSolution.lean",
+          "line": 44
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "Requires the Laplacian bound K to equal the mean curvature (4A − 2B + 4C)/M; envelopes with smaller mean are not covered.",
+        "Says nothing about sandpile configurations of height 5 or the A₂ sandpile identity.",
+        "No prior statement found in two literature searches, but the argument is elementary and the hub's 'universally obstructing K = 5' wording overstates it.",
+        "The description of integer superharmonic matrices on A₂ (an open problem posed by Levine-Pegden-Smart for periodic graphs) is not addressed."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 53,
+      "archive_id": "0TH-2026-019",
+      "key": "T1",
+      "status": "ACTIVE",
+      "title": "Signature change of the Cayley–Dickson sign table and 2-blade nullities",
+      "statement": "For all n and every signature γ ∈ {±1}ⁿ: σ_n^γ(i,j) = σ_n(i,j)·(−1)^popcount(i∧j∧flip(γ)); the 2×2 block sign of e_i+e_j flips by (−1)^popcount((i⊕j)∧flip(γ)) for every k; hence ν_n^γ(i,j) equals ν_n(i,j) or 2^(n−1) − ν_n(i,j), and the sums H(v)+H(2^(n−1)−v) and the bin H(2^(n−2)) do not depend on γ.",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "CDTerrace.Palomar.prove_t1a",
+          "file": "lean/PalomarSolution.lean",
+          "line": 20
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t1b",
+          "file": "lean/PalomarSolution.lean",
+          "line": 21
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t1d",
+          "file": "lean/PalomarSolution.lean",
+          "line": 23
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t1e",
+          "file": "lean/PalomarSolution.lean",
+          "line": 24
+        },
+        {
+          "decl": "CDTerrace.cdSignGamma_factorization",
+          "file": "lean/CDTerrace/MirrorConservation.lean",
+          "line": 197
+        },
+        {
+          "decl": "CDTerrace.blockDeltaGamma_eq",
+          "file": "lean/CDTerrace/MirrorConservation.lean",
+          "line": 294
+        },
+        {
+          "decl": "CDTerrace.nilpotent_mirror_law",
+          "file": "lean/CDTerrace/MirrorConservation.lean",
+          "line": 465
+        },
+        {
+          "decl": "CDTerrace.mirror_sum_conservation",
+          "file": "lean/CDTerrace/MirrorConservation.lean",
+          "line": 569
+        },
+        {
+          "decl": "CDTerrace.midpoint_stratum_invariance",
+          "file": "lean/CDTerrace/MirrorConservation.lean",
+          "line": 578
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "Lean proves facts about the explicit Cayley–Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
+        "The nilpotency criterion T1c states only that the scalar part of (e_i+e_j)² cancels; the cross term is not part of the Lean statement.",
+        "Prior-work search was limited; the twisted-group-algebra description of Cayley–Dickson algebras with parameters (Albuquerque–Majid, Morier-Genoud–Ovsienko) was not compared with the cocycle formula."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 54,
+      "archive_id": "0TH-2026-019",
+      "key": "T2",
+      "status": "ACTIVE",
+      "title": "Doubling recurrence and closed forms for Euclidean 2-blade nullities",
+      "statement": "For the standard sign table of CD_n: ν_{n+1} obeys a four-branch doubling recurrence in ν_n; for n ≥ 3, 4 | ν, and for n ≥ 4, ν ≤ 2^(n−1) − 4 (attained); Σν = 8(2^(n−1)−1)(2^(n−2)−1)(2^(n−3)−1); #{ν = 0} = (6n−9)·2^(n−2)+3; H_{n+1}(8m) = H_{n+1}(2^n−4−8m) = 2H_n(4m); interior palindrome; H_{n+1}(2^n−4) = 2H_n(0).",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "CDTerrace.Palomar.prove_t2a",
+          "file": "lean/PalomarSolution.lean",
+          "line": 25
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t2b",
+          "file": "lean/PalomarSolution.lean",
+          "line": 26
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t2c",
+          "file": "lean/PalomarSolution.lean",
+          "line": 27
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t2d",
+          "file": "lean/PalomarSolution.lean",
+          "line": 28
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t2e",
+          "file": "lean/PalomarSolution.lean",
+          "line": 29
+        },
+        {
+          "decl": "CDTerrace.nullity_doubling_cross",
+          "file": "lean/CDTerrace/TerraceLaw.lean",
+          "line": 551
+        },
+        {
+          "decl": "CDTerrace.nullity_mod4_and_bound",
+          "file": "lean/CDTerrace/TerraceLaw.lean",
+          "line": 684
+        },
+        {
+          "decl": "CDTerrace.totalNullityMass_all_n",
+          "file": "lean/CDTerrace/TerraceLaw.lean",
+          "line": 1217
+        },
+        {
+          "decl": "CDTerrace.nonZDCount_all_n",
+          "file": "lean/CDTerrace/TerraceLaw.lean",
+          "line": 1316
+        },
+        {
+          "decl": "CDTerrace.terrace_palindrome_all_n",
+          "file": "lean/CDTerrace/TerraceLaw.lean",
+          "line": 1446
+        },
+        {
+          "decl": "CDTerrace.terrace_top_bin_all_n",
+          "file": "lean/CDTerrace/TerraceLaw.lean",
+          "line": 1461
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "Lean proves facts about the explicit Cayley–Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
+        "4 | ν is the 2-blade case of Moreno's theorem that annihilator dimensions in Cayley–Dickson algebras are multiples of four (quoted in Biss–Dugger–Isaksen, arXiv:math/0511691); the paper does not credit it.",
+        "The comparison with the Biss–Dugger–Isaksen bound 2ⁿ−4n+4 compares two closed formulas in Lean; the BDI theorem itself is not formalized.",
+        "Zhilina (Int. J. Algebra Comput. 31 (2021); arXiv:2608.28176) classifies zero divisors with basis-element components; the overlap with the ν = 0 versus ν > 0 split was not assessed.",
+        "Euclidean signature only."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 55,
+      "archive_id": "0TH-2026-019",
+      "key": "T2f",
+      "status": "ACTIVE",
+      "title": "Midpoint bin count 42·2^(n−4) for all Cayley–Dickson signatures",
+      "statement": "For every n ≥ 4 and every signature γ ∈ {±1}ⁿ, the number of pairs 1 ≤ i < j < 2ⁿ whose 2-blade e_i+e_j has nullity 2^(n−2) in CD_n(γ) equals 42·2^(n−4).",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "CDTerrace.Palomar.prove_t2f",
+          "file": "lean/PalomarSolution.lean",
+          "line": 30
+        },
+        {
+          "decl": "CDTerrace.terrace_midpoint_std_all_n",
+          "file": "lean/CDTerrace/TerraceLaw.lean",
+          "line": 1515
+        },
+        {
+          "decl": "CDTerrace.universal_split_midpoint_42",
+          "file": "lean/CDTerrace/TerraceLaw.lean",
+          "line": 1539
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "Lean proves facts about the explicit Cayley–Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
+        "The case n = 4 (42) is de Marrais's 42 sedenion assessors (arXiv:math/0011260); the extension to all n and all signatures was not found in a limited search."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 56,
+      "archive_id": "0TH-2026-019",
+      "key": "T3",
+      "status": "ACTIVE",
+      "title": "Coordinate right-multiplier families in Euclidean Cayley–Dickson algebras",
+      "statement": "In the Euclidean CD_n: for n ≥ 3 a set of basis indices with pairwise compatible right multiplications (a norm-multiplicative [2ⁿ, s, 2ⁿ] coordinate pair) has at most n+5 elements, attained; for n ≥ 4 only e_0 and e_{2^(n−1)} are compatible with all indices; a [2^(n−1), 2(n+4), 2ⁿ] coordinate pair exists for n ≥ 4; n+5 = ρ(2ⁿ) for n = 3,4,5 and n+5 < ρ(2ⁿ) for n ≥ 6.",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "CDTerrace.Palomar.prove_t3a",
+          "file": "lean/PalomarSolution.lean",
+          "line": 31
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t3b",
+          "file": "lean/PalomarSolution.lean",
+          "line": 32
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t3c",
+          "file": "lean/PalomarSolution.lean",
+          "line": 33
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t3d",
+          "file": "lean/PalomarSolution.lean",
+          "line": 34
+        },
+        {
+          "decl": "CDTerrace.universal_right_multipliers_all_n",
+          "file": "lean/CDTerrace/HurwitzRupture.lean",
+          "line": 355
+        },
+        {
+          "decl": "CDTerrace.compat_clique_le_all_n",
+          "file": "lean/CDTerrace/HurwitzRupture.lean",
+          "line": 547
+        },
+        {
+          "decl": "CDTerrace.cdMaxClique_valid",
+          "file": "lean/CDTerrace/HurwitzRupture.lean",
+          "line": 658
+        },
+        {
+          "decl": "CDTerrace.hurwitz_radon_rupture_all_ge6",
+          "file": "lean/CDTerrace/HurwitzRupture.lean",
+          "line": 719
+        },
+        {
+          "decl": "CDTerrace.asymmetric_doubling_tower_all_n",
+          "file": "lean/CDTerrace/HurwitzRupture.lean",
+          "line": 747
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "Only coordinate (basis-index) subsets with the full basis as left factor, and only the Euclidean signature; nothing is shown about non-coordinate subspaces or the general Hurwitz–Radon problem.",
+        "The comparison with ρ(2ⁿ) (T3c) is arithmetic on the formula 8⌊n/4⌋+2^(n mod 4); that this formula is the Hurwitz–Radon number is classical and not proved in Lean.",
+        "Prior-work search was limited: Adem (1975) on Cayley–Dickson normed maps was not read; Moreno (arXiv:math/0404395) on alternative elements is related and not cited."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 57,
+      "archive_id": "0TH-2026-015",
+      "key": "T1df",
+      "status": "ACTIVE",
+      "title": "Sign-point determinants and the sign lifts of Gardam's support",
+      "statement": "For all integers P, Q, R, S, the determinant of the defined 4×4 matrix blochAtSign(P,Q,R,S) at each point (±1,±1,±1) equals a stated product of linear forms, a square, or a product of sums of two squares. For every ±1 choice on Gardam's 21 support coefficients these eight determinants are not all ±1, also when the p-part is any function even at sign points.",
+      "kind": "BOUNDED_CASE",
+      "evidence": "kernel-checked",
+      "evidence_note": "'Unit in ℤ[P] ⇒ all sign-point determinants are ±1' is a paper argument; Lean has no determinant multiplicativity.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "PromislowFracton.Palomar.t1d_eight_sign_point_factorization",
+          "file": "lean/PalomarSolution.lean",
+          "line": 25
+        },
+        {
+          "decl": "PromislowFracton.Palomar.t1f_exhaustive_no_sign_lift_gardam_support",
+          "file": "lean/PalomarSolution.lean",
+          "line": 29
+        },
+        {
+          "decl": "PromislowFracton.eight_sign_point_factorization",
+          "file": "lean/PromislowFracton/BlochMatrix.lean",
+          "line": 558
+        },
+        {
+          "decl": "PromislowFracton.strengthened_no_sign_lift_of_gardam_support",
+          "file": "lean/PromislowFracton/GardamUnit.lean",
+          "line": 460
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "c829ab811568a13e2283db2175f684e35b17c816",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "Lean does not state that the lifts are non-units in ℤ[P]; it states that a necessary determinant test fails.",
+        "blochAtSign is a separate definition with no lemma linking it to the Bloch evaluation map.",
+        "Tabei, arXiv:2608.00103 (2026-07-30, preprint), proves that no unit of ℤ[P] supported in B(4) has nontrivial reduction mod 2, which implies the non-unit conclusion for all these lifts.",
+        "Whether ℤ[P] has any non-trivial unit remains open (Gardam, arXiv:2312.05240, found none)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 58,
+      "archive_id": "0TH-2026-015",
+      "key": "T2bd",
+      "status": "ACTIVE",
+      "title": "Finite computations for signed Haah conics and odd-order CC1 points over F_p",
+      "statement": "On the 64 sign tuples, the defined function signedHaahConicDet takes values in {±4, ±8, ±12} with counts 12, 16, 4, 4, 16, 12, none divisible by a prime p ≥ 5. No (x,y,z) ∈ (F_p^×)³ of odd order satisfies 1+x+y+z = 0 and 1+xy+yz+zx = 0 for p = 3, 5, 7, 11, 13, 17, 19; such points exist for p = 23 and 31.",
+      "kind": "BOUNDED_CASE",
+      "evidence": "kernel-checked",
+      "evidence_note": "Code dimensions such as k₂₃(11) = 6 are Rust/Python computations.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "PromislowFracton.Palomar.t2b_signed_haah_64_discriminant_classification",
+          "file": "lean/PalomarSolution.lean",
+          "line": 35
+        },
+        {
+          "decl": "PromislowFracton.Palomar.t2d_odd_prime_torsion_and_p23_threshold",
+          "file": "lean/PalomarSolution.lean",
+          "line": 39
+        },
+        {
+          "decl": "PromislowFracton.hasOddOrderRootFp",
+          "file": "lean/PromislowFracton/HaahFractons.lean",
+          "line": 729
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "c829ab811568a13e2283db2175f684e35b17c816",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NOT_SEARCHED"
+      },
+      "limits": [
+        "The map from signed codes to conic discriminants is a definition, not derived, and smoothness ⇔ nonzero discriminant is not formalized.",
+        "Points over extension fields F_{p^k} are not covered.",
+        "No code dimension k_p(L) is defined in Lean."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 59,
+      "archive_id": "0TH-2026-018",
+      "key": "T1d",
+      "status": "ACTIVE",
+      "title": "Mod-8 residue locking in one integral octahedral circle packing",
+      "statement": "The eight octahedral face reflections are involutions preserving the octahedral Descartes equations. Every sextuple reachable from (−6,10,17,40,24,17) has residues (2,2,1,0,0,1) mod 8; hence b₁, b₂ are never squares and b₃, b₆ are never twice a square. A √−2 norm identity holds for octahedral sextuples.",
+      "kind": "BOUNDED_CASE",
+      "evidence": "kernel-checked",
+      "evidence_note": "The exclusion follows from congruences mod 8; no reciprocity argument is formalized.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t1d_octahedral_lorentzian_and_sqrt_neg2_obstruction",
+          "file": "lean/PalomarSolution.lean",
+          "line": 29
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "Nothing is shown about squares at b₃–b₆ or twice-squares at b₁, b₂, b₄, b₅.",
+        "The 'Jacobi' conjunct consists of closed numeric evaluations unrelated to the orbit.",
+        "Quadratic reciprocity obstructions for octahedral packings were published earlier in arXiv:2510.21702 (Shi, Shi, Whitehead, Williams-Tracy, Zhang, 2025), which the repository does not cite."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 60,
+      "archive_id": "0TH-2026-018",
+      "key": "T2c",
+      "status": "ACTIVE",
+      "title": "Square-lattice obstruction for an isotropic quadratic-plus-periodic integer function",
+      "statement": "There is no integer function u on ℤ² with 4u = 3(x²+y²) + ψ, ψ doubly periodic with periods ≥ 1, whose square-lattice Laplacian is at most 3 everywhere. Four explicit integer functions have constant Laplacian 2 or 3.",
+      "kind": "BOUNDED_CASE",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t2c_lps_z2_superharmonic_and_isotropic_obstruction",
+          "file": "lean/PalomarSolution.lean",
+          "line": 41
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NOT_SEARCHED"
+      },
+      "limits": [
+        "One isotropic quadratic, not the Levine-Pegden-Smart classification of integer superharmonic matrices.",
+        "Whether this case already appears in Levine-Pegden-Smart (Ann. of Math. 2017) was not checked."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 61,
+      "archive_id": "0TH-2026-019",
+      "key": "T4fin",
+      "status": "ACTIVE",
+      "title": "Finite certificates for sedenion, pathion and chingon coordinate subspaces",
+      "statement": "By exhaustive kernel computation: in CD_4, 42 of the 140 affine 2-planes are bad, exactly 42 coordinate subsets of size 10 are norm-multiplicative (7, 28, 7 by overlap 8, 5, 2 with e_0…e_7) and none of size ≥ 11; over all signatures the histogram profiles of CD_4 and CD_5 occur with multiplicities 1,1,7,7 and 1,1,1,1,7,7,7,7; norm-multiplicative coordinate sets of size 14 in CD_5 and 16 in CD_6 exist.",
+      "kind": "BOUNDED_CASE",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "CDTerrace.Palomar.prove_t4a",
+          "file": "lean/PalomarSolution.lean",
+          "line": 35
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t4c",
+          "file": "lean/PalomarSolution.lean",
+          "line": 37
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t4d",
+          "file": "lean/PalomarSolution.lean",
+          "line": 38
+        },
+        {
+          "decl": "CDTerrace.sedenion_42_fano_duality",
+          "file": "lean/CDTerrace/FiniteCertificates.lean",
+          "line": 1486
+        },
+        {
+          "decl": "CDTerrace.sedenion_no_11d_coord_subspace",
+          "file": "lean/CDTerrace/FiniteCertificates.lean",
+          "line": 1590
+        },
+        {
+          "decl": "CDTerrace.split_sedenion_4_phases",
+          "file": "lean/CDTerrace/FiniteCertificates.lean",
+          "line": 1813
+        },
+        {
+          "decl": "CDTerrace.split_pathion_8_phases",
+          "file": "lean/CDTerrace/FiniteCertificates.lean",
+          "line": 1958
+        },
+        {
+          "decl": "CDTerrace.pathion_14_and_chingon_16_witnesses",
+          "file": "lean/CDTerrace/FiniteCertificates.lean",
+          "line": 224
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "Coordinate subsets only, with x and y in the same span.",
+        "The upper bound r_max(CD_5) = 14 is a HiGHS MILP certificate outside Lean; the CD_6–CD_8 phase tables are Rust/C/Python computations outside Lean.",
+        "The other conjuncts of T4d (c² = 1 ⇒ c = ±1 in integral domains, ℤ, ℤ[i]) are textbook facts and do not bear on Zhang–Zhu (2026).",
+        "Prior-work search was limited."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 62,
+      "archive_id": "0TH-2026-015",
+      "key": "T1ab",
+      "status": "ACTIVE",
+      "title": "Hantzsche–Wendt group model and its 4×4 Bloch evaluation map",
+      "statement": "A concrete multiplication on ℤ³ × {e,a,b,ab} satisfies the group axioms and the relations a⁻¹b²a = b⁻², b⁻¹a²b = a⁻², and is non-abelian and torsion-free. Over any commutative ring in the repository's class, 4×4 Bloch evaluation at points with given inverses preserves 1, + and ×; a separately defined formal coefficient map is injective.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Faithfulness is proved for a separate coefficient map, not for the evaluation map.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "PromislowFracton.Palomar.t1a_promislow_group_torsion_free",
+          "file": "lean/PalomarSolution.lean",
+          "line": 19
+        },
+        {
+          "decl": "PromislowFracton.Palomar.t1b_faithful_four_band_bloch_homomorphism",
+          "file": "lean/PalomarSolution.lean",
+          "line": 21
+        },
+        {
+          "decl": "PromislowFracton.ElemP.torsion_free",
+          "file": "lean/PromislowFracton/PromislowGroup.lean",
+          "line": 219
+        },
+        {
+          "decl": "PromislowFracton.GroupRingElem.psiFormal_injective",
+          "file": "lean/PromislowFracton/BlochMatrix.lean",
+          "line": 452
+        }
+      ],
+      "axioms": "t1a: propext, Classical.choice, Quot.sound; t1b: propext, Quot.sound",
+      "audited_commit": "c829ab811568a13e2283db2175f684e35b17c816",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The isomorphism between the normal-form model and the presented group is not formalized.",
+        "No lemma links the injective coefficient map psiFormal to the evaluation map, and over ℤ the evaluation map alone is not injective.",
+        "The 4×4 representation is standard (Passman, arXiv:2108.06570) and is not cited by the repository."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 63,
+      "archive_id": "0TH-2026-015",
+      "key": "T1eg",
+      "status": "ACTIVE",
+      "title": "Gardam's unit in F₂[P]: inverse check, reversible cellular automaton, lift determinant data",
+      "statement": "Gardam's 21-term α, β satisfy αβ = βα = 1 in F₂[P]. The repository's sparse 4×4 Laurent determinant of the 0/1 lift of α has 89 terms, constant term 97 and coefficient sum 945; it is V₄-invariant and ≡ 1 mod 2 and mod 4. Convolutions by α and β on configurations P → F₂ are mutually inverse, and convolution by α commutes with left shifts.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "The 2-adic Hensel tower and inverse support sizes are Rust/Python computations; Lean has only a generic identity.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "PromislowFracton.Palomar.t1e_gardam_unit_mod4_and_hensel_tower",
+          "file": "lean/PalomarSolution.lean",
+          "line": 27
+        },
+        {
+          "decl": "PromislowFracton.Palomar.t1g_surjunctive_reversible_linear_ca",
+          "file": "lean/PalomarSolution.lean",
+          "line": 31
+        },
+        {
+          "decl": "PromislowFracton.gardam_det_mod4_and_v4_law",
+          "file": "lean/PromislowFracton/GardamUnit.lean",
+          "line": 206
+        },
+        {
+          "decl": "PromislowFracton.gardam_linear_ca_bijective",
+          "file": "lean/PromislowFracton/GardamUnit.lean",
+          "line": 866
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "c829ab811568a13e2283db2175f684e35b17c816",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The unit αβ = 1 in F₂[P] is Gardam's (arXiv:2102.11818).",
+        "The theorem named for the Hensel tower contains no Hensel statement; the generic identity is never applied to Gardam's unit.",
+        "No theorem links the determinant routine to the Bloch evaluation map.",
+        "Surjunctivity is already known for the sofic group P; the cellular automaton is the standard one attached to a unit."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 64,
+      "archive_id": "0TH-2026-015",
+      "key": "T2c",
+      "status": "ACTIVE",
+      "title": "Monomials are non-constant on a rational parametrization of Haah's CC1 curve",
+      "statement": "Let K be an integral domain with 2 ≠ 0 in which Px = −(1+3t+t²), Py = 1+t−t² and Pz = −1+t+t² each have a root, and let D = 1+t+t². If Px^a·Py^b·Pz^c·D^(−a−b−c), cleared of negative powers, equals a nonzero constant for every t ∈ K, then a = b = c = 0. The analogous statement holds on one explicit line over F₄.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "The reduction from string logical operators to this monomial condition is on paper only.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "PromislowFracton.Palomar.t2c_universal_all_prime_no_strings",
+          "file": "lean/PalomarSolution.lean",
+          "line": 37
+        },
+        {
+          "decl": "PromislowFracton.universal_all_prime_no_strings_theorem",
+          "file": "lean/PromislowFracton/HaahFractons.lean",
+          "line": 487
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "c829ab811568a13e2283db2175f684e35b17c816",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "String logical operators are not defined in Lean.",
+        "The hypotheses fail over ℤ, ℚ and F_p with p ≡ ±2 mod 5 (the quadratics have discriminant 5), so those cases need an extension field.",
+        "Characteristic 2 is covered only by one line over F₄.",
+        "The qubit no-strings property is Haah's (arXiv:1101.1962), and Kim (arXiv:1202.0052) gives no-string conditions for qudit cubic codes; the repository compares with neither."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 65,
+      "archive_id": "0TH-2026-015",
+      "key": "T2ae",
+      "status": "ACTIVE",
+      "title": "Unit-twisted CSS commutation identity and two explicit CSS pairs over ℤ[P]",
+      "statement": "In any associative structure satisfying the listed involution axioms, fg = gf and uv = 1 imply (fu)(g*v*)* − (gu)(f*v*)* = 0. For Haah's f, g on P twisted by Gardam's α, β, the four check polynomials have 52, 52, 52 and 56 terms mod 2; the commutator vanishes mod 2 and has 342 terms over ℤ. A second explicit pair commutes in ℤ[P] and is not central.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "No code distance, logical-qubit count or fracton property is formalized.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "PromislowFracton.Palomar.t2a_nonabelian_unit_twisted_css_commutation",
+          "file": "lean/PalomarSolution.lean",
+          "line": 33
+        },
+        {
+          "decl": "PromislowFracton.Palomar.t2e_nonabelian_hw_fracton_codes",
+          "file": "lean/PalomarSolution.lean",
+          "line": 41
+        },
+        {
+          "decl": "PromislowFracton.gardam_twisted_and_intrinsic_hw_fracton_codes",
+          "file": "lean/PromislowFracton/HaahFractons.lean",
+          "line": 832
+        }
+      ],
+      "axioms": "t2a: none; t2e: propext",
+      "audited_commit": "c829ab811568a13e2283db2175f684e35b17c816",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "The identity also holds for u = 1, so commutation does not depend on Gardam's unit.",
+        "The paper's k(M_L) = 4·k_Haah(L) is not in Lean.",
+        "Related prior constructions exist (Tian–Samperton–Wang arXiv:1812.02101; Lin–Pryadko arXiv:2306.16400); 'first' is unsupported."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 66,
+      "archive_id": "0TH-2026-015",
+      "key": "T3ac",
+      "status": "ACTIVE",
+      "title": "Origin minimum of symmetric midpoint-convex functions and generation of S₄ by two permutations",
+      "statement": "Every R : ℚ³ → ℚ that respects rational equality, is midpoint convex and is invariant under the three double sign flips satisfies R(0,0,0) ≤ R(x,y,z). In a 4-tuple model of S₄, the adjacent transpositions satisfy the braid relations; (1 2) and (0 2 1 3) do not commute, satisfy g₁² = id and g₂⁴ = id, and generate all 24 permutations.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Ronkin functions and the monodromy of Ψ(α̃) appear only in Rust/Python numerics.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "PromislowFracton.Palomar.t3a_v4_convex_ronkin_origin_minimum",
+          "file": "lean/PalomarSolution.lean",
+          "line": 43
+        },
+        {
+          "decl": "PromislowFracton.Palomar.t3c_artin_b4_and_full_s4_monodromy",
+          "file": "lean/PalomarSolution.lean",
+          "line": 47
+        },
+        {
+          "decl": "PromislowFracton.v4_convex_ronkin_origin_minimum",
+          "file": "lean/PromislowFracton/NonHermitianAmoeba.lean",
+          "line": 73
+        },
+        {
+          "decl": "PromislowFracton.artin_b4_relations_and_s4_monodromy_generation",
+          "file": "lean/PromislowFracton/NonHermitianAmoeba.lean",
+          "line": 274
+        }
+      ],
+      "axioms": "t3a: propext, Classical.choice, Quot.sound; t3c: propext",
+      "audited_commit": "c829ab811568a13e2283db2175f684e35b17c816",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The minimum is not strict: the constant function satisfies all hypotheses.",
+        "No Ronkin function or real-valued function is formalized.",
+        "No braid group B₄ is defined, and that the two permutations are monodromies is numerical."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 67,
+      "archive_id": "0TH-2026-017",
+      "key": "T1",
+      "status": "ACTIVE",
+      "title": "Integer octonion composition law, Moufang identities, non-associativity and a sedenion zero divisor",
+      "statement": "For the 8-dimensional algebra on Z^8 given by the stated Fano table: N(xy) = N(x)N(y) and the left, right and middle Moufang identities hold for all x, y, z; the associator of e1, e2, e3 is nonzero. In the integer Cayley-Dickson sedenions, (e1+e10)(e3+e14) = 0, and so are all nonzero integer rescalings of this pair.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Octonionica.OctonionsSedenions.oct_degen_graves_eight_square",
+          "file": "lean/OctonionicaProofs/OctonionsSedenions.lean",
+          "line": 31
+        },
+        {
+          "decl": "Octonionica.OctonionsSedenions.oct_left_moufang",
+          "file": "lean/OctonionicaProofs/OctonionsSedenions.lean",
+          "line": 313
+        },
+        {
+          "decl": "Octonionica.OctonionsSedenions.oct_right_moufang",
+          "file": "lean/OctonionicaProofs/OctonionsSedenions.lean",
+          "line": 334
+        },
+        {
+          "decl": "Octonionica.OctonionsSedenions.oct_middle_moufang",
+          "file": "lean/OctonionicaProofs/OctonionsSedenions.lean",
+          "line": 299
+        },
+        {
+          "decl": "Octonionica.OctonionsSedenions.oct_strictly_non_associative",
+          "file": "lean/OctonionicaProofs/OctonionsSedenions.lean",
+          "line": 52
+        },
+        {
+          "decl": "Octonionica.OctonionsSedenions.sedenion_zero_divisor_collapse",
+          "file": "lean/OctonionicaProofs/OctonionsSedenions.lean",
+          "line": 346
+        },
+        {
+          "decl": "Octonionica.OctonionsSedenions.sedenion_infinite_zero_divisor_family",
+          "file": "lean/OctonionicaProofs/OctonionsSedenions.lean",
+          "line": 356
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Proved over Z (integer coordinates) only; the extension to real octonions by the polynomial-identity argument is not formalized.",
+        "Classical results (eight-square identity, Moufang 1935, Cayley-Dickson); an Isabelle AFP formalization of octonions (2018) already exists.",
+        "The 'infinite 2-parameter family' of sedenion zero divisors consists only of integer rescalings c*u, d*v of one pair."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 68,
+      "archive_id": "0TH-2026-017",
+      "key": "T2",
+      "status": "ACTIVE",
+      "title": "Seven-dimensional cross product identities and a cleared-denominator Nijenhuis norm identity on S^6",
+      "statement": "Over Z^7: |u x v|^2 = |u|^2|v|^2 - <u,v>^2, <u x v, w> is totally skew, 2J(u,v,w) = -3 Im[u,v,w]; two explicit derivations of O(Z) do not commute. For X, Y orthogonal to p, a hand-defined integer expression N(p;X,Y) has |N|^2 = 16|p|^6(|X|^2|Y|^2 - <X,Y>^2) - 16|p|^4<p x X, Y>^2, and N != 0 for nonzero p, X, Y with <X,Y> = <p x X, Y> = 0.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Identification of the integer expression with the Nijenhuis tensor of the real manifold S^6 is an informal derivation outside Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.cross7_lagrange_norm",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 34
+        },
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.phi3_totally_skew",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 41
+        },
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.malcev_jacobi_associator_defect",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 47
+        },
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.g2_derivs_noncommuting",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 73
+        },
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.s6_strictly_nearly_kahler",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 86
+        },
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.s6_nijenhuis_universal_norm_obstruction",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 193
+        },
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.s6_nijenhuis_nowhere_zero_on_complex_ortho",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 206
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "No manifold, connection, Lie bracket or real scalars exist in the Lean development; s6NablaJ and s6Nijenhuis (lean/OctonionicaProofs/Spec.lean:169,175) are hand-written polynomial formulas over Int.",
+        "The norm is zero for Y in span{X, J_p X}; positivity is proved only under <X,Y> = 0 and <J_p X, Y> = 0, so the public '> 0' without hypotheses is not what is proved.",
+        "'Calibrated G2 3-form', 'g2 = Der(O)' and 'strictly nearly Kahler' exceed the theorems: only skew-symmetry, two derivations and (nabla_X J)X = 0 are proved.",
+        "Non-integrability of the octonionic almost complex structure on S^6 is classical (Eckmann-Frolicher and Ehresmann-Libermann 1951); the norm identity is Gray's constant-type condition. The existence of other complex structures on S^6 stays open and is not addressed."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 69,
+      "archive_id": "0TH-2026-017",
+      "key": "T3",
+      "status": "ACTIVE",
+      "title": "Albert algebra identities over the integers: commutativity, Freudenthal adjoint, cubic Cayley-Hamilton",
+      "statement": "For all Hermitian 3x3 matrices X, Y over integer octonions, with cleared product X∘₂Y = 2(X∘Y): X∘₂Y = Y∘₂X, X∘₂X# = 2det(X)I, and X³ − 2Tr(X)X² + 4S(X)X − 4det(X)I = 0 in cleared form. For all u, v ∈ Z⁸, P(u,v) has P# = 0, det P = 0, P∘₂P = 2Tr(P)P.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Octonionica.AlbertJordan.albert_mul2_comm",
+          "file": "lean/OctonionicaProofs/AlbertJordan.lean",
+          "line": 48
+        },
+        {
+          "decl": "Octonionica.AlbertJordan.albert_freudenthal_adjoint_identity",
+          "file": "lean/OctonionicaProofs/AlbertJordan.lean",
+          "line": 213
+        },
+        {
+          "decl": "Octonionica.AlbertJordan.albert_cubic_cayley_hamilton",
+          "file": "lean/OctonionicaProofs/AlbertJordan.lean",
+          "line": 261
+        },
+        {
+          "decl": "Octonionica.AlbertJordan.albert_op2_primitive_idempotent",
+          "file": "lean/OctonionicaProofs/AlbertJordan.lean",
+          "line": 306
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The Jordan identity is checked for one explicit pair only (albert_exceptional_jordan_identity_witness); that J3(O) is a Jordan algebra is not formalized.",
+        "P(u,v) is not idempotent (P^2 = Tr(P) P with Tr(P) >= 1); P/Tr(P) is idempotent over Q, and neither primitivity nor a 16-dimensional parametrization of OP^2 is proved.",
+        "Over Z only; classical results of Jordan-von Neumann-Wigner, Albert and Freudenthal."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 70,
+      "archive_id": "0TH-2026-017",
+      "key": "T4a",
+      "status": "ACTIVE",
+      "title": "Evenness of 2E8, determinant of the E8 Cartan matrix, and the Golay code weight enumerator",
+      "statement": "Every x in Z^8 whose coordinates share one parity and sum to 0 mod 4 has |x|^2 = 0 mod 8. The stated 8x8 E8 Cartan matrix has determinant 1. The 4,096 F2-combinations of the 12 stated generator rows have weights 0, 8, 12, 16, 24 with multiplicities 1, 759, 2576, 759, 1 and no other weight.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Determinant and weight enumerator are finite decide computations.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Octonionica.E8GolayMoonshine.two_e8_even_norm_mod8",
+          "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
+          "line": 33
+        },
+        {
+          "decl": "Octonionica.E8GolayMoonshine.e8_cartan_det_one",
+          "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
+          "line": 71
+        },
+        {
+          "decl": "Octonionica.E8GolayMoonshine.golay_exact_weight_enumerator",
+          "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
+          "line": 90
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "No theorem links the Cartan matrix to the set 2E8, so 'E8 is even unimodular' is assembled from two unconnected facts.",
+        "The claimed '240 minimal roots', 'Leech kissing number 196,560' and 'Moonshine 196,884' are NOT covered: their Lean statements are a closed-form count and natural-number arithmetic (see findings).",
+        "Classical results; a Lean formalization of E8 sphere-packing optimality (Sphere-Packing-Lean) exists and is not cited."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 71,
+      "archive_id": "0TH-2026-017",
+      "key": "T4b",
+      "status": "ACTIVE",
+      "title": "Ramanujan tau: integrality, mod-691 congruence and non-vanishing for n at most 20",
+      "statement": "With tau defined by 1728 * sum tau(n) q^n = E4^3 - E6^2 truncated at degree 20: all coefficients of E4^3 - E6^2 are divisible by 1728, tau(1..12) take the listed values, and for 1 <= n <= 20, tau(n) != 0 and tau(n) = sigma_11(n) mod 691; four instances of the Hecke relations (n = 4, 6, 9, 10) hold.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Lean range is n <= 20; the Rust check to n = 120 and Deligne primes <= 113 lie outside Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Octonionica.E8GolayMoonshine.ramanujan_tau_exact_mod691_and_lehmer",
+          "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
+          "line": 111
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Lehmer's conjecture (tau(n) != 0 for all n) remains open; the checked range is far below published computational verification ranges and is a sanity check, not progress.",
+        "tau is defined through Eisenstein series; the product q*prod(1-q^n)^24 and general Hecke multiplicativity are not formalized."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 72,
+      "archive_id": "0TH-2026-017",
+      "key": "T5",
+      "status": "ACTIVE",
+      "title": "Fibonacci anyon F and R matrices: coherence identities and infinite order of a braid word",
+      "statement": "For explicit 2x2 matrices F, R over Z[zeta_10] (reduced modulo Phi_10): F^2 = I, both hexagon identities in the stated gauge, and the braid relation s1 s2 s1 = s2 s1 s2 with s1 = R, s2 = F R F. For every k >= 1, (s1 s2^-1)^k != I.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Octonionica.FibonacciAnyons.fib_coherence_hexagon_and_yang_baxter",
+          "file": "lean/OctonionicaProofs/FibonacciAnyons.lean",
+          "line": 86
+        },
+        {
+          "decl": "Octonionica.FibonacciAnyons.fib_braid_word_infinite_order",
+          "file": "lean/OctonionicaProofs/FibonacciAnyons.lean",
+          "line": 252
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The claimed '5-part Mac Lane pentagon' (fib_mac_lane_pentagon_exact) is five scalar identities in Z[phi] that never mention F; the reduction from the categorical pentagon is by hand and is not covered by this record.",
+        "Infinite order is implied by the density theorem of Freedman-Larsen-Wang (2002); SU(2) density itself is not formalized."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 73,
+      "archive_id": "0TH-2026-017",
+      "key": "T6",
+      "status": "ACTIVE",
+      "title": "Markov equation: Vieta descent, congruences mod 3 and mod 4, Fibonacci and Pell branches, shared-maximum divisibility",
+      "statement": "For integers with x^2 + y^2 + z^2 = 3xyz: if 0 < x <= y < z then 0 < 3xy - z < z; positive solutions have no entry divisible by 3, and their residues mod 4 are (1,1,1) or a permutation of (2,1,1); (1, F(2k+1), F(2k+3)) and (2, P(2k+1), P(2k+3)) are solutions for all k; two solutions sharing z satisfy z | (x1y2 - x2y1)(x1y2 + x2y1).",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Octonionica.MarkovTree.markov_strict_descent",
+          "file": "lean/OctonionicaProofs/MarkovTree.lean",
+          "line": 31
+        },
+        {
+          "decl": "Octonionica.MarkovTree.markov_no_multiple_of_three",
+          "file": "lean/OctonionicaProofs/MarkovTree.lean",
+          "line": 77
+        },
+        {
+          "decl": "Octonionica.MarkovTree.markov_positive_mod4_classification",
+          "file": "lean/OctonionicaProofs/MarkovTree.lean",
+          "line": 207
+        },
+        {
+          "decl": "Octonionica.MarkovTree.markov_fibonacci_branch",
+          "file": "lean/OctonionicaProofs/MarkovTree.lean",
+          "line": 344
+        },
+        {
+          "decl": "Octonionica.MarkovTree.markov_pell_branch",
+          "file": "lean/OctonionicaProofs/MarkovTree.lean",
+          "line": 365
+        },
+        {
+          "decl": "Octonionica.MarkovTree.markov_uniqueness_divisor_obstruction",
+          "file": "lean/OctonionicaProofs/MarkovTree.lean",
+          "line": 388
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The Markov uniqueness conjecture remains open; the divisor relation is a necessary condition that follows from x^2 + y^2 = 0 mod z and holds for identical or permuted triples, so it does not constrain counterexamples by itself.",
+        "The 'Hurwitz sqrt(5) barrier' theorem is the integer inequality 0 < 9m^2 - 4 < 9m^2 and is not covered by this record.",
+        "The Rust BFS over the 231 triples with maximum <= 10^15 is outside Lean and far below published verification ranges.",
+        "Congruences go back to Frobenius (1913), who is not cited."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 74,
+      "archive_id": "0TH-2026-018",
+      "key": "T1b+T3c",
+      "status": "ACTIVE",
+      "title": "Jacobi symbol reciprocity laws and uniqueness of square roots of -1 modulo odd prime powers",
+      "statement": "For odd n ≥ 1 the Jacobi symbol (built from Euler's criterion) satisfies the (−1/n) and (2/n) laws, multiplicativity, (a²/n) = 1 when gcd(a,n) = 1, and reciprocity for coprime odd m, n ≥ 1. For an odd prime p and k ≥ 1, if pᵏ divides r₁²+1 and r₂²+1 then pᵏ divides r₁−r₂ or r₁+r₂.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Zero-Mathlib Lean 4.35.0 development.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t1b_jacobi_reciprocity_master",
+          "file": "lean/PalomarSolution.lean",
+          "line": 23
+        },
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t3c_hensel_sqrt_neg1_prime_power_uniqueness",
+          "file": "lean/PalomarSolution.lean",
+          "line": 56
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Classical results (Gauss, Jacobi, Eisenstein 1844 proof method); the contribution is a Mathlib-free formalization."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 75,
+      "archive_id": "0TH-2026-018",
+      "key": "T1c",
+      "status": "ACTIVE",
+      "title": "Absence of square curvatures in three integral Apollonian circle packings",
+      "statement": "In the Apollonian packings generated by (−3,5,8,8), (−7,17,12,20) and (−11,21,24,28) — every quadruple reachable from the root by the four Descartes reflections — no curvature equals m² for any integer m. Supporting identities: the reflections are involutions preserving the Descartes form, and (a+b)(a+c) = a² + k² for Descartes quadruples.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Formalizes Haag-Kertzer-Rickards-Stange Theorem 1.6 and two Table A instances.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t1c_hkrs_apollonian_reciprocity_obstruction",
+          "file": "lean/PalomarSolution.lean",
+          "line": 26
+        },
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t1a_descartes_lorentzian_and_gaussian_norm",
+          "file": "lean/PalomarSolution.lean",
+          "line": 20
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Covers three specific packings, not the HKRS families of obstructed packings.",
+        "The result is due to Haag, Kertzer, Rickards and Stange (Ann. of Math. 2024, arXiv:2307.02749); only the zero-Mathlib proof route is new.",
+        "The contrast packing (−4,8,9,9) is only shown to contain 9; HKRS list quadratic (3n², 6n²) and quartic obstructions for it, so it is not unobstructed.",
+        "The mod-24 residue-set comparison is computational, not in Lean.",
+        "The full Apollonian local-global problem remains open."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 76,
+      "archive_id": "0TH-2026-018",
+      "key": "T2a+T2b",
+      "status": "ACTIVE",
+      "title": "Abelian sandpile toppling laws and small-grid Laplacian computations",
+      "statement": "For symmetric zero-diagonal adjacency on integer configurations: topplings commute; any legal trace fires each vertex at most w times for a stabilizing odometer w; two legal stabilizing traces have equal counts and results. The 2×2 grid Dirichlet Laplacian has determinant 192; the 3×3 grid Laplacian is integer-similar to a block-diagonal matrix with 4·det(B₂)²·det(B₄) = 100352; explicit Dhar traces reach the stated identity configurations.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "det(L_3×3) = 100352 itself relies on unformalized determinant multiplicativity; A₂ determinants are Rust/Python only.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t2a_abelian_sandpile_confluence_and_least_action",
+          "file": "lean/PalomarSolution.lean",
+          "line": 35
+        },
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t2b_dhar_critical_identity_and_grid_orders",
+          "file": "lean/PalomarSolution.lean",
+          "line": 38
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound (t2a); propext, Quot.sound (t2b)",
+      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "No sink condition and no termination of stabilization are formalized.",
+        "No 9×9 determinant and no Matrix-Tree or sandpile-group-order link is stated in Lean.",
+        "The identity configurations are shown to be stabilizations from Dhar's formula, not proved to be the group identity.",
+        "Abelian property (Dhar 1990) and least action principle are known."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 77,
+      "archive_id": "0TH-2026-018",
+      "key": "T3a+T3b",
+      "status": "ACTIVE",
+      "title": "Fricke-Cohn trace identity and congruences of Markov numbers, including Zhang's mod-32 theorem",
+      "statement": "For 2×2 integer matrices of determinant 1, tr(A)² + tr(B)² + tr(AB)² = tr A·tr B·tr AB + tr[A,B] + 2, and Cohn-tree nodes give Markov triples via tr/3. For triples reachable from (1,1,1) by Vieta moves: pairwise coprime; odd prime divisors are ≡ 1 (mod 4); odd entries are ≡ 1 (mod 4); even entries are ≡ 2 (mod 32), with 2 and 34 both occurring.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Mod-32 statement is Zhang, Acta Arith. 128 (2007), arXiv:math/0612620.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t3a_sl2z_fricke_cohn_markov_correspondence",
+          "file": "lean/PalomarSolution.lean",
+          "line": 50
+        },
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t3b_markov_coprimality_odd_primes_and_mod32",
+          "file": "lean/PalomarSolution.lean",
+          "line": 53
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The mod-32 theorem and its sharpness witnesses were published by Ying Zhang (2007); the repository calls it 'our Exact Mod-32 Theorem' and does not cite Zhang.",
+        "Statements are for the first coordinate of tree triples; that every positive Markov triple lies in the tree (Markov's theorem) is not formalized.",
+        "The exported Cohn statement uses integer division tr/3 without stating 3 | tr.",
+        "The Markov uniqueness conjecture (NT-083) remains open and is not addressed."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 78,
+      "archive_id": "0TH-2026-018",
+      "key": "T3d",
+      "status": "ACTIVE",
+      "title": "Exchange identities along one five-step mutation sequence of the Markov quiver",
+      "statement": "For explicit subtraction-free integer polynomials P₁,…,P₅ in x₁, x₂, x₃: P₁P₄ = x₁⁴x₂²x₃²P₂² + P₃² and P₂P₅ = x₁⁶x₂⁴x₃²P₃² + P₄² identically; each Pᵢ ≥ 1 at positive integer inputs; at (1,1,1) the values are 2, 5, 29, 433, 37666.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Positive Laurent coefficients follow by inspection of the definitions, not from a stated theorem.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t3d_cluster_algebra_markov_laurent_positivity",
+          "file": "lean/PalomarSolution.lean",
+          "line": 59
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "One mutation path of depth five; the general Laurent phenomenon (Fomin-Zelevinsky 2002) and positivity (Lee-Schiffler 2015) are known and not formalized.",
+        "Lean's 'positivity' is positivity of values at positive integers."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 79,
+      "archive_id": "0TH-2026-018",
+      "key": "T3e",
+      "status": "ACTIVE",
+      "title": "Admissible coefficients of the four-variable Markov-Hurwitz equation",
+      "statement": "Positive integer solutions of x₁² + x₂² + x₃² + x₄² = a·x₁x₂x₃x₄ exist only for a = 1 (all xᵢ ≡ 2 mod 4) or a = 4 (all xᵢ odd); there are none for a ∈ {2, 3} or a ≥ 5. Explicit solutions are given for a = 1 and a = 4.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t3e_markov_hurwitz_n4_complete_classification",
+          "file": "lean/PalomarSolution.lean",
+          "line": 62
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Classical (Hurwitz 1907, per secondary sources); Hurwitz is not cited in the repository.",
+        "The description of all solutions as Vieta orbits is not part of the exported statement, so 'complete classification' overstates it.",
+        "Hurwitz equations for n ≥ 5 are not addressed."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 80,
+      "archive_id": "0TH-2026-019",
+      "key": "T4b",
+      "status": "ACTIVE",
+      "title": "Sedenion box-kite structure of the 42 assessors",
+      "statement": "The 42 sedenion pairs (i, j), 1 ≤ i ≤ 7, 9 ≤ j ≤ 15, j ≠ i+8, with adjacency '(e_i+e_j)(e_k ± e_l) = 0 for some sign', form a 4-regular graph that splits into 7 components of 6 vertices, each 4-regular (an octahedron K_{2,2,2}); span{e_0,…,e_8} is norm-multiplicative.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": {
+        "citation": "R. de Marrais, The 42 Assessors and the Box-Kites They Fly (2000), arXiv:math/0011260",
+        "url": "https://arxiv.org/abs/math/0011260",
+        "locator": "abstract (source of the known result, not an open question)"
+      },
+      "lean": [
+        {
+          "decl": "CDTerrace.Palomar.prove_t4b",
+          "file": "lean/PalomarSolution.lean",
+          "line": 36
+        },
+        {
+          "decl": "CDTerrace.sedenion_box_kites_7x6",
+          "file": "lean/CDTerrace/FiniteCertificates.lean",
+          "line": 1630
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The 42 assessors and the 7 box-kites are due to de Marrais (arXiv:math/0011260, 2000); this is a formal re-verification.",
+        "The 'no edges between components' conjunct holds by the definition of the adjacency predicate."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 81,
+      "archive_id": "0TH-BUILD-004",
+      "key": "UM-core",
+      "status": "ACTIVE",
+      "title": "Lean formalization of classical structural lemmas and finite checks for eight open-problem domains",
+      "statement": "In Lean 4.35.0 without Mathlib: the Collatz shortcut-map intercept law, Terras parity-word bijection, Böhm–Sontacchi cycle equation, and cycles at −5, −17 (3n+1) and 5, 17 (3n−1); Mordell's mod-840 Erdős–Straus reduction; for speeds 1..n, some runner is within 1/(n+1) at every rational time, and Lonely Runner for n = 1, 2; Brocard solutions for n ≤ 20; infinitely many primes; arbitrarily long prime gaps; Goldbach for even n ≤ 100; R(3,3) = 6.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Perfect-number items use a computational divSum whose equality with σ(n) is checked only in pytest; finite checks by kernel decide.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "FormalAtlas.Challenge.thm_collatz_exact_intercept_law",
+          "file": "lean/Solution.lean",
+          "line": 22
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_terras_parity_word_bijection",
+          "file": "lean/Solution.lean",
+          "line": 27
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_erdos_straus_mordell_840",
+          "file": "lean/Solution.lean",
+          "line": 94
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_lonely_runner_sharpness_all_n",
+          "file": "lean/Solution.lean",
+          "line": 118
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_brocard_exhaustive_le_20",
+          "file": "lean/Solution.lean",
+          "line": 173
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_ramsey_R33_upper",
+          "file": "lean/Solution.lean",
+          "line": 222
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_ramsey_R33_lower",
+          "file": "lean/Solution.lean",
+          "line": 226
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_collatz_epsilon_invariance_barrier",
+          "file": "lean/Solution.lean",
+          "line": 58
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_collatz_cycle_equation",
+          "file": "lean/Solution.lean",
+          "line": 68
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_collatz_negative_cycles",
+          "file": "lean/Solution.lean",
+          "line": 76
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_lonely_runner_n1",
+          "file": "lean/Solution.lean",
+          "line": 122
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_lonely_runner_n2",
+          "file": "lean/Solution.lean",
+          "line": 126
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_euclid_infinitely_many_primes",
+          "file": "lean/Solution.lean",
+          "line": 178
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_arbitrary_prime_gaps",
+          "file": "lean/Solution.lean",
+          "line": 182
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_goldbach_even_le_100",
+          "file": "lean/Solution.lean",
+          "line": 195
+        },
+        {
+          "decl": "FormalAtlas.Challenge.thm_mersenne_exponent_prime",
+          "file": "lean/Solution.lean",
+          "line": 209
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "0604df5c70c850df44f3fdd20519e46c82925224",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "No open conjecture is proven: Collatz, Erdős–Straus, Lonely Runner, Brocard, twin primes, Goldbach, odd perfect numbers and Mersenne infinitude all remain open.",
+        "All headline results are classical or elementary. The Lonely Runner conjecture is proved for up to 13 runners in recent preprints (Rosenfeld, arXiv:2509.14111; Trakulthongchai, arXiv:2511.22427; Sungkawichai and Trakulthongchai, arXiv:2604.23906), far beyond the n ≤ 2 cases and the t = 1/4 subfamily of n = 3 formalized here.",
+        "The n = 3 Lonely Runner item covers 27 of 64 speed-triple classes mod 4, not 7/8 as the prose states.",
+        "The 'ε-invariance barrier' is formalized only as facts about the 3n−1 map; the claim that ε-symmetric arguments cannot settle Collatz is informal.",
+        "Six-kernel replay and lake comparator were not re-run locally; evidence is CI run 45742865067 at the pinned commit.",
+        "Also kernel-checked: 2^n − 1 prime implies n prime (thm_mersenne_exponent_prime)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 82,
+      "archive_id": "0TH-BUILD-001",
+      "key": "INV-1",
+      "status": "ACTIVE",
+      "title": "Lean invariants of the CELLULOGONIC MECHA discrete reaction, membrane and development model",
+      "statement": "For the integer model in lean/CellulogonicProofs/Spec.lean: each of the 19 tabulated reactions has zero mass delta and an exact first-law energy balance for all 4 solvents and every rotor stoichiometry nH; heat per reaction is positive when nH ≥ minCRing sv; further theorems give fission and budding inequalities, power-scaling bounds, a clamped Fröhlich update bounded by 1000, and a contact-exchange energy decrease. They concern the Lean model, not src/*.c.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Lean proves Spec.lean, not the C11 engine; C behaviour, parity and statistics rest on CI tests outside Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Cellulogonic.StoichiometryThermo.T01_all_reactions_conserve_mass",
+          "file": "lean/CellulogonicProofs/StoichiometryThermo.lean",
+          "line": 19
+        },
+        {
+          "decl": "Cellulogonic.StoichiometryThermo.T03_all_reactions_strict_second_law",
+          "file": "lean/CellulogonicProofs/StoichiometryThermo.lean",
+          "line": 33
+        },
+        {
+          "decl": "Cellulogonic.MembraneGeometry.T16_optimal_area_partition_strictly_improves_budding",
+          "file": "lean/CellulogonicProofs/MembraneGeometry.lean",
+          "line": 132
+        },
+        {
+          "decl": "Cellulogonic.BioenergeticsEndosymbiosis.T22_endosymbiotic_scaling_liberation",
+          "file": "lean/CellulogonicProofs/BioenergeticsEndosymbiosis.lean",
+          "line": 56
+        },
+        {
+          "decl": "Cellulogonic.CytoskeletonNanomechanics.T48_frohlich_mt_coherence_pumping_threshold",
+          "file": "lean/CellulogonicProofs/CytoskeletonNanomechanics.lean",
+          "line": 68
+        },
+        {
+          "decl": "Cellulogonic.MorphogeneticGRN.T52_steinberg_differential_adhesion_sorting",
+          "file": "lean/CellulogonicProofs/MorphogeneticGRN.lean",
+          "line": 39
+        },
+        {
+          "decl": "Cellulogonic.StoichiometryThermo.T02_all_reactions_first_law_exact",
+          "file": "lean/CellulogonicProofs/StoichiometryThermo.lean",
+          "line": 24
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "d033ab025ede1118b8b1d3c9a9f9d876d97f3542",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NOT_SEARCHED"
+      },
+      "limits": [
+        "The theorems are about the Lean Spec.lean definitions; no theorem links them to src/*.c.",
+        "Several of the 78 theorems are elementary arithmetic identities or contain literal-only conjuncts (T25, T27, T40, T41, T44, T54, C62, NV08).",
+        "Statements over hard-coded constant tables (reaction stoichiometry, solvent c-ring thresholds, organ budgets) hold only for those constants.",
+        "No open problem is addressed; the registry states 0/1,900 Mega-Atlas problems retired, and nothing seen contradicts that.",
+        "No biological, wet-lab, physical or sentience claim is supported by these proofs."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 83,
+      "archive_id": "0TH-BUILD-002",
+      "key": "INV-1",
+      "status": "ACTIVE",
+      "title": "Lean 4 model invariants for the PLANARIA .hbin erasure-coded executable format",
+      "statement": "In the Lean model: GF(2^8) arithmetic mod 0x11D forms a field; the 2×2 Cauchy code decodes exactly for distinct coordinates ≥ 2 (k = 2 only); the fixed schedule gives each half ≥ k+2 cells per bundle; a burst of ≤ 16 bytes touches ≤ 8 even and ≤ 8 odd positions; a quorum with two tied maximal buckets of count ≥ 2 returns none; RAM masking stays below 4096; CNOT preserves the squared norm.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Concerns a Lean model, not extracted code; RS decoding, k>2 recovery and benchmarks are tested outside Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Planaria.GF256.gf256_cauchy2_exact_decode",
+          "file": "lean/PlanariaProofs/GF256.lean",
+          "line": 639
+        },
+        {
+          "decl": "Planaria.Mitosis.planaria_schedule_nodup_and_sorted_halves",
+          "file": "lean/PlanariaProofs/MitosisBounds.lean",
+          "line": 156
+        },
+        {
+          "decl": "Planaria.Byzantine.interleaved_burst_16_even_odd_bound",
+          "file": "lean/PlanariaProofs/ByzantineImmune.lean",
+          "line": 151
+        },
+        {
+          "decl": "Planaria.Byzantine.unpinned_quorum_tie_fail_closed",
+          "file": "lean/PlanariaProofs/ByzantineImmune.lean",
+          "line": 462
+        },
+        {
+          "decl": "Planaria.Xenograft.pvm32_ram_bounds_invariant",
+          "file": "lean/PlanariaProofs/XenograftABI.lean",
+          "line": 24
+        },
+        {
+          "decl": "Planaria.QuantumTemporal.cnot4Q_preserves_normSq4",
+          "file": "lean/PlanariaProofs/QuantumTemporal.lean",
+          "line": 150
+        },
+        {
+          "decl": "Planaria.GF256.gf256Field",
+          "file": "lean/PlanariaProofs/GF256.lean",
+          "line": 462
+        },
+        {
+          "decl": "Planaria.Mitosis.planaria_schedule_exact_halves",
+          "file": "lean/PlanariaProofs/MitosisBounds.lean",
+          "line": 135
+        },
+        {
+          "decl": "Planaria.QuantumTemporal.hadamardScaled4Q_normSq4",
+          "file": "lean/PlanariaProofs/QuantumTemporal.lean",
+          "line": 88
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "6979cc1be4eaaf8d6af30387fe1ace3ec7586d00",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Cauchy decoding is proved only for k = 2; bundles with k in {4, 6, 8, 16} rely on the classical Cauchy determinant theorem and tests.",
+        "No Reed-Solomon code or decoder is formalized; the 8-errors-per-lane radius is arithmetic on 254 − 238 + 1.",
+        "The Merkle quarantine theorem assumes an authenticity-root correspondence (HashBinding) rather than deriving it from a hash.",
+        "The JavaScript runtime, Python oracle and survival benchmarks lie outside Lean.",
+        "The field laws, Cauchy inversion and counting bounds are textbook mathematics; no open problem is addressed.",
+        "The quorum result also needs every other bucket to be at most the tied count; lanes are modelled as even and odd byte positions.",
+        "The scaled Hadamard doubles the squared norm (hadamardScaled4Q_normSq4), so 'integer-amplitude gates preserve the squared norm' holds for CNOT, not for H."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 84,
+      "archive_id": "0TH-BUILD-003",
+      "key": "ENG-1",
+      "status": "ACTIVE",
+      "title": "Lean invariants of a discrete p-adic tree holography model",
+      "statement": "For the software model's own definitions: base-p digit reversal is an involution mapping p-adic balls to contiguous blocks; for a hand-coded BTZ cost model and a subcritical bridge-edge cost model, stated lower bounds on transport cost hold and explicit plans reach them; per-vertex half-charges sum to −(p−1); a cut-capacity form of strong subadditivity holds under its hypotheses; a packet identity over Z[i] and a rank-1 Sherman–Morrison identity hold.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Spectral, soliton-dynamics and solver-accuracy claims are numerical or exact-rational Python checks outside Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Ultrametrica.monna_involution_universal",
+          "file": "lean/UltrametricaProofs/Basic.lean",
+          "line": 157
+        },
+        {
+          "decl": "Ultrametrica.padic_ball_monna_contiguity",
+          "file": "lean/UltrametricaProofs/Basic.lean",
+          "line": 261
+        },
+        {
+          "decl": "Ultrametrica.btz_wasserstein_lower_bound",
+          "file": "lean/UltrametricaProofs/HolographyCurvature.lean",
+          "line": 219
+        },
+        {
+          "decl": "Ultrametrica.btz_primal_cost_exact",
+          "file": "lean/UltrametricaProofs/HolographyCurvature.lean",
+          "line": 325
+        },
+        {
+          "decl": "Ultrametrica.gen_bridge_wasserstein_lower_bound_sub",
+          "file": "lean/UltrametricaProofs/HolographyCurvature.lean",
+          "line": 1457
+        },
+        {
+          "decl": "Ultrametrica.gen_bridge_primal_sub_optimal",
+          "file": "lean/UltrametricaProofs/HolographyCurvature.lean",
+          "line": 1559
+        },
+        {
+          "decl": "Ultrametrica.global_multi_edge_vertex_charge_conservation",
+          "file": "lean/UltrametricaProofs/HolographyCurvature.lean",
+          "line": 1085
+        },
+        {
+          "decl": "Ultrametrica.rt_strong_subadditivity",
+          "file": "lean/UltrametricaProofs/HolographyCurvature.lean",
+          "line": 1204
+        },
+        {
+          "decl": "Ultrametrica.multi_ball_kozyrev_soliton_list",
+          "file": "lean/UltrametricaProofs/SolitonAndSolver.lean",
+          "line": 214
+        },
+        {
+          "decl": "Ultrametrica.sherman_morrison_exact_identity",
+          "file": "lean/UltrametricaProofs/SolitonAndSolver.lean",
+          "line": 394
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound (union over all 149 audited declarations; individual theorems use subsets)",
+      "audited_commit": "06461739b0e917e439e9da46e27575cbfac69580",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Concerns the repository's discrete software model only; no continuum, physical or quantum-gravity statement is proved and no open problem is retired.",
+        "Lean does not define the Vladimirov operator, Kozyrev wavelets, the hybrid Hamiltonian H_theta, time evolution, or the O(V) bulk solver; those claims are numerical or exact-rational checks.",
+        "The BTZ curvature law is proved for a hand-coded 3-class neighbour reduction with marginals (M, M, pM); the reduction from the full graph is not formalized.",
+        "Theorem V-Global is formalized as per-vertex sums of w_e/W_u plus a definitional case split; no theorem sums curvature over the edges of an actual finite tree.",
+        "Graph-cut submodularity and the Headrick-Takayanagi strong subadditivity argument are known results; Monna digit reversal properties are standard.",
+        "The 149-declaration count includes literal or definitional identities such as even_prime_self_conjugate : (1 : Nat) = 2 - 1.",
+        "Six-kernel comparator checks ran only in Ubuntu CI run 45747436539 (bubblewrap); they were not re-run in this audit.",
+        "The bridge-edge plan's non-negativity is not stated in Lean (gen_bridge_primal_sub_optimal), so its feasibility is not kernel-checked; the BTZ plan's is (btz_primal_feasible).",
+        "Half-charge conservation holds for any integer weight list with positive sum; its link to curvature is definitional.",
+        "Strong subadditivity uses Nat edge weights and Bool vertex sets and takes S(ABC) and S(B) as hypothesised lower bounds over homologous cuts."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 85,
+      "archive_id": "0TH-BUILD-007",
+      "key": "INV-1",
+      "status": "ACTIVE",
+      "title": "Scoring, taxonomy, graph and ratchet invariants of the Mega-Atlas software model",
+      "statement": "In the atlas's Lean model: CSS, Titan, leverage and AQS bounds for in-range inputs; CSS, Titan and leverage monotone in each input (CSS non-increasing in tractability); exhaustive quadrant iff characterisations; a Q1 leverage floor of 56; a monotone era map; sizes of the 8-pillar, 28-superdomain, 8-substrate and 7-layer lists and completeness of the first three; gradient, margin and apex-keystone results; multigraph handshaking and edge-hierarchy lemmas; a dedup length bound; keep/discard ratchet rules; witnesses and refutations.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Lean-to-Python formula correspondence and all properties of the 1,900-row data are checked by Python tests, not Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "MegaAtlasProofs.Solution.prove_all_mega_atlas_invariants",
+          "file": "lean/Solution.lean",
+          "line": 97
+        },
+        {
+          "decl": "MegaAtlasProofs.Palomar.prove_all_mega_atlas_invariants",
+          "file": "lean/PalomarSolution.lean",
+          "line": 44
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.cssBps_le_max",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 71
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.cssBps_mono_diff",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 83
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.cssBps_mono_cent",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 88
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.cssBps_mono_age",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 93
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.cssBps_anti_tract",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 98
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.titanCentis_bounds",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 114
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.titanCentis_mono_diff",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 123
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.titanCentis_mono_impact",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 128
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.titanCentis_mono_interdisc",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 133
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.titanCentis_mono_deg",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 138
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.leverageTenths_bounds",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 145
+        },
+        {
+          "decl": "MegaAtlasProofs.Scoring.leverageTenths_mono",
+          "file": "lean/MegaAtlasProofs/Scoring.lean",
+          "line": 159
+        },
+        {
+          "decl": "MegaAtlasProofs.AutoResearchInvariants.aqsBps_le_max",
+          "file": "lean/MegaAtlasProofs/AutoResearchInvariants.lean",
+          "line": 52
+        },
+        {
+          "decl": "MegaAtlasProofs.Quadrants.classify_eq_Q1_iff",
+          "file": "lean/MegaAtlasProofs/Quadrants.lean",
+          "line": 44
+        },
+        {
+          "decl": "MegaAtlasProofs.Quadrants.classify_eq_Q2_iff",
+          "file": "lean/MegaAtlasProofs/Quadrants.lean",
+          "line": 49
+        },
+        {
+          "decl": "MegaAtlasProofs.Quadrants.classify_eq_Q3_iff",
+          "file": "lean/MegaAtlasProofs/Quadrants.lean",
+          "line": 54
+        },
+        {
+          "decl": "MegaAtlasProofs.Quadrants.classify_eq_Q4_iff",
+          "file": "lean/MegaAtlasProofs/Quadrants.lean",
+          "line": 59
+        },
+        {
+          "decl": "MegaAtlasProofs.Quadrants.classify_exhaustive",
+          "file": "lean/MegaAtlasProofs/Quadrants.lean",
+          "line": 74
+        },
+        {
+          "decl": "MegaAtlasProofs.Quadrants.Q1_leverage_ge_56",
+          "file": "lean/MegaAtlasProofs/Quadrants.lean",
+          "line": 100
+        },
+        {
+          "decl": "MegaAtlasProofs.Quadrants.computeEra_mono",
+          "file": "lean/MegaAtlasProofs/Quadrants.lean",
+          "line": 134
+        },
+        {
+          "decl": "MegaAtlasProofs.Taxonomy.pillar_count_eq_8",
+          "file": "lean/MegaAtlasProofs/Taxonomy.lean",
+          "line": 105
+        },
+        {
+          "decl": "MegaAtlasProofs.Taxonomy.superdomain_count_eq_28",
+          "file": "lean/MegaAtlasProofs/Taxonomy.lean",
+          "line": 108
+        },
+        {
+          "decl": "MegaAtlasProofs.Taxonomy.allSuperdomains_complete",
+          "file": "lean/MegaAtlasProofs/Taxonomy.lean",
+          "line": 119
+        },
+        {
+          "decl": "MegaAtlasProofs.Taxonomy.allPillars_complete",
+          "file": "lean/MegaAtlasProofs/Taxonomy.lean",
+          "line": 122
+        },
+        {
+          "decl": "MegaAtlasProofs.LayerGradients.substrate_count_eq_8",
+          "file": "lean/MegaAtlasProofs/LayerGradients.lean",
+          "line": 97
+        },
+        {
+          "decl": "MegaAtlasProofs.LayerGradients.layer_count_eq_7",
+          "file": "lean/MegaAtlasProofs/LayerGradients.lean",
+          "line": 100
+        },
+        {
+          "decl": "MegaAtlasProofs.LayerGradients.allSubstrates_complete",
+          "file": "lean/MegaAtlasProofs/LayerGradients.lean",
+          "line": 103
+        },
+        {
+          "decl": "MegaAtlasProofs.LayerGradients.hardnessTractGradient_bounds",
+          "file": "lean/MegaAtlasProofs/LayerGradients.lean",
+          "line": 111
+        },
+        {
+          "decl": "MegaAtlasProofs.LayerGradients.cssTitanMarginBps_bounds",
+          "file": "lean/MegaAtlasProofs/LayerGradients.lean",
+          "line": 132
+        },
+        {
+          "decl": "MegaAtlasProofs.LayerGradients.bridgeMarginBps_le_10000",
+          "file": "lean/MegaAtlasProofs/LayerGradients.lean",
+          "line": 140
+        },
+        {
+          "decl": "MegaAtlasProofs.LayerGradients.apexKeystone_requires_3_adjacent",
+          "file": "lean/MegaAtlasProofs/LayerGradients.lean",
+          "line": 169
+        },
+        {
+          "decl": "MegaAtlasProofs.GraphInvariants.handshaking_lemma",
+          "file": "lean/MegaAtlasProofs/GraphInvariants.lean",
+          "line": 95
+        },
+        {
+          "decl": "MegaAtlasProofs.GraphInvariants.edge_hierarchy",
+          "file": "lean/MegaAtlasProofs/GraphInvariants.lean",
+          "line": 149
+        },
+        {
+          "decl": "MegaAtlasProofs.GraphInvariants.dedupBy_length_le",
+          "file": "lean/MegaAtlasProofs/GraphInvariants.lean",
+          "line": 164
+        },
+        {
+          "decl": "MegaAtlasProofs.AutoResearchInvariants.failed_gates_always_discard",
+          "file": "lean/MegaAtlasProofs/AutoResearchInvariants.lean",
+          "line": 80
+        },
+        {
+          "decl": "MegaAtlasProofs.AutoResearchInvariants.shouldKeep_iff",
+          "file": "lean/MegaAtlasProofs/AutoResearchInvariants.lean",
+          "line": 86
+        },
+        {
+          "decl": "MegaAtlasProofs.AutoResearchInvariants.updateBest_nondecreasing",
+          "file": "lean/MegaAtlasProofs/AutoResearchInvariants.lean",
+          "line": 92
+        },
+        {
+          "decl": "MegaAtlasProofs.AutoResearchInvariants.updateBest_strict_on_keep",
+          "file": "lean/MegaAtlasProofs/AutoResearchInvariants.lean",
+          "line": 102
+        },
+        {
+          "decl": "MegaAtlasProofs.NonVacuity.nonvac_all_hypotheses",
+          "file": "lean/MegaAtlasProofs/NonVacuity.lean",
+          "line": 139
+        },
+        {
+          "decl": "MegaAtlasProofs.Solution.m8_adversarial_refutations",
+          "file": "lean/Solution.lean",
+          "line": 85
+        }
+      ],
+      "axioms": "propext, Quot.sound",
+      "audited_commit": "9e16554260f624df7a023f4cf2f0a76e82f5435f",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Retires none of the 1,900 catalogued open problems.",
+        "No Lean statement refers to the atlas data, its 5,808-edge graph, or biconnectivity.",
+        "Several counted theorems are literal arithmetic identities or restate a hypothesis.",
+        "Six-kernel replay is CI-only (Linux bubblewrap) and was not re-run in this audit.",
+        "Bounds need the stated input ranges, for example CSS ≤ 10000 when difficulty, centrality and age are ≤ 100, and Titan in [90, 1000] for inputs in [1, 10].",
+        "The 7-layer list has a size theorem only, and the era map has monotonicity and samples but no iff characterisation.",
+        "AQS has a bound but is shown monotone in only three of its five inputs, so AQS monotonicity is not claimed.",
+        "The handshaking lemma needs a duplicate-free vertex list that contains every edge endpoint."
+      ],
+      "check": "cd lean && lake build && lake env lean MegaAtlasProofs/VerifyAxioms.lean"
+    },
+    {
+      "n": 86,
+      "archive_id": "0TH-BUILD-008",
+      "key": "suite",
+      "status": "ACTIVE",
+      "title": "Discrete invariant suite for the Cellular Engine Omega software model",
+      "statement": "Lean 4.35.0 lemmas over Nat, Int and List about the engine's discrete software model: commutation of pointwise updates at distinct indices of a Nat→Int map and list-sum conservation under local steps, an integer projection that zeroes a list sum, 2×2 integer Jacobian sign algebra, Nat power inequalities, closed arithmetic checks on hard-coded constants, and equalities among C11-exported receipt literals (O63, O72); 100 audited items.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Receipt values come from one C11 run outside Lean; floating-point solvers and C memory safety are tested empirically, not proved.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "OmegaCellular.BioInteractionNets.O42_active_pair_diamond_strong_confluence",
+          "file": "lean/OmegaCellularProofs/BioInteractionNets.lean",
+          "line": 31
+        },
+        {
+          "decl": "OmegaCellular.VirtualCellManifold.O56_virtual_cell_physics_projection_conservation",
+          "file": "lean/OmegaCellularProofs/VirtualCellManifold.lean",
+          "line": 45
+        },
+        {
+          "decl": "OmegaCellular.EigenProofreadingInfo.O06_hopfield_ninio_proofreading_beats_equilibrium",
+          "file": "lean/OmegaCellularProofs/EigenProofreadingInfo.lean",
+          "line": 18
+        },
+        {
+          "decl": "OmegaCellular.TuringFeinbergCRNT.O12_turing_equal_diffusion_impossibility",
+          "file": "lean/OmegaCellularProofs/TuringFeinbergCRNT.lean",
+          "line": 21
+        },
+        {
+          "decl": "OmegaCellular.VerifyTraceReceipt.O63_live_c11_receipt_verified",
+          "file": "lean/OmegaCellularProofs/VerifyTraceReceipt.lean",
+          "line": 90
+        },
+        {
+          "decl": "OmegaCellular.SubstratesCube.O72_live_c11_cube_receipt_verified",
+          "file": "lean/OmegaCellularProofs/SubstratesCube.lean",
+          "line": 34
+        }
+      ],
+      "axioms": "propext, Quot.sound",
+      "audited_commit": "4b257af5f2659ab29a29dc026a17d1c92d011ace",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NOT_SEARCHED"
+      },
+      "limits": [
+        "The lemmas concern the integer software model; no biological or continuum-physics law (Poincaré–Hopf, Turing instability, TUR) is formalized in general.",
+        "At least 16 of the 100 items are closed arithmetic checks on literals, for example 661 + 274 + 20 + 45 = 1000.",
+        "O63 and O72 check equalities among literals written by one C11 run at seed 2026001; no hash is verified in Lean.",
+        "Independent-checker and comparator runs were confirmed only through CI run 45810663954, not reproduced locally.",
+        "Solves no open problem; the repository states 0/1,900 Mega-Atlas problems retired."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 87,
+      "archive_id": "0TH-BUILD-009",
+      "key": "SUITE",
+      "status": "ACTIVE",
+      "title": "Kernel-checked finite-field and bitvector invariants of the AUTOPHAGE engine model",
+      "statement": "For the repository's Lean models: under a trial-division irreducibility test (divisors of degree 1–4), exactly 30 of the 256 polynomials x⁸+p over F₂ pass, and they match the 30-entry table in src/galois_math.c; for each, the 2×2 Cauchy code [[1,3],[5,1]] recovers both data bytes from the two parity bytes; affine GF(2) maps with linear inverses round-trip; Fredkin conserves popcount; masked-XOR kinship is transitive; multi-step integer ledgers keep a zero residual.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Facts about Lean definitions, not the emitted x86-64 code; several of the 48 theorems are one-line arithmetic identities.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Autophage.T12a_full_trial_div_matches_c11_table",
+          "file": "lean/AutophageProofs.lean",
+          "line": 614
+        },
+        {
+          "decl": "Autophage.T16_planarian_50pct_exact_recovery",
+          "file": "lean/AutophageProofs.lean",
+          "line": 771
+        },
+        {
+          "decl": "Autophage.T05_weismann_exact_roundtrip",
+          "file": "lean/AutophageProofs.lean",
+          "line": 172
+        },
+        {
+          "decl": "Autophage.T20a_fredkin64_popcnt_conserved",
+          "file": "lean/AutophageProofs.lean",
+          "line": 876
+        },
+        {
+          "decl": "Autophage.T25_ultrametric_strong_triangle",
+          "file": "lean/AutophageProofs.lean",
+          "line": 907
+        },
+        {
+          "decl": "Autophage.T29a_first_law_ledger_multistep",
+          "file": "lean/AutophageProofs.lean",
+          "line": 984
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "1956c2cc54845ebadc54b2a5276cbc66bf031a8b",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The theorems are about Lean models; JIT machine-code emission, C11 memory safety and FP64 drift are checked only by tests.",
+        "T21, T28, T29 and T30 are tautologies (for example sink ≤ sink + rad) despite Landauer, First-Law and Second-Law names.",
+        "The count of 30 irreducible binary octics and the reversible-gate identities are textbook results.",
+        "No open problem, including AI-045 or BIO-001, is resolved; biological terms are metaphors (LIMITATIONS.md sec. 1).",
+        "Six-kernel acceptance was confirmed from the CI log only; replay needs Linux bubblewrap."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 88,
+      "archive_id": "0TH-BUILD-010",
+      "key": "INV-1",
+      "status": "ACTIVE",
+      "title": "Lean invariants for a ten-pool integer energy-ledger model and helper encodings",
+      "statement": "In the Lean model of a ten-field unbounded-integer ledger: guarded ATP→heat, patch→gut and ATP→tissue transfers, the equal-amount pair ATP→neural then neural→heat, and the composite tick built from them leave the field sum unchanged; ATP→heat never lowers the heat field and preserves non-negativity of all fields. Also: a region<4 edit guard returns its input, 2-bit ternary encoding round-trips on {−1,0,1}, 2·(1+2+…+n)=n(n+1), 16·2^Q≤16384 for Q≤10, and hard-coded receipt constants satisfy stated equalities and bounds.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Statements are about Lean definitions in lean/NoeticProofs/Spec.lean; the C11 engine is linked only by constants printed by export-lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "NoeticProofs.N01_atp_to_heat_conserves_sum",
+          "file": "lean/NoeticProofs.lean",
+          "line": 20
+        },
+        {
+          "decl": "NoeticProofs.N04_patch_to_gut_conserves_sum",
+          "file": "lean/NoeticProofs.lean",
+          "line": 44
+        },
+        {
+          "decl": "NoeticProofs.N07_autopoietic_repair_conserves_sum",
+          "file": "lean/NoeticProofs.lean",
+          "line": 75
+        },
+        {
+          "decl": "NoeticProofs.N05_workspace_billing_conserves_sum",
+          "file": "lean/NoeticProofs.lean",
+          "line": 50
+        },
+        {
+          "decl": "NoeticProofs.N09_closed_tick_exact_conservation",
+          "file": "lean/NoeticProofs.lean",
+          "line": 89
+        },
+        {
+          "decl": "NoeticProofs.N02_atp_to_heat_monotone_sink",
+          "file": "lean/NoeticProofs.lean",
+          "line": 26
+        },
+        {
+          "decl": "NoeticProofs.N03_atp_to_heat_preserves_nonneg",
+          "file": "lean/NoeticProofs.lean",
+          "line": 34
+        },
+        {
+          "decl": "NoeticProofs.N25_ring0_acl_blocks_protected_regions",
+          "file": "lean/NoeticProofs.lean",
+          "line": 203
+        },
+        {
+          "decl": "NoeticProofs.N29_packed_b158_2bit_roundtrip",
+          "file": "lean/NoeticProofs.lean",
+          "line": 226
+        },
+        {
+          "decl": "NoeticProofs.N15_wilcoxon_rank_sum_identity",
+          "file": "lean/NoeticProofs.lean",
+          "line": 124
+        },
+        {
+          "decl": "NoeticProofs.N33_quantum_cap_10_bytes_le_16384",
+          "file": "lean/NoeticProofs.lean",
+          "line": 257
+        },
+        {
+          "decl": "NoeticProofs.N24_live_c11_receipt_verified",
+          "file": "lean/NoeticProofs.lean",
+          "line": 187
+        }
+      ],
+      "axioms": "propext, Quot.sound (N01, N03, N09, N15, N33); none (N24, N25, N29); Classical.choice appears only in N22",
+      "audited_commit": "c4301d926fa12334f8f8f54b2994dfc12ff649b8",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NOT_SEARCHED"
+      },
+      "limits": [
+        "Lean's Ledger10 uses unbounded Int with 10 fields; the C11 ledger is int64_t with 11 slots, and no theorem covers overflow or the C source.",
+        "18 of the 54 theorems are closed numeral identities (for example N41: 825 - 5 = 820) and certify nothing about the engine.",
+        "N24, N32 and N48 only check, by decide, constants printed by one C11 run; CI regenerates that file on Linux, where the world-state SHA-256 differs from the committed Windows receipt.",
+        "N25 'Ring-0 ACL' is a one-line if-expression in Lean, not a hardware or C11 access-control proof; N02/N06 'Second-Law' are field monotonicity under a non-negative guard.",
+        "No consciousness, cognition, biology or physics result is shown; 29 cognitive checks are indicator-only by the repository's own statement.",
+        "ATP→neural and neural→heat are proved to conserve the sum only as a pair with the same amount, not as separate public theorems.",
+        "The added N02, N04, N05 and N07 depend on propext and Quot.sound, like N01."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 89,
+      "archive_id": "0TH-BUILD-011",
+      "key": "INV",
+      "status": "ACTIVE",
+      "title": "Arithmetic conservation and addressing checks for an abstract model of an artificial-life engine",
+      "statement": "In the engine's Lean model over ℕ: moving dm≤bioMass from biomass to cell mass, or de≤bioEnergy to heat, preserves the respective total; for cur≤cap a capped receive splits q into kept+rejected=q with cur+kept≤cap; six face fluxes each ≤amt/8 sum to ≤amt; converting k≤nutXMass weight-24 units into weight-16 biomass plus thermal energy preserves weighted energy; for uid<2^32, tkey0 xor (uid/2^32)=tkey0, but not universally; offsets 8·n are injective and below 32 GiB for n<2^32.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Statements concern Spec.lean definitions only; the C23/NASM/PTX implementation is checked by tests outside Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "AsmodensiusProofs.A01_bio_to_cell_mass_conserved",
+          "file": "lean/AsmodensiusProofs/Core.lean",
+          "line": 26
+        },
+        {
+          "decl": "AsmodensiusProofs.A02_energy_dissipation_conserved",
+          "file": "lean/AsmodensiusProofs/Core.lean",
+          "line": 32
+        },
+        {
+          "decl": "AsmodensiusProofs.A21_receive_cap_mass_conserved",
+          "file": "lean/AsmodensiusProofs/Core.lean",
+          "line": 117
+        },
+        {
+          "decl": "AsmodensiusProofs.A22_six_face_flux_never_overdraws",
+          "file": "lean/AsmodensiusProofs/Core.lean",
+          "line": 124
+        },
+        {
+          "decl": "AsmodensiusProofs.A23_nut_x_to_bio_energy_conserved",
+          "file": "lean/AsmodensiusProofs/Core.lean",
+          "line": 132
+        },
+        {
+          "decl": "AsmodensiusProofs.A17_bulk_philox_key_equivalence",
+          "file": "lean/AsmodensiusProofs/Core.lean",
+          "line": 96
+        },
+        {
+          "decl": "AsmodensiusProofs.A30_refute_unbounded_philox_bulk_key_eq",
+          "file": "lean/AsmodensiusProofs/NonVacuity.lean",
+          "line": 50
+        },
+        {
+          "decl": "AsmodensiusProofs.A26_gpu_offset8_injective_and_32gib_range",
+          "file": "lean/AsmodensiusProofs/Core.lean",
+          "line": 150
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "67bedd4abb9d03c7b94e70c8bf46f5b5f6893e6d",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NOT_SEARCHED"
+      },
+      "limits": [
+        "The Lean definitions are not linked to the C23, NASM or CUDA PTX code; only constants are copied by hand.",
+        "The flux theorem assumes a per-face amt/8 cap, while core/az_chem.c uses a per-species a/4 total budget.",
+        "About 14 of the 30 suite theorems (A06-A16, A18-A20) are constant identities, literal arithmetic, definitional or restated hypotheses and are not part of this record.",
+        "Axioms shown are the union over the listed declarations; A21 alone needs Classical.choice, A30 only propext.",
+        "No open problem is addressed; the repository reports 0 of 1,900 Mega-Atlas problems retired.",
+        "All quantities are natural numbers; the hypotheses dm ≤ bioMass, de ≤ bioEnergy and k ≤ nutXMass rule out truncated subtraction.",
+        "In the conversion clause each converted unit adds the 24 − 16 = 8 surplus to thermal energy; that term is what makes the weighted total balance.",
+        "The xor refutation is proved with the single witness tkey0 = 0, uid = 2^32."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 90,
+      "archive_id": "0TH-BUILD-012",
+      "key": "XL-INV",
+      "status": "ACTIVE",
+      "title": "Constructive integer invariants for a Dimensity 9500 hardware and physics teaching workbench",
+      "statement": "In the lab's Lean model (ℤ, ℕ, ℤ[i]): roofline ≤min(peak, ai·bw), monotone in bw for ai≥0; k·λ·NA and, for NA>0, k·λ·NA² strictly increase in NA when k,λ>0; scalar Crank–Nicolson steps with integer h preserve the norm; −E<p<E when E≥0, m>0, E²=p²+m²; a 5-point stencil min/max principle when rx,ry≥0 and 2rx+2ry≤D; CHSH and Mermin-3 in [−2,2] for ±1 inputs; Peres–Mermin: ≤5 of 6 contexts for integer 3×3 assignments; 2×2 determinants multiply; 2- and 4-point DFT Parseval.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Physical readings, JavaScript simulators, Float64 rounding and shard files are tested outside Lean (oracle, Node tests, SHA-256).",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "XiaomiLab.ComparatorTarget.target_thm1_hardware_and_roofline",
+          "file": "lean/Solution.lean",
+          "line": 19
+        },
+        {
+          "decl": "XiaomiLab.ComparatorTarget.target_thm2_euv_rayleigh_and_dof",
+          "file": "lean/Solution.lean",
+          "line": 34
+        },
+        {
+          "decl": "XiaomiLab.ComparatorTarget.target_thm3_dirac_finfet_and_crank_nicolson",
+          "file": "lean/Solution.lean",
+          "line": 44
+        },
+        {
+          "decl": "XiaomiLab.ComparatorTarget.target_thm4_fdtd_cfl_maximum_principle",
+          "file": "lean/Solution.lean",
+          "line": 56
+        },
+        {
+          "decl": "XiaomiLab.ComparatorTarget.target_thm5_chsh_and_mermin3_classical_caps",
+          "file": "lean/Solution.lean",
+          "line": 67
+        },
+        {
+          "decl": "XiaomiLab.ComparatorTarget.target_thm6_peres_mermin_magic_square",
+          "file": "lean/Solution.lean",
+          "line": 81
+        },
+        {
+          "decl": "XiaomiLab.ComparatorTarget.target_thm9_bragg_parseval_and_shards",
+          "file": "lean/Solution.lean",
+          "line": 112
+        },
+        {
+          "decl": "XiaomiLab.Thermal.fdtd_cfl_discrete_max_principle",
+          "file": "lean/XiaomiLabProofs/ThermalFdtd.lean",
+          "line": 44
+        },
+        {
+          "decl": "XiaomiLab.Contextuality.peres_mermin_classical_cap_le_5",
+          "file": "lean/XiaomiLabProofs/QuantumContextuality.lean",
+          "line": 102
+        },
+        {
+          "decl": "XiaomiLab.QuantumTransport.crank_nicolson_exact_unitarity",
+          "file": "lean/XiaomiLabProofs/QuantumTransport.lean",
+          "line": 98
+        },
+        {
+          "decl": "XiaomiLab.SpectralBragg.dft4_parseval_exact",
+          "file": "lean/XiaomiLabProofs/SpectralBraggAndShards.lean",
+          "line": 184
+        }
+      ],
+      "axioms": "propext, Quot.sound",
+      "audited_commit": "f1da68b78e749a194b993bc8ad20f54016f610a0",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The Lean statements concern integer models of formulas, not the Dimensity 9500 hardware or the browser simulators.",
+        "Many of the 75 declarations are literal arithmetic on cited constants closed by decide.",
+        "Crank–Nicolson unitarity is proven only for a scalar factor with integer h, not for the full operator.",
+        "All results are textbook mathematics in small finite or integer settings; no Mega-Atlas problem is retired.",
+        "The six-kernel and negative-rejection checks rest on CI run 45821462528; this audit did not re-run them.",
+        "Axioms are a per-declaration subset of propext and Quot.sound; 28 of 75 use none.",
+        "The Rayleigh and DOF results are strict monotonicity of integer products in NA; the readings CD = k1·λ/NA and DOF = k2·λ/NA² are informal."
+      ],
+      "check": "cd lean && lake build XiaomiLabProofs Challenge Solution && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 91,
+      "archive_id": "0TH-BUILD-013",
+      "key": "INV-1",
+      "status": "ACTIVE",
+      "title": "Bound and monotonicity invariants of the OVBS-52 integer scoring and stage-classifier model",
+      "statement": "In the package's Lean model over ℕ: the raw score is monotone in each pillar; for pillars ≤100 it is ≤10000, and so is the gated score when the penalty percentage is ≤100; it is 0 on gate failure, else non-decreasing in that percentage; stage classification is monotone; min(100,(a+b)/2+k) is ≤100, symmetric in a,b and monotone in a,b,k; the write predicate is false on every ring for norm >9900; Pareto dominance is irreflexive and transitive.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Concerns the software model's definitions only; agreement with the Python scorers rests on tests outside Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "OmegaPackageProofs.OVBS52.rawOviCentis_monotone",
+          "file": "lean/OmegaPackageProofs/OVBS52Scoring.lean",
+          "line": 77
+        },
+        {
+          "decl": "OmegaPackageProofs.OVBS52.rawOviCentis_le_10000",
+          "file": "lean/OmegaPackageProofs/OVBS52Scoring.lean",
+          "line": 40
+        },
+        {
+          "decl": "OmegaPackageProofs.OVBS52.gatedOviCentis_le_10000",
+          "file": "lean/OmegaPackageProofs/OVBS52Scoring.lean",
+          "line": 60
+        },
+        {
+          "decl": "OmegaPackageProofs.OVBS52.anti_gaming_gate_annihilation",
+          "file": "lean/OmegaPackageProofs/OVBS52Scoring.lean",
+          "line": 55
+        },
+        {
+          "decl": "OmegaPackageProofs.OVBS52.spiegelman_penalty_monotone",
+          "file": "lean/OmegaPackageProofs/OVBS52Scoring.lean",
+          "line": 86
+        },
+        {
+          "decl": "OmegaPackageProofs.OVBS52.classifyStage_monotone",
+          "file": "lean/OmegaPackageProofs/OVBS52Scoring.lean",
+          "line": 124
+        },
+        {
+          "decl": "OmegaPackageProofs.CastrationRing0.synergyScore_le_100",
+          "file": "lean/OmegaPackageProofs/CastrationAndRing0.lean",
+          "line": 25
+        },
+        {
+          "decl": "OmegaPackageProofs.CastrationRing0.synergyScore_comm",
+          "file": "lean/OmegaPackageProofs/CastrationAndRing0.lean",
+          "line": 31
+        },
+        {
+          "decl": "OmegaPackageProofs.CastrationRing0.synergyScore_monotone",
+          "file": "lean/OmegaPackageProofs/CastrationAndRing0.lean",
+          "line": 38
+        },
+        {
+          "decl": "OmegaPackageProofs.CastrationRing0.spectral_norm_violation_rejected",
+          "file": "lean/OmegaPackageProofs/CastrationAndRing0.lean",
+          "line": 72
+        },
+        {
+          "decl": "OmegaPackageProofs.CastrationRing0.paretoDominates_irrefl",
+          "file": "lean/OmegaPackageProofs/CastrationAndRing0.lean",
+          "line": 88
+        },
+        {
+          "decl": "OmegaPackageProofs.CastrationRing0.paretoDominates_trans",
+          "file": "lean/OmegaPackageProofs/CastrationAndRing0.lean",
+          "line": 94
+        }
+      ],
+      "axioms": "propext, Quot.sound",
+      "audited_commit": "a08294c97f0e0e40cb1eff0dfee1b27dfe9ca5f2",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NOT_SEARCHED"
+      },
+      "limits": [
+        "These are elementary natural-number facts about the repository's own scoring definitions, not results about artificial life, hardware or physics.",
+        "The Ring-0 state theorem is excluded because the modelled write function returns its input for every ring.",
+        "The cube, 825-check, 78-alert, 748-run, 291 and 327 declarations are literal sums and certify no data.",
+        "The 291 companion-repository theorems are not built or checked at this commit.",
+        "No Mega-Atlas problem is retired; simulation and statistical claims lie outside Lean.",
+        "Stage monotonicity is stated for the stage rank 0 to 6 under fixed thresholds 1500, 3500, 5500, 7500, 8500 and 9500 centi-points."
+      ],
+      "check": "cd lean && lake build && lake env lean OmegaPackageProofs/VerifyAxioms.lean"
+    },
+    {
+      "n": 92,
+      "archive_id": "0TH-BUILD-015",
+      "key": "INV",
+      "status": "ACTIVE",
+      "title": "Lean invariant suite for the Glitchling artificial-life simulator model",
+      "statement": "In the simulator's Lean transcription: finite operation sequences keep the 11-pool energy ledger balanced; single soil-flux or soil-transfer steps keep N/C mass balanced; a Clausius numerator is ≥0 if 0<T_sky≤T_amb≤T_geo, fluxes ≥0; CEGA-18 is Kochen–Specker uncolourable; CHSH ∈[−2,2] for ±1 outcomes; GF(16) commutativity, ×-associativity, left distributivity, a+a=0, unit, inverses, an order-15 element; seven seat weights summing to 100, each ≤46, have every seat <50 and any two ≤92; Möbius addition keeps scaled disk points inside.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Concerns the Lean model, not the JavaScript code; RS distance and the C3 trace gap are literal arithmetic only.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Glitchling.runEnergyOps_preserves_firstLaw",
+          "file": "lean/GlitchlingProofs/EnergyMassConservation.lean",
+          "line": 108
+        },
+        {
+          "decl": "Glitchling.fluxSoil_preserves_mass",
+          "file": "lean/GlitchlingProofs/EnergyMassConservation.lean",
+          "line": 162
+        },
+        {
+          "decl": "Glitchling.transferSoil_preserves_mass",
+          "file": "lean/GlitchlingProofs/EnergyMassConservation.lean",
+          "line": 174
+        },
+        {
+          "decl": "Glitchling.clausius_entropy_nonneg",
+          "file": "lean/GlitchlingProofs/EnergyMassConservation.lean",
+          "line": 194
+        },
+        {
+          "decl": "Glitchling.cega18_kochen_specker_uncolorable",
+          "file": "lean/GlitchlingProofs/QuantumContextuality.lean",
+          "line": 92
+        },
+        {
+          "decl": "Glitchling.chsh_lhv_bound",
+          "file": "lean/GlitchlingProofs/QuantumContextuality.lean",
+          "line": 146
+        },
+        {
+          "decl": "Glitchling.gf16_add_self",
+          "file": "lean/GlitchlingProofs/CodingAndGovernance.lean",
+          "line": 21
+        },
+        {
+          "decl": "Glitchling.gf16_add_comm",
+          "file": "lean/GlitchlingProofs/CodingAndGovernance.lean",
+          "line": 25
+        },
+        {
+          "decl": "Glitchling.gf16_mul_comm",
+          "file": "lean/GlitchlingProofs/CodingAndGovernance.lean",
+          "line": 29
+        },
+        {
+          "decl": "Glitchling.gf16_mul_assoc",
+          "file": "lean/GlitchlingProofs/CodingAndGovernance.lean",
+          "line": 33
+        },
+        {
+          "decl": "Glitchling.gf16_left_distrib",
+          "file": "lean/GlitchlingProofs/CodingAndGovernance.lean",
+          "line": 38
+        },
+        {
+          "decl": "Glitchling.gf16_mul_one",
+          "file": "lean/GlitchlingProofs/CodingAndGovernance.lean",
+          "line": 43
+        },
+        {
+          "decl": "Glitchling.gf16_exists_inv",
+          "file": "lean/GlitchlingProofs/CodingAndGovernance.lean",
+          "line": 47
+        },
+        {
+          "decl": "Glitchling.gf16_alpha_primitive_order_15",
+          "file": "lean/GlitchlingProofs/CodingAndGovernance.lean",
+          "line": 91
+        },
+        {
+          "decl": "Glitchling.heptarch_anti_monarchy",
+          "file": "lean/GlitchlingProofs/CodingAndGovernance.lean",
+          "line": 134
+        },
+        {
+          "decl": "Glitchling.heptarch_anti_duopoly",
+          "file": "lean/GlitchlingProofs/CodingAndGovernance.lean",
+          "line": 156
+        },
+        {
+          "decl": "Glitchling.poincare_mobius_preserves_disk",
+          "file": "lean/GlitchlingProofs/HyperbolicAndFlaws.lean",
+          "line": 315
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "92799daae8682a2df30702077bdee4ac0e17c5cf",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The theorems concern a hand-written Lean transcription; its correspondence to the JavaScript/TypeScript simulator is tested differentially, not proven.",
+        "RS[15,11] minimum distance and decoding, and the C3 cubic traces, are not proven in Lean; only their arithmetic is.",
+        "The Bell-diagonal no-signaling statement is definitional and models no density matrix.",
+        "CEGA-18 uncolourability, the CHSH bound and Möbius containment are known results (CEGA-18: Cabello, Estebaranz and García-Alcaine 1996).",
+        "No open problem is resolved, and no claim about physical quantum effects, biology or consciousness is supported.",
+        "Mass is preserved step by step only; no theorem covers sequences of mass operations.",
+        "The GF(16) facts are exhaustive decide checks; additive associativity and the additive identity are not stated.",
+        "Two seats may still hold 92 of 100 between them, a majority; only single-seat majorities are excluded.",
+        "Möbius containment is stated for integer coordinates scaled by S with |u|² and |v|² below S²."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 93,
+      "archive_id": "0TH-BUILD-016",
+      "key": "INV-1",
+      "status": "ACTIVE",
+      "title": "Integer ledger and carbon-nitrogen trace conservation and capped-simplex bounds for an artificial-life model",
+      "statement": "In the ALife software's integer Lean model: finite transfer/import/export traces leave the 11-pool residual total−(initial+imports−exports) unchanged; finite assimilate/shed/mineralize traces conserve total C and total N; each assimilation step changes biomass C by exactly 4 times its biomass N change; any 7 natural weights summing to 10000, each ≤4800, are all <5000 with at least 3 nonzero; plus Pythagoras for orthogonal equal-length integer lists, 2p³<p⁴ for p≥3, and arithmetic on hard-coded constants.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "Lean models are not linked to the TypeScript/WASM runtime. Contextuality, Reed-Solomon and registry entries check only hard-coded constants.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ALifeProofs.LedgerConservation.applyTrace_preserves_residual",
+          "file": "lean/ALifeProofs/LedgerConservation.lean",
+          "line": 234
+        },
+        {
+          "decl": "ALifeProofs.Stoichiometry.applyBioTrace_conserves_CN",
+          "file": "lean/ALifeProofs/Stoichiometry.lean",
+          "line": 122
+        },
+        {
+          "decl": "ALifeProofs.Stoichiometry.assimilate4to1_exact_ratio",
+          "file": "lean/ALifeProofs/Stoichiometry.lean",
+          "line": 97
+        },
+        {
+          "decl": "ALifeProofs.HeptarchSimplex.no_single_seat_majority",
+          "file": "lean/ALifeProofs/HeptarchSimplex.lean",
+          "line": 79
+        },
+        {
+          "decl": "ALifeProofs.HeptarchSimplex.capped_simplex_at_least_three_active",
+          "file": "lean/ALifeProofs/HeptarchSimplex.lean",
+          "line": 90
+        },
+        {
+          "decl": "ALifeProofs.TensorAndCoding.hodge_pythagorean_conservation",
+          "file": "lean/ALifeProofs/TensorAndCoding.lean",
+          "line": 144
+        },
+        {
+          "decl": "ALifeProofs.TensorAndCoding.monarch_strictly_smaller_for_p_ge_3",
+          "file": "lean/ALifeProofs/TensorAndCoding.lean",
+          "line": 77
+        },
+        {
+          "decl": "ALifeProofs.Solution.prove_all_alife_invariants",
+          "file": "lean/Solution.lean",
+          "line": 77
+        }
+      ],
+      "axioms": "propext, Quot.sound",
+      "audited_commit": "48a2a0aa2baeea1e430c2134a7b963a7cf67727b",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The theorems are about a separate integer Lean model. No proof links it to the float64 TypeScript/WASM runtime.",
+        "The contextuality (Hoggar, KCBS, Tsirelson, srg Jordan gap), RS[15,11], 75-substrate, 1,000-cube and 825-check entries are arithmetic on hard-coded constants, not formalized structures.",
+        "The CEGA-18 lemma assumes the double-counting identity as a hypothesis and never builds the 18 rays.",
+        "'Second Law' and 'WCAG clamp' are definitional (isDonorPool, min x 3000); no entropy or rendered-flash property is proved.",
+        "No open problem is retired (0/1,900 Mega-Atlas); the mathematics is elementary.",
+        "The six-kernel acceptance was seen in CI run 45824894491 but not re-run locally (it needs Linux bubblewrap).",
+        "Ledger transfers are guarded only by pool indices and a non-negative amount, so donor pools may become negative.",
+        "The 4:1 ratio is a single-step fact that holds trivially when the assimilation guard fails; shed and mineralize steps move C and N independently."
+      ],
+      "check": "cd lean && lake build && lake env lean ALifeProofs/VerifyAxioms.lean"
+    },
+    {
+      "n": 94,
+      "archive_id": "0TH-BUILD-017",
+      "key": "S1",
+      "status": "ACTIVE",
+      "title": "Lean invariants for the BEAST bare-metal AI software model",
+      "statement": "In the BEAST software's Lean model: literal arithmetic on constants named after FIPS-203/197, Multiboot1/2 checksums and the GGUF Q4_0 block; bookkeeping sums (DLL counts, planted-mutant totals, matrix and MoE splits); five base-3 digits pack to a value below 243 that unpacks to the same digits; ceil-division alignment bounds; BitVec XOR identities; commutativity of dual-number addition and multiplication; small Bool/Nat models of rewrite, spend-cap and loopback rules; and equalities and bounds on hard-coded receipt constants.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "39 of 65 are closed literal statements; runtime behaviour rests on tests and CI outside Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "BeastProofs.B40_mlkem768_fips203_sizes",
+          "file": "lean/BeastProofs.lean",
+          "line": 175
+        },
+        {
+          "decl": "BeastProofs.B41_mlkem_modulus_ntt_structure",
+          "file": "lean/BeastProofs.lean",
+          "line": 179
+        },
+        {
+          "decl": "BeastProofs.B50_aes256_fips197_dimensions",
+          "file": "lean/BeastProofs.lean",
+          "line": 208
+        },
+        {
+          "decl": "BeastProofs.B24_multiboot2_checksum_zero_mod32",
+          "file": "lean/BeastProofs.lean",
+          "line": 115
+        },
+        {
+          "decl": "BeastProofs.B32_multiboot1_checksum_zero_mod32",
+          "file": "lean/BeastProofs.lean",
+          "line": 142
+        },
+        {
+          "decl": "BeastProofs.B61_gguf_q4_0_block_bytes",
+          "file": "lean/BeastProofs.lean",
+          "line": 272
+        },
+        {
+          "decl": "BeastProofs.B29_ecosystem_7_dll_unity",
+          "file": "lean/BeastProofs.lean",
+          "line": 137
+        },
+        {
+          "decl": "BeastProofs.B36_ecosystem_9_dll_unity",
+          "file": "lean/BeastProofs.lean",
+          "line": 161
+        },
+        {
+          "decl": "BeastProofs.B47_ecosystem_11_dll_unity",
+          "file": "lean/BeastProofs.lean",
+          "line": 202
+        },
+        {
+          "decl": "BeastProofs.B57_ecosystem_12_dll_unity",
+          "file": "lean/BeastProofs.lean",
+          "line": 252
+        },
+        {
+          "decl": "BeastProofs.B39_total_planted_mutants_25",
+          "file": "lean/BeastProofs.lean",
+          "line": 172
+        },
+        {
+          "decl": "BeastProofs.B48_total_planted_mutants_30",
+          "file": "lean/BeastProofs.lean",
+          "line": 203
+        },
+        {
+          "decl": "BeastProofs.B58_total_planted_mutants_35",
+          "file": "lean/BeastProofs.lean",
+          "line": 255
+        },
+        {
+          "decl": "BeastProofs.B63_total_planted_mutants_38",
+          "file": "lean/BeastProofs.lean",
+          "line": 282
+        },
+        {
+          "decl": "BeastProofs.B14_matrix_300_exact_partition",
+          "file": "lean/BeastProofs.lean",
+          "line": 93
+        },
+        {
+          "decl": "BeastProofs.B59_matrix_296_of_300_partition",
+          "file": "lean/BeastProofs.lean",
+          "line": 258
+        },
+        {
+          "decl": "BeastProofs.B52_moe_top2_gate_partition",
+          "file": "lean/BeastProofs.lean",
+          "line": 216
+        },
+        {
+          "decl": "BeastProofs.B02_b158_pack_unpack_exact",
+          "file": "lean/BeastProofs.lean",
+          "line": 26
+        },
+        {
+          "decl": "BeastProofs.B23_blackwell_ptx_grid_covers_all_rows",
+          "file": "lean/BeastProofs.lean",
+          "line": 112
+        },
+        {
+          "decl": "BeastProofs.B25_gguf_v3_alignment_32",
+          "file": "lean/BeastProofs.lean",
+          "line": 123
+        },
+        {
+          "decl": "BeastProofs.B17_gf256_xor_involution",
+          "file": "lean/BeastProofs.lean",
+          "line": 97
+        },
+        {
+          "decl": "BeastProofs.B56_church_rosser_xor_confluence",
+          "file": "lean/BeastProofs.lean",
+          "line": 247
+        },
+        {
+          "decl": "BeastProofs.B54_dual_leibniz_comm",
+          "file": "lean/BeastProofs.lean",
+          "line": 233
+        },
+        {
+          "decl": "BeastProofs.B55_dual_add_comm",
+          "file": "lean/BeastProofs.lean",
+          "line": 240
+        },
+        {
+          "decl": "BeastProofs.B09_ring0_immutability",
+          "file": "lean/BeastProofs.lean",
+          "line": 66
+        },
+        {
+          "decl": "BeastProofs.B10_ring0_spend_cap_invariant",
+          "file": "lean/BeastProofs.lean",
+          "line": 71
+        },
+        {
+          "decl": "BeastProofs.B62_http_loopback_ssrf_guard",
+          "file": "lean/BeastProofs.lean",
+          "line": 278
+        },
+        {
+          "decl": "BeastProofs.B60_live_v060_omniscient_hyper_colony_receipt",
+          "file": "lean/BeastProofs.lean",
+          "line": 261
+        },
+        {
+          "decl": "BeastProofs.B65_live_v070_omniscient_release_receipt",
+          "file": "lean/BeastProofs.lean",
+          "line": 289
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound (union; 45 of 65 print 'does not depend on any axioms')",
+      "audited_commit": "c4211353bb2bf3e8af3aab0bdef088db2ea0fb34",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The Lean definitions are standalone models and are not connected to the Zig, Rust, C or PTX code that ships.",
+        "B60 and B65 check constants committed in LiveReceipt.lean; they do not show that any run produced them.",
+        "B54 proves only commutativity of dual-number multiplication, not the product rule its docstring names.",
+        "Timings, GPU kernels, DLL results and QEMU boots are empirical and outside the Lean kernel.",
+        "No open problem is resolved; the repository states 0 of 1,900 Mega-Atlas problems retired.",
+        "Of the 65 theorems, 39 are closed literal statements, including every spec-constant, bookkeeping and receipt clause listed here.",
+        "The pack/unpack theorem gives a left inverse on all 243 digit tuples; surjectivity onto 0 to 242 is not stated."
+      ],
+      "check": "cd lean && lake build"
     }
   ]
 }

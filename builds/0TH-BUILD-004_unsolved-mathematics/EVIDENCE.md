@@ -37,11 +37,11 @@ Specialist open-mathematics research atlas upgraded to v0.5.0 with an 8-domain z
 - **Audited Theorems (`#print axioms`):** 69
 - **Entry Point:** `lean/Solution.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
-- **Live Audit Status:** GitHub Actions CI GREEN (run #45742870717, v0.5.0 release); 69 audited declarations (45 headline theorems + 10 concrete NonVacuity witnesses + 14 adversarial false-variant refutations) verified across all 6 independent kernels (lean, leanchecker-paranoid, lean4lean 2,729 decls, nanoda_bin 3,017 decls, con-leche 2,732 decls, con-ron 2,732 decls) strictly within [propext, Classical.choice, Quot.sound]
+- **Live Audit Status:** GitHub Actions CI GREEN (run #45742865067, workflow CI, v0.5.0); 69 audited declarations (45 headline theorems + 10 concrete NonVacuity witnesses + 14 adversarial false-variant refutations) verified across all 6 independent kernels (lean, leanchecker-paranoid, lean4lean 2,729 decls, nanoda_bin 3,017 decls, con-leche 2,732 decls, con-ron 2,732 decls) strictly within [propext, Classical.choice, Quot.sound]
 
 ## Verification Boundary
 
-All 69 Lean 4.35.0 declarations compile with zero Mathlib, zero sorry, and strictly standard axioms across 6 independent kernels (CI #45742870717). Explicitly proves ZERO open conjectures (Collatz, Erdos-Straus, Lonely Runner, Brocard, Twin Primes, Goldbach, Odd Perfect Numbers, Mersenne infinitude all remain OPEN); formalizes classical foundations, modular reductions, sharpness bounds, and adversarial refutations only.
+All 69 Lean 4.35.0 declarations compile with zero Mathlib, zero sorry, and strictly standard axioms across 6 independent kernels (CI #45742865067). Explicitly proves ZERO open conjectures (Collatz, Erdos-Straus, Lonely Runner, Brocard, Twin Primes, Goldbach, Odd Perfect Numbers, Mersenne infinitude all remain OPEN); formalizes classical foundations, modular reductions, sharpness bounds, and adversarial refutations only.
 
 ## Independent Reproduction & Falsification Protocol
 

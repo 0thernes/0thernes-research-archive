@@ -1,7 +1,7 @@
 {
   "id": "0TH-2026-008",
   "slug": "open-hard-problems-consciousness-frontier",
-  "title": "Open Hard Problems Across Eleven Neuro-Scientific Disciplines, Deductive-Inductive-Abductive Frontiers of Sentience, and a Six-Class Forensic Audit",
+  "title": "An 11-Discipline Open Hard Problems Map from Nanoscale Synaptic Biophysics to the Consciousness Frontier: Formal Bounds, Mega-Atlas Crosswalk, Deductive-Inductive-Abductive Epistemology, and a Six-Class Audit",
   "domain": "Interdisciplinary Neuroscience / Philosophy of Mind / Open Problems",
   "date_released": "2026-11-25",
   "version": "v1.3.0",
@@ -19,7 +19,7 @@
   "arxiv_bundle_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/download/v1.3.0/arxiv_wp2_open_problems_consciousness.tar.gz",
   "arxiv_bundle_sha256": "bdd27fca048f13640c45058e42917f07d68072aca446ce72ccef66488fbf5036",
   "lean_verification": {
-    "framework": "Lean 4.35.0 (zero Mathlib, zero Classical.choice, 24 theorems + 26 non-vacuity witnesses + 6 adversarial counterexamples incl. A05 common-cause counterexample, 6 independent kernels via lake comparator --paranoid in CI run 45747272478)",
+    "framework": "Companion to 0TH-2026-007 (same repository, commit and Lean suite); this paper uses T22-T24 and A05 only.",
     "axiom_allowlist": [
       "propext",
       "Quot.sound"
@@ -39,7 +39,7 @@
     "wayback_machine": null,
     "doi": "10.5281/zenodo.24548051"
   },
-  "core_result": "Synthesizes an explicit 11-discipline open-problems roadmap (Math, Physics, Chemistry, Biology, Neuroscience, Neuropsychology, NeuroCS, NeuroMath, Neurochemistry, Neurobiology, Neurophysics), publishes an honest ID-by-ID crosswalk against all 1,900 entries of 0thernes/unsolved-problems-mega-atlas (explicitly reporting 0 / 1,900 grand open problems solved while mapping verified partial bounds across 18 high-CSS Atlas IDs), formally proves exact 2x2 weight-table algebraic factorization (= 0), diagonal product dominance (> 0), and diagonal excess implication (T22-T24) paired with a machine-proved common-cause counterexample (A05 in AdversarialChecks.lean) across 6 CI kernels, compiles with literal 0 LaTeX warnings, resolves 21 DOIs on Crossref (one, xu2016dnaorigami, points to an unrelated paper; titles and authors are not compared; the retraction check does not read Crossref updated-by), and records 3-cycle forensic hardening findings (F01-F34) across HARDENING_LOG.md and ERRATA.md.",
+  "core_result": "Synthesizes an explicit 11-discipline open-problems roadmap (Math, Physics, Chemistry, Biology, Neuroscience, Neuropsychology, NeuroCS, NeuroMath, Neurochemistry, Neurobiology, Neurophysics), publishes an honest ID-by-ID crosswalk against all 1,900 entries of 0thernes/unsolved-problems-mega-atlas (explicitly reporting 0 / 1,900 grand open problems solved while mapping 18 high-CSS Atlas IDs to related literature; the formal lemmas T22-T24 are generic 2x2 integer determinant identities and advance none of them), formally proves exact 2x2 weight-table algebraic factorization (= 0), diagonal product dominance (> 0), and diagonal excess implication (T22-T24) paired with a machine-proved common-cause counterexample (A05 in AdversarialChecks.lean) across 6 CI kernels, compiles with literal 0 LaTeX warnings, resolves 21 DOIs on Crossref (one, xu2016dnaorigami, points to an unrelated paper; titles and authors are not compared; the retraction check does not read Crossref updated-by), and records 3-cycle forensic hardening findings (F01-F34) across HARDENING_LOG.md and ERRATA.md.",
   "verification_boundary": "Explicitly reports 0 / 1,900 Mega-Atlas open problems solved. Formal Lean 4 theorems T22-T24 apply strictly to observational 2x2 integer weight-table algebraic factorization determinants and (as machine-proved by counterexample A05) explicitly do NOT prove interventional causal disconnection under latent common causes, phenomenal consciousness, subjective experience, or sentience.",
   "falsification_command": "cd repos/human-synapse-bouton-lab/lean && lake build --wfail && lake env lean VerifyAxioms.lean && lake env leanchecker Solution && lake env leanchecker AdversarialChecks"
 }

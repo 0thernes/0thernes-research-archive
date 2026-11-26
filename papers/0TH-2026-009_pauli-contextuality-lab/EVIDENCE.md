@@ -27,7 +27,7 @@ Consolidates the four archived Pauli/Mermin contextuality repositories (hoggar-b
 
 ## Lean 4 Formal Verification & Axiom Allowlist
 
-- **Framework:** Lean 4.35.0 / Mathlib v4.35.0 (166 explicit #print axioms including HoggarBound.Stability + 2,206-theorem-constant Lean.collectAxioms audit over the 43 modules imported by VerifyAll.lean (1,175 authored theorem/lemma declarations across all 60 files); 0 Batteries linter errors across HoggarBound.Bound, HoggarBound.Stability, ContextualityTensor, Evidence; 12 headline targets verified across 6 independent kernels via lake comparator --paranoid in Ubuntu 24.04 CI)
+- **Framework:** Lean 4.35.0 / Mathlib v4.35.0 (166 explicit #print axioms including HoggarBound.Stability + 2,206-theorem-constant Lean.collectAxioms audit over the 43 modules imported by VerifyAll.lean (1,175 authored theorem/lemma declarations across all 60 files); 0 Batteries linter errors across HoggarBound.Bound, HoggarBound.Stability, ContextualityTensor, Evidence; 12 headline targets verified across 6 independent kernels via lake comparator --paranoid in Ubuntu CI)
 - **Library Entry Point:** `lean/Solution.lean`
 - **Primary Axiom Audit Script:** `lean/VerifyAll.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`

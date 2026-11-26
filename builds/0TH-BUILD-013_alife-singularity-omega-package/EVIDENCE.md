@@ -1,6 +1,6 @@
 # Build White Paper & Proof Evidence Dossier — `0TH-BUILD-013`
 
-**Title:** A-Life Singularity, Super A-Life, and Clean-Slate v3.0 (v3.4.0): Hardware Ring-0 Constitutional Invariants, 748-Run Paired Falsification, 327 Pure 6-Kernel Lean 4.35.0 Proofs (291 Native + 36 Local), and a 1,900-Problem Mega-Atlas Non-Retirement Audit  
+**Title:** A-Life Singularity, Super A-Life, and Clean-Slate v3.0 (v3.4.0): Hardware Ring-0 Constitutional Invariants, 748-Run Paired Falsification, 36 Local Lean 4.35.0 Invariant Declarations (plus 4 Palomar Wrappers; 291 Companion-Repo Theorems Counted Separately), and a 1,900-Problem Mega-Atlas Non-Retirement Audit  
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Artificial Life / Open-Ended Evolution / Formal Methods / Thermodynamic Conservation  
 **Version / Date:** `v3.4.0` (2026-11-26)

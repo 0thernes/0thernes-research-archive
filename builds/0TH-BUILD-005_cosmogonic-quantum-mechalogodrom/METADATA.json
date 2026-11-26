@@ -3,8 +3,8 @@
   "slug": "cosmogonic-quantum-mechalogodrom",
   "title": "Cosmogonic Quantum Mechalogodrom (CQM): Artificial Life Verification Audit & NHSI Research Papers Ledger",
   "domain": "Artificial Life / Synthetic Cognition / Verification Audit",
-  "date": "2026-06-27",
-  "version": "v0.14.3",
+  "date": "2026-10-21",
+  "version": "v0.23.0+63",
   "author": "Alexander Stephen Donahue",
   "orcid": "0009-0006-8168-9648",
   "affiliation": "Independent Researcher, Spokane, WA, USA",
@@ -28,7 +28,7 @@
     "entry_point": null,
     "live_audit_status": "N/A (A-Life verification audit PDF)"
   },
-  "summary": "Formal verification audit PDF and NHSI applied-research papers ledger documenting operational functional markers and simulation validation in the Cosmogonic Quantum Mechalogodrom artificial life platform.",
+  "summary": "Source-review catalog PDF (40 pp., 21 October 2026) of 150 external artificial-life entries with an evidence-labelled CQM profile. No formal verification and no Lean; it retires no open problem.",
   "verification_boundary": "Explicitly disclaims sentience or consciousness; documents operational simulation markers and code-to-literature provenance.",
-  "falsification_command": "ls repos/cosmogonic-quantum-mechalogodrom/docs/alife/cqm-alife-audit.pdf"
+  "falsification_command": "sha256sum repos/cosmogonic-quantum-mechalogodrom/docs/alife/cqm-alife-audit.pdf (expect 4da32c265babd974cfd66972763feeec1d52e5273af23da750ebb9736bb5705d)"
 }

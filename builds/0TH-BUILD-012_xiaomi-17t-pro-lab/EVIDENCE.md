@@ -1,6 +1,6 @@
 # Build White Paper & Proof Evidence Dossier — `0TH-BUILD-012`
 
-**Title:** Xiaomi 17T Pro Lab: Formally Verified Silicon-to-Quantum Modeling, Constructive Six-Kernel Lean 4.35.0 Proofs (0 Classical.choice), and Sharded In-Browser Neural Verification of the Dimensity 9500  
+**Title:** Xiaomi 17T Pro Lab: Interactive Silicon-to-Quantum Workbench with Constructive Lean Invariants, Constructive Six-Kernel Lean 4.35.0 Proofs (0 Classical.choice), and Sharded In-Browser Neural Verification of the Dimensity 9500  
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Computer Architecture / Semiconductor Physics / EUV Lithography / Quantum Contextuality / Formal Methods  
 **Version / Date:** `v3.1.0` (2026-11-26)
@@ -32,7 +32,7 @@
 
 ## Summary
 
-Zero-build interactive silicon-to-quantum engineering workbench and zero-warning AMS-LaTeX white paper (plainurl clickable DOIs, 0 overfull/underfull hboxes) modeling the Xiaomi 17T Pro and MediaTek Dimensity 9500 across 19 interactive routes + strict-CSP zero-404 Blueprint, backed by 75 constructive Pure Lean 4.35.0 Palomar declarations (ZERO Classical.choice; hardware floorplan & roofline, EUV Rayleigh/DOF/shot-noise, Crank-Nicolson Cayley unitarity & WKB/Dirac transport, 2D thermal FDTD CFL discrete maximum principle, CHSH/Mermin-3/Peres-Mermin contextuality, 2x2 unimodular Bragg transfer matrices, 2/4-point DFT Parseval energy conservation, 9-shard A24 byte conservation, and 7 AdversarialTests) verified by 6 independent kernels + live negative rejection, a 54-check 60-digit Decimal/Fraction oracle (max rel err 2.159e-14), 8/8 killed mutants (100%), 50/50 3-OS Node tests, 9/9 Playwright CSP/E2E specs, 12/12 live Crossref/arXiv non-retracted DOIs, dual DigiCert RFC 3161 (.tsr) + Bitcoin OpenTimestamps (.ots) proofs, permanent Software Heritage snapshot swh:1:snp:06ad26ff598cf7d592768bdef08d9de7616cd4e0, 100.0% (82/82, 35/35 Core) Build Standard v1.2.0 compliance (0 ruff/mypy/gitleaks findings), and an honest 0/1,900 Mega-Atlas V2.6.0 cross-reference.
+Zero-build interactive silicon-to-quantum engineering workbench and zero-warning AMS-LaTeX white paper (plainurl clickable DOIs, 0 overfull/underfull hboxes) modeling the Xiaomi 17T Pro and MediaTek Dimensity 9500 across 19 interactive routes + strict-CSP zero-404 Blueprint, backed by 75 constructive Pure Lean 4.35.0 Palomar declarations (ZERO Classical.choice; hardware floorplan & roofline, EUV Rayleigh/DOF/shot-noise, Crank-Nicolson Cayley unitarity & WKB/Dirac transport, 2D thermal FDTD CFL discrete maximum principle, CHSH/Mermin-3/Peres-Mermin contextuality, 2x2 unimodular Bragg transfer matrices, 2/4-point DFT Parseval energy conservation, 9-shard A24 byte conservation, and 7 AdversarialTests) checked by 6 kernel runs (5 distinct implementations) + live negative rejection, a 54-check 60-digit Decimal/Fraction oracle (max rel err 2.159e-14), 8/8 killed mutants (100%), 50/50 3-OS Node tests, 9/9 Playwright CSP/E2E specs, 12/12 live Crossref/arXiv non-retracted DOIs, dual DigiCert RFC 3161 (.tsr) + Bitcoin OpenTimestamps (.ots) proofs, permanent Software Heritage snapshot swh:1:snp:06ad26ff598cf7d592768bdef08d9de7616cd4e0, 100.0% (82/82, 35/35 Core) Build Standard v1.2.0 compliance (0 ruff/mypy/gitleaks findings), and an honest 0/1,900 Mega-Atlas V2.6.0 cross-reference.
 
 ## Embedded Lean 4 Proof Suite Audit
 
@@ -41,11 +41,11 @@ Zero-build interactive silicon-to-quantum engineering workbench and zero-warning
 - **Audited Theorems (`#print axioms`):** 75
 - **Entry Point:** `lean/XiaomiLabProofs.lean`
 - **Permitted Axioms:** `propext, Quot.sound`
-- **Live Audit Status:** Ubuntu CI GREEN (run #45821462528 & v3.1.0 tag run #45804914051 Rekor 4124262738, Release v3.1.0 run #45804921347 Rekor 4124220117, permanent SWH swh:1:snp:06ad26ff598cf7d592768bdef08d9de7616cd4e0); 75/75 constructive declarations (28 zero-axiom, 47 [propext, Quot.sound], ZERO Classical.choice), 10 isolated Palomar comparator targets, zero sorry outside Challenge.lean, leanchecker --fresh PASS, all 6 independent kernels passed via lake comparator --paranoid + live negative kernel & comparator rejection PASS
+- **Live Audit Status:** Ubuntu CI GREEN (run #45821462528 & v3.1.0 tag run #45804914051 Rekor 4124262738, Release v3.1.0 run #45804921347 Rekor 4124220117, permanent SWH swh:1:snp:06ad26ff598cf7d592768bdef08d9de7616cd4e0); 75/75 constructive declarations (28 zero-axiom, 14 [propext], 33 [propext, Quot.sound], ZERO Classical.choice), 10 isolated Palomar comparator targets, zero sorry outside Challenge.lean, leanchecker --fresh PASS, all 6 independent kernels passed via lake comparator --paranoid + live negative kernel & comparator rejection PASS
 
 ## Verification Boundary
 
-Lean 4.35.0 kernels verify algebraic, discrete-PDE stability, unitary-operator, spectral-Parseval, Bragg-matrix, and finite contextuality theorems of the mathematical models constructively with zero sorry and zero Classical.choice; physical hardware leaves distinguish cited facts, computed models, live browser timings, and null UNKNOWN fields (no browser access to MediaTek NPU 990); A-Life routes are purely deterministic software simulations with zero sentience claims; honest Mega-Atlas V2.6.0 audit confirms 0 / 1,900 grand open problems retired.
+Lean 4.35.0 kernels verify algebraic, discrete-PDE stability, scalar Cayley norm-preservation, spectral-Parseval, Bragg-matrix, and finite contextuality theorems of the mathematical models constructively with zero sorry and zero Classical.choice; physical hardware leaves distinguish cited facts, computed models, live browser timings, and null UNKNOWN fields (no browser access to MediaTek NPU 990); A-Life routes are purely deterministic software simulations with zero sentience claims; honest Mega-Atlas V2.6.0 audit confirms 0 / 1,900 grand open problems retired.
 
 ## Independent Reproduction & Falsification Protocol
 
