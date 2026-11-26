@@ -236,21 +236,27 @@
       "archive_id": "0TH-BUILD-001",
       "slug": "cellulogonic-mecha",
       "repository": "https://github.com/0thernes/cellulogonic-mecha",
-      "version": "v1.5.0",
+      "version": "v1.6.0",
       "resolution_class": "FORMAL_INVARIANT_SUITE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "BIO-001",
+        "BIO-006",
         "BIO-015",
         "BIO-022",
+        "BIO-046",
+        "BIO-070",
+        "NEURO-043",
+        "AI-045",
         "SUB-001",
+        "SUB-012",
         "SUB-047",
         "SYS-009",
         "XSPEC-009"
       ],
-      "target_statement": "70 pure Lean 4.35.0 six-kernel Palomar discrete biophysical, developmental, continuum & non-vacuity invariants (T01-T58, C59-C62, NV01-NV08; paired with cellular-engine-omega 100, autophage 31, noetic-organism-omega 48, asmodensius-native 20 in the A-Life Omega stack).",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0 across 5 A-Life Omega public build repos (269 combined embedded invariants; cellulogonic-mecha & cellular-engine-omega verified across all 6 independent kernels via lake comparator --paranoid on CI #45751776610 and #45810663954).",
-      "honesty_boundary": "Discrete simulation model invariants only; explicitly solves 0/1,900 overarching Mega-Atlas open problems (all 7 adjacent catalog entries remain OPEN) and disclaims wet-lab proof or sentience."
+      "target_statement": "78 pure Lean 4.35.0 six-kernel Palomar discrete biophysical, developmental, continuum, non-vacuity & adversarial refutation invariants (T01-T58, C59-C62, NV01-NV08, AT01-AT08 + 12 pinned Spec.lean definitions; paired with cellular-engine-omega 100, autophage 31, noetic-organism-omega 48, asmodensius-native 20 in the A-Life Omega stack).",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0 across 5 A-Life Omega public build repos (277 combined embedded invariants; cellulogonic-mecha v1.6.0 & cellular-engine-omega v5.3.0 verified across all 6 independent kernels via lake comparator --paranoid + live sorry-tamper rejection on CI #45812871840 and #45810663954).",
+      "honesty_boundary": "Discrete simulation model invariants only; explicitly solves 0/1,900 overarching Mega-Atlas v2.6.0 open problems (all 13 adjacent catalog entries remain OPEN) and disclaims wet-lab proof or sentience."
     },
     {
       "archive_id": "0TH-2026-015",
