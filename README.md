@@ -20,6 +20,8 @@
 > **Mega-Atlas V2 Cross-Check:** **`0 / 1900` grand open problems retired** · **5 peer-literature open sub-conjectures/questions formally proved in Lean 4.35.0** across 6 independent kernels. Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
 <!-- LIVE_ECOSYSTEM_STATUS:END -->
 
+Public repositories discovered but not yet promoted into the research registries are documented in [`registry/PUBLIC_CANDIDATE_TRIAGE.md`](registry/PUBLIC_CANDIDATE_TRIAGE.md); discovery status is deliberately not treated as proof or a solved conjecture.
+
 ---
 
 ## Ecosystem Consolidation & Solved Sub-Conjecture Summary
