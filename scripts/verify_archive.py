@@ -436,10 +436,23 @@ def sync_derived_files(
         write_utf8_lf(dreg_json, json.dumps(ddata, indent=2) + "\n")
         checksum_entries.append((sha256_file(dreg_json), "registry/LAWS_AND_DISCOVERIES.json"))
 
-    for extra_rel in ("registry/SOLVED_AND_ATLAS_BRIDGE.json", "registry/LIVE_ECOSYSTEM_MIRROR.json"):
+    for extra_rel in (
+        "registry/SOLVED_AND_ATLAS_BRIDGE.json",
+        "registry/LIVE_ECOSYSTEM_MIRROR.json",
+        "registry/UPSTREAM_RELEASE_SNAPSHOTS.json",
+    ):
         extra_abs = root / extra_rel
         if extra_abs.exists():
             checksum_entries.append((sha256_file(extra_abs), extra_rel))
+
+    snapshot_path = root / "registry" / "UPSTREAM_RELEASE_SNAPSHOTS.json"
+    if snapshot_path.exists():
+        snapshots = json.loads(snapshot_path.read_text(encoding="utf-8"))
+        for snapshot in snapshots.get("snapshots", []):
+            for artifact in snapshot.get("artifacts", []):
+                artifact_path = root / artifact["path"]
+                if artifact_path.exists():
+                    checksum_entries.append((sha256_file(artifact_path), artifact["path"]))
 
     checksums_text = (
         "\n".join(f"{digest}  {rel}" for digest, rel in sorted(checksum_entries, key=lambda x: x[1])) + "\n"
@@ -452,7 +465,11 @@ def sync_derived_files(
     freeze_entries = [
         (digest, rel)
         for digest, rel in sorted(checksum_entries, key=lambda x: x[1])
-        if rel != "registry/LIVE_ECOSYSTEM_MIRROR.json"
+        if rel not in {
+            "registry/LIVE_ECOSYSTEM_MIRROR.json",
+            "registry/UPSTREAM_RELEASE_SNAPSHOTS.json",
+        }
+        and not rel.startswith("builds/0TH-BUILD-004_unsolved-mathematics/releases/")
     ]
     freeze_text = "\n".join(f"{digest}  {rel}" for digest, rel in freeze_entries) + "\n"
     write_utf8_lf(root / "data" / "RELEASE_FREEZE.sha256", freeze_text)
@@ -578,6 +595,30 @@ def check_rfc3161_tsa(freeze_path: Path, tsr_path: Path) -> list[str]:
     raw_digest = hashlib.sha256(freeze_path.read_bytes()).digest()
     if raw_digest not in tsr_bytes:
         issues.append(f"{tsr_path.name}: embedded SHA-256 digest does not match {freeze_path.name}")
+    return issues
+
+
+def check_upstream_release_snapshots(root: Path) -> list[str]:
+    """Verify separately retained upstream release candidates and their digests."""
+    issues: list[str] = []
+    registry_path = root / "registry" / "UPSTREAM_RELEASE_SNAPSHOTS.json"
+    if not registry_path.exists():
+        return issues
+    try:
+        registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return [f"UPSTREAM_RELEASE_SNAPSHOTS.json: cannot read registry ({exc})"]
+    for snapshot in registry.get("snapshots", []):
+        label = f"{snapshot.get('repository', 'unknown')} {snapshot.get('release', 'unknown')}"
+        if snapshot.get("promotion_status") != "CANDIDATE_SEPARATE_FROM_FROZEN_V0.5.0":
+            issues.append(f"{label}: missing explicit separate-candidate status")
+        for artifact in snapshot.get("artifacts", []):
+            rel = artifact.get("path")
+            target = root / rel if rel else None
+            if target is None or not target.exists():
+                issues.append(f"{label}: missing candidate artifact {rel}")
+            elif sha256_file(target) != artifact.get("sha256"):
+                issues.append(f"{label}: candidate SHA-256 mismatch for {rel}")
     return issues
 
 
@@ -790,6 +831,7 @@ def verify_archive(
     errors.extend(
         check_rfc3161_tsa(root / "data" / "RELEASE_FREEZE.sha256", root / "data" / "RELEASE_FREEZE.sha256.tsr")
     )
+    errors.extend(check_upstream_release_snapshots(root))
 
     for rel in ACTIVE_IDENTITY_FILES:
         fp = root / rel
