@@ -9,6 +9,7 @@
 - [Threat Model](threat-model.md) — Integrity, provenance, privacy-firewall, and supply-chain risks.
 - [Run Log](run-log.md)
 - [Master Hardening Index & Table of Contents](../HARDENING_INDEX.md)
+- [Round 2 Overnight Consolidation & Hardening Log (2026-11-26)](reviews/2026-11-26-overnight-hardening-log.md)
 - [3-Cycle Hardening & Consolidation Audit Log (2026-11-25/26)](reviews/2026-11-25-3cycle-hardening-log.md)
 - [Red-Team & Hardening Review (2026-11-25)](reviews/red-team-2026-11-25.md)
 - [FAQ](faq.md) · [Glossary](glossary.md) · [Build Standard v1.2.0 Reference](build-standard.md)

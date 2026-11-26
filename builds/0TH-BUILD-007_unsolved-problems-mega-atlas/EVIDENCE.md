@@ -36,7 +36,7 @@
 | Archived Artifact | `builds/0TH-BUILD-007_unsolved-problems-mega-atlas/CHECKSUMS.sha256.ots` (from `CHECKSUMS.sha256.ots`) |
 | Artifact SHA-256 | `249cf21df3567f02cbb8aa7a4a26d246f3350e5dfc4bf0ca51b11e42ed01c9d6` |
 | Archived Artifact | `builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md` (from `archive-audit/0THERNES_SOLVED_AUDIT_2026-11-25.md`) |
-| Artifact SHA-256 | `2121008740f466a509a13604067d499817f190732c9b828d99e20f20f0bc0fbd` |
+| Artifact SHA-256 | `8f1d109be87b43e09a0f9a7488ae16292a9e9bc8245aa6a99cf62140b6be74bc` |
 
 ## Summary
 

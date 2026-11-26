@@ -1,14 +1,14 @@
 # Replication Protocol (`REPLICATION.md`)
 
-Any third party can verify the entire canonical master archive, live ecosystem mirror, and Mega-Atlas bridge from a clean clone:
+Any third party can verify the entire canonical master archive, live ecosystem mirror, Mega-Atlas bridge, and DigiCert RFC 3161 TSA release seal from a clean clone:
 
 ```bash
-# 1. Clone the archive (add --recursive to fetch all 23 pinned public submodules)
+# 1. Clone the archive (add --recursive to fetch all 32 pinned public submodules)
 git clone https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 python3 -m pip install -r requirements.txt
 
-# 2. Verify every SHA-256 digest, ORCID, axiom policy, zero broken links, README sync, and submodule pin
+# 2. Verify every SHA-256 digest, RFC 3161 TSA seal, ORCID, axiom policy, bridge parity, table continuity, zero broken links, and all 32 submodule pins
 python3 scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
 
@@ -26,4 +26,5 @@ To refresh the live upstream status mirror against GitHub right now, run `python
 |---|---|---|---|---|---|
 | 2026-11-25 | Alexander S. Donahue (author) | Windows 11, Python 3.13.12 | `2026.11.25` | PASS | Full `verify_archive.py --sync`, pytest ladder, `Audit-Repo.ps1` 100.0%. |
 | 2026-11-25 | GitHub Actions CI (`ubuntu-latest`, `windows-latest`, `macos-latest`) | Hosted runners, Python 3.12 | `2026.11.25` | PASS (3 OSes) | Cross-platform verification, static Pages portal, and `SHA256SUMS` + SLSA release. |
-| 2026-11-26 | Alexander S. Donahue + 3-Cycle Hardening Audit | Windows 11 + Ubuntu/macOS/Windows CI | `2026.11.26` | PASS | Consolidated 36 entries / 23 submodules, `0TH-2026-013`, `0TH-BUILD-004 v0.5.0`, `0TH-BUILD-010/011`, `0TH-DISC-011/012`, live sync mirror (`live-sync.yml`), Mega-Atlas bridge, WCAG 2.2 AA 3-tier portal, zero broken links, zero unformed LLC strings. |
+| 2026-11-26 | Alexander S. Donahue + Round 1 3-Cycle Hardening | Windows 11 + Ubuntu/macOS/Windows CI | `2026.11.26` | PASS | Consolidated canonical hub (`live-sync.yml`), Mega-Atlas bridge, `0TH-2026-013 v1.1.0`, WCAG 2.2 AA 3-tier portal, zero broken links, zero unformed LLC strings. |
+| 2026-11-26 | Alexander S. Donahue + Round 2 Overnight Hardening | Windows 11 + Ubuntu/macOS/Windows CI | `2026.11.26` | PASS | Synced **45 entries (`16+17+12`) / 32 submodules / 1,058 Tier-II Lean decls**, upgraded `0TH-2026-013` → `v1.2.0` (25 decls + live negative kernel rejection + 27/27 live citations + DigiCert TSA), expanded `SOLVED_AND_ATLAS_BRIDGE.json` to 26 version-checked rows (5 peer-literature sub-conjectures incl. `0TH-2026-016`), fixed split `README.md` Tier II table, added table/count/bridge/mirror/TSA verification guards & live DigiCert RFC 3161 `.tsr` over `data/RELEASE_FREEZE.sha256`. |

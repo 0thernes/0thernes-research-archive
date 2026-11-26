@@ -113,29 +113,42 @@ def test_consolidated_latest_entries_registered() -> None:
         p["id"]: p
         for p in json.loads((ROOT / "registry" / "PAPERS.json").read_text(encoding="utf-8"))["papers"]
     }
+    assert len(papers) == 16
     assert papers["0TH-2026-006"]["version"] == "v2.2.0"
     assert papers["0TH-2026-006"]["lean_verification"]["audited_theorems"] == 723
-    assert "0TH-2026-013" in papers
+    assert papers["0TH-2026-009"]["version"] == "v3.0.0"
+    assert papers["0TH-2026-004"]["version"] == "v2.0.0"
+    assert papers["0TH-2026-011"]["version"] == "v2.5.0"
+    assert papers["0TH-2026-012"]["version"] == "v4.0.0"
     assert papers["0TH-2026-013"]["slug"] == "p-vs-np-frontier-lab"
-    assert papers["0TH-2026-013"]["version"] == "v1.1.0"
+    assert papers["0TH-2026-013"]["version"] == "v1.2.0"
+    assert papers["0TH-2026-013"]["lean_verification"]["audited_theorems"] == 25
+    assert papers["0TH-2026-014"]["slug"] == "monodromia"
+    assert papers["0TH-2026-015"]["slug"] == "promislow-fracton-amoeba"
+    assert papers["0TH-2026-016"]["slug"] == "zero-error-torus-frontier"
 
     builds = {
         b["id"]: b
         for b in json.loads((ROOT / "registry" / "BUILD_PAPERS.json").read_text(encoding="utf-8"))["builds"]
     }
+    assert len(builds) == 17
     assert builds["0TH-BUILD-004"]["version"] == "v0.5.0"
     assert builds["0TH-BUILD-004"]["lean_verification"]["audited_theorems"] == 69
     assert builds["0TH-BUILD-007"]["version"] == "v2.7.0"
     assert builds["0TH-BUILD-007"]["lean_verification"]["audited_theorems"] == 103
-    assert papers["0TH-2026-009"]["version"] == "v3.0.0"
-    assert papers["0TH-2026-004"]["version"] == "v2.0.0"
-    assert "0TH-BUILD-010" in builds and builds["0TH-BUILD-010"]["slug"] == "noetic-organism-omega"
-    assert "0TH-BUILD-011" in builds and builds["0TH-BUILD-011"]["slug"] == "asmodensius-native"
+    assert builds["0TH-BUILD-010"]["slug"] == "noetic-organism-omega"
+    assert builds["0TH-BUILD-011"]["slug"] == "asmodensius-native"
+    assert builds["0TH-BUILD-012"]["slug"] == "xiaomi-17t-pro-lab"
+    assert builds["0TH-BUILD-015"]["slug"] == "glitchling-jam"
+    assert builds["0TH-BUILD-016"]["slug"] == "ALife-Framework"
+    assert builds["0TH-BUILD-017"]["slug"] == "beast-civilization"
+    assert builds["0TH-BUILD-017"]["version"] == "v0.7.0"
 
     discs = {
         d["id"]: d
         for d in json.loads((ROOT / "registry" / "LAWS_AND_DISCOVERIES.json").read_text(encoding="utf-8"))["discoveries"]
     }
+    assert len(discs) == 12
     assert "0TH-DISC-011" in discs and discs["0TH-DISC-011"]["slug"] == "alife-singularity-omega-package"
     assert "0TH-DISC-012" in discs and discs["0TH-DISC-012"]["slug"] == "omega-triscale-observatory"
 
@@ -144,12 +157,39 @@ def test_solved_and_atlas_bridge_epistemic_honesty() -> None:
     bridge = json.loads((ROOT / "registry" / "SOLVED_AND_ATLAS_BRIDGE.json").read_text(encoding="utf-8"))
     assert bridge["mega_atlas_total_problems"] == 1900
     assert bridge["grand_problems_retired"] == 0
+    assert bridge["epistemic_summary"]["published_open_subconjectures_proved_in_lean"] == 5
     assert bridge["author"]["orcid"] == va.EXPECTED_ORCID
-    assert len(bridge["entries"]) >= 12
+    assert len(bridge["entries"]) == 26
     for entry in bridge["entries"]:
         assert entry["grand_atlas_problem_retired"] is False
         assert entry["honesty_boundary"]
     assert (ROOT / "registry" / "SOLVED_AND_ATLAS_BRIDGE.md").exists()
+
+
+def test_readme_table_continuity_and_split_table_mutant_killed() -> None:
+    """Regression & negative mutant test (H-19): README tables stay contiguous; blank-line split is rejected."""
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert va.check_readme_table_integrity(readme) == []
+
+    mutated = readme.replace("\n| `0TH-BUILD-015` |", "\n\n| `0TH-BUILD-015` |", 1)
+    issues = va.check_readme_table_integrity(mutated)
+    assert len(issues) == 1
+    assert "splits consecutive registry table rows" in issues[0]
+
+
+def test_rfc3161_release_freeze_tsa_and_tamper_rejection(tmp_path: Path) -> None:
+    """Verify DigiCert RFC 3161 TSA token binds data/RELEASE_FREEZE.sha256 and rejects tampered freeze manifests."""
+    freeze = ROOT / "data" / "RELEASE_FREEZE.sha256"
+    tsr = ROOT / "data" / "RELEASE_FREEZE.sha256.tsr"
+    assert freeze.is_file()
+    assert tsr.is_file()
+    assert va.check_rfc3161_tsa(freeze, tsr) == []
+
+    tampered = tmp_path / "RELEASE_FREEZE.sha256"
+    tampered.write_bytes(freeze.read_bytes() + b"\n# tampered\n")
+    issues = va.check_rfc3161_tsa(tampered, tsr)
+    assert len(issues) == 1
+    assert "does not match" in issues[0]
 
 
 def test_live_sync_privacy_firewall_and_failure_injection() -> None:

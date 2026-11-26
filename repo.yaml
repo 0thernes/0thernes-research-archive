@@ -2,7 +2,7 @@
 # Project manifest for Build Standard for LLMs v1.2.0.
 standard: "1.2.0"
 name: "0thernes-research-archive"
-description: "Canonical public master vault, live ecosystem mirror, and Mega-Atlas V2 bridge of 36 public Lean 4-verified research preprints, build white papers, laws, pre-registered empirical claims, frozen PDFs, SHA-256 manifests, and 23 pinned public Git submodules authored by Alexander Stephen Donahue."
+description: "Canonical public master vault, live ecosystem mirror, and Mega-Atlas V2 bridge of 45 public Lean 4-verified research preprints, build white papers, laws, pre-registered empirical claims, frozen PDFs, SHA-256 + RFC 3161 TSA manifests, and 32 pinned public Git submodules authored by Alexander Stephen Donahue."
 owner: "Alexander S. Donahue (0thernes)"
 year: "2026"
 project_type: research
@@ -77,7 +77,7 @@ items:
   B05: {status: done, evidence: "Claims C1-C5 mapped to scripts/verify_archive.py and tests/test_archive_integrity.py"}
   B06: {status: done, evidence: "Negative tamper-detection, broken-link, and privacy-firewall rejection tests in tests/test_archive_integrity.py"}
   B07: {status: done, evidence: "Regression tests for privacy firewall, R4 banned files, zero broken links, and zero unformed LLC assertions"}
-  B08: {status: done, evidence: "Byte-exact SHA-256 checksums across all 36 entries, bridge, and live mirror"}
+  B08: {status: done, evidence: "Byte-exact SHA-256 checksums across all 45 entries, bridge, live mirror, and DigiCert RFC 3161 TSA release freeze"}
   B09: {status: done, evidence: "GitHub REST API contract & privacy-firewall checks in scripts/live_sync.py and tests/test_archive_integrity.py"}
   B10: {status: done, evidence: "Hypothesis property-based hash & metadata checks in tests/test_archive_integrity.py"}
   B11: {status: done, evidence: "Differential verification comparing Python sha256_file vs CHECKSUMS.sha256 & git ls-files submodule pins"}
@@ -108,10 +108,10 @@ items:
   B36: {status: done, evidence: "docs/threat-model.md"}
   B37: {status: done, evidence: ".github/workflows/release.yml generates SHA256SUMS"}
   B38: {status: done, evidence: ".github/workflows/release.yml runs actions/attest-build-provenance"}
-  B39: {status: done, evidence: "data/MANIFEST.sha256 and CHECKSUMS.sha256"}
+  B39: {status: done, evidence: "data/MANIFEST.sha256, data/RELEASE_FREEZE.sha256 (+ DigiCert RFC 3161 .tsr), and CHECKSUMS.sha256"}
   B40: {status: done, evidence: "docs/run-log.md"}
   B41: {status: done, evidence: "LIMITATIONS.md (including Real vs. Metaphor)"}
   B42: {status: done, evidence: "CLAIMS.md What Would Prove Us Wrong"}
   B43: {status: done, evidence: "REPLICATION.md"}
   B44: {status: done, evidence: "REPLICATION.md dated replication table"}
-  B45: {status: done, evidence: "docs/reviews/red-team-2026-11-25.md and docs/reviews/2026-11-25-3cycle-hardening-log.md"}
+  B45: {status: done, evidence: "docs/reviews/2026-11-26-overnight-hardening-log.md, docs/reviews/2026-11-25-3cycle-hardening-log.md, and docs/reviews/red-team-2026-11-25.md"}

@@ -444,11 +444,19 @@ def sync_derived_files(
     data_manifest = root / "data" / "MANIFEST.sha256"
     data_manifest.parent.mkdir(parents=True, exist_ok=True)
     data_manifest.write_text(checksums_text, encoding="utf-8", newline="\n")
+    freeze_entries = [
+        (digest, rel)
+        for digest, rel in sorted(checksum_entries, key=lambda x: x[1])
+        if rel != "registry/LIVE_ECOSYSTEM_MIRROR.json"
+    ]
+    freeze_text = "\n".join(f"{digest}  {rel}" for digest, rel in freeze_entries) + "\n"
+    (root / "data" / "RELEASE_FREEZE.sha256").write_text(freeze_text, encoding="utf-8", newline="\n")
     bcount = len(bdata["builds"]) if bdata else 0
     dcount = len(ddata["discoveries"]) if ddata else 0
     print(
         f"Synced {len(data['papers'])} Tier-I papers + {bcount} Tier-II builds + {dcount} Tier-III discoveries, "
-        f"registry markdowns, CHECKSUMS.sha256, and data/MANIFEST.sha256 ({len(checksum_entries)} hashed files)."
+        f"registry markdowns, CHECKSUMS.sha256, data/MANIFEST.sha256 ({len(checksum_entries)} hashed files), "
+        f"and data/RELEASE_FREEZE.sha256 ({len(freeze_entries)} frozen release files)."
     )
 
 
@@ -502,6 +510,72 @@ def check_markdown_links(root: Path) -> list[str]:
     return broken
 
 
+def check_readme_table_integrity(readme_text: str) -> list[str]:
+    """Ensure no blank line splits consecutive 0TH-* registry table rows in README.md."""
+    issues: list[str] = []
+    lines = readme_text.splitlines()
+    prev_was_row = False
+    saw_blank = False
+    blank_line_no = 0
+    for idx, line in enumerate(lines, start=1):
+        stripped = line.strip()
+        is_row = stripped.startswith("| `0TH-")
+        if is_row:
+            if prev_was_row and saw_blank:
+                issues.append(
+                    f"README.md: blank line at L{blank_line_no} splits consecutive registry table rows before L{idx}"
+                )
+            prev_was_row = True
+            saw_blank = False
+        elif stripped == "":
+            if prev_was_row and not saw_blank:
+                saw_blank = True
+                blank_line_no = idx
+        else:
+            prev_was_row = False
+            saw_blank = False
+    return issues
+
+
+def check_readme_counts(
+    readme_text: str,
+    pcount: int,
+    bcount: int,
+    dcount: int,
+    subcount: int,
+    total_build_lean: int,
+) -> list[str]:
+    """Verify README.md Scope line and Tier II Lean totals match canonical JSON registries."""
+    issues: list[str] = []
+    total = pcount + bcount + dcount
+    expected_scope = (
+        f"**{total} public research entries** (`{pcount} Tier I + {bcount} Tier II + {dcount} Tier III`) "
+        f"+ **{subcount} pinned public Git submodules**"
+    )
+    if subcount > 0 and expected_scope not in readme_text:
+        issues.append(f"README.md: Scope line does not match exact counts ({expected_scope})")
+    if total_build_lean > 0 and f"{total_build_lean:,}" not in readme_text and str(total_build_lean) not in readme_text:
+        issues.append(f"README.md: Tier II Lean declaration total ({total_build_lean:,}) missing or stale")
+    return issues
+
+
+def check_rfc3161_tsa(freeze_path: Path, tsr_path: Path) -> list[str]:
+    """Verify RFC 3161 DER timestamp response embeds the exact SHA-256 digest of freeze_path."""
+    issues: list[str] = []
+    if not tsr_path.exists():
+        return issues
+    if not freeze_path.exists():
+        return [f"Missing {freeze_path.name} required by {tsr_path.name}"]
+    tsr_bytes = tsr_path.read_bytes()
+    if len(tsr_bytes) < 128 or tsr_bytes[0] != 0x30:
+        issues.append(f"{tsr_path.name}: invalid RFC 3161 DER structure")
+        return issues
+    raw_digest = hashlib.sha256(freeze_path.read_bytes()).digest()
+    if raw_digest not in tsr_bytes:
+        issues.append(f"{tsr_path.name}: embedded SHA-256 digest does not match {freeze_path.name}")
+    return issues
+
+
 def verify_archive(
     root: Path,
     data: dict[str, Any],
@@ -514,6 +588,7 @@ def verify_archive(
         errors.append(f"Archive ORCID mismatch: expected {EXPECTED_ORCID}")
 
     seen_ids: set[str] = set()
+    id_to_version: dict[str, str] = {}
     git_pins = get_git_submodule_commits(root)
     readme_txt = (root / "README.md").read_text(encoding="utf-8") if (root / "README.md").exists() else ""
 
@@ -522,6 +597,7 @@ def verify_archive(
         if pid in seen_ids:
             errors.append(f"Duplicate ID: {pid}")
         seen_ids.add(pid)
+        id_to_version[pid] = str(p["version"])
         if p.get("orcid") != EXPECTED_ORCID:
             errors.append(f"{pid}: ORCID mismatch ({p.get('orcid')})")
         if "0thernes LLC" in str(p.get("affiliation", "")):
@@ -572,6 +648,7 @@ def verify_archive(
                 errors.append(f"{pid}: README.md version does not match PAPERS.json ({p['version']})")
 
     bcount = 0
+    total_build_lean = 0
     if bdata is not None:
         bcount = len(bdata["builds"])
         for b in bdata["builds"]:
@@ -579,6 +656,8 @@ def verify_archive(
             if bid in seen_ids:
                 errors.append(f"Duplicate ID: {bid}")
             seen_ids.add(bid)
+            id_to_version[bid] = str(b["version"])
+            total_build_lean += int(b["lean_verification"]["audited_theorems"])
             if b.get("orcid") != EXPECTED_ORCID:
                 errors.append(f"{bid}: ORCID mismatch ({b.get('orcid')})")
             if "0thernes LLC" in str(b.get("affiliation", "")):
@@ -656,11 +735,26 @@ def verify_archive(
             errors.append("SOLVED_AND_ATLAS_BRIDGE.json: ORCID mismatch")
         if bridge.get("grand_problems_retired") != 0:
             errors.append("SOLVED_AND_ATLAS_BRIDGE.json: grand_problems_retired must be 0")
+        solved_count = 0
         for ent in bridge.get("entries", []):
-            if ent.get("archive_id") not in seen_ids:
-                errors.append(f"SOLVED_AND_ATLAS_BRIDGE.json: unknown archive_id {ent.get('archive_id')}")
+            aid = ent.get("archive_id")
+            if aid not in seen_ids:
+                errors.append(f"SOLVED_AND_ATLAS_BRIDGE.json: unknown archive_id {aid}")
+            elif aid in id_to_version and str(ent.get("version")) != id_to_version[aid]:
+                errors.append(
+                    f"SOLVED_AND_ATLAS_BRIDGE.json: version mismatch for {aid} "
+                    f"(bridge={ent.get('version')}, registry={id_to_version[aid]})"
+                )
             if ent.get("grand_atlas_problem_retired") is not False:
-                errors.append(f"SOLVED_AND_ATLAS_BRIDGE.json: entry {ent.get('archive_id')} must not claim grand retirement")
+                errors.append(f"SOLVED_AND_ATLAS_BRIDGE.json: entry {aid} must not claim grand retirement")
+            if ent.get("resolution_class") == "SOLVED_SUB_CONJECTURE":
+                solved_count += 1
+        declared_solved = bridge.get("epistemic_summary", {}).get("published_open_subconjectures_proved_in_lean")
+        if declared_solved != solved_count:
+            errors.append(
+                f"SOLVED_AND_ATLAS_BRIDGE.json: published_open_subconjectures_proved_in_lean={declared_solved} "
+                f"does not match SOLVED_SUB_CONJECTURE entries ({solved_count})"
+            )
 
     mirror_path = root / "registry" / "LIVE_ECOSYSTEM_MIRROR.json"
     if mirror_path.exists():
@@ -671,6 +765,26 @@ def verify_archive(
         mirror = json.loads(mirror_raw)
         if mirror.get("privacy_firewall") != "PUBLIC_NON_FORK_0THERNES_ONLY":
             errors.append("LIVE_ECOSYSTEM_MIRROR.json: missing PUBLIC_NON_FORK_0THERNES_ONLY firewall declaration")
+        mcounts = mirror.get("counts") or {}
+        expected_total = len(data["papers"]) + bcount + dcount
+        if mcounts.get("total_entries") != expected_total:
+            errors.append(
+                f"LIVE_ECOSYSTEM_MIRROR.json: total_entries={mcounts.get('total_entries')} != {expected_total}"
+            )
+        if git_pins and mcounts.get("pinned_submodules") != len(git_pins):
+            errors.append(
+                f"LIVE_ECOSYSTEM_MIRROR.json: pinned_submodules={mcounts.get('pinned_submodules')} != {len(git_pins)}"
+            )
+
+    if readme_txt:
+        errors.extend(check_readme_table_integrity(readme_txt))
+        errors.extend(
+            check_readme_counts(readme_txt, len(data["papers"]), bcount, dcount, len(git_pins), total_build_lean)
+        )
+
+    errors.extend(
+        check_rfc3161_tsa(root / "data" / "RELEASE_FREEZE.sha256", root / "data" / "RELEASE_FREEZE.sha256.tsr")
+    )
 
     for rel in ACTIVE_IDENTITY_FILES:
         fp = root / rel

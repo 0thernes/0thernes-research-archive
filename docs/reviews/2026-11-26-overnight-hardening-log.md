@@ -1,0 +1,29 @@
+# Round 2 Overnight Consolidation & 3-Cycle Hardening Audit Log (`2026-11-26`)
+
+**Author:** Alexander Stephen Donahue (`Independent Researcher, Spokane, WA, USA`, ORCID `0009-0006-8168-9648`)  
+**Scope:** Overnight reconciliation of `0thernes/0thernes-research-archive` (`36 → 45` public entries, `23 → 32` pinned public submodules, `577 → 1,058` Tier-II Pure Lean 4.35.0 declarations across `78` audited public GitHub repositories) and Gold Standard Playbook v1.3 upgrade of `0thernes/p-vs-np-frontier-lab` (`v1.1.0 → v1.2.0`).  
+**Standards:** Build Standard for LLMs v1.2.0 (`R1`–`R8`, 10 finding classes `bug`, `error`, `issue`, `problem`, `concern`, `dilemma`, `conflict`, `gap`, `hole`, `blindspot`) & Defensible Independent AI Research Playbook v1.3.
+
+---
+
+## Classified Findings & Resolutions (`H-19` – `H-25`)
+
+| ID | Finding Class | Target | Defect / Blindspot Identified | Resolution & Automated Prevention |
+|---|---|---|---|---|
+| **H-19** | `bug` | `README.md` (lines 80 & 83) | Blank lines inserted by concurrent overnight Tier II registrations split `0TH-BUILD-014`, `0TH-BUILD-015`/`016`, and `0TH-BUILD-017` into broken Markdown pipe blocks on GitHub. | Removed blank lines so Tier II renders as one contiguous GFM table; added `check_readme_table_integrity()` to `scripts/verify_archive.py` and a negative split-table mutant test to `tests/test_archive_integrity.py`. |
+| **H-20** | `error` | `README.md`, `CLAIMS.md`, `ROADMAP.md`, `REPLICATION.md`, `HARDENING_INDEX.md`, `repo.yaml`, `docs/architecture.md`, `docs/faq.md`, `docs/run-log.md` | Stale entry/submodule counts (`36/23` or `44/31`) and stale peer sub-conjecture count (`4` instead of `5` after `0TH-2026-016` resolved Tandon `arXiv:2608.30273` Open Problem #2). | Reconciled every active document to exact `45` entries (`16+17+12`), `32` submodules, `1,058` Tier-II Lean decls, `38` tracked unique public repos, `78` audited public repos, and `5` Lean-proved peer-literature sub-conjectures; added `check_readme_counts()` to `scripts/verify_archive.py`. |
+| **H-21** | `gap` / `conflict` | `registry/SOLVED_AND_ATLAS_BRIDGE.json` & `0THERNES_SOLVED_AUDIT_2026-11-25.md` | Missing `0TH-2026-016` (5th peer sub-conjecture), `0TH-2026-014`, `0TH-BUILD-008..012`, `0TH-BUILD-017`, and stale versions for `0TH-2026-012` (`v3.0.0→v4.0.0`), `0TH-2026-011` (`v2.4.0→v2.5.0`), `0TH-2026-013` (`v1.1.0→v1.2.0`), `0TH-2026-007` (`v1.2.0→v1.3.0`), `0TH-BUILD-002` (`v2.3.0→v2.4.0`), `0TH-BUILD-003` (`v1.4.1→v1.5.0`). | Expanded bridge to **26 version-checked rows** covering every active Lean-verified Tier I paper and all 15 Lean-bearing Tier II builds; added strict bridge-to-registry exact `version` & `SOLVED_SUB_CONJECTURE` count parity checks in `scripts/verify_archive.py` + mutant regression test. |
+| **H-22** | `blindspot` | `scripts/verify_archive.py` | `LIVE_ECOSYSTEM_MIRROR.json` entry and submodule counts were not cross-checked against registry totals or `git ls-files --stage repos`. | Added exact `total_entries` and `pinned_submodules` parity checks for `LIVE_ECOSYSTEM_MIRROR.json` in `scripts/verify_archive.py`. |
+| **H-23** | `dilemma` / `hole` | `data/RELEASE_FREEZE.sha256` & DigiCert RFC 3161 TSA | Playbook v1.3 calls for RFC 3161 cryptographic timestamping, but stamping `data/MANIFEST.sha256` directly would break on automated 2-hour `live-sync.yml` refreshes of `LIVE_ECOSYSTEM_MIRROR.json`. | Separated immutable release artifacts into `data/RELEASE_FREEZE.sha256` (all Tier I/II/III registries, PDFs, snapshots, metadata, and Mega-Atlas bridge; excluding only the 2-hourly live mirror), stamped with live DigiCert RFC 3161 TSA (`data/RELEASE_FREEZE.sha256.tsr`), and enforced DER + 32-byte raw SHA-256 digest binding in `scripts/verify_archive.py` & `pytest`. |
+| **H-24** | `issue` / `problem` | `0thernes/p-vs-np-frontier-lab` (`0TH-2026-013` `v1.1.0 → v1.2.0`) | Lacked `NonVacuity.lean`, `AdversarialTests.lean`, mandatory live negative Lean kernel rejection CI gate, live Crossref citation audit, DigiCert RFC 3161 TSA, and interactive Blueprint filtering; had 14 `ruff` and 2 `mypy` warnings. | Upgraded to `v1.2.0` (`a70733fc388c`): 25 audited Lean 4.35.0 declarations (`5 NonVacuity` + `5 AdversarialTests` [2 zero-axiom]), live negative Lean kernel rejection CI gate, `27/27` live verified citations (`25` Crossref HTTP-200 DOIs, `0` retractions), DigiCert RFC 3161 `.tsr`, `0 ruff`/`0 mypy`, interactive WCAG 2.2 AA Blueprint DAG, `100.0%` (`63/63`) Build Standard v1.2.0, pinned in archive. |
+| **H-25** | `concern` | Privacy Firewall across `Z:` & `0thernes/*` | Confirmed 14 private repositories exist under `0thernes/*` and local workspaces; private repo slugs must never appear in any public registry, mirror, or denylist leak. | Preserved dynamic `private: true` / `fork: true` runtime firewall in `scripts/live_sync.py` and verified zero private slugs appear across all public manifests, docs, and submodules. |
+
+---
+
+## Verification Summary
+
+- `scripts/live_sync.py` (live GitHub API): **38 unique public repos**, `0` API errors, strict `PUBLIC_NON_FORK_0THERNES_ONLY` firewall.
+- `scripts/verify_archive.py --sync`: **PASS** across 16 Tier I + 17 Tier II + 12 Tier III entries, 32 pinned public Git submodules, 26 version-checked bridge rows, zero broken markdown links, contiguous README tables, exact count parity, and live DigiCert RFC 3161 TSA digest match.
+- `pytest -v tests/`: **100% PASS** (schema, version parity, R4, privacy firewall, zero LLC, zero broken links, table-continuity & negative mutant, bridge-version-parity & negative mutant, RFC 3161 TSA check, failure injection, WCAG portal, metamorphic `--sync` idempotence, Hypothesis property/differential checks).
+- `ruff check scripts/ tests/` & `mypy --ignore-missing-imports scripts/`: **0 errors**.
+- `scripts/Audit-Repo.ps1 .`: **100.0% (Core 100%)** Build Standard v1.2.0.
