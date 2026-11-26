@@ -69,6 +69,7 @@ Complete structural index and audit checklist for **0thernes Research Archive (`
 ## 7. Architecture, ADRs, Run Logs & 3-Cycle Hardening Dossiers (`docs/`)
 
 - [`docs/index.md`](docs/index.md), [`docs/architecture.md`](docs/architecture.md), [`docs/configuration.md`](docs/configuration.md), [`docs/operations.md`](docs/operations.md), [`docs/threat-model.md`](docs/threat-model.md), [`docs/faq.md`](docs/faq.md), [`docs/glossary.md`](docs/glossary.md), [`docs/run-log.md`](docs/run-log.md).
+- [`registry/LEGACY_INDEX_MIGRATION.md`](registry/LEGACY_INDEX_MIGRATION.md) — migration and authority policy for duplicate local archive/list indexes, including the Claude hub results ledger.
 - [`docs/adr/0001-three-tier-epistemic-archive.md`](docs/adr/0001-three-tier-epistemic-archive.md) & [`docs/adr/0002-canonical-hub-and-live-sync.md`](docs/adr/0002-canonical-hub-and-live-sync.md).
 - [`docs/upstream-notify-workflow.yml`](docs/upstream-notify-workflow.yml).
 - [`docs/reviews/2026-11-26-overnight-hardening-log.md`](docs/reviews/2026-11-26-overnight-hardening-log.md), [`docs/reviews/2026-11-25-3cycle-hardening-log.md`](docs/reviews/2026-11-25-3cycle-hardening-log.md), and [`docs/reviews/red-team-2026-11-25.md`](docs/reviews/red-team-2026-11-25.md).
