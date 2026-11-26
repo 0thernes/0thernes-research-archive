@@ -618,6 +618,53 @@ def check_rfc3161_tsa(freeze_path: Path, tsr_path: Path) -> list[str]:
     return issues
 
 
+# Current-state prose that repeats archive totals. Dated history (CHANGELOG.md, ROADMAP.md
+# "Completed" entries, docs/reviews/, the REPLICATION.md log) is deliberately not checked.
+COUNT_GUARDED_FILES = (
+    "README.md",
+    "CLAIMS.md",
+    "LIMITATIONS.md",
+    "AGENTS.md",
+    "repo.yaml",
+    "llms.txt",
+    "docs/architecture.md",
+    "docs/configuration.md",
+    "docs/faq.md",
+)
+_COUNT_PATTERNS = (
+    ("public research entries", re.compile(r"\*{0,2}(\d[\d,]*)\*{0,2}\s+public\s+(?:research\s+)?entries", re.I)),
+    ("Tier I", re.compile(r"\b(\d+)\s+Tier\s+I(?![IVX])")),
+    ("Tier II", re.compile(r"\b(\d+)\s+Tier\s+II(?![IVX])")),
+    ("Tier III", re.compile(r"\b(\d+)\s+Tier\s+III(?![IVX])")),
+    ("pinned submodules", re.compile(r"\*{0,2}(\d+)\*{0,2}\s+pinned\s+(?:PUBLIC\s+|public\s+)?(?:Git\s+)?submodules", re.I)),
+)
+
+
+def check_prose_counts(root: Path, total: int, pcount: int, bcount: int, dcount: int, subcount: int) -> list[str]:
+    """Every hand-typed archive total in current-state prose must equal the registry value."""
+    expected = {
+        "public research entries": total,
+        "Tier I": pcount,
+        "Tier II": bcount,
+        "Tier III": dcount,
+        "pinned submodules": subcount,
+    }
+    issues: list[str] = []
+    for rel in COUNT_GUARDED_FILES:
+        p = root / rel
+        if not p.exists():
+            continue
+        for lineno, line in enumerate(p.read_text(encoding="utf-8").splitlines(), start=1):
+            for label, rx in _COUNT_PATTERNS:
+                if label == "pinned submodules" and subcount == 0:
+                    continue
+                for m in rx.finditer(line):
+                    n = int(m.group(1).replace(",", ""))
+                    if n != expected[label]:
+                        issues.append(f"{rel}:{lineno}: says {n} {label}; the registries give {expected[label]}")
+    return issues
+
+
 def check_privacy_firewall(root: Path) -> list[str]:
     """No non-public repository name may appear in the archive's own registries, code or docs.
 
@@ -868,6 +915,11 @@ def verify_archive(
         errors.extend(
             check_readme_counts(readme_txt, len(data["papers"]), bcount, dcount, len(git_pins), total_build_lean)
         )
+    errors.extend(
+        check_prose_counts(
+            root, len(data["papers"]) + bcount + dcount, len(data["papers"]), bcount, dcount, len(git_pins)
+        )
+    )
 
     errors.extend(
         check_rfc3161_tsa(root / "data" / "RELEASE_FREEZE.sha256", root / "data" / "RELEASE_FREEZE.sha256.tsr")

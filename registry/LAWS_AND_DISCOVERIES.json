@@ -179,7 +179,7 @@
       "slug": "unsolved-math-certificates-and-atlas",
       "visibility": "PUBLIC",
       "epistemic_tier": "finite_computational_certificate_and_open_problem_atlas",
-      "title": "Unsolved Mathematics Atlas: 900+ Open-Problem Meta-Analyses, Finite Odd-Unit Lock Bridge Collapse Certificate & Collatz Failed-Attempts Atlas",
+      "title": "Unsolved Mathematics Atlas of 106 Open Problems, a Finite Odd-Unit Lock Bridge Collapse Certificate, and a Collatz Failed-Attempts Atlas",
       "domain": "Experimental Mathematics / Number Theory / Research Methodology",
       "date": "2026-07-05",
       "author": "Alexander Stephen Donahue",
@@ -188,7 +188,7 @@
       "repository": "https://github.com/0thernes/unsolved-mathematics",
       "branch": "main+codex/collatz-catalog-qa-routing",
       "pinned_commit": "f32ae651500631df90685e57b673868a9ef39e31",
-      "summary": "Structured 900+ open-problem dossier index alongside the finite machine-checkable Odd-Unit Lock Bridge Collapse Certificate (R=16..24, 250k & 1M stress scans) and the Collatz Failed-Attempts Atlas on branch codex/collatz-catalog-qa-routing (47e383d8a7e1).",
+      "summary": "Structured dossier index of 106 open problems alongside the finite machine-checkable Odd-Unit Lock Bridge Collapse Certificate (R=16..24, 250k & 1M stress scans) and the Collatz Failed-Attempts Atlas on branch codex/collatz-catalog-qa-routing (47e383d8a7e1).",
       "verification_boundary": "CRITICAL SCOPE: The Odd-Unit Lock certificate is a finite computational check proving NO part of the Collatz Conjecture (status: OPEN). Raw drafts on branch codex/add-collatz-whitepaper-qa-audit (e45e5b097de4) are quarantined/debunked case-study artifacts documented by 0TH-BUILD-004.",
       "archived_artifacts": [
         {

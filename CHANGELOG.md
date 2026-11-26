@@ -2,6 +2,25 @@
 
 All notable archive registrations, cryptographic pin updates, and hardening releases are logged here.
 
+## [Unreleased]
+
+### Added
+- **Results Ledger** ([`RESULTS.md`](RESULTS.md), [ADR 0003](docs/adr/0003-numbered-results-ledger.md)): one numbered list of audited results with plain statements, evidence, Lean declarations at the audited commit, limits and a check command, generated from `registry/RESULTS_LEDGER.json` by `scripts/build_ledger.py` and checked by `scripts/verify_archive.py`.
+- [`docs/reviews/2026-11-26-statement-audit.md`](docs/reviews/2026-11-26-statement-audit.md): method, rebuild results and per-entry outcomes of the statement audit.
+- `scripts/stamp_freeze.py` (`just seal`): one-command RFC 3161 re-seal of `data/RELEASE_FREEZE.sha256`.
+- `scripts/privacy.py`: SHA-256 denylist of non-public repository names.
+
+### Changed
+- Bridge classes after the statement audit: `0TH-2026-010` and `0TH-2026-016` from solved sub-conjecture to new-theorem suite; `0TH-2026-012` to barrier formalization; `0TH-2026-007`, `-011`, `-014` to formal invariant suite. Open questions from arXiv preprints answered: 2, not 5.
+- Registry, bridge and README wording corrected for `0TH-2026-004`, `-006`, `-007`, `-010`, `-011`, `-012`, `-013`, `-014`, `-016` (see the review log); "peer-literature" replaced by "arXiv preprint"; "100% kernel-checked" replaced by "kernel-checked".
+- Live sync described as an hourly pull (schedule moved from every 2 hours to hourly); push dispatch documented as optional and not configured.
+
+### Fixed
+- `0TH-DISC-005` described as a 106-problem atlas (was "900+").
+- `live_sync.py --offline` no longer replaces the committed live state with placeholders.
+- Stale hand-typed totals in CLAIMS.md, README.md, repo.yaml and docs; a new check fails on any stale total in current-state prose.
+- CITATION.cff licence lists MIT and CC-BY-4.0, matching LICENSE.
+
 ## [2026.11.26] - 2026-11-26
 
 ### Added

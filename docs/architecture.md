@@ -11,7 +11,7 @@ flowchart LR
     BR["registry/SOLVED_AND_ATLAS_BRIDGE.json<br/>0/1900 Grand · 5 Peer Sub-Conjectures"] --> V
     LS --> LM["registry/LIVE_ECOSYSTEM_MIRROR.json/.md"]
     LM --> V
-    S["repos/* (34 Pinned Public Submodules)"] --> V
+    S["repos/* (Pinned Public Submodules)"] --> V
     V --> C["CHECKSUMS.sha256 & data/MANIFEST.sha256"]
     V --> FZ["data/RELEASE_FREEZE.sha256 + DigiCert .tsr"]
     V --> D["Per-Entry METADATA.json + EVIDENCE.md"]

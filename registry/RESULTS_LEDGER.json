@@ -30,6 +30,2056 @@
     "A reproducible counterexample, a gap in a statement audit, or an earlier proof in the literature leads to a correction: the result is narrowed, reclassified or withdrawn, and keeps its number.",
     "Corrections are recorded in CHANGELOG.md."
   ],
-  "entries_without_results": {},
-  "results": []
+  "entries_without_results": {
+    "0TH-2026-001": "Archived v1.0.0 snapshot whose third-moment bound and corollaries were consolidated into 0TH-2026-009; recording them here too would count the same results twice.",
+    "0TH-BUILD-006": "No machine-checked result at the pinned commit. Its Lean file (eight literal arithmetic identities) is on an unmerged branch; the build itself is a C++ ray-tracing lab."
+  },
+  "results": [
+    {
+      "n": 1,
+      "archive_id": "0TH-2026-006",
+      "key": "conj-7.7",
+      "status": "ACTIVE",
+      "title": "Closed form of the adjacent second-order constant a_△ (Banić–Elezović Conjecture 7.7)",
+      "statement": "Let h(ℓ) = E|X₂−X₁|·|X₃−X₂| for (X₁,X₂,X₃) ~ Mult(ℓ; 1/3,1/3,1/3), c_L = 2√3/(3π) + 1/9, a_* = −2√3/(9π). The limits b_r = lim ℓ·(h(ℓ) − c_L·ℓ − a_*) along ℓ ≡ r (mod 3) exist, with b₀ = 32√3/(81π) and b₁ = b₂ = −22√3/(81π). Hence a_△ := 1/32 + (π/9)(b₀+b₁+b₂) = 1/32 − 4√3/243 and γ₂ := (64a_△−3)/(32π) = −1/(32π) − 8√3/(243π).",
+      "kind": "ANSWERS_PUBLISHED_QUESTION",
+      "evidence": "kernel-checked",
+      "asked_in": {
+        "citation": "N. Banić, N. Elezović, Discrete total variation under the multinomial, Part 2: variance under the uniform null (2026), arXiv:2610.17046",
+        "url": "https://arxiv.org/abs/2610.17046",
+        "locator": "Conjecture 7.7"
+      },
+      "lean": [
+        {
+          "decl": "MultinomialTV.ComparatorTarget.target_conjecture_7_7",
+          "file": "lean/Solution.lean",
+          "line": 129
+        },
+        {
+          "decl": "MultinomialTV.ComparatorTarget.target_tendsto_hAdj_mod0",
+          "file": "lean/Solution.lean",
+          "line": 81
+        },
+        {
+          "decl": "MultinomialTV.ComparatorTarget.target_tendsto_hAdj_mod1",
+          "file": "lean/Solution.lean",
+          "line": 97
+        },
+        {
+          "decl": "MultinomialTV.ComparatorTarget.target_tendsto_hAdj_mod2",
+          "file": "lean/Solution.lean",
+          "line": 113
+        },
+        {
+          "decl": "MultinomialTV.conjecture_7_7",
+          "file": "lean/MultinomialTVConjecture/Main.lean",
+          "line": 320
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "0a69443e1b663f0874b547481b7395fdd24732c4",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "The source is an arXiv v1 preprint posted 2026-10-12 and not peer reviewed; this proof is also unreviewed and no independent mathematician has compared the 143-line statement file with the source line by line.",
+        "Lean proves the three limits, not the O(ℓ⁻²) remainder that the source's Lemma 7.3 asserts.",
+        "The step from a_△ to the variance of the total-variation statistic (source Lemma 7.5 and Theorem 7.6) is not formalized.",
+        "The prior-work search (arXiv, Semantic Scholar citations, one web search, 2026-11-26) found only the source series; MathSciNet and zbMATH were not searched."
+      ],
+      "check": "cd lean && lake exe cache get && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 2,
+      "archive_id": "0TH-2026-010",
+      "key": "T1",
+      "status": "ACTIVE",
+      "title": "Digit-sum characterisation of two-register passive register programs with F_p constants",
+      "statement": "For p prime, t ≥ 1, f ∈ F_p[x]: a passive two-register program (instructions O += P(R), R += c, O += λx, R += λx; constants in F_p) with at most t input accesses producing O + f(x) and restoring R, as an identity of formal polynomials in F_p[R, x], exists exactly when every d ≥ 2 with [x^d]f ≠ 0 has base-p digit sum s_p(d) ≤ min(p−1, t−1).",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "evidence_note": "Formal identity implies correct execution in every commutative ring of characteristic p (proved, T1s); the converse step is a paper argument.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Catalytic.Solution.t1_digit_sum_dichotomy",
+          "file": "lean/Solution.lean",
+          "line": 17
+        },
+        {
+          "decl": "Catalytic.Challenge.T1_DigitSumDichotomy",
+          "file": "lean/Challenge.lean",
+          "line": 21
+        },
+        {
+          "decl": "Catalytic.rp_pass_two_iff",
+          "file": "lean/Catalytic/DigitSumDichotomy.lean",
+          "line": 952
+        },
+        {
+          "decl": "Catalytic.CleanlyComputes2",
+          "file": "lean/Catalytic/DigitSumDichotomy.lean",
+          "line": 117
+        },
+        {
+          "decl": "Catalytic.Solution.t1s_pass2_ring_soundness",
+          "file": "lean/Solution.lean",
+          "line": 37
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "4bfeabb05a960450114f975f477259ccf189cdf1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "Cleanliness means equality of formal polynomials; as functions on F_p itself x^p = x, so for example x^3 over F_2 is computed with one input access although the theorem excludes it.",
+        "Program constants lie in the prime field; with F_4 constants the criterion changes (x^3 becomes computable), and the case of general F_(p^e) is open.",
+        "Vinciguerra (arXiv:2609.18692) proves the characteristic-0 analogue (Theorem 3.5) and does not pose the positive-characteristic question; this is a self-posed extension, not an answer to a published question.",
+        "Two registers only; nothing is shown for three or more registers in positive characteristic.",
+        "That literal clean execution over a polynomial ring implies the formal predicate (needed to read the 'only if' half as a statement about executions) is not formalised.",
+        "Prior-work search was limited to arXiv, Semantic Scholar and one web query on 2026-11-26."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 3,
+      "archive_id": "0TH-2026-010",
+      "key": "T2",
+      "status": "ACTIVE",
+      "title": "Two-access programs for x^(2^k) in characteristic 2 using product updates only",
+      "statement": "For k ≥ 1 and every commutative ring with 2 = 0, a program on k+1 registers with instructions R_d += R_a·R_b (d ∉ {a, b}; register 0 never read) and R_d += x uses 2 input accesses and 4k−2 products, adds x^(2^k) to register 0 and restores the others, from every initial state. With k+2 registers and copies R_d += R_s, the indices d, a, b are pairwise distinct.",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "evidence_note": "Elementary: repeated squaring with (a+b)² = a² + b² in characteristic 2.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Catalytic.Solution.t2_bilinear_frobenius_collapse",
+          "file": "lean/Solution.lean",
+          "line": 49
+        },
+        {
+          "decl": "Catalytic.Challenge.T2_BilinearFrobeniusCollapse",
+          "file": "lean/Challenge.lean",
+          "line": 97
+        },
+        {
+          "decl": "Catalytic.Solution.t2b_distinct_operand_frobenius",
+          "file": "lean/Solution.lean",
+          "line": 56
+        },
+        {
+          "decl": "Catalytic.Challenge.T2b_DistinctOperandFrobenius",
+          "file": "lean/Challenge.lean",
+          "line": 111
+        },
+        {
+          "decl": "Catalytic.frobBilinProg",
+          "file": "lean/Catalytic/BilinearFrobenius.lean",
+          "line": 105
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "4bfeabb05a960450114f975f477259ccf189cdf1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "Characteristic 2 only.",
+        "No lower bound on registers, products or input accesses is proved.",
+        "The product-only instruction set is the repository's restriction of the register-program model; the statement is not tied to a published question.",
+        "Only general searches of the register-program literature were run; the underlying identity is standard."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 4,
+      "archive_id": "0TH-2026-010",
+      "key": "T3h",
+      "status": "ACTIVE",
+      "title": "Four-register passive powering of x^N with fewer than (104/3)·N^(log₁₃ 8) input accesses",
+      "statement": "Let N ≥ 1 have ℓ+1 base-13 digits. Over every commutative ring in which D_8 = 2656207148788801777680, 12! and (ℓ+1)! are invertible, some passive four-register program maps (o, u, r₁, r₂) to (o + x^N, u, r₁, r₂) with fewer than (104/3)·8^ℓ ≤ (104/3)·N^(log₁₃ 8) input accesses. Counting ℓ+1 base-7 digits instead: 6! and (ℓ+1)! invertible, fewer than (70/3)·5^ℓ accesses. The base-13 bound is also stated coordinatewise over Rⁿ.",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "evidence_note": "Lean states 3·accesses < 104·8^ℓ with 13^ℓ ≤ N; the real-exponent form and the comparison with log₅ 4 are paper-level conversions.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Catalytic.Solution.t3h_four_reg_powering",
+          "file": "lean/Solution.lean",
+          "line": 83
+        },
+        {
+          "decl": "Catalytic.Challenge.T3h_FourRegPowering",
+          "file": "lean/Challenge.lean",
+          "line": 181
+        },
+        {
+          "decl": "Catalytic.four_reg_powering_x13",
+          "file": "lean/Catalytic/FourRegisterPowering.lean",
+          "line": 1162
+        },
+        {
+          "decl": "Catalytic.four_reg_powering_x7",
+          "file": "lean/Catalytic/FourRegisterPowering.lean",
+          "line": 1198
+        },
+        {
+          "decl": "Catalytic.Solution.t3i_streaming_frequency_moment",
+          "file": "lean/Solution.lean",
+          "line": 89
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "4bfeabb05a960450114f975f477259ccf189cdf1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "Improves the exponent of Corollary 4.3.1 of arXiv:2609.18692 at four registers (log₅ 4 ≈ 0.8614 to log₁₃ 8 ≈ 0.8107); with the stated constants the bound is smaller than 20·N^(log₅ 4) only for N above about 52,000 (base-7 variant: above about 90).",
+        "No lower bound is proved: log₁₃ 8 is the smallest exponent among the constructed base programs (t = 8 minimises log_(2t−3) t over integers t ≥ 4, which is integer arithmetic), not a proven optimum for three-register base programs.",
+        "In prime characteristic p the hypotheses exclude p ∈ {2, 3, 5, 7, 11, 137, 1602207194491} and require p > ℓ+1, which limits N.",
+        "With five registers the cited paper already has the smaller exponent log₇ 4 ≈ 0.712.",
+        "The coordinatewise corollary contains no stream model or space bound; the streaming and matrix-powering applications are paper arguments outside Lean."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 5,
+      "archive_id": "0TH-2026-016",
+      "key": "T2ac",
+      "status": "ACTIVE",
+      "title": "Lower bounds for the Shannon capacity of the odd cycles C₂₅ and C₂₉",
+      "statement": "C₂₅^⊠144 contains an independent set of size M with 12344196091426841^144 ≤ M·10^(15·144), and C₂₉^⊠4 contains an independent set of size 42050, where 14319949949077991^4 ≤ 42050·10^60. Consequently Θ(C₂₅) ≥ 12.344196091426841 and Θ(C₂₉) ≥ 14.319949949077991. Both exceed the largest earlier values found, 23125^(1/4) ≈ 12.3316 and 42017^(1/4) ≈ 14.3171 (Codenotti–Gerace–Resta 2003, Table 1).",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "evidence_note": "Θ is not defined in Lean; the capacity bounds follow from the integer statements by Θ(G) = sup α(G^⊠d)^(1/d).",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ZeroErrorFrontier.WorldRecords.t2a_c25_world_record",
+          "file": "lean/ZeroErrorFrontier/WorldRecords.lean",
+          "line": 446
+        },
+        {
+          "decl": "ZeroErrorFrontier.WorldRecords.t2c_c29_world_record",
+          "file": "lean/ZeroErrorFrontier/WorldRecords.lean",
+          "line": 514
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "af343aaa1701637e23733ac0abd7a8f9b2e22b60",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "Lower bounds only; the exact value of Θ(C_n) is open for every odd n ≥ 7.",
+        "The margins over the 2003 values are 0.01257 (C₂₅) and 0.00281 (C₂₉, 33 more words in the fourth power), smaller than the gains the repository states against third-power values.",
+        "The C₂₅ base set has the 2003 published size 23125; the gain comes from a port system and the Buys–Polak–Zuiddam substitution tables, whose framework this follows.",
+        "The prior-work search was not exhaustive: Baumert et al. 1971 and Hales 1973 were not opened, and the 2003 table entries are printed cardinalities."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 6,
+      "archive_id": "0TH-2026-016",
+      "key": "T1d",
+      "status": "ACTIVE",
+      "title": "Independent sets in the fourth strong power of C_n for n = 4m+1",
+      "statement": "For every m ≥ 5 with m ≡ 0 or 1 (mod 4) and n = 4m+1: α(C_n^⊠4) ≥ (m² + ⌊m/4⌋)·n². The set is lifted from m² + ⌊m/4⌋ = ⌊n⌊n/4⌋/4⌋ points of ℤ_n², no two within circular distance 3 in both coordinates; no such point set is larger (n ≥ 4), and each one of size M lifts to M·n² points (n ≥ 9).",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "evidence_note": "Three contract theorems: lifting (T1a), ceiling (T1b), family (T1d).",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ZeroErrorFrontier.CosetQuotient.t1d_infinite_helical_hbpz_family",
+          "file": "lean/ZeroErrorFrontier/CosetQuotient.lean",
+          "line": 734
+        },
+        {
+          "decl": "ZeroErrorFrontier.CosetQuotient.t1a_coset_quotient_compression",
+          "file": "lean/ZeroErrorFrontier/CosetQuotient.lean",
+          "line": 249
+        },
+        {
+          "decl": "ZeroErrorFrontier.CosetQuotient.t1b_exact_quotient_ceilings",
+          "file": "lean/ZeroErrorFrontier/CosetQuotient.lean",
+          "line": 533
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "af343aaa1701637e23733ac0abd7a8f9b2e22b60",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "For m ≡ 0 (mod 4), n = 16j+1, the size equals (n⁴−n³)/16, the exact value of α(C_n^⊠4) credited to Baumert et al. (1971) in the 2003 paper of Codenotti, Gerace and Resta.",
+        "The case n = 21 (11466 words, 26 cosets of ⟨(1,0,0,2),(0,1,2,0)⟩) is in the 2026 Lean repository of Buys, Polak and Zuiddam.",
+        "For m ≡ 1 (mod 4), m ≥ 9, the sizes exceed the 2003 table entries at n = 37 and n = 53 (113627 vs 113586, 483148 vs 483091); no search for later work on these n was done.",
+        "The ceiling bounds unions of cosets of one subgroup, not α(C_n^⊠4); Lean proves the lifting direction only."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 7,
+      "archive_id": "0TH-2026-004",
+      "key": "B32-31",
+      "status": "ACTIVE",
+      "title": "Minimum Kochen-Specker set in the 49-ray integer pool B(3,2)",
+      "statement": "Let B(3,2) be the 49 primitive rays of ℤ³ with entries in {−2,…,2}. Some 31 of them admit no Kochen–Specker colouring (no two orthogonal rays coloured 1, every orthogonal triple inside the set containing a ray coloured 1), and every subset of at most 30 of them admits one.",
+      "kind": "BOUNDED_CASE",
+      "evidence": "kernel-checked",
+      "evidence_note": "The pool list is proved equal to all such rays, each once (rays_eq, boxRays_exact).",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "KS.Box3H2.minimum_ks_size_vectors",
+          "file": "lean/KS/Box3H2.lean",
+          "line": 238
+        },
+        {
+          "decl": "KS.ComparatorTarget.target_box3h2_minimum_31",
+          "file": "lean/Solution.lean",
+          "line": 9
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "4c4dda9113f6d7af037d3ab0d7c4d9ca0191fa84",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "Only rays inside B(3,2) are considered; the unrestricted minimum in dimension three (QM-011) is not affected.",
+        "The value 31 was reported earlier by Kernaghan (arXiv:2603.16988, v1–v9), whose v10 calls that earlier certification unsound.",
+        "An independent Lean proof for the same pool appeared in arXiv:2603.16988v10 on 23 Nov 2026, after this repository's v1.0.0 of 10 Nov 2026.",
+        "That there are exactly six minimum sets is not part of the Lean theorem."
+      ],
+      "check": "cd lean && lake build KS Solution && lake env lean KS/Audit.lean"
+    },
+    {
+      "n": 8,
+      "archive_id": "0TH-2026-004",
+      "key": "B3H-31",
+      "status": "ACTIVE",
+      "title": "Minimum Kochen-Specker set in the integer pools B(3,3) and B(3,4)",
+      "statement": "Among the 145 (H = 3) and the 289 (H = 4) rays of ℤ³ with a representative of max-norm at most H, every set of at most 30 rays admits a Kochen–Specker colouring; a 31-ray set without one exists, since it lies in B(3,2).",
+      "kind": "BOUNDED_CASE",
+      "evidence": "certificate-checked",
+      "evidence_note": "B(3,3): drat-trim/LRAT in CI and an independent auditor SAT run. B(3,4): only the project's DRUP checker, not re-run.",
+      "asked_in": null,
+      "lean": [],
+      "axioms": "n/a (no Lean proof)",
+      "audited_commit": "4c4dda9113f6d7af037d3ab0d7c4d9ca0191fa84",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "NOT_AUDITED",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "There is no Lean proof; the result rests on a Python CNF encoder and SAT unsatisfiability proofs.",
+        "For B(3,4) no proof file is tracked in git and no third-party checker was run.",
+        "Kernaghan arXiv:2603.16988v10 (23 Nov 2026) also certifies the minimum 31 for the 145-ray pool.",
+        "The unrestricted minimum in dimension three is not affected."
+      ],
+      "check": "bash scripts/verify_lrat.sh"
+    },
+    {
+      "n": 9,
+      "archive_id": "0TH-2026-004",
+      "key": "U3N-33",
+      "status": "ACTIVE",
+      "title": "Minimum Kochen-Specker set in roots-of-unity pools U(3,N), N = 6, 12, 18, 24",
+      "statement": "For N ∈ {6, 12, 18, 24}, among the rays of ℂ³ whose entries are 0 or N-th roots of unity, every set of at most 32 rays admits a Kochen–Specker colouring, and some 33-ray set admits none.",
+      "kind": "BOUNDED_CASE",
+      "evidence": "certificate-checked",
+      "evidence_note": "Project DRUP checker only. The auditor's independent SAT run confirms N = 6 and N = 12; N = 18 and 24 were not re-run.",
+      "asked_in": {
+        "citation": "M. Kernaghan, The Algebraic Landscape of Kochen-Specker Sets in Dimension Three (2026), arXiv:2603.16988",
+        "url": "https://arxiv.org/abs/2603.16988",
+        "locator": "v10, text after Computed fact 16: 'We have not certified the minimum for n > 6'"
+      },
+      "lean": [],
+      "axioms": "n/a (no Lean proof)",
+      "audited_commit": "4c4dda9113f6d7af037d3ab0d7c4d9ca0191fa84",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "NOT_AUDITED",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "There is no Lean proof; complex orthogonality is decided in Python.",
+        "For N = 6 the value and the count of 3 minimum sets are also in Kernaghan v10, which proves the minimum in Lean.",
+        "Whether the minimum is 33 for every multiple of 6 is open.",
+        "The source states only that n > 6 is uncertified; it does not pose this as a named open problem."
+      ],
+      "check": "NOT AVAILABLE as one command at the pin: the proofs must be regenerated with the repository scripts (README.md line 249: rows A2 to A7 and A9 take seconds to hours to regenerate)"
+    },
+    {
+      "n": 10,
+      "archive_id": "0TH-2026-004",
+      "key": "B51-29",
+      "status": "ACTIVE",
+      "title": "Minimum Kochen-Specker set in the 121-ray pool {0, ±1}⁵",
+      "statement": "Among the 121 rays of ℤ⁵ with entries in {0, 1, −1}, every set of at most 28 rays admits a Kochen–Specker colouring, and some 29-ray set admits none.",
+      "kind": "BOUNDED_CASE",
+      "evidence": "certificate-checked",
+      "evidence_note": "Rests on a paper lemma (Lemma 7, three cases by number of axes) and 83 SAT proofs checked by the project's own checker.",
+      "asked_in": null,
+      "lean": [],
+      "axioms": "n/a (no Lean proof)",
+      "audited_commit": "4c4dda9113f6d7af037d3ab0d7c4d9ca0191fa84",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "NOT_AUDITED",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "There is no Lean proof, and no third-party proof checker was run.",
+        "The case split and cube decomposition are paper arguments, not checked by machine.",
+        "Proof files are not tracked in git; re-checking means regenerating them (hours, per the README).",
+        "Not re-run by this audit; prior-work status comes from the literature auditor's search.",
+        "The general minimum in dimension five is not affected."
+      ],
+      "check": "NOT AVAILABLE as one command at the pin: regeneration scripts only (README.md line 249)"
+    },
+    {
+      "n": 11,
+      "archive_id": "0TH-2026-010",
+      "key": "T1e",
+      "status": "ACTIVE",
+      "title": "Input-access counts for x^3, x^5 and x^7 in two-register passive programs over F_4",
+      "statement": "For passive two-register programs with constants in the field F_4 and equality of formal polynomials in F_4[R, x]: x^5 is produced with 3 input accesses and not with 2; x^3 is produced with 4 input accesses and not with 3; x^7 is produced with no number of input accesses.",
+      "kind": "BOUNDED_CASE",
+      "evidence": "kernel-checked",
+      "evidence_note": "F_4 is an explicit four-element type with table-defined operations and a proved commutative-ring instance.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Catalytic.Solution.t1e_extension_field_separation",
+          "file": "lean/Solution.lean",
+          "line": 32
+        },
+        {
+          "decl": "Catalytic.Challenge.T1e_ExtensionFieldSeparation",
+          "file": "lean/Challenge.lean",
+          "line": 54
+        },
+        {
+          "decl": "Catalytic.InRPPass2GF4",
+          "file": "lean/Catalytic/ExtensionFieldSeparation.lean",
+          "line": 177
+        },
+        {
+          "decl": "Catalytic.gf4_x7_impossible_all_t",
+          "file": "lean/Catalytic/ExtensionFieldSeparation.lean",
+          "line": 371
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "4bfeabb05a960450114f975f477259ccf189cdf1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "Three monomials over one field; no general criterion for F_(p^e) is proved.",
+        "Formal-polynomial cleanliness as in T1; as functions on F_4, x^7 = x.",
+        "Not posed in the cited literature."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 12,
+      "archive_id": "0TH-2026-010",
+      "key": "T3-programs",
+      "status": "ACTIVE",
+      "title": "Three-register passive programs for x^(2t−3) with t = 5, …, 9 input accesses",
+      "statement": "For t = 5,…,9 and every commutative ring in which the integer D_t is invertible, a passive program on registers (O, u, v) with exactly t input accesses maps (o, u, v) to (o + x^(2t−3), u, v) for all x, o, u, v. D_5 = 576, D_6 = 382500000; D_7, D_8, D_9 have 23, 22 and 51 digits. Hence D^pass_3(t) ≥ 2t−3 for these t over such fields.",
+      "kind": "BOUNDED_CASE",
+      "evidence": "kernel-checked",
+      "evidence_note": "Also re-derived in this audit by exact integer polynomial arithmetic outside Lean: each program adds D_t·x^(2t−3) and restores u, v.",
+      "asked_in": {
+        "citation": "A. Vinciguerra, An Operator Approach to Register Programs for Catalytic Computing (2026), arXiv:2609.18692v1",
+        "url": "https://arxiv.org/abs/2609.18692",
+        "locator": "Sec. 6, paragraph 4: 'Would additional input accesses drastically increase D^pass_{r,K}?'"
+      },
+      "lean": [
+        {
+          "decl": "Catalytic.Solution.t3a_three_reg_5call_x7",
+          "file": "lean/Solution.lean",
+          "line": 62
+        },
+        {
+          "decl": "Catalytic.Solution.t3b_three_reg_6call_x9",
+          "file": "lean/Solution.lean",
+          "line": 65
+        },
+        {
+          "decl": "Catalytic.Solution.t3c_three_reg_7call_x11",
+          "file": "lean/Solution.lean",
+          "line": 68
+        },
+        {
+          "decl": "Catalytic.Solution.t3d_three_reg_8call_x13",
+          "file": "lean/Solution.lean",
+          "line": 71
+        },
+        {
+          "decl": "Catalytic.Solution.t3g_three_reg_9call_x15",
+          "file": "lean/Solution.lean",
+          "line": 80
+        },
+        {
+          "decl": "Catalytic.prog8_x13",
+          "file": "lean/Catalytic/ThreeRegisterBreakthrough.lean",
+          "line": 496
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "4bfeabb05a960450114f975f477259ccf189cdf1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "Lower bounds for three registers and five values of t only; the cited question is not answered: no upper bound on D^pass_3(t) is proved, and D^pass_3(4) is itself only known to be at least 5.",
+        "The companion question of the same section, whether D^pass_r(4) exceeds 2r−1, is not addressed.",
+        "No uniform family: nothing is constructed for t ≥ 10.",
+        "Excluded characteristics are the prime factors of D_t (for t = 8: 2, 3, 5, 7, 137, 1602207194491).",
+        "The cited source is an arXiv preprint (v1), not a refereed publication.",
+        "Prior-work search limited to arXiv, Semantic Scholar and one web query on 2026-11-26."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 13,
+      "archive_id": "0TH-2026-014",
+      "key": "T6",
+      "status": "ACTIVE",
+      "title": "Frozen bit strings of the 0110↔1001 dipole-conserving gate",
+      "statement": "Swapping 0110 and 1001 preserves charge and dipole moment. The sequence Z with Z(0..3) = 1, 2, 4, 8 and Z(L) = Z(L−1) + Z(L−2) + Z(L−4) equals the number of length-L bit strings avoiding 0110 and 1001 for L = 1, …, 6, and satisfies 2Z(L) < Z(L+4) for L ≥ 1. Over ℤ, x⁴ − x³ − x² − 1 = (x+1)(x³ − 2x² + x − 1).",
+      "kind": "BOUNDED_CASE",
+      "evidence": "kernel-checked",
+      "evidence_note": "Count identity kernel-checked for L ≤ 6 only; agreement for larger L is computational (L ≤ 14 in the repository, L ≤ 15 in this audit).",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Monodromia.Palomar.t6_dipole_scars_and_plastic_squared_shattering",
+          "file": "lean/PalomarSolution.lean",
+          "line": 31
+        },
+        {
+          "decl": "Monodromia.DipoleScars.dipole_gate_conserves_charge_and_dipole",
+          "file": "lean/MonodromiaProofs/DipoleScars.lean",
+          "line": 21
+        },
+        {
+          "decl": "Monodromia.DipoleScars.exact_frozen_matches_zFrozen_small",
+          "file": "lean/MonodromiaProofs/DipoleScars.lean",
+          "line": 89
+        },
+        {
+          "decl": "Monodromia.DipoleScars.zFrozen_strict_exponential_shattering",
+          "file": "lean/MonodromiaProofs/DipoleScars.lean",
+          "line": 140
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "153792bdaee2b01f9a56afbcb60af7d2957d5669",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "The 'Plastic-constant-squared' conjunct is vacuous: ρ³ = ρ + 1 has no integer solution.",
+        "The growth rate ρ² and Θ(ρ^(2L)) are not in Lean.",
+        "'Skin-effect immunity' of frozen strings follows directly from the definition of frozen.",
+        "The counting sequence coincides with OEIS A164394 (stated there for the pattern pair 0001, 0100) on L = 0..15; exponentially many frozen states are known (Sala et al. 2020; Khemani et al. 2020)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 14,
+      "archive_id": "0TH-2026-004",
+      "key": "B41-18",
+      "status": "ACTIVE",
+      "title": "Minimum Kochen-Specker set in the 40-ray pool {0, ±1}⁴",
+      "statement": "Let B(4,1) be the 40 rays of ℤ⁴ with entries in {0, 1, −1}. Some 18 of them admit no Kochen–Specker colouring (bases are orthogonal quadruples inside the set), and every subset of at most 17 of them admits one.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "KS.Box4H1.minimum_ks_size_vectors",
+          "file": "lean/KS/Box4H1.lean",
+          "line": 335
+        },
+        {
+          "decl": "KS.ComparatorTarget.target_box4h1_minimum_18",
+          "file": "lean/Solution.lean",
+          "line": 14
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "4c4dda9113f6d7af037d3ab0d7c4d9ca0191fa84",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The bound 18 is known for all Kochen–Specker sets in every dimension (Xu, Chen, Gühne, arXiv:2001.07656); this record restricts it to one finite pool.",
+        "That there are exactly 16 minimum sets in the pool is not part of the Lean theorem."
+      ],
+      "check": "cd lean && lake build KS Solution && lake env lean KS/Audit.lean"
+    },
+    {
+      "n": 15,
+      "archive_id": "0TH-2026-006",
+      "key": "gamma-algebra",
+      "status": "ACTIVE",
+      "title": "Algebraic closed forms of the Banić–Elezović recombination expressions for γ(n), γ_c(n), γ(3;N), γ(4;N)",
+      "statement": "With p₁ = (n²−4n−4)/(32πn), q₁ = a_△·n/π − (n+1)/(8πn), r₁ = −(n+1)/(8πn) and a_△ = 1/32 − 4√3/243: for real n ≠ 0, (n−1)p₁ + 2(n−2)q₁ + (n−2)(n−3)r₁ = −n(n+1)/(32π) − 8√3·n(n−2)/(243π) + (n−1)/(8πn), and n·p₁ + 2n·q₁ + n(n−3)r₁ = −n(n+4)/(32π) − 8√3·n²/(243π). Two analogous identities hold at n = 3 and n = 4.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Identities between real numbers only. That the left sides are variance coefficients is taken from Banić–Elezović, outside Lean.",
+      "asked_in": {
+        "citation": "N. Banić, N. Elezović, Discrete total variation under the multinomial, Part 2: variance under the uniform null (2026), arXiv:2610.17046",
+        "url": "https://arxiv.org/abs/2610.17046",
+        "locator": "Theorem 7.6 and the consequences stated after Conjecture 7.7; for γ_c, Theorem 3.10 of Part 5, arXiv:2611.14735"
+      },
+      "lean": [
+        {
+          "decl": "MultinomialTV.ComparatorTarget.target_gamma_closed_form",
+          "file": "lean/Solution.lean",
+          "line": 143
+        },
+        {
+          "decl": "MultinomialTV.ComparatorTarget.target_gamma_cyclic_closed_form",
+          "file": "lean/Solution.lean",
+          "line": 155
+        },
+        {
+          "decl": "MultinomialTV.ComparatorTarget.target_gamma3_closed_form",
+          "file": "lean/Solution.lean",
+          "line": 166
+        },
+        {
+          "decl": "MultinomialTV.ComparatorTarget.target_gamma4_closed_form",
+          "file": "lean/Solution.lean",
+          "line": 178
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "0a69443e1b663f0874b547481b7395fdd24732c4",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Lean defines no random variable, variance or expansion in N. That these expressions are the N⁻² coefficients of Var(d)/N rests on Theorem 7.6, Lemmas 7.2, 7.3, 7.5 and Section 8 of arXiv:2610.17046v1 and Theorem 3.10 of arXiv:2611.14735v1, which are unrefereed and not formalized.",
+        "The closed forms are already printed in the source as consequences conditional on Conjecture 7.7; these theorems machine-check that algebra.",
+        "In Lean n is any nonzero real; the source's statements are for integer n ≥ 5, with n = 3 and n = 4 treated separately.",
+        "In the n = 4 identity the term (−1)^N/(2π) appears unchanged on both sides, so the dependence on N is carried, not derived."
+      ],
+      "check": "cd lean && lake exe cache get && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 16,
+      "archive_id": "0TH-2026-007",
+      "key": "T01-T06",
+      "status": "ACTIVE",
+      "title": "Inequalities for the Hill function of order four in cleared-denominator form",
+      "statement": "For natural numbers c, c1 < c2 and kd > 0, with x⁴ written out: c⁴ < c⁴ + kd⁴; c⁴/(c⁴+kd⁴) is strictly increasing in c; it is at most 1/82 when 3c ≤ kd; the ratio of its values at kd and kd/2 is 17/2; it lies below c/(c+kd) when c < kd and above when c > kd; and 2·kd⁴ = kd⁴ + kd⁴.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "SynapseBouton.hill4_unit_interval",
+          "file": "lean/Solution.lean",
+          "line": 114
+        },
+        {
+          "decl": "SynapseBouton.hill4_half_max_exact",
+          "file": "lean/Solution.lean",
+          "line": 119
+        },
+        {
+          "decl": "SynapseBouton.hill4_strict_monotone",
+          "file": "lean/Solution.lean",
+          "line": 123
+        },
+        {
+          "decl": "SynapseBouton.hill4_resting_noise_floor",
+          "file": "lean/Solution.lean",
+          "line": 132
+        },
+        {
+          "decl": "SynapseBouton.hill4_ultrasensitive_doubling",
+          "file": "lean/Solution.lean",
+          "line": 144
+        },
+        {
+          "decl": "SynapseBouton.hill4_ultrasensitive_crossover_vs_linear",
+          "file": "lean/Solution.lean",
+          "line": 169
+        }
+      ],
+      "axioms": "propext, Quot.sound (T03: none; T06: propext only)",
+      "audited_commit": "06e0dcdd5fc4cb406e9fe21d260ff94b68a414d4",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Statements are over natural numbers with denominators cleared; no real-valued Hill function or Ca²⁺ model is defined.",
+        "T02 is the identity 2x = x + x and its hypothesis kd > 0 is unused.",
+        "These are textbook properties; a prior public Lean 4 formalisation of Hill monotonicity exists (marpaia/grn-lean, per the literature audit)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 17,
+      "archive_id": "0TH-2026-007",
+      "key": "T07-T11,T20-T24",
+      "status": "ACTIVE",
+      "title": "Integer bounds for a short-term-plasticity step, conductance means, a blocking factor and 2×2 determinants",
+      "statement": "Over integers with stated positivity, denominators cleared: one Tsodyks–Markram step u⁺ = u + ⌊u₀(S−u)/S⌋ keeps u ≤ u⁺ ≤ S and releases at most x; eI·G ≤ Σgᵢeᵢ ≤ eE·G, strictly lowered when gI > 0; D/(D+m·e) < 1, decreasing in e; σ²N < σ²NK for K ≥ 2; kc/(kc+kOff) increases in c; rank-one 2×2 tables have det 0; diagonal excess gives |det| > 0.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "SynapseBouton.tsodyks_markram_step_unit_bounds",
+          "file": "lean/Solution.lean",
+          "line": 192
+        },
+        {
+          "decl": "SynapseBouton.ei_steady_state_bounds",
+          "file": "lean/Solution.lean",
+          "line": 224
+        },
+        {
+          "decl": "SynapseBouton.shunting_inhibition_strict_attenuation",
+          "file": "lean/Solution.lean",
+          "line": 249
+        },
+        {
+          "decl": "SynapseBouton.pure_shunting_divisive_identity",
+          "file": "lean/Solution.lean",
+          "line": 266
+        },
+        {
+          "decl": "SynapseBouton.nmda_mg_unblock_unit_interval_and_monotone",
+          "file": "lean/Solution.lean",
+          "line": 281
+        },
+        {
+          "decl": "SynapseBouton.resi_variance_strict_improvement",
+          "file": "lean/Solution.lean",
+          "line": 404
+        },
+        {
+          "decl": "SynapseBouton.resi_duty_cycle_monotone_in_imager",
+          "file": "lean/Solution.lean",
+          "line": 413
+        },
+        {
+          "decl": "SynapseBouton.factorized_bipartition_zero_integration",
+          "file": "lean/Solution.lean",
+          "line": 427
+        },
+        {
+          "decl": "SynapseBouton.correlated_nanocolumn_positive_integration",
+          "file": "lean/Solution.lean",
+          "line": 437
+        },
+        {
+          "decl": "SynapseBouton.diagonal_excess_implies_positive_coupling",
+          "file": "lean/Solution.lean",
+          "line": 446
+        }
+      ],
+      "axioms": "propext, Quot.sound (T21: none; T23: propext only)",
+      "audited_commit": "06e0dcdd5fc4cb406e9fe21d260ff94b68a414d4",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "T11 is monotonicity in an abstract natural e; the voltage dependence of NMDA Mg²⁺ unblock (exp(−0.062 V)) is not formalised.",
+        "T10 states two numerator identities; the divisive ratio (gL+gE)/(gL+gE+gI) is not itself a Lean statement.",
+        "T07 covers one spike update only, and its hypothesis u₀ > 0 is unused.",
+        "T22–T24 concern four integers and contain no notion of integration, causality or nanocolumn structure; they are also listed under companion entry 0TH-2026-008."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 18,
+      "archive_id": "0TH-2026-010",
+      "key": "T4",
+      "status": "ACTIVE",
+      "title": "Clean product of 2^k inputs by a balanced four-step telescoping recursion",
+      "statement": "For every k, sign ±1 and duplicate-free register list target :: pool with |pool| ≥ k+1 when k ≥ 1, a program of (7·4^k − 4)/3 instructions of the forms R_i ± x_l and R_i ± R_a·R_b (i, a, b pairwise distinct) adds ± x_off · … · x_(off+2^k−1) to the target register and leaves every other register unchanged, over every commutative ring and from every initial state.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Variant of the classical four-term clean-product recursion; the exact instruction count in this instruction set was not located in the literature.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Catalytic.Solution.t4_balanced_multilinear_product",
+          "file": "lean/Solution.lean",
+          "line": 93
+        },
+        {
+          "decl": "Catalytic.Challenge.T4_BalancedMultilinearProduct",
+          "file": "lean/Challenge.lean",
+          "line": 229
+        },
+        {
+          "decl": "Catalytic.balancedProdProg",
+          "file": "lean/Catalytic/BalancedProduct.lean",
+          "line": 75
+        },
+        {
+          "decl": "Catalytic.balancedProdProg_clean",
+          "file": "lean/Catalytic/BalancedProduct.lean",
+          "line": 258
+        }
+      ],
+      "axioms": "propext, Quot.sound",
+      "audited_commit": "4bfeabb05a960450114f975f477259ccf189cdf1",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "The publicly quoted register count log₂ d + 2 is not a conjunct of the Lean statement at the audited commit; it is read off the program definition (the conjunct was added upstream after this commit).",
+        "Overlap with earlier work: Ben-Or and Cleve (SIAM J. Comput. 1992) give polynomial-length three-register programs for all polynomial-size formulas in a neighbouring instruction set and report earlier logarithmic-register methods; the paper does not position this result against them.",
+        "No lower bound is proved; the words 'optimal' and 'sharp' used for this result in the paper are unsupported.",
+        "Number of inputs is a power of two."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 19,
+      "archive_id": "0TH-2026-011",
+      "key": "T5",
+      "status": "ACTIVE",
+      "title": "ML-KEM parameter arithmetic and a Compress_1 decoding margin",
+      "statement": "3329 is prime and 17 has multiplicative order 256 modulo 3329; signed Montgomery reduction returns r with r·2^16 ≡ a (mod 3329) and |r| < 3329 for |a| < 2^15·3329; for b ∈ {0,1} and |e| ≤ 831 the repository's Lean function mlkemCompress1 maps b·1665 + e to b.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "mlkemCompress1 uses offset 1665 and differs from FIPS 203 Compress_1 only at x = 832, which this margin statement never reaches.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "SecMeshPQSI.Solution.t5a_fips203_ntt_prime_and_root",
+          "file": "lean/Solution.lean",
+          "line": 83
+        },
+        {
+          "decl": "SecMeshPQSI.Solution.t5b_montgomery_reduction_exact",
+          "file": "lean/Solution.lean",
+          "line": 86
+        },
+        {
+          "decl": "SecMeshPQSI.Solution.t5c_mlkem_compress1_margin",
+          "file": "lean/Solution.lean",
+          "line": 89
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "6c7f6421465c0018f2cfa385ede6f1041a62e543",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The Lean Compress_1 model is not FIPS 203: it returns 1 at x = 832 where FIPS 203 returns 0.",
+        "The companion claim that both b = 0 and b = 1 fail at e = +832 (adv_compress1_fails_at_plus_832, the CI negative test, the paper) is false for FIPS 203; only b = 1 fails.",
+        "No statement about ML-KEM security or full decryption correctness is formalized.",
+        "The margin condition is the standard Kyber/ML-KEM correctness condition and has earlier machine-checked treatments."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 20,
+      "archive_id": "0TH-2026-011",
+      "key": "T2-T3",
+      "status": "ACTIVE",
+      "title": "Combinatorial cores of one-time pad, XOR combining, Toeplitz hashing, Shamir sharing and Reed–Solomon decoding",
+      "statement": "Over Boolean vectors: the one-time-pad key and each XOR-combiner factor are unique given the rest; a Toeplitz pivot window is uniquely determined. Over any SimpleField: a nonzero polynomial with at most d+1 coefficients has at most d distinct roots; t points determine f(0) for length ≤ t; t−1 shares are consistent with every secret; f(0) is uniquely decodable when n ≥ t + 2b.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "SecMeshPQSI.Solution.t2a_shannon_otp_perfect_secrecy",
+          "file": "lean/Solution.lean",
+          "line": 41
+        },
+        {
+          "decl": "SecMeshPQSI.Solution.t2b_hybrid_dual_survivability",
+          "file": "lean/Solution.lean",
+          "line": 44
+        },
+        {
+          "decl": "SecMeshPQSI.Solution.t2c1_toeplitz_exact_2_universal",
+          "file": "lean/Solution.lean",
+          "line": 47
+        },
+        {
+          "decl": "SecMeshPQSI.Solution.t2d_carter_wegman_poly_bound",
+          "file": "lean/Solution.lean",
+          "line": 53
+        },
+        {
+          "decl": "SecMeshPQSI.Solution.t3a_shamir_threshold_and_secrecy",
+          "file": "lean/Solution.lean",
+          "line": 56
+        },
+        {
+          "decl": "SecMeshPQSI.Solution.t3b_byzantine_singleton_tightness",
+          "file": "lean/Solution.lean",
+          "line": 59
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "6c7f6421465c0018f2cfa385ede6f1041a62e543",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Probabilistic secrecy, universal-hash collision probability and the leftover hash lemma are not formalized; only bijection and counting cores are.",
+        "The 'tightness' part of t3b is only the arithmetic d = 2b; no counterexample is built.",
+        "All are textbook results (Shannon 1949, Carter–Wegman, Shamir 1979, Reed–Solomon decoding)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 21,
+      "archive_id": "0TH-2026-011",
+      "key": "T7b-T7c",
+      "status": "ACTIVE",
+      "title": "Total-variation/overlap identity and classical Fuchs–van de Graaf bounds for finite distributions",
+      "statement": "For P0, P1 : ℕ → ℕ with equal totals D: Σ|P0−P1| + 2·Σmin(P0,P1) = 2D, with three corollaries. For r, s : ℕ → ℕ with Σr² = Σs² = M and B = Σ r·s: overlap ≤ B ≤ M, 2M ≤ TV₂ + 2B and TV₂² + 4B² ≤ 4M²; and |⟨u,v⟩|² ≤ M² for complex integer vectors of squared norm M.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "SecMeshPQSI.Solution.t7b_hiding_binding_conservation_nogo",
+          "file": "lean/Solution.lean",
+          "line": 104
+        },
+        {
+          "decl": "SecMeshPQSI.Solution.t7c_fuchs_vandegraaff_microcrypt_efi",
+          "file": "lean/Solution.lean",
+          "line": 107
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "6c7f6421465c0018f2cfa385ede6f1041a62e543",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "No commitment protocol is formalized; bit-commitment impossibility and 'architectural necessity' are informal readings.",
+        "Only the classical case with perfect-square integer weights is covered; quantum Fuchs–van de Graaf for density operators is not.",
+        "The pure-state relation D_tr² + F = 1 holds by the definition of D_tr² in Lean.",
+        "No EFI pair or computational indistinguishability is defined."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 22,
+      "archive_id": "0TH-2026-011",
+      "key": "T4",
+      "status": "ACTIVE",
+      "title": "Polynomial identities for a one-parameter two-qubit family",
+      "statement": "For integers with ca² + sa² = R²: (sa²−ca²)² + (2·ca·sa)² = R⁴ (read on paper as c_eff² + C² = 1); with also ch² + sh² = R², a scaled identity the paper reads as det(g) − Ω²/4 = (C²/4)·sin²(θ/2); and Cauchy–Schwarz-type bounds for sums over Gaussian-integer vectors.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Interpretation as Berry flux, concurrence, quantum geometric tensor and min-entropy is paper-level and numerical.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "SecMeshPQSI.Solution.t4a_qgt_psd_lagrange_and_trace",
+          "file": "lean/Solution.lean",
+          "line": 65
+        },
+        {
+          "decl": "SecMeshPQSI.Solution.t4b_qgt_concurrence_surplus_identity",
+          "file": "lean/Solution.lean",
+          "line": 68
+        },
+        {
+          "decl": "SecMeshPQSI.Solution.t4d_chern_concurrence_entropy_conservation",
+          "file": "lean/Solution.lean",
+          "line": 77
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "6c7f6421465c0018f2cfa385ede6f1041a62e543",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "c_eff² + C² = 1 coincides with the complementarity relation C² + S_k² = 1 of Jakob and Bergou (arXiv:quant-ph/0302075, Eq. 11), which is not cited.",
+        "No Berry curvature, Chern number, entropy or quantum geometric tensor is defined in Lean; c_eff = −cos 2α is continuous, so 'topological' and 'quantized' do not apply.",
+        "H_min = 1 − log₂(1 + |c_eff|) is not kernel-checked.",
+        "Novelty of the det(g) − Ω²/4 formula was not searched."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 23,
+      "archive_id": "0TH-2026-011",
+      "key": "T4c2",
+      "status": "ACTIVE",
+      "title": "Orthogonality and row weight of the gross-code parity-check matrices",
+      "statement": "For the two explicit 72×144 Boolean matrices in the repository: every entry of H_X·H_Zᵀ over GF(2) is 0 (5,184 entries) and every row of both matrices has weight 6.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Checked by kernel evaluation (decide +kernel); k = 12 comes from GF(2) rank in C11/Python, outside Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "SecMeshPQSI.Solution.t4c2_bravyi_gross_bb144_certified",
+          "file": "lean/Solution.lean",
+          "line": 74
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "6c7f6421465c0018f2cfa385ede6f1041a62e543",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Code dimension k = 12 is not kernel-checked and distance 12 is quoted from Bravyi et al., not verified.",
+        "That the matrices equal the published code was not independently re-derived in this audit.",
+        "The exported 'general BB commutation' theorem T4c1 assumes its conclusion; the general lemma circEntry_comm is not exported."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 24,
+      "archive_id": "0TH-2026-012",
+      "key": "T1a-identities",
+      "status": "ACTIVE",
+      "title": "Moment-vector annihilation and a Pascal-type binomial identity used in a coded-PIR construction",
+      "statement": "Over any commutative ring, the inner product of the moment vector (1,a,...,a^{T-1}) with e_{r+1} - a e_r is 0 for r+1<T, and K*C(T,T') = (K+T-T')*C(T-1,T'-1) + (K-T')*C(T-1,T') for 1<=T'<=min(T,K); plus the arithmetic facts 42 and 10/17 > 4/7 at (N,K,T)=(6,3,3).",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "The interference dimension 42 and rate 10/17 for (6,3,3), and the general min-formula, are numerical (Python/C over F_7, F_101), not in Lean; no privacy or decoding is verified.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "TriadFrontier.PIRKoszul.t1a_koszul_veronese_rank_identity",
+          "file": "lean/TriadFrontier/PIRKoszul.lean",
+          "line": 89
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "674b5dac3a94825cb7791ac74b38ffd0fef23f1c",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Not shown: the Schur-product interference dimension equals 42, the general min-formula, optimality over query designs, or any privacy/decoding of the 10/17 scheme (all outside Lean).",
+        "The parent Sun-Tao-Xu-Zhang maximum-redundancy and zero-error T>=3 questions remain open.",
+        "The hub claim that this resolves a published question is not supported."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 25,
+      "archive_id": "0TH-2026-012",
+      "key": "T2-mlwe-identities",
+      "status": "ACTIVE",
+      "title": "Ring-universal DFT-cancellation identities and integer moment/inequality certificates for MLWE noise analysis",
+      "statement": "Over any commutative ring, anti-periodic and block-twisted sequences have vanishing even/selected DFT coefficients; and a family of integer Cauchy-Schwarz, Holder, data-processing and moment identities hold for tabulated noise weight distributions. A diagonal with m entries q has product q^m.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "All Renyi divergences, DFRs, 'constant-time' and 'Bai collapse' figures are float64/numeral results outside Lean; no lattice, sampler or divergence is defined in Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "TriadFrontier.MLWETightness.t2b_chen_step9_antiperiodic_dft_cancellation",
+          "file": "lean/TriadFrontier/MLWETightness.lean",
+          "line": 110
+        },
+        {
+          "decl": "TriadFrontier.MLWETightness.t2f_universal_twisted_dft_selection_rule",
+          "file": "lean/TriadFrontier/MLWETightness.lean",
+          "line": 663
+        }
+      ],
+      "axioms": "propext, Quot.sound (T2b); propext (T2f)",
+      "audited_commit": "674b5dac3a94825cb7791ac74b38ffd0fef23f1c",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The T2a 'refutation of Luo' and the Gaussian DFR 'paradox' are not supported (see findings); the Chen Step-9 bug was found by Wu and Vidick, uncredited.",
+        "Lattice hardness of MLWE is untouched."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 26,
+      "archive_id": "0TH-2026-012",
+      "key": "T3h-T3l-classical",
+      "status": "ACTIVE",
+      "title": "Characteristic-free formalizations of matrix-multiplication tensor rank, Schwartz-Zippel, and zero-error capacity of conference graphs",
+      "statement": "Over every field: the 2x2 matrix multiplication tensor has rank exactly 7; rank(<m,m,m>) >= 2m^2-m and the two-sided bound 2*4^k-2^k <= rank(<2^k,2^k,2^k>) <= 7^k; a Schwartz-Zippel root bound; Theta(C5)=sqrt(5) in integer form; and, for every self-complementary conference graph on 4k+1 vertices, alpha(G^t)^2 <= (4k+1)^t with alpha(G^{2m}) >= (4k+1)^m (instantiated for C5, P13, P17).",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "TriadFrontier.StrassenWinograd.t3h_strassen_winograd_exact_rank_seven",
+          "file": "lean/TriadFrontier/StrassenWinograd.lean",
+          "line": 1558
+        },
+        {
+          "decl": "TriadFrontier.BrockettDobkin.t3i_brockett_dobkin_rectangular_and_quadratic_matmul_bound",
+          "file": "lean/TriadFrontier/BrockettDobkin.lean",
+          "line": 701
+        },
+        {
+          "decl": "TriadFrontier.ShannonCapacity.t3j_shannon_capacity_lovasz_c5_and_haemers",
+          "file": "lean/TriadFrontier/ShannonCapacity.lean",
+          "line": 1716
+        },
+        {
+          "decl": "TriadFrontier.AlgebraicComplexity.t3k_schwartz_zippel_and_strassen_sandwich",
+          "file": "lean/TriadFrontier/AlgebraicComplexity.lean",
+          "line": 937
+        },
+        {
+          "decl": "TriadFrontier.PaleyCapacity.t3l_infinite_paley_conference_shannon_capacity",
+          "file": "lean/TriadFrontier/PaleyCapacity.lean",
+          "line": 1909
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "674b5dac3a94825cb7791ac74b38ffd0fef23f1c",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "T3i's 2m^2-m is weaker than the published Brockett-Dobkin bound 2n^2-1; the 'sandwich' is two one-sided bounds, not an exact value.",
+        "T3l proves the two conditions only for C5, P13, P17 (not 'every k'); the general capacity of self-complementary vertex-transitive graphs is Lovasz (1979).",
+        "omega=2 and the exact Theta(C7) stay open."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 27,
+      "archive_id": "0TH-2026-013",
+      "key": "C1-C2",
+      "status": "ACTIVE",
+      "title": "Baker-Gill-Solovay oracle theorem in an explicit oracle Turing machine model",
+      "statement": "In a 4-tape oracle Turing machine model with time bounds (n+1)^c + c: for every oracle O, P^O ⊆ NP^O; there is an oracle A with P^A = NP^A; there is an oracle B and a language L with L ∈ NP^B and L ∉ P^B. Oracles are arbitrary functions from bit strings to Booleans.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Six kernel checks seen in Ubuntu CI log only; not re-run on this machine.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Solution.prove_p_subset_np",
+          "file": "lean/Solution.lean",
+          "line": 19
+        },
+        {
+          "decl": "Solution.prove_baker_gill_solovay",
+          "file": "lean/Solution.lean",
+          "line": 22
+        },
+        {
+          "decl": "PVsNP.p_subset_np",
+          "file": "lean/PVsNP/OTM.lean",
+          "line": 941
+        },
+        {
+          "decl": "PVsNP.baker_gill_solovay",
+          "file": "lean/PVsNP/Relativization.lean",
+          "line": 20
+        },
+        {
+          "decl": "PVsNP.bgs_oracle_collapse",
+          "file": "lean/PVsNP/RelativizationCol.lean",
+          "line": 1763
+        },
+        {
+          "decl": "PVsNP.bgs_oracle_separation",
+          "file": "lean/PVsNP/RelativizationSep.lean",
+          "line": 591
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "a70733fc388c24e3789eef9fb7afc8464f1669fe",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Holds for this machine model only; equivalence with standard Turing machine models is not formalized.",
+        "Docstrings call the oracles computable; computability is not part of the statement.",
+        "Says nothing about unrelativized P vs NP.",
+        "Earlier machine formalizations of this theorem were not searched for."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 28,
+      "archive_id": "0TH-2026-013",
+      "key": "C3-C5",
+      "status": "ACTIVE",
+      "title": "Counting lemma underlying the natural-proofs argument",
+      "statement": "For fixed n and k: if a Boolean property accepts at least numer/denom of all 2^(2^n) truth tables and rejects every member of a set F, and a keyed family maps every k-bit key into F, then the property accepts no key and its acceptance gap is at least numer/denom. Also: an integer telescoping pigeonhole bound, and 'non-constant' accepts at least half of all tables for n ≥ 1.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Solution.prove_natural_proof_breaks_prf",
+          "file": "lean/Solution.lean",
+          "line": 25
+        },
+        {
+          "decl": "PVsNP.natural_proof_breaks_prf",
+          "file": "lean/PVsNP/NaturalProofs.lean",
+          "line": 97
+        },
+        {
+          "decl": "PVsNP.hybrid_telescoping_bound",
+          "file": "lean/PVsNP/NaturalProofs.lean",
+          "line": 132
+        },
+        {
+          "decl": "PVsNP.natural_proof_nonvacuous",
+          "file": "lean/PVsNP/NaturalProofs.lean",
+          "line": 321
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound (C3, C5); propext, Quot.sound (C4)",
+      "audited_commit": "a70733fc388c24e3789eef9fb7afc8464f1669fe",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Not the Razborov-Rudich theorem: constructivity, a circuit class, pseudorandomness and asymptotics are absent.",
+        "The property is an arbitrary function, so the 'distinguisher' has no efficiency bound.",
+        "The telescoping lemma is the pigeonhole corollary, not the summed triangle inequality stated in the paper."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 29,
+      "archive_id": "0TH-2026-013",
+      "key": "C6-C9",
+      "status": "ACTIVE",
+      "title": "Minimally unsatisfiable parity systems and Boolean polymorphism facts",
+      "statement": "For every k ≥ 0 the system x_i ⊕ x_(i+1 mod 2k+1) = 1 on 2k+1 variables, and the 9-variable Mermin-Peres parity system, are unsatisfiable while every drop-one subsystem is satisfiable. x⊕y⊕z, AND, OR and majority preserve one XOR, Horn, dual-Horn and 2-clause relation respectively. Every Boolean operation of any arity preserving both x∨y∨z and ¬x∨¬y∨¬z is a projection.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "PVsNP.odd_cycle_xor_maximally_contextual",
+          "file": "lean/PVsNP/SheafPolymorphism.lean",
+          "line": 167
+        },
+        {
+          "decl": "PVsNP.mermin_peres_maximally_contextual",
+          "file": "lean/PVsNP/SheafPolymorphism.lean",
+          "line": 255
+        },
+        {
+          "decl": "PVsNP.xorsat_maltsev",
+          "file": "lean/PVsNP/SheafPolymorphism.lean",
+          "line": 343
+        },
+        {
+          "decl": "PVsNP.hornsat_and",
+          "file": "lean/PVsNP/SheafPolymorphism.lean",
+          "line": 364
+        },
+        {
+          "decl": "PVsNP.dualhornsat_or",
+          "file": "lean/PVsNP/SheafPolymorphism.lean",
+          "line": 375
+        },
+        {
+          "decl": "PVsNP.twosat_majority",
+          "file": "lean/PVsNP/SheafPolymorphism.lean",
+          "line": 386
+        },
+        {
+          "decl": "PVsNP.monotone_3sat_only_projections",
+          "file": "lean/PVsNP/SheafPolymorphism.lean",
+          "line": 420
+        },
+        {
+          "decl": "PVsNP.monotone_3sat_minimal",
+          "file": "lean/PVsNP/SheafPolymorphism.lean",
+          "line": 546
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound (C7); propext, Quot.sound (C6, C9); propext (C8)",
+      "audited_commit": "a70733fc388c24e3789eef9fb7afc8464f1669fe",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "'Maximally contextual' in the Lean code means minimal unsatisfiability; no sheaf, empirical model or cohomology is formalized.",
+        "This is not Schaefer's dichotomy theorem; no CSP complexity is formalized.",
+        "k = 0 is the one-variable system x0 ⊕ x0 = 1."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 30,
+      "archive_id": "0TH-2026-013",
+      "key": "C10-C11",
+      "status": "ACTIVE",
+      "title": "Markov's negation bound for the inverter and a k-NOT compilation",
+      "statement": "No circuit over constants, AND, OR and NOT with at most r NOT gates computes all n negations when n ≥ 2^r. An explicit circuit with exactly k NOT gates computes all negations of 2^k − 1 inputs. Every such circuit on exactly 2^k − 1 inputs has an equivalent circuit with exactly k NOT gates; no bound on its size is proved.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Solution.prove_markov_inverter_tight",
+          "file": "lean/Solution.lean",
+          "line": 46
+        },
+        {
+          "decl": "PVsNP.markov_inverter_lower",
+          "file": "lean/PVsNP/CircuitPhaseTransition.lean",
+          "line": 330
+        },
+        {
+          "decl": "PVsNP.markov_inverter_upper",
+          "file": "lean/PVsNP/CircuitPhaseTransition.lean",
+          "line": 1119
+        },
+        {
+          "decl": "PVsNP.fischer_negation_reduction",
+          "file": "lean/PVsNP/CircuitPhaseTransition.lean",
+          "line": 1403
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "a70733fc388c24e3789eef9fb7afc8464f1669fe",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Fischer's 1975 theorem is a polynomial-size construction; the Lean compilation has no size bound and its inverter is exponential-size.",
+        "The upper bound and compilation cover n = 2^k − 1 only, not all n ≤ 2^k − 1."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 31,
+      "archive_id": "0TH-2026-013",
+      "key": "C12-C13",
+      "status": "ACTIVE",
+      "title": "AND-count versus F2-degree, and permanent equals determinant modulo 2",
+      "statement": "Every wire of a circuit over constants, XOR and AND with a AND gates computes an F2-polynomial of degree at most a + 1, so for n ≥ 1 computing the n-input AND needs at least n − 1 AND gates. For every n × n integer matrix, permanent ≡ determinant mod 2; for n ≥ 2 one 0/1 matrix has permanent 2 and determinant 0.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Permanent and determinant are defined by first-row Laplace expansion.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "PVsNP.mc_degree_lower_bound",
+          "file": "lean/PVsNP/CircuitPhaseTransition.lean",
+          "line": 2138
+        },
+        {
+          "decl": "PVsNP.mc_andN_lower",
+          "file": "lean/PVsNP/CircuitPhaseTransition.lean",
+          "line": 2376
+        },
+        {
+          "decl": "PVsNP.perm_eq_det_mod2",
+          "file": "lean/PVsNP/CircuitPhaseTransition.lean",
+          "line": 2413
+        },
+        {
+          "decl": "PVsNP.perm_ne_det_witness",
+          "file": "lean/PVsNP/CircuitPhaseTransition.lean",
+          "line": 2510
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "a70733fc388c24e3789eef9fb7afc8464f1669fe",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "No hardness notion for the permanent is formalized.",
+        "The SAT-computed multiplicative-complexity values (experiment E3) are outside Lean and reproduce published classifications that are not cited."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 32,
+      "archive_id": "0TH-2026-013",
+      "key": "C14",
+      "status": "ACTIVE",
+      "title": "Reversibility of straight-line register programs and one recursive product program",
+      "statement": "Straight-line programs on integer registers built from add-constant and multiply-accumulate instructions, with destination distinct from operands, are undone by the reversed inverted program. One explicit program of 3·4^(d−1) − 2 instructions adds ± the product of d integers fixed in the program to one register and restores every other register, whatever their initial contents.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Solution.prove_catalytic_algebra",
+          "file": "lean/Solution.lean",
+          "line": 58
+        },
+        {
+          "decl": "PVsNP.catalytic_program_reversible",
+          "file": "lean/PVsNP/CatalyticAlgebra.lean",
+          "line": 189
+        },
+        {
+          "decl": "PVsNP.catalytic_multilinear_exact",
+          "file": "lean/PVsNP/CatalyticAlgebra.lean",
+          "line": 279
+        }
+      ],
+      "axioms": "propext, Quot.sound",
+      "audited_commit": "a70733fc388c24e3789eef9fb7afc8464f1669fe",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "The multiplicands are program constants, so the value added is a constant; inputs are not read from registers.",
+        "No space or time model and no catalytic-space complexity bound is formalized.",
+        "Ben-Or and Cleve (1992) give register programs of polynomial length with three registers; that work is not cited."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 33,
+      "archive_id": "0TH-2026-014",
+      "key": "T1",
+      "status": "ACTIVE",
+      "title": "Imaginary-gauge intertwining and zero-energy identities for the integer Hatano-Nelson chain",
+      "statement": "For integers r, l and every N: the open Hatano-Nelson matrix with hoppings r², l² satisfies H·D = D·S entrywise for the gauge diagonal D and symmetric path S. Its characteristic recurrence satisfies P_2m(0) = (−1)^m (rl)^(2m), P_(2m+1)(0) = 0. The two-corner determinant formula holds for N = 3, 4. If 0 < l < r then l^(2m) < r^(2m).",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Link from the corner formula to spectra of general N rests on a determinant identity proven only for N = 3, 4.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Monodromia.Palomar.t1_hatano_nelson_gbz",
+          "file": "lean/PalomarSolution.lean",
+          "line": 19
+        },
+        {
+          "decl": "Monodromia.HatanoNelsonGBZ.hn_obc_matrix_similarity",
+          "file": "lean/MonodromiaProofs/HatanoNelsonGBZ.lean",
+          "line": 38
+        },
+        {
+          "decl": "Monodromia.HatanoNelsonGBZ.hn_dual_corner_det4",
+          "file": "lean/MonodromiaProofs/HatanoNelsonGBZ.lean",
+          "line": 109
+        },
+        {
+          "decl": "Monodromia.HatanoNelsonGBZ.hn_exponential_corner_catastrophe",
+          "file": "lean/MonodromiaProofs/HatanoNelsonGBZ.lean",
+          "line": 117
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "153792bdaee2b01f9a56afbcb60af7d2957d5669",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The 'exponential corner catastrophe' conjunct is a power identity; no perturbed spectrum or eigenvalue is formalized.",
+        "The dual-corner determinant formula is proven for N = 3 and 4 only.",
+        "Integer parameters only; no floating-point or numerical-analysis statement is proven.",
+        "The imaginary-gauge picture is classical (Hatano-Nelson); boundary fragility of the skin effect is in Guo et al., PRL 127, 116801 (2021)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 34,
+      "archive_id": "0TH-2026-014",
+      "key": "T2",
+      "status": "ACTIVE",
+      "title": "Eigenvector identities for a corner-perturbed Jordan block of any order",
+      "statement": "For n ≥ 1 and integers λ₀, w: Nⁿ = 0 for the shift matrix with (N^(n−1))_(0,n−1) = 1; eigenvectors of J_n(λ₀) vanish beyond index 0; (w^j), (w^(n−1−j)) are right and left eigenvectors of J_n + wⁿe_(n−1)e₀ᵀ for λ₀ + w; ⟨L,R⟩² = n²w^(2n−2); |L|²|R|² = S_n(w²)²; for integer q > 0, n ≥ 2: S_n(q)² > 1, S_n(q) < S_(n+1)(q).",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "The quotient SNR_Pet² = 1/S_n(q)² and any Petermann or sensitivity quantity are formed on paper, not in Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Monodromia.Palomar.t2_exceptional_point_petermann",
+          "file": "lean/PalomarSolution.lean",
+          "line": 21
+        },
+        {
+          "decl": "Monodromia.ExceptionalPoints.ep_puiseux_right_eigenvector",
+          "file": "lean/MonodromiaProofs/ExceptionalPoints.lean",
+          "line": 156
+        },
+        {
+          "decl": "Monodromia.ExceptionalPoints.ep_petermann_exact_cancellation_bridge",
+          "file": "lean/MonodromiaProofs/ExceptionalPoints.lean",
+          "line": 354
+        },
+        {
+          "decl": "Monodromia.ExceptionalPoints.ep_petermann_snr_strictly_below_one",
+          "file": "lean/MonodromiaProofs/ExceptionalPoints.lean",
+          "line": 343
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "153792bdaee2b01f9a56afbcb60af7d2957d5669",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "Covers one model: a single Jordan block with the corner perturbation wⁿ, w an integer.",
+        "No signal-to-noise ratio, Petermann factor or eigenvalue derivative is defined in Lean.",
+        "Order-n Petermann-factor scaling is known at leading order (Wiersig, Phys. Rev. Research 5, 033042 (2023)); only the exact finite-q factor for this model may be new, and that was not searched."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 35,
+      "archive_id": "0TH-2026-014",
+      "key": "T3b-lucas",
+      "status": "ACTIVE",
+      "title": "Lucas trace and determinant identities for powers of [[2,1],[1,1]]",
+      "statement": "For M = [[2,1],[1,1]] and p ≥ 1: tr(Mᵖ) = L_2p and −det(I − Mᵖ) = L_2p − 2; L_2p − 2 ≠ L_2q − 2 for p ≠ q; L_4m − 2 is not the square of any integer for m ≥ 1. Two fixed reduced Burau matrices over Laurent polynomials satisfy the braid relation.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "M is not proven equal to the Burau image of σ₁σ₂⁻¹ at t = −1 in Lean; knot determinants and Fox-Milnor are cited, not formalized.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Monodromia.Palomar.t3b_burau_lucas_jones_and_fox_trapezoidal",
+          "file": "lean/PalomarSolution.lean",
+          "line": 25
+        },
+        {
+          "decl": "Monodromia.SpectralKnots.burau_yang_baxter",
+          "file": "lean/MonodromiaProofs/SpectralKnots.lean",
+          "line": 73
+        },
+        {
+          "decl": "Monodromia.SpectralKnots.gerono_knot_determinant_lucas",
+          "file": "lean/MonodromiaProofs/SpectralKnots.lean",
+          "line": 132
+        },
+        {
+          "decl": "Monodromia.SpectralKnots.gerono_even_not_fox_milnor_square",
+          "file": "lean/MonodromiaProofs/SpectralKnots.lean",
+          "line": 313
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "153792bdaee2b01f9a56afbcb60af7d2957d5669",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Non-sliceness is not a Lean statement; via Fox-Milnor it applies only to even p not divisible by 3, since for 3 | p the closure of (σ₁σ₂⁻¹)ᵖ is a 3-component link.",
+        "The values L_2p − 2 are known determinants of Turk's head links THK(3,p) (OEIS A004146, comment of 2014).",
+        "The braid family is the known lemniscate-of-Gerono family (Bode, Dennis, Foster, King, arXiv:1611.02563, after Perron).",
+        "This is not progress on the slice-ribbon conjecture (GEOM-038)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 36,
+      "archive_id": "0TH-2026-014",
+      "key": "T3b-knotdata",
+      "status": "ACTIVE",
+      "title": "Finite TL₃ bracket evaluations and trapezoidality of two coefficient lists",
+      "statement": "In a hand-coded 5-dimensional Temperley-Lieb model TL₃: the closure brackets of (s₁s₂⁻¹)ᵖ for p = 1, 2, 3, 4 equal explicit Laurent lists; the first is 1, the others differ from it and are palindromic; the bracket of s₁³s₂ differs from that of its mirror. The list of 2m+1 ones and the list [p, 2p+1, p] (p ≥ 1) satisfy the trapezoidal predicate.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Identification of the lists with Jones or Alexander polynomials of named knots is not formalized.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Monodromia.SpectralKnots.tl3_gerono_jones_polynomials",
+          "file": "lean/MonodromiaProofs/SpectralKnots.lean",
+          "line": 340
+        },
+        {
+          "decl": "Monodromia.SpectralKnots.tl3_trefoil_chiral_separation",
+          "file": "lean/MonodromiaProofs/SpectralKnots.lean",
+          "line": 354
+        },
+        {
+          "decl": "Monodromia.SpectralKnots.fox_trapezoidal_torus_2_odd",
+          "file": "lean/MonodromiaProofs/SpectralKnots.lean",
+          "line": 360
+        },
+        {
+          "decl": "Monodromia.SpectralKnots.fox_trapezoidal_all_twist_knots",
+          "file": "lean/MonodromiaProofs/SpectralKnots.lean",
+          "line": 375
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "153792bdaee2b01f9a56afbcb60af7d2957d5669",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "The lists are typed in by hand; no knot, Alexander polynomial or Jones polynomial is defined in Lean.",
+        "Torus knots T(2,2m+1) and twist knots are two-bridge, a class for which Fox's trapezoidal conjecture is already proved (atlas GEOM-046 row; Hartley 1979 per the literature report).",
+        "[p, 2p+1, p] covers one parity of twist knots only (standard formula, not source-checked).",
+        "4₁, the Borromean rings and 8₁₈ are table knots/links; this has no bearing on the Jones unknot question (GEOM-039).",
+        "The paper names the trefoil braid σ₁²σ₂ while Lean uses s₁³s₂."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 37,
+      "archive_id": "0TH-2026-014",
+      "key": "T4",
+      "status": "ACTIVE",
+      "title": "Discriminant sign and exceptional-point nilpotency for a non-reciprocal 2×2 integer system",
+      "statement": "For integers r_A, r_B, J_AB, J_BA: J_AB·J_BA ≥ 0 implies (r_A − r_B)² + 4J_AB·J_BA ≥ 0; if that discriminant is 0, S = [[r_A−r_B, 2J_AB],[2J_BA, r_B−r_A]] satisfies S² = 0, and S ≠ 0 unless J_AB = J_BA = 0. At ψ_A = isR, ψ_B = R, r = R², s² = 1, the cubic field is tangential with moment −sJR².",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Pointwise algebraic identities only; no differential equation, orbit or stability statement.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Monodromia.Palomar.t4_non_reciprocal_cep_and_chiral_matter",
+          "file": "lean/PalomarSolution.lean",
+          "line": 27
+        },
+        {
+          "decl": "Monodromia.NonReciprocalCEP.nr_cep_jordan_defective",
+          "file": "lean/MonodromiaProofs/NonReciprocalCEP.lean",
+          "line": 29
+        },
+        {
+          "decl": "Monodromia.NonReciprocalCEP.nr_chiral_quadrature_time_crystal",
+          "file": "lean/MonodromiaProofs/NonReciprocalCEP.lean",
+          "line": 52
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "153792bdaee2b01f9a56afbcb60af7d2957d5669",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "No time crystal, limit cycle or attraction is formalized.",
+        "The 'non-variational curl' conjunct is J_AB ≠ J_BA ⇒ J_AB − J_BA ≠ 0, with the curl defined as subtraction.",
+        "The discriminant facts are textbook properties of real 2×2 matrices.",
+        "Atlas CM-043 asks about many-body time crystals and excludes limit-cycle synchronization; this result does not bear on it."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 38,
+      "archive_id": "0TH-2026-014",
+      "key": "T5",
+      "status": "ACTIVE",
+      "title": "Intertwining metric and its positivity for the PT-symmetric dimer over the Gaussian integers",
+      "statement": "For integers g, k with H = [[ig, k],[k, −ig]] and η = [[k, −ig],[ig, k]] over ℤ[i]: ηH = H†η; if 0 < k and g² < k², then Re(v†ηv) > 0 for every nonzero Gaussian-integer vector v; at g = k ≠ 0 the vector (1, −i) has η-norm 0.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Reality of eigenvalues and impossibility of a positive metric in the broken phase are paper-level; their Lean conjuncts are scalar arithmetic.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "Monodromia.Palomar.t5_pt_symmetry_and_pseudo_hermitian_metric",
+          "file": "lean/PalomarSolution.lean",
+          "line": 29
+        },
+        {
+          "decl": "Monodromia.PTSymmetryMetric.pt_metric_intertwining",
+          "file": "lean/MonodromiaProofs/PTSymmetryMetric.lean",
+          "line": 22
+        },
+        {
+          "decl": "Monodromia.PTSymmetryMetric.pt_unbroken_metric_pos_def",
+          "file": "lean/MonodromiaProofs/PTSymmetryMetric.lean",
+          "line": 43
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "153792bdaee2b01f9a56afbcb60af7d2957d5669",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Positivity is shown over Gaussian-integer vectors and integer parameters, not complex vectors or real parameters.",
+        "The T5 conjuncts named 'universal pseudo-Hermitian reality' and 'broken-PT metric impossibility' do not quantify over metrics; the latter holds with the PT hypotheses removed.",
+        "The dimer and its metric are the standard example (Bender-Boettcher 1998; Mostafazadeh 2002)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 39,
+      "archive_id": "0TH-2026-016",
+      "key": "T2bd",
+      "status": "ACTIVE",
+      "title": "Kernel-checked lower bounds for C₂₇ and C₃₁ that are weaker than published values",
+      "statement": "C₂₇^⊠2048 and C₃₁^⊠2048 contain independent sets of sizes M₂₇ and M₃₁ with 13319390984674515^2048 ≤ M₂₇·10^(15·2048) and 15308776193986504^2048 ≤ M₃₁·10^(15·2048). Consequently Θ(C₂₇) ≥ 13.319390984674515 and Θ(C₃₁) ≥ 15.308776193986504. Both are smaller than 31522^(1/4) ≈ 13.3246 and 54934^(1/4) ≈ 15.3095, the values in Codenotti–Gerace–Resta 2003, Table 1.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Independent construction (Baumert expansion plus port systems); it does not formalise the 2003 sets and gives no new bound.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ZeroErrorFrontier.WorldRecords.t2b_c27_world_record",
+          "file": "lean/ZeroErrorFrontier/WorldRecords.lean",
+          "line": 1833
+        },
+        {
+          "decl": "ZeroErrorFrontier.WorldRecords.t2d_c31_world_record",
+          "file": "lean/ZeroErrorFrontier/WorldRecords.lean",
+          "line": 1875
+        },
+        {
+          "decl": "ZeroErrorFrontier.CosetQuotient.t1f_baumert_pullback_homomorphism",
+          "file": "lean/ZeroErrorFrontier/CosetQuotient.lean",
+          "line": 1693
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "af343aaa1701637e23733ac0abd7a8f9b2e22b60",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "These are not best known bounds: the 2003 table lists α(C₂₇^⊠4) ≥ 31522 and α(C₃₁^⊠4) ≥ 54934, above the repository's fourth-power bases 31466 and 54913 and above its final bounds.",
+        "The 2003 entries are printed cardinalities marked as obtained by expansion formulas and experiment; the explicit sets were not examined in this audit.",
+        "Θ is not defined in Lean; the expansion map is the known construction of Baumert et al. (1971)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 40,
+      "archive_id": "0TH-2026-016",
+      "key": "T1e",
+      "status": "ACTIVE",
+      "title": "Coset codes in the fourth strong power of C_n for n = 8k+1 with published cardinalities",
+      "statement": "For every k ≥ 3 and n = 8k+1: α(C_n^⊠4) ≥ (4k² + ⌊k/2⌋)·n². The set is lifted from 4k² + ⌊k/2⌋ = ⌊n⌊n/8⌋/2⌋ points of ℤ_n², no two within circular distance 1 in coordinate one and 7 in coordinate two; no such point set is larger (n ≥ 8), and each one of size M lifts to M·n² points (n ≥ 15).",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Same cardinalities as published bounds, obtained from cosets of ⟨(1,0,0,2),(0,1,0,4)⟩.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ZeroErrorFrontier.CosetQuotient.t1e_infinite_hstar_family_and_ports",
+          "file": "lean/ZeroErrorFrontier/CosetQuotient.lean",
+          "line": 1206
+        },
+        {
+          "decl": "ZeroErrorFrontier.CosetQuotient.t1a_coset_quotient_compression",
+          "file": "lean/ZeroErrorFrontier/CosetQuotient.lean",
+          "line": 249
+        },
+        {
+          "decl": "ZeroErrorFrontier.CosetQuotient.t1b_exact_quotient_ceilings",
+          "file": "lean/ZeroErrorFrontier/CosetQuotient.lean",
+          "line": 533
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "af343aaa1701637e23733ac0abd7a8f9b2e22b60",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "For odd k the size equals n²(n²−n−8)/16, Theorem 1 (d = 3) of Codenotti, Gerace and Resta (2003); for even k it equals (n⁴−n³)/16, the Baumert et al. (1971) value.",
+        "The repository does not cite the 2003 paper.",
+        "The contract statement contains conflict-pattern facts for odd k but no port system; the n²-port system is a separate kernel-checked definition outside the audited 32 declarations.",
+        "The companion theorem T1c is narrower than its prose: one of two claimed branches, n ≥ 9, ball sizes at four n."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 41,
+      "archive_id": "0TH-2026-016",
+      "key": "T4",
+      "status": "ACTIVE",
+      "title": "Haemers rank bound, Haemers's Schläfli-graph example and Lovász's pentagon bound",
+      "statement": "If a matrix LR over a field, of inner width r, has nonzero diagonal and vanishes on all pairs of distinct non-adjacent vertices of G, then α(G^⊠d) ≤ r^d for all d. For the Schläfli graph S and its complement S̄: α(S^⊠d) ≤ 3^d, α(S̄^⊠d) ≤ 7^d and α(S ⊠ S̄) ≥ 27 > 21. For the pentagon: α(C₅^⊠2) ≥ 5 and α(C₅^⊠d)² ≤ 5^d.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Results of Haemers (1979) and Lovász (1979); integer forms, without real numbers.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ZeroErrorFrontier.HaemersParadox.t4a_haemers_rank_theorem",
+          "file": "lean/ZeroErrorFrontier/HaemersParadox.lean",
+          "line": 320
+        },
+        {
+          "decl": "ZeroErrorFrontier.HaemersParadox.t4d_haemers_schlafli_paradox",
+          "file": "lean/ZeroErrorFrontier/HaemersParadox.lean",
+          "line": 1849
+        },
+        {
+          "decl": "ZeroErrorFrontier.HaemersParadox.t4c_lovasz_pentagon_theorem",
+          "file": "lean/ZeroErrorFrontier/HaemersParadox.lean",
+          "line": 1404
+        },
+        {
+          "decl": "ZeroErrorFrontier.HaemersParadox.t4b_integer_orthogonal_handle_sandwich",
+          "file": "lean/ZeroErrorFrontier/HaemersParadox.lean",
+          "line": 558
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "af343aaa1701637e23733ac0abd7a8f9b2e22b60",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "Θ and √5 are not defined in Lean; Θ(C₅) = √5 and Θ(S ⊠ S̄) > Θ(S)·Θ(S̄) are consequences outside Lean.",
+        "That the defined 27-vertex graph is strongly regular (27,16,10,8) was checked by computation outside Lean; uniqueness of that graph is a cited fact.",
+        "The orthogonal-representation bound T4b is proved for vectors of equal norm, while the paper states it for bounded norm.",
+        "The claim to be the first such formal proof was not verified; the 1979 articles were not opened in this audit."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 42,
+      "archive_id": "0TH-2026-016",
+      "key": "T3",
+      "status": "ACTIVE",
+      "title": "Two-factor combining rule for separation systems, table admissibility, and the seven-label graph",
+      "statement": "If two label systems are realised by independent families in graphs G₁ and G₂, and a table assigns each target label a list of label pairs pairwise separated in at least one coordinate, then the unions of product blocks realise the target system in G₁ ⊠ G₂ with sizes Σ|R₁(a)|·|R₂(b)|. Five fixed tables pass the separation checks. For the seven-label graph G₇: α(G₇) ≥ 3 and α(G₇^⊠d) ≤ 3^d.",
+      "kind": "KNOWN_RESULT_FORMALIZED",
+      "evidence": "kernel-checked",
+      "evidence_note": "Two-input case of the BPZ combining rule (Tandon 2026, Proposition 1), allowing two alphabets.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "ZeroErrorFrontier.SeparationCalculus.t3c_heterogeneous_composition_and_tables",
+          "file": "lean/ZeroErrorFrontier/SeparationCalculus.lean",
+          "line": 1071
+        },
+        {
+          "decl": "ZeroErrorFrontier.SeparationCalculus.t3a_g7_induced_c5_and_exact_capacity",
+          "file": "lean/ZeroErrorFrontier/SeparationCalculus.lean",
+          "line": 260
+        },
+        {
+          "decl": "ZeroErrorFrontier.SeparationCalculus.t3b_weighted_fractional_clique_barrier",
+          "file": "lean/ZeroErrorFrontier/SeparationCalculus.lean",
+          "line": 404
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "af343aaa1701637e23733ac0abd7a8f9b2e22b60",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_MATCH",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "This does not resolve the two-sided extension of Theorem 1 that Tandon (arXiv:2608.30273, Section 5 and Remark 3) leaves for future work: no Gao gadget, compatibility condition or profile formula is derived.",
+        "The same rule exists for one alphabet in Tandon's Proposition 1 and in the Buys–Polak–Zuiddam Lean library (Realisation.multiSubst); the general theorem is never instantiated in the repository.",
+        "The tables are those of Buys, Polak and Zuiddam; only their admissibility is re-checked.",
+        "The G₇ bound is a 3-clique cover of the repository's own auxiliary graph; the weighted clique-cover theorem T3b gives upper bounds only (46875/2 is not shown optimal)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    },
+    {
+      "n": 43,
+      "archive_id": "0TH-2026-007",
+      "key": "T12-T19",
+      "status": "ACTIVE",
+      "title": "Conservation and monotonicity facts for the repository's discrete vesicle, ATP and SNARE models",
+      "statement": "For the repository's definitions: every valid vesicle-pool step list keeps rrp + recycling + reserve; the store (a₀ + s·t) ∸ (b + f·c)·t drops strictly when s < b + f·c and is 0 for all t ≥ ⌊a₀/D⌋ + 1, D = b + f·c − s; leak lowers the sustainable rate; (8n)/8 = n; the clamped SNARE barrier is non-increasing in Ca²⁺ and SNARE counts.",
+      "kind": "ENGINEERING_INVARIANTS",
+      "evidence": "kernel-checked",
+      "evidence_note": "True by construction of self-defined update rules; the H3 simulation outcome itself rests on Rust code outside Lean.",
+      "asked_in": null,
+      "lean": [
+        {
+          "decl": "SynapseBouton.vesicle_pool_transition_invariant",
+          "file": "lean/Solution.lean",
+          "line": 297
+        },
+        {
+          "decl": "SynapseBouton.vesicle_pool_multistep_invariant",
+          "file": "lean/Solution.lean",
+          "line": 306
+        },
+        {
+          "decl": "SynapseBouton.atp_deficit_strict_depletion",
+          "file": "lean/Solution.lean",
+          "line": 319
+        },
+        {
+          "decl": "SynapseBouton.atp_hitting_time_upper_bound",
+          "file": "lean/Solution.lean",
+          "line": 327
+        },
+        {
+          "decl": "SynapseBouton.resting_leak_strictly_lowers_sustainable_rate",
+          "file": "lean/Solution.lean",
+          "line": 349
+        },
+        {
+          "decl": "SynapseBouton.kinesin_processive_atp_exact",
+          "file": "lean/Solution.lean",
+          "line": 364
+        },
+        {
+          "decl": "SynapseBouton.snare_barrier_monotone_in_syt1_ca",
+          "file": "lean/Solution.lean",
+          "line": 374
+        },
+        {
+          "decl": "SynapseBouton.snare_copy_number_cooperativity",
+          "file": "lean/Solution.lean",
+          "line": 393
+        }
+      ],
+      "axioms": "propext, Quot.sound",
+      "audited_commit": "06e0dcdd5fc4cb406e9fe21d260ff94b68a414d4",
+      "audit": {
+        "date": "2026-11-26",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "KNOWN"
+      },
+      "limits": [
+        "T15 is an upper bound on the zero time, not an exact hitting time; it equals 3 s only for the deterministic mean-rate H3 constants, while the simulator jitters the rate each second.",
+        "The ATP and SNARE constants are the author's and are not found in the cited sources; the Lean definitions are hand-written analogues of the TypeScript/Rust engines with no tested link.",
+        "T17 contains no kinesin model; T18 and T19 are non-strict.",
+        "No part of NEURO-001 (consciousness) or NEURO-019 (20 W credit assignment) is addressed."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+    }
+  ]
 }

@@ -116,9 +116,9 @@ PRIOR_WORK: dict[str, str] = {
 }
 
 REBUILD: dict[str, str] = {
-    "PASS": "rebuilt from a clean clone: pass",
-    "FAIL": "rebuilt from a clean clone: FAIL",
-    "NOT_REBUILT": "not rebuilt in this audit",
+    "PASS": "Rebuilt from a clean clone at the audited commit: pass",
+    "FAIL": "Rebuilt from a clean clone at the audited commit: FAIL",
+    "NOT_REBUILT": "Not rebuilt in this audit",
 }
 
 STATUS = {"ACTIVE", "WITHDRAWN"}
@@ -368,9 +368,11 @@ def evidence_line(r: dict[str, Any], ent: dict[str, Any]) -> str:
         parts.append("declaration" + ("s " if len(refs) > 1 else " ") + ", ".join(refs))
     if r.get("axioms"):
         parts.append(f"axioms: {r['axioms']}")
-    if r.get("evidence_note"):
-        parts.append(r["evidence_note"])
-    return "; ".join(parts) + "."
+    text = "; ".join(parts) + "."
+    note = str(r.get("evidence_note") or "").strip()
+    if note:
+        text += " " + note[0].upper() + note[1:] + ("" if note.endswith((".", "!", "?")) else ".")
+    return text
 
 
 def upstream_note(ent: dict[str, Any], live: dict[str, Any] | None) -> str | None:

@@ -172,16 +172,30 @@ def test_consolidated_latest_entries_registered() -> None:
 
 
 def test_solved_and_atlas_bridge_epistemic_honesty() -> None:
+    """The bridge's solved count is derived from its own classes and agrees with the Results Ledger.
+
+    (Until 2026-11-26 this test pinned the literal 5; the statement audit of that day found that
+    three of the five did not answer a question posed in their cited source.)
+    """
     bridge = json.loads((ROOT / "registry" / "SOLVED_AND_ATLAS_BRIDGE.json").read_text(encoding="utf-8"))
     assert bridge["mega_atlas_total_problems"] == 1900
     assert bridge["grand_problems_retired"] == 0
-    assert bridge["epistemic_summary"]["published_open_subconjectures_proved_in_lean"] == 5
     assert bridge["author"]["orcid"] == va.EXPECTED_ORCID
-    assert len(bridge["entries"]) == 28
+    solved = {e["archive_id"] for e in bridge["entries"] if e["resolution_class"] == "SOLVED_SUB_CONJECTURE"}
+    assert bridge["epistemic_summary"]["published_open_subconjectures_proved_in_lean"] == len(solved)
     for entry in bridge["entries"]:
         assert entry["grand_atlas_problem_retired"] is False
         assert entry["honesty_boundary"]
     assert (ROOT / "registry" / "SOLVED_AND_ATLAS_BRIDGE.md").exists()
+
+    ledger = json.loads((ROOT / "registry" / "RESULTS_LEDGER.json").read_text(encoding="utf-8"))
+    in_ledger = {r["archive_id"] for r in ledger["results"]}
+    answers = {r["archive_id"] for r in ledger["results"]
+               if r["kind"] == "ANSWERS_PUBLISHED_QUESTION" and r["status"] == "ACTIVE"}
+    # an entry in section A of the ledger must be a solved entry in the bridge ...
+    assert answers <= solved, f"ledger answers a question the bridge does not class as solved: {answers - solved}"
+    # ... and a solved bridge entry that the ledger has audited must have a section-A result
+    assert (solved & in_ledger) <= answers, f"bridge says solved but the audited ledger does not: {(solved & in_ledger) - answers}"
 
 
 def test_readme_table_continuity_and_split_table_mutant_killed() -> None:

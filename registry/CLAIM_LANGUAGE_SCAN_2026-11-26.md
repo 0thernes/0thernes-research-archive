@@ -2,13 +2,12 @@
 
 ## Scope
 
-The local fleet roots were scanned:
+The author's local working copies of the repositories (three folders of clones on one
+workstation, kept by three different AI coding tools) were scanned. This is a local,
+non-reproducible observation: the clones include private and work-in-progress repositories
+that are not part of this archive.
 
-- `Z:\[Vibe Coded (AI)]\ANTIGRAVITY`
-- `Z:\[Vibe Coded (AI)]\CODEX`
-- `Z:\[Vibe Coded (AI)]\CLAUDECODE`
-
-Git itself identified **71 repositories**. Research-facing `README*`, `CLAIMS*`,
+Git itself identified **71 local repositories**. Research-facing `README*`, `CLAIMS*`,
 paper, and Markdown audit/limitation files were searched for claim-language
 patterns including `solved`, `proved`, `conjecture`, `proof of`, `breakthrough`,
 and `open problem`.

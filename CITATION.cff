@@ -13,7 +13,9 @@ version: "2026.11.26"
 date-released: "2026-11-26"
 repository-code: "https://github.com/0thernes/0thernes-research-archive"
 url: "https://0thernes.github.io/0thernes-research-archive/"
-license: "MIT"
+license:
+  - MIT
+  - CC-BY-4.0
 keywords:
   - "formal verification"
   - "Lean 4"

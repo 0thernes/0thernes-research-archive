@@ -205,6 +205,13 @@ def test_evidence_links_are_commit_permalinks() -> None:
     assert f"https://github.com/0thernes/test-repo/blob/{SHA_A}/lean/Main.lean#L3" in line
 
 
+@pytest.mark.parametrize("note", ["the converse is a paper argument", "The converse is a paper argument."])
+def test_evidence_note_is_one_clean_sentence(note: str) -> None:
+    line = bl.evidence_line(_result(evidence_note=note), _index()["0TH-TEST-001"])
+    assert line.endswith("Quot.sound. The converse is a paper argument.")
+    assert ".." not in line
+
+
 def test_withdrawn_result_keeps_its_number() -> None:
     r = _result(status="WITHDRAWN", withdrawn_reason="A gap was found in step 2.")
     ledger = _ledger(r)

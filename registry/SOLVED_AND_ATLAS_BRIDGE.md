@@ -2,7 +2,7 @@
 
 **Audit Date:** `2026-11-26` · **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Mega-Atlas Grand Problems Retired:** **`0 / 1900`**  
-**Peer-Literature Open Sub-Conjectures / Open Questions Proved in Lean 4.35.0:** **5** (+ 1 preprint conjecture with explicit external-citation caveat)
+**Open questions from arXiv preprints answered in Lean 4.35.0:** **5** (+ 1 with a step cited from outside Lean). None of the sources or proofs is peer reviewed; the numbered list with statements and limits is [`RESULTS.md`](../RESULTS.md).
 
 > **Epistemic Boundary:** Strictly 0 of 1,900 grand open problems in Unsolved Problems Mega-Atlas V2 are retired. Five peer-literature open sub-conjectures/open questions (Conjecture 7.7 in 0TH-2026-006, Vinciguerra Sec. 6 in 0TH-2026-010, Muller-Saniga Sec. 6 in 0TH-2026-009 Track 2, Sun-Tao-Xu-Zhang Schur-syzygy rank in 0TH-2026-012, and Tandon arXiv:2608.30273 Open Problem #2 plus 4 odd-cycle Shannon capacity world records in 0TH-2026-016) and one unreviewed-preprint conjecture (Jonah Conjecture E in 0TH-2026-009 Track 1, modulo cited Theorem B4 outside Lean) are completely machine-checked in Lean 4.35.0 within their published scopes, alongside 8 bounded/partial/barrier Tier I suites and 15 embedded Pure Lean 4.35.0 Tier II build invariant suites (1,058 declarations).
 

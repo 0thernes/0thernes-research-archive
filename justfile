@@ -21,6 +21,11 @@ sync:
 ledger:
     python3 scripts/build_ledger.py
 
+# Re-seal data/RELEASE_FREEZE.sha256 (RFC 3161) after changing any frozen registry file
+seal:
+    python3 scripts/stamp_freeze.py
+    python3 scripts/verify_archive.py
+
 ledger-check:
     python3 scripts/build_ledger.py --check
 

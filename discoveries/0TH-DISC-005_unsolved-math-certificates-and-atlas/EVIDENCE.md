@@ -1,6 +1,6 @@
 # Discovery / Law / Pre-Registered Evidence Dossier — `0TH-DISC-005`
 
-**Title:** Unsolved Mathematics Atlas: 900+ Open-Problem Meta-Analyses, Finite Odd-Unit Lock Bridge Collapse Certificate & Collatz Failed-Attempts Atlas  
+**Title:** Unsolved Mathematics Atlas of 106 Open Problems, a Finite Odd-Unit Lock Bridge Collapse Certificate, and a Collatz Failed-Attempts Atlas  
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Epistemic Tier:** `finite_computational_certificate_and_open_problem_atlas`  
 **Domain:** Experimental Mathematics / Number Theory / Research Methodology · **Date:** 2026-07-05
@@ -22,7 +22,7 @@
 
 ## Summary
 
-Structured 900+ open-problem dossier index alongside the finite machine-checkable Odd-Unit Lock Bridge Collapse Certificate (R=16..24, 250k & 1M stress scans) and the Collatz Failed-Attempts Atlas on branch codex/collatz-catalog-qa-routing (47e383d8a7e1).
+Structured dossier index of 106 open problems alongside the finite machine-checkable Odd-Unit Lock Bridge Collapse Certificate (R=16..24, 250k & 1M stress scans) and the Collatz Failed-Attempts Atlas on branch codex/collatz-catalog-qa-routing (47e383d8a7e1).
 
 ## Verification Boundary (Honest Epistemic Scope)
 

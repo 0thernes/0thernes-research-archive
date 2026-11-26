@@ -2,7 +2,7 @@
 # Project manifest for Build Standard for LLMs v1.2.0.
 standard: "1.2.0"
 name: "0thernes-research-archive"
-description: "Canonical public master vault, live ecosystem mirror, and Mega-Atlas V2 bridge of 45 public Lean 4-verified research preprints, build white papers, laws, pre-registered empirical claims, frozen PDFs, SHA-256 + RFC 3161 TSA manifests, and 32 pinned public Git submodules authored by Alexander Stephen Donahue."
+description: "Canonical public master vault, live ecosystem mirror, and Mega-Atlas V2 bridge of the public Lean 4-verified research preprints, build white papers, laws, pre-registered empirical claims, frozen PDFs, SHA-256 + RFC 3161 TSA manifests, and pinned public Git submodules authored by Alexander Stephen Donahue."
 owner: "Alexander S. Donahue (0thernes)"
 year: "2026"
 project_type: research
