@@ -10,7 +10,7 @@
 | Field | Value |
 |---|---|
 | Source Repository | https://github.com/0thernes/xiaomi-17t-pro-lab |
-| Pinned Git Submodule | `repos/xiaomi-17t-pro-lab` @ `1d8a87126258fa7691715ed753ee7a4f0609cc28` |
+| Pinned Git Submodule | `repos/xiaomi-17t-pro-lab` @ `f1da68b78e749a194b993bc8ad20f54016f610a0` |
 | Archived Artifact | `builds/0TH-BUILD-012_xiaomi-17t-pro-lab/Donahue_2026_Xiaomi_17T_Pro_Lab.pdf` (from `dist/Donahue_2026_Xiaomi_17T_Pro_Lab.pdf`) |
 | Artifact SHA-256 | `95516faf4e6edd465ada92d89a57fdc752b11fc4b57cd1b08c091a1c814c8720` |
 | Archived Artifact | `builds/0TH-BUILD-012_xiaomi-17t-pro-lab/lean4-audit.txt` (from `results/lean4-audit.txt`) |
@@ -18,21 +18,21 @@
 | Archived Artifact | `builds/0TH-BUILD-012_xiaomi-17t-pro-lab/citation-audit.json` (from `results/citation-audit.json`) |
 | Artifact SHA-256 | `77a1883b643f0f900942ca314d76d9f64ff162988754472a79b8bb208e87a6a0` |
 | Archived Artifact | `builds/0TH-BUILD-012_xiaomi-17t-pro-lab/provenance-receipts.json` (from `proofs/provenance-receipts.json`) |
-| Artifact SHA-256 | `351f4598590fdaad43c4e315b696b6171dda4cc580806ab973d01b13f4368351` |
+| Artifact SHA-256 | `c5775e48e8d0e23879f69ce1634efca924556c5381774e5a9b5a5fd0420d7308` |
 | Archived Artifact | `builds/0TH-BUILD-012_xiaomi-17t-pro-lab/VERIFICATION.md` (from `VERIFICATION.md`) |
 | Artifact SHA-256 | `5f192d7267889db4e411e89c02caa015453d11db4e22ea8079444aeeec898896` |
 | Archived Artifact | `builds/0TH-BUILD-012_xiaomi-17t-pro-lab/CLAIMS.md` (from `CLAIMS.md`) |
-| Artifact SHA-256 | `f7d715d4c32900fe8eca4f9416ca077c57e1af35f8f53e11c748f14d65cbb080` |
+| Artifact SHA-256 | `6e2846caf50cb68efb27eca3a85a91ce9fbeb0d91d77168a7b996354410b70b1` |
 | Archived Artifact | `builds/0TH-BUILD-012_xiaomi-17t-pro-lab/mega-atlas-cross-reference.md` (from `docs/mega-atlas-cross-reference.md`) |
-| Artifact SHA-256 | `d038aa6f349af5adc6e82814d67bf0309daddccf8908263e2ff691bac38cbe00` |
+| Artifact SHA-256 | `67b8ca3c26934730c05d4212e4251c629c368f2f6052045ccb58b5d94eb7ac72` |
 | Archived Artifact | `builds/0TH-BUILD-012_xiaomi-17t-pro-lab/2026-11-26-round2-3-cycle-hardening-audit.md` (from `docs/reviews/2026-11-26-round2-3-cycle-hardening-audit.md`) |
-| Artifact SHA-256 | `171ead3f2daf565fde376df7eaa2ffe1357917382d4fb0623f27ea8a429d5c71` |
+| Artifact SHA-256 | `2fc29d6c60ab1a314823e653d5b217a6b439d358b42a202779fdfad20aee04be` |
 | Archived Artifact | `builds/0TH-BUILD-012_xiaomi-17t-pro-lab/README.md` (from `README.md`) |
-| Artifact SHA-256 | `9a41e8e0d561df2702d7c4daec243bee9563ff0388fa29014043e75efb30e668` |
+| Artifact SHA-256 | `c502aed0c988b1eb916ac4e9747cb256418a23bda57c6bc2499f0c1b33d45aeb` |
 
 ## Summary
 
-Zero-build interactive silicon-to-quantum engineering workbench and zero-warning AMS-LaTeX white paper (plainurl clickable DOIs, 0 overfull/underfull hboxes) modeling the Xiaomi 17T Pro and MediaTek Dimensity 9500 across 19 interactive routes + strict-CSP zero-404 Blueprint, backed by 75 constructive Pure Lean 4.35.0 Palomar declarations (ZERO Classical.choice; hardware floorplan & roofline, EUV Rayleigh/DOF/shot-noise, Crank-Nicolson Cayley unitarity & WKB/Dirac transport, 2D thermal FDTD CFL discrete maximum principle, CHSH/Mermin-3/Peres-Mermin contextuality, 2x2 unimodular Bragg transfer matrices, 2/4-point DFT Parseval energy conservation, 9-shard A24 byte conservation, and 7 AdversarialTests) verified by 6 independent kernels + live negative rejection, a 54-check 60-digit Decimal/Fraction oracle (max rel err 2.159e-14), 8/8 killed mutants (100%), 50/50 3-OS Node tests, 9/9 Playwright CSP/E2E specs, 12/12 live Crossref/arXiv non-retracted DOIs, dual DigiCert RFC 3161 (.tsr) + Bitcoin OpenTimestamps (.ots) proofs, Software Heritage save #2696514, 100.0% (82/82, 35/35 Core) Build Standard v1.2.0 compliance (0 ruff/mypy/gitleaks findings), and an honest 0/1,900 Mega-Atlas V2.6.0 cross-reference.
+Zero-build interactive silicon-to-quantum engineering workbench and zero-warning AMS-LaTeX white paper (plainurl clickable DOIs, 0 overfull/underfull hboxes) modeling the Xiaomi 17T Pro and MediaTek Dimensity 9500 across 19 interactive routes + strict-CSP zero-404 Blueprint, backed by 75 constructive Pure Lean 4.35.0 Palomar declarations (ZERO Classical.choice; hardware floorplan & roofline, EUV Rayleigh/DOF/shot-noise, Crank-Nicolson Cayley unitarity & WKB/Dirac transport, 2D thermal FDTD CFL discrete maximum principle, CHSH/Mermin-3/Peres-Mermin contextuality, 2x2 unimodular Bragg transfer matrices, 2/4-point DFT Parseval energy conservation, 9-shard A24 byte conservation, and 7 AdversarialTests) verified by 6 independent kernels + live negative rejection, a 54-check 60-digit Decimal/Fraction oracle (max rel err 2.159e-14), 8/8 killed mutants (100%), 50/50 3-OS Node tests, 9/9 Playwright CSP/E2E specs, 12/12 live Crossref/arXiv non-retracted DOIs, dual DigiCert RFC 3161 (.tsr) + Bitcoin OpenTimestamps (.ots) proofs, permanent Software Heritage snapshot swh:1:snp:06ad26ff598cf7d592768bdef08d9de7616cd4e0, 100.0% (82/82, 35/35 Core) Build Standard v1.2.0 compliance (0 ruff/mypy/gitleaks findings), and an honest 0/1,900 Mega-Atlas V2.6.0 cross-reference.
 
 ## Embedded Lean 4 Proof Suite Audit
 
@@ -41,7 +41,7 @@ Zero-build interactive silicon-to-quantum engineering workbench and zero-warning
 - **Audited Theorems (`#print axioms`):** 75
 - **Entry Point:** `lean/XiaomiLabProofs.lean`
 - **Permitted Axioms:** `propext, Quot.sound`
-- **Live Audit Status:** Ubuntu CI GREEN (run #45804914051, Sigstore Rekor 4124262738, Release v3.1.0 run #45804921347 Rekor 4124220117); 75/75 constructive declarations (28 zero-axiom, 47 [propext, Quot.sound], ZERO Classical.choice), 10 isolated Palomar comparator targets, zero sorry outside Challenge.lean, leanchecker --fresh PASS, all 6 independent kernels passed via lake comparator --paranoid + live negative kernel & comparator rejection PASS
+- **Live Audit Status:** Ubuntu CI GREEN (run #45821462528 & v3.1.0 tag run #45804914051 Rekor 4124262738, Release v3.1.0 run #45804921347 Rekor 4124220117, permanent SWH swh:1:snp:06ad26ff598cf7d592768bdef08d9de7616cd4e0); 75/75 constructive declarations (28 zero-axiom, 47 [propext, Quot.sound], ZERO Classical.choice), 10 isolated Palomar comparator targets, zero sorry outside Challenge.lean, leanchecker --fresh PASS, all 6 independent kernels passed via lake comparator --paranoid + live negative kernel & comparator rejection PASS
 
 ## Verification Boundary
 
