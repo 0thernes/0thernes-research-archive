@@ -67,3 +67,6 @@
 [submodule "repos/asmodensius-native"]
 	path = repos/asmodensius-native
 	url = https://github.com/0thernes/asmodensius-native.git
+[submodule "repos/monodromia"]
+	path = repos/monodromia
+	url = https://github.com/0thernes/monodromia.git
