@@ -1,6 +1,6 @@
 # 0thernes Research Archive (2026.11.26)
 
-> Canonical public master vault, live ecosystem mirror, and Mega-Atlas V2 cross-reference bridge for Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA; ORCID 0009-0006-8168-9648). Tracks 40 public research entries (16 Tier I preprints, 12 Tier II build papers & Lean 4 suites, 12 Tier III laws/discoveries/atlases) with byte-exact SHA-256 provenance and zero private repository leakage.
+> Canonical public master vault, live ecosystem mirror, and Mega-Atlas V2 cross-reference bridge for Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA; ORCID 0009-0006-8168-9648). Tracks 42 public research entries (16 Tier I preprints, 14 Tier II build papers & Lean 4 suites, 12 Tier III laws/discoveries/atlases) with byte-exact SHA-256 provenance and zero private repository leakage.
 
 ## Key Registries & Machine-Readable Endpoints
 - [Tier I Preprints (JSON)](registry/PAPERS.json) · [Markdown](registry/PAPERS.md)
