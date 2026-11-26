@@ -65,7 +65,7 @@ jobs:
       - name: Build Standard v1.2.0 repo audit
         run: bash scripts/audit-repo.sh .
       - name: Secret scan (gitleaks, report-only)
-          uses: gitleaks/gitleaks-action@v3
+        uses: gitleaks/gitleaks-action@v3
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
