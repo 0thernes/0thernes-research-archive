@@ -386,7 +386,7 @@ def render_bridge_md(bridge: dict[str, Any]) -> str:
         "# Solved Sub-Conjectures & Mega-Atlas V2 Cross-Reference Bridge",
         "",
         f"**Audit Date:** `{bridge['audit_date']}` · **Author:** {bridge['author']['full_name']} ({bridge['author']['affiliation']}, ORCID [`{bridge['author']['orcid']}`](https://orcid.org/{bridge['author']['orcid']}))  ",
-        f"**Mega-Atlas Grand Problems Retired:** **`{bridge['grand_problems_retired']} / {bridge['mega_atlas_total_problems']}`**  ",
+        f"**Mega-Atlas grand problems retired by this work:** **`{bridge['grand_problems_retired']} / {bridge['mega_atlas_total_problems']}`**  ",
         f"**Open questions from arXiv preprints answered in Lean 4.35.0:** **{es['published_open_subconjectures_proved_in_lean']}** (+ {es['preprint_conjectures_proved_with_external_citation_caveat']} with a step cited from outside Lean). None of the sources or proofs is peer reviewed; the numbered list with statements and limits is [`RESULTS.md`](../RESULTS.md).",
         "",
         f"> **Epistemic Boundary:** {es['statement']}",
@@ -433,7 +433,7 @@ def render_readme_live_block(
         [
             BLOCK_START,
             f"> **Live Canonical Hub Mirror (`{mirror['synced_utc']}`):** Tracking **{total_entries} public research entries** ({papers_count} Tier I preprints · {builds_count} Tier II builds · {discs_count} Tier III laws/discoveries/atlases) across **{len(repos)} unique public repositories** and **{submodules_count} pinned Git submodules** (`{exact}` exact pin matches · `{ahead}` active upstream ahead of release pin · `{archived}` archived historical snapshots).  ",
-            f"> **Mega-Atlas V2 Cross-Check:** **`{bridge['grand_problems_retired']} / {bridge['mega_atlas_total_problems']}` grand open problems retired** · **{answered} open {question_word} from published preprints answered in Lean 4.35.0** (none peer reviewed; statements and limits in [`RESULTS.md`](RESULTS.md) section A). Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).",
+            f"> **Mega-Atlas V2 Cross-Check:** **`{bridge['grand_problems_retired']} / {bridge['mega_atlas_total_problems']}` grand open problems retired by this work** · **{answered} open {question_word} from published preprints answered in Lean 4.35.0** (none peer reviewed; statements and limits in [`RESULTS.md`](RESULTS.md) section A). Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).",
             BLOCK_END,
         ]
     )

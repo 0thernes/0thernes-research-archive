@@ -28,7 +28,7 @@
     "entry_point": "lean/ContextualityTensor.lean",
     "axiom_audit_file": "lean/Verification.lean"
   },
-  "ci_run_url": "https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42751584064",
+  "ci_run_url": "https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42751584064 (CI on de48ed9, an ancestor of the pin f7a1e6e; no CI run exists on the pin; if the field must stay a bare URL, say this in verification_boundary)",
   "preservation": {
     "software_heritage": "swh:1:rev:de48ed9002e930825f1cf5f140c8dc8cbfdc1ea0",
     "wayback_machine": "https://web.archive.org/web/20261110040209/https://0thernes.github.io/contextuality-tensor-lab/paper/contextuality-tensor.pdf",

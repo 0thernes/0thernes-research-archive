@@ -1,6 +1,6 @@
 # Evidence & Falsification Dossier — `0TH-2026-010`
 
-**Title:** Positive-Characteristic Dichotomy and Optimal Three-Register Exponents in Passive Catalytic Register Programs  
+**Title:** Positive-Characteristic Dichotomy and Improved Three-Register Exponents in Passive Catalytic Register Programs (the frozen PDF title says 'Optimal'; optimality is not proved)  
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Computational Complexity / Algebraic Complexity / Formal Verification  
 **Version / Date:** `v1.0.1` (2026-11-24)  

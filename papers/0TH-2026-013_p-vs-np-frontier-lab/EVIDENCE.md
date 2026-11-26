@@ -27,7 +27,7 @@ Machine-checks 25 zero-Mathlib Lean 4.35.0 declarations (14 statements C1-C14 (t
 
 ## Lean 4 Formal Verification & Axiom Allowlist
 
-- **Framework:** Lean 4.35.0 (zero Mathlib, 17 module files / 8,250+ lines, 25 audited declarations: 14 headline statements C1-C14 + prove_all + 5 concrete NonVacuity witnesses NV1-NV5 + 5 AdversarialTests sharpness refutations ADV1-ADV5 [2 strictly zero-axiom], 15 Palomar comparator targets, zero sorry, zero native_decide, autoImplicit = false; accepted by six kernel checks (five checker implementations) via lake check --paranoid & lake comparator --paranoid on Ubuntu CI, plus a negative elaboration test)
+- **Framework:** Lean 4.35.0 (zero Mathlib, 17 module files / 8,250+ lines, 25 audited declarations: 14 headline statements C1-C14 + prove_all + 5 concrete NonVacuity witnesses NV1-NV5 + 5 AdversarialTests sharpness refutations ADV1-ADV5 [2 strictly zero-axiom], 15 Palomar comparator targets, zero sorry outside the 15 statement stubs in PalomarChallenge.lean, zero native_decide, autoImplicit = false; accepted by six kernel checks (five checker implementations) via lake check --paranoid & lake comparator --paranoid on Ubuntu CI, plus a negative elaboration test)
 - **Library Entry Point:** `lean/Solution.lean`
 - **Primary Axiom Audit Script:** `lean/VerifyAxioms.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
@@ -44,5 +44,5 @@ To verify or attempt to falsify this paper from scratch:
 ```bash
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
-cd repos/p-vs-np-frontier-lab && python -m pytest -v tests/test_all.py && python scripts/check_readme_axioms.py && python scripts/check_citations.py --offline && cd lean && lake build && lake build PalomarChallenge && lake env lean VerifyAxioms.lean && lake comparator --config comparator.json --paranoid
+cd repos/p-vs-np-frontier-lab && python -m pytest -v tests/test_all.py && python scripts/check_readme_axioms.py && python scripts/check_citations.py && cd lean && lake build && lake build PalomarChallenge && lake env lean VerifyAxioms.lean   # Linux only (bubblewrap): lake comparator --config comparator.json --paranoid
 ```

@@ -140,6 +140,30 @@ SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 MAX_STATEMENT_WORDS = 75
 MAX_TITLE_WORDS = 20
 
+# Bridge resolution class allowed for an entry, decided by the strongest kind among its active
+# ledger results (order of KINDS). BARRIER_FORMALIZATION is a named kind of known-results row.
+BRIDGE_CLASS: dict[str, tuple[str, ...]] = {
+    "ANSWERS_PUBLISHED_QUESTION": ("SOLVED_SUB_CONJECTURE",),
+    "NEW_THEOREM": ("NEW_THEOREM_SUITE",),
+    "BOUNDED_CASE": ("PARTIAL_BOUNDED_CASE",),
+    "REFUTATION": ("REFUTATION",),
+    "KNOWN_RESULT_FORMALIZED": ("KNOWN_RESULTS_FORMALIZED", "BARRIER_FORMALIZATION"),
+    "ENGINEERING_INVARIANTS": ("FORMAL_INVARIANT_SUITE",),
+}
+
+
+def expected_bridge_classes(ledger: dict[str, Any]) -> dict[str, tuple[str, ...]]:
+    """Allowed bridge classes per archive id, from the strongest kind of its active results."""
+    order = list(KINDS)
+    best: dict[str, str] = {}
+    for r in ledger.get("results", []):
+        if r.get("status", "ACTIVE") != "ACTIVE" or r.get("kind") not in KINDS:
+            continue
+        aid, kind = r["archive_id"], r["kind"]
+        if aid not in best or order.index(kind) < order.index(best[aid]):
+            best[aid] = kind
+    return {aid: BRIDGE_CLASS[kind] for aid, kind in best.items()}
+
 
 def write_utf8_lf(path: Path, text: str) -> None:
     path.write_bytes(text.replace("\r\n", "\n").encode("utf-8"))

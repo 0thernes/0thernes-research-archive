@@ -44,5 +44,5 @@ To verify or attempt to falsify this paper from scratch:
 ```bash
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
-cd repos/multinomial-tv-conjecture/lean && lake exe cache get && lake build && lake env lean VerifyAxioms.lean && lake exe runLinter MultinomialTVConjecture && lake comparator --config comparator.json --paranoid && cd .. && python scripts/verify_conjecture.py && python scripts/stamp_timestamps.py --verify && pytest -v tests/
+cd repos/multinomial-tv-conjecture/lean && lake exe cache get && lake build && lake env lean VerifyAxioms.lean && lake exe runLinter MultinomialTVConjecture && cd .. && python scripts/verify_conjecture.py && python scripts/stamp_timestamps.py --verify && pytest -v tests/   # Linux only (bubblewrap): cd lean && lake comparator --config comparator.json --paranoid
 ```

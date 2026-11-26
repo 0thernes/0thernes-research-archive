@@ -25,16 +25,16 @@ GR-exact Schwarzschild/Kerr geodesic simulation lab with an 8-theorem zero-axiom
 
 ## Embedded Lean 4 Proof Suite Audit
 
-- **Framework:** Pure Lean 4.35.0 Core (zero Mathlib, zero axioms)
-- **Lean Modules / Lines:** 1 files / 34 lines
-- **Audited Theorems (`#print axioms`):** 8
+- **Framework:** No Lean at the pinned commit 050455db. ClassicalGR.lean (8 zero-axiom rfl identities between literals) exists only on the unmerged branch pr9 and is not counted.
+- **Lean Modules / Lines:** 0 files / 0 lines
+- **Audited Theorems (`#print axioms`):** 0
 - **Entry Point:** `builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean`
-- **Permitted Axioms:** `NONE (zero axioms)`
-- **Live Audit Status:** Live lean 4.35.0 EXIT 0; all 8 rfl theorems depend on ZERO axioms (does not depend on any axioms)
+- **Permitted Axioms:** `N/A`
+- **Live Audit Status:** Local, unlogged run only: lean 4.35.0 exit 0 and 8 rfl theorems with no axioms; no CI runs this file and no axiom-audit transcript is archived
 
 ## Verification Boundary
 
-ClassicalGR.lean certifies exact rational Schwarzschild algebraic limits by pure kernel definitional reduction (rfl, zero axioms); it explicitly disclaims proving the full Einstein field equations. Kerr shadow asymmetry anchors are closed-form analytic_classical checks.
+ClassicalGR.lean (8 rfl identities, zero axioms) is not in the pinned commit 050455db; it exists only on the unmerged branch pr9, so nothing at the pin is machine-checked; it explicitly disclaims proving the full Einstein field equations. Kerr shadow asymmetry anchors are closed-form analytic_classical checks.
 
 ## Independent Reproduction & Falsification Protocol
 

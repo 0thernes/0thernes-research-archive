@@ -270,3 +270,25 @@ def test_property_table_cells_never_break_the_table(text: str) -> None:
         if ch == "|":
             assert backslashes % 2 == 1, f"unescaped pipe in {out!r}"
         backslashes = backslashes + 1 if ch == "\\" else 0
+
+
+def test_bridge_class_follows_strongest_active_kind() -> None:
+    ledger = {"results": [
+        {"archive_id": "X", "kind": "KNOWN_RESULT_FORMALIZED", "status": "ACTIVE"},
+        {"archive_id": "X", "kind": "NEW_THEOREM", "status": "ACTIVE"},
+        {"archive_id": "Y", "kind": "ENGINEERING_INVARIANTS", "status": "ACTIVE"},
+        {"archive_id": "Z", "kind": "ANSWERS_PUBLISHED_QUESTION", "status": "WITHDRAWN"},
+    ]}
+    expected = bl.expected_bridge_classes(ledger)
+    assert expected["X"] == ("NEW_THEOREM_SUITE",)
+    assert expected["Y"] == ("FORMAL_INVARIANT_SUITE",)
+    assert "Z" not in expected
+
+
+def test_every_bridge_row_matches_its_ledger_kind() -> None:
+    ledger = json.loads((ROOT / "registry" / "RESULTS_LEDGER.json").read_text(encoding="utf-8"))
+    bridge = json.loads((ROOT / "registry" / "SOLVED_AND_ATLAS_BRIDGE.json").read_text(encoding="utf-8"))
+    expected = bl.expected_bridge_classes(ledger)
+    for row in bridge["entries"]:
+        assert row["archive_id"] in expected, f"{row['archive_id']} has a bridge row but no active result"
+        assert row["resolution_class"] in expected[row["archive_id"]], row["archive_id"]

@@ -21,10 +21,10 @@ Complete structural index and audit checklist for **0thernes Research Archive (`
 
 | File | Role | Audit Status |
 |---|---|---|
-| [`README.md`](README.md) | Canonical hub overview, live mirror status block, 3-tier tables (**45 entries** / **35 submodules**), Quickstart & Usage | Audited Round 1 & Round 2 (`H-19` split Tier II table fixed, `H-20` counts enforced in CI) |
+| [`README.md`](README.md) | Canonical hub overview, live mirror status block, 3-tier tables (**48 entries** / **35 submodules**), Quickstart & Usage | Audited Round 1 & Round 2 (`H-19` split Tier II table fixed, `H-20` counts enforced in CI) |
 | [`VERSION`](VERSION) / [`CITATION.cff`](CITATION.cff) / [`CHANGELOG.md`](CHANGELOG.md) | Single-source release versioning (`2026.11.26`) & academic citation | Audited Rounds 1–2 (enforced by `test_single_version_consistency`) |
 | [`LICENSE`](LICENSE) / [`NOTICE`](NOTICE) / [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) | Dual MIT / CC-BY-4.0 notice, clean Independent Researcher identity (zero unformed LLC) | Audited Rounds 1–2 |
-| [`CLAIMS.md`](CLAIMS.md) / [`LIMITATIONS.md`](LIMITATIONS.md) / [`REPLICATION.md`](REPLICATION.md) / [`ROADMAP.md`](ROADMAP.md) | Claims C1–C5, Real-vs-Metaphor, reproducible protocol, roadmap | Audited Rounds 1–2 (synced to 45 entries / 35 submodules / 5 sub-conjectures / RFC 3161 TSA) |
+| [`CLAIMS.md`](CLAIMS.md) / [`LIMITATIONS.md`](LIMITATIONS.md) / [`REPLICATION.md`](REPLICATION.md) / [`ROADMAP.md`](ROADMAP.md) | Claims C1–C6, Real-vs-Metaphor, reproducible protocol, roadmap | Audited Rounds 1–2 (synced to 48 entries / 35 submodules / 3 answered preprint questions (RESULTS.md section A) / RFC 3161 TSA) |
 | [`SECURITY.md`](SECURITY.md) / [`CONTRIBUTING.md`](CONTRIBUTING.md) / [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) / [`SUPPORT.md`](SUPPORT.md) | Community & vulnerability governance | Audited Rounds 1–2 |
 | [`AGENTS.md`](AGENTS.md) / [`CLAUDE.md`](CLAUDE.md) / [`GEMINI.md`](GEMINI.md) / [`llms.txt`](llms.txt) / [`llms-full.txt`](llms-full.txt) | AI coding-agent instruction & context stack (A32) | Regenerated deterministically via `scripts/generate_llms_full.py` |
 | [`repo.yaml`](repo.yaml) / [`repo-standard.schema.json`](repo-standard.schema.json) | Build Standard v1.2.0 Draft 2020-12 validated project manifest | Validated in pytest & CI |
@@ -33,10 +33,10 @@ Complete structural index and audit checklist for **0thernes Research Archive (`
 
 ## 2. Canonical Registries, Bridge & Live Mirror (`registry/`)
 
-- [`registry/PAPERS.json`](registry/PAPERS.json) & [`registry/PAPERS.md`](registry/PAPERS.md) — **16 Tier I standalone preprints** (`0TH-2026-001` through `0TH-2026-016`, with `001/002/003/005` clearly marked as archived historical snapshots consolidated into `0TH-2026-009`).
-- [`registry/BUILD_PAPERS.json`](registry/BUILD_PAPERS.json) & [`registry/BUILD_PAPERS.md`](registry/BUILD_PAPERS.md) — **17 Tier II public builds & embedded Pure Lean 4.35.0 suites** (`0TH-BUILD-001` through `0TH-BUILD-017`, **1,058 audited Pure Lean 4.35.0 declarations** across 15 Lean-bearing builds).
+- [`registry/PAPERS.json`](registry/PAPERS.json) & [`registry/PAPERS.md`](registry/PAPERS.md) — **19 Tier I standalone preprints** (`0TH-2026-001` through `0TH-2026-019`, with `001/002/003/005` clearly marked as archived historical snapshots consolidated into `0TH-2026-009`).
+- [`registry/BUILD_PAPERS.json`](registry/BUILD_PAPERS.json) & [`registry/BUILD_PAPERS.md`](registry/BUILD_PAPERS.md) — **17 Tier II public builds & embedded Pure Lean 4.35.0 suites** (`0TH-BUILD-001` through `0TH-BUILD-017`, **1,050 audited Pure Lean 4.35.0 declarations** across 14 builds with Lean at the pinned commit (the 8 `rfl` theorems of `0TH-BUILD-006` are only on its unmerged branch `pr9`)).
 - [`registry/LAWS_AND_DISCOVERIES.json`](registry/LAWS_AND_DISCOVERIES.json) & [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_DISCOVERIES.md) — **12 Tier III public laws, pre-registered empirical claims, discoveries, synthesis dossiers & open-problem atlases** (`0TH-DISC-001` through `0TH-DISC-012`).
-- [`registry/SOLVED_AND_ATLAS_BRIDGE.json`](registry/SOLVED_AND_ATLAS_BRIDGE.json) & [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) — **26 version-checked rows** cross-referencing all 1,900 Mega-Atlas V2 problems (`0 / 1,900` grand problems retired; **5** peer-literature open sub-conjectures/questions proved in Lean 4.35.0).
+- [`registry/SOLVED_AND_ATLAS_BRIDGE.json`](registry/SOLVED_AND_ATLAS_BRIDGE.json) & [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) — **28 version-checked rows** cross-referencing all 1,900 Mega-Atlas V2 problems (`0 / 1,900` grand problems retired; **3** results answer questions posed as open in unreviewed preprints, RESULTS.md section A).
 - [`registry/LIVE_ECOSYSTEM_MIRROR.json`](registry/LIVE_ECOSYSTEM_MIRROR.json) & [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) — Live upstream commit, release, CI, and Pages status across all **41 unique tracked public non-fork `0thernes/*` repositories**.
 
 ## 3. Automation, Verification, Live Sync & Portal Scripts (`scripts/`)
@@ -61,7 +61,7 @@ Complete structural index and audit checklist for **0thernes Research Archive (`
 
 ## 6. Frozen Cryptographic Archives (`papers/`, `builds/`, `discoveries/`) & Submodules (`repos/`)
 
-- `papers/` — **16** directories (`0TH-2026-001`..`0TH-2026-016`), each with frozen PDF(s), `METADATA.json`, `EVIDENCE.md`.
+- `papers/` — **19** directories (`0TH-2026-001`..`0TH-2026-019`), each with frozen PDF(s), `METADATA.json`, `EVIDENCE.md`.
 - `builds/` — **17** directories (`0TH-BUILD-001`..`0TH-BUILD-017`), including updated [`builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md`](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md).
 - `discoveries/` — **12** directories (`0TH-DISC-001`..`0TH-DISC-012`), all `< 5 MB` per file.
 - `repos/` — **35** pinned public Git submodules (`160000` gitlinks verified against registry JSONs).
@@ -76,5 +76,5 @@ Complete structural index and audit checklist for **0thernes Research Archive (`
 
 ## 8. Companion Hardened Releases
 
-- [`0thernes/p-vs-np-frontier-lab`](https://github.com/0thernes/p-vs-np-frontier-lab) (`v1.2.0`, `0TH-2026-013`) — Gold Standard Playbook v1.3 release (25 audited Lean 4.35.0 declarations incl. 5 `NonVacuity` + 5 `AdversarialTests`, 15 Palomar targets across 6 kernels, mandatory live negative Lean kernel rejection CI gate, 27/27 live verified citations / 0 retractions, DigiCert RFC 3161 `.tsr`, 0 `ruff`/0 `mypy`, interactive WCAG Blueprint, 100.0% Build Standard v1.2.0).
+- [`0thernes/p-vs-np-frontier-lab`](https://github.com/0thernes/p-vs-np-frontier-lab) (`v1.2.0`, `0TH-2026-013`) — Gold Standard Playbook v1.3 release (25 audited Lean 4.35.0 declarations incl. 5 `NonVacuity` + 5 `AdversarialTests`, 15 Palomar targets across 6 kernels, mandatory live negative Lean kernel rejection CI gate, 27 bibliography entries (25 with Crossref DOIs, 2 print records), 0 retractions; 3 DOIs (BoyarPeralta2008, PichSanthanam2023, Fischer1975) resolve to unrelated papers, DigiCert RFC 3161 `.tsr`, 0 `ruff`/0 `mypy`, interactive WCAG Blueprint, 100.0% Build Standard v1.2.0).
 - [`0thernes/unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) (`0TH-DISC-006`) — Linked to canonical hub in `README.md` with `.github/workflows/notify-archive.yml` dispatch hook.

@@ -1,6 +1,6 @@
 # Build White Paper & Proof Evidence Dossier — `0TH-BUILD-005`
 
-**Title:** Cosmogonic Quantum Mechalogodrom (CQM): Artificial Life Verification Audit & NHSI Research Papers Ledger  
+**Title:** Cosmogonic Quantum Mechalogodrom (CQM): Artificial-Life Source-Review Catalog  
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Artificial Life / Synthetic Cognition / Verification Audit  
 **Version / Date:** `v0.23.0+63` (2026-10-21)
@@ -20,7 +20,7 @@ Source-review catalog PDF (40 pp., 21 October 2026) of 150 external artificial-l
 
 ## Embedded Lean 4 Proof Suite Audit
 
-- **Framework:** Technical verification audit PDF (no Lean proofs)
+- **Framework:** Source-review catalog PDF (no Lean proofs, no formal verification)
 - **Lean Modules / Lines:** 0 files / 0 lines
 - **Audited Theorems (`#print axioms`):** 0
 - **Entry Point:** `N/A`

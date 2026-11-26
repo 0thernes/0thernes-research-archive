@@ -1,14 +1,14 @@
 # Archive Architecture (`docs/architecture.md`)
 
-`0thernes-research-archive` is the **single canonical public master hub** organizing all public scientific outputs authored by Alexander Stephen Donahue (`ORCID 0009-0006-8168-9648`) into **three strictly separated epistemic tiers** (**48 entries**: 19 Tier I + 17 Tier II + 12 Tier III), backed by **35 pinned public Git submodules** under `repos/`, a **26-row Solved Sub-Conjectures & Mega-Atlas V2 Bridge**, an **hourly-refreshed Upstream Ecosystem Mirror** (the current count is generated in `registry/LIVE_ECOSYSTEM_MIRROR.json`), a unified SHA-256 integrity manifest (`CHECKSUMS.sha256` & `data/MANIFEST.sha256`), and an immutable DigiCert RFC 3161 TSA–sealed frozen release manifest (`data/RELEASE_FREEZE.sha256` + `data/RELEASE_FREEZE.sha256.tsr`).
+`0thernes-research-archive` is the **single canonical public master hub** organizing all public scientific outputs authored by Alexander Stephen Donahue (`ORCID 0009-0006-8168-9648`) into **three strictly separated epistemic tiers** (**48 entries**: 19 Tier I + 17 Tier II + 12 Tier III), backed by **35 pinned public Git submodules** under `repos/`, a **28-row Solved Sub-Conjectures & Mega-Atlas V2 Bridge**, an **hourly-refreshed Upstream Ecosystem Mirror** (the current count is generated in `registry/LIVE_ECOSYSTEM_MIRROR.json`), a unified SHA-256 integrity manifest (`CHECKSUMS.sha256` & `data/MANIFEST.sha256`), and an immutable DigiCert RFC 3161 TSA–sealed frozen release manifest (`data/RELEASE_FREEZE.sha256` + `data/RELEASE_FREEZE.sha256.tsr`).
 
 ```mermaid
 flowchart LR
-    UP["Upstream Public 0thernes/* Repos (40 tracked)"] -->|repository_dispatch / 2h cron| LS["scripts/live_sync.py"]
-    R1["registry/PAPERS.json<br/>Tier I: 18 Standalone Preprints"] --> V["scripts/verify_archive.py"]
-    R2["registry/BUILD_PAPERS.json<br/>Tier II: 17 Builds · 1,058 Lean Decls"] --> V
+    UP["Upstream Public 0thernes/* Repos (41 tracked)"] -->|hourly cron; repository_dispatch optional, not configured| LS["scripts/live_sync.py"]
+    R1["registry/PAPERS.json<br/>Tier I: 19 Standalone Preprints"] --> V["scripts/verify_archive.py"]
+    R2["registry/BUILD_PAPERS.json<br/>Tier II: 17 Builds · 1,050 Lean Decls at pins"] --> V
     R3["registry/LAWS_AND_DISCOVERIES.json<br/>Tier III: 12 Laws, Claims & Atlases"] --> V
-    BR["registry/SOLVED_AND_ATLAS_BRIDGE.json<br/>0/1900 Grand · 5 Peer Sub-Conjectures"] --> V
+    BR["registry/SOLVED_AND_ATLAS_BRIDGE.json<br/>0/1900 Grand · 3 Answered Preprint Questions"] --> V
     LS --> LM["registry/LIVE_ECOSYSTEM_MIRROR.json/.md"]
     LM --> V
     S["repos/* (Pinned Public Submodules)"] --> V
@@ -22,6 +22,6 @@ flowchart LR
 
 1. **Single-script deterministic derivation (`scripts/verify_archive.py --sync`):** Regenerates all `METADATA.json`, `EVIDENCE.md`, `registry/*.md`, `CHECKSUMS.sha256`, `data/MANIFEST.sha256`, and `data/RELEASE_FREEZE.sha256` directly from the canonical JSON registries (verified idempotent by B14 tests).
 2. **Scheduled upstream mirror (`scripts/live_sync.py` + `.github/workflows/live-sync.yml`, hourly):** Tracks live `main` HEADs, latest releases, and CI status across every tracked public non-fork `0thernes/*` repository (count in `registry/LIVE_ECOSYSTEM_MIRROR.json`) without disturbing immutable release-pinned frozen PDFs or invalidating `data/RELEASE_FREEZE.sha256.tsr`.
-3. **Exact submodule commit pinning, table continuity & A24 size caps:** Every `pinned_commit` in `PAPERS.json` and `BUILD_PAPERS.json` matches `git ls-files --stage repos` (`34` submodules), `README.md` registry tables cannot be split by blank lines, `README.md` and `LIVE_ECOSYSTEM_MIRROR.json` counts match exact registry totals, `SOLVED_AND_ATLAS_BRIDGE.json` enforces exact version parity against the registries, and every archived file is strictly `< 5 MB`.
+3. **Exact submodule commit pinning, table continuity & A24 size caps:** Every `pinned_commit` in `PAPERS.json` and `BUILD_PAPERS.json` matches `git ls-files --stage repos` (`35` submodules), `README.md` registry tables cannot be split by blank lines, `README.md` and `LIVE_ECOSYSTEM_MIRROR.json` counts match exact registry totals, `SOLVED_AND_ATLAS_BRIDGE.json` enforces exact version parity against the registries, and every archived file is strictly `< 5 MB`.
 4. **Strict axiom, identity, link, TSA & ORCID enforcement:** Every entry carries ORCID `0009-0006-8168-9648`, zero unformed `"0thernes LLC"` assertions, an explicit `verification_boundary`, Lean axiom allowlists strictly within `[propext, Classical.choice, Quot.sound]`, valid DigiCert RFC 3161 TSA digest binding, and zero broken relative markdown links.
 5. **Public-only privacy firewall:** Zero private repositories or third-party forks may appear anywhere in `registry/`, `repos/`, `llms.txt`, or `.gitmodules`.

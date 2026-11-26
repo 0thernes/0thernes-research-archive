@@ -919,6 +919,19 @@ def verify_archive(
                 f"SOLVED_AND_ATLAS_BRIDGE.json: published_open_subconjectures_proved_in_lean={declared_solved} "
                 f"does not match SOLVED_SUB_CONJECTURE entries ({solved_count})"
             )
+        ledger_path = root / "registry" / "RESULTS_LEDGER.json"
+        if ledger_path.exists():
+            expected = build_ledger.expected_bridge_classes(json.loads(ledger_path.read_text(encoding="utf-8")))
+            for ent in bridge.get("entries", []):
+                aid, cls = ent.get("archive_id"), ent.get("resolution_class")
+                allowed = expected.get(aid)
+                if allowed is None:
+                    errors.append(f"SOLVED_AND_ATLAS_BRIDGE.json: {aid} has a bridge row but no active Results Ledger result")
+                elif cls not in allowed:
+                    errors.append(
+                        f"SOLVED_AND_ATLAS_BRIDGE.json: {aid} class {cls} does not match its strongest ledger kind "
+                        f"(expected {' or '.join(allowed)})"
+                    )
 
     mirror_path = root / "registry" / "LIVE_ECOSYSTEM_MIRROR.json"
     if mirror_path.exists():

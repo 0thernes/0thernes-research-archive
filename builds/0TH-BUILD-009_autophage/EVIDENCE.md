@@ -47,7 +47,7 @@ Hardened through 3 full audit cycles under dual Apache-2.0 / CC-BY-4.0 licenses 
 
 ## Verification Boundary
 
-All 48 Lean 4.35.0 theorems (T01-T48 incl. 6 NonVacuity/refutation witnesses across 5 files / 1,792 lines) compile cleanly with zero Mathlib, zero bv_decide, zero native_decide, zero sorry outside isolated Challenge.lean, and strictly [propext, Classical.choice, Quot.sound], verified across all 6 independent kernels on Ubuntu CI (#45751051356, SLSA #72482726 / Rekor 4117522487). Raw x86-64 machine-code emission, FP64 Kahan-Neumaier drift, 1M RWX fuzzing, 18 gates + 6 mutants, and N=24 empirical stats are program-audited outside the Lean kernel. Explicitly retires 0/1,900 overarching open problems in unsolved-problems-mega-atlas and makes no claims of biological life or peer review.
+All 48 Lean 4.35.0 theorems (T01-T30 and T39-T48 plus the other audited declarations, incl. 6 NonVacuity/refutation witnesses across 5 files / 1,792 lines) compile cleanly with zero Mathlib, zero bv_decide, zero native_decide, zero sorry outside isolated Challenge.lean, and strictly [propext, Classical.choice, Quot.sound], verified across all 6 independent kernels on Ubuntu CI (#45751051356, SLSA #72482726 / Rekor 4117522487). Raw x86-64 machine-code emission, FP64 Kahan-Neumaier drift, 1M RWX fuzzing, 18 gates + 6 mutants, and N=24 empirical stats are program-audited outside the Lean kernel. Explicitly retires 0/1,900 overarching open problems in unsolved-problems-mega-atlas and makes no claims of biological life or peer review.
 
 ## Independent Reproduction & Falsification Protocol
 

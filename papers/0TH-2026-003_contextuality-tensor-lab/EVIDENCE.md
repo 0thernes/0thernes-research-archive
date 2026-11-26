@@ -16,7 +16,7 @@
 | Frozen Archived PDF | `papers/0TH-2026-003_contextuality-tensor-lab/contextuality-tensor.pdf` |
 | Frozen PDF SHA-256 | `2d0f0d2af4177a48d5691286b470b7b14d709646e1d1c4874ce04795408e8b6f` |
 | arXiv / Source Bundle SHA-256 | `e7a592bbf563928246ae05e0bbba194cd7b8646a725c020ea61aa9f78ee2b054` |
-| CI Verification Run | https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42751584064 |
+| CI Verification Run | https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42751584064 (CI on de48ed9, an ancestor of the pin f7a1e6e; no CI run exists on the pin; if the field must stay a bare URL, say this in verification_boundary) |
 | Software Heritage SWHID | `swh:1:rev:de48ed9002e930825f1cf5f140c8dc8cbfdc1ea0` |
 | Wayback Machine Snapshot | https://web.archive.org/web/20261110040209/https://0thernes.github.io/contextuality-tensor-lab/paper/contextuality-tensor.pdf |
 | External DOI | None claimed |

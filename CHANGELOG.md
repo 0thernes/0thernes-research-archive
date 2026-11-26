@@ -11,15 +11,18 @@ All notable archive registrations, cryptographic pin updates, and hardening rele
 - `scripts/privacy.py`: SHA-256 denylist of non-public repository names.
 
 ### Changed
-- Bridge classes after the statement audit: `0TH-2026-010` and `0TH-2026-016` from solved sub-conjecture to new-theorem suite; `0TH-2026-012` to barrier formalization; `0TH-2026-007`, `-011`, `-014` to formal invariant suite. Open questions from arXiv preprints answered: 2, not 5.
+- Bridge classes now follow the strongest Results Ledger kind of each entry (checked by `verify_archive.py` and `tests/test_results_ledger.py`): `0TH-2026-010`, `-016`, `-018`, `-019` new-theorem suites; `0TH-2026-004`, `-015` bounded cases; `0TH-2026-007`, `-011`, `-012`, `-014`, `-017` and `0TH-BUILD-004` known results formalized; `0TH-2026-013` barrier formalization; the other builds software-model invariant suites. `0TH-BUILD-006` has no Lean at its pin and no bridge row. Open questions from arXiv preprints answered: 2, not 5.
 - Registry, bridge and README wording corrected for `0TH-2026-004`, `-006`, `-007`, `-010`, `-011`, `-012`, `-013`, `-014`, `-016` (see the review log); "peer-literature" replaced by "arXiv preprint"; "100% kernel-checked" replaced by "kernel-checked".
 - Live sync described as an hourly pull (schedule moved from every 2 hours to hourly); push dispatch documented as optional and not configured.
-
+- Results Ledger completed for all 36 Tier I and Tier II entries: 94 results from 28 entries (A 3, B 11, C 11, D 0, E 55, F 14 after the cycle-3 re-audit, which corrected 28 records); eight entries listed with the reason they have no separate result. Bridge classes updated for `0TH-2026-015`, `-018`, `-019`; `0TH-2026-017` added to the bridge.
+- Registry wording corrected for `0TH-2026-008`, `-015`, `-017`, `-018`, `-019` and all builds; "Ubuntu 24.04 CI" removed (the runs used the `ubuntu-26.04` image); the Lonely Runner state of the art updated to 13 runners; `0TH-BUILD-005` version corrected to v0.23.0+63.
+- Corrected claim documents pushed to the source repositories (cycle 2 of the statement audit; listed in the review log), with their manifests regenerated or re-sealed where CI checks them.
 ### Fixed
 - `0TH-DISC-005` described as a 106-problem atlas (was "900+").
 - `live_sync.py --offline` no longer replaces the committed live state with placeholders.
 - Stale hand-typed totals in CLAIMS.md, README.md, repo.yaml and docs; a new check fails on any stale total in current-state prose.
 - CITATION.cff licence lists MIT and CC-BY-4.0, matching LICENSE.
+- False "N/N verified citations" counts for `0TH-BUILD-008` and `0TH-BUILD-014` (one wrong DOI each, found by Crossref title checks of 18 bibliographies).
 
 ## [2026.11.26] - 2026-11-26
 

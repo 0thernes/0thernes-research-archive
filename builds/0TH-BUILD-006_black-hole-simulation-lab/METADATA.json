@@ -30,16 +30,16 @@
     }
   ],
   "lean_verification": {
-    "has_lean": true,
-    "framework": "Pure Lean 4.35.0 Core (zero Mathlib, zero axioms)",
-    "modules": 1,
-    "lines": 34,
-    "audited_theorems": 8,
+    "has_lean": false,
+    "framework": "No Lean at the pinned commit 050455db. ClassicalGR.lean (8 zero-axiom rfl identities between literals) exists only on the unmerged branch pr9 and is not counted.",
+    "modules": 0,
+    "lines": 0,
+    "audited_theorems": 0,
     "axiom_allowlist": [],
     "entry_point": "builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean",
-    "live_audit_status": "Live lean 4.35.0 EXIT 0; all 8 rfl theorems depend on ZERO axioms (does not depend on any axioms)"
+    "live_audit_status": "Local, unlogged run only: lean 4.35.0 exit 0 and 8 rfl theorems with no axioms; no CI runs this file and no axiom-audit transcript is archived"
   },
   "summary": "GR-exact Schwarzschild/Kerr geodesic simulation lab with an 8-theorem zero-axiom Lean 4 certificate (proofs/ClassicalGR.lean on branch cursor/research-archive-and-starfield-b952) verifying photon-sphere u=1/3, critical potential 1/27, b_crit^2=27, ISCO E^2=8/9 & L^2=12, and BPT a=0 -> r=6, paired with exact Bardeen Kerr shadow asymmetry anchors (M5_SHADOW_ASYMMETRY.md) and 20+ GR source cards.",
-  "verification_boundary": "ClassicalGR.lean certifies exact rational Schwarzschild algebraic limits by pure kernel definitional reduction (rfl, zero axioms); it explicitly disclaims proving the full Einstein field equations. Kerr shadow asymmetry anchors are closed-form analytic_classical checks.",
+  "verification_boundary": "ClassicalGR.lean (8 rfl identities, zero axioms) is not in the pinned commit 050455db; it exists only on the unmerged branch pr9, so nothing at the pin is machine-checked; it explicitly disclaims proving the full Einstein field equations. Kerr shadow asymmetry anchors are closed-form analytic_classical checks.",
   "falsification_command": "lean builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean"
 }

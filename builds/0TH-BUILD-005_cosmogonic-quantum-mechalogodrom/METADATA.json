@@ -1,7 +1,7 @@
 {
   "id": "0TH-BUILD-005",
   "slug": "cosmogonic-quantum-mechalogodrom",
-  "title": "Cosmogonic Quantum Mechalogodrom (CQM): Artificial Life Verification Audit & NHSI Research Papers Ledger",
+  "title": "Cosmogonic Quantum Mechalogodrom (CQM): Artificial-Life Source-Review Catalog",
   "domain": "Artificial Life / Synthetic Cognition / Verification Audit",
   "date": "2026-10-21",
   "version": "v0.23.0+63",
@@ -20,7 +20,7 @@
   ],
   "lean_verification": {
     "has_lean": false,
-    "framework": "Technical verification audit PDF (no Lean proofs)",
+    "framework": "Source-review catalog PDF (no Lean proofs, no formal verification)",
     "modules": 0,
     "lines": 0,
     "audited_theorems": 0,

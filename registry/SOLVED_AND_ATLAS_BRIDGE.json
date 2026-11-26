@@ -16,9 +16,15 @@
     "grand_mega_atlas_problems_retired": 0,
     "published_open_subconjectures_proved_in_lean": 2,
     "preprint_conjectures_proved_with_external_citation_caveat": 1,
-    "bounded_partial_or_barrier_preprint_suites": 11,
-    "embedded_discrete_lean_build_suites": 15,
-    "statement": "0 of the 1,900 catalogued problems in the Unsolved Problems Mega-Atlas are solved. Two entries answer a question that another author stated as open in an arXiv preprint: Conjecture 7.7 of Banic and Elezovic (arXiv:2610.17046v1) in 0TH-2026-006, and the limit question of Section 6 of Muller and Saniga (arXiv:2609.19862v1) in 0TH-2026-009 Track 2, where the identification of the formal objects with the preprint's hypergraphs rests partly on argument outside Lean. 0TH-2026-009 Track 1 also proves Jonah's Conjecture E from an unreviewed Zenodo preprint, with Theorem B4 cited from outside Lean. Neither these sources nor these proofs are peer reviewed. The other 11 Tier I entries prove new theorems, bounded cases, barrier lemmas or known results, and the 15 Tier II entries verify invariants of software models. RESULTS.md gives one numbered list of results with statements, evidence and limits."
+    "statement": "0 of the 1,900 catalogued problems in the Unsolved Problems Mega-Atlas are solved by this work. Two entries answer a question that another author stated as open in an arXiv preprint: Conjecture 7.7 of Banić and Elezović (arXiv:2610.17046v1) in 0TH-2026-006, and the limit question of Section 6 of Muller and Saniga (arXiv:2609.19862v1) in 0TH-2026-009 Track 2, where the identification of the formal objects with the preprint's hypergraphs rests partly on argument outside Lean. 0TH-2026-009 Track 1 also proves strict-law failure for one representative of each case of Jonah's Conjecture E from an unreviewed Zenodo preprint, with Theorem B4 cited from outside Lean. Neither these sources nor these proofs are peer reviewed. Each row's class follows the strongest kind among its results in RESULTS.md. Of the other 26 rows, 4 are new-theorem suites, 2 bounded or partial cases, 7 formalizations of known results (1 of them a barrier formalization) and 13 invariant suites of software models. Entries without a machine-checked result at their pinned commit have no row; RESULTS.md lists them with the reason.",
+    "rows_by_class": {
+      "BARRIER_FORMALIZATION": 1,
+      "FORMAL_INVARIANT_SUITE": 13,
+      "KNOWN_RESULTS_FORMALIZED": 6,
+      "NEW_THEOREM_SUITE": 4,
+      "PARTIAL_BOUNDED_CASE": 2,
+      "SOLVED_SUB_CONJECTURE": 2
+    }
   },
   "entries": [
     {
@@ -54,7 +60,7 @@
       "slug": "human-synaptic-bouton-verification",
       "repository": "https://github.com/0thernes/human-synapse-bouton-lab",
       "version": "v1.3.0",
-      "resolution_class": "FORMAL_INVARIANT_SUITE",
+      "resolution_class": "KNOWN_RESULTS_FORMALIZED",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "NEURO-001",
@@ -99,7 +105,7 @@
       "slug": "secmesh-pqsi",
       "repository": "https://github.com/0thernes/secmesh-pqsi",
       "version": "v2.5.0",
-      "resolution_class": "FORMAL_INVARIANT_SUITE",
+      "resolution_class": "KNOWN_RESULTS_FORMALIZED",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "QC-021",
@@ -127,7 +133,7 @@
       "slug": "coded-pir-mlwe-complexity-lab",
       "repository": "https://github.com/0thernes/coded-pir-mlwe-complexity-lab",
       "version": "v5.0.0",
-      "resolution_class": "BARRIER_FORMALIZATION",
+      "resolution_class": "KNOWN_RESULTS_FORMALIZED",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "CS-053",
@@ -140,7 +146,7 @@
         "CS-051"
       ],
       "target_statement": "Lean 4.35.0 (zero Mathlib, six kernels in CI) proves elementary identities and finite certificates used by the coded-PIR, MLWE and complexity sections: a Koszul-Veronese moment-annihilation identity, a Pascal-type binomial identity, inequalities between closed-form rate expressions, a diagonal-determinant identity, DFT-cancellation identities, integer moment and Renyi-type inequalities on tabulated weights, and formalizations of known results (rank of the 2x2 matrix-multiplication tensor is 7 over every field, a Brockett-Dobkin-type bound weaker than the published one, Schwartz-Zippel, Lovasz's Theta(C_5) = sqrt(5) in integer form). The interference dimension 42 and rate 10/17 for one GRS-aligned (6,3,3) design (against 4/7 in arXiv:2603.10769, Sec. VII), the DFR figures and the constant-time claims are numerical results outside Lean; privacy and decoding of the 10/17 scheme are not verified.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 31 theorems + 7 adversarial boundary refutations = 34 audited decls across 20 files (13,623 lines), all 6 independent kernels + live negative tamper gate (CI run 45850785203, 4,266-4,269 decls), Rekor 4128750161, DigiCert RFC 3161 TSA.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 31 theorems + prove_all + NonVacuity + the AdversarialTests bundle = 34 audited decls across 20 files (13,623 lines); the 32 comparator targets and their closure passed six kernel checks + live negative tamper gate (CI run 45850785203, 4,266-4,269 decls), Rekor 4128750161, DigiCert RFC 3161 TSA.",
       "honesty_boundary": "Resolves no published question and refutes no published claim: the Sun-Tao-Xu-Zhang maximum-redundancy question, Luo's papers (the determinant identity contradicts no claim in arXiv:2604.15858) and Chen's Step 9 (bug reported by Wu and Vidick, April 2024) are context only. The Lean model of FIPS 203 Compress_1 differs from the standard at x = 832. Parent problems CS-053, CS-026, QC-042, CS-004, CS-001, CS-010, CS-012, CS-051 and the exact value of Theta(C_7) remain OPEN."
     },
     {
@@ -166,7 +172,7 @@
       "slug": "monodromia",
       "repository": "https://github.com/0thernes/monodromia",
       "version": "v1.0.0",
-      "resolution_class": "FORMAL_INVARIANT_SUITE",
+      "resolution_class": "KNOWN_RESULTS_FORMALIZED",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "CM-018",
@@ -179,7 +185,7 @@
         "QM-017"
       ],
       "target_statement": "Machine-checks 98 zero-Mathlib Lean 4.35.0 declarations: integer, Gaussian-integer and Laurent-polynomial identities and inequalities for six known models (Hatano-Nelson chain, corner-perturbed Jordan block, a 3-strand lemniscate/Turk's-head braid family, a non-reciprocal 2x2 system, the PT dimer, a 4-site dipole gate). Their identification with Bloch Hamiltonians, knot invariants, winding numbers, Petermann SNR and growth rates is argued on paper, not formalized.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 98 audited decls (7 NonVacuity + 7 AdversarialTests + 9 Palomar targets) across 14 files, all 6 independent kernels (CI run 45749048047), SWH swh:1:snp:c2071e6233ff31c36dab1392682036763a15c851.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 98 audited decls (7 NonVacuity + 7 AdversarialTests + 9 Palomar targets) across 14 files; the 9 comparator targets and their dependency closure passed six kernel checks via lake comparator --paranoid (CI run 45749048047), SWH swh:1:snp:c2071e6233ff31c36dab1392682036763a15c851.",
       "honesty_boundary": "Certifies algebraic/combinatorial theorems for concrete lattice/knot/PT models; overarching grand problems CM-018, GEOM-038/039/046, FLD-060, CM-043/045, and QM-017 remain OPEN."
     },
     {
@@ -187,7 +193,7 @@
       "slug": "promislow-fracton-amoeba",
       "repository": "https://github.com/0thernes/promislow-fracton-amoeba",
       "version": "v1.0.0",
-      "resolution_class": "FORMAL_INVARIANT_SUITE",
+      "resolution_class": "PARTIAL_BOUNDED_CASE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "ALG-035",
@@ -198,7 +204,7 @@
         "FLD-060"
       ],
       "target_statement": "Machine-checks 15 headline theorems (T1a-T3c) + 5 auxiliary/adversarial/master decls bridging Hantzsche-Wendt group-ring unit obstructions (none of the 2^21 sign lifts of Gardam's support passes the 8 sign-point determinant test, via P_1^2-31 != +-1; the unit consequence is implied by Tabei arXiv:2608.00103), an algebraic no-monomial-constancy statement for Haah's CC1 curve, a search showing p=23 is the first odd prime with an F_p-rational odd-order CC1 point, a non-strict origin-minimum lemma for midpoint-convex V_4-symmetric functions Q^3 -> Q, and generation of S_4 by two permutations.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 20 audited decls in 14 Lean files, all 6 independent kernels (CI run 45751946493, Rekor 4117699930).",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 20 audited decls in 14 Lean files; the 16 comparator targets and their dependency closure passed six kernel checks (CI run 45751946493, Rekor 4117699930).",
       "honesty_boundary": "Proves that sign lifts of Gardam's support fail the sign-point determinant test (a necessary condition), an algebraic no-monomial-constancy statement on a rational parametrization of the CC1 curve (string operators are not formalized), and elementary convexity and S_4 facts; the unit conjecture is false over C (Gardam, arXiv:2312.05240); whether Z[P] has non-trivial units for unrestricted supports, Gottschalk Surjunctivity for non-sofic groups, and general 3D fracton classification remain OPEN."
     },
     {
@@ -220,7 +226,7 @@
       "slug": "octonionica",
       "repository": "https://github.com/0thernes/octonionica",
       "version": "v1.0.0",
-      "resolution_class": "FORMAL_INVARIANT_SUITE",
+      "resolution_class": "KNOWN_RESULTS_FORMALIZED",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "ALG-058",
@@ -240,7 +246,7 @@
       "slug": "apollonian-sandpile-markov",
       "repository": "https://github.com/0thernes/apollonian-sandpile-markov",
       "version": "v1.0.0",
-      "resolution_class": "FORMAL_INVARIANT_SUITE",
+      "resolution_class": "NEW_THEOREM_SUITE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "STAT-058",
@@ -327,7 +333,7 @@
       "slug": "unsolved-mathematics",
       "repository": "https://github.com/0thernes/unsolved-mathematics",
       "version": "v0.5.0",
-      "resolution_class": "FORMAL_INVARIANT_SUITE",
+      "resolution_class": "KNOWN_RESULTS_FORMALIZED",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "NT-005",
@@ -338,21 +344,6 @@
       "target_statement": "8-domain structural Lean 4.35.0 core (45 theorems, 10 non-vacuity witnesses, 14 adversarial refutations = 69 decls) covering Collatz, Erdos-Straus, Lonely Runner, Brocard, Primes/Twin Primes, Goldbach, Odd Perfect/Mersenne, and Ramsey R(3,3)=6.",
       "lean_verification": "Zero-Mathlib Lean 4.35.0, 69 audited decls across 6 independent kernels (CI run 45742865067).",
       "honesty_boundary": "Classical foundations, modular reductions, and sharpness bounds only; explicitly solves 0 open conjectures."
-    },
-    {
-      "archive_id": "0TH-BUILD-006",
-      "slug": "black-hole-simulation-lab",
-      "repository": "https://github.com/0thernes/black-hole-simulation-lab",
-      "version": "main+research-branch",
-      "resolution_class": "FORMAL_INVARIANT_SUITE",
-      "grand_atlas_problem_retired": false,
-      "related_mega_atlas_ids": [
-        "GR-001",
-        "GR-002"
-      ],
-      "target_statement": "8 zero-axiom rfl Lean 4.35.0 theorems certifying classical Schwarzschild photon-sphere, ISCO, and BPT rational limits (ClassicalGR.lean).",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 8 rfl theorems, zero axioms.",
-      "honesty_boundary": "Exact rational checks of classical textbook Schwarzschild limits; solves 0 black-hole open problems."
     },
     {
       "archive_id": "0TH-BUILD-007",
@@ -412,7 +403,7 @@
         "SYS-009"
       ],
       "target_statement": "54 pure Lean 4.35.0 theorems (N01-N54 incl. 6 NonVacuity witnesses + LiveC11Receipt) about a 10-field unbounded-Int Lean model of the ledger (not the C11 int64 code): guarded transfers conserve the pool sum, a one-line region<4 edit guard, 2-bit ternary round-trip, the triangular-sum identity, and decide-checks of constants exported by one C11 run; 18 of the 54 are closed numeral identities.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 54 decls across 6 module files, all 6 independent kernels (CI #45752970555, SLSA #72487253 / Rekor 4117921487).",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 54 decls across 6 Lean files (5 built modules + the VerifyAxioms.lean audit script), all 6 independent kernels (CI #45752970555, SLSA #72487253 / Rekor 4117921487).",
       "honesty_boundary": "Discrete simulation and ACL invariants only; all 29 cognitive checks are strictly INDICATOR_ONLY and 0/1,900 overarching Mega-Atlas open problems are retired."
     },
     {
@@ -443,7 +434,7 @@
         "CM-018"
       ],
       "target_statement": "75 strictly constructive zero-Mathlib Lean 4.35.0 declarations (0 Classical.choice, 10 Palomar targets + 7 AdversarialTests) verifying Dimensity 9500 roofline, EUV Rayleigh/DOF, Cayley unitarity, 2D FDTD CFL maximum principle, CHSH/Mermin contextuality, Bragg unimodularity, and DFT Parseval invariants.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 75 constructive decls across 12 files, all 6 independent kernels + live negative kernel & comparator rejection (CI #45821462528, Rekor 4124262738, SWH swh:1:snp:06ad26ff598cf7d592768bdef08d9de7616cd4e0).",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 75 constructive decls across 12 files; the 10 comparator targets and their closure passed six kernel checks (5 implementations) + live negative kernel & comparator rejection (CI #45821462528, Rekor 4124262738, SWH swh:1:snp:06ad26ff598cf7d592768bdef08d9de7616cd4e0).",
       "honesty_boundary": "Mathematical model invariants for semiconductor/quantum pedagogy only; explicitly retires 0/1,900 overarching Mega-Atlas open problems."
     },
     {
@@ -487,8 +478,8 @@
         "QM-011",
         "STAT-060"
       ],
-      "target_statement": "72 pure zero-Mathlib Lean 4.35.0 declarations (63 library theorems incl. 6 NonVacuity & 6 AdversarialTests + 9 isolated Challenge/Solution Palomar targets) certifying 11-pool First-Law energy & closed N/C mass conservation, Clausius >= 0, CEGA-18 KS uncolorability (8<9), CHSH |S|<=2 for deterministic +-1 outcomes, a Bell-diagonal marginal identity (definitional), GF(2^4) field laws (RS[15,11] parameters d=5, t=2 as arithmetic only; no decoder proof), HEPTARCH cap arithmetic (caps <= 46/100), NESTOR rounding expectation/variance polynomial identities, Ungar Poincare-disk Mobius containment for rational (integer-scaled) points, and Glitchling mirror/leaky invariants, paired with independent Python oracles (<=3.44e-15) and repeatable n=30 Results v3.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 72 audited decls across 11 files (1,858 lines), mandatory all-6-kernel bubblewrap lake comparator --paranoid (lean4lean 2,406 decls, con-leche/con-ron 2,409 decls, nanoda, Lean paranoid & default) + live sorry-tamper rejection (CI #45823061012, Release v2.3.0 SLSA #72663345 / Rekor 4126405071).",
+      "target_statement": "72 pure zero-Mathlib Lean 4.35.0 declarations (63 library theorems incl. 6 NonVacuity & 6 AdversarialTests + 9 isolated Challenge/Solution Palomar targets) certifying 11-pool First-Law energy & closed N/C mass conservation, Clausius numerator >= 0 under 0<T_sky<=T_amb<=T_geo and non-negative fluxes, CEGA-18 KS uncolorability (8<9), CHSH |S|<=2 for deterministic +-1 outcomes, a Bell-diagonal marginal identity (definitional), GF(2^4) field laws (RS[15,11] parameters d=5, t=2 as arithmetic only; no decoder proof), HEPTARCH cap arithmetic (caps <= 46/100), NESTOR rounding expectation/variance polynomial identities, Ungar Poincare-disk Mobius containment for rational (integer-scaled) points, and Glitchling mirror/leaky invariants, paired with independent Python oracles (<=3.44e-15) and repeatable n=30 Results v3.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 72 audited decls across 11 files (1,858 lines); the 9 comparator targets and their closure pass mandatory six-kernel bubblewrap lake comparator --paranoid (lean4lean 2,406 decls, con-leche/con-ron 2,409 decls, nanoda, Lean paranoid & default) + live sorry-tamper rejection (CI #45823061012, Release v2.3.0 SLSA #72663345 / Rekor 4126405071).",
       "honesty_boundary": "Discrete simulation & mathematical-model invariants and in-silico paired falsification only; explicitly retires 0/1,900 overarching Mega-Atlas open problems (AI-045, BIO-022/026/044, QM-007/011, STAT-060 remain OPEN) and disclaims consciousness, sentience, AGI, or physical quantum biology."
     },
     {
