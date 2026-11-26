@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Immutable upstream release candidates retained separately from frozen registry snapshots.",
+  "snapshots": [
+    {
+      "repository": "https://github.com/0thernes/unsolved-mathematics",
+      "release": "v0.6.0",
+      "commit": "4ce816d6fa8360665e05cc5ed960bc6316c058c7",
+      "ci_run": "https://github.com/0thernes/unsolved-mathematics/actions/runs/45829951457",
+      "artifacts": [
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.6.0/Donahue_2026_unsolved_mathematics_atlas-v0.6.0.pdf",
+          "sha256": "144205f89d1db5a54bc4f37d9dbc897acc34a2a3c6877da1c344e862e8888edf"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.6.0/arxiv_submission-v0.6.0.tar.gz",
+          "sha256": "789a3df3886670fa990ee8b105bcf4500d03cbc619786877bc1b150eb2bdfa81"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.6.0/MANIFEST-v0.6.0.sha256",
+          "sha256": "172c8b3625b14c5f1952b3af464e4fae42c3f27f8f4327a6c66c5d1a117904bb"
+        }
+      ],
+      "promotion_status": "CANDIDATE_SEPARATE_FROM_FROZEN_V0.5.0",
+      "claim_boundary": "Bounded structural formal results only; grand open conjectures remain open."
+    }
+  ]
+}
