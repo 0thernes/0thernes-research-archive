@@ -8,4 +8,7 @@ description = "Exclude audit scripts' own secret regex definitions"
 paths = [
   '''^scripts/audit-repo\.sh$''',
   '''^scripts/Audit-Repo\.ps1$''',
+  # Citation JSON uses the bibliographic field name "key" for author-year
+  # identifiers; these are not credentials or API tokens.
+  '''^builds/[^/]+/citation-audit\.json$''',
 ]
