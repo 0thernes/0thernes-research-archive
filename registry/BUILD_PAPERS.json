@@ -744,7 +744,7 @@
         {
           "path": "builds/0TH-BUILD-010_noetic-organism-omega/LiveC11Receipt.lean",
           "source_path": "lean/NoeticProofs/LiveC11Receipt.lean",
-          "sha256": "1496d7e8d9b88407e6b10e45fc0d64be59dec5a2d37dcfe1d176356c64ac0943"
+          "sha256": "a8e93cb35bca18721e317583bc549f788405ab62fb42607f054fef23a3aa33c6"
         },
         {
           "path": "builds/0TH-BUILD-010_noetic-organism-omega/lean4-noetic-audit.txt",

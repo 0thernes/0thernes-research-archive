@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0.0",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
-  "synced_utc": "2026-11-26T12:51:47Z",
+  "synced_utc": "2026-11-26T12:55:10Z",
   "sync_mode": "live-github-api",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
     "tier1_papers": 16,
-    "tier2_builds": 13,
+    "tier2_builds": 14,
     "tier3_discoveries": 12,
-    "total_entries": 41,
+    "total_entries": 42,
     "unique_public_repositories": 36,
-    "pinned_submodules": 28,
-    "exact_pin_match": 24,
-    "ahead_of_pin": 8,
+    "pinned_submodules": 29,
+    "exact_pin_match": 28,
+    "ahead_of_pin": 4,
     "historical_archived": 4,
     "api_errors": 0
   },
@@ -78,8 +78,8 @@
       "tiers": [
         "Tier II"
       ],
-      "pinned_commit": "782cd0ed5f2aa06383c6b6279ac6ff22b42e8f47",
-      "archived_version": "main-snapshot",
+      "pinned_commit": "67bedd4abb9d03c7b94e70c8bf46f5b5f6893e6d",
+      "archived_version": "v1.1.0",
       "submodule_path": "repos/asmodensius-native",
       "registered_pages_url": null,
       "default_branch": "main",
@@ -91,7 +91,7 @@
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/asmodensius-native/actions/runs/45748401683",
       "pages_url": null,
-      "sync_status": "AHEAD_OF_PIN",
+      "sync_status": "EXACT_PIN_MATCH",
       "error": null
     },
     {
@@ -103,8 +103,8 @@
       "tiers": [
         "Tier II"
       ],
-      "pinned_commit": "185bd16c9c2dfcfacc1a7ef3caf99b78c1c0f44a",
-      "archived_version": "v1.0.0",
+      "pinned_commit": "1956c2cc54845ebadc54b2a5276cbc66bf031a8b",
+      "archived_version": "v1.4.0",
       "submodule_path": "repos/autophage",
       "registered_pages_url": null,
       "default_branch": "main",
@@ -116,7 +116,7 @@
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/autophage/actions/runs/45751051356",
       "pages_url": null,
-      "sync_status": "AHEAD_OF_PIN",
+      "sync_status": "EXACT_PIN_MATCH",
       "error": null
     },
     {
@@ -362,10 +362,10 @@
       "default_branch": "main",
       "archived": false,
       "live_head_commit": "92799daae8682a2df30702077bdee4ac0e17c5cf",
-      "latest_release_tag": "v2.2.0",
-      "pushed_at": "2026-11-26T12:48:06Z",
+      "latest_release_tag": "v2.3.0",
+      "pushed_at": "2026-11-26T12:52:08Z",
       "ci_run_id": 45823061012,
-      "ci_conclusion": "in_progress",
+      "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/glitchling-jam/actions/runs/45823061012",
       "pages_url": "https://0thernes.github.io/glitchling-jam/",
       "sync_status": "AHEAD_OF_PIN",
@@ -467,9 +467,9 @@
       "live_head_commit": "05b2855c4bdb3bc5f656c20adc697e144b1899d4",
       "latest_release_tag": "v1.3.0",
       "pushed_at": "2026-11-26T12:45:14Z",
-      "ci_run_id": 45822607945,
-      "ci_conclusion": "in_progress",
-      "ci_html_url": "https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45822607945",
+      "ci_run_id": 45822607875,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45822607875",
       "pages_url": "https://0thernes.github.io/human-synapse-bouton-lab/",
       "sync_status": "AHEAD_OF_PIN",
       "error": null
@@ -608,8 +608,8 @@
       "tiers": [
         "Tier II"
       ],
-      "pinned_commit": "0c372fdae4d9794021b04128df3f95ea50727452",
-      "archived_version": "main-ci-verified",
+      "pinned_commit": "c4301d926fa12334f8f8f54b2994dfc12ff649b8",
+      "archived_version": "v2.1.0",
       "submodule_path": "repos/noetic-organism-omega",
       "registered_pages_url": null,
       "default_branch": "main",
@@ -621,21 +621,23 @@
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/noetic-organism-omega/actions/runs/45752970555",
       "pages_url": null,
-      "sync_status": "AHEAD_OF_PIN",
+      "sync_status": "EXACT_PIN_MATCH",
       "error": null
     },
     {
       "slug": "omega-triscale-observatory",
       "repository": "https://github.com/0thernes/omega-triscale-observatory",
       "archive_ids": [
+        "0TH-BUILD-014",
         "0TH-DISC-012"
       ],
       "tiers": [
+        "Tier II",
         "Tier III"
       ],
-      "pinned_commit": "3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9",
-      "archived_version": "main",
-      "submodule_path": null,
+      "pinned_commit": "bbe4da96c5d2c6d24078bf6f88e77126de324b1d",
+      "archived_version": "v6.7.0",
+      "submodule_path": "repos/omega-triscale-observatory",
       "registered_pages_url": null,
       "default_branch": "main",
       "archived": false,
@@ -646,7 +648,7 @@
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/omega-triscale-observatory/actions/runs/45751750665",
       "pages_url": null,
-      "sync_status": "AHEAD_OF_PIN",
+      "sync_status": "EXACT_PIN_MATCH",
       "error": null
     },
     {

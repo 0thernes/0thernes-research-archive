@@ -1,43 +1,78 @@
 {
   "id": "0TH-BUILD-011",
   "slug": "asmodensius-native",
-  "title": "Asmodensius Native: Bare-Metal C11/Vulkan Organism Runtime with 20 Pure Lean 4.35.0 Discrete Invariants (A01-A20)",
-  "domain": "Artificial Life / Systems Engineering / Formal Methods",
-  "date": "2026-11-22",
-  "version": "main-snapshot",
+  "title": "Asmodensius-Native v1.1.0: A Freestanding C23, AVX-VNNI, and Pure-Integer CUDA PTX Artificial-Life Engine with 30 Pure Six-Kernel Lean 4.35.0 Formal Invariants",
+  "domain": "Artificial Life / Systems Engineering / GPU Kernel Verification / Formal Methods",
+  "date": "2026-11-26",
+  "version": "v1.1.0",
   "author": "Alexander Stephen Donahue",
   "orcid": "0009-0006-8168-9648",
   "affiliation": "Independent Researcher, Spokane, WA, USA",
   "repository": "https://github.com/0thernes/asmodensius-native",
   "submodule_path": "repos/asmodensius-native",
-  "pinned_commit": "782cd0ed5f2aa06383c6b6279ac6ff22b42e8f47",
+  "pinned_commit": "67bedd4abb9d03c7b94e70c8bf46f5b5f6893e6d",
   "archived_artifacts": [
+    {
+      "path": "builds/0TH-BUILD-011_asmodensius-native/Donahue_2026_asmodensius_native.pdf",
+      "source_path": "dist/Donahue_2026_asmodensius_native.pdf",
+      "sha256": "6e87e375176c00ed0f3ed3cbe56fb1f76eb2129ac45b2bff6ee530c306936eb7"
+    },
+    {
+      "path": "builds/0TH-BUILD-011_asmodensius-native/arxiv_submission.tar.gz",
+      "source_path": "dist/arxiv_submission.tar.gz",
+      "sha256": "1780ccb2b6b5d9050beba5dda010c7fff36c5af0453393a787829a71d70c9eab"
+    },
     {
       "path": "builds/0TH-BUILD-011_asmodensius-native/AsmodensiusProofs.lean",
       "source_path": "lean/AsmodensiusProofs.lean",
-      "sha256": "c29ebfc856ea241ab71b016e0b54c03597216777329dedc5bca8065f818bac8a"
+      "sha256": "33aac74ff22b6b6240d8068f4d186bad1fe29b2cdfac5e515e00952db23fe62a"
     },
     {
       "path": "builds/0TH-BUILD-011_asmodensius-native/AGENTS.md",
       "source_path": "AGENTS.md",
       "sha256": "6ce72bfe1eeea640bed2bd5fd9d2073b82141a882d9927c55dbdca30db1594e8"
+    },
+    {
+      "path": "builds/0TH-BUILD-011_asmodensius-native/CLAIMS.md",
+      "source_path": "CLAIMS.md",
+      "sha256": "e7ac06988c57e044abd02fb7d9d7d36e64bb8576082a868ec08df9da091359f6"
+    },
+    {
+      "path": "builds/0TH-BUILD-011_asmodensius-native/HARDENING_LOG.md",
+      "source_path": "HARDENING_LOG.md",
+      "sha256": "9ba14290194f3f143a33703a805ea86364bcf22353302a82eecc4a7099bfd513"
+    },
+    {
+      "path": "builds/0TH-BUILD-011_asmodensius-native/MEGA_ATLAS_CROSSCHECK.md",
+      "source_path": "docs/MEGA_ATLAS_CROSSCHECK.md",
+      "sha256": "fda66dabe724f1c48daebc28e9b9abcb5a367fdb2fac2fba7beaee89c3d9e739"
+    },
+    {
+      "path": "builds/0TH-BUILD-011_asmodensius-native/lean4-asmodensius-audit.txt",
+      "source_path": "results/lean4-asmodensius-audit.txt",
+      "sha256": "ecf8ca73327437ae478afe61a58167174c9c39349820b8479edba624cc7f252c"
+    },
+    {
+      "path": "builds/0TH-BUILD-011_asmodensius-native/lean4-multi-kernel.txt",
+      "source_path": "results/lean4-multi-kernel.txt",
+      "sha256": "25eb27e9eba9b838a5dd43b401e33107e7f30510a43c005d28aeb82844bb0652"
     }
   ],
   "lean_verification": {
     "has_lean": true,
-    "framework": "Pure Lean 4.35.0 Core (zero Mathlib, zero native_decide)",
-    "modules": 1,
-    "lines": 155,
-    "audited_theorems": 20,
+    "framework": "Pure Lean 4.35.0 (Palomar module headers, zero Mathlib, autoImplicit = false, zero native_decide, 6-kernel bubblewrap lake check --paranoid & 30-theorem lake comparator --paranoid)",
+    "modules": 7,
+    "lines": 534,
+    "audited_theorems": 30,
     "axiom_allowlist": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "entry_point": "lean/AsmodensiusProofs.lean",
-    "live_audit_status": "20 Pure Lean 4 declarations (A01-A20, zero sorry, explicit #print axioms strictly standard); NOTE: A15, A16, and A20 are disclosed arithmetic rfl accounting witnesses rather than deep behavioral proofs"
+    "entry_point": "lean/VerifyAxioms.lean",
+    "live_audit_status": "GitHub Actions CI GREEN (run #45748401683, 4/4 jobs: Windows Law-14 pure-ASCII gate + Lean build + Build Standard v1.2.0 100.0% 74/74 + 9-page 0-overfull Tectonic AMS-LaTeX PDF & clean-room arXiv tarball with 17/17 live citations + SLSA provenance #72476291 / Rekor 4117160172 + 6-kernel bubblewrap lake check --paranoid & lake comparator --paranoid across lean4, leanchecker-paranoid, lean4lean, nanoda_bin, con-leche, con-ron); local Win64 77/77 CTest + 164/164 test_gpu (0 differing bits over 1M brains & 1M kinematics lanes) + live 24C == RTX 5070 Ti GPU hash parity; Release v1.1.0 & SWH snapshot swh:1:snp:08a957772115194b51a4eadb77331b8bab261773 archived; 30/30 audited theorems (A01-A30 incl. NonVacuity & sharp guard-boundary refutations) strictly within [propext, Classical.choice, Quot.sound], 0 sorryAx outside isolated Challenge.lean, 0 warnings"
   },
-  "summary": "Native runtime component of the A-Life Singularity Omega stack carrying 20 Pure Lean 4.35.0 declarations (AsmodensiusProofs.lean, A01-A20) covering mass/energy conservation, species cap refusal boundaries, arena rollback, observer hash invariance, Philox RNG key equivalence, and CPU/GPU twin hash parity.",
-  "verification_boundary": "Certifies discrete arithmetic, state-transition, and hash-parity invariants of the native simulation runtime; explicitly discloses that A15, A16, and A20 are trivial arithmetic rfl accounting witnesses and makes zero claims of sentience, consciousness, or resolving any open mathematical/scientific problem.",
-  "falsification_command": "cd repos/asmodensius-native/lean && lean AsmodensiusProofs.lean"
+  "summary": "Hardened through 3 full audit cycles under dual Apache-2.0 / CC-BY-4.0 licenses and 100.0% (74/74, 31/31 Core) Build Standard v1.2.0 compliance: Windows-native freestanding ISO C23 artificial-life engine (22 core modules, zero libc/heap/FP ops in core/, 4 NASM AVX2/AVX-VNNI twins, Clang 21 nvptx64 pure-integer CUDA PTX module) scaling 1 to 1,004,019 page-locked organisms with bit-exact lab replay across scalar C, 24-core AVX-VNNI, and RTX 5070 Ti GPU. Verified by 77/77 CTest targets, 164/164 test_gpu differential checks, 30 pure Lean 4.35.0 Palomar theorems (A01-A30) across all 6 independent kernels, Law-14 0-violation pure-ASCII gate, 9-page zero-overflow AMS-LaTeX PDF (17/17 live refs), SLSA #72476291, and honest 0/1,900 Mega-Atlas cross-check.",
+  "verification_boundary": "All 30 Lean 4.35.0 theorems (A01-A30 across 7 files / 534 lines) certify discrete conservation, species-refusal guard necessity, ABI, Philox-key, and VRAM-addressing invariants with zero Mathlib, zero native_decide, zero sorry outside isolated Challenge.lean, and strictly [propext, Classical.choice, Quot.sound], verified across all 6 independent kernels on Ubuntu CI (#45748401683, SLSA #72476291 / Rekor 4117160172). Native C23/NASM/CUDA PTX execution, 77/77 CTest, 164/164 test_gpu, and bare-metal benchmarks (honestly disclosing PCIe/compaction overhead where 24C CPU beats GPU at 1M founders) lie outside the Lean kernel. Explicitly disclaims sentience, biological life, peer review, and retires 0/1,900 overarching Mega-Atlas open problems.",
+  "falsification_command": "cd repos/asmodensius-native && python3 tools/check_text.py && python3 scripts/check_readme_axioms.py && (cd lean && lake build && lake build Challenge && lake env lean VerifyAxioms.lean && lake check --paranoid && lake comparator --config comparator.json --paranoid)"
 }

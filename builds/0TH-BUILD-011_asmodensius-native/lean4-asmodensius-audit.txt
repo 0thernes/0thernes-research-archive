@@ -1,0 +1,30 @@
+'AsmodensiusProofs.A01_bio_to_cell_mass_conserved' depends on axioms: [propext, Quot.sound]
+'AsmodensiusProofs.A02_energy_dissipation_conserved' depends on axioms: [propext, Quot.sound]
+'AsmodensiusProofs.A03_heat_sink_monotone' depends on axioms: [propext, Quot.sound]
+'AsmodensiusProofs.A04_underflow_preserved_zero' does not depend on any axioms
+'AsmodensiusProofs.A05_dropped_events_preserved_zero' does not depend on any axioms
+'AsmodensiusProofs.A06_species_cap_exact' does not depend on any axioms
+'AsmodensiusProofs.A07_species_refusal_boundary' does not depend on any axioms
+'AsmodensiusProofs.A08_arena_rollback_exact' depends on axioms: [propext, Quot.sound]
+'AsmodensiusProofs.A09_arena_retry_succeeds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AsmodensiusProofs.A10_store_release_reduces_live' depends on axioms: [propext, Quot.sound]
+'AsmodensiusProofs.A11_store_release_exact_balance' depends on axioms: [propext, Quot.sound]
+'AsmodensiusProofs.A12_observer_hash_d7_invariant' does not depend on any axioms
+'AsmodensiusProofs.A13_trait_abi_width_112' does not depend on any axioms
+'AsmodensiusProofs.A14_eps_bio_positive' depends on axioms: [propext, Quot.sound]
+'AsmodensiusProofs.A15_dual_visual_worlds_verified' does not depend on any axioms
+'AsmodensiusProofs.A16_ecosystem_240_pure_lean4_theorems' does not depend on any axioms
+'AsmodensiusProofs.A17_bulk_philox_key_equivalence' depends on axioms: [propext, Quot.sound]
+'AsmodensiusProofs.A18_gpu_cpu_twin_hash_parity' does not depend on any axioms
+'AsmodensiusProofs.A19_prefetch_observational_transparency' does not depend on any axioms
+'AsmodensiusProofs.A20_ecosystem_244_pure_lean4_theorems' does not depend on any axioms
+'AsmodensiusProofs.A21_receive_cap_mass_conserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AsmodensiusProofs.A22_six_face_flux_never_overdraws' depends on axioms: [propext, Quot.sound]
+'AsmodensiusProofs.A23_nut_x_to_bio_energy_conserved' depends on axioms: [propext, Quot.sound]
+'AsmodensiusProofs.A24_lesion_mask_all_exact' does not depend on any axioms
+'AsmodensiusProofs.A25_brain_dim_kernel_alignment' does not depend on any axioms
+'AsmodensiusProofs.A26_gpu_offset8_injective_and_32gib_range' depends on axioms: [propext, Quot.sound]
+'AsmodensiusProofs.A27_nonvacuity_ledger_and_arena_witness' does not depend on any axioms
+'AsmodensiusProofs.A28_nonvacuity_philox_and_gpu_witness' depends on axioms: [propext]
+'AsmodensiusProofs.A29_refute_unbounded_species_accepted' does not depend on any axioms
+'AsmodensiusProofs.A30_refute_unbounded_philox_bulk_key_eq' depends on axioms: [propext]

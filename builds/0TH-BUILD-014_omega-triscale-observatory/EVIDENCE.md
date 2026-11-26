@@ -1,0 +1,50 @@
+# Build White Paper & Proof Evidence Dossier — `0TH-BUILD-014`
+
+**Title:** OMEGA 4-Tier Multi-Scale Observatory v6.7.0: Architecture, Render-Only Observer Isolation, Loopback Reverse-Proxy Telemetry, and Automated Verification Across Eight Local Artificial-Life Endpoints  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Domain:** Artificial Life / Scientific Visualization / Telemetry & Security Engineering  
+**Version / Date:** `v6.7.0` (2026-11-26)
+
+## Cryptographic Identity & Provenance
+
+| Field | Value |
+|---|---|
+| Source Repository | https://github.com/0thernes/omega-triscale-observatory |
+| Pinned Git Submodule | `repos/omega-triscale-observatory` @ `bbe4da96c5d2c6d24078bf6f88e77126de324b1d` |
+| Archived Artifact | `builds/0TH-BUILD-014_omega-triscale-observatory/Donahue_2026_omega_triscale_observatory.pdf` (from `dist/Donahue_2026_omega_triscale_observatory.pdf`) |
+| Artifact SHA-256 | `66470ab359dbea8e1b95abb9358699369ad6b8b331d1d9f4c5cd41e2cbce8ed0` |
+| Archived Artifact | `builds/0TH-BUILD-014_omega-triscale-observatory/arxiv_submission.tar.gz` (from `dist/arxiv_submission.tar.gz`) |
+| Artifact SHA-256 | `8272a20e8f2efc09725e9d33a8f2b47db51ff87346c075abce2349a08c18525e` |
+| Archived Artifact | `builds/0TH-BUILD-014_omega-triscale-observatory/README.md` (from `README.md`) |
+| Artifact SHA-256 | `d3724dba1da8a03e3cc4a16e8cf8c8738a47e85bdaec85258068946140811322` |
+| Archived Artifact | `builds/0TH-BUILD-014_omega-triscale-observatory/CLAIMS.md` (from `CLAIMS.md`) |
+| Artifact SHA-256 | `12dd8f03f979a50190acd8f5809b824cb028ebfdf9a4b44339aa6b1fb0ceee07` |
+| Archived Artifact | `builds/0TH-BUILD-014_omega-triscale-observatory/HARDENING_LOG.md` (from `HARDENING_LOG.md`) |
+| Artifact SHA-256 | `298c48b2b50f801dd972fac8619d2f80c242e19d8bbe6573c05ec7269a40bf16` |
+| Archived Artifact | `builds/0TH-BUILD-014_omega-triscale-observatory/MEGA_ATLAS_CROSSCHECK.md` (from `docs/MEGA_ATLAS_CROSSCHECK.md`) |
+| Artifact SHA-256 | `2787f9d828e8a2d1925b9e977ca39d6c5c5cf2a0ea60c276625dd4636ae560a2` |
+
+## Summary
+
+Zero-dependency Node.js ESM, Python 3, and WebGL 2.0 multi-scale Artificial Life cockpit supervising 8 live local endpoints across all 7 public A-Life repositories on 127.0.0.1:8790. Enforces strict D7RO render-only observer isolation (preserving #ifdef PICK hit-testing), fail-closed loopback HTTP/WebSocket CSRF/CSWSH & path-traversal defenses, bounded 1..1,000,000 bare-metal launch controls, deterministic 112-trait spectral differential with 8-axis cosine coherence, and <= 240-sample omnitemporal ring cap. Verified by 12/12 Node tests (250 prop_check), 5/5 Python tests (120 trials), 6/6 (100%) surgical mutants killed, 8-page zero-overflow AMS-LaTeX PDF (16/16 live refs), SLSA #72484379, and 100.0% (72/72, 30/30 Core) Build Standard v1.2.0.
+
+## Embedded Lean 4 Proof Suite Audit
+
+- **Framework:** Non-Lean Telemetry & Orchestration Instrument (0 local Lean 4 files; supervises 6 formal companion repos audited in their own repositories)
+- **Lean Modules / Lines:** 0 files / 0 lines
+- **Audited Theorems (`#print axioms`):** 0
+- **Entry Point:** `N/A`
+- **Permitted Axioms:** `N/A`
+- **Live Audit Status:** GitHub Actions CI GREEN (run #45751750665, 4/4 jobs: ubuntu-latest + windows-latest 12/12 Node tests incl. 250 prop_check trials & Node<->Python --dry-run differential parity + 5/5 Python relay tests 120 trials + 0-error static lint + 6/6 100.0% surgical mutation kills + 8-page 0-overfull Tectonic AMS-LaTeX PDF & clean-room arXiv tarball with 16/16 live citations + SLSA provenance #72484379 / Rekor 4117670475 + 100.0% 72/72 Build Standard v1.2.0); Release v6.7.0 & SWH snapshot swh:1:snp:045edd61e0805b3778e40f5230062e8cc245bb60 archived
+
+## Verification Boundary
+
+Strictly an orchestration, reverse-proxy, telemetry-metrology, and visualization instrument containing 0 local Lean 4 files; upstream formal proofs live in and are audited by their 6 respective companion repositories. Explicitly discloses that chaosLyapunov is a bounded volatility heuristic (not a maximal Lyapunov exponent), Tier 3 organ meshes are count-driven projections, forwarded Noetic indicators are indicator-only proxies, this preprint is not peer-reviewed, and 0/1,900 overarching Mega-Atlas open problems are retired.
+
+## Independent Reproduction & Falsification Protocol
+
+```bash
+git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
+cd 0thernes-research-archive
+cd repos/omega-triscale-observatory && npm test && python3 -m unittest discover -s tests -v && npm run lint && npm run mutate
+```
