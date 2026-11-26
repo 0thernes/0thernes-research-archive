@@ -25,14 +25,14 @@
       "archive_id": "0TH-2026-006",
       "slug": "multinomial-tv-conjecture",
       "repository": "https://github.com/0thernes/multinomial-tv-conjecture",
-      "version": "v2.1.0",
+      "version": "v2.2.0",
       "resolution_class": "SOLVED_SUB_CONJECTURE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "STAT-001"
       ],
       "target_statement": "Conjecture 7.7 (conj:atriangle) of Banic & Elezovic (arXiv:2610.17046v1, confirmed open in arXiv:2611.14735v1): a_triangle = 1/32 - 4*sqrt(3)/243, rendering gamma(n) and gamma_c(n) unconditional for n >= 5.",
-      "lean_verification": "Lean 4.35.0 / Mathlib v4.35.0, 576 exhaustively audited decls, 6 independent kernels (CI run 45741323731), Rekor 4116347212.",
+      "lean_verification": "Lean 4.35.0 / Mathlib v4.35.0 (Palomar module headers on all 10 files), 723 exhaustively audited named+private theorems, 6 independent kernels (CI run 45747471704), Rekor 4117130014.",
       "honesty_boundary": "Completely resolves the standalone peer-literature sub-conjecture within its exact published scope; adjacent to STAT-001 and does not retire any of the 1,900 Mega-Atlas grand problems."
     },
     {
