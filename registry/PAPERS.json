@@ -15,7 +15,7 @@
       "github": "https://github.com/0thernes",
       "website": "https://0thernes.art"
     },
-    "updated_utc": "2026-11-26T03:04:24Z"
+    "updated_utc": "2026-11-26T03:19:47Z"
   },
   "papers": [
     {
@@ -304,23 +304,23 @@
       "slug": "human-synaptic-bouton-verification",
       "title": "Formally Verified Biophysical Invariants, Multi-Language Differential Oracles, and Pre-Registered Monte Carlo Simulation of the Human Synaptic Bouton",
       "domain": "Computational Neuroscience / Biophysical Verification",
-      "date_released": "2026-11-23",
-      "version": "v1.2.0",
+      "date_released": "2026-11-25",
+      "version": "v1.3.0",
       "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 repository CI verified)",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
       "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/human-synapse-bouton-lab",
       "submodule_path": "repos/human-synapse-bouton-lab",
-      "pinned_commit": "4539a48c362e473a91f4b2d7c610962e04878b1a",
-      "release_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/tag/v1.2.0",
+      "pinned_commit": "06e0dcdd5fc4cb406e9fe21d260ff94b68a414d4",
+      "release_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/tag/v1.3.0",
       "pages_url": "https://0thernes.github.io/human-synapse-bouton-lab/",
       "pdf_archive_path": "papers/0TH-2026-007_human-synaptic-bouton-verification/Donahue_2026_human_synaptic_bouton_verification.pdf",
-      "pdf_sha256": "331a3e836ee280222a0713f32e8f28323279d17c51e1c9750035f89733649943",
-      "arxiv_bundle_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/download/v1.2.0/arxiv_wp1_synaptic_bouton.tar.gz",
-      "arxiv_bundle_sha256": "0f638d9b170bc04eadbb2d4c43879b4fb0fcd5855483bd5de4281fea2c712ef2",
+      "pdf_sha256": "7fd56d4c0c3358663270effd7a4fce9bb280eb20bd82d22732b34f220b4d65ed",
+      "arxiv_bundle_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/download/v1.3.0/arxiv_wp1_synaptic_bouton.tar.gz",
+      "arxiv_bundle_sha256": "adc66d2e34b102733b20260404c9352717d2e324f409f726be4e301bd436a0e3",
       "lean_verification": {
-        "framework": "Lean 4.35.0 (zero Mathlib, positive-domain hardened, 6 independent kernels via lake comparator --paranoid in repository CI)",
+        "framework": "Lean 4.35.0 (zero Mathlib, zero Classical.choice, 24 theorems + 26 non-vacuity witnesses + 6 adversarial counterexamples, 6 independent kernels via lake comparator --paranoid in CI run 45747272478, interactive /blueprint/ DAG)",
         "axiom_allowlist": [
           "propext",
           "Quot.sound"
@@ -329,42 +329,43 @@
         "axiom_audit_file": "lean/VerifyAxioms.lean",
         "additional_audit_files": [
           "lean/Challenge.lean",
-          "lean/NonVacuity.lean"
+          "lean/NonVacuity.lean",
+          "lean/AdversarialChecks.lean"
         ],
-        "audited_theorems": 18
+        "audited_theorems": 24
       },
-      "ci_run_url": "https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45277848703",
+      "ci_run_url": "https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45747272478",
       "preservation": {
         "software_heritage": "swh:1:snp:8ef70f745fae4f91f040720b28e21560c73deffc",
         "wayback_machine": null,
-        "doi": "10.5281/zenodo.24484350"
+        "doi": "10.5281/zenodo.24548051"
       },
-      "core_result": "Proves 18 elementary algebraic biophysical invariants with explicit positive-domain guarantees across 6 synaptic domains in pure Lean 4.35.0 (replayed by 6 independent kernels in repository CI: lean, leanchecker-paranoid, lean4lean, nanoda, con-leche, con-ron; 20 non-vacuity witnesses including clamped ATP store depletion and rational + integer-floor resting-leak bounds), validates TypeScript and Rust kernels against a 50-digit mpmath oracle over 1,000 random inputs (0 mismatches within 1e-10), kills 6/6 core mutants, verifies 23/23 citations live against Crossref (0 retractions), seals root MANIFEST.sha256 with a DigiCert RFC 3161 timestamp, confirms pre-registered nanocolumn and Ca2+ nanodomain hypotheses (p_Holm=0.0005), and honestly refutes pre-registered 40 Hz mitochondrial ATP sustainability (burn 1,284,000 > supply 950,000 ATP/s; f_crit=29.5625 Hz).",
-      "verification_boundary": "The 18 elementary algebraic invariants and 20 non-vacuity witnesses are 100% kernel-checked in pure Lean 4.35.0 (zero sorry, zero Classical.choice); RK4 Hodgkin-Huxley ODE and ChaCha8Rng Monte Carlo trajectories are explicitly labeled numerical_approximation; pre-registered H3 (40 Hz) is reported as refuted and H3b (20 Hz) as post-hoc exploratory.",
-      "falsification_command": "cd repos/human-synapse-bouton-lab/lean && lake build --wfail && lake env lean VerifyAxioms.lean && lake env leanchecker Solution && cd .. && npm ci && npm run build && npm test && cargo test --locked && uv run pytest -v python/tests/"
+      "core_result": "Proves 24 elementary algebraic and discrete-dynamical biophysical invariants with explicit positive-domain guarantees across 6 synaptic domains in pure Lean 4.35.0 (incl. Hill n=4 vs. n=1 sigmoidal crossover T06, fixed-point Tsodyks-Markram STP bounds T07, Jahr-Stevens NMDAR Mg2+ unblock monotonicity T11, structural-induction multi-step vesicle conservation T13, and exact discrete ATP depletion hitting-time bound T15 certifying H3 depletion at t=3 s; 26 non-vacuity witnesses + 6 adversarial counterexamples in AdversarialChecks.lean; replayed across 6 independent kernels in CI run 45747272478 with live README axiom drift checking & interactive /blueprint/ DAG), validates TypeScript and Rust kernels against a 50-digit NaN/Inf-guarded mpmath oracle over 1,000 random inputs (0 mismatches within 1e-10), kills 6/6 core mutants, verifies 23/23 live Crossref citations (0 retractions), compiles with literal 0 LaTeX warnings, seals 47-artifact MANIFEST.sha256 with DigiCert RFC 3161 + OpenTimestamps + SLSA v4 attestations + Croissant 1.0 metadata, achieves 100.0% (79/79) Build Standard v1.1.0, confirms H1 & H2 (p_Holm=0.0005), and honestly reports pre-registered 40 Hz H3 refutation alongside exploratory 20 Hz H3b.",
+      "verification_boundary": "All 24 algebraic/inductive invariants, 26 concrete physiological witnesses, and 6 adversarial counterexample checks are 100% kernel-checked in pure Lean 4.35.0 (zero sorry, zero Classical.choice, zero _native) across 6 independent kernels in CI; RK4 Hodgkin-Huxley ODE and ChaCha8Rng Monte Carlo trajectories are explicitly labeled numerical_approximation; pre-registered H3 (40 Hz) is reported as refuted and H3b (20 Hz) as post-hoc exploratory. Software Heritage v1.3.0 snapshot awaits browser PoW (prior v1.2.0 SWHID preserved).",
+      "falsification_command": "cd repos/human-synapse-bouton-lab/lean && lake build --wfail && lake env lean VerifyAxioms.lean && lake env leanchecker Solution && lake env leanchecker NonVacuity && lake env leanchecker AdversarialChecks && cd .. && npm ci && npm run build && npm test && cargo test --locked && uv run pytest -v python/tests/ && uv run python scripts/check_readme_axioms.py"
     },
     {
       "id": "0TH-2026-008",
       "slug": "open-hard-problems-consciousness-frontier",
       "title": "Open Hard Problems Across Eleven Neuro-Scientific Disciplines, Deductive-Inductive-Abductive Frontiers of Sentience, and a Six-Class Forensic Audit",
       "domain": "Interdisciplinary Neuroscience / Philosophy of Mind / Open Problems",
-      "date_released": "2026-11-23",
-      "version": "v1.2.0",
+      "date_released": "2026-11-25",
+      "version": "v1.3.0",
       "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 2x2 algebraic factorization bounds Lean 4.35.0 repository CI verified)",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
       "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/human-synapse-bouton-lab",
       "submodule_path": "repos/human-synapse-bouton-lab",
-      "pinned_commit": "4539a48c362e473a91f4b2d7c610962e04878b1a",
-      "release_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/tag/v1.2.0",
+      "pinned_commit": "06e0dcdd5fc4cb406e9fe21d260ff94b68a414d4",
+      "release_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/tag/v1.3.0",
       "pages_url": "https://0thernes.github.io/human-synapse-bouton-lab/",
       "pdf_archive_path": "papers/0TH-2026-008_open-hard-problems-consciousness-frontier/Donahue_2026_open_hard_problems_consciousness_frontier.pdf",
-      "pdf_sha256": "6e744f44ed9b54a05eb87493e7e0c96b011067bbb1bbd6b5988c60850eea2fc7",
-      "arxiv_bundle_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/download/v1.2.0/arxiv_wp2_open_problems_consciousness.tar.gz",
-      "arxiv_bundle_sha256": "a51f1cc281ab6498c9a4b4c328def96f29a17f986b4ea8f78dd778e2486cec5f",
+      "pdf_sha256": "13e9a949f6541844d31769e87e591f9ed0ae80afb9b455322663d066482f301d",
+      "arxiv_bundle_url": "https://github.com/0thernes/human-synapse-bouton-lab/releases/download/v1.3.0/arxiv_wp2_open_problems_consciousness.tar.gz",
+      "arxiv_bundle_sha256": "bdd27fca048f13640c45058e42917f07d68072aca446ce72ccef66488fbf5036",
       "lean_verification": {
-        "framework": "Lean 4.35.0 (zero Mathlib, positive-domain hardened, 6 independent kernels via lake comparator --paranoid in repository CI)",
+        "framework": "Lean 4.35.0 (zero Mathlib, zero Classical.choice, 24 theorems + 26 non-vacuity witnesses + 6 adversarial counterexamples incl. A05 common-cause counterexample, 6 independent kernels via lake comparator --paranoid in CI run 45747272478)",
         "axiom_allowlist": [
           "propext",
           "Quot.sound"
@@ -373,19 +374,20 @@
         "axiom_audit_file": "lean/VerifyAxioms.lean",
         "additional_audit_files": [
           "lean/Challenge.lean",
-          "lean/NonVacuity.lean"
+          "lean/NonVacuity.lean",
+          "lean/AdversarialChecks.lean"
         ],
-        "audited_theorems": 18
+        "audited_theorems": 24
       },
-      "ci_run_url": "https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45277848703",
+      "ci_run_url": "https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45747272478",
       "preservation": {
         "software_heritage": "swh:1:snp:8ef70f745fae4f91f040720b28e21560c73deffc",
         "wayback_machine": null,
-        "doi": "10.5281/zenodo.24484350"
+        "doi": "10.5281/zenodo.24548051"
       },
-      "core_result": "Synthesizes an explicit 11-discipline open-problems roadmap (Math, Physics, Chemistry, Biology, Neuroscience, Neuropsychology, NeuroCS, NeuroMath, Neurochemistry, Neurobiology, Neurophysics), formally proves exact 2x2 weight-table algebraic factorization (= 0) vs. strict diagonal product dominance (> 0) bounds (T17-T18) in Lean 4.35.0 (6 kernels in repository CI), verifies 23/23 bibliography citations live against Crossref (0 retractions), builds a deductive/inductive/abductive epistemic matrix for consciousness and sentience frontiers, and records a unified six-class forensic audit (F01-F10 core + F11-F20 hardening) synchronized across code, tests, web UI, ERRATA.md, and manuscript.",
-      "verification_boundary": "Formal Lean 4 theorems T17-T18 apply strictly to observational 2x2 integer weight-table algebraic factorization determinants and explicitly do NOT prove interventional causal disconnection under latent common causes, geometric nanocolumn-to-weight derivations, phenomenal consciousness, subjective experience, or sentience; all philosophical and empirical cross-disciplinary gaps remain explicitly labeled open.",
-      "falsification_command": "cd repos/human-synapse-bouton-lab/lean && lake build --wfail && lake env lean VerifyAxioms.lean && lake env leanchecker Solution"
+      "core_result": "Synthesizes an explicit 11-discipline open-problems roadmap (Math, Physics, Chemistry, Biology, Neuroscience, Neuropsychology, NeuroCS, NeuroMath, Neurochemistry, Neurobiology, Neurophysics), publishes an honest ID-by-ID crosswalk against all 1,900 entries of 0thernes/unsolved-problems-mega-atlas (explicitly reporting 0 / 1,900 grand open problems solved while mapping verified partial bounds across 18 high-CSS Atlas IDs), formally proves exact 2x2 weight-table algebraic factorization (= 0), diagonal product dominance (> 0), and diagonal excess implication (T22-T24) paired with a machine-proved common-cause counterexample (A05 in AdversarialChecks.lean) across 6 CI kernels, compiles with literal 0 LaTeX warnings, verifies 23/23 live Crossref citations (0 retractions), and records 3-cycle forensic hardening findings (F01-F34) across HARDENING_LOG.md and ERRATA.md.",
+      "verification_boundary": "Explicitly reports 0 / 1,900 Mega-Atlas open problems solved. Formal Lean 4 theorems T22-T24 apply strictly to observational 2x2 integer weight-table algebraic factorization determinants and (as machine-proved by counterexample A05) explicitly do NOT prove interventional causal disconnection under latent common causes, phenomenal consciousness, subjective experience, or sentience.",
+      "falsification_command": "cd repos/human-synapse-bouton-lab/lean && lake build --wfail && lake env lean VerifyAxioms.lean && lake env leanchecker Solution && lake env leanchecker AdversarialChecks"
     },
     {
       "id": "0TH-2026-009",
