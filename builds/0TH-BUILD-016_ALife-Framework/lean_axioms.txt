@@ -1,0 +1,82 @@
+'ALifeProofs.LedgerConservation.ledger_pool_count_eq_11' does not depend on any axioms
+'ALifeProofs.LedgerConservation.second_law_sinks_cannot_donate' does not depend on any axioms
+'ALifeProofs.LedgerConservation.mkBalanced_residual_zero' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.LedgerConservation.addPool_totalEnergy' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.LedgerConservation.addPool_preserves_externals' does not depend on any axioms
+'ALifeProofs.LedgerConservation.closedTransfer_conserves_total' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.LedgerConservation.closedTransfer_preserves_residual' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.LedgerConservation.externalImport_preserves_residual' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.LedgerConservation.externalExport_preserves_residual' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.LedgerConservation.applyOp_preserves_residual' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.LedgerConservation.applyTrace_preserves_residual' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.LedgerConservation.dissipateHeat_monotone' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Stoichiometry.assimilate4to1_conserves_C' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Stoichiometry.assimilate4to1_conserves_N' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Stoichiometry.assimilate4to1_exact_ratio' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Stoichiometry.shedToDetritus_conserves_CN' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Stoichiometry.mineralizeDetritus_conserves_CN' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Stoichiometry.applyBioOp_conserves_CN' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Stoichiometry.applyBioTrace_conserves_CN' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Stoichiometry.assimilate4to1_preserves_nonneg' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Stoichiometry.shedToDetritus_preserves_nonneg' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Stoichiometry.mineralizeDetritus_preserves_nonneg' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.HeptarchSimplex.heptarch_seat_count_eq_7' does not depend on any axioms
+'ALifeProofs.HeptarchSimplex.cold_strike_phases_eq_6' does not depend on any axioms
+'ALifeProofs.HeptarchSimplex.simplex_cap_feasible' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.HeptarchSimplex.no_single_seat_majority' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.HeptarchSimplex.any_two_seats_below_total' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.HeptarchSimplex.capped_simplex_at_least_three_active' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.HeptarchSimplex.remaining_five_seats_hold_at_least_400bps' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.HeptarchSimplex.cold_strike_next_in_range' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.HeptarchSimplex.clampFlashMilliHz_le_3000' depends on axioms: [propext]
+'ALifeProofs.HeptarchSimplex.clampFlashMilliHz_idempotent' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.ContextualityWitnesses.hoggar_pauli_count_eq_63' does not depend on any axioms
+'ALifeProofs.ContextualityWitnesses.hoggar_isotropic_lines_eq_315' does not depend on any axioms
+'ALifeProofs.ContextualityWitnesses.hoggar_satisfied_eq_252' does not depend on any axioms
+'ALifeProofs.ContextualityWitnesses.hoggar_nchv_bound_eq_189' does not depend on any axioms
+'ALifeProofs.ContextualityWitnesses.hoggar_strict_contextuality_gap_126' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.ContextualityWitnesses.cega18_no_noncontextual_9_bases' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.ContextualityWitnesses.cega18_classical_max_le_8' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.ContextualityWitnesses.kcbs_squared_strict_separation' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.ContextualityWitnesses.tsirelson_squared_strict_hierarchy' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.ContextualityWitnesses.hoggar_d4_sic_parameters' does not depend on any axioms
+'ALifeProofs.ContextualityWitnesses.cospectral_srg16_jordan_gap_384' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.ContextualityWitnesses.srg16_6_2_2_feasibility' does not depend on any axioms
+'ALifeProofs.TensorAndCoding.rs_mds_distance_eq_5' does not depend on any axioms
+'ALifeProofs.TensorAndCoding.rs_error_radius_eq_2' does not depend on any axioms
+'ALifeProofs.TensorAndCoding.rs_interleaved_burst_eq_32_bits' does not depend on any axioms
+'ALifeProofs.TensorAndCoding.gf16_xor_self_zero' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.TensorAndCoding.gf16_xor_involution' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.TensorAndCoding.monarch_p4_exact_2x_compression' does not depend on any axioms
+'ALifeProofs.TensorAndCoding.monarch_strictly_smaller_for_p_ge_3' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.TensorAndCoding.sqNorm_vecAdd_eq' depends on axioms: [propext]
+'ALifeProofs.TensorAndCoding.hodge_pythagorean_conservation' depends on axioms: [propext]
+'ALifeProofs.TensorAndCoding.nestor_ladder_count_eq_23' does not depend on any axioms
+'ALifeProofs.RegistryAndCube.total_substrates_eq_75' does not depend on any axioms
+'ALifeProofs.RegistryAndCube.hybrid_cube_partition_eq_1000' does not depend on any axioms
+'ALifeProofs.RegistryAndCube.lineage_species_partition_eq_25' does not depend on any axioms
+'ALifeProofs.RegistryAndCube.nine_suite_families_sum_825' does not depend on any axioms
+'ALifeProofs.RegistryAndCube.unique_non_aliased_checks_eq_820' does not depend on any axioms
+'ALifeProofs.RegistryAndCube.appendRecord_strictly_increases_seq' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.RegistryAndCube.burnOnFail_monotone_both' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.RegistryAndCube.custody_burned_never_decreases_append' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.RegistryAndCube.hardening_per_cycle_eq_1000' does not depend on any axioms
+'ALifeProofs.RegistryAndCube.hardening_three_cycles_eq_3000' does not depend on any axioms
+'ALifeProofs.NonVacuity.nonvac_ledger_trace_witness' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.NonVacuity.nonvac_stoichiometry_cycle_witness' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.NonVacuity.nonvac_heptarch_boundary_3_seats_tight' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.NonVacuity.boundary_infeasible_cap_1400_rejected' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.NonVacuity.nonvac_cega18_8_of_9_achievable' depends on axioms: [propext]
+'ALifeProofs.NonVacuity.nonvac_hodge_orthogonal_witness' does not depend on any axioms
+'ALifeProofs.NonVacuity.boundary_monarch_p2_not_smaller' does not depend on any axioms
+'ALifeProofs.NonVacuity.nonvac_flash_clamp_cuts_14000_to_3000' does not depend on any axioms
+'ALifeProofs.NonVacuity.nonvac_custody_burn_sequence' does not depend on any axioms
+'ALifeProofs.NonVacuity.nonvac_all_hypotheses' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Palomar.m1_ledger_conservation' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Palomar.m2_stoichiometry_closure' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Palomar.m3_heptarch_and_safety' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Palomar.m4_contextuality_witnesses' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Palomar.m5_tensor_and_coding' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Palomar.m6_registry_and_cube' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Palomar.m7_nonvacuity_certificate' depends on axioms: [propext, Quot.sound]
+'ALifeProofs.Palomar.prove_all_alife_invariants' depends on axioms: [propext, Quot.sound]

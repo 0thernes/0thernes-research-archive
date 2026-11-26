@@ -6,7 +6,7 @@
   "mega_atlas_version": "v2.7.0",
   "mega_atlas_total_problems": 1900,
   "grand_problems_retired": 0,
-  "public_repositories_audited": 76,
+  "public_repositories_audited": 77,
   "author": {
     "full_name": "Alexander Stephen Donahue",
     "orcid": "0009-0006-8168-9648",
@@ -17,7 +17,7 @@
     "published_open_subconjectures_proved_in_lean": 4,
     "preprint_conjectures_proved_with_external_citation_caveat": 1,
     "bounded_partial_or_barrier_preprint_suites": 8,
-    "embedded_discrete_lean_build_suites": 13,
+    "embedded_discrete_lean_build_suites": 14,
     "statement": "Strictly 0 of 1,900 grand open problems in Unsolved Problems Mega-Atlas V2 are retired. Four peer-literature open sub-conjectures/open questions and one unreviewed-preprint conjecture (modulo one cited theorem outside Lean) are completely machine-checked in Lean 4.35.0 within their published scopes, alongside bounded coordinate-pool minima, barrier formalizations, and discrete invariant suites."
   },
   "entries": [
@@ -321,6 +321,27 @@
       "target_statement": "72 pure zero-Mathlib Lean 4.35.0 declarations (63 library theorems incl. 6 NonVacuity & 6 AdversarialTests + 9 isolated Challenge/Solution Palomar targets) certifying 11-pool First-Law energy & closed N/C mass conservation, Clausius >= 0, CEGA-18 KS uncolorability (8<9), CHSH |S|<=2 & Bell-diagonal zero no-signaling, GF(2^4) axioms & RS[15,11,d=5], HEPTARCH anti-monarchy/anti-duopoly, NESTOR unbiased stochastic rounding, universal Ungar Poincare-disk Mobius containment, and Glitchling mirror/leaky invariants, paired with independent Python oracles (<=3.44e-15) and repeatable n=30 Results v3.",
       "lean_verification": "Zero-Mathlib Lean 4.35.0, 72 audited decls across 11 files (1,858 lines), mandatory all-6-kernel bubblewrap lake comparator --paranoid (lean4lean 2,406 decls, con-leche/con-ron 2,409 decls, nanoda, Lean paranoid & default) + live sorry-tamper rejection (CI #45823061012, Release v2.3.0 SLSA #72663345 / Rekor 4126405071).",
       "honesty_boundary": "Discrete simulation & mathematical-model invariants and in-silico paired falsification only; explicitly retires 0/1,900 overarching Mega-Atlas open problems (AI-045, BIO-022/026/044, QM-007/011, STAT-060 remain OPEN) and disclaims consciousness, sentience, AGI, or physical quantum biology."
+    },
+    {
+      "archive_id": "0TH-BUILD-016",
+      "slug": "ALife-Framework",
+      "repository": "https://github.com/0thernes/ALife-Framework",
+      "version": "v3.0.0",
+      "resolution_class": "FORMAL_INVARIANT_SUITE",
+      "grand_atlas_problem_retired": false,
+      "related_mega_atlas_ids": [
+        "QM-011",
+        "QM-007",
+        "QC-037",
+        "AI-036",
+        "SYS-002",
+        "BIO-001",
+        "NEURO-001",
+        "PHIL-005"
+      ],
+      "target_statement": "82 strictly constructive zero-Mathlib Lean 4.35.0 declarations (64 core invariants + 10 NonVacuity witnesses + 8 isolated Palomar targets, 0 Classical.choice) certifying 11-pool First/Second-Law enthalpy trace conservation, 4:1 C/N stoichiometry, HEPTARCH 7-seat capped-simplex anti-dictatorship & WCAG <= 3 Hz flash clamp, finite contextuality witnesses (Hoggar 315>189, CEGA-18 parity <=8, KCBS, Tsirelson hierarchy, srg(16,6,2,2) Jordan gap 384), GF(2^4) RS[15,11] burst coding & Monarch/Hodge identities, and 75-substrate / 1,000-cube / 25-species / 825-check / SeedRegistry invariants, paired with 0-ULP WASM & 6-format Python exporters, 12/12 Laureate invariants, 100/100 crucible, and 3x1,000 hardening.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 82 constructive decls (0 Classical.choice) across 13 files (1,485 lines), all 6 independent kernels via bubblewrap lake check --paranoid (con-leche/con-ron 58,456 decls) & lake comparator --paranoid (2,055 decls) + live sorry-tamper rejection (Cross-OS CI #45824894491, SLSA #72666417 / Rekor 4126541940, Release v3.0.0 SLSA #72669897 / Rekor 4126645211, SWH swh:1:snp:8211545620e738a3c0ff40e8ff11bb921d6155b5).",
+      "honesty_boundary": "Discrete algebraic/combinatorial invariants and bounded deterministic simulations only; explicitly retires 0/1,900 overarching Mega-Atlas open problems (QM-011/007, QC-037, AI-036, SYS-002, BIO-001, NEURO-001, PHIL-005 remain OPEN), labels FMO a classical Forster/Lindblad proxy and Butlin-14/PCI* indicators only, and disclaims phenomenal sentience."
     }
   ]
 }

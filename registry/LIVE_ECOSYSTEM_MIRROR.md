@@ -1,13 +1,14 @@
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-26T13:10:32Z` · **Mode:** `live-github-api`  
-**Tracked Public Repositories:** 36 (`27` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Synced (UTC):** `2026-11-26T13:17:01Z` · **Mode:** `live-github-api`  
+**Tracked Public Repositories:** 37 (`28` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
 | Repository | Archive IDs | Tiers | Archived Pin | Live `main` HEAD | Release | Latest CI | Sync Status |
 |---|---|---|---|---|---|---|---|
+| [`ALife-Framework`](https://github.com/0thernes/ALife-Framework) | `0TH-BUILD-016` | Tier II | `48a2a0aa2b` | `48a2a0aa2b` | `v3.0.0` | [`success`](https://github.com/0thernes/ALife-Framework/actions/runs/45824894481) | `EXACT_PIN_MATCH` |
 | [`alife-singularity-omega-package`](https://github.com/0thernes/alife-singularity-omega-package) | `0TH-BUILD-013`, `0TH-DISC-011` | Tier II / Tier III | `a08294c97f` | `a08294c97f` | `v3.4.0` | [`success`](https://github.com/0thernes/alife-singularity-omega-package/actions/runs/45821196185) | `EXACT_PIN_MATCH` |
 | [`Asmodensius`](https://github.com/0thernes/Asmodensius) | `0TH-DISC-002` | Tier III | `c72a4ec9a0` | `c72a4ec9a0` | `main` | [`success`](https://github.com/0thernes/Asmodensius/actions/runs/44051073860) | `EXACT_PIN_MATCH` |
 | [`asmodensius-native`](https://github.com/0thernes/asmodensius-native) | `0TH-BUILD-011` | Tier II | `67bedd4abb` | `67bedd4abb` | `v1.1.0` | [`success`](https://github.com/0thernes/asmodensius-native/actions/runs/45748401683) | `EXACT_PIN_MATCH` |

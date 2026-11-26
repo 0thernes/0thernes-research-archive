@@ -88,3 +88,6 @@
 [submodule "repos/glitchling-jam"]
 	path = repos/glitchling-jam
 	url = https://github.com/0thernes/glitchling-jam.git
+[submodule "repos/ALife-Framework"]
+	path = repos/ALife-Framework
+	url = https://github.com/0thernes/ALife-Framework.git

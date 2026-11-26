@@ -1,0 +1,58 @@
+# Build White Paper & Proof Evidence Dossier — `0TH-BUILD-016`
+
+**Title:** ALife Framework v3.0.0: Deterministic Fixed-Arena Artificial-Life Architecture, 82 Constructive Six-Kernel Lean 4.35.0 Formal Invariants, 0-ULP WASM Parity, and Multi-Stratum Scientific Integrity Verification  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Domain:** Artificial Life / Formal Verification / Computational Biophysics / Quantum Contextuality  
+**Version / Date:** `v3.0.0` (2026-11-26)
+
+## Cryptographic Identity & Provenance
+
+| Field | Value |
+|---|---|
+| Source Repository | https://github.com/0thernes/ALife-Framework |
+| Pinned Git Submodule | `repos/ALife-Framework` @ `48a2a0aa2baeea1e430c2134a7b963a7cf67727b` |
+| Archived Artifact | `builds/0TH-BUILD-016_ALife-Framework/Donahue_2026_alife_framework_v3.pdf` (from `paper/dist/Donahue_2026_alife_framework_v3.pdf`) |
+| Artifact SHA-256 | `0c170bb02edfe4d14f4332ddc5fa4a2786f42b71dd07bea966fe3da18eae9a4d` |
+| Archived Artifact | `builds/0TH-BUILD-016_ALife-Framework/arxiv_submission.tar.gz` (from `paper/dist/arxiv_submission.tar.gz`) |
+| Artifact SHA-256 | `314d39f1c87c24b8743274e2715b311567ac6a3417c0cdf65adb838fa3a1de25` |
+| Archived Artifact | `builds/0TH-BUILD-016_ALife-Framework/lean_axioms.txt` (from `results/lean_axioms.txt`) |
+| Artifact SHA-256 | `8a601779817fd9e7be967b604ed0b7c85c4c0d9f305e1a241b66f77f3ec5ba67` |
+| Archived Artifact | `builds/0TH-BUILD-016_ALife-Framework/CLAIMS.md` (from `CLAIMS.md`) |
+| Artifact SHA-256 | `ceedaf1c04b642c15d7c2310c3e77483e7c65309b91f2d5682999a258fbbea84` |
+| Archived Artifact | `builds/0TH-BUILD-016_ALife-Framework/LIMITATIONS.md` (from `LIMITATIONS.md`) |
+| Artifact SHA-256 | `d7f1d7b6f0c3464be93984418792a17f6a0d64c2e6c014165d5e8c14be722316` |
+| Archived Artifact | `builds/0TH-BUILD-016_ALife-Framework/HARDENING_LOG.md` (from `HARDENING_LOG.md`) |
+| Artifact SHA-256 | `a93627107349390ff5d8d18ebbbfd2037290b4574a66a41220d0245657683e49` |
+| Archived Artifact | `builds/0TH-BUILD-016_ALife-Framework/MEGA_ATLAS_AUDIT.md` (from `docs/MEGA_ATLAS_AUDIT.md`) |
+| Artifact SHA-256 | `ccb30fd96fa7abe61e9bcaa5c414550be75d684c91ae269c3d7e6bd460b10446` |
+| Archived Artifact | `builds/0TH-BUILD-016_ALife-Framework/statement-fidelity.md` (from `docs/statement-fidelity.md`) |
+| Artifact SHA-256 | `13de5063f9ee0b44c25b0393d1904c16c105af0774a764fcb0a866b8bd625048` |
+| Archived Artifact | `builds/0TH-BUILD-016_ALife-Framework/REPLICATION.md` (from `REPLICATION.md`) |
+| Artifact SHA-256 | `97e6e5655f8da6afc33393a92a77224191614a8bfa34dabbc628d92bcfcedb5f` |
+| Archived Artifact | `builds/0TH-BUILD-016_ALife-Framework/2026-11-25-red-team-audit.md` (from `docs/reviews/2026-11-25-red-team-audit.md`) |
+| Artifact SHA-256 | `0adcd01307e9aa9cc6eba1271e7eeb0bec5655c5c8c06c03c4037b8766d67f65` |
+
+## Summary
+
+Deterministic L0-L10 artificial-life research kernel and WebGL2 raymarched PBR observatory upgraded through 3x1,000 indexed hardening passes (Cycle 1 663/1,000 -> Cycle 2 998/1,000 -> Cycle 3 1,000/1,000 PASS) and 100.0% (78/78, 33/33 Core) Build Standard v1.2.0 compliance under dual Apache-2.0 / CC-BY-4.0 licenses. Couples a 56,173-slot Float64 fixed arena, Philox4x32-10 RNG, 0-ULP Rust-WASM math parity, 11-pool Kahan-Neumaier First/Second-Law enthalpy ledger (max residual 2.218e-16 across 100 seeds), closed 4:1 C/N ecological stoichiometry, XPBD hydrostat, 75 pairwise-distinct substrates, 10x10x10 Hybrid Cube (661/20/274/45), 25-species 3-stratum Omni-Dome, HEPTARCH 7-seat capped-simplex council, GF(2^4) RS[15,11] burst coding, and 825-check 5-arm Holm-Bonferroni qualification with 82 strictly constructive zero-Mathlib Lean 4.35.0 declarations (ZERO Classical.choice) verified across all 6 independent kernels + live negative tamper rejection, 0-ULP Parquet/HDF5/NPZ/DuckDB/XLSX/CSV binary exporters verified by external Python parsers, a 9-page zero-overflow AMS-LaTeX white paper & clean-room arXiv tarball, SLSA/Rekor provenance, Software Heritage preservation, and an honest 0/1,900 Mega-Atlas audit.
+
+## Embedded Lean 4 Proof Suite Audit
+
+- **Framework:** Pure Constructive Lean 4.35.0 Palomar module core (zero Mathlib, zero Classical.choice, zero native_decide, autoImplicit = false, 6-kernel bubblewrap lake check --paranoid & 8-target lake comparator --paranoid + live sorry-tamper rejection)
+- **Lean Modules / Lines:** 13 files / 1485 lines
+- **Audited Theorems (`#print axioms`):** 82
+- **Entry Point:** `lean/ALifeProofs/VerifyAxioms.lean`
+- **Permitted Axioms:** `propext, Quot.sound`
+- **Live Audit Status:** GitHub Actions CI GREEN (run #45824894491, 5/5 jobs across ubuntu-latest & windows-latest + Pages live at https://0thernes.github.io/ALife-Framework/ + Release v3.0.0 #45826411148 with 6 checksummed assets and SLSA provenance CI #72666417 / Rekor 4126541940 & Release #72669897 / Rekor 4126645211): 82/82 constructive declarations (64 core + 10 NonVacuity + 8 Palomar targets, ZERO Classical.choice, zero sorryAx outside isolated lean/PalomarChallenge.lean, byte-exact README axiom sync) passed all 6 independent kernels via bubblewrap lake check --paranoid (con-leche/con-ron 58,456 decls) & lake comparator --paranoid (2,055 decls) + live negative sorry-tamper rejection, 1,000/1,000 Cycle 3 --strict hardening (digest f2cf2be823883418), 331+ cross-OS tests incl. 0-ULP PyArrow/h5py/NumPy/DuckDB/OpenPyXL export round-trips, 12/12 Laureate anti-theater invariants (centered QR rank 63, 75/75 distinct substrates, 100/100 seeds), 100/100 forensic crucible passes, 825/825 suite checks & 13/13 gates, 9-page 0-overfull Tectonic AMS-LaTeX PDF & clean-room arXiv tarball, Software Heritage full snapshot #2696706 (swh:1:snp:8211545620e738a3c0ff40e8ff11bb921d6155b5) + v3.0.0 save #2696914, and 100.0% (78/78, 33/33 Core) Build Standard v1.2.0
+
+## Verification Boundary
+
+All 82 audited Lean 4.35.0 declarations (13 files, 1,485 lines, zero Mathlib, zero Classical.choice, zero native_decide, zero sorry outside isolated lean/PalomarChallenge.lean, axioms strictly within [propext, Quot.sound]) certify discrete integer micro-joule ledger conservation, exact 4:1 C/N stoichiometry, basis-point HEPTARCH anti-dictatorship & WCAG <= 3 Hz flash clamp, finite contextuality witnesses (Hoggar 315>189, CEGA-18 parity <=8, KCBS, Tsirelson hierarchy, srg(16,6,2,2) Jordan gap 384), GF(2^4) RS[15,11] & Monarch/Hodge identities, and registry/cube partitions across all 6 independent kernels on Ubuntu CI (#45824894491). Continuous IEEE-754 float64 dynamics, 0-ULP WASM/exporter parity, 825-check statistical harnesses, and 10/10 Playwright E2E tests lie outside the Lean kernel boundary and are verified by cross-OS CI. Explicitly retires 0/1,900 overarching Mega-Atlas open problems, labels FMO photosynthesis a classical Forster/Lindblad transport proxy, labels Butlin-14 and PCI* architectural indicators only, and makes no claims of phenomenal sentience or external peer review.
+
+## Independent Reproduction & Falsification Protocol
+
+```bash
+git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
+cd 0thernes-research-archive
+cd repos/ALife-Framework && npm ci && npm run verify && npm run audit:scope && npm run passes:100 && npm run creature && npm run audit:science && npm run audit:axioms && node scripts/verify-manifests.ts && npm run harden:3x1000 && (cd lean && lake build && lake build PalomarChallenge && lake env lean ALifeProofs/VerifyAxioms.lean && lake env leanchecker --fresh ALifeProofs && lake env leanchecker --fresh PalomarSolution && lake check --paranoid && lake comparator --config comparator.json --paranoid)
+```
