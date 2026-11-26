@@ -665,6 +665,33 @@ def check_prose_counts(root: Path, total: int, pcount: int, bcount: int, dcount:
     return issues
 
 
+def check_live_status_block(root: Path, pcount: int, bcount: int, dcount: int, subcount: int) -> list[str]:
+    """The generated README status block must match the current registries and mirror.
+
+    Regression (2026-11-26): the bridge count was corrected after the block was rendered, and the
+    stale block ("5 ... answered") was committed because nothing compared the two.
+    """
+    import live_sync  # local import: live_sync pulls in network helpers that verify does not need
+
+    readme = root / "README.md"
+    mirror_path = root / "registry" / "LIVE_ECOSYSTEM_MIRROR.json"
+    bridge_path = root / "registry" / "SOLVED_AND_ATLAS_BRIDGE.json"
+    if not (readme.exists() and mirror_path.exists() and bridge_path.exists()):
+        return []
+    text = readme.read_text(encoding="utf-8")
+    m = re.search(re.escape(live_sync.BLOCK_START) + r".*?" + re.escape(live_sync.BLOCK_END), text, re.S)
+    if not m:
+        return ["README.md: live status block markers missing"]
+    expected = live_sync.render_readme_live_block(
+        json.loads(mirror_path.read_text(encoding="utf-8")),
+        json.loads(bridge_path.read_text(encoding="utf-8")),
+        pcount, bcount, dcount, subcount,
+    )
+    if m.group(0) != expected:
+        return ["README.md: live status block is stale (run: python scripts/live_sync.py --offline)"]
+    return []
+
+
 def check_privacy_firewall(root: Path) -> list[str]:
     """No non-public repository name may appear in the archive's own registries, code or docs.
 
@@ -920,6 +947,8 @@ def verify_archive(
             root, len(data["papers"]) + bcount + dcount, len(data["papers"]), bcount, dcount, len(git_pins)
         )
     )
+    if git_pins:
+        errors.extend(check_live_status_block(root, len(data["papers"]), bcount, dcount, len(git_pins)))
 
     errors.extend(
         check_rfc3161_tsa(root / "data" / "RELEASE_FREEZE.sha256", root / "data" / "RELEASE_FREEZE.sha256.tsr")

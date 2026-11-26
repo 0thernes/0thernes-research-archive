@@ -7,7 +7,7 @@
 [![Checksums Verified](https://img.shields.io/badge/Integrity-SHA--256_Manifest-blue.svg)](CHECKSUMS.sha256)
 [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
-**Single canonical public master vault, hourly-refreshed upstream mirror, and Unsolved Problems Mega-Atlas V2 bridge for all PUBLIC Lean 4–verified research preprints, embedded build white papers, pure Lean 4 proof suites, architectural laws, pre-registered empirical claims, controlled discoveries, frozen PDFs, falsification dossiers, and pinned source repositories authored by Alexander Stephen Donahue (`Independent Researcher`).**
+The single public archive of the research of Alexander Stephen Donahue, an independent researcher: frozen papers, the source repositories they come from (pinned as Git submodules), and one numbered, audited list of results. Start with **[RESULTS.md](RESULTS.md)**. Nothing here is peer reviewed, and none of the catalogued open problems in the Unsolved Problems Mega-Atlas is solved.
 
 - **Author:** Alexander Stephen Donahue (`Alexander S. Donahue`) · **Independent Researcher**, Spokane, WA, USA
 - **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)
@@ -17,7 +17,7 @@
 
 <!-- LIVE_ECOSYSTEM_STATUS:START -->
 > **Live Canonical Hub Mirror (`2026-11-26T21:09:23Z`):** Tracking **48 public research entries** (19 Tier I preprints · 17 Tier II builds · 12 Tier III laws/discoveries/atlases) across **41 unique public repositories** and **35 pinned Git submodules** (`32` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
-> **Mega-Atlas V2 Cross-Check:** **`0 / 1900` grand open problems retired** · **5 open questions from arXiv preprints answered in Lean 4.35.0** (none peer reviewed; see [`RESULTS.md`](RESULTS.md)). Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
+> **Mega-Atlas V2 Cross-Check:** **`0 / 1900` grand open problems retired** · **2 open questions from arXiv preprints answered in Lean 4.35.0** (none peer reviewed; see [`RESULTS.md`](RESULTS.md)). Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
 <!-- LIVE_ECOSYSTEM_STATUS:END -->
 
 <!-- RESULTS_LEDGER:START -->
