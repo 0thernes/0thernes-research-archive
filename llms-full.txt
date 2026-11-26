@@ -116,7 +116,7 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 
 1. **Kernel-Checked Proofs:** Formalized claims compile in Lean 4 with zero `sorry`, zero `admit`, zero custom axioms, and explicit `#print axioms` audits strictly within `[propext, Classical.choice, Quot.sound]`.
 2. **Independent Falsifiability:** Every Tier I & Tier II entry ships an explicit reproduction and falsification command so any third party can independently test every claim.
-3. **Cryptographic Immutability & Live Mirroring:** Every frozen release PDF, Lean certificate, white paper, bridge table, live mirror snapshot, and discovery record is hashed in [`CHECKSUMS.sha256`](CHECKSUMS.sha256), matched against 28 pinned public Git submodules under `repos/`, and audited by GitHub Actions CI on every push.
+3. **Cryptographic Immutability & Live Mirroring:** Every frozen release PDF, Lean certificate, white paper, bridge table, live mirror snapshot, and discovery record is hashed in [`CHECKSUMS.sha256`](CHECKSUMS.sha256), matched against 29 pinned public Git submodules under `repos/`, and audited by GitHub Actions CI on every push.
 4. **Honest Boundaries & Privacy Discipline:** Every dossier explicitly separates kernel-checked theorems, paper proofs, pre-registered empirical claims, finite computational certificates, exploratory syntheses, and open questions. Private repositories and third-party forks remain strictly excluded from this public archive.
 
 ---
@@ -126,12 +126,12 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 Clone the archive and run the full cryptographic, link, and structural audit:
 
 ```bash
-# Clone the archive (add --recursive to also fetch all 26 pinned PUBLIC submodules)
+# Clone the archive (add --recursive to also fetch all 29 pinned PUBLIC submodules)
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 python3 -m pip install -r requirements.txt
 
-# Verify every SHA-256 digest, ORCID, axiom allowlist, markdown link, and all 26 public submodule pins
+# Verify every SHA-256 digest, ORCID, axiom allowlist, markdown link, and all 29 public submodule pins
 python3 scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
 python3 -m pytest -v tests/
