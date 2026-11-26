@@ -97,3 +97,6 @@
 [submodule "repos/octonionica"]
 	path = repos/octonionica
 	url = https://github.com/0thernes/octonionica.git
+[submodule "repos/apollonian-sandpile-markov"]
+	path = repos/apollonian-sandpile-markov
+	url = https://github.com/0thernes/apollonian-sandpile-markov.git

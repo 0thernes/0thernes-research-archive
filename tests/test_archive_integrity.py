@@ -113,7 +113,7 @@ def test_consolidated_latest_entries_registered() -> None:
         p["id"]: p
         for p in json.loads((ROOT / "registry" / "PAPERS.json").read_text(encoding="utf-8"))["papers"]
     }
-    assert len(papers) == 17
+    assert len(papers) == 18
     assert papers["0TH-2026-006"]["version"] == "v2.3.0"
     assert papers["0TH-2026-006"]["lean_verification"]["audited_theorems"] == 730
     assert papers["0TH-2026-009"]["version"] == "v3.0.0"
@@ -129,6 +129,9 @@ def test_consolidated_latest_entries_registered() -> None:
     assert papers["0TH-2026-017"]["slug"] == "octonionica"
     assert papers["0TH-2026-017"]["version"] == "v1.0.0"
     assert papers["0TH-2026-017"]["lean_verification"]["audited_theorems"] == 93
+    assert papers["0TH-2026-018"]["slug"] == "apollonian-sandpile-markov"
+    assert papers["0TH-2026-018"]["version"] == "v1.0.0"
+    assert papers["0TH-2026-018"]["lean_verification"]["audited_theorems"] == 18
 
     builds = {
         b["id"]: b
@@ -162,7 +165,7 @@ def test_solved_and_atlas_bridge_epistemic_honesty() -> None:
     assert bridge["grand_problems_retired"] == 0
     assert bridge["epistemic_summary"]["published_open_subconjectures_proved_in_lean"] == 5
     assert bridge["author"]["orcid"] == va.EXPECTED_ORCID
-    assert len(bridge["entries"]) == 26
+    assert len(bridge["entries"]) == 27
     for entry in bridge["entries"]:
         assert entry["grand_atlas_problem_retired"] is False
         assert entry["honesty_boundary"]

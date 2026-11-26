@@ -475,6 +475,21 @@
       "target_statement": "65 pure zero-Mathlib Lean 4.35.0 declarations (B01-B65: 43 zero-axiom + 22 standard) certifying bare-metal polyglot multi-colony AI quantization, GGUF Q4_0 codec bounds, cache-to-cache telepathy accounting, Blackwell PTX paging invariants, and Win32/QEMU isolation checks.",
       "lean_verification": "Zero-Mathlib Lean 4.35.0, 65 audited decls across 3 files (504 lines), VerifyAxioms.lean + live negative custom-axiom tamper rejection (CI #45826608002, SWH #2696917).",
       "honesty_boundary": "Discrete bare-metal systems and quantization invariants only; explicitly retires 0/1,900 overarching Mega-Atlas open problems and disclaims sentience or consciousness."
+    },
+    {
+      "archive_id": "0TH-2026-018",
+      "slug": "apollonian-sandpile-markov",
+      "repository": "https://github.com/0thernes/apollonian-sandpile-markov",
+      "version": "v1.0.0",
+      "resolution_class": "PARTIAL_BOUNDED_CASE",
+      "grand_atlas_problem_retired": false,
+      "related_mega_atlas_ids": [
+        "STAT-058",
+        "NT-083"
+      ],
+      "target_statement": "Machine-checks 15 headline theorems (T1a-T3e) + master conjunction + NonVacuity + Adversarial in zero-Mathlib Lean 4.35.0: self-contained Eisenstein (1844) QR & zero-GCD Dehn-twist CRT proof of HKRS (Annals 2024) Apollonian obstruction, Octahedral Q(sqrt(-2)) obstruction, Soddy d in {2,3} dichotomy, universal Abelian sandpile confluence + exact Matrix-Tree dets (192, 100352), original Triangular Lattice A2 Even-Laplacian Rigidity (K % 2 = 0 -> K=5 universally obstructed), Kalinin-Shkolnikov tropical balancing, SL2(Z) Fricke-Cohn correspondence, Exact Mod-32 Theorem for even Markov numbers (m % 32 = 2), universal Hensel sqrt(-1) mod p^k uniqueness, 5-step symbolic Markov cluster Laurent positivity (2 non-monomial cancellations P1, P2), and complete Markov-Hurwitz n=4 classification.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 18 audited decls across 11 Palomar module files, all 6 independent kernels accepted 5,012 exported decls via lake comparator --paranoid inside bubblewrap (CI run 45849166650, SLSA #72728455 / Rekor 4128618149, SWH swh:1:snp:5dac6e269ff3c673fa6ee9b7520365de44109a16).",
+      "honesty_boundary": "Proves 15 unconditional algebraic, reciprocity, discrete-potential, and descent theorems; overarching grand open conjectures (full Apollonian local-global classification, continuum sandpile scaling limit STAT-058, and general-composite Markov Uniqueness NT-083) remain explicitly OPEN."
     }
   ]
 }

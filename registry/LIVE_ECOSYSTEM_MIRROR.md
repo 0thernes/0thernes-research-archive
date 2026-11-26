@@ -1,8 +1,8 @@
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-26T15:22:16Z` · **Mode:** `live-github-api`  
-**Tracked Public Repositories:** 39 (`31` exact pin match, `4` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Synced (UTC):** `2026-11-26T15:37:47Z` · **Mode:** `live-github-api`  
+**Tracked Public Repositories:** 40 (`31` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -10,6 +10,7 @@
 |---|---|---|---|---|---|---|---|
 | [`ALife-Framework`](https://github.com/0thernes/ALife-Framework) | `0TH-BUILD-016` | Tier II | `48a2a0aa2b` | `48a2a0aa2b` | `v3.0.0` | [`success`](https://github.com/0thernes/ALife-Framework/actions/runs/45824894481) | `EXACT_PIN_MATCH` |
 | [`alife-singularity-omega-package`](https://github.com/0thernes/alife-singularity-omega-package) | `0TH-BUILD-013`, `0TH-DISC-011` | Tier II / Tier III | `a08294c97f` | `a08294c97f` | `v3.4.0` | [`success`](https://github.com/0thernes/alife-singularity-omega-package/actions/runs/45821196185) | `EXACT_PIN_MATCH` |
+| [`apollonian-sandpile-markov`](https://github.com/0thernes/apollonian-sandpile-markov) | `0TH-2026-018` | Tier I | `0cf60c5cc6` | `0cf60c5cc6` | `v1.0.0` | [`success`](https://github.com/0thernes/apollonian-sandpile-markov/actions/runs/45849166650) | `EXACT_PIN_MATCH` |
 | [`Asmodensius`](https://github.com/0thernes/Asmodensius) | `0TH-DISC-002` | Tier III | `c72a4ec9a0` | `c72a4ec9a0` | `main` | [`success`](https://github.com/0thernes/Asmodensius/actions/runs/44051073860) | `EXACT_PIN_MATCH` |
 | [`asmodensius-native`](https://github.com/0thernes/asmodensius-native) | `0TH-BUILD-011` | Tier II | `67bedd4abb` | `67bedd4abb` | `v1.1.0` | [`success`](https://github.com/0thernes/asmodensius-native/actions/runs/45748401683) | `EXACT_PIN_MATCH` |
 | [`autophage`](https://github.com/0thernes/autophage) | `0TH-BUILD-009` | Tier II | `1956c2cc54` | `1956c2cc54` | `v1.4.0` | [`success`](https://github.com/0thernes/autophage/actions/runs/45751051356) | `EXACT_PIN_MATCH` |
@@ -18,7 +19,7 @@
 | [`catalytic-register-frontiers`](https://github.com/0thernes/catalytic-register-frontiers) | `0TH-2026-010` | Tier I | `4bfeabb05a` | `646443c35e` | `v1.0.1` | [`success`](https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45828647594) | `AHEAD_OF_PIN` |
 | [`cellular-engine-omega`](https://github.com/0thernes/cellular-engine-omega) | `0TH-BUILD-008` | Tier II | `4b257af5f2` | `4b257af5f2` | `v5.3.0` | [`success`](https://github.com/0thernes/cellular-engine-omega/actions/runs/45810663869) | `EXACT_PIN_MATCH` |
 | [`cellulogonic-mecha`](https://github.com/0thernes/cellulogonic-mecha) | `0TH-BUILD-001` | Tier II | `d033ab025e` | `d033ab025e` | `v1.6.0` | [`success`](https://github.com/0thernes/cellulogonic-mecha/actions/runs/45812871830) | `EXACT_PIN_MATCH` |
-| [`coded-pir-mlwe-complexity-lab`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab) | `0TH-2026-012` | Tier I | `a2967e4b94` | `a2967e4b94` | `v4.0.0` | [`success`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45754225423) | `EXACT_PIN_MATCH` |
+| [`coded-pir-mlwe-complexity-lab`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab) | `0TH-2026-012` | Tier I | `a2967e4b94` | `865e83e546` | `v4.0.0` | [`success`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45849177789) | `AHEAD_OF_PIN` |
 | [`contextuality-evidence-lab`](https://github.com/0thernes/contextuality-evidence-lab) | `0TH-2026-005` | Tier I | `ef0682cd24` | `e3811f332c` | `v1.0.0` | [`success`](https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42815130874) | `HISTORICAL_ARCHIVED` |
 | [`contextuality-tensor-lab`](https://github.com/0thernes/contextuality-tensor-lab) | `0TH-2026-003` | Tier I | `f7a1e6e74f` | `81f8d20c95` | `v0.1.0` | [`success`](https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42752465789) | `HISTORICAL_ARCHIVED` |
 | [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) | `0TH-BUILD-005`, `0TH-DISC-001` | Tier II / Tier III | `b0dcf153b9` | `b0dcf153b9` | `v0.23.0` | [`success`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom/actions/runs/45117980365) | `EXACT_PIN_MATCH` |
