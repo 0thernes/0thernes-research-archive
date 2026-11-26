@@ -298,8 +298,8 @@ def main() -> int:
 </html>
 """
     SITE.mkdir(parents=True, exist_ok=True)
-    (SITE / ".nojekyll").write_text("", encoding="utf-8")
-    (SITE / "index.html").write_text(page, encoding="utf-8")
+    (SITE / ".nojekyll").write_bytes(b"")
+    (SITE / "index.html").write_bytes(page.encode("utf-8"))
     (SITE / "registry").mkdir(parents=True, exist_ok=True)
     for fname in (
         "PAPERS.json",

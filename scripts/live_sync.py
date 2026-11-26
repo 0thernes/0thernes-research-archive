@@ -434,7 +434,7 @@ def update_readme_live_block(
     pattern = re.compile(re.escape(BLOCK_START) + r".*?" + re.escape(BLOCK_END), re.S)
     new_txt = pattern.sub(block, txt, count=1)
     if new_txt != txt:
-        readme_path.write_text(new_txt, encoding="utf-8")
+        readme_path.write_bytes(new_txt.encode("utf-8"))
         return True
     return False
 
@@ -526,12 +526,12 @@ def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
         "repositories": mirror_repos,
     }
 
-    mirror_json_path.write_text(json.dumps(mirror, indent=2) + "\n", encoding="utf-8")
-    (root / "registry" / "LIVE_ECOSYSTEM_MIRROR.md").write_text(
-        render_live_mirror_md(mirror), encoding="utf-8"
+    mirror_json_path.write_bytes((json.dumps(mirror, indent=2) + "\n").encode("utf-8"))
+    (root / "registry" / "LIVE_ECOSYSTEM_MIRROR.md").write_bytes(
+        render_live_mirror_md(mirror).encode("utf-8")
     )
     inventory_path = root / "registry" / "PUBLIC_REPO_INVENTORY.json"
-    inventory_path.write_text(
+    inventory_text = (
         json.dumps(
             {
                 "schema_version": "1.0.0",
@@ -542,15 +542,14 @@ def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
             },
             indent=2,
         )
-        + "\n",
-        encoding="utf-8",
+        + "\n"
     )
-    (root / "registry" / "PUBLIC_REPO_INVENTORY.md").write_text(
-        render_public_inventory_md(inventory, synced_utc),
-        encoding="utf-8",
+    inventory_path.write_bytes(inventory_text.encode("utf-8"))
+    (root / "registry" / "PUBLIC_REPO_INVENTORY.md").write_bytes(
+        render_public_inventory_md(inventory, synced_utc).encode("utf-8")
     )
-    (root / "registry" / "SOLVED_AND_ATLAS_BRIDGE.md").write_text(
-        render_bridge_md(bridge_data), encoding="utf-8"
+    (root / "registry" / "SOLVED_AND_ATLAS_BRIDGE.md").write_bytes(
+        render_bridge_md(bridge_data).encode("utf-8")
     )
     update_readme_live_block(
         root / "README.md",

@@ -122,7 +122,7 @@ def main() -> None:
     }
 
     data["papers"] = [p for p in data["papers"] if p["id"] != args.id] + [entry]
-    reg_path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    reg_path.write_bytes((json.dumps(data, indent=2) + "\n").encode("utf-8"))
 
     subprocess.run(["python", "scripts/verify_archive.py", "--sync"], cwd=root, check=True)
     print(f"Registered {args.id} ({args.slug}) @ {sha[:10]} with PDF SHA-256 {pdf_hash}.")
