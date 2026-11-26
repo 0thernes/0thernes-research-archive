@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
-  "synced_utc": "2026-11-26T02:55:24Z",
+  "synced_utc": "2026-11-26T02:58:51Z",
   "sync_mode": "live-github-api",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
@@ -160,9 +160,9 @@
       "live_head_commit": "a83d79ea27136a4b4a7bf4e7e5a74680d2e336a1",
       "latest_release_tag": "v1.0.1",
       "pushed_at": "2026-11-26T02:31:27Z",
-      "ci_run_id": 45742997377,
+      "ci_run_id": 45742997381,
       "ci_conclusion": "success",
-      "ci_html_url": "https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45742997377",
+      "ci_html_url": "https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45742997381",
       "pages_url": "https://0thernes.github.io/catalytic-register-frontiers/",
       "sync_status": "AHEAD_OF_PIN",
       "error": null
