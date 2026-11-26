@@ -44,7 +44,7 @@ def main() -> int:
 ## Epistemic Status & Verification
 - Grand Mega-Atlas V2 open problems retired: {bridge['grand_problems_retired']} / {bridge['mega_atlas_total_problems']}
 - Audited results in the Results Ledger: {sum(ledger_counts.values())} ({ledger_summary}); none is peer reviewed
-- Open questions from arXiv preprints answered in Lean 4.35.0 (not peer reviewed): {bridge['epistemic_summary']['published_open_subconjectures_proved_in_lean']}
+- Open questions from published preprints answered in Lean 4.35.0 (not peer reviewed): {ledger_counts['ANSWERS_PUBLISHED_QUESTION']} (RESULTS.md section A)
 - Tracked unique public repositories: {mirror.get('counts', {}).get('unique_public_repositories', 'N/A')}
 - Primary verifier: `python3 scripts/verify_archive.py` and `python3 -m pytest -v tests/`
 

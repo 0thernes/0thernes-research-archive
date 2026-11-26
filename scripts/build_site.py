@@ -223,7 +223,7 @@ def main() -> int:
         <div class="kpi"><div class="kpi-num">{total_entries}</div><div class="kpi-lbl">Public Entries (3 Tiers)</div></div>
         <div class="kpi"><div class="kpi-num">{unique_repos} / {pinned_subs}</div><div class="kpi-lbl">Tracked Repos / Submodules</div></div>
         <div class="kpi"><div class="kpi-num">{bridge['grand_problems_retired']} / {bridge['mega_atlas_total_problems']}</div><div class="kpi-lbl">Grand Mega-Atlas Retired</div></div>
-        <div class="kpi"><div class="kpi-num">{bridge['epistemic_summary']['published_open_subconjectures_proved_in_lean']}</div><div class="kpi-lbl">Preprint Questions Answered</div></div>
+        <div class="kpi"><div class="kpi-num">{ledger_counts['ANSWERS_PUBLISHED_QUESTION']}</div><div class="kpi-lbl">Preprint Questions Answered</div></div>
         <div class="kpi"><div class="kpi-num">{total_build_lean:,}</div><div class="kpi-lbl">Tier II Lean 4 Decls</div></div>
       </div>
       <nav class="pills" aria-label="Machine-readable endpoints">

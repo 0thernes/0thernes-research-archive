@@ -685,7 +685,7 @@ def check_live_status_block(root: Path, pcount: int, bcount: int, dcount: int, s
     expected = live_sync.render_readme_live_block(
         json.loads(mirror_path.read_text(encoding="utf-8")),
         json.loads(bridge_path.read_text(encoding="utf-8")),
-        pcount, bcount, dcount, subcount,
+        pcount, bcount, dcount, subcount, build_ledger.answered_count(root),
     )
     if m.group(0) != expected:
         return ["README.md: live status block is stale (run: python scripts/live_sync.py --offline)"]

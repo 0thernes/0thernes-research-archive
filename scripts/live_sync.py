@@ -34,6 +34,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import build_ledger  # sibling module: numbered Results Ledger (single answered-question count)
 import privacy  # sibling module: hashed denylist of non-public repository names
 
 OWNER = "0thernes"
@@ -410,20 +411,29 @@ def render_readme_live_block(
     builds_count: int,
     discs_count: int,
     submodules_count: int,
+    answered: int | None = None,
 ) -> str:
-    """The README status block, as a pure function of the registries (verify_archive.py checks it)."""
+    """The README status block, as a pure function of the registries (verify_archive.py checks it).
+
+    `answered` is the Results Ledger's count of section-A results; without a ledger it falls back to
+    the bridge's entry counts.
+    """
     repos = mirror["repositories"]
     exact = sum(1 for r in repos if r["sync_status"] == "EXACT_PIN_MATCH")
     ahead = sum(1 for r in repos if r["sync_status"] == "AHEAD_OF_PIN")
     archived = sum(1 for r in repos if r["sync_status"] == "HISTORICAL_ARCHIVED")
     total_entries = papers_count + builds_count + discs_count
-    answered = bridge["epistemic_summary"]["published_open_subconjectures_proved_in_lean"]
+    if answered is None:
+        es = bridge["epistemic_summary"]
+        answered = es["published_open_subconjectures_proved_in_lean"] + es.get(
+            "preprint_conjectures_proved_with_external_citation_caveat", 0
+        )
     question_word = "question" if answered == 1 else "questions"
     return "\n".join(
         [
             BLOCK_START,
             f"> **Live Canonical Hub Mirror (`{mirror['synced_utc']}`):** Tracking **{total_entries} public research entries** ({papers_count} Tier I preprints · {builds_count} Tier II builds · {discs_count} Tier III laws/discoveries/atlases) across **{len(repos)} unique public repositories** and **{submodules_count} pinned Git submodules** (`{exact}` exact pin matches · `{ahead}` active upstream ahead of release pin · `{archived}` archived historical snapshots).  ",
-            f"> **Mega-Atlas V2 Cross-Check:** **`{bridge['grand_problems_retired']} / {bridge['mega_atlas_total_problems']}` grand open problems retired** · **{answered} open {question_word} from arXiv preprints answered in Lean 4.35.0** (none peer reviewed; see [`RESULTS.md`](RESULTS.md)). Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).",
+            f"> **Mega-Atlas V2 Cross-Check:** **`{bridge['grand_problems_retired']} / {bridge['mega_atlas_total_problems']}` grand open problems retired** · **{answered} open {question_word} from published preprints answered in Lean 4.35.0** (none peer reviewed; statements and limits in [`RESULTS.md`](RESULTS.md) section A). Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).",
             BLOCK_END,
         ]
     )
@@ -444,7 +454,8 @@ def update_readme_live_block(
     if BLOCK_START not in txt or BLOCK_END not in txt:
         return False
     block = render_readme_live_block(
-        mirror, bridge, papers_count, builds_count, discs_count, submodules_count
+        mirror, bridge, papers_count, builds_count, discs_count, submodules_count,
+        build_ledger.answered_count(readme_path.parent),
     )
     pattern = re.compile(re.escape(BLOCK_START) + r".*?" + re.escape(BLOCK_END), re.S)
     new_txt = pattern.sub(lambda _m: block, txt, count=1)

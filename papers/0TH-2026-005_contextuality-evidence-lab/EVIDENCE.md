@@ -16,14 +16,14 @@
 | Frozen Archived PDF | `papers/0TH-2026-005_contextuality-evidence-lab/whitepaper.pdf` |
 | Frozen PDF SHA-256 | `8e34d2911a7cc5dc5a02176515364729118fe07cca54d8d9be16e4a818e95743` |
 | arXiv / Source Bundle SHA-256 | `5024173ca403642b8f6d1a46b60ae44e432c2f0616470784d92c0d68f1bf9000` |
-| CI Verification Run | https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42815130874 |
+| CI Verification Run | https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42814897755 |
 | Software Heritage SWHID | `Pending manual Save Code Now` |
 | Wayback Machine Snapshot | Not yet captured |
 | External DOI | None claimed |
 
 ## Core Result
 
-Proves a finite adaptive-tree sequential contextuality evidence theorem and a sharp setting-bias bound for the Peres-Mermin square, constructing an explicit classical adversary causing a miscalibrated 1% test to reject 97.24% of the time while the bias-aware test stays below 1%.
+Historical snapshot (superseded by 0TH-2026-009). Formalizes in Lean a finite-tree Ville bound and the sharp 1−β classical cap for the Peres–Mermin square, plus a 36-round counterexample (> 4.3% false crossing); an exact Python calculation gives 97.24% vs 0.89% false rejection at 1,000 trials.
 
 ## Lean 4 Formal Verification & Axiom Allowlist
 
@@ -34,7 +34,7 @@ Proves a finite adaptive-tree sequential contextuality evidence theorem and a sh
 
 ## Verification Boundary (Honest Epistemic Scope)
 
-Adaptive-tree evidence bound, biased-setting classical cap (11/12), and counterexample are formally verified in Lean 4; paired with reproducible Moonlab/QGTL/QRNG/Eshkol simulation. Explicitly disclaims hardware contextuality or certified randomness. Superseded GitHub repository archived read-only on 2026-11-24 and consolidated into 0TH-2026-009 (0thernes/pauli-contextuality-lab); this historical snapshot remains cryptographically pinned.
+Adaptive-tree evidence bound, biased-setting classical cap (11/12), and a 36-round counterexample (> 4.3% false crossing) are formally verified in Lean 4; the 1,000-trial rates are exact Python calculations; paired with reproducible Moonlab/QGTL/QRNG/Eshkol simulation. Explicitly disclaims hardware contextuality or certified randomness. Superseded GitHub repository archived read-only on 2026-11-24 and consolidated into 0TH-2026-009 (0thernes/pauli-contextuality-lab); this historical snapshot remains cryptographically pinned.
 
 ## Independent Reproduction & Falsification Protocol
 
@@ -43,5 +43,5 @@ To verify or attempt to falsify this paper from scratch:
 ```bash
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
-cd repos/contextuality-evidence-lab/lean && lake build && lake env lean Verification.lean
+cd repos/contextuality-evidence-lab/lean && lake exe cache get && lake build --wfail && lake env lean Verification.lean
 ```

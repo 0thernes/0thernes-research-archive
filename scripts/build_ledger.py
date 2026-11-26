@@ -339,6 +339,19 @@ def pending_entries(ledger: dict[str, Any], index: dict[str, dict[str, Any]]) ->
     return [aid for aid in sorted(index) if aid not in covered and aid not in explained]
 
 
+def answered_count(root: Path) -> int | None:
+    """Active section-A results (open questions from the literature answered), or None without a ledger.
+
+    Every summary line (README status block, llms.txt, portal) uses this one number, so the hub
+    never states two different counts of answered questions.
+    """
+    path = root / "registry" / "RESULTS_LEDGER.json"
+    if not path.exists():
+        return None
+    ledger = load_json(path)
+    return counts_by_kind(ledger)["ANSWERS_PUBLISHED_QUESTION"]
+
+
 def counts_by_kind(ledger: dict[str, Any]) -> dict[str, int]:
     out = {k: 0 for k in KINDS}
     for r in ledger["results"]:

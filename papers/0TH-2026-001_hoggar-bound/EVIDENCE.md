@@ -34,7 +34,7 @@ Proves a third-moment spectral lower bound on the contextuality degree of N-qubi
 
 ## Verification Boundary (Honest Epistemic Scope)
 
-Core spectral bound and numerical corollaries are machine-checked in Lean 4; independent Python/C suites verify finite configurations; superseded/extended into the unified manuscript in 0TH-2026-002 (hoggar-bound-lab). Superseded GitHub repository archived read-only on 2026-11-24 and consolidated into 0TH-2026-009 (0thernes/pauli-contextuality-lab); this historical snapshot remains cryptographically pinned.
+Core spectral bound and numerical corollaries are machine-checked in Lean 4; independent Python/C suites verify finite configurations; Historical snapshot, superseded first by 0TH-2026-002 (also archived) and now by 0TH-2026-009 (0thernes/pauli-contextuality-lab), the current version. The archival banner sits at tip 4dd3313, not at this pin. Not independently rebuilt by the hub.; this historical snapshot remains cryptographically pinned.
 
 ## Independent Reproduction & Falsification Protocol
 

@@ -35,6 +35,6 @@
     "doi": null
   },
   "core_result": "Proves exact arbitrary-copy contextuality degree formulas d_k = (7^k - 5^k)/2 for k disjoint Peres-Mermin squares and (6^k - 4^k)/2 for k Mermin pentagrams under full nonempty-union context families, answering Section 6 of Muller & Saniga (arXiv:2609.19862v1).",
-  "verification_boundary": "Exact multiplicative identity and attaining assignments are machine-checked in Lean 4 (153-declaration axiom audit strictly within standard axioms), paired with independent Python and JavaScript exact enumeration. Superseded GitHub repository archived read-only on 2026-11-24 and consolidated into 0TH-2026-009 (0thernes/pauli-contextuality-lab); this historical snapshot remains cryptographically pinned.",
+  "verification_boundary": "Exact multiplicative identity and attaining assignments are machine-checked in Lean 4 (axiom audit of 74 source theorems (153 kernel constants including generated equation lemmas) within propext, Classical.choice, Quot.sound), paired with independent Python and JavaScript exact enumeration. Superseded GitHub repository archived read-only on 2026-11-24 and consolidated into 0TH-2026-009 (0thernes/pauli-contextuality-lab); this historical snapshot remains cryptographically pinned.",
   "falsification_command": "cd repos/contextuality-tensor-lab/lean && lake build && lake env lean Verification.lean"
 }
