@@ -1,58 +1,78 @@
 {
   "id": "0TH-BUILD-001",
   "slug": "cellulogonic-mecha",
-  "title": "CELLULOGONIC MECHA v1.2.1: Non-Equilibrium Chemiosmotic, Elastic-Membrane, Endosymbiotic, Bioelectric & Morphogenetic-GRN Cellular Artificial Life Laboratory with 58 Pure Lean 4.35.0 Proofs",
+  "title": "CELLULOGONIC MECHA v1.5.0: Clean-Room 3D Developmental Embryogenesis, Morphogenetic GRN, Chemiosmotic, Endosymbiotic & Xenocellular Artificial Life Engine in C11+AVX2 with 70 Six-Kernel Pure Lean 4.35.0 Formal Proofs",
   "domain": "Artificial Life / Biophysical Simulation / Developmental Biology / Formal Methods",
-  "date": "2026-11-21",
-  "version": "v1.2.1",
+  "date": "2026-11-26",
+  "version": "v1.5.0",
   "author": "Alexander Stephen Donahue",
   "orcid": "0009-0006-8168-9648",
   "affiliation": "Independent Researcher, Spokane, WA, USA",
   "repository": "https://github.com/0thernes/cellulogonic-mecha",
   "submodule_path": "repos/cellulogonic-mecha",
-  "pinned_commit": "73ee3216a509a908ecf6e9d76ca5b5cb467e2138",
+  "pinned_commit": "1b64580895c10e3b95d27a2224ffe1da6539d6fc",
   "archived_artifacts": [
     {
       "path": "builds/0TH-BUILD-001_cellulogonic-mecha/Donahue_2026_cellulogonic_mecha.pdf",
       "source_path": "dist/Donahue_2026_cellulogonic_mecha.pdf",
-      "sha256": "925ce254ac007cab79bc5ce660ab3694b145395db8b194a23537f70224b26448"
+      "sha256": "169f5556c6be23f4c5973ec2c8b1d52f90f8fd6d3ebe121b40dfeb7b77afd52b"
     },
     {
       "path": "builds/0TH-BUILD-001_cellulogonic-mecha/WHITE_PAPER.md",
       "source_path": "paper/WHITE_PAPER.md",
-      "sha256": "3ecadb2ec9b017507c895a2796f3409883c91f9c14057379c2f41789f7faab1d"
+      "sha256": "920ec963f4cf96b4654ec63e63d64909303bc94ba3b0ee1238b020ac3c47133e"
     },
     {
       "path": "builds/0TH-BUILD-001_cellulogonic-mecha/VERIFICATION.md",
       "source_path": "VERIFICATION.md",
-      "sha256": "bb0f0beab3114c03d079836d4f0687d84a1966f6e99de8b432f321cecf353d87"
+      "sha256": "20de113b152eb40d70f7ace9392bb62531b183cd2e8dc6d60c81e6ea024542ef"
+    },
+    {
+      "path": "builds/0TH-BUILD-001_cellulogonic-mecha/CLAIMS.md",
+      "source_path": "CLAIMS.md",
+      "sha256": "084785a2a4a06557cf8c3216a06584eb904f4c8cc18dd4798d68f660be09c7cb"
+    },
+    {
+      "path": "builds/0TH-BUILD-001_cellulogonic-mecha/HARDENING_LOG.md",
+      "source_path": "HARDENING_LOG.md",
+      "sha256": "1a9eee2956b201b008fd007d5a2085a43437de7d45a4c5120aef4c4ec90eb837"
+    },
+    {
+      "path": "builds/0TH-BUILD-001_cellulogonic-mecha/MEGA_ATLAS_CROSSCHECK.md",
+      "source_path": "docs/MEGA_ATLAS_CROSSCHECK.md",
+      "sha256": "9615c1e82abfadca030c9b9c6fce183e93de871daa225ee973fa06e4db608679"
     },
     {
       "path": "builds/0TH-BUILD-001_cellulogonic-mecha/lean4-audit.txt",
       "source_path": "results/lean4-audit.txt",
-      "sha256": "0e34cac22eeb75bc75b2d67dbf45c364edeb76afc8a2021dfc3aa36ac593746b"
+      "sha256": "911a4d8a63db154ab5365830965a02f20768dd795b6dc5db540861bb534c650a"
+    },
+    {
+      "path": "builds/0TH-BUILD-001_cellulogonic-mecha/lean4-multi-kernel.txt",
+      "source_path": "results/lean4-multi-kernel.txt",
+      "sha256": "d637c0519e6713e669feac86e93003c867525122f643ea15394c3579e6bc7f1d"
     },
     {
       "path": "builds/0TH-BUILD-001_cellulogonic-mecha/arxiv_submission.tar.gz",
       "source_path": "dist/arxiv_submission.tar.gz",
-      "sha256": "9b43f5932936d3d524272a460b31d932df86357e980e0881e3d7af6aebd2ce4c"
+      "sha256": "759a4d9b72ca4baffc089b3a523c67cb9e607ba1a57cb9354afdca224c520b00"
     }
   ],
   "lean_verification": {
     "has_lean": true,
-    "framework": "Pure Lean 4.35.0 (zero Mathlib, zero native_decide)",
-    "modules": 8,
-    "lines": 1438,
-    "audited_theorems": 58,
+    "framework": "Pure Lean 4.35.0 (Palomar module headers, zero Mathlib, autoImplicit = false, zero native_decide, 6-kernel bubblewrap lake check --paranoid & lake comparator --paranoid)",
+    "modules": 14,
+    "lines": 2372,
+    "audited_theorems": 70,
     "axiom_allowlist": [
       "propext",
       "Classical.choice",
       "Quot.sound"
     ],
-    "entry_point": "lean/CellulogonicProofs.lean",
-    "live_audit_status": "GitHub Actions CI GREEN (run #44903924086: linux-c11-verify + lean4-formal-verify + Tectonic AMS-LaTeX PDF & arXiv bundle) & local lake build EXIT 0; 58/58 theorems (T01-T58), 0 sorryAx, 0 custom axioms, 0 warnings, strictly within [propext, Classical.choice, Quot.sound]; Software Heritage full snapshot #2675549 (swh:1:snp:c6e2698ea3b084318540254a5b90840b0f757d00)"
+    "entry_point": "lean/VerifyAxioms.lean",
+    "live_audit_status": "GitHub Actions CI GREEN (run #45751776610, 5/5 jobs: ubuntu-latest & windows-latest 26/26 C11 gates + 8/8 mutants + 1,000-case ABI/CMB5 fuzzer + ASan/UBSan+AVX2 + 6,586-check Python exact oracle + 2,700 prop tests + 12/12 Web Observatory security/WCAG tests + 12-page 0-overfull Tectonic AMS-LaTeX PDF & clean-room arXiv tarball with 36/36 live DOIs + SLSA provenance attestation #72484229 Sigstore Rekor 4117645150 + 100.0% 76/76 Build Standard v1.2.0 + 6-kernel bubblewrap lake check --paranoid [58,701-58,704 decls] & 70-theorem lake comparator --paranoid [3,329-3,332 decls] PASS across lean4, leanchecker-paranoid, lean4lean, nanoda_bin, con-leche, con-ron); Release v1.5.0 published; 70/70 audited declarations (T01-T58, C59-C62, NV01-NV08) strictly within [propext, Classical.choice, Quot.sound], 0 sorryAx outside isolated Challenge.lean, 0 warnings; prior Software Heritage full snapshot #2675549 (swh:1:snp:c6e2698ea3b084318540254a5b90840b0f757d00)"
   },
-  "summary": "Clean-room zero-dependency C11+AVX2 continuous 3D off-lattice cellular artificial life and zero-blueprint developmental embryogenesis laboratory (Build 2 of the 4-build AUTOPHAGE -> Cellulogonic Mecha -> Asmodensius stack). Couples 8-species Chemoton stoichiometry, Canham-Helfrich elastic vesicles (Global Minimax Theorem T16), Mitchell chemiosmosis across 4 planetary solvents, nested serial endosymbiosis, Levin bioelectric colonies, Tardigrade TDP bioglass anhydrobiosis, ATP-pumped GHz Fr\u00f6hlich-Pokorn\u00fd microtubules, and 6 developmental embryogenesis mechanisms (3D Wnt/BMP/Shh GPS, conditional GRNs, Steinberg cadherin sorting, Netrin/Slit axon guidance + Hebbian pruning, Hippo + eutelic arrest, ATP-coupled CPG waves), accompanied by 58 pure Lean 4.35.0 theorems, 4-way cross-OS Win64/Linux AVX2/Scalar 0-bit SHA-256 parity (f20e16ec...4f26e918), 24/24 falsification gates + 8/8 planted mutants, N=24 Holm-Bonferroni paired stats, and a 60 FPS WebGL2 3D Observatory.",
-  "verification_boundary": "All 58 Lean 4.35.0 theorems (T01-T58) compile cleanly in pure Lean 4 with zero Mathlib, zero native_decide, zero sorry, and strictly standard axioms ([propext, Classical.choice, Quot.sound]). Lean theorems certify exact algebraic/combinatorial invariants of the discrete equations; runtime C11+AVX2 simulation, 4-way Win64/Linux SHA-256 bit-exactness, SHA-256-authenticated .cmbin snapshots, 24 falsification gates + 8 planted mutants, and N=24 paired permutation statistics (p_Holm <= 0.00080) are independently verified by the compiled test suite and Ubuntu CI. Models coarse-grained discrete quanta rather than atomistic wet-lab molecular dynamics; claims no new law of nature.",
-  "falsification_command": "cd repos/cellulogonic-mecha && ./build_linux.sh && (cd lean && lake clean && lake build)"
+  "summary": "Hardened through 3 complete audit cycles and 100.0% (76/76, 33/33 Core) Build Standard v1.2.0 compliance under dual Apache-2.0 / CC-BY-4.0 open licenses: zero-dependency C11+AVX2 (ABI 0x00010500, CMB5, 128-bit exact integer ledger & integer Q(V,L), portable x86-64-v3 with runtime OSXSAVE+XGETBV guard, static zero-heap hot-loop symbol audit, -Werror, ASan/UBSan+AVX2 clean across 13 CLI subcommands) continuous 3D off-lattice cellular artificial life and zero-blueprint developmental embryogenesis laboratory. Couples 8-species 19-reaction Chemoton stoichiometry, Canham-Helfrich elastic vesicles (Global Minimax T16), 4-solvent Mitchell chemiosmosis, nested serial endosymbiosis, Levin bioelectric colonies, Tardigrade TDP bioglass anhydrobiosis, stateful Frohlich-Pokorny GHz microtubules, XPBD/carcass/yolk continuum biomechanics, and 6 developmental mechanisms (3D Wnt/BMP/Shh GPS, conditional GRNs, Steinberg cadherin sorting, Netrin/Slit axon guidance + Hebbian pruning, Hippo + eutelic arrest, ATP-coupled CPG waves). Verified by 70 pure Lean 4.35.0 Palomar declarations across all 6 independent kernels, 4-way cross-OS Win64/Linux AVX2/Scalar 0-bit SHA-256 parity (681a9747...519eceff), 26/26 gates + 8/8 mutants, 1,000-case ABI/CMB5 fuzzer, clean-room Python exact-rational oracle (6,586 checks) + 2,700 property trials, N=24 Holm-Bonferroni paired stats (24/24 wins across H1-H4, p_Holm=0.00040, Cohen's dz in [1.468, 4.214]), WCAG 2.2 AA / strict-CSP WebGL2 3D Observatory (12/12 tests), 12-page zero-overflow AMS-LaTeX PDF (36/36 live DOIs) + arXiv bundle, and honest 0/1,900 Mega-Atlas cross-check.",
+  "verification_boundary": "All 70 audited Lean 4.35.0 declarations (T01-T58, C59-C62, and 8 concrete non-vacuity / sharp negative-boundary witnesses NV01-NV08 across 14 files / 2,372 lines) compile cleanly with zero Mathlib, autoImplicit = false, zero native_decide, zero sorry outside isolated Challenge.lean, zero warnings, and strictly [propext, Classical.choice, Quot.sound], verified across all 6 independent kernels via sandboxed bubblewrap lake check --paranoid and lake comparator --config comparator.json --paranoid on Ubuntu CI (#45751776610, SLSA #72484229, Rekor 4117645150). Runtime C11+AVX2 memory safety, 4-way cross-OS SHA-256 parity, CMB5 binary parser, 26 gates + 8 mutants, 1,000-case fuzzer, Python exact oracle, 12 Web security tests, and N=24 paired stats lie outside the Lean kernel boundary and are verified by cross-platform CI. Explicitly solves 0/1,900 overarching open problems in unsolved-problems-mega-atlas (adjacent BIO-001/015/022, SUB-001/047, SYS-009, XSPEC-009 remain OPEN) and claims no biological wet-lab proof, sentience, or new law of nature.",
+  "falsification_command": "cd repos/cellulogonic-mecha && SKIP_LEAN=1 ./build_linux.sh && python3 scripts/verify_oracle_and_stats.py && python3 scripts/prop_check.py && python3 scripts/check_readme_axioms.py && node test/test_web_server.mjs && (cd lean && lake clean && lake build && lake build Challenge && lake env lean VerifyAxioms.lean && lake check --paranoid && lake comparator --config comparator.json --paranoid)"
 }

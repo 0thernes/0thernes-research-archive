@@ -1,88 +1,72 @@
-# CELLULOGONIC MECHA v1.2.1 — Formal Verification & Empirical Proof Ledger (Anti-Fraud Hardened)
+# CELLULOGONIC MECHA v1.5.0 — Formal Verification & Empirical Proof Ledger
 
-Every theorem, gate, SHA-256 digest, runtime, and statistical test below was produced directly by compiling and executing **CELLULOGONIC MECHA v1.2.1** on live hardware (**Intel Core Ultra 9 275HX**, AVX2 + BMI1/2 + POPCNT + RDSEED + RDTSCP; **Windows 11 x64 PE64** via `clang 23.1.0 + lld`, **Ubuntu Linux ELF64** via `gcc 13.3.0`, and **Lean 4 `v4.35.0`**).
+Every theorem, gate, SHA-256 digest, runtime, and statistical test below was produced directly by compiling and executing **CELLULOGONIC MECHA v1.5.0** (`ABI 0x00010500`) on live hardware (**Intel Core Ultra 9 275HX**, AVX2 + BMI1/2 + POPCNT + RDSEED + RDTSCP; **Windows 11 x64 PE64** via `clang 23.1.0 + lld`, **Ubuntu Linux ELF64** via `gcc 13.3.0`, and **Lean 4 `v4.35.0`**).
 
-> **v1.2.1 Anti-Fraud & Security Hardening Receipts (`2026-11-20` / `2026-11-21`):** Added SHA-256 integrity trailer & strict cell/bond/axon bounds verification on `.cmbin` snapshots (`abi_exports.c`), fixed `web/server.mjs` FIFO queue deadlock + timeouts + `GET /server.mjs` source-exposure block + loopback guard, added `restraint_vec` (full 13-vector independent parity) & `autophage_dna` (real 128B evolved Tier-1 DNA ingestion, zero RDTSC), added CPUID guard on `rdseed`/`rdrand`, upgraded `Wnt/BMP/Shh` morphogens to 3D Z-stratified chemical GPS, coupled CPG propulsion to exact `RXN_R8` ATP hydrolysis (`0 amu / 0 uq` drift), replaced static GHz coherence with a stateful Fröhlich relaxation ODE, replaced static active loci & Assembly Index with catalysis-gated LZ77 motif reuse, fixed lineage hash linear probing, clamped all `traits112[0..111]` to `[0, 1]`, eliminated 5 restraint dead-zones (`SANDBOXING`, `SILOING`, `DEGRESSING`, `LOBOTOMIZING`, `MEDICATING`), upgraded Mutants `M2`/`M3` + Lean `T58` (`List MorphStep` induction), cached WebGL2 uniform locations (`maxCells = 4096`), and replaced JS sine oscilloscope with real C11 telemetry history. Verified **4-Way Cross-OS / Cross-Compiler / Cross-ISA 0-Bit SHA-256 Parity** (`Win64 Clang AVX2 == Win64 Clang Scalar == Linux GCC AVX2 == Linux GCC Scalar`): `f20e16ece7f747b887aaf7643562cee485cf6216c3bb843edfba28004f26e918` (`24/24` gates, `8/8` mutants on BOTH Win64 & Linux, `58/58` Lean 4 proofs, `0` warnings).
+> **v1.5.0 Six-Kernel Palomar Lean 4.35.0 & 26-Gate C11 Hardening Receipts (`2026-11-25`):** Upgraded Pure Lean 4.35.0 across 10 `module` files (`autoImplicit = false`, `relaxedAutoImplicit = false`, `linter.unusedVariables = true`, `linter.deprecated = true`) with isolated `Spec.lean` / `Challenge.lean` / `Solution.lean` + **Module 9 (`NonVacuity.lean`, `NV01`–`NV08`)** -> **70 / 70 audited theorems** strictly within `[propext, Classical.choice, Quot.sound]` (`0 sorryAx`, `0 native_decide`), replayed locally across `lean`, `leanchecker --fresh`, `leanchecker-paranoid --fresh`, `con-leche --verified` (`3,326` decls), `con-ron --verified` (`3,326` decls), and `nanoda_bin` (`3,735` decls, `unpermitted_axiom_hard_error: true`), with all 6/6 kernels wired under `bubblewrap` in CI; hardened C11 to `-Wall -Wextra -Wshadow -Wstrict-prototypes -Wconversion -Werror`, static zero-heap hot-loop `llvm-nm`/`nm` symbol audits, **26 / 26 falsification gates (`G01`–`G26`)** + **8 / 8 caught mutants** + **1,000 / 1,000 `fuzz_cmbin_abi`** + **2,700 / 2,700 `prop_check`**, 4-way 0-bit SHA-256 parity `681a9747e9f4caa110d88e3fe8995e685b397e3350f52ab1e8294c15519eceff`, and `N = 24` paired stats (`96/96` wins, 95% bootstrap CIs & Cohen's $d_z$, $p_{\mathrm{Holm}} = 0.00040$).
 
 ---
 
-## 1. Provable: 58 / 58 Pure Lean 4 Formal Proofs (`0 sorryAx`, `0` Custom Axioms, `0` Warnings)
+## 1. Provable: 70 / 70 Six-Kernel Pure Lean 4.35.0 Formal Proofs (`0 sorryAx`, `0 native_decide`, `0` Warnings)
 
-Full kernel compilation & `#print axioms` audit transcript: [`results/lean4-audit.txt`](results/lean4-audit.txt).
+Full kernel audit transcripts: [`results/lean4-audit.txt`](results/lean4-audit.txt) and [`results/lean4-multi-kernel.txt`](results/lean4-multi-kernel.txt) (10 pure Lean 4 `module` files, zero Mathlib, strictly `[propext, Classical.choice, Quot.sound]`, `9` zero-axiom constructive theorems).
 
 | Theorem Group | File | Theorems | Machine-Checked Mathematical Invariants |
 |---|---|---|---|
-| **Theorem I** | [`StoichiometryThermo.lean`](lean/CellulogonicProofs/StoichiometryThermo.lean) | `T01`–`T10` | Exact 8-species atomic mass conservation (`0` residual on all 17 reactions), exact First-Law energy balance (`0 uq`), strict Second-Law dissipation (`q_r > 0`), endergonic `L`/`P`/`T` ATP requirement, 4× respiration-vs-fermentation ATP yield, impossibility of closed-box perpetual-motion cycles, fission/engulfment conservation |
-| **Theorem II** | [`MembraneGeometry.lean`](lean/CellulogonicProofs/MembraneGeometry.lean) | `T11`–`T19` | Exact $Q$ doubling under symmetric halving, necessary & sufficient $Q \le 1/2$ symmetric threshold, swollen interphase blockage, equal-ratio suboptimality, constructive exosome escape `(47,72)->(6,16)+(41,56)`, exact polynomial **Global Minimax Theorem of Vesicle Division** $2(x^3+y^3)^2 - (x^2+y^2)^3 = (x-y)^2(x^4+2x^3y+2xy^3+y^4)$, volume/lipid monotonicity |
-| **Theorem III** | [`BioenergeticsEndosymbiosis.lean`](lean/CellulogonicProofs/BioenergeticsEndosymbiosis.lean) | `T20`–`T27` | Prokaryotic $1/R$ ceiling ($c_V R < 3 c_A$), decreasing prokaryotic specific power density, **Endosymbiotic $O(1)$ Scaling Liberation**, $R/r$ surface amplification, secondary endosymbiosis additivity, mitotic heteroplasmy conservation & purifying selection theorem, EGT genome economy |
-| **Theorem IV** | [`ChemiosmosisAutopoiesis.lean`](lean/CellulogonicProofs/ChemiosmosisAutopoiesis.lean) | `T28`–`T36` | Solvent-dependent c-ring stoichiometry thresholds ($n_H \ge 3$ Terran, $n_H \ge 2$ Venus, $n_H \ge 4$ Titan), passive Levin gap-junction Dirichlet energy dissipation & charge conservation, voltage contraction stability, inert-crystal & white-noise `COVI = 0` anti-gaming bounds, Markov-blanket boundary separation |
-| **Theorem V** | [`EutelicOrganogenesis.lean`](lean/CellulogonicProofs/EutelicOrganogenesis.lean) | `T37`–`T44` | 3D hollow-tube lumen lower bound ($\ge 3 L_{\text{rings}}$), minimum viable 7-organ metazoan budget ($\ge 355$ / $[500, 1000]$ + 800-cell witness), syncytial & myoepithelial sub-500 compression, hydrostatic skeleton incompressibility, eutely hypertrophy zero-hyperplasia law, Tardigrade TDP bioglass decay suppression & conserved dehydration/rehydration, protonephridial flame-cell balance, 5-tier DNA→Organism mass conservation |
-| **Theorem VI** | [`CytoskeletonNanomechanics.lean`](lean/CellulogonicProofs/CytoskeletonNanomechanics.lean) | `T45`–`T50` | Stokes overdamped viscous kinetic dissipation (`T45`), pairwise 3D soft-body momentum conservation (`T46`), cytokinetic prolate elongation surface-area excess (`T47`), Fröhlich–Pokorný GHz microtubule coherence metabolic pumping threshold (`T48`), GHz standing-wave length scaling (`T49`), and ATP-bounded actomyosin pulsatile mechanical work (`T50`) |
-| **Theorem VII** | [`MorphogeneticGRN.lean`](lean/CellulogonicProofs/MorphogeneticGRN.lean) | `T51`–`T58` | Wolpert French-Flag morphogen partition completeness (`T51`), Steinberg differential adhesion energy-minimizing cell sorting (`T52`), apical actomyosin constriction wedge curvature (`T53`), eutelic binary lineage countdown bound `2^9=512, 2^10=1024` (`T54`), Hippo mechanical contact-inhibition arrest (`T55`), Hebbian activity-dependent axon pruning & LTP (`T56`), CPG pacemaker sensorimotor bound (`T57`), and zero-drift morphogenetic signaling conservation (`T58`) |
+| **Spec (Isolated)** | [`Spec.lean`](lean/CellulogonicProofs/Spec.lean) | Defs | Pure `@[expose] public` definitions only (`0` proofs, `0 sorry`) imported by `Challenge.lean` & `Solution.lean` |
+| **Theorem I** | [`StoichiometryThermo.lean`](lean/CellulogonicProofs/StoichiometryThermo.lean) | `T01`–`T10` | Exact 8-species atomic mass conservation (`0` residual on all 19 reactions `R1`–`R15c`), exact First-Law energy balance (`0 uq`) and strict Second-Law dissipation (`q_r > 0`) across ALL 4 planetary solvents (`Terran`, `Titan e_pmf=8`, `Hydrothermal`, `Venus`) & c-ring `n_H`, endergonic ATP requirement, 4× respiration yield, impossibility of closed-box perpetual-motion cycles |
+| **Theorem II** | [`MembraneGeometry.lean`](lean/CellulogonicProofs/MembraneGeometry.lean) | `T11`–`T19` | Exact $Q$ doubling under symmetric halving, $Q \le 1/2$ threshold, constructive exosome escape `(47,72)->(6,16)+(41,56)`, exact sextic **Global Minimax Theorem of Vesicle Division** $2(x^3+y^3)^2 - (x^2+y^2)^3 = (x-y)^2(x^4+2x^3y+2xy^3+y^4)$, monotonicity |
+| **Theorem III** | [`BioenergeticsEndosymbiosis.lean`](lean/CellulogonicProofs/BioenergeticsEndosymbiosis.lean) | `T20`–`T27` | Prokaryotic $1/R$ ceiling ($c_V R < 3 c_A$), **Endosymbiotic $O(1)$ Scaling Liberation**, $R/r$ surface amplification, secondary endosymbiosis additivity, mitotic heteroplasmy conservation & purifying selection, EGT genome economy |
+| **Theorem IV** | [`ChemiosmosisAutopoiesis.lean`](lean/CellulogonicProofs/ChemiosmosisAutopoiesis.lean) | `T28`–`T36` | Strict Second-Law solvent c-ring floors ($n_H \ge 3$ Terran, $n_H \ge 2$ Venus, $n_H \ge 4$ Titan), passive gap-junction Dirichlet energy dissipation & charge conservation, voltage contraction, inert-crystal (`templateCount = 0`) & white-noise `COVI = 0` anti-gaming bounds, Markov-blanket boundary separation |
+| **Theorem V** | [`EutelicOrganogenesis.lean`](lean/CellulogonicProofs/EutelicOrganogenesis.lean) | `T37`–`T44` | 3D hollow-tube lumen bound, minimum viable 7-organ metazoan budget ($\ge 355$ / 800-cell witness), syncytial/myoepithelial compression, hydrostatic incompressibility, eutely hypertrophy, Tardigrade TDP bioglass decay suppression & dehydration conservation, protonephridial balance, 5-tier mass conservation |
+| **Theorem VI** | [`CytoskeletonNanomechanics.lean`](lean/CellulogonicProofs/CytoskeletonNanomechanics.lean) | `T45`–`T50` | Stokes overdamped viscous dissipation, 3D soft-body momentum conservation, prolate surface-area excess, classical stateful Fröhlich–Pokorný GHz relaxation ODE, GHz standing-wave length scaling, ATP-bounded actomyosin work |
+| **Theorem VII** | [`MorphogeneticGRN.lean`](lean/CellulogonicProofs/MorphogeneticGRN.lean) | `T51`–`T58` | Wolpert French-Flag completeness, Steinberg differential adhesion sorting, apical constriction wedge curvature, eutelic tree invariant $\sum 2^{\text{rem}} \le N_0 \cdot 2^{d_0}$, exact C11 Hippo TF7 hysteresis, Hebbian axon pruning, exact C11 CPG phase bound, `StoichiometryThermo`-backed trace conservation |
+| **Theorem VIII** | [`ContinuumBiomechanics.lean`](lean/CellulogonicProofs/ContinuumBiomechanics.lean) | `C59`–`C62` | XPBD numerical damping monotonicity & non-negativity, 100% carcass-to-detritus mass conservation, maternal yolk cleavage enthalpy conservation, biotensegrity quadratic strain non-negativity |
+| **Module 9** | [`NonVacuity.lean`](lean/CellulogonicProofs/NonVacuity.lean) | `NV01`–`NV08` | Explicit constructive inhabitants & sharp negative boundaries proving every universal hypothesis bundle is non-vacuous |
 
 ---
 
-## 2. Falsifiable: 24-Gate Suite + 8 Planted Negative Mutants (Win64 & Linux)
+## 2. Falsifiable: 26-Gate Suite + 8 Planted Negative Mutants + 1,000-Case ABI Fuzz (Win64 & Linux)
 
-Sources: [`test/test_falsification.c`](test/test_falsification.c), [`results/11_falsification_win64.txt`](results/11_falsification_win64.txt), [`results/11_falsification_linux.txt`](results/11_falsification_linux.txt).
+Sources: [`test/test_falsification.c`](test/test_falsification.c), [`test/fuzz_cmbin_abi.c`](test/fuzz_cmbin_abi.c), [`results/11_falsification_win64.txt`](results/11_falsification_win64.txt), [`results/11_falsification_linux.txt`](results/11_falsification_linux.txt).
 
 | Gate | Falsification Property & Planted Negative Mutant Tested | Win64 PE64 (`clang 23.1.0`) | Linux ELF64 (`gcc 13.3.0`) |
 |---|---|---|---|
-| `G01` | CPUID Silicon Probe + NIST FIPS 180-4 SHA-256 `"abc"` exact vector | PASS (`0.0000s`) | PASS (`0.0002s`) |
-| `G02` | Exact Mass/First-Law Ledger + **Mutant M1 (phantom `+1 uq` energy)** | PASS (`0.0008s`) | PASS (`0.0008s`) |
-| `G03` | 4-Solvent Second-Law Sink + **Mutant M2 (heat-sink reversal verified by engine)** | PASS (`0.0034s`) | PASS (`0.0035s`) |
-| `G04` | Canham–Helfrich $Q \le 1/2$ & Constructive Exosome Escape (`T12`–`T16`) | PASS (`0.0000s`) | PASS (`0.0000s`) |
-| `G05` | Closed-Box (`BOXING=100`) & Open-Flux 120-Epoch `0`-Residual Closure | PASS (`0.0093s`) | PASS (`0.0109s`) |
-| `G06` | Domain-Isolated `Philox4x32-10` + **Mutant M3 + Clamped 112T + Tampered `.cmbin` Reject** | PASS (`0.0033s`) | PASS (`0.0237s`) |
-| `G07` | **Dual-Kernel 0-Bit SHA-256 Parity (`SIMD_AVX2 == SCALAR_REF`)** | PASS (`0.0152s`) | PASS (`0.0114s`) |
-| `G08` | Strict Observer Independence (`P9`) + **Mutant M4 (1-bit observer write)** | PASS (`0.0329s`) | PASS (`0.0246s`) |
-| `G09` | `.cmbin` Snapshot Save (`AVX2`) & Cross-Kernel Resume (`Scalar`) 0-Bit Parity | PASS (`0.0125s`) | PASS (`0.0409s`) |
-| `G10` | Zero Post-Warmup Heap Allocations (`HW02`/`P10`, `>10k` cell steps) | PASS (`0.0129s`) | PASS (`0.0100s`) |
-| `G11` | Zero-Seed Spontaneous Protocell Abiogenesis (`alive: 0 -> >20, COVI > 30`) | PASS (`0.0482s`) | PASS (`0.0369s`) |
-| `G12` | Anti-Gaming Gates + **Mutants M5 (Inert Crystal) & M6 (White Noise)** | PASS (`0.0006s`) | PASS (`0.0003s`) |
-| `G13` | Serial Endosymbiosis & Lane $1/R$ Bioenergetic Liberation (ON vs. OFF) | PASS (`0.0202s`) | PASS (`0.0188s`) |
-| `G14` | 4-Solvent Sequential Cross-World Xenocellular Transplant Closure | PASS (`0.0097s`) | PASS (`0.0078s`) |
-| `G15` | Levin Bioelectric Morphogenesis & Track A Constitutional Cancer Policing | PASS (`0.0176s`) | PASS (`0.0131s`) |
-| `G16` | Tardigrade TDP Bioglass Tun + **Mutant M7 (TDP Knockout Collapse)** | PASS (`0.0209s`) | PASS (`0.0162s`) |
-| `G17` | 13-Vector Constraint-Backlash Escape Paradox (`0% / 50% / 100%`) | PASS (`0.0176s`) | PASS (`0.0128s`) |
-| `G18` | Exact Atomic Mass Audit + **Mutant M8 (1-Lipid `8 amu` Mass Leak)** | PASS (`0.0009s`) | PASS (`0.0007s`) |
-| `G19` | 4-Build Bridges (`AUTOPHAGE` 256B DNA → `Asmodensius` 112-Trait Vector) | PASS (`0.0011s`) | PASS (`0.0011s`) |
-| `G20` | Locked Multi-Seed Paired Statistical Dominance (`N = 8`, Feral > Castrated) | PASS (`0.1086s`) | PASS (`0.0890s`) |
-| `G21` | **3D Off-Lattice Free-Swimming, Polymorphism & Actomyosin Breathing** | PASS (`0.0043s`) | PASS (`0.0053s`) |
-| `G22` | **Fröhlich–Pokorný GHz Microtubule Coherence Strictly Requires ATP (`T48`–`T49`)** | PASS (`0.0035s`) | PASS (`0.0042s`) |
-| `G23` | **3D Embryogenesis: Morphogen GPS, GRN Fates, Steinberg Sorting & Hippo/Eutely (`T51`–`T55`)** | PASS (`0.0130s`) | PASS (`0.0138s`) |
-| `G24` | **Axon Guidance (Netrin/Slit), Hebbian Pruning & CPG Motor Waves (`T56`–`T58`)** | PASS (`0.0088s`) | PASS (`0.0091s`) |
-| **TOTAL** | **24 / 24 GATES · 8 / 8 PLANTED MUTANTS CAUGHT** | **`0.366s`** | **`0.355s`** |
+| `G01`–`G10` | Silicon Probe + SHA-256 `"abc"`, Mass/Energy Ledger + **M1**, 4-Solvent 2nd Law + **M2**, Canham–Helfrich (`T12`–`T16`), Closed/Open 0-Drift, `Philox4x32-10` + **M3** + `"CMB5"` Tamper/EOF Reject, **Dual-Kernel 0-Bit SHA-256 Parity**, Observer Independence + **M4**, Cross-Kernel Snapshot Resume, Zero Post-Warmup Heap Allocs | PASS | PASS |
+| `G11`–`G20` | Zero-Seed Abiogenesis, Anti-Gaming (`T34`) + **M5/M6**, Serial Endosymbiosis (`1/R` Liberation), 4-Solvent Transplant + Terran→Venus Sweep, Bioelectric Morphogenesis & Track A Policing, Tardigrade TDP + **M7**, 13-Vector Backlash Paradox, Exact Mass Audit + **M8**, 4-Build `AUTOPHAGE`/`Asmodensius` Bridges, Locked `N=8` Paired Dominance | PASS | PASS |
+| `G21`–`G24` | 3D Off-Lattice Swimming & Actomyosin Breathing, ATP-Gated Fröhlich GHz Resonance (`T48`–`T49`), 3D 5-Fate Clonal Embryogenesis & Z-Invariance (`T51`–`T55`), Netrin/Slit Axon Guidance + Hebbian Pruning + ATP-Billed CPG Waves (`T56`–`T58`) | PASS | PASS |
+| `G25` | **Negative ABI Bounds & Re-Signed Malformed `.cmbin` Rejection** (invalid world/cell/config/re-signed corrupt blobs) | PASS | PASS |
+| `G26` | **Photon Budget, Complete Canonical State SHA-256 & Tun Bond-Detach Regression** | PASS | PASS |
+| **TOTAL** | **26 / 26 GATES · 8 / 8 PLANTED MUTANTS CAUGHT · 1,000 / 1,000 `fuzz_cmbin_abi` · 2,700 / 2,700 `prop_check`** | **`0.866s`** | **`0.902s`** |
 
 ---
 
-## 3. Verifiable & Authenticated: 4-Way Cross-OS / Cross-Kernel Bit-Exact SHA-256 Proof (`v1.2.1`)
+## 3. Verifiable & Authenticated: 4-Way Cross-OS / Cross-Kernel Bit-Exact SHA-256 Parity (`v1.5.0`)
 
-Benchmark (`32×32×32 μm` continuous 3D off-lattice fluid chamber, `300` epochs, `35,792` cell steps, `667,512` exact conserved reactions, seed `5000`; artifacts [`02_bench_win64.txt`](results/02_bench_win64.txt) & [`02_bench_linux.txt`](results/02_bench_linux.txt)):
+Benchmark (`32×32×32 μm` continuous 3D off-lattice fluid chamber, `300` epochs, `51,488` cell steps, `1,222,070` exact conserved reactions, seed `5000`; artifacts [`02_bench_win64.txt`](results/02_bench_win64.txt) & [`02_bench_linux.txt`](results/02_bench_linux.txt)):
 
 | Platform / Compiler / ABI | Kernel | Throughput | Mass / Energy Residual | Canonical State SHA-256 |
 |---|---|---|---|---|
-| Windows 11 PE64 (`clang 23.1.0`, MS x64) | `SIMD_AVX2` | `30.281 M rxns/s` (`1.624 M steps/s`, `1.37×`) | `0 amu` / `0 uq` (`0.00e+00`) | `f20e16ece7f747b887aaf7643562cee485cf6216c3bb843edfba28004f26e918` |
-| Windows 11 PE64 (`clang 23.1.0`, MS x64) | `SCALAR_REF` | `1.182 M steps/s` | `0 amu` / `0 uq` (`0.00e+00`) | `f20e16ece7f747b887aaf7643562cee485cf6216c3bb843edfba28004f26e918` |
-| Ubuntu Linux ELF64 (`gcc 13.3.0`, SysV) | `SIMD_AVX2` | `31.181 M rxns/s` (`1.672 M steps/s`, `1.51×`) | `0 amu` / `0 uq` (`0.00e+00`) | `f20e16ece7f747b887aaf7643562cee485cf6216c3bb843edfba28004f26e918` |
-| Ubuntu Linux ELF64 (`gcc 13.3.0`, SysV) | `SCALAR_REF` | `1.109 M steps/s` | `0 amu` / `0 uq` (`0.00e+00`) | `f20e16ece7f747b887aaf7643562cee485cf6216c3bb843edfba28004f26e918` |
+| Windows 11 PE64 (`clang 23.1.0`, MS x64) | `SIMD_AVX2` | `22.643 M rxns/s` (`0.954 M steps/s`, `1.23×`) | `0 amu` / `0 uq` (`0.00e+00`) | `681a9747e9f4caa110d88e3fe8995e685b397e3350f52ab1e8294c15519eceff` |
+| Windows 11 PE64 (`clang 23.1.0`, MS x64) | `SCALAR_REF` | `0.775 M steps/s` | `0 amu` / `0 uq` (`0.00e+00`) | `681a9747e9f4caa110d88e3fe8995e685b397e3350f52ab1e8294c15519eceff` |
+| Ubuntu Linux ELF64 (`gcc 13.3.0`, SysV) | `SIMD_AVX2` | `15.752 M rxns/s` (`0.664 M steps/s`, `1.09×`) | `0 amu` / `0 uq` (`0.00e+00`) | `681a9747e9f4caa110d88e3fe8995e685b397e3350f52ab1e8294c15519eceff` |
+| Ubuntu Linux ELF64 (`gcc 13.3.0`, SysV) | `SCALAR_REF` | `0.610 M steps/s` | `0 amu` / `0 uq` (`0.00e+00`) | `681a9747e9f4caa110d88e3fe8995e685b397e3350f52ab1e8294c15519eceff` |
 
 ---
 
 ## 4. Locked Paired Statistical Suite (`N = 24`, Seeds `5000..5023`, 180 Epochs)
 
-Source: [`results/09_paired_stats_n24.txt`](results/09_paired_stats_n24.txt) — 10,000-iteration deterministic sign-flip permutation test + Holm–Bonferroni FWER correction across 4 pre-registered hypotheses:
+Source: [`results/09_paired_stats_n24.txt`](results/09_paired_stats_n24.txt) — 10,000-iteration deterministic sign-flip permutation test + step-down Holm–Bonferroni FWER correction + paired Cohen's $d_z$ + 95% bootstrap CIs across 4 pre-registered hypotheses (**unanimous `96/96` wins across all 4 arms!**):
 
-| Pre-Registered Hypothesis (`N = 24` Locked Pairs) | Mean Arm A | Mean Arm B | Mean Diff | Pair Wins | $p_{\text{raw}}$ | $p_{\text{Holm}}$ |
-|---|---|---|---|---|---|---|
-| **H1: COVI (Feral vs. 70% Castrated)** | `81.768` | `47.194` | `+34.574` | **`24 / 24`** | `0.00010` | **`0.00040`** |
-| **H2: Max Cell Vol (Endosymbiosis ON vs. OFF)** | `530.292` | `207.708` | `+322.583` | **`23 / 24`** | `0.00020` | **`0.00080`** |
-| **H3: Bioelectric $V_m$ Std Dev (ON vs. OFF)** | `21.792` | `7.486` | `+14.306` | **`24 / 24`** | `0.00010` | **`0.00040`** |
-| **H4: Tardigrade TDP Survival (Intact vs. KO)** | `33.125` | `0.542` | `+32.583` | **`24 / 24`** | `0.00010` | **`0.00040`** |
+| Pre-Registered Hypothesis (`N = 24` Locked Pairs) | Mean A | Mean B | Mean Diff | 95% Bootstrap CI | Cohen $d_z$ | Wins | $p_{\text{Holm}}$ |
+|---|---|---|---|---|---|---|---|
+| **H1: COVI (Feral vs. 70% Castrated)** | `87.090` | `40.535` | `+46.555` | `[+39.778, +53.153]` | `2.675` | **`24 / 24`** | **`0.00040`** |
+| **H2: Max Cell Vol (Endosymbiosis ON vs. OFF)** | `1439.417` | `153.333` | `+1286.083` | `[+1075.542, +1495.875]` | `2.305` | **`24 / 24`** | **`0.00040`** |
+| **H3: Bioelectric $V_m$ Std Dev (ON vs. OFF)** | `23.130` | `0.000` | `+23.130` | `[+21.000, +25.277]` | `4.214` | **`24 / 24`** | **`0.00040`** |
+| **H4: Tardigrade TDP Survival (Intact vs. KO)** | `167.125` | `2.417` | `+164.708` | `[+122.792, +211.792]` | `1.468` | **`24 / 24`** | **`0.00040`** |
 
 ---
 
 ## 5. Exact Scope Boundary Between Formal Kernel & Runtime Empirical Verification
 
-- **Inside Lean 4 Kernel (`58` theorems)**: Exact algebraic/combinatorial/integer-inequality statements over the discrete reaction matrix, Canham–Helfrich reduced volume polynomial, discrete spherical bioenergetic scaling, solvent c-ring thresholds, pairwise gap-junction Dirichlet dissipation, anti-gaming COVI gates, eutelic 7-organ/tube/hydrostatic/anhydrobiosis laws, 3D overdamped Stokes / soft-body momentum / Fröhlich–Pokorný GHz microtubule / actomyosin bounds, and Wolpert/Steinberg/Apical/Eutely/Hippo/Hebbian/CPG developmental theorems (`T01`–`T58`).
-- **Inside C11 Executable Falsification Harness (`24` gates + `8` mutants)**: Runtime memory layout, zero post-warmup allocations, 4-way cross-compiler AVX2 vs. scalar bit-exactness, `.cmbin` binary serialization, observer independence (`P9`), 3D off-lattice free-swimming & ATP-gated GHz microtubule resonance, 3D clonal embryogenesis & axon/CPG wiring, stochastic evolutionary emergence from unseeded soup, and multi-seed statistical inference (`N = 24`).
+- **Inside Lean 4.35.0 6-Kernel Suite (`70` audited theorems):** Exact algebraic/combinatorial/integer-inequality statements over the isolated `Spec.lean` laws (`T01`–`T58`, `C59`–`C62`) plus constructive non-vacuity inhabitants (`NV01`–`NV08`).
+- **Inside C11 Executable Falsification & Web/Oracle Harness (`26` gates + `8` mutants + `1,000` fuzz cases + `2,700` property trials + `6,586` exact Python oracle checks + `12` Web HTTP/CSP/CSRF tests):** Runtime memory layout (`_Static_assert`), `-Werror` clean build, static zero-heap hot-loop symbol audit, ASan+UBSan+AVX2 zero-leak/zero-UB verification, zero post-warmup allocations, 4-way cross-OS AVX2 vs. scalar bit-exactness, complete `"CMB5"` `.cmbin` validation + negative ABI bounds rejection, observer independence, 3D off-lattice embryogenesis/xenobiology, loopback web bridge security (`test/test_web_server.mjs`), and locked `N = 24` statistical inference.
