@@ -5,7 +5,8 @@ param(
         'Z:\[Vibe Coded (AI)]\CODEX',
         'Z:\[Vibe Coded (AI)]\CLAUDECODE'
     ),
-    [string]$JsonPath
+    [string]$JsonPath,
+    [switch]$Detailed
 )
 
 $ErrorActionPreference = 'Stop'
@@ -54,4 +55,7 @@ if ($JsonPath) {
     $report | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $JsonPath -Encoding utf8
 }
 $report | Select-Object generated_utc, repository_count, dirty_count, unmerged_count, diff_check_failure_count | Format-List
+if ($Detailed) {
+    $report.repositories | Where-Object dirty | ForEach-Object { "DIRTY: $($_.path)" }
+}
 if ($report.unmerged_count -gt 0 -or $report.diff_check_failure_count -gt 0) { exit 2 }
