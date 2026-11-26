@@ -248,8 +248,8 @@
         "SYS-009",
         "XSPEC-009"
       ],
-      "target_statement": "70 pure Lean 4.35.0 six-kernel Palomar discrete biophysical, developmental, continuum & non-vacuity invariants (T01-T58, C59-C62, NV01-NV08; paired with cellular-engine-omega 89, autophage 31, noetic-organism-omega 48, asmodensius-native 20 in the A-Life Omega stack).",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0 across 5 A-Life Omega public build repos (258 combined embedded invariants; cellulogonic-mecha verified across all 6 independent kernels via lake comparator --paranoid on CI #45751776610).",
+      "target_statement": "70 pure Lean 4.35.0 six-kernel Palomar discrete biophysical, developmental, continuum & non-vacuity invariants (T01-T58, C59-C62, NV01-NV08; paired with cellular-engine-omega 100, autophage 31, noetic-organism-omega 48, asmodensius-native 20 in the A-Life Omega stack).",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0 across 5 A-Life Omega public build repos (269 combined embedded invariants; cellulogonic-mecha & cellular-engine-omega verified across all 6 independent kernels via lake comparator --paranoid on CI #45751776610 and #45810663954).",
       "honesty_boundary": "Discrete simulation model invariants only; explicitly solves 0/1,900 overarching Mega-Atlas open problems (all 7 adjacent catalog entries remain OPEN) and disclaims wet-lab proof or sentience."
     },
     {

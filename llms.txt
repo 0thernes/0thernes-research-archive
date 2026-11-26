@@ -13,7 +13,7 @@
 ## Epistemic Status & Verification
 - Grand Mega-Atlas V2 open problems retired: 0 / 1900
 - Peer-literature open sub-conjectures / open questions formally proved in Lean 4.35.0: 4
-- Tracked unique public repositories: 35
+- Tracked unique public repositories: 36
 - Primary verifier: `python3 scripts/verify_archive.py` and `python3 -m pytest -v tests/`
 
 ## Governance & Documentation
