@@ -73,3 +73,6 @@
 [submodule "repos/xiaomi-17t-pro-lab"]
 	path = repos/xiaomi-17t-pro-lab
 	url = https://github.com/0thernes/xiaomi-17t-pro-lab.git
+[submodule "repos/promislow-fracton-amoeba"]
+	path = repos/promislow-fracton-amoeba
+	url = https://github.com/0thernes/promislow-fracton-amoeba.git

@@ -6,7 +6,7 @@
   "mega_atlas_version": "v2.6.0",
   "mega_atlas_total_problems": 1900,
   "grand_problems_retired": 0,
-  "public_repositories_audited": 72,
+  "public_repositories_audited": 73,
   "author": {
     "full_name": "Alexander Stephen Donahue",
     "orcid": "0009-0006-8168-9648",
@@ -16,7 +16,7 @@
     "grand_mega_atlas_problems_retired": 0,
     "published_open_subconjectures_proved_in_lean": 4,
     "preprint_conjectures_proved_with_external_citation_caveat": 1,
-    "bounded_partial_or_barrier_preprint_suites": 7,
+    "bounded_partial_or_barrier_preprint_suites": 8,
     "embedded_discrete_lean_build_suites": 10,
     "statement": "Strictly 0 of 1,900 grand open problems in Unsolved Problems Mega-Atlas V2 are retired. Four peer-literature open sub-conjectures/open questions and one unreviewed-preprint conjecture (modulo one cited theorem outside Lean) are completely machine-checked in Lean 4.35.0 within their published scopes, alongside bounded coordinate-pool minima, barrier formalizations, and discrete invariant suites."
   },
@@ -251,6 +251,25 @@
       "target_statement": "70 pure Lean 4.35.0 six-kernel Palomar discrete biophysical, developmental, continuum & non-vacuity invariants (T01-T58, C59-C62, NV01-NV08; paired with cellular-engine-omega 89, autophage 31, noetic-organism-omega 48, asmodensius-native 20 in the A-Life Omega stack).",
       "lean_verification": "Zero-Mathlib Lean 4.35.0 across 5 A-Life Omega public build repos (258 combined embedded invariants; cellulogonic-mecha verified across all 6 independent kernels via lake comparator --paranoid on CI #45751776610).",
       "honesty_boundary": "Discrete simulation model invariants only; explicitly solves 0/1,900 overarching Mega-Atlas open problems (all 7 adjacent catalog entries remain OPEN) and disclaims wet-lab proof or sentience."
+    },
+    {
+      "archive_id": "0TH-2026-015",
+      "slug": "promislow-fracton-amoeba",
+      "repository": "https://github.com/0thernes/promislow-fracton-amoeba",
+      "version": "v1.0.0",
+      "resolution_class": "PARTIAL_BOUNDED_CASE",
+      "grand_atlas_problem_retired": false,
+      "related_mega_atlas_ids": [
+        "ALG-035",
+        "ANL-063",
+        "QC-032",
+        "CM-016",
+        "CM-018",
+        "FLD-060"
+      ],
+      "target_statement": "Machine-checks 15 headline theorems (T1a-T3c) + 5 auxiliary/adversarial/master decls bridging Hantzsche-Wendt group-ring unit obstructions (exhaustive 2^21 Gardam sign-lift impossibility via P_1^2-31 != +-1, all-m 2-adic Hensel tower), all-prime Haah cubic code no-strings & p=23 odd-L threshold, and V_4-symmetric Ronkin origin minima + Artin B_4 / full S_4 monodromy.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 20 audited decls across 17 Palomar module files, all 6 independent kernels (lean4lean 3,860 decls, con-leche/con-ron 3,863 decls, nanoda_bin, leanchecker-paranoid, lake comparator --paranoid; CI run 45751946493, Rekor 4117699930).",
+      "honesty_boundary": "Proves support-restricted integer lift obstructions, universal prime-characteristic Haah no-strings, and finite-band amoeba/braid theorems; overarching conjectures (Kaplansky Unit Conjecture over C[G]/Z[P] for unrestricted supports, Gottschalk Surjunctivity for non-sofic groups, general 3D fracton classification) remain explicitly OPEN."
     }
   ]
 }
