@@ -1,8 +1,8 @@
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-26T12:55:10Z` · **Mode:** `live-github-api`  
-**Tracked Public Repositories:** 36 (`28` exact pin match, `4` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Synced (UTC):** `2026-11-26T13:10:32Z` · **Mode:** `live-github-api`  
+**Tracked Public Repositories:** 36 (`27` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -21,12 +21,12 @@
 | [`contextuality-tensor-lab`](https://github.com/0thernes/contextuality-tensor-lab) | `0TH-2026-003` | Tier I | `f7a1e6e74f` | `81f8d20c95` | `v0.1.0` | [`success`](https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42752465789) | `HISTORICAL_ARCHIVED` |
 | [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) | `0TH-BUILD-005`, `0TH-DISC-001` | Tier II / Tier III | `b0dcf153b9` | `b0dcf153b9` | `v0.23.0` | [`success`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom/actions/runs/45117980365) | `EXACT_PIN_MATCH` |
 | [`dimension-omega-singularity`](https://github.com/0thernes/dimension-omega-singularity) | `0TH-DISC-008` | Tier III | `947054ec64` | `947054ec64` | `main` | [`success`](https://github.com/0thernes/dimension-omega-singularity/actions/runs/42080074964) | `EXACT_PIN_MATCH` |
-| [`glitchling-jam`](https://github.com/0thernes/glitchling-jam) | `0TH-DISC-007` | Tier III | `2fb111f12e` | `92799daae8` | `v2.3.0` | [`success`](https://github.com/0thernes/glitchling-jam/actions/runs/45823061012) | `AHEAD_OF_PIN` |
+| [`glitchling-jam`](https://github.com/0thernes/glitchling-jam) | `0TH-BUILD-015`, `0TH-DISC-007` | Tier II / Tier III | `92799daae8` | `92799daae8` | `v2.3.0` | [`success`](https://github.com/0thernes/glitchling-jam/actions/runs/45823061012) | `EXACT_PIN_MATCH` |
 | [`grimoire-algorithms-of-the-arcane`](https://github.com/0thernes/grimoire-algorithms-of-the-arcane) | `0TH-DISC-009` | Tier III | `edca7f8dc2` | `edca7f8dc2` | `main` | [`success`](https://github.com/0thernes/grimoire-algorithms-of-the-arcane/actions/runs/28751566956) | `EXACT_PIN_MATCH` |
 | [`hoggar-bound`](https://github.com/0thernes/hoggar-bound) | `0TH-2026-001` | Tier I | `c74135c429` | `4dd33138c3` | `v1.0.0` | — | `HISTORICAL_ARCHIVED` |
 | [`hoggar-bound-lab`](https://github.com/0thernes/hoggar-bound-lab) | `0TH-2026-002`, `0TH-DISC-010` | Tier I / Tier III | `eb2d83ef72` | `3ef737d7f0` | `v1.8.0` | [`success`](https://github.com/0thernes/hoggar-bound-lab/actions/runs/45367463693) | `HISTORICAL_ARCHIVED` |
 | [`human-synapse-bouton-lab`](https://github.com/0thernes/human-synapse-bouton-lab) | `0TH-2026-007`, `0TH-2026-008` | Tier I | `06e0dcdd5f` | `05b2855c4b` | `v1.3.0` | [`success`](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45822607875) | `AHEAD_OF_PIN` |
-| [`kochen-specker-extremal-lab`](https://github.com/0thernes/kochen-specker-extremal-lab) | `0TH-2026-004` | Tier I | `03c8910e5a` | `03c8910e5a` | `v1.9.0` | [`success`](https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45741815040) | `EXACT_PIN_MATCH` |
+| [`kochen-specker-extremal-lab`](https://github.com/0thernes/kochen-specker-extremal-lab) | `0TH-2026-004` | Tier I | `03c8910e5a` | `4c4dda9113` | `v2.0.0` | [`success`](https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45825147353) | `AHEAD_OF_PIN` |
 | [`monodromia`](https://github.com/0thernes/monodromia) | `0TH-2026-014` | Tier I | `153792bdae` | `153792bdae` | `v1.0.0` | [`success`](https://github.com/0thernes/monodromia/actions/runs/45749048038) | `EXACT_PIN_MATCH` |
 | [`multinomial-tv-conjecture`](https://github.com/0thernes/multinomial-tv-conjecture) | `0TH-2026-006` | Tier I | `5ceae10ee7` | `5ceae10ee7` | `v2.2.0` | [`success`](https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/45747471549) | `EXACT_PIN_MATCH` |
 | [`neuralese`](https://github.com/0thernes/neuralese) | `0TH-DISC-003` | Tier III | `2527d67355` | `2527d67355` | `v17.3.0` | [`success`](https://github.com/0thernes/neuralese/actions/runs/41337677626) | `EXACT_PIN_MATCH` |
@@ -34,11 +34,11 @@
 | [`noetic-organism-omega`](https://github.com/0thernes/noetic-organism-omega) | `0TH-BUILD-010` | Tier II | `c4301d926f` | `c4301d926f` | `v2.1.0` | [`success`](https://github.com/0thernes/noetic-organism-omega/actions/runs/45752970555) | `EXACT_PIN_MATCH` |
 | [`omega-triscale-observatory`](https://github.com/0thernes/omega-triscale-observatory) | `0TH-BUILD-014`, `0TH-DISC-012` | Tier II / Tier III | `bbe4da96c5` | `bbe4da96c5` | `v6.7.0` | [`success`](https://github.com/0thernes/omega-triscale-observatory/actions/runs/45751750665) | `EXACT_PIN_MATCH` |
 | [`p-vs-np-frontier-lab`](https://github.com/0thernes/p-vs-np-frontier-lab) | `0TH-2026-013` | Tier I | `01e56da105` | `01e56da105` | `v1.1.0` | [`success`](https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45743257383) | `EXACT_PIN_MATCH` |
-| [`pauli-contextuality-lab`](https://github.com/0thernes/pauli-contextuality-lab) | `0TH-2026-009` | Tier I | `cbf384a47d` | `cbf384a47d` | `v2.9.0` | [`success`](https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45741807525) | `EXACT_PIN_MATCH` |
+| [`pauli-contextuality-lab`](https://github.com/0thernes/pauli-contextuality-lab) | `0TH-2026-009` | Tier I | `cbf384a47d` | `b0f8a180f4` | `v2.9.0` | [`success`](https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45826042782) | `AHEAD_OF_PIN` |
 | [`planaria`](https://github.com/0thernes/planaria) | `0TH-BUILD-002` | Tier II | `6979cc1be4` | `6979cc1be4` | `v2.4.0` | [`success`](https://github.com/0thernes/planaria/actions/runs/45750499041) | `EXACT_PIN_MATCH` |
 | [`promislow-fracton-amoeba`](https://github.com/0thernes/promislow-fracton-amoeba) | `0TH-2026-015` | Tier I | `c829ab8115` | `c829ab8115` | `v1.0.0` | [`failure`](https://github.com/0thernes/promislow-fracton-amoeba/actions/runs/45751946456) | `EXACT_PIN_MATCH` |
 | [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `0TH-2026-011` | Tier I | `6c7f642146` | `6c7f642146` | `v2.5.0` | [`success`](https://github.com/0thernes/secmesh-pqsi/actions/runs/45746244341) | `EXACT_PIN_MATCH` |
-| [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `06461739b0` | `10923469a4` | `v1.5.0` | [`in_progress`](https://github.com/0thernes/ultrametrica/actions/runs/45823023293) | `AHEAD_OF_PIN` |
+| [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `06461739b0` | `10923469a4` | `v1.5.0` | [`success`](https://github.com/0thernes/ultrametrica/actions/runs/45823023430) | `AHEAD_OF_PIN` |
 | [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | `0TH-DISC-006` | Tier III | `0686cf9729` | `0686cf9729` | `main` | [`success`](https://github.com/0thernes/unsolved-black-hole-problems/actions/runs/45743010356) | `EXACT_PIN_MATCH` |
 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `0TH-BUILD-004`, `0TH-DISC-005` | Tier II / Tier III | `0604df5c70` | `0604df5c70` | `v0.5.0` | [`success`](https://github.com/0thernes/unsolved-mathematics/actions/runs/45742870717) | `EXACT_PIN_MATCH` |
 | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `0TH-BUILD-007` | Tier II | `541f093825` | `541f093825` | `v2.7.0` | [`success`](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/45805244327) | `EXACT_PIN_MATCH` |

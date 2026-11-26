@@ -17,7 +17,7 @@
     "published_open_subconjectures_proved_in_lean": 4,
     "preprint_conjectures_proved_with_external_citation_caveat": 1,
     "bounded_partial_or_barrier_preprint_suites": 8,
-    "embedded_discrete_lean_build_suites": 11,
+    "embedded_discrete_lean_build_suites": 13,
     "statement": "Strictly 0 of 1,900 grand open problems in Unsolved Problems Mega-Atlas V2 are retired. Four peer-literature open sub-conjectures/open questions and one unreviewed-preprint conjecture (modulo one cited theorem outside Lean) are completely machine-checked in Lean 4.35.0 within their published scopes, alongside bounded coordinate-pool minima, barrier formalizations, and discrete invariant suites."
   },
   "entries": [
@@ -301,6 +301,26 @@
       "target_statement": "40 constructive zero-Mathlib Lean 4.35.0 declarations (36 core + 4 Palomar certificates, 0 Classical.choice) certifying OVBS-52 weighting/monotonicity/anti-gaming annihilation, 10x10x10 Cube & 327-theorem accounting, 13x13 castration synergy bounds, Hardware Ring-0 ACL non-interference, and Pareto dominance, paired with 748-run N=48 Holm-Bonferroni empirical falsification and 25-row Mega-Atlas crosswalk.",
       "lean_verification": "Zero-Mathlib Lean 4.35.0, 40 constructive decls across 6 independent kernels incl. bubblewrap lake comparator --paranoid (CI #45821196180, SLSA #72657281 / Rekor 4126066465, Release v3.4.0 SLSA #72657109 / Rekor 4126062413, SWH swh:1:snp:e275a272a8b937aaecde04e2984abeaa609b2a82).",
       "honesty_boundary": "Discrete scoring/ACL/partition invariants and in-silico paired simulations only; explicitly retires 0/1,900 overarching Mega-Atlas open problems (all 25 mapped targets remain OPEN) and disclaims wet-lab proof or sentience."
+    },
+    {
+      "archive_id": "0TH-BUILD-015",
+      "slug": "glitchling-jam",
+      "repository": "https://github.com/0thernes/glitchling-jam",
+      "version": "v2.3.0",
+      "resolution_class": "FORMAL_INVARIANT_SUITE",
+      "grand_atlas_problem_retired": false,
+      "related_mega_atlas_ids": [
+        "AI-045",
+        "BIO-022",
+        "BIO-026",
+        "BIO-044",
+        "QM-007",
+        "QM-011",
+        "STAT-060"
+      ],
+      "target_statement": "72 pure zero-Mathlib Lean 4.35.0 declarations (63 library theorems incl. 6 NonVacuity & 6 AdversarialTests + 9 isolated Challenge/Solution Palomar targets) certifying 11-pool First-Law energy & closed N/C mass conservation, Clausius >= 0, CEGA-18 KS uncolorability (8<9), CHSH |S|<=2 & Bell-diagonal zero no-signaling, GF(2^4) axioms & RS[15,11,d=5], HEPTARCH anti-monarchy/anti-duopoly, NESTOR unbiased stochastic rounding, universal Ungar Poincare-disk Mobius containment, and Glitchling mirror/leaky invariants, paired with independent Python oracles (<=3.44e-15) and repeatable n=30 Results v3.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 72 audited decls across 11 files (1,858 lines), mandatory all-6-kernel bubblewrap lake comparator --paranoid (lean4lean 2,406 decls, con-leche/con-ron 2,409 decls, nanoda, Lean paranoid & default) + live sorry-tamper rejection (CI #45823061012, Release v2.3.0 SLSA #72663345 / Rekor 4126405071).",
+      "honesty_boundary": "Discrete simulation & mathematical-model invariants and in-silico paired falsification only; explicitly retires 0/1,900 overarching Mega-Atlas open problems (AI-045, BIO-022/026/044, QM-007/011, STAT-060 remain OPEN) and disclaims consciousness, sentience, AGI, or physical quantum biology."
     }
   ]
 }

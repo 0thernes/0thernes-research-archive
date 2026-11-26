@@ -13,10 +13,10 @@
 - **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)
 - **Live Portal:** [`https://0thernes.github.io/0thernes-research-archive/`](https://0thernes.github.io/0thernes-research-archive/)
 - **Contact:** `0_0@0thernes.art` · [0thernes.art](https://0thernes.art) · [github.com/0thernes](https://github.com/0thernes)
-- **Scope:** **42 public research entries** (`16 Tier I + 14 Tier II + 12 Tier III`) + **29 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
+- **Scope:** **43 public research entries** (`16 Tier I + 15 Tier II + 12 Tier III`) + **30 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 <!-- LIVE_ECOSYSTEM_STATUS:START -->
-> **Live Canonical Hub Mirror (`2026-11-26T12:55:10Z`):** Tracking **42 public research entries** (16 Tier I preprints · 14 Tier II builds · 12 Tier III laws/discoveries/atlases) across **36 unique public repositories** and **29 pinned Git submodules** (`28` exact pin matches · `4` active upstream ahead of release pin · `4` archived historical snapshots).  
+> **Live Canonical Hub Mirror (`2026-11-26T13:10:32Z`):** Tracking **43 public research entries** (16 Tier I preprints · 15 Tier II builds · 12 Tier III laws/discoveries/atlases) across **36 unique public repositories** and **30 pinned Git submodules** (`27` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
 > **Mega-Atlas V2 Cross-Check:** **`0 / 1900` grand open problems retired** · **4 peer-literature open sub-conjectures/questions formally proved in Lean 4.35.0** across 6 independent kernels. Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
 <!-- LIVE_ECOSYSTEM_STATUS:END -->
 
@@ -59,7 +59,7 @@ Full Tier I registry: [`registry/PAPERS.md`](registry/PAPERS.md) · Machine-read
 
 ## Tier II — Public Build White Papers & Embedded Pure Lean 4 Suites (`registry/BUILD_PAPERS.json`)
 
-Public engineering and laboratory repositories containing embedded technical white papers, verification audits, and **839 additional live-compiled Pure Lean 4 (`v4.35.0`, zero Mathlib, zero `sorry`, zero `bv_decide`) machine-checked declarations** strictly within `[propext, Classical.choice, Quot.sound]` or zero axioms:
+Public engineering and laboratory repositories containing embedded technical white papers, verification audits, and **911 additional live-compiled Pure Lean 4 (`v4.35.0`, zero Mathlib, zero `sorry`, zero `bv_decide`) machine-checked declarations** strictly within `[propext, Classical.choice, Quot.sound]` or zero axioms:
 
 | ID | Date | Build Repo & Version | Embedded Pure Lean 4.35.0 Suite | Archived White Paper / Artifact | Dossier |
 |---|---|---|---|---|---|
@@ -77,6 +77,8 @@ Public engineering and laboratory repositories containing embedded technical whi
 | `0TH-BUILD-012` | 2026-11-26 | [`xiaomi-17t-pro-lab`](https://github.com/0thernes/xiaomi-17t-pro-lab) `v3.1.0` | **75 constructive decls (0 `Classical.choice`, 10 Palomar targets + 7 `AdversarialTests`)** (12 files, 1,350 lines, **all 6 kernels via `lake comparator --paranoid` + live negative rejection**, Rekor `4124262738` & Release `4124220117`, DigiCert RFC 3161 `.tsr` + Bitcoin `.ots`, SWH `swh:1:snp:06ad26ff...`, 12/12 non-retracted DOIs, 54/54 60-digit oracle, 8/8 mutants, 50/50 3-OS tests, 9/9 Playwright CSP/E2E, 82/82 Build Standard v1.2.0) | [Donahue_2026_Xiaomi_17T_Pro_Lab.pdf](builds/0TH-BUILD-012_xiaomi-17t-pro-lab/Donahue_2026_Xiaomi_17T_Pro_Lab.pdf) · [lean4-audit.txt](builds/0TH-BUILD-012_xiaomi-17t-pro-lab/lean4-audit.txt) · [Mega-Atlas (0/1,900)](builds/0TH-BUILD-012_xiaomi-17t-pro-lab/mega-atlas-cross-reference.md) · [Round-2 Audit](builds/0TH-BUILD-012_xiaomi-17t-pro-lab/2026-11-26-round2-3-cycle-hardening-audit.md) | [Evidence](builds/0TH-BUILD-012_xiaomi-17t-pro-lab/EVIDENCE.md) · [Lab](https://0thernes.github.io/xiaomi-17t-pro-lab/) · [Blueprint](https://0thernes.github.io/xiaomi-17t-pro-lab/blueprint/) · [Release](https://github.com/0thernes/xiaomi-17t-pro-lab/releases/tag/v3.1.0) · [6-Kernel CI](https://github.com/0thernes/xiaomi-17t-pro-lab/actions/runs/45821462528) |
 | `0TH-BUILD-013` | 2026-11-26 | [`alife-singularity-omega-package`](https://github.com/0thernes/alife-singularity-omega-package) `v3.4.0` | **40 constructive decls (`36` core + `4` Palomar targets, 0 `Classical.choice`; paired with `291` native 6-kernel theorems = `327` ecosystem total)** (10 files, 648 lines, **all 6 kernels via bubblewrap `lake check` + `comparator --paranoid`**, CI `#45821196180` SLSA `#72657281` / Rekor `4126066465`, Release `v3.4.0` SLSA `#72657109` / Rekor `4126062413`, SWH `swh:1:snp:e275a272...`, 748-run N=48 paired falsification, 50-digit oracle + 1,250+ Hypothesis + 6/6 mutants, 20/20 live citations, 22/22 Forensic Gates, 100% Build Standard v1.2.0) | [Donahue_2026_alife_singularity_omega.pdf](builds/0TH-BUILD-013_alife-singularity-omega-package/Donahue_2026_alife_singularity_omega.pdf) · [lean_package_axioms.txt](builds/0TH-BUILD-013_alife-singularity-omega-package/lean_package_axioms.txt) · [Mega-Atlas (0/1,900)](builds/0TH-BUILD-013_alife-singularity-omega-package/MEGA_ATLAS_CROSSCHECK.md) · [Statement Fidelity](builds/0TH-BUILD-013_alife-singularity-omega-package/statement-fidelity.md) · [HARDENING_LOG.md](builds/0TH-BUILD-013_alife-singularity-omega-package/HARDENING_LOG.md) | [Evidence](builds/0TH-BUILD-013_alife-singularity-omega-package/EVIDENCE.md) · [Observatory](https://0thernes.github.io/alife-singularity-omega-package/) · [Blueprint](https://0thernes.github.io/alife-singularity-omega-package/blueprint/) · [Release](https://github.com/0thernes/alife-singularity-omega-package/releases/tag/v3.4.0) · [6-Kernel CI](https://github.com/0thernes/alife-singularity-omega-package/actions/runs/45821196180) |
 | `0TH-BUILD-014` | 2026-11-26 | [`omega-triscale-observatory`](https://github.com/0thernes/omega-triscale-observatory) `v6.7.0` | **Non-Lean Telemetry & Orchestration Cockpit (`0` local Lean files)** (12/12 Node + 5/5 Python + 370 `prop_check` + 6/6 `100%` surgical mutants killed, D7RO render-only observer isolation, loopback CSRF/CSWSH guard, SLSA `#72484379` / Rekor `4117670475`, 16/16 live refs, 8-page 0-overfull PDF, SWH `swh:1:snp:045edd61...`, 72/72 Build Standard v1.2.0) | [Donahue_2026_omega_triscale_observatory.pdf](builds/0TH-BUILD-014_omega-triscale-observatory/Donahue_2026_omega_triscale_observatory.pdf) · [Mega-Atlas (0/1,900)](builds/0TH-BUILD-014_omega-triscale-observatory/MEGA_ATLAS_CROSSCHECK.md) · [CLAIMS.md](builds/0TH-BUILD-014_omega-triscale-observatory/CLAIMS.md) | [Evidence](builds/0TH-BUILD-014_omega-triscale-observatory/EVIDENCE.md) · [Release](https://github.com/0thernes/omega-triscale-observatory/releases/tag/v6.7.0) · [CI](https://github.com/0thernes/omega-triscale-observatory/actions/runs/45751750665) |
+
+| `0TH-BUILD-015` | 2026-11-26 | [`glitchling-jam`](https://github.com/0thernes/glitchling-jam) `v2.3.0` | **72 pure decls (6 `NonVacuity` + 6 `AdversarialTests` + 9 Palomar targets)** (11 files, 1,858 lines, `autoImplicit=false`, **all 6 kernels via mandatory `lake comparator --paranoid` + live sorry-tamper rejection**, 3-OS CI `#45823061012` + Pages + SLSA `#72663345` / Rekor `4126405071`, DigiCert RFC 3161 `.tsr`, `3.44e-15` FMO / `9.99e-16` Cry4 / `9.71e-17` Möbius oracle, 1,200 JS props + 8/8 mutants, 18/18 live Crossref 0-retraction DOIs, 13-page 0-warning PDF, 77/77 Build Standard v1.2.0) | [Donahue_2026_glitchling_alife_verification.pdf](builds/0TH-BUILD-015_glitchling-jam/Donahue_2026_glitchling_alife_verification.pdf) · [WHITE_PAPER.md](builds/0TH-BUILD-015_glitchling-jam/WHITE_PAPER.md) · [Mega-Atlas (0/1,900)](builds/0TH-BUILD-015_glitchling-jam/MEGA_ATLAS_CROSSCHECK.md) · [CLAIMS.md](builds/0TH-BUILD-015_glitchling-jam/CLAIMS.md) · [VERIFICATION.md](builds/0TH-BUILD-015_glitchling-jam/VERIFICATION.md) | [Evidence](builds/0TH-BUILD-015_glitchling-jam/EVIDENCE.md) · [Live Dome](https://0thernes.github.io/glitchling-jam/) · [Release](https://github.com/0thernes/glitchling-jam/releases/tag/v2.3.0) · [6-Kernel 3-OS CI](https://github.com/0thernes/glitchling-jam/actions/runs/45823061012) |
 
 Full Tier II registry: [`registry/BUILD_PAPERS.md`](registry/BUILD_PAPERS.md) · Machine-readable schema: [`registry/BUILD_PAPERS.json`](registry/BUILD_PAPERS.json)
 
@@ -109,7 +111,7 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 
 1. **Kernel-Checked Proofs:** Formalized claims compile in Lean 4 with zero `sorry`, zero `admit`, zero custom axioms, and explicit `#print axioms` audits strictly within `[propext, Classical.choice, Quot.sound]`.
 2. **Independent Falsifiability:** Every Tier I & Tier II entry ships an explicit reproduction and falsification command so any third party can independently test every claim.
-3. **Cryptographic Immutability & Live Mirroring:** Every frozen release PDF, Lean certificate, white paper, bridge table, live mirror snapshot, and discovery record is hashed in [`CHECKSUMS.sha256`](CHECKSUMS.sha256), matched against 29 pinned public Git submodules under `repos/`, and audited by GitHub Actions CI on every push.
+3. **Cryptographic Immutability & Live Mirroring:** Every frozen release PDF, Lean certificate, white paper, bridge table, live mirror snapshot, and discovery record is hashed in [`CHECKSUMS.sha256`](CHECKSUMS.sha256), matched against 30 pinned public Git submodules under `repos/`, and audited by GitHub Actions CI on every push.
 4. **Honest Boundaries & Privacy Discipline:** Every dossier explicitly separates kernel-checked theorems, paper proofs, pre-registered empirical claims, finite computational certificates, exploratory syntheses, and open questions. Private repositories and third-party forks remain strictly excluded from this public archive.
 
 ---
@@ -119,12 +121,12 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 Clone the archive and run the full cryptographic, link, and structural audit:
 
 ```bash
-# Clone the archive (add --recursive to also fetch all 29 pinned PUBLIC submodules)
+# Clone the archive (add --recursive to also fetch all 30 pinned PUBLIC submodules)
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 python3 -m pip install -r requirements.txt
 
-# Verify every SHA-256 digest, ORCID, axiom allowlist, markdown link, and all 29 public submodule pins
+# Verify every SHA-256 digest, ORCID, axiom allowlist, markdown link, and all 30 public submodule pins
 python3 scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
 python3 -m pytest -v tests/

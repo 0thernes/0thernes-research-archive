@@ -85,3 +85,6 @@
 [submodule "repos/omega-triscale-observatory"]
 	path = repos/omega-triscale-observatory
 	url = https://github.com/0thernes/omega-triscale-observatory.git
+[submodule "repos/glitchling-jam"]
+	path = repos/glitchling-jam
+	url = https://github.com/0thernes/glitchling-jam.git

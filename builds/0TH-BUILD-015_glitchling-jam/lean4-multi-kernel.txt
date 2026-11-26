@@ -1,0 +1,35 @@
+Resolving dependencies
+Building Challenge
+⚠ [3/4] Replayed Challenge
+warning: Challenge.lean:21:8: declaration uses `sorry`
+warning: Challenge.lean:32:8: declaration uses `sorry`
+warning: Challenge.lean:42:8: declaration uses `sorry`
+warning: Challenge.lean:53:8: declaration uses `sorry`
+warning: Challenge.lean:64:8: declaration uses `sorry`
+warning: Challenge.lean:77:8: declaration uses `sorry`
+warning: Challenge.lean:85:8: declaration uses `sorry`
+warning: Challenge.lean:102:8: declaration uses `sorry`
+warning: Challenge.lean:115:8: declaration uses `sorry`
+Build completed successfully (4 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Glitchling.ComparatorTarget.target_thm1_energy_mass_clausius, Glitchling.ComparatorTarget.target_thm2_cega18_kochen_specker, Glitchling.ComparatorTarget.target_thm3_chsh_and_nosignaling, Glitchling.ComparatorTarget.target_thm4_gf16_and_rs15_11, Glitchling.ComparatorTarget.target_thm5_heptarch_anti_monarchy, Glitchling.ComparatorTarget.target_thm6_nestor_stochastic_rounding, Glitchling.ComparatorTarget.target_thm7_poincare_mobius_containment, Glitchling.ComparatorTarget.target_thm8_flaws_and_nonvacuity, Glitchling.ComparatorTarget.target_thm9_adversarial_and_nonvacuity, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+Build completed successfully (11 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Glitchling.ComparatorTarget.target_thm1_energy_mass_clausius, Glitchling.ComparatorTarget.target_thm2_cega18_kochen_specker, Glitchling.ComparatorTarget.target_thm3_chsh_and_nosignaling, Glitchling.ComparatorTarget.target_thm4_gf16_and_rs15_11, Glitchling.ComparatorTarget.target_thm5_heptarch_anti_monarchy, Glitchling.ComparatorTarget.target_thm6_nestor_stochastic_rounding, Glitchling.ComparatorTarget.target_thm7_poincare_mobius_containment, Glitchling.ComparatorTarget.target_thm8_flaws_and_nonvacuity, Glitchling.ComparatorTarget.target_thm9_adversarial_and_nonvacuity, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running Lean paranoid kernel on solution
+Lean paranoid kernel accepts the solution
+Running lean4lean kernel on solution
+[anonymous]:thmDecl Glitchling.gf16_mul_assoc: lean4lean took 3241
+[anonymous]:thmDecl Glitchling.gf16_left_distrib: lean4lean took 2253
+checked 2406 declarations
+lean4lean kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running con-leche kernel on solution
+con-leche: accepted 2409 declarations (--verified)
+con-leche kernel accepts the solution
+Running con-ron kernel on solution
+con-ron: accepted 2409 declarations (--verified)
+con-ron kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!

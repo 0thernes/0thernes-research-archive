@@ -1,0 +1,60 @@
+# Build White Paper & Proof Evidence Dossier — `0TH-BUILD-015`
+
+**Title:** Glitchling v2.3.0: Engineered Flaw Resilience, Multi-Cohort Artificial-Life Falsification, Independent Exact Oracles, and 72 Six-Kernel Pure Lean 4.35.0 Formal Proofs  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Domain:** Artificial Life / Formal Verification / Quantum Contextuality / Computational Neuroscience  
+**Version / Date:** `v2.3.0` (2026-11-26)
+
+## Cryptographic Identity & Provenance
+
+| Field | Value |
+|---|---|
+| Source Repository | https://github.com/0thernes/glitchling-jam |
+| Pinned Git Submodule | `repos/glitchling-jam` @ `92799daae8682a2df30702077bdee4ac0e17c5cf` |
+| Archived Artifact | `builds/0TH-BUILD-015_glitchling-jam/Donahue_2026_glitchling_alife_verification.pdf` (from `dist/Donahue_2026_glitchling_alife_verification.pdf`) |
+| Artifact SHA-256 | `d732fd2b91a4217fffbfd793f2951209dedfe30b84b8039211aee1802f6b7057` |
+| Archived Artifact | `builds/0TH-BUILD-015_glitchling-jam/arxiv_submission.tar.gz` (from `dist/arxiv_submission.tar.gz`) |
+| Artifact SHA-256 | `03a9ba531eb0d42a9faefbd0848a932a7615c8b93dc57770eb8b9477c2867955` |
+| Archived Artifact | `builds/0TH-BUILD-015_glitchling-jam/WHITE_PAPER.md` (from `paper/WHITE_PAPER.md`) |
+| Artifact SHA-256 | `23a7d944aa07221d9147957190c0ea4d7824815c76096170ebb53fdfe9cd77cf` |
+| Archived Artifact | `builds/0TH-BUILD-015_glitchling-jam/VERIFICATION.md` (from `VERIFICATION.md`) |
+| Artifact SHA-256 | `2d773f358082b997c0d8ac4188124fbcd04cadc5b7a407f1e737b90f6f5dcced` |
+| Archived Artifact | `builds/0TH-BUILD-015_glitchling-jam/CLAIMS.md` (from `CLAIMS.md`) |
+| Artifact SHA-256 | `10035d6d8bcbe4756a67e9dacda0cc353828f76ef88d1be6354a00d8502003c5` |
+| Archived Artifact | `builds/0TH-BUILD-015_glitchling-jam/MEGA_ATLAS_CROSSCHECK.md` (from `docs/MEGA_ATLAS_CROSSCHECK.md`) |
+| Artifact SHA-256 | `a9682a0dee9d168866e44b8a910959ec77ba11e54e05b34770cf0dace711e274` |
+| Archived Artifact | `builds/0TH-BUILD-015_glitchling-jam/SUBMISSION_READINESS.md` (from `SUBMISSION_READINESS.md`) |
+| Artifact SHA-256 | `43e621a5fe768f40410164971080a82c4cc993e5dfce88349fd9910530caebb0` |
+| Archived Artifact | `builds/0TH-BUILD-015_glitchling-jam/lean_axioms.txt` (from `results/lean_axioms.txt`) |
+| Artifact SHA-256 | `58293afed253c754ab6654c240e257d227aef5b4042223a52688073f507e4ede` |
+| Archived Artifact | `builds/0TH-BUILD-015_glitchling-jam/lean4-multi-kernel.txt` (from `CI #45823061012 artifact lean4-multi-kernel-ci.log`) |
+| Artifact SHA-256 | `1559d1bfd8cc80c95105c626c361a7679e64fa7327fdbfc61333b66721553ab3` |
+| Archived Artifact | `builds/0TH-BUILD-015_glitchling-jam/citation-audit.json` (from `results/citation-audit.json`) |
+| Artifact SHA-256 | `967545f1392e4bf812acaf24b5fb49d59ec246fb31081162eca106ce00b459a3` |
+| Archived Artifact | `builds/0TH-BUILD-015_glitchling-jam/CHECKSUMS.sha256.tsr` (from `data/timestamps/CHECKSUMS.sha256.tsr`) |
+| Artifact SHA-256 | `1eed3e3f247a3e6fcfa97136c8dc33a751946619e8d7b6a43aa388e5847c7329` |
+
+## Summary
+
+Hardened through a 35-pass external audit (F01-F33) and three deep hardening cycles (F24/F30/F33-F41) to 100.0% (77/77, 33/33 Core) Build Standard v1.2.0 compliance while preserving frozen core/ and Cosmogonic LICENSE untouched. Pairs repeatable Bun reference-sim flaw-resilience trials (Results v3, BUN_JSC_useConcurrentJIT=0, n=30 seeds 500-529, 210/210 alive, all-flaws forages +22% d_z=1.51, honestly withdrawing the unreplicated v2 within-life compensation hint) and a 3D spiking-brain Geodesic Biodome (live/) with 72 pure Lean 4.35.0 declarations (inductive 11-pool First-Law energy & closed N/C mass conservation, Clausius >= 0, CEGA-18 KS uncolorability 8<9, CHSH |S|<=2 & Bell-diagonal zero no-signaling, complete GF(2^4) axioms & RS[15,11,d=5] t=2, HEPTARCH 7-seat anti-monarchy & anti-duopoly, NESTOR unbiased stochastic rounding, universal Ungar K=-1 Poincare-disk Mobius containment, Glitchling mirror involution & leaky contraction, 6 NonVacuity witnesses, 6 AdversarialTests refutations, and 9 Palomar targets) verified across all 6 independent kernels + live negative tamper rejection, independent Python exact-Fraction/Kronecker oracles (3.44e-15 FMO, 9.99e-16 Cry4, 9.71e-17 Poincare), 1,200 JS properties + 8/8 killed mutants, 15 multi-cohort experiments T1-T15 with analytical Bonferroni T5 Z-gate (F33), 13-page zero-warning AMS-LaTeX preprint & arXiv tarball (18/18 live Crossref 0-retraction DOIs), DigiCert RFC 3161 TSA timestamp, SLSA #72663345 / Rekor 4126405071, and an honest 0/1,900 Mega-Atlas cross-check.
+
+## Embedded Lean 4 Proof Suite Audit
+
+- **Framework:** Pure Lean 4.35.0 (zero Mathlib, autoImplicit = false, relaxedAutoImplicit = false, zero sorry, zero native_decide, 6-kernel bubblewrap lake comparator --paranoid across 9 isolated Challenge/Solution targets + live sorry-tamper rejection)
+- **Lean Modules / Lines:** 11 files / 1858 lines
+- **Audited Theorems (`#print axioms`):** 72
+- **Entry Point:** `lean/VerifyAxioms.lean`
+- **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
+- **Live Audit Status:** GitHub Actions CI GREEN (run #45823061012, 6/6 jobs across ubuntu-latest, windows-latest, and macos-latest + Pages #45823058928 live at https://0thernes.github.io/glitchling-jam/ + Release v2.3.0 #45823677167 with 9 assets and SLSA provenance #72663345 / Rekor 4126405071): 72/72 audited declarations (63 library theorems incl. 6 constructive NonVacuity witnesses & 6 AdversarialTests false-variant refutations + 9 isolated Challenge/Solution targets) strictly within [propext, Classical.choice, Quot.sound] (0 sorryAx outside Challenge.lean), verified by lake env leanchecker --fresh, mandatory bubblewrap lake comparator --paranoid across all 6 independent kernels (Lean paranoid, lean4lean 2,406 decls, nanoda, con-leche 2,409 decls, con-ron 2,409 decls, Lean default), and mandatory live sorry-tamper rejection (scripts/test_lean_negative.py --with-comparator); paired with independent exact Python oracle (3.44e-15 FMO, 9.99e-16 Cry4, 9.71e-17 Poincare Mobius, 9/9 pytest/Hypothesis, 0 ruff/mypy errors), JS verification ladder (1,200 properties, 8/8 killed mutants), 9/9 tools/check.mjs across 3 OS, 13-page 0-warning Tectonic AMS-LaTeX PDF & standalone arXiv tarball (18/18 live Crossref title-matched 0-retraction DOIs catching & fixing F41), DigiCert RFC 3161 TSA timestamp, and 100.0% (77/77, 33/33 Core) Build Standard v1.2.0
+
+## Verification Boundary
+
+All 72 exported Lean 4.35.0 declarations (11 files, 1,858 lines, zero Mathlib, autoImplicit = false, zero native_decide, zero sorry outside isolated Challenge.lean, strictly within [propext, Classical.choice, Quot.sound]) are kernel-checked across all 6 independent kernels via mandatory bubblewrap lake comparator --paranoid and live sorry-tamper rejection on Ubuntu 24.04 CI (#45823061012). Continuous IEEE-754 floating-point simulations (FMO/Cry4/Biodome/Creature), cross-OS Bun JSC reference runs, multi-cohort statistical tests (T1-T15), and JS verification ladder lie outside the Lean kernel boundary and are verified differentially and statistically across 3-OS CI. Explicitly solves 0/1,900 overarching open problems in unsolved-problems-mega-atlas and claims no consciousness, sentience, AGI, physical quantum biology, or external journal peer review.
+
+## Independent Reproduction & Falsification Protocol
+
+```bash
+git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
+cd 0thernes-research-archive
+cd repos/glitchling-jam && node tools/check.mjs && npm run verify:ladder && npm run examples && python3 scripts/verify_exact.py && python3 -m pytest tests/test_oracle.py -v && python3 scripts/check_readme_axioms.py && python3 scripts/audit_citations.py --verify-offline && python3 scripts/timestamp_checksums.py --verify-only && python3 scripts/test_lean_negative.py --with-comparator && (cd lean && lake clean && lake build GlitchlingProofs Challenge Solution && lake env lean VerifyAxioms.lean && lake env leanchecker --fresh GlitchlingProofs && lake env leanchecker --fresh Solution && lake comparator --config comparator.json --paranoid)
+```
