@@ -286,12 +286,25 @@ def fetch_repo_live_state(
 
         try:
             runs_obj = fetcher(
-                f"repos/{OWNER}/{slug}/actions/runs?per_page=1&branch={branch}",
+                f"repos/{OWNER}/{slug}/actions/runs?per_page=20&branch={branch}",
                 token=token,
             )
             wruns = runs_obj.get("workflow_runs") or []
-            if wruns:
-                latest = wruns[0]
+            # Pages/deploy/dependency-management workflows are operational
+            # side effects, not the repository's substantive verification
+            # result.  Prefer the newest actual build/test/audit workflow so
+            # a failed deployment cannot mask a green proof or test run.
+            excluded_markers = ("pages", "deploy", "dependabot", "dependency graph")
+            substantive = [
+                run
+                for run in wruns
+                if not any(
+                    marker in str(run.get("name") or run.get("workflow_name") or "").lower()
+                    for marker in excluded_markers
+                )
+            ]
+            if substantive:
+                latest = substantive[0]
                 out["ci_run_id"] = latest.get("id")
                 out["ci_conclusion"] = latest.get("conclusion") or latest.get("status")
                 out["ci_html_url"] = latest.get("html_url")
