@@ -453,6 +453,33 @@ def count_git_submodules(root: Path) -> int:
     return sum(1 for ln in res.stdout.splitlines() if ln.startswith("160000 "))
 
 
+def resolve_local_github_token() -> str | None:
+    """Use an explicit token first, then the user's authenticated gh session.
+
+    CI supplies ``GITHUB_TOKEN``/``GH_TOKEN``.  On a developer workstation the
+    GitHub CLI often already has an authenticated token, while leaving both
+    environment variables unset would silently fall back to GitHub's very
+    small anonymous rate limit and make a full-fleet sync fail spuriously.
+    """
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        return token
+    try:
+        result = subprocess.run(
+            ["gh", "auth", "token"],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            timeout=10,
+            check=False,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if result.returncode == 0 and result.stdout.strip():
+        return result.stdout.strip()
+    return None
+
+
 def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
     papers_data = json.loads((root / "registry" / "PAPERS.json").read_text(encoding="utf-8"))
     builds_data = json.loads((root / "registry" / "BUILD_PAPERS.json").read_text(encoding="utf-8"))
@@ -576,7 +603,7 @@ def main() -> int:
     args = parser.parse_args()
 
     root = Path(__file__).resolve().parent.parent
-    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    token = resolve_local_github_token()
     mirror = run_sync(root, offline=args.offline, token=token)
     c = mirror["counts"]
     print(
