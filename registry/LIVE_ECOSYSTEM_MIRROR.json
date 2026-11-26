@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0.0",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
-  "synced_utc": "2026-11-26T13:17:01Z",
+  "synced_utc": "2026-11-26T13:25:14Z",
   "sync_mode": "live-github-api",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
     "tier1_papers": 16,
-    "tier2_builds": 16,
+    "tier2_builds": 17,
     "tier3_discoveries": 12,
-    "total_entries": 44,
-    "unique_public_repositories": 37,
-    "pinned_submodules": 31,
-    "exact_pin_match": 28,
+    "total_entries": 45,
+    "unique_public_repositories": 38,
+    "pinned_submodules": 32,
+    "exact_pin_match": 29,
     "ahead_of_pin": 5,
     "historical_archived": 4,
     "api_errors": 0
@@ -145,6 +145,31 @@
       "error": null
     },
     {
+      "slug": "beast-civilization",
+      "repository": "https://github.com/0thernes/beast-civilization",
+      "archive_ids": [
+        "0TH-BUILD-017"
+      ],
+      "tiers": [
+        "Tier II"
+      ],
+      "pinned_commit": "c4211353bb2bf3e8af3aab0bdef088db2ea0fb34",
+      "archived_version": "v0.7.0",
+      "submodule_path": "repos/beast-civilization",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "c4211353bb2bf3e8af3aab0bdef088db2ea0fb34",
+      "latest_release_tag": "v0.7.0",
+      "pushed_at": "2026-11-26T13:10:43Z",
+      "ci_run_id": 45826608002,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/beast-civilization/actions/runs/45826608002",
+      "pages_url": null,
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
       "slug": "black-hole-simulation-lab",
       "repository": "https://github.com/0thernes/black-hole-simulation-lab",
       "archive_ids": [
@@ -184,12 +209,12 @@
       "registered_pages_url": "https://0thernes.github.io/catalytic-register-frontiers/",
       "default_branch": "main",
       "archived": false,
-      "live_head_commit": "a83d79ea27136a4b4a7bf4e7e5a74680d2e336a1",
+      "live_head_commit": "646443c35ee1d8dc65d35b0c5479cc0eb1cb49bb",
       "latest_release_tag": "v1.0.1",
-      "pushed_at": "2026-11-26T02:31:27Z",
-      "ci_run_id": 45742997381,
-      "ci_conclusion": "success",
-      "ci_html_url": "https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45742997381",
+      "pushed_at": "2026-11-26T13:23:15Z",
+      "ci_run_id": 45828647594,
+      "ci_conclusion": "in_progress",
+      "ci_html_url": "https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45828647594",
       "pages_url": "https://0thernes.github.io/catalytic-register-frontiers/",
       "sync_status": "AHEAD_OF_PIN",
       "error": null

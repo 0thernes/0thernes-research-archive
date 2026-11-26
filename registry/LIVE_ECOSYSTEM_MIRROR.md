@@ -1,8 +1,8 @@
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-26T13:17:01Z` · **Mode:** `live-github-api`  
-**Tracked Public Repositories:** 37 (`28` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Synced (UTC):** `2026-11-26T13:25:14Z` · **Mode:** `live-github-api`  
+**Tracked Public Repositories:** 38 (`29` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -13,8 +13,9 @@
 | [`Asmodensius`](https://github.com/0thernes/Asmodensius) | `0TH-DISC-002` | Tier III | `c72a4ec9a0` | `c72a4ec9a0` | `main` | [`success`](https://github.com/0thernes/Asmodensius/actions/runs/44051073860) | `EXACT_PIN_MATCH` |
 | [`asmodensius-native`](https://github.com/0thernes/asmodensius-native) | `0TH-BUILD-011` | Tier II | `67bedd4abb` | `67bedd4abb` | `v1.1.0` | [`success`](https://github.com/0thernes/asmodensius-native/actions/runs/45748401683) | `EXACT_PIN_MATCH` |
 | [`autophage`](https://github.com/0thernes/autophage) | `0TH-BUILD-009` | Tier II | `1956c2cc54` | `1956c2cc54` | `v1.4.0` | [`success`](https://github.com/0thernes/autophage/actions/runs/45751051356) | `EXACT_PIN_MATCH` |
+| [`beast-civilization`](https://github.com/0thernes/beast-civilization) | `0TH-BUILD-017` | Tier II | `c4211353bb` | `c4211353bb` | `v0.7.0` | [`success`](https://github.com/0thernes/beast-civilization/actions/runs/45826608002) | `EXACT_PIN_MATCH` |
 | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) | `0TH-BUILD-006` | Tier II | `050455db86` | `050455db86` | `main+research-branch` | [`success`](https://github.com/0thernes/black-hole-simulation-lab/actions/runs/40110397354) | `EXACT_PIN_MATCH` |
-| [`catalytic-register-frontiers`](https://github.com/0thernes/catalytic-register-frontiers) | `0TH-2026-010` | Tier I | `4bfeabb05a` | `a83d79ea27` | `v1.0.1` | [`success`](https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45742997381) | `AHEAD_OF_PIN` |
+| [`catalytic-register-frontiers`](https://github.com/0thernes/catalytic-register-frontiers) | `0TH-2026-010` | Tier I | `4bfeabb05a` | `646443c35e` | `v1.0.1` | [`in_progress`](https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45828647594) | `AHEAD_OF_PIN` |
 | [`cellular-engine-omega`](https://github.com/0thernes/cellular-engine-omega) | `0TH-BUILD-008` | Tier II | `4b257af5f2` | `4b257af5f2` | `v5.3.0` | [`success`](https://github.com/0thernes/cellular-engine-omega/actions/runs/45810663869) | `EXACT_PIN_MATCH` |
 | [`cellulogonic-mecha`](https://github.com/0thernes/cellulogonic-mecha) | `0TH-BUILD-001` | Tier II | `d033ab025e` | `d033ab025e` | `v1.6.0` | [`success`](https://github.com/0thernes/cellulogonic-mecha/actions/runs/45812871830) | `EXACT_PIN_MATCH` |
 | [`coded-pir-mlwe-complexity-lab`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab) | `0TH-2026-012` | Tier I | `a2967e4b94` | `a2967e4b94` | `v4.0.0` | [`success`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45754225423) | `EXACT_PIN_MATCH` |
