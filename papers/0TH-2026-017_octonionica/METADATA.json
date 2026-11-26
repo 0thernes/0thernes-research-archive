@@ -1,0 +1,48 @@
+{
+  "id": "0TH-2026-017",
+  "slug": "octonionica",
+  "title": "OCTONIONICA: Six Machine-Verified Exceptional Obstructions from Fano Octonions and S6 Nijenhuis Curvature to 27D Albert Jordan Algebras, E8/Golay/Ramanujan Tau, Fibonacci Anyons, and the Markov Cubic Tree",
+  "domain": "Exceptional Algebra / Differential Geometry / Modular Forms / Topological Quantum Computation / Number Theory / Formal Verification",
+  "date_released": "2026-11-26",
+  "version": "v1.0.0",
+  "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 & 3-OS CI verified)",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "Independent Researcher, Spokane, WA, USA",
+  "repository": "https://github.com/0thernes/octonionica",
+  "submodule_path": "repos/octonionica",
+  "pinned_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+  "release_url": "https://github.com/0thernes/octonionica/releases/tag/v1.0.0",
+  "pages_url": "https://0thernes.github.io/octonionica/",
+  "pdf_archive_path": "papers/0TH-2026-017_octonionica/Donahue_2026_Octonionica.pdf",
+  "pdf_sha256": "437057ac8d7f3db86f1ed6082e79b05fa548093917102b2f4831a9dd3ad3a997",
+  "arxiv_bundle_url": "https://github.com/0thernes/octonionica/releases/download/v1.0.0/arxiv_submission.tar.gz",
+  "arxiv_bundle_sha256": "761de2f75819ed2ae6fe6f88f8531f3ce1defd7b29c19b96346904d499693636",
+  "lean_verification": {
+    "framework": "Pure Lean 4.35.0 (zero Mathlib, 14 sorry-free Palomar module files, 93 audited declarations across 6 exceptional pillars [71] + NonVacuity [7] + AdversarialTests [7] + Palomar comparator targets [8] strictly within [propext, Classical.choice, Quot.sound], autoImplicit = false, zero native_decide; all 8 Palomar comparator targets accepted by all 6 independent kernels inside bubblewrap on Ubuntu 24.04 CI run 45845614936: Lean paranoid, lean4lean, nanoda, con-leche --verified [3,636 decls], con-ron --verified [3,636 decls], Lean default; SLSA attestation #72724149 / Rekor 4128481032)",
+    "axiom_allowlist": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "entry_point": "lean/Solution.lean",
+    "axiom_audit_file": "lean/VerifyAxioms.lean",
+    "additional_audit_files": [
+      "lean/Challenge.lean",
+      "lean/PalomarChallenge.lean",
+      "lean/PalomarSolution.lean",
+      "lean/OctonionicaProofs/NonVacuity.lean",
+      "lean/OctonionicaProofs/AdversarialTests.lean"
+    ],
+    "audited_theorems": 93
+  },
+  "ci_run_url": "https://github.com/0thernes/octonionica/actions/runs/45845614936",
+  "preservation": {
+    "software_heritage": "swh:1:snp:266d5a76ea960d33a48f78bd4550629e488fc9a8",
+    "wayback_machine": null,
+    "doi": null
+  },
+  "core_result": "Unites six interlocking exceptional algebraic, differential-geometric, lattice/modular, topological-anyon, and Diophantine obstructions across 93 zero-Mathlib Lean 4.35.0 declarations (all 6 independent proof kernels passed via lake comparator --paranoid inside bubblewrap, SLSA #72724149 / Rekor 4128481032): (I) Fano-plane integral octonions O(Z) (Degen-Graves 8-square composition, universal left/right/middle Moufang laws via Teichmuller identity, strict non-associativity [e1,e2,e3]=-2e6) and 16D Cayley-Dickson sedenions S(Z) (explicit zero divisor (e1+e10)(e3+e14)=0, infinite 2-parameter family, refutation of 16-square law; QM-020); (II) 7D cross product, Lagrange norm, calibrated G2 3-form, Malcev-Jacobi associator defect 2J=-3Im[u,v,w], explicit non-commuting g2=Der(O) derivations, strictly nearly Kahler nabla_X J(X)=0, and Universal S6 Constant-Norm Nijenhuis Non-Integrability Obstruction ||N_J(p;X,Y)||^2 = 16||p||^6(||X||^2||Y||^2-<X,Y>^2) - 16||p||^4<J_p X,Y>^2 > 0 (XGEOM-031/GR-057); (III) 27D exceptional Albert Jordan algebra J3(O) commutativity, Freudenthal quadratic adjoint X o2 X# = 2det(X)I3, 27-component Cubic Cayley-Hamilton theorem, universal 16D Cayley Projective Plane OP2 rank-1 idempotents, and concrete non-associative Jordan witness (QM-020); (IV) E8 even unimodular lattice (2E8 additive closure, normSq % 8 = 0, det G_E8 = 1, 240 minimal roots = 112 + 128), exhaustive 4,096-codeword Extended Binary Golay [24,12,8] weight enumerator (1, 759, 2576, 759, 1, 0), Leech kissing number 196,560, Moonshine 196,884 = 1 + 196,883, and Ramanujan discriminant 1728 Delta(q) = E4^3 - E6^2 (mod 691 congruence, Hecke, and Lehmer non-vanishing 1 <= n <= 20 in Lean; 1 <= n <= 120 + Deligne primes <= 113 in Rust; ALG-058/NT-028); (V) non-abelian Fibonacci anyons over exact Z[phi] -> Z[zeta_10] (F^2=I, 5-part Mac Lane pentagon, both hexagons, Artin B3 Yang-Baxter, and universal Galois-conjugate infinite-order theorem proving (s1*s2^-1)^k != I2 for every k >= 1; ALG-065/CM-011); and (VI) Markov cubic tree x^2+y^2+z^2=3xyz (Vieta strict positive descent, 3 nmid m, complete positive mod-4 classification forbidding 0 and 3 mod 4, infinite Fibonacci & Pell branches, quadratic-residue uniqueness divisor z | (x1 y2 - x2 y1)(x1 y2 + x2 y1), Hurwitz sqrt(5) barrier, and Rust BFS uniqueness across all 231 triples <= 10^15; NT-083). Paired with safe native Rust (#![forbid(unsafe_code)], 7/7 tests, 512 fuzz), Node.js engine (11 core + Rust diff + 2,400 properties + 8/8 killed mutants + golden + 7 STRIDE/EIO HTTP tests + 3 examples), exact Python falsifier, pre-registered 20-seed exact 2^20 permutation study (4/4 confirmed, p_Holm = 3.815e-6), 5/5 hardware-tagged benchmarks, 29/29 live Crossref non-retracted DOIs, 13-page zero-warning AMS-LaTeX PDF + clean-room arXiv tarball, live 3D WebGL2 + 48 kHz AudioWorklet Observatory + Lean Blueprint on GitHub Pages, dual DigiCert RFC 3161 (.tsr) + 3-calendar Bitcoin OpenTimestamps (.ots), Software Heritage full snapshot swh:1:snp:266d5a76ea960d33a48f78bd4550629e488fc9a8, and 100.0% (80/80, 0 warnings) Build Standard v1.2.0 compliance.",
+  "verification_boundary": "All 93 audited declarations across Pillars I-VI (71), NonVacuity (7), AdversarialTests (7), and Palomar comparator contracts (8) are 100% kernel-checked in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound] across all 6 independent proof kernels on Ubuntu 24.04 CI run 45845614936 (zero sorry, zero native_decide). Extended Rust/Python checks (Ramanujan tau to n=120, Deligne primes <= 113, Markov BFS uniqueness for all 231 triples <= 10^15), 20-seed confirmatory permutation statistics, and interactive WebGL2/AudioWorklet synthesis are explicitly separated from Lean kernel proofs. Explicitly records 0/1,900 overarching open problems in 0thernes/unsolved-problems-mega-atlas solved (docs/MEGA_ATLAS_CROSSCHECK.md): existence of any non-standard complex structure on S6 (XGEOM-031), Lehmer's full conjecture tau(n)!=0 for all n>=1 (NT-028), and the global Markov Uniqueness Conjecture for all z (NT-083) remain explicitly OPEN. Claims no external peer review or external DOI.",
+  "falsification_command": "cd repos/octonionica && npm run verify:all && npm run examples && (cd native && cargo clippy --all-targets -- -D warnings && cargo test --release && cargo run --release -- audit && cargo run --release -- fuzz 512) && python3 scripts/verify_exact.py --check-checksums && python3 scripts/check_readme_axioms.py && python3 scripts/stamp_timestamps.py --verify && (cd lean && lake build && lake env lean VerifyAxioms.lean && lake comparator --config comparator.json --paranoid)"
+}

@@ -94,3 +94,6 @@
 [submodule "repos/beast-civilization"]
 	path = repos/beast-civilization
 	url = https://github.com/0thernes/beast-civilization.git
+[submodule "repos/octonionica"]
+	path = repos/octonionica
+	url = https://github.com/0thernes/octonionica.git
