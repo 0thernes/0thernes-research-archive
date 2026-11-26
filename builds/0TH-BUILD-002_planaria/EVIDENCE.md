@@ -1,56 +1,62 @@
 # Build White Paper & Proof Evidence Dossier — `0TH-BUILD-002`
 
-**Title:** PLANARIA v2.3.0: Progressive Holographic Executable Architecture (.hbin), Multi-Stratum Compilation, Autonomous Control-Flow Anastomosis, Cryptographic Cellular Quorum, and 6-Kernel Lean 4.35.0 Verification  
+**Title:** PLANARIA v2.4.0: Progressive Holographic Executable Architecture (.hbin), Multi-Stratum Compilation, Autonomous Control-Flow Anastomosis, Cryptographic Cellular Quorum, and 6-Kernel Lean 4.35.0 Verification  
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Systems Architecture / Coding Theory / Formal Methods  
-**Version / Date:** `v2.3.0` (2026-11-25)
+**Version / Date:** `v2.4.0` (2026-11-26)
 
 ## Cryptographic Identity & Provenance
 
 | Field | Value |
 |---|---|
 | Source Repository | https://github.com/0thernes/planaria |
-| Pinned Git Submodule | `repos/planaria` @ `2fb167331f55a800c212f3578a7358337ed37ef4` |
+| Pinned Git Submodule | `repos/planaria` @ `6979cc1be4eaaf8d6af30387fe1ace3ec7586d00` |
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/Donahue_2026_planaria.pdf` (from `dist/Donahue_2026_planaria.pdf`) |
-| Artifact SHA-256 | `5db1abf271baf32c1a5863fe2f7689a827ddbb13378ff778e19525c761cdd4f7` |
+| Artifact SHA-256 | `acbb492f664139c717be2cf45707576a418fd3a2ed3bb286c3eb8294f502d09d` |
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/WHITE_PAPER.md` (from `paper/WHITE_PAPER.md`) |
-| Artifact SHA-256 | `87658e550a8ebc8e10abde5bd81412a210355babbe692b9fdef1ed5bfecb295c` |
+| Artifact SHA-256 | `65cb2c755b8aa463576a2e3711dd67dbd03232ba94c3e29d21117ec56333bd39` |
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/VERIFICATION.md` (from `VERIFICATION.md`) |
-| Artifact SHA-256 | `84797ebfbef7215c553d0b82b65a74739abbf8b2545b928a6ef7d47809fb762c` |
+| Artifact SHA-256 | `dc824d4f3a7af8b30977461263c2455a60341135b11958f7a35fa6939724bd31` |
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/CLAIMS.md` (from `CLAIMS.md`) |
-| Artifact SHA-256 | `9375a051d38b06dfcc7184b5c27d807c0b897b3745060725b3188b1010ae983c` |
+| Artifact SHA-256 | `9742e94226aa46237460d9a58d3defcc31176d95551a9f682b076671547a4e07` |
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/LIMITATIONS.md` (from `LIMITATIONS.md`) |
-| Artifact SHA-256 | `edfa479c3b633f19d90198d5bbb9cc2b205e27a9e77a6eb1591678d58f851df0` |
+| Artifact SHA-256 | `1927d8154b77ef5a452eba38664224c5aa1c117093ce9fd8c4be28c5b08aef1c` |
+| Archived Artifact | `builds/0TH-BUILD-002_planaria/MEGA_ATLAS_CROSSCHECK.md` (from `docs/MEGA_ATLAS_CROSSCHECK.md`) |
+| Artifact SHA-256 | `b2ef72a981c4c9a2d12353bb6720ca7b2c148dc0090f432e24f26afb1e9c6272` |
+| Archived Artifact | `builds/0TH-BUILD-002_planaria/SUBMISSION_READINESS.md` (from `docs/SUBMISSION_READINESS.md`) |
+| Artifact SHA-256 | `3f96daa6cf6c4a69e30499e5ccd0ce39a1149f50caf0c2ab89f02fa70affd821` |
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/2026-11-25-10-pass-red-team-audit.md` (from `docs/reviews/2026-11-25-10-pass-red-team-audit.md`) |
-| Artifact SHA-256 | `c15788a8d3f0992476cebcc96ed462d2c300f4b5f6aa8090d5ce5aeb9bd8e859` |
+| Artifact SHA-256 | `b263b7a973c00d67cf7697c5a18bbe52f008ecb1159fece79e0f3ac5c08d5ee8` |
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/lean4-audit.txt` (from `results/lean4-audit.txt`) |
-| Artifact SHA-256 | `a14dfd32d9fcb8a7762d77b542b013677d88025e1d3636bcd13f96a303a824c3` |
+| Artifact SHA-256 | `13d723722ac5d5afd7ab20306f9996f4a97282ad95123f799f954a76e28a6e8c` |
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/lean4-multi-kernel.txt` (from `results/lean4-multi-kernel.txt`) |
-| Artifact SHA-256 | `23e746ab434efb65ceb8db0b33e02f3155ef70d6a00a45914093406f7eb84ad6` |
+| Artifact SHA-256 | `85341caa13f36528655830280a1eb733f0313a5610ed9b6acf474c2ea8e1bdc3` |
+| Archived Artifact | `builds/0TH-BUILD-002_planaria/citation-audit.json` (from `results/citation-audit.json`) |
+| Artifact SHA-256 | `4208272520fda9031ed7d0b125190c06df5749387676a0a27823c9d8f49d5005` |
 | Archived Artifact | `builds/0TH-BUILD-002_planaria/arxiv_submission.tar.gz` (from `dist/arxiv_submission.tar.gz`) |
-| Artifact SHA-256 | `0e570f3c0d685ba72f1fa8cd84be432e1b9cbb74a2a99f5daf5fa1d75bfa118c` |
+| Artifact SHA-256 | `0ae6c8f2b21c0e26d667eeb6a62e3c1dd35a32708074b0c2feefe8cfb4381d93` |
 
 ## Summary
 
-Progressive Holographic Instruction Stratification (.hbin) architecture hardened through 3 complete audit cycles (114 findings across all 10 finding classes, 10-pass red-team review) and 100.0% (81/81) Build Standard v1.2.0 compliance: Overlap-Eclipse-resistant byte-granular sync scanning, GF(2^8) RS(254,238)/Cauchy MDS coding, Depth-8 0x00/0x01/0x02 SHA-256-128 Merkle authentication, exact integer low-discrepancy placement schedule, strict Plang compiler (with scratch-register overflow guard), caller-windowed PVM-32 anastomosis VM (42.85 MIPS), 4 compiled living .hbin species with 5/5 verified Cross-Species Xenograft Chimeras, live WCAG-hardened GitHub Pages WebGL2 + 48 kHz AudioWorklet 3D temporal-quantum Studio (https://0thernes.github.io/planaria/), pre-registered 4-architecture paired statistical benchmarks (N=40 paired seeds x 25 erasure points = 4,000 trials vs. LINBIN01, RS(40,16), and Equal-Storage Flat RS(192,48) with Wilson 95% CIs, exact paired McNemar, Cohen's h, and Holm-Bonferroni p_Holm <= 6.26e-7 at 76-92% erasure), 28/28 falsification/property/metamorphic suites + 10/10 (100%) surgical mutation kills, 61-file Ed25519 self-consistency seal, frozen 10-page zero-overflow AMS-LaTeX PDF (22 verified DOIs) + standalone arXiv bundle, honest 0/1,900 Unsolved Problems Mega-Atlas cross-check, and 70 pure Lean 4.35.0 proofs (including shared Spec.lean, Challenge.lean, Solution.lean) verified across all 6 independent kernels.
+Progressive Holographic Instruction Stratification (.hbin) architecture hardened through 3 full adversarial audit cycles (128 Cycle-1 findings across 4 parallel auditors, all 10 finding classes) and 100.0% (81/81) Build Standard v1.2.0 + Playbook v1.3 compliance: Overlap-Eclipse-resistant byte-granular sync scanning, GF(2^8) RS(254,238)/Cauchy MDS coding, Depth-8 0x00/0x01/0x02||"PLN\0" SHA-256-128 Merkle authentication, exact integer low-discrepancy placement schedule, strict Plang compiler, caller-windowed PVM-32 anastomosis VM with zero-allocation LIFO transactional RAM/audio rollback (28.04 MIPS, 0.060 ms/f), 4 compiled living .hbin species with 5/5 verified Cross-Species Xenograft Chimeras, live WCAG-hardened GitHub Pages WebGL2 + 48 kHz AudioWorklet 3D Studio (https://0thernes.github.io/planaria/) & interactive 85-theorem Proof Blueprint (https://0thernes.github.io/planaria/blueprint/), clean-room Python 3 stdlib differential oracle (100% parity across all 768 cells, 28 bundles, unaligned 49,177 B mitosis, Bell CHSH & GHZ Mermin), pre-registered 4-architecture paired statistical benchmarks (N=40 paired seeds x 25 erasure points = 4,000 trials vs. LINBIN01, RS(40,16), and Equal-Storage Flat RS(192,48), Holm-Bonferroni p_Holm <= 6.26e-7 at 76-92% erasure), 30/30 verification/AudioWorklet/property/metamorphic suites + 12/12 (100%) surgical mutation kills + 2,000/2,000 deterministic fuzz cases, 73-file Ed25519 self-consistency seal, frozen 11-page zero-overfull AMS-LaTeX PDF (22 refs, 19/19 live Crossref DOIs, 0 retractions) + standalone arXiv bundle, honest 0/1,900 Unsolved Problems Mega-Atlas cross-check (MEGA_ATLAS_CROSSCHECK.md), and 85 pure Lean 4.35.0 proofs (autoImplicit=false, 7 modules incl. AdversarialTests.lean, Challenge.lean, Solution.lean) verified across all 6 independent kernels plus live negative comparator tamper rejection in CI.
 
 ## Embedded Lean 4 Proof Suite Audit
 
-- **Framework:** Pure Lean 4.35.0 (zero Mathlib, module system, zero native_decide, 6-kernel lake check --paranoid & lake comparator --paranoid)
-- **Lean Modules / Lines:** 11 files / 2628 lines
-- **Audited Theorems (`#print axioms`):** 70
+- **Framework:** Pure Lean 4.35.0 (zero Mathlib, module system on all 12 files, autoImplicit = false, zero native_decide, 6-kernel lake check --paranoid, lake comparator --paranoid & live negative tamper rejection)
+- **Lean Modules / Lines:** 12 files / 2931 lines
+- **Audited Theorems (`#print axioms`):** 85
 - **Entry Point:** `lean/VerifyAxioms.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
-- **Live Audit Status:** GitHub Actions CI GREEN (run #45732566225, 6/6 jobs: ubuntu/macos/windows 28/28 suites + 10/10 100% mutation kills + 0-finding lint + 22/22 verified citations + Tectonic 0-overfull 10-page AMS-LaTeX PDF & clean-room arXiv tarball + SLSA provenance Sigstore Rekor 4115101651 + 100.0% 81/81 Build Standard v1.2.0 + gitleaks/osv-scanner + 6-kernel bubblewrap lake check --paranoid & 70-theorem lake comparator --paranoid PASS across lean4, leanchecker-paranoid, lean4lean, nanoda_bin, con-leche, con-ron), Pages GREEN (#45732565624 -> https://0thernes.github.io/planaria/), Release v2.3.0 SLSA attested (#45729743547, Sigstore Rekor 4114739359); 70/70 audited declarations (12 zero-axiom constructive, 5 non-vacuity witnesses, 3 statement-fidelity closures) strictly within [propext, Classical.choice, Quot.sound]
+- **Live Audit Status:** GitHub Actions CI GREEN (run #45750499053, 6/6 jobs: ubuntu/macos/windows 30/30 suites + 12/12 100% mutation kills + 2,000/2,000 deterministic fuzz cases + clean-room Python 3 differential oracle 100% parity across 768 cells + 0-finding lint + 22/22 citations / 19/19 live Crossref DOIs (0 retractions) + 85/85 README axiom & Proof Blueprint 1:1 checks + Tectonic 0-overfull 11-page AMS-LaTeX PDF & clean-room arXiv tarball + SLSA provenance attestation #72481657 / Rekor 4117431803 + 100.0% 81/81 Build Standard v1.2.0 + 0 gitleaks / 0 osv-scanner + 6-kernel bubblewrap lake check --paranoid, 85-theorem lake comparator --paranoid & live negative tamper rejection PASS across lean4, leanchecker-paranoid, lean4lean, nanoda_bin, con-leche, con-ron), Pages GREEN (#45750499041 -> https://0thernes.github.io/planaria/ & /blueprint/), Release v2.4.0 SLSA attested (#45751553422, attestation #72483820, Rekor 4117593136); 85/85 audited declarations (15 zero-axiom constructive, 10 non-vacuity witnesses, 8 AdversarialTests refutations, 3 statement-fidelity closures) strictly within [propext, Classical.choice, Quot.sound]
 
 ## Verification Boundary
 
-All 70 audited Lean 4.35.0 declarations (2,628 lines across 11 files, including 5 explicit non-vacuity witnesses and 3 statement-fidelity closures: hbin.js Step 4 viability_s3_without_b2_matches_hbin, executable electUnpinnedQuorum majority/tie/Sybil, and true all192LexKeys.Nodup + sorted-halves proof) compile cleanly with zero Mathlib, zero native_decide, zero sorry, and strictly [propext, Classical.choice, Quot.sound], verified across all 6 independent kernels via sandboxed bubblewrap lake check --paranoid and lake comparator --config comparator.json --paranoid on Ubuntu CI (#45732566225). Runtime JS implementation, 4-architecture statistical benchmarks, 28/28 test suites, 10/10 mutants, CLI/HTTP security, and WebGL2 3D engine lie outside the Lean kernel boundary and are separately tested across Ubuntu/macOS/Windows CI. Explicitly claims 0/1,900 Mega-Atlas open problems solved and no discovery of new laws of physics.
+All 85 audited Lean 4.35.0 declarations (2,931 lines across 12 module-header files with autoImplicit=false, including 10 explicit non-vacuity witnesses, 8 formal AdversarialTests false-variant refutations, dual-path Merkle binding, arbitrary-list unpinned quorum majority/tie fail-closed, dead-host xenograft refusal, hbin.js Step 4 viability fidelity, and true all192LexKeys.Nodup + sorted-halves proof) compile cleanly with zero Mathlib, zero native_decide, zero sorry, and strictly [propext, Classical.choice, Quot.sound], verified across all 6 independent kernels via sandboxed bubblewrap lake check --paranoid, lake comparator --config comparator.json --paranoid, and a live negative tamper test on Ubuntu CI (#45750499053). Runtime JS implementation, clean-room Python 3 oracle, 4-architecture statistical benchmarks, 30/30 test suites, 12/12 mutants, 2,000 fuzz cases, CLI/HTTP security, and WebGL2 3D engine lie outside the Lean kernel boundary and are separately tested across Ubuntu/macOS/Windows CI. Explicitly claims 0/1,900 Mega-Atlas open problems solved and no discovery of new laws of physics.
 
 ## Independent Reproduction & Falsification Protocol
 
 ```bash
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
-cd repos/planaria && npm run build && npm test && npm run mutate && npm run lint && npm run check:citations && (cd lean && lake clean && lake build && lake build Challenge && lake env lean VerifyAxioms.lean && lake check --paranoid && lake comparator --config comparator.json --paranoid)
+cd repos/planaria && npm run build && npm test && npm run mutate && npm run fuzz && python3 reference/planaria_oracle.py && npm run lint && npm run check:citations && npm run check:axioms && npm run check:blueprint && (cd lean && lake clean && lake build && lake build Challenge && lake env lean VerifyAxioms.lean && lake check --paranoid && lake comparator --config comparator.json --paranoid)
 ```

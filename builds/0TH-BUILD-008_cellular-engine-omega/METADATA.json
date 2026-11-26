@@ -50,7 +50,7 @@
     {
       "path": "builds/0TH-BUILD-008_cellular-engine-omega/lean4-omega-audit.txt",
       "source_path": "results/lean4-omega-audit.txt",
-      "sha256": "809f469e5c40771f72da323f03acc08585af09f5d73629cd8b94a61b078195ad"
+      "sha256": "7da6e29ea452c4e138de90edff7e314f6e9a1c7d03714b845ecdd276d940ebe6"
     },
     {
       "path": "builds/0TH-BUILD-008_cellular-engine-omega/README.md",

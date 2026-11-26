@@ -26,7 +26,7 @@
 | Archived Artifact | `builds/0TH-BUILD-008_cellular-engine-omega/VERIFICATION.md` (from `VERIFICATION.md`) |
 | Artifact SHA-256 | `adf1d9a7b54c106333dbdbbbdae8bce6eaef68578f19456898fd0fe350fd2afe` |
 | Archived Artifact | `builds/0TH-BUILD-008_cellular-engine-omega/lean4-omega-audit.txt` (from `results/lean4-omega-audit.txt`) |
-| Artifact SHA-256 | `809f469e5c40771f72da323f03acc08585af09f5d73629cd8b94a61b078195ad` |
+| Artifact SHA-256 | `7da6e29ea452c4e138de90edff7e314f6e9a1c7d03714b845ecdd276d940ebe6` |
 | Archived Artifact | `builds/0TH-BUILD-008_cellular-engine-omega/README.md` (from `README.md`) |
 | Artifact SHA-256 | `d26db43a1b474f6da6eab12d0661a9fc679c1ea572c3f8cb2203397eed4a44b6` |
 
