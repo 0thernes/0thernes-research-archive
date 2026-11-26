@@ -2,6 +2,9 @@
 
 > Canonical public master vault, live ecosystem mirror, and Mega-Atlas V2 cross-reference bridge for Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA; ORCID 0009-0006-8168-9648). Tracks 48 public research entries (19 Tier I preprints, 17 Tier II build papers & Lean 4 suites, 12 Tier III laws/discoveries/atlases) with byte-exact SHA-256 provenance and zero private repository leakage.
 
+## Start Here
+- [Results Ledger: one numbered list of what has been proven and what has not](RESULTS.md) · [JSON](registry/RESULTS_LEDGER.json)
+
 ## Key Registries & Machine-Readable Endpoints
 - [Tier I Preprints (JSON)](registry/PAPERS.json) · [Markdown](registry/PAPERS.md)
 - [Tier II Builds & Lean 4 Suites (JSON)](registry/BUILD_PAPERS.json) · [Markdown](registry/BUILD_PAPERS.md)
@@ -12,6 +15,7 @@
 
 ## Epistemic Status & Verification
 - Grand Mega-Atlas V2 open problems retired: 0 / 1900
+- Audited results in the Results Ledger: 0 (none recorded yet); none is peer reviewed
 - Peer-literature open sub-conjectures / open questions formally proved in Lean 4.35.0: 5
 - Tracked unique public repositories: 41
 - Primary verifier: `python3 scripts/verify_archive.py` and `python3 -m pytest -v tests/`
@@ -19,4 +23,4 @@
 ## Governance & Documentation
 - [README.md](README.md) · [CLAIMS.md](CLAIMS.md) · [LIMITATIONS.md](LIMITATIONS.md) · [REPLICATION.md](REPLICATION.md)
 - [AGENTS.md](AGENTS.md) · [CHANGELOG.md](CHANGELOG.md) · [ROADMAP.md](ROADMAP.md) · [HARDENING_INDEX.md](HARDENING_INDEX.md)
-- [Architecture](docs/architecture.md) · [ADR 0001](docs/adr/0001-three-tier-epistemic-archive.md) · [ADR 0002](docs/adr/0002-canonical-hub-and-live-sync.md)
+- [Architecture](docs/architecture.md) · [ADR 0001](docs/adr/0001-three-tier-epistemic-archive.md) · [ADR 0002](docs/adr/0002-canonical-hub-and-live-sync.md) · [ADR 0003](docs/adr/0003-numbered-results-ledger.md)

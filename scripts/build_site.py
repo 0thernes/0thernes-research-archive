@@ -8,6 +8,8 @@ import shutil
 from pathlib import Path
 from typing import Any
 
+import build_ledger as bl  # sibling module: numbered Results Ledger
+
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "build" / "site"
 ARCHIVED_SUPERSEDED_IDS = frozenset({"0TH-2026-001", "0TH-2026-002", "0TH-2026-003", "0TH-2026-005"})
@@ -35,6 +37,32 @@ def main() -> int:
     synced_utc = mirror["synced_utc"] if mirror else "offline"
     unique_repos = mirror["counts"]["unique_public_repositories"] if mirror else 0
     pinned_subs = mirror["counts"]["pinned_submodules"] if mirror else 0
+
+    ledger_path = ROOT / "registry" / "RESULTS_LEDGER.json"
+    ledger = bl.load_json(ledger_path) if ledger_path.exists() else {"results": []}
+    ledger_index = bl.registry_index(ROOT)
+    ledger_counts = bl.counts_by_kind(ledger)
+    ledger_active = sum(ledger_counts.values())
+    ledger_rows = []
+    for r in ledger["results"]:
+        if r.get("status") != "ACTIVE" or r.get("archive_id") not in ledger_index:
+            continue
+        ent = ledger_index[r["archive_id"]]
+        letter, kind_title = bl.KINDS[r["kind"]][:2]
+        kcls = "tag-ok" if letter == "A" else ("tag-info" if letter in "BCD" else "tag-muted")
+        search_txt = html.escape(
+            f"r{r['n']} {r['archive_id']} {ent['slug']} {kind_title} {r['title']} {r['statement']}".lower()
+        )
+        ledger_rows.append(
+            f'<tr data-search="{search_txt}">'
+            f'<td><a href="https://github.com/0thernes/0thernes-research-archive/blob/main/RESULTS.md#r{r["n"]}">R{r["n"]}</a></td>'
+            f'<td>{html.escape(r["title"])}<div class="muted">{html.escape(r["statement"])}</div></td>'
+            f'<td>{badge(kind_title, kcls)}</td>'
+            f'<td>{html.escape(bl.EVIDENCE[r["evidence"]])}</td>'
+            f'<td><a href="{html.escape(ent["repository"])}">{html.escape(ent["slug"])}</a> '
+            f'<code>{html.escape(ent["version"])}</code><div class="muted"><code>{html.escape(r["archive_id"])}</code></div></td>'
+            f'</tr>'
+        )
 
     bridge_rows = []
     for e in bridge["entries"]:
@@ -203,6 +231,7 @@ def main() -> int:
         <a class="pill" href="registry/PAPERS.json">PAPERS.json</a>
         <a class="pill" href="registry/BUILD_PAPERS.json">BUILD_PAPERS.json</a>
         <a class="pill" href="registry/LAWS_AND_DISCOVERIES.json">LAWS_AND_DISCOVERIES.json</a>
+        <a class="pill" href="registry/RESULTS_LEDGER.json">RESULTS_LEDGER.json</a>
         <a class="pill" href="registry/SOLVED_AND_ATLAS_BRIDGE.json">SOLVED_AND_ATLAS_BRIDGE.json</a>
         <a class="pill" href="registry/LIVE_ECOSYSTEM_MIRROR.json">LIVE_ECOSYSTEM_MIRROR.json</a>
         <a class="pill" href="CHECKSUMS.sha256">CHECKSUMS.sha256</a>
@@ -215,12 +244,22 @@ def main() -> int:
       <label for="search-box" class="muted" style="margin:0;">Search:</label>
       <input id="search-box" type="search" placeholder="Filter by ID (0TH-2026-013, CS-053, QM-011), repo, or keyword…"/>
       <button type="button" class="filter-btn" data-section="all" aria-pressed="true">All</button>
+      <button type="button" class="filter-btn" data-section="ledger" aria-pressed="false">Results Ledger ({ledger_active})</button>
       <button type="button" class="filter-btn" data-section="bridge" aria-pressed="false">Mega-Atlas Bridge</button>
       <button type="button" class="filter-btn" data-section="mirror" aria-pressed="false">Live Mirror</button>
       <button type="button" class="filter-btn" data-section="tier1" aria-pressed="false">Tier I ({len(papers)})</button>
       <button type="button" class="filter-btn" data-section="tier2" aria-pressed="false">Tier II ({len(builds)})</button>
       <button type="button" class="filter-btn" data-section="tier3" aria-pressed="false">Tier III ({len(discs)})</button>
     </div>
+
+    <section data-group="ledger" aria-labelledby="h-ledger">
+      <h2 id="h-ledger">Results Ledger ({ledger_active} audited results)</h2>
+      <div class="callout">One numbered list of what has been established and what has not. None of these results is peer reviewed. Statements, evidence, limits and check commands: <a href="https://github.com/0thernes/0thernes-research-archive/blob/main/RESULTS.md">RESULTS.md</a>.</div>
+      <table>
+        <thead><tr><th>No.</th><th>Result</th><th>Kind</th><th>Evidence</th><th>Source</th></tr></thead>
+        <tbody>{"".join(ledger_rows)}</tbody>
+      </table>
+    </section>
 
     <section data-group="bridge" aria-labelledby="h-bridge">
       <h2 id="h-bridge">Solved Sub-Conjectures &amp; Mega-Atlas V2 Cross-Reference Bridge</h2>
@@ -307,6 +346,7 @@ def main() -> int:
         "LAWS_AND_DISCOVERIES.json",
         "SOLVED_AND_ATLAS_BRIDGE.json",
         "LIVE_ECOSYSTEM_MIRROR.json",
+        "RESULTS_LEDGER.json",
     ):
         src = ROOT / "registry" / fname
         if src.exists():

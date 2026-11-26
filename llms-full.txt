@@ -23,9 +23,20 @@
 - **Scope:** **48 public research entries** (`19 Tier I + 17 Tier II + 12 Tier III`) + **35 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 <!-- LIVE_ECOSYSTEM_STATUS:START -->
-> **Live Canonical Hub Mirror (`2026-11-26T17:22:10Z`):** Tracking **48 public research entries** (19 Tier I preprints · 17 Tier II builds · 12 Tier III laws/discoveries/atlases) across **41 unique public repositories** and **35 pinned Git submodules** (`32` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
+> **Live Canonical Hub Mirror (`2026-11-26T17:47:52Z`):** Tracking **48 public research entries** (19 Tier I preprints · 17 Tier II builds · 12 Tier III laws/discoveries/atlases) across **41 unique public repositories** and **35 pinned Git submodules** (`32` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
 > **Mega-Atlas V2 Cross-Check:** **`0 / 1900` grand open problems retired** · **5 peer-literature open sub-conjectures/questions formally proved in Lean 4.35.0** across 6 independent kernels. Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
 <!-- LIVE_ECOSYSTEM_STATUS:END -->
+
+<!-- RESULTS_LEDGER:START -->
+## Results at a glance
+
+**0 audited results.** . None is peer reviewed. 0 of 1,900 catalogued open problems in the Unsolved Problems Mega-Atlas are solved by this work.
+
+Full numbered list with statements, evidence, limits and check commands: **[RESULTS.md](RESULTS.md)**.
+
+<!-- RESULTS_LEDGER:END -->
+
+Public repositories discovered but not yet promoted into the research registries are documented in [`registry/PUBLIC_CANDIDATE_TRIAGE.md`](registry/PUBLIC_CANDIDATE_TRIAGE.md); discovery status is deliberately not treated as proof or a solved conjecture. The dated fleet claim-language blind-spot scan is [`registry/CLAIM_LANGUAGE_SCAN_2026-11-26.md`](registry/CLAIM_LANGUAGE_SCAN_2026-11-26.md).
 
 ---
 
@@ -34,7 +45,7 @@
 This repository is the **single authoritative public master hub** consolidating all research outputs across `0thernes` ([ADR 0002](docs/adr/0002-canonical-hub-and-live-sync.md)):
 
 - **Master Solved & Verified Hub (this repo):** [`0thernes/0thernes-research-archive`](https://github.com/0thernes/0thernes-research-archive) — live-synced via [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml) (`repository_dispatch` + 2-hour cron) and [`scripts/live_sync.py`](scripts/live_sync.py).
-- **Specialist Open-Problem Atlases (spokes indexed below):** [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) (`0TH-BUILD-007`, 1,900 problems), [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) (`0TH-BUILD-004` `v0.5.0` & `0TH-DISC-005`), and [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) (`0TH-DISC-006`).
+- **Specialist Open-Problem Atlases (spokes indexed below):** [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) (`0TH-BUILD-007`, 1,900 problems), [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) (`0TH-BUILD-004` frozen `v0.5.0`; separately verified upstream candidate `v0.6.0` in [`registry/UPSTREAM_RELEASE_SNAPSHOTS.json`](registry/UPSTREAM_RELEASE_SNAPSHOTS.json) & `0TH-DISC-005`), and [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) (`0TH-DISC-006`).
 - **Honest Mega-Atlas V2 Audit (`0 / 1,900` grand open problems retired):** **Zero** grand open problems in Mega-Atlas V2 are completely retired, while **5 peer-literature open sub-conjectures/questions** (`0TH-2026-006` Conjecture 7.7, `0TH-2026-010` Vinciguerra Sec. 6, `0TH-2026-009` Track 2 Muller–Saniga Sec. 6, `0TH-2026-012` Sun–Tao–Xu–Zhang Schur-syzygy rank, `0TH-2026-016` Tandon `arXiv:2608.30273` Open Problem #2 + 4 odd-cycle Shannon capacity world records) plus Jonah's Conjecture E (`0TH-2026-009` Track 1, with cited Theorem B4 outside Lean) are completely machine-checked in Lean 4.35.0 across 6 independent kernels. See [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) and [`0THERNES_SOLVED_AUDIT_2026-11-25.md`](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md).
 
 ---
@@ -122,7 +133,7 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 
 1. **Kernel-Checked Proofs:** Formalized claims compile in Lean 4 with zero `sorry`, zero `admit`, zero custom axioms, and explicit `#print axioms` audits strictly within `[propext, Classical.choice, Quot.sound]`.
 2. **Independent Falsifiability:** Every Tier I & Tier II entry ships an explicit reproduction and falsification command so any third party can independently test every claim.
-3. **Cryptographic Immutability & Live Mirroring:** Every frozen release PDF, Lean certificate, white paper, bridge table, live mirror snapshot, and discovery record is hashed in [`CHECKSUMS.sha256`](CHECKSUMS.sha256) (with frozen release artifacts additionally sealed under DigiCert RFC 3161 TSA [`data/RELEASE_FREEZE.sha256.tsr`](data/RELEASE_FREEZE.sha256.tsr)), matched against 32 pinned public Git submodules under `repos/`, and audited by GitHub Actions CI on every push.
+3. **Cryptographic Immutability & Live Mirroring:** Every frozen release PDF, Lean certificate, white paper, bridge table, live mirror snapshot, and discovery record is hashed in [`CHECKSUMS.sha256`](CHECKSUMS.sha256) (with frozen release artifacts additionally sealed under DigiCert RFC 3161 TSA [`data/RELEASE_FREEZE.sha256.tsr`](data/RELEASE_FREEZE.sha256.tsr)), matched against 35 pinned public Git submodules under `repos/`, and audited by GitHub Actions CI on every push.
 4. **Honest Boundaries & Privacy Discipline:** Every dossier explicitly separates kernel-checked theorems, paper proofs, pre-registered empirical claims, finite computational certificates, exploratory syntheses, and open questions. Private repositories and third-party forks remain strictly excluded from this public archive.
 
 ---
@@ -132,12 +143,12 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 Clone the archive and run the full cryptographic, link, and structural audit:
 
 ```bash
-# Clone the archive (add --recursive to also fetch all 32 pinned PUBLIC submodules)
+# Clone the archive (add --recursive to also fetch all 35 pinned PUBLIC submodules)
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 python3 -m pip install -r requirements.txt
 
-# Verify every SHA-256 digest, ORCID, axiom allowlist, markdown link, RFC 3161 TSA seal, and all 32 public submodule pins
+# Verify every SHA-256 digest, ORCID, axiom allowlist, markdown link, RFC 3161 TSA seal, and all 35 public submodule pins
 python3 scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
 python3 -m pytest -v tests/
@@ -155,7 +166,149 @@ just audit       # Score repository against Build Standard v1.2.0
 
 ## Maintenance Status
 
-**Status: Active** (repostatus: `active`). Automatically refreshes its live upstream mirror every 2 hours and on `repository_dispatch` via [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml), and updates frozen release pins whenever upstream repositories publish verified releases (see [CLAIMS.md](CLAIMS.md), [LIMITATIONS.md](LIMITATIONS.md), [REPLICATION.md](REPLICATION.md), [ROADMAP.md](ROADMAP.md), and [HARDENING_INDEX.md](HARDENING_INDEX.md)).
+**Status: Active** (repostatus: `active`). Automatically refreshes its live upstream mirror every 2 hours and on `repository_dispatch` via [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml). Upstream releases are reported in the live mirror; immutable frozen release pins are advanced only through a reviewed archive update that adds and verifies the corresponding frozen artifacts (see [CLAIMS.md](CLAIMS.md), [LIMITATIONS.md](LIMITATIONS.md), [REPLICATION.md](REPLICATION.md), [ROADMAP.md](ROADMAP.md), and [HARDENING_INDEX.md](HARDENING_INDEX.md)).
+
+
+---
+
+<!-- FILE: RESULTS.md -->
+
+# Results Ledger
+
+One numbered list of what this body of work has established, and what it has not.
+Generated by `scripts/build_ledger.py` from `registry/RESULTS_LEDGER.json`; do not edit by hand.
+
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))
+
+## Read this first
+
+- None of these results has been peer reviewed. They are preprints by one independent author, produced with disclosed AI assistance.
+- "Lean kernel" means the Lean 4 kernel accepted the proof. That certifies the formal statement, not the choice of statement, so every result also records a statement audit.
+- The audit recorded for each result was run by AI review agents in sessions separate from the ones that wrote the proofs, under the author's direction: a clean rebuild at the cited commit, a reading of the formal statement against the claim and its cited source, and a literature search. It is an internal check, not external review.
+- A result answers only the question stated. Parent problems named in the papers remain open unless they are listed here.
+- 0 of 1,900 catalogued open problems in the Unsolved Problems Mega-Atlas are solved by this work.
+
+## At a glance
+
+0 results from 0 archive entries.
+
+| Section | Kind | Results | Meaning |
+|---|---|---:|---|
+| [A](#section-a) | Open questions from the literature, answered | 0 | A question or conjecture that another author stated as open in a cited paper or preprint (the citation says which), answered here within the scope given. |
+| [B](#section-b) | New theorems | 0 | A statement first formulated in this work. No earlier statement of it was found in the literature search recorded for the result. |
+| [C](#section-c) | Bounded and partial cases | 0 | An exact answer inside a stated finite range or restricted setting. The unrestricted problem stays open. |
+| [D](#section-d) | Refutations | 0 | A counterexample or impossibility result against a stated claim or heuristic. |
+| [E](#section-e) | Known results formalized | 0 | Mathematics already in the literature, machine-checked here. The contribution is the formal proof. |
+| [F](#section-f) | Engineering invariant suites | 0 | Machine-checked properties of a software model or simulator. They say the model is internally consistent, not that it describes nature. |
+
+## All results
+
+| No. | Result | Kind | Evidence | Entry |
+|---:|---|---|---|---|
+
+<a id="section-a"></a>
+## A. Open questions from the literature, answered
+
+*A question or conjecture that another author stated as open in a cited paper or preprint (the citation says which), answered here within the scope given.*
+
+None recorded.
+
+<a id="section-b"></a>
+## B. New theorems
+
+*A statement first formulated in this work. No earlier statement of it was found in the literature search recorded for the result.*
+
+None recorded.
+
+<a id="section-c"></a>
+## C. Bounded and partial cases
+
+*An exact answer inside a stated finite range or restricted setting. The unrestricted problem stays open.*
+
+None recorded.
+
+<a id="section-d"></a>
+## D. Refutations
+
+*A counterexample or impossibility result against a stated claim or heuristic.*
+
+None recorded.
+
+<a id="section-e"></a>
+## E. Known results formalized
+
+*Mathematics already in the literature, machine-checked here. The contribution is the formal proof.*
+
+None recorded.
+
+<a id="section-f"></a>
+## F. Engineering invariant suites
+
+*Machine-checked properties of a software model or simulator. They say the model is internally consistent, not that it describes nature.*
+
+None recorded.
+
+## Archive entries without their own results
+
+Registered in the archive but not yet audited into this ledger:
+
+- `0TH-2026-001` [hoggar-bound](https://github.com/0thernes/hoggar-bound) `v1.0.0`
+- `0TH-2026-002` [hoggar-bound-lab](https://github.com/0thernes/hoggar-bound-lab) `v1.8.0`
+- `0TH-2026-003` [contextuality-tensor-lab](https://github.com/0thernes/contextuality-tensor-lab) `v0.1.0`
+- `0TH-2026-004` [kochen-specker-extremal-lab](https://github.com/0thernes/kochen-specker-extremal-lab) `v2.0.0`
+- `0TH-2026-005` [contextuality-evidence-lab](https://github.com/0thernes/contextuality-evidence-lab) `v1.0.0`
+- `0TH-2026-006` [multinomial-tv-conjecture](https://github.com/0thernes/multinomial-tv-conjecture) `v2.3.0`
+- `0TH-2026-007` [human-synapse-bouton-lab](https://github.com/0thernes/human-synapse-bouton-lab) `v1.3.0`
+- `0TH-2026-008` [human-synapse-bouton-lab](https://github.com/0thernes/human-synapse-bouton-lab) `v1.3.0`
+- `0TH-2026-009` [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.0.0`
+- `0TH-2026-010` [catalytic-register-frontiers](https://github.com/0thernes/catalytic-register-frontiers) `v1.0.1`
+- `0TH-2026-011` [secmesh-pqsi](https://github.com/0thernes/secmesh-pqsi) `v2.5.0`
+- `0TH-2026-012` [coded-pir-mlwe-complexity-lab](https://github.com/0thernes/coded-pir-mlwe-complexity-lab) `v5.0.0`
+- `0TH-2026-013` [p-vs-np-frontier-lab](https://github.com/0thernes/p-vs-np-frontier-lab) `v1.2.0`
+- `0TH-2026-014` [monodromia](https://github.com/0thernes/monodromia) `v1.0.0`
+- `0TH-2026-015` [promislow-fracton-amoeba](https://github.com/0thernes/promislow-fracton-amoeba) `v1.0.0`
+- `0TH-2026-016` [zero-error-torus-frontier](https://github.com/0thernes/zero-error-torus-frontier) `v1.0.0`
+- `0TH-2026-017` [octonionica](https://github.com/0thernes/octonionica) `v1.0.0`
+- `0TH-2026-018` [apollonian-sandpile-markov](https://github.com/0thernes/apollonian-sandpile-markov) `v1.0.0`
+- `0TH-2026-019` [cayley-dickson-terrace-frontier](https://github.com/0thernes/cayley-dickson-terrace-frontier) `v1.0.0`
+- `0TH-BUILD-001` [cellulogonic-mecha](https://github.com/0thernes/cellulogonic-mecha) `v1.6.0`
+- `0TH-BUILD-002` [planaria](https://github.com/0thernes/planaria) `v2.4.0`
+- `0TH-BUILD-003` [ultrametrica](https://github.com/0thernes/ultrametrica) `v1.5.0`
+- `0TH-BUILD-004` [unsolved-mathematics](https://github.com/0thernes/unsolved-mathematics) `v0.5.0`
+- `0TH-BUILD-005` [cosmogonic-quantum-mechalogodrom](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) `v0.14.3`
+- `0TH-BUILD-006` [black-hole-simulation-lab](https://github.com/0thernes/black-hole-simulation-lab) `main+research-branch`
+- `0TH-BUILD-007` [unsolved-problems-mega-atlas](https://github.com/0thernes/unsolved-problems-mega-atlas) `v2.8.0`
+- `0TH-BUILD-008` [cellular-engine-omega](https://github.com/0thernes/cellular-engine-omega) `v5.3.0`
+- `0TH-BUILD-009` [autophage](https://github.com/0thernes/autophage) `v1.4.0`
+- `0TH-BUILD-010` [noetic-organism-omega](https://github.com/0thernes/noetic-organism-omega) `v2.1.0`
+- `0TH-BUILD-011` [asmodensius-native](https://github.com/0thernes/asmodensius-native) `v1.1.0`
+- `0TH-BUILD-012` [xiaomi-17t-pro-lab](https://github.com/0thernes/xiaomi-17t-pro-lab) `v3.1.0`
+- `0TH-BUILD-013` [alife-singularity-omega-package](https://github.com/0thernes/alife-singularity-omega-package) `v3.4.0`
+- `0TH-BUILD-014` [omega-triscale-observatory](https://github.com/0thernes/omega-triscale-observatory) `v6.7.0`
+- `0TH-BUILD-015` [glitchling-jam](https://github.com/0thernes/glitchling-jam) `v2.3.0`
+- `0TH-BUILD-016` [ALife-Framework](https://github.com/0thernes/ALife-Framework) `v3.0.0`
+- `0TH-BUILD-017` [beast-civilization](https://github.com/0thernes/beast-civilization) `v0.7.0`
+
+## Not claimed
+
+- No Millennium Prize problem and no grand open problem is solved here. P versus NP is open.
+- No result has been refereed by a journal or checked by a named outside expert.
+- Engineering invariant suites (section F) verify software models. They are not evidence about consciousness, sentience, biology or physics.
+- A search that found no earlier proof is not a proof of novelty.
+
+## How a result gets on this list
+
+1. The claim is registered in the archive with a pinned commit and a frozen paper.
+2. The formal statement is read against the informal claim and against the cited source, in a session that did not write the proof.
+3. The proof is rebuilt from a clean clone at that commit, or the ledger says it was not.
+4. The literature is searched for earlier or parallel proofs and the outcome is recorded.
+5. The wording is limited to what steps 2 to 4 support. Anything narrower than the usual informal claim is stated under Limit.
+
+## How to challenge a result
+
+- Open an issue on this repository or on the result's repository and quote the result number (for example R7).
+- A reproducible counterexample, a gap in a statement audit, or an earlier proof in the literature leads to a correction: the result is narrowed, reclassified or withdrawn, and keeps its number.
+- Corrections are recorded in CHANGELOG.md.
 
 
 ---
@@ -166,11 +319,12 @@ just audit       # Score repository against Build Standard v1.2.0
 
 | ID | Claim | Verification Tier | Evidence | What Would Prove Us Wrong |
 |---|---|---|---|---|
-| **C1** | Every archived PDF, white paper, Lean certificate, metadata file, bridge table, live mirror JSON, and discovery snapshot across all **45 public entries** (`16 Tier I + 17 Tier II + 12 Tier III`) matches its byte-exact SHA-256 digest in `CHECKSUMS.sha256`, `data/MANIFEST.sha256`, `data/RELEASE_FREEZE.sha256` (RFC 3161 TSA sealed), and `registry/*.json`. | **Cryptographic SHA-256 & RFC 3161 TSA check** | `scripts/verify_archive.py`, `sha256sum -c CHECKSUMS.sha256`, `data/RELEASE_FREEZE.sha256.tsr`, `tests/test_archive_integrity.py` | Any SHA-256 mismatch, missing file, invalid TSA token, artifact > 5 MB, or unregistered PDF in `papers/`. |
-| **C2** | Every pinned public Git submodule under `repos/` (**32** public repositories) matches the exact commit SHA recorded in `registry/PAPERS.json` and `registry/BUILD_PAPERS.json`. | **Exact Git index check** | `get_git_submodule_commits` in `scripts/verify_archive.py` | Any submodule drift between `git ls-files --stage repos` and `pinned_commit`. |
+| **C1** | Every archived PDF, white paper, Lean certificate, metadata file, bridge table, live mirror JSON, and discovery snapshot across every public entry registered in `registry/PAPERS.json`, `registry/BUILD_PAPERS.json` and `registry/LAWS_AND_DISCOVERIES.json` (live counts: `README.md` status block) matches its byte-exact SHA-256 digest in `CHECKSUMS.sha256`, `data/MANIFEST.sha256`, `data/RELEASE_FREEZE.sha256` (RFC 3161 TSA sealed), and `registry/*.json`. | **Cryptographic SHA-256 & RFC 3161 TSA check** | `scripts/verify_archive.py`, `sha256sum -c CHECKSUMS.sha256`, `data/RELEASE_FREEZE.sha256.tsr`, `tests/test_archive_integrity.py` | Any SHA-256 mismatch, missing file, invalid TSA token, artifact > 5 MB, or unregistered PDF in `papers/`. |
+| **C2** | Every pinned public Git submodule under `repos/` matches the exact commit SHA recorded in `registry/PAPERS.json` and `registry/BUILD_PAPERS.json`. | **Exact Git index check** | `get_git_submodule_commits` in `scripts/verify_archive.py` | Any submodule drift between `git ls-files --stage repos` and `pinned_commit`. |
 | **C3** | Every entry across all three tiers and the Mega-Atlas bridge carries canonical ORCID `0009-0006-8168-9648`, zero unformed LLC entity assertions, an explicit `verification_boundary`, exact bridge-to-registry version parity, and Lean axiom allowlists strictly within `[propext, Classical.choice, Quot.sound]`. | **Automated schema & policy check** | `scripts/verify_archive.py`, `tests/test_archive_integrity.py` | Any missing ORCID, legacy unformed LLC string, missing verification boundary, bridge version mismatch, or non-standard axiom in any allowlist. |
 | **C4** | Zero private repositories or third-party forks are exposed anywhere in `registry/`, `repos/`, `llms.txt`, `LIVE_ECOSYSTEM_MIRROR.json`, or `.gitmodules`. | **Automated visibility & privacy check** | `test_privacy_firewall_no_private_repos` & `test_live_sync_privacy_firewall_and_failure_injection` | Any `visibility != "PUBLIC"` entry, `private == true`, `fork == true`, or private repository slug appearing in public manifests. |
-| **C5** | Zero relative markdown links are broken, zero blank lines split `README.md` registry tables, `README.md` scope/submodule/mirror counts match exact registry totals (`45` entries / `32` submodules), and `SOLVED_AND_ATLAS_BRIDGE.json` strictly reports `0 / 1,900` grand Mega-Atlas problems retired (`5` peer-literature sub-conjectures proved in Lean 4.35.0). | **Automated link, table & epistemic honesty check** | `check_markdown_links`, `check_readme_table_integrity`, `check_readme_counts` in `scripts/verify_archive.py`, `tests/test_archive_integrity.py` | Any broken local markdown link, split markdown table, count drift, or any entry falsely claiming retirement of a grand Mega-Atlas problem. |
+| **C5** | Zero relative markdown links are broken, zero blank lines split `README.md` registry tables, `README.md` scope/submodule/mirror counts match the exact registry totals, and `SOLVED_AND_ATLAS_BRIDGE.json` strictly reports `0 / 1,900` grand Mega-Atlas problems retired (`5` peer-literature sub-conjectures proved in Lean 4.35.0). | **Automated link, table & epistemic honesty check** | `check_markdown_links`, `check_readme_table_integrity`, `check_readme_counts` in `scripts/verify_archive.py`, `tests/test_archive_integrity.py` | Any broken local markdown link, split markdown table, count drift, or any entry falsely claiming retirement of a grand Mega-Atlas problem. |
+| **C6** | Every result in [`RESULTS.md`](RESULTS.md) is generated from `registry/RESULTS_LEDGER.json`. Each carries a plain statement, its kind, its evidence, the audited commit, the audit outcome and its limits. No result uses promotional wording. A "published open question answered" cites its source and records a statement audit and a prior-work search. Every registered Tier I and Tier II entry is accounted for. | **Automated ledger validation, staleness and mutation checks** | `scripts/build_ledger.py --check`, `tests/test_results_ledger.py`, `scripts/verify_archive.py` ([ADR 0003](docs/adr/0003-numbered-results-ledger.md)) | A ledger record that fails validation; a stale `RESULTS.md` or README block; a cited Lean declaration that is not at the cited file and line at the audited commit (`--checkouts`); an earlier proof found in the literature; a formal statement shown to be narrower than recorded. |
 
 ## What Would Prove Us Wrong (Falsification Protocol)
 
@@ -205,14 +359,17 @@ Any failing run of `python3 scripts/verify_archive.py`, `sha256sum -c CHECKSUMS.
 Any third party can verify the entire canonical master archive, live ecosystem mirror, Mega-Atlas bridge, and DigiCert RFC 3161 TSA release seal from a clean clone:
 
 ```bash
-# 1. Clone the archive (add --recursive to fetch all 32 pinned public submodules)
+# 1. Clone the archive (add --recursive to fetch every pinned public submodule).
+#    Needs Python 3.10 or newer: the pinned test tools do not install on 3.9. CI uses 3.12.
 git clone https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 python3 -m pip install -r requirements.txt
 
-# 2. Verify every SHA-256 digest, RFC 3161 TSA seal, ORCID, axiom policy, bridge parity, table continuity, zero broken links, and all 32 submodule pins
+# 2. Verify every SHA-256 digest, RFC 3161 TSA seal, ORCID, axiom policy, bridge parity, table continuity,
+#    zero broken links, every submodule pin, and the numbered Results Ledger (RESULTS.md)
 python3 scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
+python3 scripts/build_ledger.py --check
 
 # 3. Run automated integrity, privacy-firewall, failure-injection, property, negative, mutation & idempotence tests
 python3 -m pytest -v tests/
@@ -314,54 +471,54 @@ just audit       # Score repo against Build Standard v1.2.0
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-26T17:22:10Z` · **Mode:** `live-github-api`  
+**Synced (UTC):** `2026-11-26T17:47:52Z` · **Mode:** `live-github-api`  
 **Tracked Public Repositories:** 41 (`32` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
 | Repository | Archive IDs | Tiers | Archived Pin | Live `main` HEAD | Release | Latest CI | Sync Status |
 |---|---|---|---|---|---|---|---|
-| [`ALife-Framework`](https://github.com/0thernes/ALife-Framework) | `0TH-BUILD-016` | Tier II | `48a2a0aa2b` | `48a2a0aa2b` | `v3.0.0` | [`success`](https://github.com/0thernes/ALife-Framework/actions/runs/45824894481) | `EXACT_PIN_MATCH` |
-| [`alife-singularity-omega-package`](https://github.com/0thernes/alife-singularity-omega-package) | `0TH-BUILD-013`, `0TH-DISC-011` | Tier II / Tier III | `a08294c97f` | `a08294c97f` | `v3.4.0` | [`success`](https://github.com/0thernes/alife-singularity-omega-package/actions/runs/45821196185) | `EXACT_PIN_MATCH` |
-| [`apollonian-sandpile-markov`](https://github.com/0thernes/apollonian-sandpile-markov) | `0TH-2026-018` | Tier I | `0cf60c5cc6` | `0cf60c5cc6` | `v1.0.0` | [`success`](https://github.com/0thernes/apollonian-sandpile-markov/actions/runs/45852589226) | `EXACT_PIN_MATCH` |
+| [`ALife-Framework`](https://github.com/0thernes/ALife-Framework) | `0TH-BUILD-016` | Tier II | `48a2a0aa2b` | `48a2a0aa2b` | `v3.0.0` | [`success`](https://github.com/0thernes/ALife-Framework/actions/runs/45824894491) | `EXACT_PIN_MATCH` |
+| [`alife-singularity-omega-package`](https://github.com/0thernes/alife-singularity-omega-package) | `0TH-BUILD-013`, `0TH-DISC-011` | Tier II / Tier III | `a08294c97f` | `a08294c97f` | `v3.4.0` | [`success`](https://github.com/0thernes/alife-singularity-omega-package/actions/runs/45821196180) | `EXACT_PIN_MATCH` |
+| [`apollonian-sandpile-markov`](https://github.com/0thernes/apollonian-sandpile-markov) | `0TH-2026-018` | Tier I | `0cf60c5cc6` | `0cf60c5cc6` | `v1.0.0` | [`success`](https://github.com/0thernes/apollonian-sandpile-markov/actions/runs/45849166650) | `EXACT_PIN_MATCH` |
 | [`Asmodensius`](https://github.com/0thernes/Asmodensius) | `0TH-DISC-002` | Tier III | `c72a4ec9a0` | `c72a4ec9a0` | `main` | [`success`](https://github.com/0thernes/Asmodensius/actions/runs/44051073860) | `EXACT_PIN_MATCH` |
 | [`asmodensius-native`](https://github.com/0thernes/asmodensius-native) | `0TH-BUILD-011` | Tier II | `67bedd4abb` | `67bedd4abb` | `v1.1.0` | [`success`](https://github.com/0thernes/asmodensius-native/actions/runs/45748401683) | `EXACT_PIN_MATCH` |
 | [`autophage`](https://github.com/0thernes/autophage) | `0TH-BUILD-009` | Tier II | `1956c2cc54` | `1956c2cc54` | `v1.4.0` | [`success`](https://github.com/0thernes/autophage/actions/runs/45751051356) | `EXACT_PIN_MATCH` |
 | [`beast-civilization`](https://github.com/0thernes/beast-civilization) | `0TH-BUILD-017` | Tier II | `c4211353bb` | `c4211353bb` | `v0.7.0` | [`success`](https://github.com/0thernes/beast-civilization/actions/runs/45826608002) | `EXACT_PIN_MATCH` |
 | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) | `0TH-BUILD-006` | Tier II | `050455db86` | `050455db86` | `main+research-branch` | [`success`](https://github.com/0thernes/black-hole-simulation-lab/actions/runs/40110397354) | `EXACT_PIN_MATCH` |
 | [`catalytic-register-frontiers`](https://github.com/0thernes/catalytic-register-frontiers) | `0TH-2026-010` | Tier I | `4bfeabb05a` | `646443c35e` | `v1.0.1` | [`success`](https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45828647594) | `AHEAD_OF_PIN` |
-| [`cayley-dickson-terrace-frontier`](https://github.com/0thernes/cayley-dickson-terrace-frontier) | `0TH-2026-019` | Tier I | `f1a3ff375a` | `564e1787e6` | `v1.0.0` | [`success`](https://github.com/0thernes/cayley-dickson-terrace-frontier/actions/runs/45862753345) | `AHEAD_OF_PIN` |
-| [`cellular-engine-omega`](https://github.com/0thernes/cellular-engine-omega) | `0TH-BUILD-008` | Tier II | `4b257af5f2` | `4b257af5f2` | `v5.3.0` | [`success`](https://github.com/0thernes/cellular-engine-omega/actions/runs/45810663869) | `EXACT_PIN_MATCH` |
-| [`cellulogonic-mecha`](https://github.com/0thernes/cellulogonic-mecha) | `0TH-BUILD-001` | Tier II | `d033ab025e` | `d033ab025e` | `v1.6.0` | [`success`](https://github.com/0thernes/cellulogonic-mecha/actions/runs/45812871830) | `EXACT_PIN_MATCH` |
+| [`cayley-dickson-terrace-frontier`](https://github.com/0thernes/cayley-dickson-terrace-frontier) | `0TH-2026-019` | Tier I | `f1a3ff375a` | `564e1787e6` | `v1.0.0` | [`success`](https://github.com/0thernes/cayley-dickson-terrace-frontier/actions/runs/45862555668) | `AHEAD_OF_PIN` |
+| [`cellular-engine-omega`](https://github.com/0thernes/cellular-engine-omega) | `0TH-BUILD-008` | Tier II | `4b257af5f2` | `4b257af5f2` | `v5.3.0` | [`success`](https://github.com/0thernes/cellular-engine-omega/actions/runs/45810663954) | `EXACT_PIN_MATCH` |
+| [`cellulogonic-mecha`](https://github.com/0thernes/cellulogonic-mecha) | `0TH-BUILD-001` | Tier II | `d033ab025e` | `d033ab025e` | `v1.6.0` | [`success`](https://github.com/0thernes/cellulogonic-mecha/actions/runs/45812871840) | `EXACT_PIN_MATCH` |
 | [`coded-pir-mlwe-complexity-lab`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab) | `0TH-2026-012` | Tier I | `674b5dac3a` | `674b5dac3a` | `v5.0.0` | [`success`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45850785203) | `EXACT_PIN_MATCH` |
 | [`contextuality-evidence-lab`](https://github.com/0thernes/contextuality-evidence-lab) | `0TH-2026-005` | Tier I | `ef0682cd24` | `e3811f332c` | `v1.0.0` | [`success`](https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42815130874) | `HISTORICAL_ARCHIVED` |
 | [`contextuality-tensor-lab`](https://github.com/0thernes/contextuality-tensor-lab) | `0TH-2026-003` | Tier I | `f7a1e6e74f` | `81f8d20c95` | `v0.1.0` | [`success`](https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42752465789) | `HISTORICAL_ARCHIVED` |
 | [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) | `0TH-BUILD-005`, `0TH-DISC-001` | Tier II / Tier III | `b0dcf153b9` | `b0dcf153b9` | `v0.23.0` | [`success`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom/actions/runs/45117980365) | `EXACT_PIN_MATCH` |
-| [`dimension-omega-singularity`](https://github.com/0thernes/dimension-omega-singularity) | `0TH-DISC-008` | Tier III | `947054ec64` | `947054ec64` | `main` | [`success`](https://github.com/0thernes/dimension-omega-singularity/actions/runs/42080074964) | `EXACT_PIN_MATCH` |
+| [`dimension-omega-singularity`](https://github.com/0thernes/dimension-omega-singularity) | `0TH-DISC-008` | Tier III | `947054ec64` | `947054ec64` | `main` | — | `EXACT_PIN_MATCH` |
 | [`glitchling-jam`](https://github.com/0thernes/glitchling-jam) | `0TH-BUILD-015`, `0TH-DISC-007` | Tier II / Tier III | `92799daae8` | `92799daae8` | `v2.3.0` | [`success`](https://github.com/0thernes/glitchling-jam/actions/runs/45823061012) | `EXACT_PIN_MATCH` |
-| [`grimoire-algorithms-of-the-arcane`](https://github.com/0thernes/grimoire-algorithms-of-the-arcane) | `0TH-DISC-009` | Tier III | `edca7f8dc2` | `edca7f8dc2` | `main` | [`success`](https://github.com/0thernes/grimoire-algorithms-of-the-arcane/actions/runs/28751566956) | `EXACT_PIN_MATCH` |
+| [`grimoire-algorithms-of-the-arcane`](https://github.com/0thernes/grimoire-algorithms-of-the-arcane) | `0TH-DISC-009` | Tier III | `edca7f8dc2` | `edca7f8dc2` | `main` | — | `EXACT_PIN_MATCH` |
 | [`hoggar-bound`](https://github.com/0thernes/hoggar-bound) | `0TH-2026-001` | Tier I | `c74135c429` | `4dd33138c3` | `v1.0.0` | — | `HISTORICAL_ARCHIVED` |
 | [`hoggar-bound-lab`](https://github.com/0thernes/hoggar-bound-lab) | `0TH-2026-002`, `0TH-DISC-010` | Tier I / Tier III | `eb2d83ef72` | `3ef737d7f0` | `v1.8.0` | [`success`](https://github.com/0thernes/hoggar-bound-lab/actions/runs/45367463693) | `HISTORICAL_ARCHIVED` |
-| [`human-synapse-bouton-lab`](https://github.com/0thernes/human-synapse-bouton-lab) | `0TH-2026-007`, `0TH-2026-008` | Tier I | `06e0dcdd5f` | `05b2855c4b` | `v1.3.0` | [`success`](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45822607875) | `AHEAD_OF_PIN` |
+| [`human-synapse-bouton-lab`](https://github.com/0thernes/human-synapse-bouton-lab) | `0TH-2026-007`, `0TH-2026-008` | Tier I | `06e0dcdd5f` | `05b2855c4b` | `v1.3.0` | [`success`](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45822607945) | `AHEAD_OF_PIN` |
 | [`kochen-specker-extremal-lab`](https://github.com/0thernes/kochen-specker-extremal-lab) | `0TH-2026-004` | Tier I | `4c4dda9113` | `4c4dda9113` | `v2.0.0` | [`success`](https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45825147353) | `EXACT_PIN_MATCH` |
-| [`monodromia`](https://github.com/0thernes/monodromia) | `0TH-2026-014` | Tier I | `153792bdae` | `153792bdae` | `v1.0.0` | [`success`](https://github.com/0thernes/monodromia/actions/runs/45749048038) | `EXACT_PIN_MATCH` |
-| [`multinomial-tv-conjecture`](https://github.com/0thernes/multinomial-tv-conjecture) | `0TH-2026-006` | Tier I | `0a69443e1b` | `0a69443e1b` | `v2.3.0` | [`success`](https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/45832743932) | `EXACT_PIN_MATCH` |
-| [`neuralese`](https://github.com/0thernes/neuralese) | `0TH-DISC-003` | Tier III | `2527d67355` | `2527d67355` | `v17.3.0` | [`success`](https://github.com/0thernes/neuralese/actions/runs/41337677626) | `EXACT_PIN_MATCH` |
-| [`neuralese-diffusion`](https://github.com/0thernes/neuralese-diffusion) | `0TH-DISC-004` | Tier III | `13e3b0e22e` | `13e3b0e22e` | `main` | [`failure`](https://github.com/0thernes/neuralese-diffusion/actions/runs/43396645937) | `EXACT_PIN_MATCH` |
+| [`monodromia`](https://github.com/0thernes/monodromia) | `0TH-2026-014` | Tier I | `153792bdae` | `153792bdae` | `v1.0.0` | [`success`](https://github.com/0thernes/monodromia/actions/runs/45749048047) | `EXACT_PIN_MATCH` |
+| [`multinomial-tv-conjecture`](https://github.com/0thernes/multinomial-tv-conjecture) | `0TH-2026-006` | Tier I | `0a69443e1b` | `0a69443e1b` | `v2.3.0` | [`success`](https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/45832736195) | `EXACT_PIN_MATCH` |
+| [`neuralese`](https://github.com/0thernes/neuralese) | `0TH-DISC-003` | Tier III | `2527d67355` | `2527d67355` | `v17.3.0` | — | `EXACT_PIN_MATCH` |
+| [`neuralese-diffusion`](https://github.com/0thernes/neuralese-diffusion) | `0TH-DISC-004` | Tier III | `13e3b0e22e` | `13e3b0e22e` | `main` | [`success`](https://github.com/0thernes/neuralese-diffusion/actions/runs/40342126770) | `EXACT_PIN_MATCH` |
 | [`noetic-organism-omega`](https://github.com/0thernes/noetic-organism-omega) | `0TH-BUILD-010` | Tier II | `c4301d926f` | `c4301d926f` | `v2.1.0` | [`success`](https://github.com/0thernes/noetic-organism-omega/actions/runs/45752970555) | `EXACT_PIN_MATCH` |
-| [`octonionica`](https://github.com/0thernes/octonionica) | `0TH-2026-017` | Tier I | `e4a7f2e866` | `e4a7f2e866` | `v1.0.0` | [`success`](https://github.com/0thernes/octonionica/actions/runs/45845614584) | `EXACT_PIN_MATCH` |
+| [`octonionica`](https://github.com/0thernes/octonionica) | `0TH-2026-017` | Tier I | `e4a7f2e866` | `e4a7f2e866` | `v1.0.0` | [`success`](https://github.com/0thernes/octonionica/actions/runs/45845614936) | `EXACT_PIN_MATCH` |
 | [`omega-triscale-observatory`](https://github.com/0thernes/omega-triscale-observatory) | `0TH-BUILD-014`, `0TH-DISC-012` | Tier II / Tier III | `bbe4da96c5` | `bbe4da96c5` | `v6.7.0` | [`success`](https://github.com/0thernes/omega-triscale-observatory/actions/runs/45751750665) | `EXACT_PIN_MATCH` |
-| [`p-vs-np-frontier-lab`](https://github.com/0thernes/p-vs-np-frontier-lab) | `0TH-2026-013` | Tier I | `a70733fc38` | `a70733fc38` | `v1.2.0` | [`success`](https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45829725385) | `EXACT_PIN_MATCH` |
-| [`pauli-contextuality-lab`](https://github.com/0thernes/pauli-contextuality-lab) | `0TH-2026-009` | Tier I | `b0f8a180f4` | `b0f8a180f4` | `v3.0.0` | [`success`](https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45826042782) | `EXACT_PIN_MATCH` |
-| [`planaria`](https://github.com/0thernes/planaria) | `0TH-BUILD-002` | Tier II | `6979cc1be4` | `6979cc1be4` | `v2.4.0` | [`success`](https://github.com/0thernes/planaria/actions/runs/45750499041) | `EXACT_PIN_MATCH` |
-| [`promislow-fracton-amoeba`](https://github.com/0thernes/promislow-fracton-amoeba) | `0TH-2026-015` | Tier I | `c829ab8115` | `c829ab8115` | `v1.0.0` | [`failure`](https://github.com/0thernes/promislow-fracton-amoeba/actions/runs/45751946456) | `EXACT_PIN_MATCH` |
-| [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `0TH-2026-011` | Tier I | `6c7f642146` | `6c7f642146` | `v2.5.0` | [`success`](https://github.com/0thernes/secmesh-pqsi/actions/runs/45746244341) | `EXACT_PIN_MATCH` |
-| [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `06461739b0` | `10923469a4` | `v1.5.0` | [`success`](https://github.com/0thernes/ultrametrica/actions/runs/45823023430) | `AHEAD_OF_PIN` |
+| [`p-vs-np-frontier-lab`](https://github.com/0thernes/p-vs-np-frontier-lab) | `0TH-2026-013` | Tier I | `a70733fc38` | `a70733fc38` | `v1.2.0` | [`success`](https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45829725341) | `EXACT_PIN_MATCH` |
+| [`pauli-contextuality-lab`](https://github.com/0thernes/pauli-contextuality-lab) | `0TH-2026-009` | Tier I | `b0f8a180f4` | `b0f8a180f4` | `v3.0.0` | [`success`](https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45826042756) | `EXACT_PIN_MATCH` |
+| [`planaria`](https://github.com/0thernes/planaria) | `0TH-BUILD-002` | Tier II | `6979cc1be4` | `6979cc1be4` | `v2.4.0` | [`success`](https://github.com/0thernes/planaria/actions/runs/45750499053) | `EXACT_PIN_MATCH` |
+| [`promislow-fracton-amoeba`](https://github.com/0thernes/promislow-fracton-amoeba) | `0TH-2026-015` | Tier I | `c829ab8115` | `c829ab8115` | `v1.0.0` | [`success`](https://github.com/0thernes/promislow-fracton-amoeba/actions/runs/45751946493) | `EXACT_PIN_MATCH` |
+| [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `0TH-2026-011` | Tier I | `6c7f642146` | `6c7f642146` | `v2.5.0` | [`success`](https://github.com/0thernes/secmesh-pqsi/actions/runs/45745957907) | `EXACT_PIN_MATCH` |
+| [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `06461739b0` | `10923469a4` | `v1.5.0` | [`success`](https://github.com/0thernes/ultrametrica/actions/runs/45823023293) | `AHEAD_OF_PIN` |
 | [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | `0TH-DISC-006` | Tier III | `0686cf9729` | `0686cf9729` | `main` | [`success`](https://github.com/0thernes/unsolved-black-hole-problems/actions/runs/45743010356) | `EXACT_PIN_MATCH` |
-| [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `0TH-BUILD-004`, `0TH-DISC-005` | Tier II / Tier III | `0604df5c70` | `4ce816d6fa` | `v0.6.0` | [`success`](https://github.com/0thernes/unsolved-mathematics/actions/runs/45829961577) | `AHEAD_OF_PIN` |
-| [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `0TH-BUILD-007` | Tier II | `9e16554260` | `9e16554260` | `v2.8.0` | [`success`](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/45833505391) | `EXACT_PIN_MATCH` |
-| [`xiaomi-17t-pro-lab`](https://github.com/0thernes/xiaomi-17t-pro-lab) | `0TH-BUILD-012` | Tier II | `f1da68b78e` | `f1da68b78e` | `v3.1.0` | [`success`](https://github.com/0thernes/xiaomi-17t-pro-lab/actions/runs/45821462560) | `EXACT_PIN_MATCH` |
-| [`zero-error-torus-frontier`](https://github.com/0thernes/zero-error-torus-frontier) | `0TH-2026-016` | Tier I | `af343aaa17` | `af343aaa17` | `v1.0.0` | [`success`](https://github.com/0thernes/zero-error-torus-frontier/actions/runs/45762981446) | `EXACT_PIN_MATCH` |
+| [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `0TH-BUILD-004`, `0TH-DISC-005` | Tier II / Tier III | `0604df5c70` | `4ce816d6fa` | `v0.6.0` | [`success`](https://github.com/0thernes/unsolved-mathematics/actions/runs/45829951457) | `AHEAD_OF_PIN` |
+| [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `0TH-BUILD-007` | Tier II | `9e16554260` | `9e16554260` | `v2.8.0` | [`success`](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/45833490569) | `EXACT_PIN_MATCH` |
+| [`xiaomi-17t-pro-lab`](https://github.com/0thernes/xiaomi-17t-pro-lab) | `0TH-BUILD-012` | Tier II | `f1da68b78e` | `f1da68b78e` | `v3.1.0` | [`success`](https://github.com/0thernes/xiaomi-17t-pro-lab/actions/runs/45821462528) | `EXACT_PIN_MATCH` |
+| [`zero-error-torus-frontier`](https://github.com/0thernes/zero-error-torus-frontier) | `0TH-2026-016` | Tier I | `af343aaa17` | `af343aaa17` | `v1.0.0` | [`success`](https://github.com/0thernes/zero-error-torus-frontier/actions/runs/45762976065) | `EXACT_PIN_MATCH` |
 
 ---
 
@@ -379,7 +536,7 @@ just audit       # Score repo against Build Standard v1.2.0
 
 # Archive Architecture (`docs/architecture.md`)
 
-`0thernes-research-archive` is the **single canonical public master hub** organizing all public scientific outputs authored by Alexander Stephen Donahue (`ORCID 0009-0006-8168-9648`) into **three strictly separated epistemic tiers** (**47 entries**: 18 Tier I + 17 Tier II + 12 Tier III), backed by **34 pinned public Git submodules** under `repos/`, a **26-row Solved Sub-Conjectures & Mega-Atlas V2 Bridge**, a **Real-Time Live Upstream Ecosystem Mirror** (`40` unique public repositories), a unified SHA-256 integrity manifest (`CHECKSUMS.sha256` & `data/MANIFEST.sha256`), and an immutable DigiCert RFC 3161 TSA–sealed frozen release manifest (`data/RELEASE_FREEZE.sha256` + `data/RELEASE_FREEZE.sha256.tsr`).
+`0thernes-research-archive` is the **single canonical public master hub** organizing all public scientific outputs authored by Alexander Stephen Donahue (`ORCID 0009-0006-8168-9648`) into **three strictly separated epistemic tiers** (**48 entries**: 19 Tier I + 17 Tier II + 12 Tier III), backed by **35 pinned public Git submodules** under `repos/`, a **26-row Solved Sub-Conjectures & Mega-Atlas V2 Bridge**, a **Real-Time Live Upstream Ecosystem Mirror** (the current count is generated in `registry/LIVE_ECOSYSTEM_MIRROR.json`), a unified SHA-256 integrity manifest (`CHECKSUMS.sha256` & `data/MANIFEST.sha256`), and an immutable DigiCert RFC 3161 TSA–sealed frozen release manifest (`data/RELEASE_FREEZE.sha256` + `data/RELEASE_FREEZE.sha256.tsr`).
 
 ```mermaid
 flowchart LR
@@ -462,6 +619,47 @@ Without a unified live-sync layer and cross-atlas bridge, readers and agents had
 
 - **Positive:** One single canonical source of truth, automatically refreshed live mirror and GitHub Pages portal, zero broken cross-atlas links, and strict separation between immutable frozen release pins and live upstream `main` HEADs.
 - **Trade-off:** Instant sub-minute push updates require setting one optional `ARCHIVE_SYNC_TOKEN` secret on upstream repos; without it, sync latency is bounded by the 2-hour schedule (or instant via manual `workflow_dispatch`).
+
+
+---
+
+<!-- FILE: docs/adr/0003-numbered-results-ledger.md -->
+
+# ADR 0003: One Numbered Results Ledger
+
+- **Status:** Accepted (`2026-11-26`)
+- **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA; ORCID `0009-0006-8168-9648`)
+- **Builds on:** [ADR 0002](0002-canonical-hub-and-live-sync.md) (single canonical hub and live sync)
+
+## Context
+
+The hub answers "which repositories exist and are they intact". It did not answer, in one readable place, "what exactly has been proven". That information was spread across long table cells in `README.md`, the Mega-Atlas bridge and each paper, written per repository rather than per result, and mixed with build and provenance detail. A reader could not see a plain list of results, and a claim's wording was never tied to an audit of the statement itself.
+
+## Decision
+
+1. **One list.** `RESULTS.md` is the single numbered list of results. It is generated; nobody edits it by hand.
+2. **One source.** `registry/RESULTS_LEDGER.json` holds one record per audited result: a plain statement, its kind, its evidence, the question it answers (if any), the Lean declarations with file and line, the commit that was audited, the audit outcome, its limits and a check command.
+3. **Joined, not copied.** Version, repository, pin and paper path are not stored in the ledger. `scripts/build_ledger.py` joins them from `registry/PAPERS.json` and `registry/BUILD_PAPERS.json`, and reads the live mirror for upstream state. The ledger therefore follows every registry update and every live sync without anyone retyping a number.
+4. **An audit is tied to a commit.** Evidence links are permalinks at the audited commit. If the archive pin moves past it, the result is shown as "re-audit pending". If the source repository moves past the pin, the result says so.
+5. **Nothing is silently missing.** Every Tier I and Tier II entry appears: through its results, through a stated reason, or under "registered but not yet audited into this ledger".
+6. **Numbers are permanent.** A result that is narrowed keeps its number. A result that fails is marked withdrawn and keeps its number.
+7. **Wording is checked.** The generator rejects promotional wording, a "published open question answered" without a cited source and a recorded statement audit and prior-work search, a "new theorem" that is known mathematics, and a kernel-checked result without a cited declaration.
+
+## Consequences
+
+- **Positive:** one page a reader can check line by line; counts in `README.md` come from the ledger; the list cannot drift from the registries; a release or a pin move cannot inherit an audit it did not have.
+- **Cost:** a result enters the list only after a statement audit, so the ledger can lag behind a new paper. The lag is visible, by design.
+- **Limit:** the audit is an internal, AI-assisted check directed by the author. It is not peer review, and the ledger says so at the top.
+
+## How to use
+
+```bash
+python scripts/build_ledger.py            # regenerate RESULTS.md and the README block
+python scripts/build_ledger.py --check    # fail if the ledger is invalid or the outputs are stale
+python scripts/build_ledger.py --check --checkouts <dir>   # also confirm each Lean declaration is at the cited line
+```
+
+`python scripts/verify_archive.py --sync` runs the first form; `python scripts/verify_archive.py` runs the second.
 
 
 ---

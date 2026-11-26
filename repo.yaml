@@ -33,7 +33,7 @@ items:
   A06: {status: done, evidence: "LICENSE"}
   A07: {status: done, evidence: "CHANGELOG.md"}
   A08: {status: done, evidence: "VERSION (2026.11.26) matches CHANGELOG.md and CITATION.cff"}
-  A09: {status: done, evidence: "tests/test_archive_integrity.py"}
+  A09: {status: done, evidence: "tests/test_archive_integrity.py and tests/test_results_ledger.py"}
   A10: {status: done, evidence: ".github/workflows/archive-audit.yml"}
   A11: {status: done, evidence: ".github/workflows/release.yml"}
   A12: {status: done, evidence: ".gitignore"}
@@ -45,7 +45,7 @@ items:
   A18: {status: done, evidence: ".github/ISSUE_TEMPLATE/{bug,feature,question,config}.yml; zero PR template (R4)"}
   A19: {status: done, evidence: "GitHub About description, topics, and homepageUrl (https://0thernes.github.io/0thernes-research-archive/) set"}
   A20: {status: done, evidence: "docs/index.md, docs/architecture.md, and HARDENING_INDEX.md"}
-  A21: {status: done, evidence: "docs/adr/0001-three-tier-epistemic-archive.md and docs/adr/0002-canonical-hub-and-live-sync.md"}
+  A21: {status: done, evidence: "docs/adr/0001-three-tier-epistemic-archive.md, docs/adr/0002-canonical-hub-and-live-sync.md and docs/adr/0003-numbered-results-ledger.md"}
   A22: {status: done, evidence: "CITATION.cff"}
   A23: {status: done, evidence: "main branch with verified author identity"}
   A24: {status: done, evidence: "Zero secrets, build caches, .env, or >5 MB files tracked"}
@@ -74,10 +74,10 @@ items:
   B02: {status: done, evidence: "requirements.txt"}
   B03: {status: done, evidence: "Deterministic registry generation and SHA-256 verification"}
   B04: {status: done, evidence: "CLAIMS.md"}
-  B05: {status: done, evidence: "Claims C1-C5 mapped to scripts/verify_archive.py and tests/test_archive_integrity.py"}
+  B05: {status: done, evidence: "Claims C1-C6 mapped to scripts/verify_archive.py, scripts/build_ledger.py, tests/test_archive_integrity.py and tests/test_results_ledger.py"}
   B06: {status: done, evidence: "Negative tamper-detection, broken-link, and privacy-firewall rejection tests in tests/test_archive_integrity.py"}
   B07: {status: done, evidence: "Regression tests for privacy firewall, R4 banned files, zero broken links, and zero unformed LLC assertions"}
-  B08: {status: done, evidence: "Byte-exact SHA-256 checksums across all 45 entries, bridge, live mirror, and DigiCert RFC 3161 TSA release freeze"}
+  B08: {status: done, evidence: "Byte-exact SHA-256 checksums across every registered entry, bridge, live mirror, and DigiCert RFC 3161 TSA release freeze; RESULTS.md is compared byte-for-byte with its generator output"}
   B09: {status: done, evidence: "GitHub REST API contract & privacy-firewall checks in scripts/live_sync.py and tests/test_archive_integrity.py"}
   B10: {status: done, evidence: "Hypothesis property-based hash & metadata checks in tests/test_archive_integrity.py"}
   B11: {status: done, evidence: "Differential verification comparing Python sha256_file vs CHECKSUMS.sha256 & git ls-files submodule pins"}

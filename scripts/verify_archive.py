@@ -36,6 +36,9 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import unquote
 
+import build_ledger  # sibling module: numbered Results Ledger (RESULTS.md)
+import privacy  # sibling module: hashed denylist of non-public repository names
+
 
 def write_utf8_lf(path: Path, text: str) -> None:
     """Write deterministic UTF-8/LF bytes on every supported Python/OS pair."""
@@ -44,7 +47,18 @@ def write_utf8_lf(path: Path, text: str) -> None:
 EXPECTED_ORCID = "0009-0006-8168-9648"
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 MAX_TRACKED_ARTIFACT_BYTES = 5_000_000
-PRIVATE_DENYLIST = ("0thernes-private-research-vault", "gigachad-browser", "grade-a-standard")
+# Non-public repository names are checked through SHA-256 digests (scripts/privacy.py),
+# so this public file never spells them out.
+PRIVACY_SCANNED_FILES = (
+    "README.md",
+    "RESULTS.md",
+    "CLAIMS.md",
+    "LIMITATIONS.md",
+    ".gitmodules",
+    "llms.txt",
+    "llms-full.txt",
+)
+PRIVACY_SCANNED_DIRS = ("registry", "scripts", "tests", "docs")
 ACTIVE_IDENTITY_FILES = (
     "README.md",
     "LICENSE",
@@ -440,6 +454,7 @@ def sync_derived_files(
         "registry/SOLVED_AND_ATLAS_BRIDGE.json",
         "registry/LIVE_ECOSYSTEM_MIRROR.json",
         "registry/UPSTREAM_RELEASE_SNAPSHOTS.json",
+        "registry/RESULTS_LEDGER.json",
     ):
         extra_abs = root / extra_rel
         if extra_abs.exists():
@@ -468,11 +483,16 @@ def sync_derived_files(
         if rel not in {
             "registry/LIVE_ECOSYSTEM_MIRROR.json",
             "registry/UPSTREAM_RELEASE_SNAPSHOTS.json",
+            # Living audit document: hashed in CHECKSUMS, outside the TSA-sealed release freeze.
+            "registry/RESULTS_LEDGER.json",
         }
         and not rel.startswith("builds/0TH-BUILD-004_unsolved-mathematics/releases/")
     ]
     freeze_text = "\n".join(f"{digest}  {rel}" for digest, rel in freeze_entries) + "\n"
     write_utf8_lf(root / "data" / "RELEASE_FREEZE.sha256", freeze_text)
+    # The numbered Results Ledger joins version/pin/PDF from the registries written above,
+    # so it is rendered last; an invalid ledger is reported by verify_archive() below.
+    build_ledger.render_to_disk(root)
     bcount = len(bdata["builds"]) if bdata else 0
     dcount = len(ddata["discoveries"]) if ddata else 0
     print(
@@ -595,6 +615,30 @@ def check_rfc3161_tsa(freeze_path: Path, tsr_path: Path) -> list[str]:
     raw_digest = hashlib.sha256(freeze_path.read_bytes()).digest()
     if raw_digest not in tsr_bytes:
         issues.append(f"{tsr_path.name}: embedded SHA-256 digest does not match {freeze_path.name}")
+    return issues
+
+
+def check_privacy_firewall(root: Path) -> list[str]:
+    """No non-public repository name may appear in the archive's own registries, code or docs.
+
+    Frozen Tier III snapshots under discoveries/ are byte-for-byte copies of public upstream
+    files sealed by the RFC 3161 release freeze; they are reported in LIMITATIONS.md instead.
+    """
+    issues: list[str] = []
+    paths = [root / rel for rel in PRIVACY_SCANNED_FILES]
+    for sub in PRIVACY_SCANNED_DIRS:
+        d = root / sub
+        if d.is_dir():
+            paths.extend(p for p in sorted(d.rglob("*")) if p.is_file() and "__pycache__" not in p.parts)
+    for p in paths:
+        if not p.exists() or p.suffix.lower() in {".pdf", ".png", ".jpg", ".zip", ".tsr", ".ots"}:
+            continue
+        hits = privacy.private_names_in(p.read_text(encoding="utf-8", errors="ignore"))
+        if hits:
+            # Report the file and the count, never the names themselves.
+            issues.append(
+                f"Privacy firewall: {p.relative_to(root).as_posix()} names {len(hits)} non-public repository(ies)"
+            )
     return issues
 
 
@@ -805,9 +849,6 @@ def verify_archive(
     mirror_path = root / "registry" / "LIVE_ECOSYSTEM_MIRROR.json"
     if mirror_path.exists():
         mirror_raw = mirror_path.read_text(encoding="utf-8")
-        for slug in PRIVATE_DENYLIST:
-            if slug in mirror_raw:
-                errors.append(f"LIVE_ECOSYSTEM_MIRROR.json: privacy firewall violation ({slug})")
         mirror = json.loads(mirror_raw)
         if mirror.get("privacy_firewall") != "PUBLIC_NON_FORK_0THERNES_ONLY":
             errors.append("LIVE_ECOSYSTEM_MIRROR.json: missing PUBLIC_NON_FORK_0THERNES_ONLY firewall declaration")
@@ -832,6 +873,8 @@ def verify_archive(
         check_rfc3161_tsa(root / "data" / "RELEASE_FREEZE.sha256", root / "data" / "RELEASE_FREEZE.sha256.tsr")
     )
     errors.extend(check_upstream_release_snapshots(root))
+    errors.extend(build_ledger.check_on_disk(root))
+    errors.extend(check_privacy_firewall(root))
 
     for rel in ACTIVE_IDENTITY_FILES:
         fp = root / rel

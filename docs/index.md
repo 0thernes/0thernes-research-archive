@@ -3,6 +3,7 @@
 - [Architecture](architecture.md) — Three-tier cryptographic vault, canonical hub consolidation, and live-sync architecture.
 - [ADR 0001: Three-Tier Epistemic Separation](adr/0001-three-tier-epistemic-archive.md)
 - [ADR 0002: Single Canonical Hub & Live Real-Time Sync](adr/0002-canonical-hub-and-live-sync.md)
+- [ADR 0003: One Numbered Results Ledger](adr/0003-numbered-results-ledger.md) — why [`RESULTS.md`](../RESULTS.md) exists and how it stays in step with the registries.
 - [Upstream Notify Workflow Template](upstream-notify-workflow.yml) — Drop-in `repository_dispatch` trigger for public `0thernes/*` repositories.
 - [Configuration](configuration.md) — Declarative manifests, Python verification environment, and CI checks.
 - [Operations, Backups & Offsite Mirror](operations.md) — Git bundle creation, offsite mirroring, and Software Heritage preservation.

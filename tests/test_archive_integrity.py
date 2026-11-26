@@ -21,7 +21,11 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import build_site as bs  # noqa: E402
 import live_sync as ls  # noqa: E402
+import privacy  # noqa: E402
 import verify_archive as va  # noqa: E402
+
+# A synthetic name used to exercise the firewall; it is not one of the owner's repositories.
+SYNTHETIC_PRIVATE = "example-nonpublic-repo"
 
 
 def test_repo_yaml_validates_against_schema() -> None:
@@ -53,21 +57,25 @@ def test_r4_no_banned_files() -> None:
 
 
 def test_privacy_firewall_no_private_repos() -> None:
-    """Ensure private repository slugs never leak into public archive manifests or docs."""
-    private_slugs = ("0thernes-private-research-vault", "gigachad-browser", "grade-a-standard")
-    for rel in (
-        "README.md",
-        ".gitmodules",
-        "llms.txt",
-        "registry/PAPERS.json",
-        "registry/BUILD_PAPERS.json",
-        "registry/LAWS_AND_DISCOVERIES.json",
-        "registry/SOLVED_AND_ATLAS_BRIDGE.json",
-        "registry/LIVE_ECOSYSTEM_MIRROR.json",
-    ):
-        txt = (ROOT / rel).read_text(encoding="utf-8")
-        for slug in private_slugs:
-            assert slug not in txt, f"Private slug '{slug}' leaked in {rel}"
+    """No non-public repository name appears in the archive's registries, code, tests or docs."""
+    assert va.check_privacy_firewall(ROOT) == []
+    assert len(privacy.PRIVATE_SHA256) > 0
+    assert all(re.fullmatch(r"[0-9a-f]{64}", h) for h in privacy.PRIVATE_SHA256)
+
+
+def test_privacy_firewall_detects_a_leak_without_naming_it(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """Mutation test: a planted non-public name is caught, and the report does not repeat it."""
+    planted = frozenset({privacy.digest(SYNTHETIC_PRIVATE)})
+    monkeypatch.setattr(privacy, "PRIVATE_SHA256", planted)
+    text = f"see https://github.com/0thernes/{SYNTHETIC_PRIVATE.upper()}/blob/main/x.md and repos/other"
+    assert privacy.private_names_in(text) == [SYNTHETIC_PRIVATE.upper()]
+    assert privacy.private_names_in("nothing private here") == []
+    # Hyphenated neighbours are different names: a prefix or suffix must not match.
+    assert privacy.private_names_in(f"{SYNTHETIC_PRIVATE}-fork x{SYNTHETIC_PRIVATE}") == []
+    (tmp_path / "registry").mkdir()
+    (tmp_path / "README.md").write_text(f"links: {SYNTHETIC_PRIVATE}\n", encoding="utf-8")
+    issues = va.check_privacy_firewall(tmp_path)
+    assert issues and all(SYNTHETIC_PRIVATE not in i for i in issues), issues
 
 
 def test_active_archive_headers_and_registries_no_unformed_llc() -> None:
@@ -204,8 +212,16 @@ def test_rfc3161_release_freeze_tsa_and_tamper_rejection(tmp_path: Path) -> None
 
 def test_live_sync_privacy_firewall_and_failure_injection() -> None:
     """Negative & failure-injection tests (B06, B21) for live_sync.py."""
-    with pytest.raises(ValueError, match="Privacy firewall"):
-        ls.parse_repo_slug("https://github.com/0thernes/0thernes-private-research-vault")
+    planted = frozenset({privacy.digest(SYNTHETIC_PRIVATE)})
+    original = privacy.PRIVATE_SHA256
+    privacy.PRIVATE_SHA256 = planted
+    try:
+        with pytest.raises(ValueError, match="Privacy firewall") as excinfo:
+            ls.parse_repo_slug(f"https://github.com/0thernes/{SYNTHETIC_PRIVATE}")
+        assert SYNTHETIC_PRIVATE not in str(excinfo.value)
+    finally:
+        privacy.PRIVATE_SHA256 = original
+    assert ls.parse_repo_slug("https://github.com/0thernes/p-vs-np-frontier-lab") == "p-vs-np-frontier-lab"
 
     with pytest.raises(ValueError, match="Non-0thernes"):
         ls.parse_repo_slug("https://github.com/someone-else/some-repo")

@@ -20,6 +20,15 @@
 > **Mega-Atlas V2 Cross-Check:** **`0 / 1900` grand open problems retired** · **5 peer-literature open sub-conjectures/questions formally proved in Lean 4.35.0** across 6 independent kernels. Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
 <!-- LIVE_ECOSYSTEM_STATUS:END -->
 
+<!-- RESULTS_LEDGER:START -->
+## Results at a glance
+
+**0 audited results.** . None is peer reviewed. 0 of 1,900 catalogued open problems in the Unsolved Problems Mega-Atlas are solved by this work.
+
+Full numbered list with statements, evidence, limits and check commands: **[RESULTS.md](RESULTS.md)**.
+
+<!-- RESULTS_LEDGER:END -->
+
 Public repositories discovered but not yet promoted into the research registries are documented in [`registry/PUBLIC_CANDIDATE_TRIAGE.md`](registry/PUBLIC_CANDIDATE_TRIAGE.md); discovery status is deliberately not treated as proof or a solved conjecture. The dated fleet claim-language blind-spot scan is [`registry/CLAIM_LANGUAGE_SCAN_2026-11-26.md`](registry/CLAIM_LANGUAGE_SCAN_2026-11-26.md).
 
 ---

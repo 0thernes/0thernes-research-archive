@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import build_ledger as bl  # sibling module: numbered Results Ledger
+
 ROOT = Path(__file__).resolve().parent.parent
 
 
@@ -17,10 +19,19 @@ def main() -> int:
     mirror_path = ROOT / "registry" / "LIVE_ECOSYSTEM_MIRROR.json"
     mirror = json.loads(mirror_path.read_text(encoding="utf-8")) if mirror_path.exists() else {}
     total = len(papers) + len(builds) + len(discs)
+    ledger_path = ROOT / "registry" / "RESULTS_LEDGER.json"
+    ledger = bl.load_json(ledger_path) if ledger_path.exists() else {"results": []}
+    ledger_counts = bl.counts_by_kind(ledger)
+    ledger_summary = "; ".join(
+        bl.count_phrase(k, ledger_counts[k]) for k in bl.KINDS if ledger_counts[k]
+    ) or "none recorded yet"
 
     llms_txt = f"""# 0thernes Research Archive ({version})
 
 > Canonical public master vault, live ecosystem mirror, and Mega-Atlas V2 cross-reference bridge for Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA; ORCID 0009-0006-8168-9648). Tracks {total} public research entries ({len(papers)} Tier I preprints, {len(builds)} Tier II build papers & Lean 4 suites, {len(discs)} Tier III laws/discoveries/atlases) with byte-exact SHA-256 provenance and zero private repository leakage.
+
+## Start Here
+- [Results Ledger: one numbered list of what has been proven and what has not](RESULTS.md) · [JSON](registry/RESULTS_LEDGER.json)
 
 ## Key Registries & Machine-Readable Endpoints
 - [Tier I Preprints (JSON)](registry/PAPERS.json) · [Markdown](registry/PAPERS.md)
@@ -32,6 +43,7 @@ def main() -> int:
 
 ## Epistemic Status & Verification
 - Grand Mega-Atlas V2 open problems retired: {bridge['grand_problems_retired']} / {bridge['mega_atlas_total_problems']}
+- Audited results in the Results Ledger: {sum(ledger_counts.values())} ({ledger_summary}); none is peer reviewed
 - Peer-literature open sub-conjectures / open questions formally proved in Lean 4.35.0: {bridge['epistemic_summary']['published_open_subconjectures_proved_in_lean']}
 - Tracked unique public repositories: {mirror.get('counts', {}).get('unique_public_repositories', 'N/A')}
 - Primary verifier: `python3 scripts/verify_archive.py` and `python3 -m pytest -v tests/`
@@ -39,12 +51,13 @@ def main() -> int:
 ## Governance & Documentation
 - [README.md](README.md) · [CLAIMS.md](CLAIMS.md) · [LIMITATIONS.md](LIMITATIONS.md) · [REPLICATION.md](REPLICATION.md)
 - [AGENTS.md](AGENTS.md) · [CHANGELOG.md](CHANGELOG.md) · [ROADMAP.md](ROADMAP.md) · [HARDENING_INDEX.md](HARDENING_INDEX.md)
-- [Architecture](docs/architecture.md) · [ADR 0001](docs/adr/0001-three-tier-epistemic-archive.md) · [ADR 0002](docs/adr/0002-canonical-hub-and-live-sync.md)
+- [Architecture](docs/architecture.md) · [ADR 0001](docs/adr/0001-three-tier-epistemic-archive.md) · [ADR 0002](docs/adr/0002-canonical-hub-and-live-sync.md) · [ADR 0003](docs/adr/0003-numbered-results-ledger.md)
 """
     (ROOT / "llms.txt").write_bytes(llms_txt.encode("utf-8"))
 
     sections = [
         "README.md",
+        "RESULTS.md",
         "CLAIMS.md",
         "LIMITATIONS.md",
         "REPLICATION.md",
@@ -54,6 +67,7 @@ def main() -> int:
         "docs/architecture.md",
         "docs/adr/0001-three-tier-epistemic-archive.md",
         "docs/adr/0002-canonical-hub-and-live-sync.md",
+        "docs/adr/0003-numbered-results-ledger.md",
         "docs/faq.md",
     ]
     parts = [f"# 0thernes Research Archive — Complete LLM Context ({version})\n"]

@@ -54,13 +54,13 @@ jobs:
 
       - name: Commit and push live mirror update directly to main (if changed)
         run: |
-          if git diff --quiet -- registry/ README.md CHECKSUMS.sha256 data/MANIFEST.sha256 llms.txt llms-full.txt; then
+          if git diff --quiet -- registry/ README.md RESULTS.md CHECKSUMS.sha256 data/MANIFEST.sha256 llms.txt llms-full.txt; then
             echo "Live ecosystem mirror already up to date; nothing to commit."
             exit 0
           fi
           git config user.name "0thernes-live-sync[bot]"
           git config user.email "0_0@0thernes.art"
-          git add registry/ README.md CHECKSUMS.sha256 data/MANIFEST.sha256 llms.txt llms-full.txt
+          git add registry/ README.md RESULTS.md CHECKSUMS.sha256 data/MANIFEST.sha256 llms.txt llms-full.txt
           git commit -m "chore(live-sync): refresh upstream ecosystem mirror [skip-sync]"
           git pull --rebase origin main
           git push origin main

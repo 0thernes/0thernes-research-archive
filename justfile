@@ -18,6 +18,12 @@ sync:
     python3 scripts/verify_archive.py --sync
     python3 scripts/generate_llms_full.py
 
+ledger:
+    python3 scripts/build_ledger.py
+
+ledger-check:
+    python3 scripts/build_ledger.py --check
+
 test:
     python3 -m pytest -v tests/
 

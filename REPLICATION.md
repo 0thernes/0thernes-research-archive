@@ -3,14 +3,17 @@
 Any third party can verify the entire canonical master archive, live ecosystem mirror, Mega-Atlas bridge, and DigiCert RFC 3161 TSA release seal from a clean clone:
 
 ```bash
-# 1. Clone the archive (add --recursive to fetch all 32 pinned public submodules)
+# 1. Clone the archive (add --recursive to fetch every pinned public submodule).
+#    Needs Python 3.10 or newer: the pinned test tools do not install on 3.9. CI uses 3.12.
 git clone https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 python3 -m pip install -r requirements.txt
 
-# 2. Verify every SHA-256 digest, RFC 3161 TSA seal, ORCID, axiom policy, bridge parity, table continuity, zero broken links, and all 32 submodule pins
+# 2. Verify every SHA-256 digest, RFC 3161 TSA seal, ORCID, axiom policy, bridge parity, table continuity,
+#    zero broken links, every submodule pin, and the numbered Results Ledger (RESULTS.md)
 python3 scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
+python3 scripts/build_ledger.py --check
 
 # 3. Run automated integrity, privacy-firewall, failure-injection, property, negative, mutation & idempotence tests
 python3 -m pytest -v tests/

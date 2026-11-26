@@ -32,17 +32,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import privacy  # sibling module: hashed denylist of non-public repository names
+
 OWNER = "0thernes"
 ARCHIVE_SLUG = "0thernes-research-archive"
 BLOCK_START = "<!-- LIVE_ECOSYSTEM_STATUS:START -->"
 BLOCK_END = "<!-- LIVE_ECOSYSTEM_STATUS:END -->"
-PRIVATE_DENYLIST = frozenset(
-    {
-        "0thernes-private-research-vault",
-        "gigachad-browser",
-        "grade-a-standard",
-    }
-)
 
 
 def parse_repo_slug(repo_url: str) -> str:
@@ -53,8 +48,9 @@ def parse_repo_slug(repo_url: str) -> str:
     if len(parts) < 2 or parts[-2].lower() != OWNER.lower():
         raise ValueError(f"Non-0thernes repository URL rejected: {repo_url}")
     slug = parts[-1]
-    if slug.lower() in PRIVATE_DENYLIST:
-        raise ValueError(f"Privacy firewall violation: forbidden slug {slug!r}")
+    if privacy.is_private_name(slug):
+        # Do not echo the name: it is exactly what the firewall keeps out of public logs.
+        raise ValueError("Privacy firewall violation: a non-public repository was referenced")
     return slug
 
 
