@@ -90,9 +90,9 @@ def test_0th_2026_006_and_0th_build_007_registered_at_latest_versions() -> None:
         for p in json.loads((ROOT / "registry" / "PAPERS.json").read_text(encoding="utf-8"))["papers"]
     }
     p6 = papers["0TH-2026-006"]
-    assert p6["version"] == "v2.0.0"
+    assert p6["version"] == "v2.1.0"
     assert p6["lean_verification"]["audited_theorems"] == 576
-    assert "45723630668" in p6["ci_run_url"]
+    assert "45741323731" in p6["ci_run_url"]
 
     builds = {
         b["id"]: b
