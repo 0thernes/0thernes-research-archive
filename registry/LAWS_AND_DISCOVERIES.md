@@ -1,7 +1,7 @@
 # Tier III — Public Laws, Pre-Registered Empirical Claims, Discoveries & Open-Problem Atlases
 
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
-**Totals:** 12 public registries · 44 SHA-256 frozen snapshots  
+**Totals:** 12 public registries · 45 SHA-256 frozen snapshots  
 **Updated:** `2026-11-26T12:49:51Z`
 
 > **Epistemic Discipline:** Tier III entries preserve binding architectural laws, SHA-256-locked pre-registrations, controlled empirical discoveries (including null/falsified results), finite computational certificates, and structured open-problem atlases. None of these are represented as Lean-proved general mathematical theorems.
@@ -19,7 +19,7 @@
 | `0TH-DISC-009` | 2026-07-05 | `computational_reference_atlas` | [`grimoire-algorithms-of-the-arcane`](https://github.com/0thernes/grimoire-algorithms-of-the-arcane) | Closed-Form Math Study Atlas (1,123 Anchored Tests) & Grimoire 1,000-Algorithm Verification Ledger | 3 | [Evidence](../discoveries/0TH-DISC-009_math-and-algorithm-atlases/EVIDENCE.md) |
 | `0TH-DISC-010` | 2026-11-21 | `formal_addenda_and_provenance_map` | [`hoggar-bound-lab`](https://github.com/0thernes/hoggar-bound-lab) | Hoggar Bound Lab: Provenance Map of 3 Historical Source Papers, Claim-to-Theorem Map & Conjecture E Addendum | 8 | [Evidence](../discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/EVIDENCE.md) |
 | `0TH-DISC-011` | 2026-11-26 | `ecosystem_synthesis_dossier` | [`alife-singularity-omega-package`](https://github.com/0thernes/alife-singularity-omega-package) | A-Life Singularity SuperLife Omega Package (v3.4.0): 7-Repository Master Synthesis Dossier & Manifest | 3 | [Evidence](../discoveries/0TH-DISC-011_alife-singularity-omega-package/EVIDENCE.md) |
-| `0TH-DISC-012` | 2026-11-22 | `interactive_observatory_architecture` | [`omega-triscale-observatory`](https://github.com/0thernes/omega-triscale-observatory) | Omega TriScale Observatory (v6.6.0): Unified 7-Repo Multi-Scale A-Life Telemetry & Relay Architecture | 2 | [Evidence](../discoveries/0TH-DISC-012_omega-triscale-observatory/EVIDENCE.md) |
+| `0TH-DISC-012` | 2026-11-26 | `interactive_observatory_architecture` | [`omega-triscale-observatory`](https://github.com/0thernes/omega-triscale-observatory) | Omega TriScale Observatory (v6.7.0): Unified 7-Repo Multi-Scale A-Life Telemetry, D7RO Isolation & Architecture Preprint | 3 | [Evidence](../discoveries/0TH-DISC-012_omega-triscale-observatory/EVIDENCE.md) |
 
 ---
 
@@ -100,9 +100,9 @@
 - **Verification Boundary:** Cross-repository engineering synthesis dossier and manifest; the local 40-declaration 6-kernel Lean 4.35.0 suite and AMS-LaTeX white paper are archived in Tier II 0TH-BUILD-013 while the 291 companion native Lean 4 proofs live in 0TH-BUILD-001, 008, 009, 010, and 011. Explicitly disclaims sentience, consciousness, wet-lab biological proof, or retiring any Mega-Atlas grand problem (0/1,900).
 - **Dossier:** [`EVIDENCE.md`](../discoveries/0TH-DISC-011_alife-singularity-omega-package/EVIDENCE.md) · [`METADATA.json`](../discoveries/0TH-DISC-011_alife-singularity-omega-package/METADATA.json)
 
-## 0TH-DISC-012 — Omega TriScale Observatory (v6.6.0): Unified 7-Repo Multi-Scale A-Life Telemetry & Relay Architecture
+## 0TH-DISC-012 — Omega TriScale Observatory (v6.7.0): Unified 7-Repo Multi-Scale A-Life Telemetry, D7RO Isolation & Architecture Preprint
 
-- **Epistemic Tier:** `interactive_observatory_architecture` · **Repository:** https://github.com/0thernes/omega-triscale-observatory (`main` @ `3aaac2f036e1`)
-- **Summary:** Real-time multi-scale telemetry relay and interactive WebGL/Node observatory bridging the 7 public A-Life Singularity Omega repositories across molecular, cellular, and macro-organism scales.
+- **Epistemic Tier:** `interactive_observatory_architecture` · **Repository:** https://github.com/0thernes/omega-triscale-observatory (`main` @ `bbe4da96c5d2`)
+- **Summary:** Zero-dependency Node.js/Python/WebGL2 multi-scale telemetry relay and observatory (v6.7.0, Release v6.7.0, CI #45751750665 4/4 GREEN, SLSA #72484379, 6/6 surgical mutants killed, 100.0% Build Standard v1.2.0) bridging all 7 public A-Life Singularity Omega repositories with strict D7RO render-only isolation; also registered as Tier II build 0TH-BUILD-014 with frozen 8-page AMS-LaTeX preprint.
 - **Verification Boundary:** Engineering observatory and interactive telemetry interface; not a formal theorem-proving artifact and makes zero claims of sentience or consciousness.
 - **Dossier:** [`EVIDENCE.md`](../discoveries/0TH-DISC-012_omega-triscale-observatory/EVIDENCE.md) · [`METADATA.json`](../discoveries/0TH-DISC-012_omega-triscale-observatory/METADATA.json)

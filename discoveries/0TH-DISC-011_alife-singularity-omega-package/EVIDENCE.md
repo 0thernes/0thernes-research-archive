@@ -14,7 +14,7 @@
 | Frozen Snapshot | `discoveries/0TH-DISC-011_alife-singularity-omega-package/README.md` (from `README.md@a08294c97f0e0e40cb1eff0dfee1b27dfe9ca5f2`) |
 | Snapshot SHA-256 | `d29cd469066ab389915297085a9faec338e3dd87b92c254c8c7021760dd12bd8` |
 | Frozen Snapshot | `discoveries/0TH-DISC-011_alife-singularity-omega-package/MANIFEST.json` (from `MANIFEST.json@a08294c97f0e0e40cb1eff0dfee1b27dfe9ca5f2`) |
-| Snapshot SHA-256 | `9e42087df014e22bacea9ef940613477f9f2fd6bd732184e705281d42bea0c1e` |
+| Snapshot SHA-256 | `18323eb3d995b508af9a9c7c031a0adb8dac61e0e066b6a9b3cf733005bcfa1e` |
 | Frozen Snapshot | `discoveries/0TH-DISC-011_alife-singularity-omega-package/ALife_Singularity_SuperLife_Omega_Master_Dossier.pdf` (from `pdf/ALife_Singularity_SuperLife_Omega_Master_Dossier.pdf@a08294c97f0e0e40cb1eff0dfee1b27dfe9ca5f2`) |
 | Snapshot SHA-256 | `7fb46e2ae712fab5db5cbefc6ba92f5a5d97046c73425fc727419a9d8d29ed78` |
 

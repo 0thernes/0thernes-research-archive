@@ -82,3 +82,6 @@
 [submodule "repos/alife-singularity-omega-package"]
 	path = repos/alife-singularity-omega-package
 	url = https://github.com/0thernes/alife-singularity-omega-package.git
+[submodule "repos/omega-triscale-observatory"]
+	path = repos/omega-triscale-observatory
+	url = https://github.com/0thernes/omega-triscale-observatory.git

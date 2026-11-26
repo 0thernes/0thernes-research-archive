@@ -16,11 +16,11 @@
 | Archived Artifact | `builds/0TH-BUILD-013_alife-singularity-omega-package/arxiv_submission.tar.gz` (from `dist/arxiv_submission.tar.gz`) |
 | Artifact SHA-256 | `8746076cfe67d27472c10bfd4b9b3b90681740bde06496aa89edc8b28487255b` |
 | Archived Artifact | `builds/0TH-BUILD-013_alife-singularity-omega-package/lean_package_axioms.txt` (from `results/lean_package_axioms.txt`) |
-| Artifact SHA-256 | `c036dc2370b18e3fc50dae5241500f1f6aabc658a14a988f38a33659b7e9386a` |
+| Artifact SHA-256 | `27f7e477c87c63f44b2352e5c93632ad5618e7bb0ce213e27cae975045bc38f5` |
 | Archived Artifact | `builds/0TH-BUILD-013_alife-singularity-omega-package/lean4-multi-kernel.txt` (from `results/lean4-multi-kernel.txt`) |
-| Artifact SHA-256 | `f28798923b9947eaaa25d2dd3b38c29c650e01e46cb7c2387a41691e240ebb1d` |
+| Artifact SHA-256 | `65d343168cd630b7c953351dfd3156eece1f354418d6a7ae4c4081626718fde5` |
 | Archived Artifact | `builds/0TH-BUILD-013_alife-singularity-omega-package/citation_verification.json` (from `results/citation_verification.json`) |
-| Artifact SHA-256 | `ac5a5839ba28b10ad1379e73477f1281f9c676f8aea44b9a549da69d05b1babb` |
+| Artifact SHA-256 | `33c75e4a28d534c3677a30672368573d3822d00258075a5690a5f030ac432dd9` |
 | Archived Artifact | `builds/0TH-BUILD-013_alife-singularity-omega-package/VERIFICATION.md` (from `VERIFICATION.md`) |
 | Artifact SHA-256 | `539eddce6b06353ae21c60939562e148abe0d51a996a30487540c15c00870502` |
 | Archived Artifact | `builds/0TH-BUILD-013_alife-singularity-omega-package/CLAIMS.md` (from `CLAIMS.md`) |

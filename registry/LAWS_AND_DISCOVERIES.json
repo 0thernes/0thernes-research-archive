@@ -457,8 +457,8 @@
         },
         {
           "path": "discoveries/0TH-DISC-011_alife-singularity-omega-package/MANIFEST.json",
-          "bytes": 34691,
-          "sha256": "9e42087df014e22bacea9ef940613477f9f2fd6bd732184e705281d42bea0c1e",
+          "bytes": 33683,
+          "sha256": "18323eb3d995b508af9a9c7c031a0adb8dac61e0e066b6a9b3cf733005bcfa1e",
           "source_path": "MANIFEST.json@a08294c97f0e0e40cb1eff0dfee1b27dfe9ca5f2"
         },
         {
@@ -474,29 +474,35 @@
       "slug": "omega-triscale-observatory",
       "visibility": "PUBLIC",
       "epistemic_tier": "interactive_observatory_architecture",
-      "title": "Omega TriScale Observatory (v6.6.0): Unified 7-Repo Multi-Scale A-Life Telemetry & Relay Architecture",
+      "title": "Omega TriScale Observatory (v6.7.0): Unified 7-Repo Multi-Scale A-Life Telemetry, D7RO Isolation & Architecture Preprint",
       "domain": "Artificial Life / Scientific Visualization / Telemetry Engineering",
-      "date": "2026-11-22",
+      "date": "2026-11-26",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
       "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/omega-triscale-observatory",
       "branch": "main",
-      "pinned_commit": "3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9",
-      "summary": "Real-time multi-scale telemetry relay and interactive WebGL/Node observatory bridging the 7 public A-Life Singularity Omega repositories across molecular, cellular, and macro-organism scales.",
+      "pinned_commit": "bbe4da96c5d2c6d24078bf6f88e77126de324b1d",
+      "summary": "Zero-dependency Node.js/Python/WebGL2 multi-scale telemetry relay and observatory (v6.7.0, Release v6.7.0, CI #45751750665 4/4 GREEN, SLSA #72484379, 6/6 surgical mutants killed, 100.0% Build Standard v1.2.0) bridging all 7 public A-Life Singularity Omega repositories with strict D7RO render-only isolation; also registered as Tier II build 0TH-BUILD-014 with frozen 8-page AMS-LaTeX preprint.",
       "verification_boundary": "Engineering observatory and interactive telemetry interface; not a formal theorem-proving artifact and makes zero claims of sentience or consciousness.",
       "archived_artifacts": [
         {
           "path": "discoveries/0TH-DISC-012_omega-triscale-observatory/README.md",
-          "bytes": 3646,
-          "sha256": "b1096c62f1aa21f49383d642ba77a2925435899dacc2aa305678c3cbb41adcff",
-          "source_path": "README.md@3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9"
+          "bytes": 7488,
+          "sha256": "d3724dba1da8a03e3cc4a16e8cf8c8738a47e85bdaec85258068946140811322",
+          "source_path": "README.md@bbe4da96c5d2c6d24078bf6f88e77126de324b1d"
         },
         {
           "path": "discoveries/0TH-DISC-012_omega-triscale-observatory/ASMODENSIUS_HANDOFF_PATCH_BLUEPRINT.md",
           "bytes": 3151,
           "sha256": "701ce6689b1ad609d0048376fd7fca5bfa8474289dd71d115e5298409bb7d7ef",
-          "source_path": "ASMODENSIUS_HANDOFF_PATCH_BLUEPRINT.md@3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9"
+          "source_path": "ASMODENSIUS_HANDOFF_PATCH_BLUEPRINT.md@bbe4da96c5d2c6d24078bf6f88e77126de324b1d"
+        },
+        {
+          "path": "discoveries/0TH-DISC-012_omega-triscale-observatory/Donahue_2026_omega_triscale_observatory.pdf",
+          "bytes": 174207,
+          "sha256": "66470ab359dbea8e1b95abb9358699369ad6b8b331d1d9f4c5cd41e2cbce8ed0",
+          "source_path": "dist/Donahue_2026_omega_triscale_observatory.pdf@bbe4da96c5d2c6d24078bf6f88e77126de324b1d"
         }
       ]
     }
