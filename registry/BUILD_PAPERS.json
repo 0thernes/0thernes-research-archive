@@ -6,7 +6,7 @@
     "orcid": "0009-0006-8168-9648",
     "affiliation": "Independent Researcher, Spokane, WA, USA"
   },
-  "updated_utc": "2026-11-26T13:15:00Z",
+  "updated_utc": "2026-11-26T13:17:00Z",
   "builds": [
     {
       "id": "0TH-BUILD-001",
@@ -1245,6 +1245,74 @@
       "summary": "Deterministic L0-L10 artificial-life research kernel and WebGL2 raymarched PBR observatory upgraded through 3x1,000 indexed hardening passes (Cycle 1 663/1,000 -> Cycle 2 998/1,000 -> Cycle 3 1,000/1,000 PASS) and 100.0% (78/78, 33/33 Core) Build Standard v1.2.0 compliance under dual Apache-2.0 / CC-BY-4.0 licenses. Couples a 56,173-slot Float64 fixed arena, Philox4x32-10 RNG, 0-ULP Rust-WASM math parity, 11-pool Kahan-Neumaier First/Second-Law enthalpy ledger (max residual 2.218e-16 across 100 seeds), closed 4:1 C/N ecological stoichiometry, XPBD hydrostat, 75 pairwise-distinct substrates, 10x10x10 Hybrid Cube (661/20/274/45), 25-species 3-stratum Omni-Dome, HEPTARCH 7-seat capped-simplex council, GF(2^4) RS[15,11] burst coding, and 825-check 5-arm Holm-Bonferroni qualification with 82 strictly constructive zero-Mathlib Lean 4.35.0 declarations (ZERO Classical.choice) verified across all 6 independent kernels + live negative tamper rejection, 0-ULP Parquet/HDF5/NPZ/DuckDB/XLSX/CSV binary exporters verified by external Python parsers, a 9-page zero-overflow AMS-LaTeX white paper & clean-room arXiv tarball, SLSA/Rekor provenance, Software Heritage preservation, and an honest 0/1,900 Mega-Atlas audit.",
       "verification_boundary": "All 82 audited Lean 4.35.0 declarations (13 files, 1,485 lines, zero Mathlib, zero Classical.choice, zero native_decide, zero sorry outside isolated lean/PalomarChallenge.lean, axioms strictly within [propext, Quot.sound]) certify discrete integer micro-joule ledger conservation, exact 4:1 C/N stoichiometry, basis-point HEPTARCH anti-dictatorship & WCAG <= 3 Hz flash clamp, finite contextuality witnesses (Hoggar 315>189, CEGA-18 parity <=8, KCBS, Tsirelson hierarchy, srg(16,6,2,2) Jordan gap 384), GF(2^4) RS[15,11] & Monarch/Hodge identities, and registry/cube partitions across all 6 independent kernels on Ubuntu CI (#45824894491). Continuous IEEE-754 float64 dynamics, 0-ULP WASM/exporter parity, 825-check statistical harnesses, and 10/10 Playwright E2E tests lie outside the Lean kernel boundary and are verified by cross-OS CI. Explicitly retires 0/1,900 overarching Mega-Atlas open problems, labels FMO photosynthesis a classical Forster/Lindblad transport proxy, labels Butlin-14 and PCI* architectural indicators only, and makes no claims of phenomenal sentience or external peer review.",
       "falsification_command": "cd repos/ALife-Framework && npm ci && npm run verify && npm run audit:scope && npm run passes:100 && npm run creature && npm run audit:science && npm run audit:axioms && node scripts/verify-manifests.ts && npm run harden:3x1000 && (cd lean && lake build && lake build PalomarChallenge && lake env lean ALifeProofs/VerifyAxioms.lean && lake env leanchecker --fresh ALifeProofs && lake env leanchecker --fresh PalomarSolution && lake check --paranoid && lake comparator --config comparator.json --paranoid)"
+    },
+    {
+      "id": "0TH-BUILD-017",
+      "slug": "beast-civilization",
+      "title": "BEAST CIVILIZATION v0.7.0: A Zero-Dependency Bare-Metal Polyglot Multi-Colony AI Architecture, Cross-Architecture Cache-to-Cache Telepathy, Blackwell PTX Kernels, Live OpenAI/GGUF Server, and 65 Pure Lean 4.35.0 Proofs",
+      "domain": "Bare-Metal AI Systems / Multi-Agent Architectures / Quantized Compute / Formal Methods",
+      "date": "2026-11-26",
+      "version": "v0.7.0",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/beast-civilization",
+      "submodule_path": "repos/beast-civilization",
+      "pinned_commit": "c4211353bb2bf3e8af3aab0bdef088db2ea0fb34",
+      "archived_artifacts": [
+        {
+          "path": "builds/0TH-BUILD-017_beast-civilization/Donahue_2026_beast_civilization.pdf",
+          "source_path": "dist/Donahue_2026_beast_civilization.pdf",
+          "sha256": "d46f8e77dd96c0d40efbba683dbafe0d2cd591e86439005a4d243a08a2873fe2"
+        },
+        {
+          "path": "builds/0TH-BUILD-017_beast-civilization/arxiv_submission.tar.gz",
+          "source_path": "dist/arxiv_submission.tar.gz",
+          "sha256": "af2bedb0b7a4c0e26fc72e199a186ee055ea339dfc5f42d560029f84e798dbbe"
+        },
+        {
+          "path": "builds/0TH-BUILD-017_beast-civilization/VERIFICATION.md",
+          "source_path": "VERIFICATION.md",
+          "sha256": "105eaeb19efe338271303bcd763dbb8aa60c3f5c431bd0438a81b2da4ca5e86a"
+        },
+        {
+          "path": "builds/0TH-BUILD-017_beast-civilization/CLAIMS.md",
+          "source_path": "CLAIMS.md",
+          "sha256": "e0334334bca2d04be38e4537b3df2a7a846be187dccbb7c933c4e1643ab2e724"
+        },
+        {
+          "path": "builds/0TH-BUILD-017_beast-civilization/LIMITATIONS.md",
+          "source_path": "LIMITATIONS.md",
+          "sha256": "8638c3a216ee24ab16ce1416e088fc5daf589bf7d8c357c8a9b0e791de2ca0e3"
+        },
+        {
+          "path": "builds/0TH-BUILD-017_beast-civilization/lean4-audit.txt",
+          "source_path": "results/lean4-audit.txt",
+          "sha256": "0e93a69ad312e1d20994174d1d928d0b3cf8c0c309dde69fa632560124ed8ace"
+        },
+        {
+          "path": "builds/0TH-BUILD-017_beast-civilization/verify_win64.txt",
+          "source_path": "results/verify_win64.txt",
+          "sha256": "ee68dd37b77122850e80098180b37077effc9a2451a74f208b63d75607b69bad"
+        }
+      ],
+      "lean_verification": {
+        "has_lean": true,
+        "framework": "Pure Lean 4.35.0 (zero Mathlib, zero native_decide, zero bv_decide, dedicated VerifyAxioms.lean audit + live negative custom-axiom tamper rejection in CI)",
+        "modules": 3,
+        "lines": 504,
+        "audited_theorems": 65,
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/VerifyAxioms.lean",
+        "live_audit_status": "GitHub Actions CI GREEN (run #45826608002, 3/3 jobs: Zig 0.17.1 + Rust 8-crate 21/21 unit tests + freestanding ELF64/ELF32 + Python exact oracle; Pure Lean 4.35.0 65/65 theorems via VerifyAxioms.lean + live negative tamper rejection; 6-page 0-warning Tectonic AMS-LaTeX PDF & clean-room arXiv tarball); Win64 silicon 33/33 gates + 38/38 planted mutants + 12/12 native DLLs + 5/5 RTX 5070 Ti Blackwell PTX kernels (20.21 GB/s pinned paging) + QEMU Ring-0 boot + Win32 Job Objects; Release v0.7.0 & Software Heritage Save Code Now #2696917 accepted; 65/65 audited declarations (43 zero-axiom, 22 strictly within [propext, Classical.choice, Quot.sound], 0 sorry, 0 warnings)"
+      },
+      "summary": "Zero-dependency bare-metal polyglot multi-colony AI civilization unifying Zig 0.17.1 SIMD (b1.58 3.42x / 6.68 ns Philox FFI), 8 zero-crate Rust 1.94.1 crates, CRuby 3.4.9 + Prism AST + 10-gen YARV breeder (zero gems), 12/12 live native DLLs (Zig + AUTOPHAGE RWX JIT + omega_cell + cellulogonic + 7 compiled upstream Tsotchke C11 bridges including FIPS-203 ML-KEM-768 + FIPS-197 AES-256, CHSH S=2.6875, QWZ Chern/SSH/Kitaev, libirrep Unsold, Fibonacci anyons/p-bits, QGTL Bloch + NVIDIA CUDA), 5 verified RTX 5070 Ti sm_12.0 PTX kernels + 20.21 GB/s pinned async VRAM paging, trained MIT SwaT + Augment-Cache C2C (4.34x vs text prefill, Augment 1.000 vs Overwrite -0.311) + 4-layer GQA->Chimera C2C LLM, standard llama.cpp GGUF v3 Q4_0/F16/F32 codec + zero-crate OpenAI HTTP/1.1 server (beast serve) wired into SSRF-guarded agent & scripted REPL missions, Eshkol tri-mode exact AD (0.00e0 discrepancy), live QEMU Ring-0 Multiboot1 ELF32 microkernel boot, Win32 Kernel Job Object hard isolation (128 MiB), Planaria GF(2^8)+Merkle 50% healing, Cross-Repo ABI graph + MCP JSON-RPC 2.0 stdio bus, clean-room Python exact oracle, 6-page zero-warning AMS-LaTeX PDF + arXiv tarball, and 65/65 Pure Lean 4.35.0 formal proofs.",
+      "verification_boundary": "All 65 audited Pure Lean 4.35.0 theorems (B01-B65 across BeastProofs.lean, LiveReceipt.lean, and VerifyAxioms.lean) compile with zero Mathlib, zero sorry, zero native_decide/bv_decide, zero warnings, and strictly within [propext, Classical.choice, Quot.sound], verified on Ubuntu CI (#45826608002) with live negative custom-axiom rejection. Native Zig/Rust/C11/CRuby/PTX/QEMU/Win32 execution and live silicon timings lie outside the Lean kernel boundary and are verified by 33/33 gates, 38/38 planted mutants, 21/21 Rust tests, and scripts/verify_independent_oracle.py. Explicitly documents 296/300 live-verified matrix items (4 SPEC: F036 Apple Metal tensorcore; F038/F068/F069 external pretrained checkpoints), claims 0/1,900 Mega-Atlas grand open problems retired, and makes zero claims of sentience or consciousness.",
+      "falsification_command": "cd repos/beast-civilization && zig test zig/beast-metal/src/root.zig && cargo test --workspace && python3 scripts/verify_independent_oracle.py && (cd lean && LEAN_PATH=\".:$(lean --print-libdir)\" lean -R . -o LiveReceipt.olean LiveReceipt.lean && LEAN_PATH=\".:$(lean --print-libdir)\" lean -R . -o BeastProofs.olean BeastProofs.lean && LEAN_PATH=\".:$(lean --print-libdir)\" lean -R . VerifyAxioms.lean)"
     }
   ]
 }

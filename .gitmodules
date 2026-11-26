@@ -91,3 +91,6 @@
 [submodule "repos/ALife-Framework"]
 	path = repos/ALife-Framework
 	url = https://github.com/0thernes/ALife-Framework.git
+[submodule "repos/beast-civilization"]
+	path = repos/beast-civilization
+	url = https://github.com/0thernes/beast-civilization.git
