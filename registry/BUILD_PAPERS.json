@@ -6,7 +6,7 @@
     "orcid": "0009-0006-8168-9648",
     "affiliation": "Independent Researcher, Spokane, WA, USA"
   },
-  "updated_utc": "2026-11-26T11:55:20Z",
+  "updated_utc": "2026-11-26T12:49:51Z",
   "builds": [
     {
       "id": "0TH-BUILD-001",
@@ -825,6 +825,93 @@
       "summary": "Zero-build interactive silicon-to-quantum engineering workbench and zero-warning AMS-LaTeX white paper (plainurl clickable DOIs, 0 overfull/underfull hboxes) modeling the Xiaomi 17T Pro and MediaTek Dimensity 9500 across 19 interactive routes + strict-CSP zero-404 Blueprint, backed by 75 constructive Pure Lean 4.35.0 Palomar declarations (ZERO Classical.choice; hardware floorplan & roofline, EUV Rayleigh/DOF/shot-noise, Crank-Nicolson Cayley unitarity & WKB/Dirac transport, 2D thermal FDTD CFL discrete maximum principle, CHSH/Mermin-3/Peres-Mermin contextuality, 2x2 unimodular Bragg transfer matrices, 2/4-point DFT Parseval energy conservation, 9-shard A24 byte conservation, and 7 AdversarialTests) verified by 6 independent kernels + live negative rejection, a 54-check 60-digit Decimal/Fraction oracle (max rel err 2.159e-14), 8/8 killed mutants (100%), 50/50 3-OS Node tests, 9/9 Playwright CSP/E2E specs, 12/12 live Crossref/arXiv non-retracted DOIs, dual DigiCert RFC 3161 (.tsr) + Bitcoin OpenTimestamps (.ots) proofs, permanent Software Heritage snapshot swh:1:snp:06ad26ff598cf7d592768bdef08d9de7616cd4e0, 100.0% (82/82, 35/35 Core) Build Standard v1.2.0 compliance (0 ruff/mypy/gitleaks findings), and an honest 0/1,900 Mega-Atlas V2.6.0 cross-reference.",
       "verification_boundary": "Lean 4.35.0 kernels verify algebraic, discrete-PDE stability, unitary-operator, spectral-Parseval, Bragg-matrix, and finite contextuality theorems of the mathematical models constructively with zero sorry and zero Classical.choice; physical hardware leaves distinguish cited facts, computed models, live browser timings, and null UNKNOWN fields (no browser access to MediaTek NPU 990); A-Life routes are purely deterministic software simulations with zero sentience claims; honest Mega-Atlas V2.6.0 audit confirms 0 / 1,900 grand open problems retired.",
       "falsification_command": "cd repos/xiaomi-17t-pro-lab && npm ci && npm run verify:all && python3 reference/physics_oracle.py --check-checksums && python3 scripts/check_repo_integrity.py && (cd lean && lake build XiaomiLabProofs Challenge Solution && lake env lean VerifyAxioms.lean && lake comparator --config comparator.json --paranoid) && python3 scripts/test_negative_lean.py --require-lake --check-comparator"
+    },
+    {
+      "id": "0TH-BUILD-013",
+      "slug": "alife-singularity-omega-package",
+      "title": "A-Life Singularity, Super A-Life, and Clean-Slate v3.0 (v3.4.0): Hardware Ring-0 Constitutional Invariants, 748-Run Paired Falsification, 327 Pure 6-Kernel Lean 4.35.0 Proofs (291 Native + 36 Local), and a 1,900-Problem Mega-Atlas Non-Retirement Audit",
+      "domain": "Artificial Life / Open-Ended Evolution / Formal Methods / Thermodynamic Conservation",
+      "date": "2026-11-26",
+      "version": "v3.4.0",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/alife-singularity-omega-package",
+      "submodule_path": "repos/alife-singularity-omega-package",
+      "pinned_commit": "a08294c97f0e0e40cb1eff0dfee1b27dfe9ca5f2",
+      "archived_artifacts": [
+        {
+          "path": "builds/0TH-BUILD-013_alife-singularity-omega-package/Donahue_2026_alife_singularity_omega.pdf",
+          "source_path": "dist/Donahue_2026_alife_singularity_omega.pdf",
+          "sha256": "b682df46a4a9372e879d05cffb0beecffa70ac4bac96291aba6fa3bd721771fe"
+        },
+        {
+          "path": "builds/0TH-BUILD-013_alife-singularity-omega-package/arxiv_submission.tar.gz",
+          "source_path": "dist/arxiv_submission.tar.gz",
+          "sha256": "8746076cfe67d27472c10bfd4b9b3b90681740bde06496aa89edc8b28487255b"
+        },
+        {
+          "path": "builds/0TH-BUILD-013_alife-singularity-omega-package/lean_package_axioms.txt",
+          "source_path": "results/lean_package_axioms.txt",
+          "sha256": "c036dc2370b18e3fc50dae5241500f1f6aabc658a14a988f38a33659b7e9386a"
+        },
+        {
+          "path": "builds/0TH-BUILD-013_alife-singularity-omega-package/lean4-multi-kernel.txt",
+          "source_path": "results/lean4-multi-kernel.txt",
+          "sha256": "f28798923b9947eaaa25d2dd3b38c29c650e01e46cb7c2387a41691e240ebb1d"
+        },
+        {
+          "path": "builds/0TH-BUILD-013_alife-singularity-omega-package/citation_verification.json",
+          "source_path": "results/citation_verification.json",
+          "sha256": "ac5a5839ba28b10ad1379e73477f1281f9c676f8aea44b9a549da69d05b1babb"
+        },
+        {
+          "path": "builds/0TH-BUILD-013_alife-singularity-omega-package/VERIFICATION.md",
+          "source_path": "VERIFICATION.md",
+          "sha256": "539eddce6b06353ae21c60939562e148abe0d51a996a30487540c15c00870502"
+        },
+        {
+          "path": "builds/0TH-BUILD-013_alife-singularity-omega-package/CLAIMS.md",
+          "source_path": "CLAIMS.md",
+          "sha256": "94f8e4989177fe7a7bf102238a40b07822b1c2b36fd6ea69a3f9c460be4dc5d3"
+        },
+        {
+          "path": "builds/0TH-BUILD-013_alife-singularity-omega-package/LIMITATIONS.md",
+          "source_path": "LIMITATIONS.md",
+          "sha256": "af492266ee750376f86e6f75bf107910bd6cf5030b177d785bba77d0945caa92"
+        },
+        {
+          "path": "builds/0TH-BUILD-013_alife-singularity-omega-package/HARDENING_LOG.md",
+          "source_path": "HARDENING_LOG.md",
+          "sha256": "fe1ba8c3039856a5823450c2834c50f532765b9e53aa7234c38349d7dc74f3ea"
+        },
+        {
+          "path": "builds/0TH-BUILD-013_alife-singularity-omega-package/MEGA_ATLAS_CROSSCHECK.md",
+          "source_path": "docs/MEGA_ATLAS_CROSSCHECK.md",
+          "sha256": "b3a4031f800d10a6a46dc3a5f9751ce216e650f6a85a1e2823627a708ab95c9a"
+        },
+        {
+          "path": "builds/0TH-BUILD-013_alife-singularity-omega-package/statement-fidelity.md",
+          "source_path": "docs/statement-fidelity.md",
+          "sha256": "8ff5e5f3e076423a8af5bded3f1637e578a49589fa4b2ffce68ef227d34cdb5e"
+        }
+      ],
+      "lean_verification": {
+        "has_lean": true,
+        "framework": "Pure Constructive Lean 4.35.0 Palomar module core (zero Mathlib, zero Classical.choice, zero native_decide, 6-kernel bubblewrap lake check --paranoid & 4-target lake comparator --paranoid)",
+        "modules": 10,
+        "lines": 648,
+        "audited_theorems": 40,
+        "axiom_allowlist": [
+          "propext",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/OmegaPackageProofs/VerifyAxioms.lean",
+        "live_audit_status": "GitHub Actions CI GREEN (run #45821196180, 5/5 jobs across ubuntu-latest, macos-latest, windows-latest + Pages #45821196185 live at https://0thernes.github.io/alife-singularity-omega-package/ + Release v3.4.0 #45821206369 with 7 assets): 40/40 constructive declarations (36 core + 4 Palomar comparator certificates m1..m4, ZERO Classical.choice, zero sorry, zero native_decide) passed all 6 independent kernels (lean4, leanchecker-paranoid, lean4lean, nanoda_bin, con-leche, con-ron + bubblewrap lake comparator --paranoid), SLSA provenance CI #72657281 (Rekor 4126066465) & Release #72657109 (Rekor 4126062413), Software Heritage full snapshot #2696705 (swh:1:snp:e275a272a8b937aaecde04e2984abeaa609b2a82), 11-page 0-overfull Tectonic AMS-LaTeX PDF & clean-room arXiv tarball (20/20 live resolved citations), 50-digit Decimal oracle + 1,250+ Hypothesis + 2,000 differential cases + 6/6 (100%) Python mutants killed, 22/22 Forensic Gates (205/205 Z:<->I: SHA-256 parity), and 100.0% (78/78, 33/33 Core) Build Standard v1.2.0"
+      },
+      "summary": "Zero-consolidation multi-format scientific engineering stack unifying Clean-Slate v3.0 micro-hardware runtime invariants (11-pool Kahan-Neumaier FP64 conservation, Philox4x32-10 seed isolation, XPBD compliant hydrostats, 10x10x10 Hybrid Cube, Hardware Ring-0 ACL) with macro A-Life Singularity metrology (OVBS-52, 78-alert ALifeOps YAML, 24 CSVs = 2,822 rows, 5 Excel workbooks, 22-tab offline Observatory, 24 vector SVGs, 3 lossless <2.5 MB Chrome PDFs with 0 U+2611 policy). Across 748 conserved paired stochastic runs (N=48 locked seeds 5001-5048, max FP64 drift 2.463e-16 < 1e-12, 0 heat-backflow faults, 5/5 real Anti-LARP mutants rejected), Hardware Ring-0 ACL (SIM07/SIM08) traps 406.9-408.2 illegal self-edits/run at 0.0% kill-switch deletion and strictly Pareto-dominates behavioral guardrails across r in [0%, 100%] (SIM08 OVI=85.48 vs SIM03=56.42, p_Holm < 1e-13, while disclosing the SIM02 vs SIM01 null result). Anchored by 40 local zero-Mathlib constructive Lean 4.35.0 declarations (36 core + 4 Palomar) verified across all 6 independent kernels alongside 291 live native 6-kernel theorems across the 5 companion C11/C23 engines (= 327 Pure Lean 4 theorems ecosystem total), an 11-page 0-overfull AMS-LaTeX white paper + clean-room arXiv tarball (20/20 live citations), 50-digit oracle + Hypothesis + 6/6 Python mutants, SLSA/Rekor attestations, Software Heritage full snapshot, 22/22 Forensic Gates, 100.0% Build Standard v1.2.0, and an honest 0/1,900 Mega-Atlas crosswalk across 25 mapped targets (MA-01..MA-25).",
+      "verification_boundary": "All 40 local Lean 4.35.0 declarations (36 core + 4 Palomar comparator certificates across 10 files / 648 lines) compile constructively with zero Mathlib, zero Classical.choice, zero native_decide, zero sorry outside isolated PalomarChallenge.lean, and strictly [propext, Quot.sound], verified across all 6 independent kernels on Ubuntu CI (#45821196180, SLSA #72657281 / Rekor 4126066465). The 291 native C11/C23 engine theorems reside in companion sibling repositories (0TH-BUILD-001, 008, 009, 010, 011). Continuous FP64 simulations, 50-digit differential oracle checks, mutation audits, and Chrome DOM stress tests lie outside the Lean kernel boundary. Explicitly solves 0/1,900 overarching open problems in unsolved-problems-mega-atlas (all 25 mapped targets remain OPEN), tags 29/825 cognitive checks INDICATOR_ONLY, and claims no sentience, wet-lab proof, or external journal peer review.",
+      "falsification_command": "cd repos/alife-singularity-omega-package && (cd lean && lake build && lake env lean OmegaPackageProofs/VerifyAxioms.lean && lake check --paranoid && lake comparator --config comparator.json --paranoid) && python3 scripts/run_mutation_audit.py && python3 scripts/check_readme_axioms.py && pytest tests/ -v && python3 scripts/audit_omniscient_integrity.py"
     }
   ]
 }

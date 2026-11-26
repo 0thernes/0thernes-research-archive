@@ -2,7 +2,7 @@
 
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
 **Totals:** 12 public registries · 44 SHA-256 frozen snapshots  
-**Updated:** `2026-11-26T02:40:14Z`
+**Updated:** `2026-11-26T12:49:51Z`
 
 > **Epistemic Discipline:** Tier III entries preserve binding architectural laws, SHA-256-locked pre-registrations, controlled empirical discoveries (including null/falsified results), finite computational certificates, and structured open-problem atlases. None of these are represented as Lean-proved general mathematical theorems.
 
@@ -18,7 +18,7 @@
 | `0TH-DISC-008` | 2026-11-05 | `architectural_synthesis_report` | [`dimension-omega-singularity`](https://github.com/0thernes/dimension-omega-singularity) | Dimension Omega Singularity: 3,000-Mechanism Architectural Synthesis Reports (Biologic Substrates, High-Weirdness & A-Life/Consciousness Indicators) | 3 | [Evidence](../discoveries/0TH-DISC-008_dimension-omega-3000-catalogs/EVIDENCE.md) |
 | `0TH-DISC-009` | 2026-07-05 | `computational_reference_atlas` | [`grimoire-algorithms-of-the-arcane`](https://github.com/0thernes/grimoire-algorithms-of-the-arcane) | Closed-Form Math Study Atlas (1,123 Anchored Tests) & Grimoire 1,000-Algorithm Verification Ledger | 3 | [Evidence](../discoveries/0TH-DISC-009_math-and-algorithm-atlases/EVIDENCE.md) |
 | `0TH-DISC-010` | 2026-11-21 | `formal_addenda_and_provenance_map` | [`hoggar-bound-lab`](https://github.com/0thernes/hoggar-bound-lab) | Hoggar Bound Lab: Provenance Map of 3 Historical Source Papers, Claim-to-Theorem Map & Conjecture E Addendum | 8 | [Evidence](../discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/EVIDENCE.md) |
-| `0TH-DISC-011` | 2026-11-22 | `ecosystem_synthesis_dossier` | [`alife-singularity-omega-package`](https://github.com/0thernes/alife-singularity-omega-package) | A-Life Singularity SuperLife Omega Package (v3.3.0-omega): 7-Repository Master Synthesis Dossier & Manifest | 3 | [Evidence](../discoveries/0TH-DISC-011_alife-singularity-omega-package/EVIDENCE.md) |
+| `0TH-DISC-011` | 2026-11-26 | `ecosystem_synthesis_dossier` | [`alife-singularity-omega-package`](https://github.com/0thernes/alife-singularity-omega-package) | A-Life Singularity SuperLife Omega Package (v3.4.0): 7-Repository Master Synthesis Dossier & Manifest | 3 | [Evidence](../discoveries/0TH-DISC-011_alife-singularity-omega-package/EVIDENCE.md) |
 | `0TH-DISC-012` | 2026-11-22 | `interactive_observatory_architecture` | [`omega-triscale-observatory`](https://github.com/0thernes/omega-triscale-observatory) | Omega TriScale Observatory (v6.6.0): Unified 7-Repo Multi-Scale A-Life Telemetry & Relay Architecture | 2 | [Evidence](../discoveries/0TH-DISC-012_omega-triscale-observatory/EVIDENCE.md) |
 
 ---
@@ -93,11 +93,11 @@
 - **Verification Boundary:** Provenance & claim-mapping index accompanying 0TH-2026-002; all formal theorems in v1.8.0 (100 declarations in VerifyNewFormalizations.lean) are verified by Lean 4.35.0 inside repos/hoggar-bound-lab, paired with the exact integer C/Python certificates archived alongside them.
 - **Dossier:** [`EVIDENCE.md`](../discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/EVIDENCE.md) · [`METADATA.json`](../discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/METADATA.json)
 
-## 0TH-DISC-011 — A-Life Singularity SuperLife Omega Package (v3.3.0-omega): 7-Repository Master Synthesis Dossier & Manifest
+## 0TH-DISC-011 — A-Life Singularity SuperLife Omega Package (v3.4.0): 7-Repository Master Synthesis Dossier & Manifest
 
-- **Epistemic Tier:** `ecosystem_synthesis_dossier` · **Repository:** https://github.com/0thernes/alife-singularity-omega-package (`main` @ `c5319dd04507`)
-- **Summary:** Public master synthesis dossier and manifest unifying the 7-repository A-Life Singularity Omega stack (AUTOPHAGE, Cellulogonic Mecha, Cellular Engine Omega, Noetic Organism Omega, Asmodensius Native, Omega TriScale Observatory, and this package), archived with its 1.13 MB master PDF dossier and SHA-256 manifest.
-- **Verification Boundary:** Cross-repository engineering synthesis dossier and manifest; individual Lean 4 proofs live in their respective Tier II build repositories (0TH-BUILD-001, 008, 009, 010, 011). Explicitly disclaims sentience, consciousness, or wet-lab biological proof.
+- **Epistemic Tier:** `ecosystem_synthesis_dossier` · **Repository:** https://github.com/0thernes/alife-singularity-omega-package (`main` @ `a08294c97f0e`)
+- **Summary:** Public master synthesis dossier and manifest unifying the 7-repository A-Life Singularity Omega stack (AUTOPHAGE, Cellulogonic Mecha, Cellular Engine Omega, Noetic Organism Omega, Asmodensius Native, Omega TriScale Observatory, and this package), upgraded to v3.4.0 with lossless 542 KB Master Dossier PDF and 200-file SHA-256 manifest (companion to Tier II build paper 0TH-BUILD-013).
+- **Verification Boundary:** Cross-repository engineering synthesis dossier and manifest; the local 40-declaration 6-kernel Lean 4.35.0 suite and AMS-LaTeX white paper are archived in Tier II 0TH-BUILD-013 while the 291 companion native Lean 4 proofs live in 0TH-BUILD-001, 008, 009, 010, and 011. Explicitly disclaims sentience, consciousness, wet-lab biological proof, or retiring any Mega-Atlas grand problem (0/1,900).
 - **Dossier:** [`EVIDENCE.md`](../discoveries/0TH-DISC-011_alife-singularity-omega-package/EVIDENCE.md) · [`METADATA.json`](../discoveries/0TH-DISC-011_alife-singularity-omega-package/METADATA.json)
 
 ## 0TH-DISC-012 — Omega TriScale Observatory (v6.6.0): Unified 7-Repo Multi-Scale A-Life Telemetry & Relay Architecture

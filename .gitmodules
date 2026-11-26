@@ -79,3 +79,6 @@
 [submodule "repos/zero-error-torus-frontier"]
 	path = repos/zero-error-torus-frontier
 	url = https://github.com/0thernes/zero-error-torus-frontier.git
+[submodule "repos/alife-singularity-omega-package"]
+	path = repos/alife-singularity-omega-package
+	url = https://github.com/0thernes/alife-singularity-omega-package.git
