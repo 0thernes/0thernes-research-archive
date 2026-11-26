@@ -23,7 +23,7 @@
 - **Scope:** **36 public research entries** (`13 Tier I + 11 Tier II + 12 Tier III`) + **23 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 <!-- LIVE_ECOSYSTEM_STATUS:START -->
-> **Live Canonical Hub Mirror (`2026-11-26T02:45:06Z`):** Tracking **36 public research entries** (13 Tier I preprints · 11 Tier II builds · 12 Tier III laws/discoveries/atlases) across **32 unique public repositories** and **23 pinned Git submodules** (`23` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
+> **Live Canonical Hub Mirror (`2026-11-26T02:55:24Z`):** Tracking **36 public research entries** (13 Tier I preprints · 11 Tier II builds · 12 Tier III laws/discoveries/atlases) across **32 unique public repositories** and **23 pinned Git submodules** (`23` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
 > **Mega-Atlas V2 Cross-Check:** **`0 / 1900` grand open problems retired** · **4 peer-literature open sub-conjectures/questions formally proved in Lean 4.35.0** across 6 independent kernels. Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
 <!-- LIVE_ECOSYSTEM_STATUS:END -->
 
@@ -287,7 +287,7 @@ just audit       # Score repo against Build Standard v1.2.0
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-26T02:45:06Z` · **Mode:** `live-github-api`  
+**Synced (UTC):** `2026-11-26T02:55:24Z` · **Mode:** `live-github-api`  
 **Tracked Public Repositories:** 32 (`23` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
