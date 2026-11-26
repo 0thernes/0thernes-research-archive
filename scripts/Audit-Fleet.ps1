@@ -23,9 +23,12 @@ while ($queue.Count -gt 0) {
     if (-not $seen.Add($dir)) { continue }
     $git = Join-Path $dir '.git'
     if (Test-Path -LiteralPath $git) {
-        $status = (& git -C $dir status --porcelain 2>$null | Out-String).Trim()
-        $unmerged = (& git -C $dir diff --name-only --diff-filter=U 2>$null | Out-String).Trim()
-        $null = & git -C $dir diff --check 2>&1
+        # Disable Git's safe-crlf advisory for these read-only probes.  The
+        # warning is informational, but PowerShell can surface native stderr
+        # as a terminating error under $ErrorActionPreference = 'Stop'.
+        $status = (& git -c core.safecrlf=false -C $dir status --porcelain 2>$null | Out-String).Trim()
+        $unmerged = (& git -c core.safecrlf=false -C $dir diff --name-only --diff-filter=U 2>$null | Out-String).Trim()
+        $null = & git -c core.safecrlf=false -C $dir diff --check 2>&1
         $whitespace = ($LASTEXITCODE -ne 0)
         $repos.Add([pscustomobject]@{
             path = $dir

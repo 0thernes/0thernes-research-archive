@@ -1,6 +1,6 @@
 # Archive Architecture (`docs/architecture.md`)
 
-`0thernes-research-archive` is the **single canonical public master hub** organizing all public scientific outputs authored by Alexander Stephen Donahue (`ORCID 0009-0006-8168-9648`) into **three strictly separated epistemic tiers** (**47 entries**: 18 Tier I + 17 Tier II + 12 Tier III), backed by **34 pinned public Git submodules** under `repos/`, a **26-row Solved Sub-Conjectures & Mega-Atlas V2 Bridge**, a **Real-Time Live Upstream Ecosystem Mirror** (`40` unique public repositories), a unified SHA-256 integrity manifest (`CHECKSUMS.sha256` & `data/MANIFEST.sha256`), and an immutable DigiCert RFC 3161 TSA–sealed frozen release manifest (`data/RELEASE_FREEZE.sha256` + `data/RELEASE_FREEZE.sha256.tsr`).
+`0thernes-research-archive` is the **single canonical public master hub** organizing all public scientific outputs authored by Alexander Stephen Donahue (`ORCID 0009-0006-8168-9648`) into **three strictly separated epistemic tiers** (**48 entries**: 19 Tier I + 17 Tier II + 12 Tier III), backed by **35 pinned public Git submodules** under `repos/`, a **26-row Solved Sub-Conjectures & Mega-Atlas V2 Bridge**, a **Real-Time Live Upstream Ecosystem Mirror** (the current count is generated in `registry/LIVE_ECOSYSTEM_MIRROR.json`), a unified SHA-256 integrity manifest (`CHECKSUMS.sha256` & `data/MANIFEST.sha256`), and an immutable DigiCert RFC 3161 TSA–sealed frozen release manifest (`data/RELEASE_FREEZE.sha256` + `data/RELEASE_FREEZE.sha256.tsr`).
 
 ```mermaid
 flowchart LR

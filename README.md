@@ -150,4 +150,4 @@ just audit       # Score repository against Build Standard v1.2.0
 
 ## Maintenance Status
 
-**Status: Active** (repostatus: `active`). Automatically refreshes its live upstream mirror every 2 hours and on `repository_dispatch` via [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml), and updates frozen release pins whenever upstream repositories publish verified releases (see [CLAIMS.md](CLAIMS.md), [LIMITATIONS.md](LIMITATIONS.md), [REPLICATION.md](REPLICATION.md), [ROADMAP.md](ROADMAP.md), and [HARDENING_INDEX.md](HARDENING_INDEX.md)).
+**Status: Active** (repostatus: `active`). Automatically refreshes its live upstream mirror every 2 hours and on `repository_dispatch` via [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml). Upstream releases are reported in the live mirror; immutable frozen release pins are advanced only through a reviewed archive update that adds and verifies the corresponding frozen artifacts (see [CLAIMS.md](CLAIMS.md), [LIMITATIONS.md](LIMITATIONS.md), [REPLICATION.md](REPLICATION.md), [ROADMAP.md](ROADMAP.md), and [HARDENING_INDEX.md](HARDENING_INDEX.md)).
