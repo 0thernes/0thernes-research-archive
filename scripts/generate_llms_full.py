@@ -41,7 +41,7 @@ def main() -> int:
 - [AGENTS.md](AGENTS.md) · [CHANGELOG.md](CHANGELOG.md) · [ROADMAP.md](ROADMAP.md) · [HARDENING_INDEX.md](HARDENING_INDEX.md)
 - [Architecture](docs/architecture.md) · [ADR 0001](docs/adr/0001-three-tier-epistemic-archive.md) · [ADR 0002](docs/adr/0002-canonical-hub-and-live-sync.md)
 """
-    (ROOT / "llms.txt").write_text(llms_txt, encoding="utf-8", newline="\n")
+    (ROOT / "llms.txt").write_text(llms_txt, encoding="utf-8")
 
     sections = [
         "README.md",
@@ -61,7 +61,7 @@ def main() -> int:
         p = ROOT / rel
         if p.exists():
             parts.append(f"\n---\n\n<!-- FILE: {rel} -->\n\n" + p.read_text(encoding="utf-8").strip() + "\n")
-    (ROOT / "llms-full.txt").write_text("\n".join(parts), encoding="utf-8", newline="\n")
+    (ROOT / "llms-full.txt").write_text("\n".join(parts), encoding="utf-8")
     print(f"PASS: Regenerated llms.txt and llms-full.txt ({len(sections)} embedded docs).")
     return 0
 

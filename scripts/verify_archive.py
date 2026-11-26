@@ -36,6 +36,11 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import unquote
 
+
+def write_utf8_lf(path: Path, text: str) -> None:
+    """Write deterministic UTF-8/LF bytes on every supported Python/OS pair."""
+    path.write_bytes(text.encode("utf-8"))
+
 EXPECTED_ORCID = "0009-0006-8168-9648"
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 MAX_TRACKED_ARTIFACT_BYTES = 5_000_000
@@ -369,10 +374,10 @@ def sync_derived_files(
         pdir.mkdir(parents=True, exist_ok=True)
 
         meta_path = pdir / "METADATA.json"
-        meta_path.write_text(json.dumps(paper, indent=2) + "\n", encoding="utf-8", newline="\n")
+        write_utf8_lf(meta_path, json.dumps(paper, indent=2) + "\n")
 
         ev_path = pdir / "EVIDENCE.md"
-        ev_path.write_text(render_evidence_md(paper), encoding="utf-8", newline="\n")
+        write_utf8_lf(ev_path, render_evidence_md(paper))
 
         checksum_entries.append((sha256_file(pdf_abs), pdf_rel))
         checksum_entries.append((sha256_file(meta_path), meta_path.relative_to(root).as_posix()))
@@ -382,9 +387,9 @@ def sync_derived_files(
             if cm_abs != pdf_abs and cm_abs.exists():
                 checksum_entries.append((sha256_file(cm_abs), cm_abs.relative_to(root).as_posix()))
 
-    (root / "registry" / "PAPERS.md").write_text(render_papers_md(data), encoding="utf-8", newline="\n")
+    write_utf8_lf(root / "registry" / "PAPERS.md", render_papers_md(data))
     reg_json = root / "registry" / "PAPERS.json"
-    reg_json.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
+    write_utf8_lf(reg_json, json.dumps(data, indent=2) + "\n")
     checksum_entries.append((sha256_file(reg_json), "registry/PAPERS.json"))
 
     if bdata is not None:
@@ -394,19 +399,19 @@ def sync_derived_files(
             bdir.mkdir(parents=True, exist_ok=True)
 
             meta_path = bdir / "METADATA.json"
-            meta_path.write_text(json.dumps(b, indent=2) + "\n", encoding="utf-8", newline="\n")
+            write_utf8_lf(meta_path, json.dumps(b, indent=2) + "\n")
 
             ev_path = bdir / "EVIDENCE.md"
-            ev_path.write_text(render_build_evidence_md(b), encoding="utf-8", newline="\n")
+            write_utf8_lf(ev_path, render_build_evidence_md(b))
 
             checksum_entries.append((sha256_file(meta_path), meta_path.relative_to(root).as_posix()))
             for art in b["archived_artifacts"]:
                 art_abs = root / art["path"]
                 checksum_entries.append((sha256_file(art_abs), art["path"]))
 
-        (root / "registry" / "BUILD_PAPERS.md").write_text(render_builds_md(bdata), encoding="utf-8", newline="\n")
+        write_utf8_lf(root / "registry" / "BUILD_PAPERS.md", render_builds_md(bdata))
         breg_json = root / "registry" / "BUILD_PAPERS.json"
-        breg_json.write_text(json.dumps(bdata, indent=2) + "\n", encoding="utf-8", newline="\n")
+        write_utf8_lf(breg_json, json.dumps(bdata, indent=2) + "\n")
         checksum_entries.append((sha256_file(breg_json), "registry/BUILD_PAPERS.json"))
 
     if ddata is not None:
@@ -416,19 +421,19 @@ def sync_derived_files(
             ddir.mkdir(parents=True, exist_ok=True)
 
             meta_path = ddir / "METADATA.json"
-            meta_path.write_text(json.dumps(d, indent=2) + "\n", encoding="utf-8", newline="\n")
+            write_utf8_lf(meta_path, json.dumps(d, indent=2) + "\n")
 
             ev_path = ddir / "EVIDENCE.md"
-            ev_path.write_text(render_disc_evidence_md(d), encoding="utf-8", newline="\n")
+            write_utf8_lf(ev_path, render_disc_evidence_md(d))
 
             checksum_entries.append((sha256_file(meta_path), meta_path.relative_to(root).as_posix()))
             for art in d["archived_artifacts"]:
                 art_abs = root / art["path"]
                 checksum_entries.append((sha256_file(art_abs), art["path"]))
 
-        (root / "registry" / "LAWS_AND_DISCOVERIES.md").write_text(render_discoveries_md(ddata), encoding="utf-8", newline="\n")
+        write_utf8_lf(root / "registry" / "LAWS_AND_DISCOVERIES.md", render_discoveries_md(ddata))
         dreg_json = root / "registry" / "LAWS_AND_DISCOVERIES.json"
-        dreg_json.write_text(json.dumps(ddata, indent=2) + "\n", encoding="utf-8", newline="\n")
+        write_utf8_lf(dreg_json, json.dumps(ddata, indent=2) + "\n")
         checksum_entries.append((sha256_file(dreg_json), "registry/LAWS_AND_DISCOVERIES.json"))
 
     for extra_rel in ("registry/SOLVED_AND_ATLAS_BRIDGE.json", "registry/LIVE_ECOSYSTEM_MIRROR.json"):
@@ -440,17 +445,17 @@ def sync_derived_files(
         "\n".join(f"{digest}  {rel}" for digest, rel in sorted(checksum_entries, key=lambda x: x[1])) + "\n"
     )
     checksums_path = root / "CHECKSUMS.sha256"
-    checksums_path.write_text(checksums_text, encoding="utf-8", newline="\n")
+    write_utf8_lf(checksums_path, checksums_text)
     data_manifest = root / "data" / "MANIFEST.sha256"
     data_manifest.parent.mkdir(parents=True, exist_ok=True)
-    data_manifest.write_text(checksums_text, encoding="utf-8", newline="\n")
+    write_utf8_lf(data_manifest, checksums_text)
     freeze_entries = [
         (digest, rel)
         for digest, rel in sorted(checksum_entries, key=lambda x: x[1])
         if rel != "registry/LIVE_ECOSYSTEM_MIRROR.json"
     ]
     freeze_text = "\n".join(f"{digest}  {rel}" for digest, rel in freeze_entries) + "\n"
-    (root / "data" / "RELEASE_FREEZE.sha256").write_text(freeze_text, encoding="utf-8", newline="\n")
+    write_utf8_lf(root / "data" / "RELEASE_FREEZE.sha256", freeze_text)
     bcount = len(bdata["builds"]) if bdata else 0
     dcount = len(ddata["discoveries"]) if ddata else 0
     print(
