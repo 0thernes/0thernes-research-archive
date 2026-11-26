@@ -99,9 +99,9 @@ def test_0th_2026_006_and_0th_build_007_registered_at_latest_versions() -> None:
         for b in json.loads((ROOT / "registry" / "BUILD_PAPERS.json").read_text(encoding="utf-8"))["builds"]
     }
     b7 = builds["0TH-BUILD-007"]
-    assert b7["version"] == "v2.4.0"
-    assert b7["lean_verification"]["audited_theorems"] == 92
-    assert "45728933812" in b7["lean_verification"]["live_audit_status"]
+    assert b7["version"] == "v2.5.0"
+    assert b7["lean_verification"]["audited_theorems"] == 103
+    assert "45743507132" in b7["lean_verification"]["live_audit_status"]
 
 
 @given(payload=st.binary(min_size=1, max_size=4096))
