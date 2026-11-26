@@ -60,7 +60,7 @@ jobs:
           fi
           git config user.name "0thernes-live-sync[bot]"
           git config user.email "0_0@0thernes.art"
-          git add registry/LIVE_ECOSYSTEM_MIRROR.json registry/LIVE_ECOSYSTEM_MIRROR.md registry/SOLVED_AND_ATLAS_BRIDGE.md README.md CHECKSUMS.sha256 data/MANIFEST.sha256 llms.txt llms-full.txt
+          git add registry/ README.md CHECKSUMS.sha256 data/MANIFEST.sha256 llms.txt llms-full.txt
           git commit -m "chore(live-sync): refresh upstream ecosystem mirror [skip-sync]"
           git pull --rebase origin main
           git push origin main

@@ -1,7 +1,7 @@
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-26T17:02:45Z` · **Mode:** `live-github-api`  
+**Synced (UTC):** `2026-11-26T17:22:10Z` · **Mode:** `live-github-api`  
 **Tracked Public Repositories:** 41 (`32` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
@@ -56,4 +56,5 @@
 
 - **Push-based dispatch:** Upstream repositories carrying `.github/workflows/notify-archive.yml` dispatch `upstream-repo-updated` to this hub on every `main` push (see [`docs/upstream-notify-workflow.yml`](../docs/upstream-notify-workflow.yml)).
 - **Scheduled pull mirror:** [`.github/workflows/live-sync.yml`](../.github/workflows/live-sync.yml) refreshes this mirror every 2 hours (`0 */2 * * *`), re-verifies SHA-256 integrity and `pytest`, and republishes the live GitHub Pages portal automatically whenever upstream status changes.
+- **Discovery inventory:** [`PUBLIC_REPO_INVENTORY.md`](PUBLIC_REPO_INVENTORY.md) lists every public, non-fork owner repository and marks unregistered repositories as candidates without promoting them into the epistemic archive.
 - **Immutability rule:** Release-pinned frozen PDFs and Rekor-attested submodules are only advanced when matching frozen artifacts are archived; post-release upstream commits appear immediately as `AHEAD_OF_PIN` with live CI links.

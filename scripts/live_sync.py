@@ -13,6 +13,8 @@ Responsibilities:
      each tracked repo's live default-branch HEAD SHA, latest release tag, push
      timestamp, archived flag, GitHub Pages URL, and latest main-branch CI run.
   4. Write registry/LIVE_ECOSYSTEM_MIRROR.json and registry/LIVE_ECOSYSTEM_MIRROR.md.
+  4b. Write a public-only inventory of every owner repository so new research
+      candidates are discoverable without silently entering the archive.
   5. Render registry/SOLVED_AND_ATLAS_BRIDGE.md from registry/SOLVED_AND_ATLAS_BRIDGE.json.
   6. Refresh the bounded <!-- LIVE_ECOSYSTEM_STATUS:START --> block inside README.md.
 """
@@ -78,6 +80,85 @@ def gh_api_json(endpoint: str, token: str | None = None, timeout: float = 15.0) 
     req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=timeout) as resp:  # noqa: S310
         return json.loads(resp.read().decode("utf-8"))
+
+
+def collect_public_inventory(
+    tracked: dict[str, dict[str, Any]],
+    *,
+    offline: bool,
+    token: str | None,
+    fetcher: Any = gh_api_json,
+) -> dict[str, Any]:
+    """Discover public owner repos without promoting them into the archive.
+
+    The inventory is deliberately separate from the epistemic registries: a
+    public repository can be visible here while still being an app, tool,
+    creative experiment, private-to-the-owner candidate, or an unreleased
+    research branch.  Only a human-reviewed registry entry can make a claim.
+    """
+    if offline:
+        return {"repositories": [], "sync_status": "OFFLINE_NOT_QUERIED", "error": None}
+
+    repos: list[dict[str, Any]] = []
+    for page in range(1, 11):
+        batch = fetcher(
+            f"users/{OWNER}/repos?type=owner&per_page=100&page={page}&sort=updated",
+            token=token,
+        )
+        if not isinstance(batch, list):
+            raise ValueError("GitHub owner repository response was not a list")
+        if not batch:
+            break
+        for meta in batch:
+            slug = str(meta.get("name") or "")
+            if not slug:
+                continue
+            # Owner listings may include the owner's own forks.  They are
+            # intentionally invisible to this inventory, not an error.
+            if meta.get("fork") is True:
+                continue
+            assert_public_repo_metadata(meta, slug)
+            if slug == ARCHIVE_SLUG:
+                continue
+            repos.append(
+                {
+                    "slug": slug,
+                    "repository": f"https://github.com/{OWNER}/{slug}",
+                    "description": meta.get("description"),
+                    "default_branch": meta.get("default_branch") or "main",
+                    "archived": bool(meta.get("archived", False)),
+                    "pushed_at": meta.get("pushed_at"),
+                    "homepage": meta.get("homepage") or None,
+                    "latest_release": None,
+                    "archive_registered": slug in tracked,
+                    "inventory_status": "REGISTERED" if slug in tracked else "UNREGISTERED_PUBLIC_REPO",
+                }
+            )
+        if len(batch) < 100:
+            break
+    repos.sort(key=lambda item: item["slug"].lower())
+    return {"repositories": repos, "sync_status": "LIVE_GITHUB_API", "error": None}
+
+
+def render_public_inventory_md(inventory: dict[str, Any], synced_utc: str) -> str:
+    repos = inventory["repositories"]
+    registered = sum(1 for r in repos if r["archive_registered"])
+    candidates = len(repos) - registered
+    lines = [
+        "# Public 0thernes Repository Inventory",
+        "",
+        f"**Synced (UTC):** `{synced_utc}` · **Public non-fork repositories:** `{len(repos)}` · **Registered:** `{registered}` · **Unregistered candidates:** `{candidates}`",
+        "",
+        "> This is a discovery inventory, not an epistemic registry. An unregistered repository is not asserted to contain a paper, proof, solved conjecture, or research result. Private repositories and third-party forks are excluded by the privacy firewall.",
+        "",
+        "| Repository | Status | Default branch | Last push | Description |",
+        "|---|---|---|---|---|",
+    ]
+    for r in repos:
+        desc = str(r.get("description") or "").replace("|", "\\|").replace("\n", " ")
+        lines.append(f"| [`{r['slug']}`]({r['repository']}) | `{r['inventory_status']}` | `{r['default_branch']}` | `{r.get('pushed_at') or '—'}` | {desc or '—'} |")
+    lines.extend(["", "**Promotion rule:** only a reviewed entry in `PAPERS.json`, `BUILD_PAPERS.json`, or `LAWS_AND_DISCOVERIES.json` can enter the canonical archive.", ""])
+    return "\n".join(lines)
 
 
 def collect_tracked_repos(
@@ -275,6 +356,7 @@ def render_live_mirror_md(mirror: dict[str, Any]) -> str:
             "",
             "- **Push-based dispatch:** Upstream repositories carrying `.github/workflows/notify-archive.yml` dispatch `upstream-repo-updated` to this hub on every `main` push (see [`docs/upstream-notify-workflow.yml`](../docs/upstream-notify-workflow.yml)).",
             "- **Scheduled pull mirror:** [`.github/workflows/live-sync.yml`](../.github/workflows/live-sync.yml) refreshes this mirror every 2 hours (`0 */2 * * *`), re-verifies SHA-256 integrity and `pytest`, and republishes the live GitHub Pages portal automatically whenever upstream status changes.",
+            "- **Discovery inventory:** [`PUBLIC_REPO_INVENTORY.md`](PUBLIC_REPO_INVENTORY.md) lists every public, non-fork owner repository and marks unregistered repositories as candidates without promoting them into the epistemic archive.",
             "- **Immutability rule:** Release-pinned frozen PDFs and Rekor-attested submodules are only advanced when matching frozen artifacts are archived; post-release upstream commits appear immediately as `AHEAD_OF_PIN` with live CI links.",
             "",
         ]
@@ -397,6 +479,19 @@ def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
             "preserving the previous mirror (use --offline for a pinned snapshot)"
         )
 
+    inventory = collect_public_inventory(
+        tracked, offline=offline, token=token
+    )
+    if offline:
+        inventory_path = root / "registry" / "PUBLIC_REPO_INVENTORY.json"
+        if inventory_path.exists():
+            previous_inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
+            inventory = {
+                "repositories": previous_inventory.get("repositories", []),
+                "sync_status": "OFFLINE_PRESERVED_LAST_KNOWN_GOOD",
+                "error": None,
+            }
+
     # Zero-noise idempotence: preserve synced_utc whenever upstream state & counts are unchanged
     mirror_json_path = root / "registry" / "LIVE_ECOSYSTEM_MIRROR.json"
     synced_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -418,6 +513,27 @@ def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
     mirror_json_path.write_text(json.dumps(mirror, indent=2) + "\n", encoding="utf-8", newline="\n")
     (root / "registry" / "LIVE_ECOSYSTEM_MIRROR.md").write_text(
         render_live_mirror_md(mirror), encoding="utf-8", newline="\n"
+    )
+    inventory_path = root / "registry" / "PUBLIC_REPO_INVENTORY.json"
+    inventory_path.write_text(
+        json.dumps(
+            {
+                "schema_version": "1.0.0",
+                "canonical_hub": f"https://github.com/{OWNER}/{ARCHIVE_SLUG}",
+                "synced_utc": synced_utc,
+                "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
+                **inventory,
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    (root / "registry" / "PUBLIC_REPO_INVENTORY.md").write_text(
+        render_public_inventory_md(inventory, synced_utc),
+        encoding="utf-8",
+        newline="\n",
     )
     (root / "registry" / "SOLVED_AND_ATLAS_BRIDGE.md").write_text(
         render_bridge_md(bridge_data), encoding="utf-8", newline="\n"
