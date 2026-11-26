@@ -76,3 +76,6 @@
 [submodule "repos/promislow-fracton-amoeba"]
 	path = repos/promislow-fracton-amoeba
 	url = https://github.com/0thernes/promislow-fracton-amoeba.git
+[submodule "repos/zero-error-torus-frontier"]
+	path = repos/zero-error-torus-frontier
+	url = https://github.com/0thernes/zero-error-torus-frontier.git

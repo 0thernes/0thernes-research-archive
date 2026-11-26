@@ -15,7 +15,7 @@
       "github": "https://github.com/0thernes",
       "website": "https://0thernes.art"
     },
-    "updated_utc": "2026-11-26T04:26:00Z"
+    "updated_utc": "2026-11-26T06:00:00Z"
   },
   "papers": [
     {
@@ -761,6 +761,54 @@
       "core_result": "Unites three algebraic, arithmetic, and topological frontiers around the torsion-free Hantzsche-Wendt (Promislow) group P and its faithful 4-band Bloch embedding Psi: R[P] -> M_4(R[x^+-1, y^+-1, z^+-1]) across 15 headline theorems (T1a-T3c) + 5 auxiliary/adversarial/master declarations in zero-Mathlib Lean 4.35.0 (6-kernel lake comparator --paranoid verified): (I) torsion-freeness of P, universal Klein V_4-invariance of det(Psi(u)-EI_4) forcing constant determinant for every unit over an integral domain, exact 8-sign-point factorizations, Gardam's 21-term unit mod-4 congruence (89-term integer det with constant 97 and augmentation 945) + all-m 2-adic Hensel tower, exhaustive 2^21 support-preserving sign-lift impossibility (and strengthened arbitrary even-sum p obstruction via quaternionic norm P_1^2 - 31 != +-1 at (1,1,-1)), and P-equivariant bijective 21-neighbor linear CA (ALG-035/ANL-063); (II) universal involutive-ring unit-twisted CSS commutation, complete 64-signed Haah conic discriminant classification (smooth for all p >= 5), universal all-prime & char-0 no-string-operator proof for Haah CC1 via rational parametrization and 6 pairwise linear Bezout identities, exact odd-prime torsion threshold p=23, L=11 (k_23(11)=6), and Gardam-twisted vs. intrinsic non-Abelian HW fracton codes with exact (52,52)/(52,56) weights and 342-term integer commutator defect (QC-032/CM-016); and (III) global origin minimum for every V_4-symmetric midpoint-convex Ronkin function, Haah double-amoeba quadrilateral bounds & single-generator algebraic EP_2 Jordan defectiveness, and Artin B_4 braid relations + full S_4 (order 24) monodromy generation (CM-018/FLD-060). Paired with zero-dependency Rust core (4/4 tests, Ubuntu + Windows), Python exact oracle + Hypothesis + differential tests (9/9), 6/6 (100%) killed mutants, 18/18 live Crossref/arXiv citations (0 retractions), 10-page zero-warning AMS-LaTeX PDF + clean-room arXiv tarball, live 3D WebGL2 Studio & Proof Blueprint on GitHub Pages, SLSA Attestation #72484621 (Rekor 4117699930), Software Heritage full snapshot swh:1:snp:3de955e528951f543794d11b7c4ec43d5869e611, and 90/90 Build Standard v1.2.0 compliance.",
       "verification_boundary": "All 20 audited declarations across Pillars I-III, NonVacuity, Adversarial, and Palomar comparator contracts are kernel-checked in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound] across all 6 independent kernels on Ubuntu 24.04 CI (run 45751946493). Numerical 3D Ronkin quadrature (O(1/N) nodal-singularity convergence), bipolar skin-effect winding grids (max_err = 0.0), and continuous-loop canonical quartic discriminant braid degrees (-1,-3,-2,+3) are verified differentially between zero-dependency Rust and Python rather than in Lean real analysis. Overarching conjectures (Kaplansky's Unit Conjecture over C[G] or Z[P] for unrestricted supports, Gottschalk's Surjunctivity Conjecture for non-sofic groups, and asymptotic distance scaling of HW fracton covers) remain explicitly OPEN; claims no external peer review or external DOI.",
       "falsification_command": "cd repos/promislow-fracton-amoeba && (cd rust && cargo test --release) && PYTHONPATH=python pytest tests/test_all.py -v && PYTHONPATH=python python scripts/mutate.py && python scripts/check_readme_axioms.py && python scripts/audit_repo.py && (cd lean && lake build && lake env lean VerifyAxioms.lean && lake comparator --config comparator.json --paranoid)"
+    },
+    {
+      "id": "0TH-2026-016",
+      "slug": "zero-error-torus-frontier",
+      "title": "Coset-Quotient Compression, Separation-Graph Barriers, and Multi-Kernel Verified Frontiers for Zero-Error Shannon Capacity",
+      "domain": "Combinatorics / Information Theory / Graph Theory / Formal Verification",
+      "date_released": "2026-11-25",
+      "version": "v1.0.0",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 & cross-platform CI verified)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/zero-error-torus-frontier",
+      "submodule_path": "repos/zero-error-torus-frontier",
+      "pinned_commit": "af343aaa1701637e23733ac0abd7a8f9b2e22b60",
+      "release_url": "https://github.com/0thernes/zero-error-torus-frontier/releases/tag/v1.0.0",
+      "pages_url": "https://0thernes.github.io/zero-error-torus-frontier/",
+      "pdf_archive_path": "papers/0TH-2026-016_zero-error-torus-frontier/Donahue_2026_zero_error_torus_frontier.pdf",
+      "pdf_sha256": "921cf3b9bf31eeddb2994e12c8e874dda124222fe5ff1a1389467b61aa8f105a",
+      "arxiv_bundle_url": "https://github.com/0thernes/zero-error-torus-frontier/releases/download/v1.0.0/arxiv_submission.tar.gz",
+      "arxiv_bundle_sha256": "48bab2ff26b21b04d2cdc23bcfcf7c3e242a6b559c8f6b057a29e711beefa3a6",
+      "lean_verification": {
+        "framework": "Pure Lean 4.35.0 (zero Mathlib, 13 sorry-free Palomar module files, 32 audited declarations across T1a-T4d + NonVacuity [7] + AdversarialTests [7] + master Palomar bundle strictly within [propext, Classical.choice, Quot.sound], zero native_decide, chunked 81-ball certificates max depth <= 65; all 18 Palomar targets accepted by all 6 independent kernels on Ubuntu CI run 45762976065 via lake check --paranoid & lake comparator --paranoid: Lean paranoid, lean4lean [4,943 decls], nanoda, con-leche --verified [4,946 decls], con-ron --verified [4,946 decls], Lean default; SLSA attestation #72509203 / Rekor 4119482036)",
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/Solution.lean",
+        "axiom_audit_file": "lean/VerifyAxioms.lean",
+        "additional_audit_files": [
+          "lean/Challenge.lean",
+          "lean/PalomarChallenge.lean",
+          "lean/PalomarSolution.lean",
+          "lean/ZeroErrorFrontier/NonVacuity.lean",
+          "lean/ZeroErrorFrontier/AdversarialTests.lean"
+        ],
+        "audited_theorems": 32
+      },
+      "ci_run_url": "https://github.com/0thernes/zero-error-torus-frontier/actions/runs/45762976065",
+      "preservation": {
+        "software_heritage": "swh:1:snp:6794c5e91c92e22925244c886095bc5d12d9fb63",
+        "wayback_machine": null,
+        "doi": null
+      },
+      "core_result": "Establishes four interconnected, six-kernel Lean 4.35.0 verified advances on zero-error Shannon capacity (Mega-Atlas CS-049): (I) algebraic coset-quotient compression for C_n^{boxtimes 4}, exact double-counting ceilings, the H_BPZ (49-ball) intra-coset port obstruction vs. our newly discovered H* = <(1,0,0,2),(0,1,0,4)> (45-ball, unconditional unit-shift privacy for all odd n >= 15), two infinite exact-ceiling code families (helical H_BPZ for C_{4m+1} and 4-jump staircase H* for C_{8k+1} generating automatic n^2-port RichPortSystems for every odd k >= 3), and the locally-injective Baumert pullback homomorphism C_{p+2}^{boxtimes d} -> C_p^{boxtimes d} with exact factored cardinality; (II) four new machine-checked odd-cycle capacity world records surpassing 1971-1973 Baumert-Hales bounds to the final 15-decimal ULP: Theta(C_25) >= 12.344196091426841 (p=144, H* 625 ports), Theta(C_27) >= 13.319390984674515 (p=2048, Baumert 88 ports), Theta(C_29) >= 14.319949949077991 (p=4, 50-coset exact ceiling), and Theta(C_31) >= 15.308776193986504 (p=2048, Baumert 133 ports); (III) hidden induced chordless C_5 inside the 7-letter separation graph G_7 with exact capacity Theta(G_7)=3, general weighted fractional-clique-cover barrier (46875/2 for C_25), and general multi-alphabet two-sided heterogeneous composition resolving Open Problem #2 of Tandon (arXiv:2608.30273) plus pure-kernel admissibility of T2a/T3c/T3e/C4a/C4b; and (IV) general Haemers rank theorem over any SimpleField, exact integer orthogonal-handle sandwich theorem, exact Z[sqrt(5)] Lovasz pentagon theorem Theta(C_5)=sqrt(5), and the first zero-Mathlib six-kernel proof of Haemers 1979 Schlafli paradox (Theta(G_27) <= 3 via Z^8 handle, Theta(G_27^c) <= 7 via 27x7 F_2 factorization, Theta(G_27 boxtimes G_27^c) >= 27 > 21). Audited differentially in stdlib Rust (3 OS), ISO C11 (-Werror, ASan+UBSan, 100k fuzz), and 80-digit Python (3 OS, 15/15 pytest + Hypothesis + mutation kills), 20/20 live citations, 13-page 0-warning/0-overfull AMS-LaTeX PDF + clean-room arXiv tarball, interactive GitHub Pages torus/Schlafli/Blueprint explorer, SLSA #72509203 (Rekor 4119482036), Software Heritage snapshot swh:1:snp:6794c5e91c92e22925244c886095bc5d12d9fb63, and 100.0% (68/68) Build Standard v1.2.0 compliance.",
+      "verification_boundary": "All 32 audited declarations (T1a-T4d, 7 NonVacuity, 7 AdversarialTests, master Palomar bundle) are 100% kernel-checked in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound] across all 6 independent proof kernels on Ubuntu CI run 45762976065 (zero sorry, zero native_decide). Claim C-EX1 (exhaustive n^4 2D subgroup scan for n in {19,21,23,25} showing min ball size 45) is tagged [EXACT-COMP] across Rust/Python rather than universally proved in Lean. Determining exact Theta(C_n) for any odd n >= 7 (Mega-Atlas CS-049) remains explicitly OPEN and is NOT claimed solved. Claims no external peer review or external DOI.",
+      "falsification_command": "cd repos/zero-error-torus-frontier && (cd rust && cargo test --release && cargo run --release -- --verify-all) && make -C native test sanitize fuzz && PYTHONPATH=python pytest tests/test_all.py -v && python scripts/check_readme_axioms.py && (cd lean && lake build && lake env lean VerifyAxioms.lean && lake comparator --config comparator.json --paranoid)"
     }
   ]
 }
