@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0.0",
-  "audit_date": "2026-11-25",
+  "audit_date": "2026-11-26",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
   "mega_atlas_repository": "https://github.com/0thernes/unsolved-problems-mega-atlas",
-  "mega_atlas_version": "v2.6.0",
+  "mega_atlas_version": "v2.7.0",
   "mega_atlas_total_problems": 1900,
   "grand_problems_retired": 0,
-  "public_repositories_audited": 73,
+  "public_repositories_audited": 76,
   "author": {
     "full_name": "Alexander Stephen Donahue",
     "orcid": "0009-0006-8168-9648",
@@ -197,13 +197,13 @@
       "archive_id": "0TH-BUILD-007",
       "slug": "unsolved-problems-mega-atlas",
       "repository": "https://github.com/0thernes/unsolved-problems-mega-atlas",
-      "version": "v2.6.0",
+      "version": "v2.7.0",
       "resolution_class": "FORMAL_INVARIANT_SUITE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [],
       "target_statement": "103 pure Lean 4.35.0 invariants + 9 Palomar targets + 10 adversarial refutations verifying CSS scoring, Titan Index, biconnected connectome handshaking, and AutoResearch ratchet for the 1,900-problem atlas itself.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 103 theorems across 6 independent kernels incl. leanchecker --fresh & live negative rejection (CI run 45749252063, DigiCert RFC 3161 TSA).",
-      "honesty_boundary": "Infrastructure and scoring-rubric invariants only; 0/1,900 catalogued open problems retired."
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 103 theorems across 6 independent kernels incl. leanchecker --fresh & live negative rejection (CI run 45805233953, dual DigiCert RFC 3161 .tsr + Bitcoin OpenTimestamps .ots, 69/69 pytest).",
+      "honesty_boundary": "Infrastructure and scoring-rubric invariants only; 0/1,900 catalogued open problems retired across 76 audited public repositories."
     },
     {
       "archive_id": "0TH-BUILD-002",

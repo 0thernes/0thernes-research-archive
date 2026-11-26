@@ -125,7 +125,7 @@ def test_consolidated_latest_entries_registered() -> None:
     }
     assert builds["0TH-BUILD-004"]["version"] == "v0.5.0"
     assert builds["0TH-BUILD-004"]["lean_verification"]["audited_theorems"] == 69
-    assert builds["0TH-BUILD-007"]["version"] == "v2.6.0"
+    assert builds["0TH-BUILD-007"]["version"] == "v2.7.0"
     assert builds["0TH-BUILD-007"]["lean_verification"]["audited_theorems"] == 103
     assert papers["0TH-2026-009"]["version"] == "v2.9.0"
     assert papers["0TH-2026-004"]["version"] == "v1.9.0"
