@@ -235,6 +235,33 @@ def test_live_sync_privacy_firewall_and_failure_injection() -> None:
     assert offline_state["sync_status"] == "OFFLINE_PIN_ONLY"
 
 
+def test_live_sync_api_errors_preserve_last_known_good_mirror(monkeypatch: pytest.MonkeyPatch) -> None:
+    """A failed live refresh must not overwrite the canonical mirror with null metadata."""
+    mirror_paths = (
+        ROOT / "registry" / "LIVE_ECOSYSTEM_MIRROR.json",
+        ROOT / "registry" / "LIVE_ECOSYSTEM_MIRROR.md",
+        ROOT / "registry" / "SOLVED_AND_ATLAS_BRIDGE.md",
+        ROOT / "README.md",
+    )
+    before = {path: path.read_bytes() for path in mirror_paths}
+
+    monkeypatch.setattr(
+        ls,
+        "fetch_repo_live_state",
+        lambda rec, *, offline, token: {
+            "slug": rec["slug"],
+            "repository": rec["repository"],
+            "sync_status": "API_ERROR",
+            "error": "HTTPError: 500",
+        },
+    )
+
+    with pytest.raises(RuntimeError, match="preserving the previous mirror"):
+        ls.run_sync(ROOT, offline=False, token=None)
+
+    assert {path: path.read_bytes() for path in mirror_paths} == before
+
+
 def test_build_site_wcag_and_all_tiers_and_endpoints() -> None:
     rc = bs.main()
     assert rc == 0

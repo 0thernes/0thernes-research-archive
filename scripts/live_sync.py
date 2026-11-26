@@ -385,6 +385,18 @@ def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
         "api_errors": sum(1 for r in mirror_repos if r["sync_status"] == "API_ERROR"),
     }
 
+    # Never publish a partial live snapshot.  A transient GitHub outage,
+    # token/rate-limit failure, or malformed upstream response must leave the
+    # last known-good mirror intact; otherwise the generated registry would
+    # silently replace every live field with nulls and become misleading while
+    # still looking structurally valid.  Offline mode is intentionally exempt:
+    # it is the deterministic pinned-manifest renderer used for local builds.
+    if not offline and counts["api_errors"]:
+        raise RuntimeError(
+            f"live GitHub sync aborted with {counts['api_errors']} API errors; "
+            "preserving the previous mirror (use --offline for a pinned snapshot)"
+        )
+
     # Zero-noise idempotence: preserve synced_utc whenever upstream state & counts are unchanged
     mirror_json_path = root / "registry" / "LIVE_ECOSYSTEM_MIRROR.json"
     synced_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
