@@ -1,6 +1,6 @@
 # Public 0thernes Repository Inventory
 
-**Synced (UTC):** `2026-11-26T17:44:25Z` · **Public non-fork repositories:** `54` · **Registered:** `41` · **Unregistered candidates:** `13`
+**Synced (UTC):** `2026-11-26T17:47:52Z` · **Public non-fork repositories:** `54` · **Registered:** `41` · **Unregistered candidates:** `13`
 
 > This is a discovery inventory, not an epistemic registry. An unregistered repository is not asserted to contain a paper, proof, solved conjecture, or research result. Private repositories and third-party forks are excluded by the privacy firewall.
 
