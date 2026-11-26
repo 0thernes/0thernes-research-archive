@@ -13,7 +13,7 @@
 - **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)
 - **Live Portal:** [`https://0thernes.github.io/0thernes-research-archive/`](https://0thernes.github.io/0thernes-research-archive/)
 - **Contact:** `0_0@0thernes.art` · [0thernes.art](https://0thernes.art) · [github.com/0thernes](https://github.com/0thernes)
-- **Scope:** **37 public research entries** (`14 Tier I + 11 Tier II + 12 Tier III`) + **24 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
+- **Scope:** **38 public research entries** (`14 Tier I + 12 Tier II + 12 Tier III`) + **25 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 <!-- LIVE_ECOSYSTEM_STATUS:START -->
 > **Live Canonical Hub Mirror (`2026-11-26T02:58:51Z`):** Tracking **36 public research entries** (13 Tier I preprints · 11 Tier II builds · 12 Tier III laws/discoveries/atlases) across **32 unique public repositories** and **23 pinned Git submodules** (`23` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
@@ -57,7 +57,7 @@ Full Tier I registry: [`registry/PAPERS.md`](registry/PAPERS.md) · Machine-read
 
 ## Tier II — Public Build White Papers & Embedded Pure Lean 4 Suites (`registry/BUILD_PAPERS.json`)
 
-Public engineering and laboratory repositories containing embedded technical white papers, verification audits, and **617 additional live-compiled Lean 4 (`v4.35.0`, zero Mathlib, zero `sorry`) machine-checked declarations** (586 strictly within `[propext, Classical.choice, Quot.sound]` or zero axioms, plus 31 `bv_decide`-reflected bitvector theorems in `autophage`):
+Public engineering and laboratory repositories containing embedded technical white papers, verification audits, and **676 additional live-compiled Lean 4 (`v4.35.0`, zero Mathlib, zero `sorry`) machine-checked declarations** (645 strictly within `[propext, Classical.choice, Quot.sound]` or zero axioms, plus 31 `bv_decide`-reflected bitvector theorems in `autophage`):
 
 | ID | Date | Build Repo & Version | Embedded Pure Lean 4.35.0 Suite | Archived White Paper / Artifact | Dossier |
 |---|---|---|---|---|---|
@@ -72,6 +72,7 @@ Public engineering and laboratory repositories containing embedded technical whi
 | `0TH-BUILD-009` | 2026-11-21 | [`autophage`](https://github.com/0thernes/autophage) `v1.0.0` | **31 audited theorems** (1 file, 394 lines, 0 `sorry`, `bv_decide`) | [VERIFICATION.md](builds/0TH-BUILD-009_autophage/VERIFICATION.md) · [ARCHITECTURE.md](builds/0TH-BUILD-009_autophage/ARCHITECTURE.md) | [Evidence](builds/0TH-BUILD-009_autophage/EVIDENCE.md) · [CI](https://github.com/0thernes/autophage/actions/runs/44887958546) |
 | `0TH-BUILD-010` | 2026-11-22 | [`noetic-organism-omega`](https://github.com/0thernes/noetic-organism-omega) `main-ci-verified` | **48 audited theorems** (2 files, 487 lines, 0 `sorry`, CI `#45076052369` GREEN) | [NoeticProofs.lean](builds/0TH-BUILD-010_noetic-organism-omega/NoeticProofs.lean) · [LiveC11Receipt.lean](builds/0TH-BUILD-010_noetic-organism-omega/LiveC11Receipt.lean) | [Evidence](builds/0TH-BUILD-010_noetic-organism-omega/EVIDENCE.md) · [CI](https://github.com/0thernes/noetic-organism-omega/actions/runs/45076052369) |
 | `0TH-BUILD-011` | 2026-11-22 | [`asmodensius-native`](https://github.com/0thernes/asmodensius-native) `main-snapshot` | **20 audited declarations (`A01`–`A20`)** (1 file, 155 lines, 0 `sorry`; `A15/A16/A20` disclosed as arithmetic `rfl` accounting witnesses) | [AsmodensiusProofs.lean](builds/0TH-BUILD-011_asmodensius-native/AsmodensiusProofs.lean) | [Evidence](builds/0TH-BUILD-011_asmodensius-native/EVIDENCE.md) |
+| `0TH-BUILD-012` | 2026-11-25 | [`xiaomi-17t-pro-lab`](https://github.com/0thernes/xiaomi-17t-pro-lab) `v3.0.0` | **59 audited decls (Palomar `module` core + `AdversarialTests`)** (11 files, 1,015 lines, **all 6 kernels via `lake comparator --paranoid`**, Rekor `4117264287` & Release `4117247168`, 54/54 60-digit oracle, 8/8 mutants, 50/50 3-OS tests, 8/8 Playwright CSP/E2E, 82/82 Build Standard v1.2.0) | [Donahue_2026_Xiaomi_17T_Pro_Lab.pdf](builds/0TH-BUILD-012_xiaomi-17t-pro-lab/Donahue_2026_Xiaomi_17T_Pro_Lab.pdf) · [lean4-audit.txt](builds/0TH-BUILD-012_xiaomi-17t-pro-lab/lean4-audit.txt) · [Mega-Atlas (0/1,900)](builds/0TH-BUILD-012_xiaomi-17t-pro-lab/mega-atlas-cross-reference.md) · [3-Cycle Audit](builds/0TH-BUILD-012_xiaomi-17t-pro-lab/2026-11-25-3-cycle-hardening-audit.md) | [Evidence](builds/0TH-BUILD-012_xiaomi-17t-pro-lab/EVIDENCE.md) · [Lab](https://0thernes.github.io/xiaomi-17t-pro-lab/) · [Blueprint](https://0thernes.github.io/xiaomi-17t-pro-lab/blueprint/) · [Release](https://github.com/0thernes/xiaomi-17t-pro-lab/releases/tag/v3.0.0) · [6-Kernel CI](https://github.com/0thernes/xiaomi-17t-pro-lab/actions/runs/45748904789) |
 
 Full Tier II registry: [`registry/BUILD_PAPERS.md`](registry/BUILD_PAPERS.md) · Machine-readable schema: [`registry/BUILD_PAPERS.json`](registry/BUILD_PAPERS.json)
 
@@ -104,7 +105,7 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 
 1. **Kernel-Checked Proofs:** Formalized claims compile in Lean 4 with zero `sorry`, zero `admit`, zero custom axioms, and explicit `#print axioms` audits strictly within `[propext, Classical.choice, Quot.sound]`.
 2. **Independent Falsifiability:** Every Tier I & Tier II entry ships an explicit reproduction and falsification command so any third party can independently test every claim.
-3. **Cryptographic Immutability & Live Mirroring:** Every frozen release PDF, Lean certificate, white paper, bridge table, live mirror snapshot, and discovery record is hashed in [`CHECKSUMS.sha256`](CHECKSUMS.sha256), matched against 23 pinned public Git submodules under `repos/`, and audited by GitHub Actions CI on every push.
+3. **Cryptographic Immutability & Live Mirroring:** Every frozen release PDF, Lean certificate, white paper, bridge table, live mirror snapshot, and discovery record is hashed in [`CHECKSUMS.sha256`](CHECKSUMS.sha256), matched against 25 pinned public Git submodules under `repos/`, and audited by GitHub Actions CI on every push.
 4. **Honest Boundaries & Privacy Discipline:** Every dossier explicitly separates kernel-checked theorems, paper proofs, pre-registered empirical claims, finite computational certificates, exploratory syntheses, and open questions. Private repositories and third-party forks remain strictly excluded from this public archive.
 
 ---
@@ -114,12 +115,12 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 Clone the archive and run the full cryptographic, link, and structural audit:
 
 ```bash
-# Clone the archive (add --recursive to also fetch all 23 pinned PUBLIC submodules)
+# Clone the archive (add --recursive to also fetch all 25 pinned PUBLIC submodules)
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 python3 -m pip install -r requirements.txt
 
-# Verify every SHA-256 digest, ORCID, axiom allowlist, markdown link, and all 23 public submodule pins
+# Verify every SHA-256 digest, ORCID, axiom allowlist, markdown link, and all 25 public submodule pins
 python3 scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
 python3 -m pytest -v tests/

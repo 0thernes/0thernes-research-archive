@@ -1,7 +1,7 @@
 # Tier II — Public Build White Papers & Embedded Lean 4 Proof Suites
 
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
-**Public Embedded Pure Lean 4.35.0 Proofs Audited:** 617 declarations across 14,558 lines (zero Mathlib, zero `sorry`)  
+**Public Embedded Pure Lean 4.35.0 Proofs Audited:** 676 declarations across 15,573 lines (zero Mathlib, zero `sorry`)  
 **Updated:** `2026-11-26T02:40:14Z`
 
 | ID | Date | Repo / Version | Embedded Lean 4 Proofs | Frozen White Paper / Audit | Dossier |
@@ -17,6 +17,7 @@
 | `0TH-BUILD-009` | 2026-11-21 | [`autophage`](https://github.com/0thernes/autophage) `v1.0.0` | 31 decls (1 files, 394 lines) | [VERIFICATION.md](../builds/0TH-BUILD-009_autophage/VERIFICATION.md) | [Evidence](../builds/0TH-BUILD-009_autophage/EVIDENCE.md) |
 | `0TH-BUILD-010` | 2026-11-22 | [`noetic-organism-omega`](https://github.com/0thernes/noetic-organism-omega) `main-ci-verified` | 48 decls (2 files, 487 lines) | [README.md](../builds/0TH-BUILD-010_noetic-organism-omega/README.md) | [Evidence](../builds/0TH-BUILD-010_noetic-organism-omega/EVIDENCE.md) |
 | `0TH-BUILD-011` | 2026-11-22 | [`asmodensius-native`](https://github.com/0thernes/asmodensius-native) `main-snapshot` | 20 decls (1 files, 155 lines) | [AsmodensiusProofs.lean](../builds/0TH-BUILD-011_asmodensius-native/AsmodensiusProofs.lean) | [Evidence](../builds/0TH-BUILD-011_asmodensius-native/EVIDENCE.md) |
+| `0TH-BUILD-012` | 2026-11-25 | [`xiaomi-17t-pro-lab`](https://github.com/0thernes/xiaomi-17t-pro-lab) `v3.0.0` | 59 decls (11 files, 1015 lines) | [Donahue_2026_Xiaomi_17T_Pro_Lab.pdf](../builds/0TH-BUILD-012_xiaomi-17t-pro-lab/Donahue_2026_Xiaomi_17T_Pro_Lab.pdf) | [Evidence](../builds/0TH-BUILD-012_xiaomi-17t-pro-lab/EVIDENCE.md) |
 
 ---
 
@@ -107,3 +108,11 @@
 - **Summary:** Native runtime component of the A-Life Singularity Omega stack carrying 20 Pure Lean 4.35.0 declarations (AsmodensiusProofs.lean, A01-A20) covering mass/energy conservation, species cap refusal boundaries, arena rollback, observer hash invariance, Philox RNG key equivalence, and CPU/GPU twin hash parity.
 - **Verification Boundary:** Certifies discrete arithmetic, state-transition, and hash-parity invariants of the native simulation runtime; explicitly discloses that A15, A16, and A20 are trivial arithmetic rfl accounting witnesses and makes zero claims of sentience, consciousness, or resolving any open mathematical/scientific problem.
 - **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-011_asmodensius-native/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-011_asmodensius-native/METADATA.json)
+
+## 0TH-BUILD-012 — Xiaomi 17T Pro Lab: Formally Verified Silicon-to-Quantum Modeling, Six-Kernel Lean 4.35.0 Proofs, and Sharded In-Browser Neural Verification of the Dimensity 9500
+
+- **Repository:** https://github.com/0thernes/xiaomi-17t-pro-lab (`v3.0.0`, pinned `267b5a6a79f3` at `repos/xiaomi-17t-pro-lab`)
+- **Lean 4 Audit:** Ubuntu CI GREEN (run #45748904789, Sigstore Rekor 4117264287, Release run #45748910920 Rekor 4117247168); 59/59 audited declarations strictly within [propext, Classical.choice, Quot.sound] or zero axioms, zero sorry outside isolated Challenge.lean, leanchecker --fresh PASS, all 6 independent kernels passed via lake comparator --config comparator.json --paranoid in bubblewrap sandbox
+- **Summary:** Zero-build interactive silicon-to-quantum engineering workbench and 7-page AMS-LaTeX white paper (0 overfull/underfull hboxes) modeling the Xiaomi 17T Pro and MediaTek Dimensity 9500 across 19 interactive routes with 59 Pure Lean 4.35.0 Palomar module declarations verified by 6 independent kernels (hardware floorplan & roofline, EUV Rayleigh/DOF/shot-noise, Crank-Nicolson Cayley unitarity & WKB/Dirac transport, 2D thermal FDTD CFL discrete maximum principle, CHSH & Peres-Mermin contextuality, plus AdversarialTests), a 54-check 60-digit Decimal/Fraction reference oracle (max rel err 2.159e-14), 8/8 killed mutants (100%), 50/50 3-OS Node tests, 8/8 Playwright CSP/E2E specs, 9-shard SHA-256-verified TinyStories-8M in-browser transformer, 100.0% (82/82, 35/35 Core) Build Standard v1.2.0 compliance, and an honest 0/1,900 Mega-Atlas V2 cross-reference.
+- **Verification Boundary:** Lean 4.35.0 kernels verify algebraic, discrete-PDE stability, unitary-operator, and finite contextuality theorems of the mathematical models with zero sorry and standard axioms; physical hardware leaves distinguish cited facts, computed models, live browser timings, and null UNKNOWN fields (no browser access to MediaTek NPU 990); A-Life routes are purely deterministic software simulations with zero sentience claims; honest Mega-Atlas V2 audit confirms 0 / 1,900 grand open problems retired.
+- **Dossier:** [`EVIDENCE.md`](../builds/0TH-BUILD-012_xiaomi-17t-pro-lab/EVIDENCE.md) · [`METADATA.json`](../builds/0TH-BUILD-012_xiaomi-17t-pro-lab/METADATA.json)
