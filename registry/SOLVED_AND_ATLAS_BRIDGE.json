@@ -69,7 +69,7 @@
       "archive_id": "0TH-2026-012",
       "slug": "coded-pir-mlwe-complexity-lab",
       "repository": "https://github.com/0thernes/coded-pir-mlwe-complexity-lab",
-      "version": "v4.0.0",
+      "version": "v5.0.0",
       "resolution_class": "SOLVED_SUB_CONJECTURE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
@@ -82,9 +82,9 @@
         "CS-012",
         "CS-051"
       ],
-      "target_statement": "Resolves Sun-Tao-Xu-Zhang (arXiv:2603.10769) Schur-product syzygy rank via Koszul-Veronese annihilation (4/7 -> 10/17); proves strict domination over Sun-Zhang (arXiv:2610.37412) LFSR PIR; refutes Luo (arXiv:2604.15858) via det(B)=q^m; proves anti-periodic DFT cancellation (Chen ePrint 2024/555 Step 9); establishes Total 4-Var I_4 & 5-Obj F_2-Linear Subspace Barrier (T1i) and 10-bit Bai-optimal Dyadic-1024-A/B 9.19x overhead collapse (T2h); proves exact Strassen-Winograd rank_F(<2,2,2>)=7, Brockett-Dobkin rank_F(<m,m,m>) >= 2m^2-m, and zero-reals Z[sqrt(5)] Lovasz Theta(C_5)=sqrt(5) & C_7 Haemers rank = 4.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 27 theorems / 29 audited decls across 17 files (9,912 lines), 6 independent kernels (CI run 45754219328), Rekor 4118120599.",
-      "honesty_boundary": "Resolves published coded-PIR syzygy & refutation sub-problems and certifies finite/structural bounds; parent grand problems CS-053, CS-026, QC-042, CS-004 (omega=2), CS-001 (P!=NP), CS-010, CS-012 (VP!=VNP), CS-051 remain OPEN."
+      "target_statement": "Resolves Sun-Tao-Xu-Zhang (arXiv:2603.10769) Schur-product syzygy rank via Koszul-Veronese annihilation (4/7 -> 10/17); proves strict domination over Sun-Zhang (arXiv:2610.37412) LFSR PIR; elevates the retrieval barrier to a Single Z_4-cyclic F_2^64 Total 6-Object Realization (T1j, >=7-var barrier); refutes Luo (arXiv:2604.15858) via det(B)=q^m; proves anti-periodic DFT cancellation (Chen ePrint 2024/555 Step 9); formalizes pure-Nat Bai et al. (2018) Renyi-2 DPI/tensorization, uncovers the ML-KEM-1024 Discrete Gaussian DFR Paradox (2^-173.42 FAIL), and constructs 14-bit constant-time Dyadic-16384-A/B (11.17x / sub-1-bit 0.5916 b 41.9x Bai collapse, all DFRs pass; T2i); proves exact Strassen-Winograd rank_F(<2,2,2>)=7, Brockett-Dobkin rank_F(<m,m,m>) >= 2m^2-m, field-universal Multivariate Schwartz-Zippel & Strassen-Brockett-Dobkin 2^k sandwich (T3k), and the Infinite Zero-Reals Z[sqrt(4k+1)] Conference/Paley Shannon Capacity Family Theta(G)=sqrt(4k+1) (P_5, P_13, P_17 in Lean; T3l).",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 31 theorems + 7 adversarial boundary refutations = 34 audited decls across 20 files (13,623 lines), all 6 independent kernels + live negative tamper gate (CI run 45850785203, 4,266-4,269 decls), Rekor 4128750161, DigiCert RFC 3161 TSA.",
+      "honesty_boundary": "Resolves published coded-PIR syzygy & refutation sub-problems and certifies finite/structural/Paley bounds; parent grand problems CS-053, CS-026, QC-042, CS-004 (omega=2), CS-001 (P!=NP), CS-010, CS-012 (VP!=VNP), CS-051, and exact Theta(C_7) remain OPEN."
     },
     {
       "archive_id": "0TH-2026-016",
