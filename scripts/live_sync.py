@@ -298,7 +298,8 @@ def fetch_repo_live_state(
             substantive = [
                 run
                 for run in wruns
-                if not any(
+                if str(run.get("event") or "").lower() != "dynamic"
+                and not any(
                     marker in str(run.get("name") or run.get("workflow_name") or "").lower()
                     for marker in excluded_markers
                 )
