@@ -1,7 +1,7 @@
 # Build White Paper & Proof Evidence Dossier — `0TH-BUILD-006`
 
 **Title:** Black Hole Simulation Lab: Exact Schwarzschild Lean 4 Certificates (ClassicalGR.lean) & Kerr Shadow Asymmetry Analytic Anchors  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** General Relativity / Computational Astrophysics / Formal Methods  
 **Version / Date:** `main+research-branch` (2026-11-10)
 

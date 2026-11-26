@@ -1,7 +1,7 @@
 # Build White Paper & Proof Evidence Dossier — `0TH-BUILD-005`
 
 **Title:** Cosmogonic Quantum Mechalogodrom (CQM): Artificial Life Verification Audit & NHSI Research Papers Ledger  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Artificial Life / Synthetic Cognition / Verification Audit  
 **Version / Date:** `v0.14.3` (2026-06-27)
 

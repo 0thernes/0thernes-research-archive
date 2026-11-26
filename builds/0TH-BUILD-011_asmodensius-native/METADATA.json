@@ -1,0 +1,43 @@
+{
+  "id": "0TH-BUILD-011",
+  "slug": "asmodensius-native",
+  "title": "Asmodensius Native: Bare-Metal C11/Vulkan Organism Runtime with 20 Pure Lean 4.35.0 Discrete Invariants (A01-A20)",
+  "domain": "Artificial Life / Systems Engineering / Formal Methods",
+  "date": "2026-11-22",
+  "version": "main-snapshot",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "Independent Researcher, Spokane, WA, USA",
+  "repository": "https://github.com/0thernes/asmodensius-native",
+  "submodule_path": "repos/asmodensius-native",
+  "pinned_commit": "782cd0ed5f2aa06383c6b6279ac6ff22b42e8f47",
+  "archived_artifacts": [
+    {
+      "path": "builds/0TH-BUILD-011_asmodensius-native/AsmodensiusProofs.lean",
+      "source_path": "lean/AsmodensiusProofs.lean",
+      "sha256": "c29ebfc856ea241ab71b016e0b54c03597216777329dedc5bca8065f818bac8a"
+    },
+    {
+      "path": "builds/0TH-BUILD-011_asmodensius-native/AGENTS.md",
+      "source_path": "AGENTS.md",
+      "sha256": "6ce72bfe1eeea640bed2bd5fd9d2073b82141a882d9927c55dbdca30db1594e8"
+    }
+  ],
+  "lean_verification": {
+    "has_lean": true,
+    "framework": "Pure Lean 4.35.0 Core (zero Mathlib, zero native_decide)",
+    "modules": 1,
+    "lines": 155,
+    "audited_theorems": 20,
+    "axiom_allowlist": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "entry_point": "lean/AsmodensiusProofs.lean",
+    "live_audit_status": "20 Pure Lean 4 declarations (A01-A20, zero sorry, explicit #print axioms strictly standard); NOTE: A15, A16, and A20 are disclosed arithmetic rfl accounting witnesses rather than deep behavioral proofs"
+  },
+  "summary": "Native runtime component of the A-Life Singularity Omega stack carrying 20 Pure Lean 4.35.0 declarations (AsmodensiusProofs.lean, A01-A20) covering mass/energy conservation, species cap refusal boundaries, arena rollback, observer hash invariance, Philox RNG key equivalence, and CPU/GPU twin hash parity.",
+  "verification_boundary": "Certifies discrete arithmetic, state-transition, and hash-parity invariants of the native simulation runtime; explicitly discloses that A15, A16, and A20 are trivial arithmetic rfl accounting witnesses and makes zero claims of sentience, consciousness, or resolving any open mathematical/scientific problem.",
+  "falsification_command": "cd repos/asmodensius-native/lean && lean AsmodensiusProofs.lean"
+}

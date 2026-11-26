@@ -1,7 +1,7 @@
 # Discovery / Law / Pre-Registered Evidence Dossier — `0TH-DISC-009`
 
 **Title:** Closed-Form Math Study Atlas (1,123 Anchored Tests) & Grimoire 1,000-Algorithm Verification Ledger  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Epistemic Tier:** `computational_reference_atlas`  
 **Domain:** Scientific Computing / Algorithms / Numerical Verification · **Date:** 2026-07-05
 

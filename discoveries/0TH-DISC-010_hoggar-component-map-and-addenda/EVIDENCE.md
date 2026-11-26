@@ -1,7 +1,7 @@
 # Discovery / Law / Pre-Registered Evidence Dossier — `0TH-DISC-010`
 
 **Title:** Hoggar Bound Lab: Provenance Map of 3 Historical Source Papers, Claim-to-Theorem Map & Conjecture E Addendum  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Epistemic Tier:** `formal_addenda_and_provenance_map`  
 **Domain:** Quantum Foundations / Formal Verification Provenance · **Date:** 2026-11-21
 

@@ -1,7 +1,7 @@
 # Discovery / Law / Pre-Registered Evidence Dossier — `0TH-DISC-007`
 
 **Title:** Glitchling Master Compendium: 29-PDF Synthesis (1,932 Pages) Across Quantum 2050, Contextuality, NESTOR/HEPTARCH & Embodied A-Life  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Epistemic Tier:** `technical_synthesis_compendium`  
 **Domain:** Artificial Life / Quantum Simulation / Systems Engineering · **Date:** 2026-11-12
 

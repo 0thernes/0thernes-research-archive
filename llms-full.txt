@@ -1,19 +1,41 @@
-=== README.md ===
+# 0thernes Research Archive — Complete LLM Context (2026.11.26)
+
+
+---
+
+<!-- FILE: README.md -->
 
 # 0thernes Research Archive
 
 [![Archive Cryptographic & Structural Audit](https://github.com/0thernes/0thernes-research-archive/actions/workflows/archive-audit.yml/badge.svg)](https://github.com/0thernes/0thernes-research-archive/actions/workflows/archive-audit.yml)
+[![Live Ecosystem Sync & Mirror](https://github.com/0thernes/0thernes-research-archive/actions/workflows/live-sync.yml/badge.svg)](https://github.com/0thernes/0thernes-research-archive/actions/workflows/live-sync.yml)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0006--8168--9648-A6CE39.svg)](https://orcid.org/0009-0006-8168-9648)
 [![Lean 4 Verified](https://img.shields.io/badge/Formal_Proofs-Lean_4_%7C_Standard_Axioms-2ea44f.svg)](registry/PAPERS.md)
 [![Checksums Verified](https://img.shields.io/badge/Integrity-SHA--256_Manifest-blue.svg)](CHECKSUMS.sha256)
 [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
-**Permanent, cryptographically audited master vault of all PUBLIC Lean 4–verified research preprints, embedded build white papers, pure Lean 4 proof suites, architectural laws, pre-registered empirical claims, controlled discoveries, frozen PDFs, falsification dossiers, and pinned source repositories authored by Alexander Stephen Donahue (`Independent Researcher`).**
+**Single canonical public master vault, live-synced upstream mirror, and Unsolved Problems Mega-Atlas V2 bridge for all PUBLIC Lean 4–verified research preprints, embedded build white papers, pure Lean 4 proof suites, architectural laws, pre-registered empirical claims, controlled discoveries, frozen PDFs, falsification dossiers, and pinned source repositories authored by Alexander Stephen Donahue (`Independent Researcher`).**
 
 - **Author:** Alexander Stephen Donahue (`Alexander S. Donahue`) · **Independent Researcher**, Spokane, WA, USA
 - **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)
+- **Live Portal:** [`https://0thernes.github.io/0thernes-research-archive/`](https://0thernes.github.io/0thernes-research-archive/)
 - **Contact:** `0_0@0thernes.art` · [0thernes.art](https://0thernes.art) · [github.com/0thernes](https://github.com/0thernes)
-- **Scope:** **31 public research entries** across **3 explicitly separated epistemic tiers** + **20 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
+- **Scope:** **36 public research entries** (`13 Tier I + 11 Tier II + 12 Tier III`) + **23 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
+
+<!-- LIVE_ECOSYSTEM_STATUS:START -->
+> **Live Canonical Hub Mirror (`2026-11-26T02:45:06Z`):** Tracking **36 public research entries** (13 Tier I preprints · 11 Tier II builds · 12 Tier III laws/discoveries/atlases) across **32 unique public repositories** and **23 pinned Git submodules** (`23` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
+> **Mega-Atlas V2 Cross-Check:** **`0 / 1900` grand open problems retired** · **4 peer-literature open sub-conjectures/questions formally proved in Lean 4.35.0** across 6 independent kernels. Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
+<!-- LIVE_ECOSYSTEM_STATUS:END -->
+
+---
+
+## Ecosystem Consolidation & Solved Sub-Conjecture Summary
+
+This repository is the **single authoritative public master hub** consolidating all research outputs across `0thernes` ([ADR 0002](docs/adr/0002-canonical-hub-and-live-sync.md)):
+
+- **Master Solved & Verified Hub (this repo):** [`0thernes/0thernes-research-archive`](https://github.com/0thernes/0thernes-research-archive) — live-synced via [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml) (`repository_dispatch` + 2-hour cron) and [`scripts/live_sync.py`](scripts/live_sync.py).
+- **Specialist Open-Problem Atlases (spokes indexed below):** [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) (`0TH-BUILD-007`, 1,900 problems), [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) (`0TH-BUILD-004` `v0.5.0` & `0TH-DISC-005`), and [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) (`0TH-DISC-006`).
+- **Honest Mega-Atlas V2 Audit (`0 / 1,900` grand open problems retired):** **Zero** grand open problems in Mega-Atlas V2 are completely retired, while **4 peer-literature open sub-conjectures/questions** (`0TH-2026-006` Conjecture 7.7, `0TH-2026-010` Vinciguerra Sec. 6, `0TH-2026-009` Track 2 Muller–Saniga Sec. 6, `0TH-2026-012` Sun–Tao–Xu–Zhang Schur-syzygy rank) plus Jonah's Conjecture E (`0TH-2026-009` Track 1, with cited Theorem B4 outside Lean) are completely machine-checked in Lean 4.35.0 across 6 independent kernels. See [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) and [`0THERNES_SOLVED_AUDIT_2026-11-25.md`](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md).
 
 ---
 
@@ -21,18 +43,19 @@
 
 | ID | Date | Domain | Paper & Frozen PDF | Version | Lean 4 Verification | Evidence & Source Repo |
 |---|---|---|---|---|---|---|
-| `0TH-2026-012` | 2026-11-25 | Information Theory / Post-Quantum Cryptography / Complexity | [Koszul–Veronese Byzantine Private Information Retrieval, MLWE Reduction Tightness, and Machine-Checked Complexity-Barrier Bridges](papers/0TH-2026-012_coded-pir-mlwe-complexity-lab/Donahue_2026_coded_pir_mlwe_complexity_frontier.pdf) | `v3.0.0` | **Zero-Mathlib Lean 4.35.0** (14 files, 6,272 lines, **23 theorems `T1a`–`T3h` + `prove_all` + `NonVacuity` = 25 audited decls**, incl. **Exact Strassen–Winograd $\mathrm{rank}_F(\langle 2,2,2\rangle)=7\;\forall F$**, **All-$m$ Koszul $\ge m^2+2$**, **Infinite Matúš $M_s$ Cone**, **QGTL $\chi^2$/H4 Law & `Dyadic-512`**, 0 warnings, 0 `native_decide`, `T1e`/`T2f` `[propext]`-only; **all 6 independent kernels passed on Ubuntu CI `lake comparator --paranoid`** incl. `lean4lean` 2,963 decls & `con-leche`/`con-ron` 2,966/2,995 decls, Sigstore Rekor `4116227116`) + C11 ASan/UBSan + 512 fuzz (57/57, CT `Dyadic-256`/`Dyadic-512`), Eshkol AD (3/3), exact FIPS 203 DFRs (`512/768/1024` pass), 16/16 pytest (10/10 mutants), 28/28 live citations, 69/69 Build Standard v1.2.0 (`A27` PASS) | [Repo](https://github.com/0thernes/coded-pir-mlwe-complexity-lab) · [Evidence](papers/0TH-2026-012_coded-pir-mlwe-complexity-lab/EVIDENCE.md) · [Blueprint](https://0thernes.github.io/coded-pir-mlwe-complexity-lab/) · [Release](https://github.com/0thernes/coded-pir-mlwe-complexity-lab/releases/tag/v3.0.0) · [CI](https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45741278208) |
-| `0TH-2026-011` | 2026-11-25 | Cryptography / Post-Quantum Security / Quantum Geometry | [SecMesh-PQSI: Formal Algebraic and Information-Theoretic Foundations](papers/0TH-2026-011_secmesh-pqsi/Donahue_2026_secmesh_pqsi_formal_foundations.pdf) ([Architecture WP II](papers/0TH-2026-011_secmesh-pqsi/Donahue_2026_secmesh_pqsi_architecture.pdf)) | `v2.4.0` | **Zero-Mathlib Lean 4.35.0** (15 files, 4,573 lines, **27 theorems `T1a`–`T7b` + `SimpleField (Fin 5)` & finite-graph `NonVacuity` + 4 zero-axiom `AdversarialTests` = 60 audited decls**, `Palomar.t7b` zero `Classical.choice`, 0 warnings, standard axioms; **all 6 independent kernels passed on Ubuntu CI `lake comparator --paranoid`** incl. `lean4lean`, `nanoda`, `con-leche`/`con-ron` 3,638/3,701 decls + live negative rejection of false `Compress_1` claim, Sigstore SLSA attested) + C11 Moonlab ↔ OpenSSL 3.5.5 FIPS 203 interop (61/61 C11 ASan/UBSan + 500 fuzz, 18/18 Node 25 + canonical CW-128 + RFC-6479 & IP-map cap + 5 live Eshkol AD modules, 14/14 pytest, 42/42 HTTP-200 & 32/32 non-retracted DOIs, 76/76 Build Standard v1.2.0) | [Repo](https://github.com/0thernes/secmesh-pqsi) · [Evidence](papers/0TH-2026-011_secmesh-pqsi/EVIDENCE.md) · [Console](https://0thernes.github.io/secmesh-pqsi/) · [Blueprint](https://0thernes.github.io/secmesh-pqsi/blueprint.html) · [Release](https://github.com/0thernes/secmesh-pqsi/releases/tag/v2.4.0) · [CI](https://github.com/0thernes/secmesh-pqsi/actions/runs/45740501716) |
-| `0TH-2026-010` | 2026-11-24 | Computational Complexity / Algebraic Complexity | [Positive-Characteristic Dichotomy and Optimal Three-Register Exponents in Passive Catalytic Register Programs](papers/0TH-2026-010_catalytic-register-frontiers/Donahue_2026_catalytic_register_frontiers.pdf) | `v1.0.1` | **Zero-Mathlib Lean 4.35.0** (14 modules, 8,069 lines, **20 theorems + `NonVacuity` = 22 audited decls**, 0 warnings, standard axioms; **7 kernels incl. Ubuntu `lake check --paranoid` `lean4lean` 59,800 decls**, Sigstore Rekor `4087684280` & Release `4087690760`, Zenodo DOI `10.5281/zenodo.24517198`) + 8/8 LRAT UNSAT certs | [Repo](https://github.com/0thernes/catalytic-register-frontiers) · [DOI](https://doi.org/10.5281/zenodo.24517198) · [Evidence](papers/0TH-2026-010_catalytic-register-frontiers/EVIDENCE.md) · [Blueprint](https://0thernes.github.io/catalytic-register-frontiers/) · [CI](https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45500957443) |
-| `0TH-2026-009` | 2026-11-25 | Quantum Foundations / Quantum Contextuality | [Pauli Contextuality Lab: Unified Lean 4.35.0 Formalization of Spectral Bounds, Disjoint Mermin Configurations, and Sequential Contextuality Evidence](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf) ([C3 PDF](papers/0TH-2026-009_pauli-contextuality-lab/c3-spectral-counterexample.pdf) · [Track 2 PDF](papers/0TH-2026-009_pauli-contextuality-lab/contextuality-tensor.pdf) · [Track 3 PDF](papers/0TH-2026-009_pauli-contextuality-lab/whitepaper.pdf)) | `v2.8.0` | **Lean 4.35.0 / Mathlib v4.35.0** (160 explicit `#print axioms` + **2,206-theorem exhaustive axiom audit** across all 4 namespaces, 3 cross-track adversarial false-variant Lean refutations, 0 warnings, 0 Batteries linter errors; **12 cross-track targets verified by all 6 independent kernels** via `lake comparator --paranoid`, standard axioms, Sigstore Rekor `4114410283` & Release `4114417402`) + 68/68 Build Standard v1.2.0 (`100.0%`), Playbook v1.3 (`ERRATA.md`, CRediT/COI across all 4 papers, `44/44` URLs & `17/17` Crossref non-retracted DOIs, 1,900-problem Mega-Atlas audit) | [Repo](https://github.com/0thernes/pauli-contextuality-lab) · [Evidence](papers/0TH-2026-009_pauli-contextuality-lab/EVIDENCE.md) · [Blueprint & Labs](https://0thernes.github.io/pauli-contextuality-lab/) · [Release](https://github.com/0thernes/pauli-contextuality-lab/releases/tag/v2.8.0) · [Lean CI](https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45722562212) |
+| `0TH-2026-013` | 2026-11-25 | Computational Complexity / Proof Complexity | [Anatomy of the P vs. NP Barrier: Zero-Mathlib Lean 4 Formalization of Classical Obstructions, Exact SAT Multiplicative Complexity, and Four Algorithmic Falsifiers](papers/0TH-2026-013_p-vs-np-frontier-lab/Donahue_2026_p_vs_np_barrier_anatomy.pdf) | `v1.1.0` | **Zero-Mathlib Lean 4.35.0** (15 files, 8,078+ lines, **14 barrier theorems `C1`–`C14` + `prove_all` = 15 Palomar comparator targets**, 0 warnings, 0 `native_decide`, strictly standard axioms; **6-kernel `lake comparator --paranoid`**) + exact CaDiCaL 2.1.2 SAT MC audit, 4 heuristic P=NP falsifiers, 12/12 3-OS pytest+Hypothesis, 15-page 0-overfull PDF, 63/63 Build Standard v1.2.0 | [Repo](https://github.com/0thernes/p-vs-np-frontier-lab) · [Evidence](papers/0TH-2026-013_p-vs-np-frontier-lab/EVIDENCE.md) · [Blueprint](https://0thernes.github.io/p-vs-np-frontier-lab/) · [Release](https://github.com/0thernes/p-vs-np-frontier-lab/releases/tag/v1.1.0) · [CI](https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45743257383) |
+| `0TH-2026-012` | 2026-11-25 | Information Theory / Post-Quantum Cryptography / Complexity | [Koszul–Veronese Byzantine Private Information Retrieval, MLWE Reduction Tightness, and Machine-Checked Complexity-Barrier Bridges](papers/0TH-2026-012_coded-pir-mlwe-complexity-lab/Donahue_2026_coded_pir_mlwe_complexity_frontier.pdf) | `v3.0.0` | **Zero-Mathlib Lean 4.35.0** (14 files, 6,272 lines, **23 theorems `T1a`–`T3h` + `prove_all` + `NonVacuity` = 25 audited decls**, incl. Exact Strassen–Winograd $\mathrm{rank}_F(\langle 2,2,2\rangle)=7\;\forall F$, All-$m$ Koszul $\ge m^2+2$, Infinite Matúš $M_s$ Cone, QGTL $\chi^2$/H4 & `Dyadic-512`; **all 6 independent kernels passed on Ubuntu CI `lake comparator --paranoid`**, Rekor `4116227116`) + 57/57 C11 ASan/UBSan + 16/16 pytest + 69/69 Build Standard v1.2.0 | [Repo](https://github.com/0thernes/coded-pir-mlwe-complexity-lab) · [Evidence](papers/0TH-2026-012_coded-pir-mlwe-complexity-lab/EVIDENCE.md) · [Blueprint](https://0thernes.github.io/coded-pir-mlwe-complexity-lab/) · [Release](https://github.com/0thernes/coded-pir-mlwe-complexity-lab/releases/tag/v3.0.0) · [CI](https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45741278208) |
+| `0TH-2026-011` | 2026-11-25 | Cryptography / Post-Quantum Security / Quantum Geometry | [SecMesh-PQSI: Formal Algebraic and Information-Theoretic Foundations](papers/0TH-2026-011_secmesh-pqsi/Donahue_2026_secmesh_pqsi_formal_foundations.pdf) ([Architecture WP II](papers/0TH-2026-011_secmesh-pqsi/Donahue_2026_secmesh_pqsi_architecture.pdf)) | `v2.4.0` | **Zero-Mathlib Lean 4.35.0** (15 files, 4,573 lines, **27 theorems `T1a`–`T7b` + `NonVacuity` + 4 zero-axiom `AdversarialTests` = 60 audited decls**; **all 6 independent kernels passed on Ubuntu CI `lake comparator --paranoid`** + live negative rejection of false `Compress_1` claim, Sigstore SLSA attested) + 61/61 C11 Moonlab↔OpenSSL 3.5.5 FIPS 203 interop, 18/18 Node, 14/14 pytest, 76/76 Build Standard v1.2.0 | [Repo](https://github.com/0thernes/secmesh-pqsi) · [Evidence](papers/0TH-2026-011_secmesh-pqsi/EVIDENCE.md) · [Console](https://0thernes.github.io/secmesh-pqsi/) · [Blueprint](https://0thernes.github.io/secmesh-pqsi/blueprint.html) · [Release](https://github.com/0thernes/secmesh-pqsi/releases/tag/v2.4.0) · [CI](https://github.com/0thernes/secmesh-pqsi/actions/runs/45740501716) |
+| `0TH-2026-010` | 2026-11-24 | Computational Complexity / Algebraic Complexity | [Positive-Characteristic Dichotomy and Optimal Three-Register Exponents in Passive Catalytic Register Programs](papers/0TH-2026-010_catalytic-register-frontiers/Donahue_2026_catalytic_register_frontiers.pdf) | `v1.0.1` | **Zero-Mathlib Lean 4.35.0** (14 modules, 8,069 lines, **20 theorems + `NonVacuity` = 22 audited decls**, 0 warnings, standard axioms; **7 kernels incl. Ubuntu `lake check --paranoid` `lean4lean` 59,800 decls**, Rekor `4087684280`, Zenodo DOI `10.5281/zenodo.24517198`) + 8/8 LRAT UNSAT certs | [Repo](https://github.com/0thernes/catalytic-register-frontiers) · [DOI](https://doi.org/10.5281/zenodo.24517198) · [Evidence](papers/0TH-2026-010_catalytic-register-frontiers/EVIDENCE.md) · [Blueprint](https://0thernes.github.io/catalytic-register-frontiers/) · [CI](https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45500957443) |
+| `0TH-2026-009` | 2026-11-25 | Quantum Foundations / Quantum Contextuality | [Pauli Contextuality Lab: Unified Lean 4.35.0 Formalization of Spectral Bounds, Disjoint Mermin Configurations, and Sequential Contextuality Evidence](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf) ([C3 PDF](papers/0TH-2026-009_pauli-contextuality-lab/c3-spectral-counterexample.pdf) · [Track 2 PDF](papers/0TH-2026-009_pauli-contextuality-lab/contextuality-tensor.pdf) · [Track 3 PDF](papers/0TH-2026-009_pauli-contextuality-lab/whitepaper.pdf)) | `v2.9.0` | **Lean 4.35.0 / Mathlib v4.35.0** (160 explicit `#print axioms` + **2,206-theorem exhaustive axiom audit** across all 4 namespaces, 3 cross-track adversarial false-variant Lean refutations, 0 warnings, 0 Batteries linter errors; **12 cross-track targets verified by all 6 independent kernels** via `lake comparator --paranoid`, standard axioms, Sigstore Rekor `4116592110` & Release `4116605402`) + 68/68 Build Standard v1.2.0 (`100.0%`), Playbook v1.3 (`ERRATA.md`, CRediT/COI, repo-wide CDN SRI, `0.00 pt` max overfull across all 4 PDFs, `44/44` URLs & `17/17` Crossref non-retracted DOIs, 1,900-problem Mega-Atlas audit) | [Repo](https://github.com/0thernes/pauli-contextuality-lab) · [Evidence](papers/0TH-2026-009_pauli-contextuality-lab/EVIDENCE.md) · [Blueprint & Labs](https://0thernes.github.io/pauli-contextuality-lab/) · [Release](https://github.com/0thernes/pauli-contextuality-lab/releases/tag/v2.9.0) · [Lean CI](https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45741807525) |
 | `0TH-2026-008` | 2026-11-23 | Interdisciplinary Neuroscience / Philosophy of Mind | [Open Hard Problems Across Eleven Neuro-Scientific Disciplines, Deductive-Inductive-Abductive Frontiers of Sentience, and a Six-Class Forensic Audit](papers/0TH-2026-008_open-hard-problems-consciousness-frontier/Donahue_2026_open_hard_problems_consciousness_frontier.pdf) | `v1.2.0` | Lean 4.35.0 (zero Mathlib, Palomar `module` headers, 6 independent kernels via `lake comparator --paranoid`, axioms `⊆ [propext, Quot.sound]`; T17–T18 discrete coupling bounds) | [Repo](https://github.com/0thernes/human-synapse-bouton-lab) · [Evidence](papers/0TH-2026-008_open-hard-problems-consciousness-frontier/EVIDENCE.md) · [Lab](https://0thernes.github.io/human-synapse-bouton-lab/) · [CI](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45277848703) |
-| `0TH-2026-007` | 2026-11-23 | Computational Neuroscience / Biophysical Verification | [Formally Verified Biophysical Invariants, Multi-Language Differential Oracles, and Pre-Registered Monte Carlo Simulation of the Human Synaptic Bouton](papers/0TH-2026-007_human-synaptic-bouton-verification/Donahue_2026_human_synaptic_bouton_verification.pdf) | `v1.2.0` | **Lean 4.35.0** (zero Mathlib, Palomar `module` headers, 18 theorems + 19 non-vacuity witnesses, **6 independent kernels**: `lean`, `leanchecker-paranoid`, `lean4lean`, `nanoda`, `con-leche`, `con-ron`, zero `Classical.choice`) | [Repo](https://github.com/0thernes/human-synapse-bouton-lab) · [Evidence](papers/0TH-2026-007_human-synaptic-bouton-verification/EVIDENCE.md) · [Lab](https://0thernes.github.io/human-synapse-bouton-lab/) · [CI](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45277848703) |
-| `0TH-2026-006` | 2026-11-25 | Mathematical Statistics | [Resolution and Lean 4 Formal Verification of Conjecture 7.7 on the Second-Order Variance of Multinomial Discrete Total Variation](papers/0TH-2026-006_multinomial-tv-conjecture/Donahue_2026_Conjecture_7_7_Multinomial_TV.pdf) | `v2.1.0` | **Lean 4.35.0 / Mathlib v4.35.0** (5,445 lines, `autoImplicit = false`, **576 exhaustively audited theorems** + 18 `NonVacuity` witnesses, 0 Batteries linter warnings, strictly `[propext, Classical.choice, Quot.sound]`; **live negative kernel rejection + all 6 independent kernels passed on sandboxed Ubuntu CI `lake comparator --paranoid`**: `Lean paranoid`, `lean4lean` 41,718 decls, Rust `nanoda`, `con-leche`/`con-ron` 41,721 decls, `Lean default`; Sigstore Rekor `4116347212` + DigiCert RFC 3161 TSA) + exact $\mathbb{Q}$ (`L=3..45`), 80-digit Richardson (`<2.67e-55`), 28/28 pytest across 3 OSes, 18/18 live Crossref 0-retraction citations, 0-overfull PDF, interactive Blueprint cone, 64/64 Build Standard v1.2.0 | [Repo](https://github.com/0thernes/multinomial-tv-conjecture) · [Evidence](papers/0TH-2026-006_multinomial-tv-conjecture/EVIDENCE.md) · [Blueprint](https://0thernes.github.io/multinomial-tv-conjecture/blueprint/) · [Release](https://github.com/0thernes/multinomial-tv-conjecture/releases/tag/v2.1.0) · [6-Kernel CI](https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/45741323731) |
-| `0TH-2026-005` | 2026-11-10 | Quantum Foundations / Statistics | [Contextuality Evidence Lab: Exact Sequential Certificates and a Constructive Setting-Bias Attack](papers/0TH-2026-005_contextuality-evidence-lab/whitepaper.pdf) | `v1.0.0` | Lean 4 finite adaptive-tree & bias-cap proofs (standard axioms) | [Repo](https://github.com/0thernes/contextuality-evidence-lab) · [Evidence](papers/0TH-2026-005_contextuality-evidence-lab/EVIDENCE.md) · [Lab](https://0thernes.github.io/contextuality-evidence-lab/) |
-| `0TH-2026-004` | 2026-11-24 | Quantum Foundations / Combinatorics | [Certified exact minima of Kochen-Specker sets inside coordinate pools (31, 33, 18, 29)](papers/0TH-2026-004_kochen-specker-extremal-lab/ks-minimum.pdf) | `v1.8.0` | **Pure Lean 4.35.0 (zero Mathlib, exhaustive 149-theorem `KS` axiom audit, 6 independent kernels via `lake comparator --paranoid`, Sigstore Rekor `4089101395`)** + checked DRUP UNSAT proofs | [Repo](https://github.com/0thernes/kochen-specker-extremal-lab) · [Evidence](papers/0TH-2026-004_kochen-specker-extremal-lab/EVIDENCE.md) · [Site](https://0thernes.github.io/kochen-specker-extremal-lab/) · [CI](https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45516972182) |
-| `0TH-2026-003` | 2026-11-10 | Quantum Foundations | [Exact contextuality degrees for disjoint Mermin configurations](papers/0TH-2026-003_contextuality-tensor-lab/contextuality-tensor.pdf) | `v0.1.0` | Lean 4 (153-declaration axiom audit, standard axioms) | [Repo](https://github.com/0thernes/contextuality-tensor-lab) · [Evidence](papers/0TH-2026-003_contextuality-tensor-lab/EVIDENCE.md) · [Lab](https://0thernes.github.io/contextuality-tensor-lab/) |
-| `0TH-2026-002` | 2026-11-21 | Quantum Foundations | [Spectral bounds and their limits in Pauli contextuality: exact configurations and a proof of Jonah's Conjecture E](papers/0TH-2026-002_hoggar-bound-lab/unified-contextuality.pdf) | `v1.8.0` | **Complete Lean 4.35.0** (+13,910 lines: Kramers, Saturation, Props 3/8/10, asymptotics, **Thm 13b infinite determinant family `\|Ψ_{3m}⟩`** + `N=6` degree 2016, `N=4..5` CSS/ladders/unconditional bounds `1455`/`6444`, **Thm 16'' exact C3 binary optima 368 & 344 (gap 24)**, Clifford transport, Lemmas 20–21, Thm 22, **eigenvalue-multiset Conjecture E across all 9 vertex cases**, Cor 16 & 18; **100 audited decls**, standard axioms) | [Repo](https://github.com/0thernes/hoggar-bound-lab) · [Evidence](papers/0TH-2026-002_hoggar-bound-lab/EVIDENCE.md) · [Site](https://0thernes.github.io/hoggar-bound-lab/) · [CI](https://github.com/0thernes/hoggar-bound-lab/actions/runs/44959312365) |
-| `0TH-2026-001` | 2026-11-09 | Quantum Foundations | [A third-moment bound on the contextuality degree of multiqubit Pauli configurations](papers/0TH-2026-001_hoggar-bound/main.pdf) | `v1.0.0` | Lean 4 / Mathlib third-moment & Kramers bounds | [Repo](https://github.com/0thernes/hoggar-bound) · [Evidence](papers/0TH-2026-001_hoggar-bound/EVIDENCE.md) |
+| `0TH-2026-007` | 2026-11-23 | Computational Neuroscience / Biophysical Verification | [Formally Verified Biophysical Invariants, Multi-Language Differential Oracles, and Pre-Registered Monte Carlo Simulation of the Human Synaptic Bouton](papers/0TH-2026-007_human-synaptic-bouton-verification/Donahue_2026_human_synaptic_bouton_verification.pdf) | `v1.2.0` | **Lean 4.35.0** (zero Mathlib, Palomar `module` headers, 18 theorems + 20 non-vacuity witnesses, **6 independent kernels**, zero `Classical.choice`, Zenodo DOI `10.5281/zenodo.24484350`) | [Repo](https://github.com/0thernes/human-synapse-bouton-lab) · [Evidence](papers/0TH-2026-007_human-synaptic-bouton-verification/EVIDENCE.md) · [Lab](https://0thernes.github.io/human-synapse-bouton-lab/) · [CI](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45277848703) |
+| `0TH-2026-006` | 2026-11-25 | Mathematical Statistics | [Resolution and Lean 4 Formal Verification of Conjecture 7.7 on the Second-Order Variance of Multinomial Discrete Total Variation](papers/0TH-2026-006_multinomial-tv-conjecture/Donahue_2026_Conjecture_7_7_Multinomial_TV.pdf) | `v2.1.0` | **Lean 4.35.0 / Mathlib v4.35.0** (5,445 lines, `autoImplicit = false`, **576 exhaustively audited theorems** + 18 `NonVacuity` witnesses, 0 Batteries warnings; **live negative kernel rejection + all 6 independent kernels passed on Ubuntu CI `lake comparator --paranoid`**, Rekor `4116347212` + DigiCert RFC 3161 TSA) + 28/28 3-OS pytest + 64/64 Build Standard v1.2.0 | [Repo](https://github.com/0thernes/multinomial-tv-conjecture) · [Evidence](papers/0TH-2026-006_multinomial-tv-conjecture/EVIDENCE.md) · [Blueprint](https://0thernes.github.io/multinomial-tv-conjecture/blueprint/) · [Release](https://github.com/0thernes/multinomial-tv-conjecture/releases/tag/v2.1.0) · [6-Kernel CI](https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/45741323731) |
+| `0TH-2026-005` | 2026-11-10 | Quantum Foundations / Statistics *(Historical -> `0TH-2026-009`)* | [Contextuality Evidence Lab: Exact Sequential Certificates and a Constructive Setting-Bias Attack](papers/0TH-2026-005_contextuality-evidence-lab/whitepaper.pdf) | `v1.0.0` | Lean 4 finite adaptive-tree & bias-cap proofs (standard axioms; archived snapshot superseded by `0TH-2026-009`) | [Repo](https://github.com/0thernes/contextuality-evidence-lab) · [Evidence](papers/0TH-2026-005_contextuality-evidence-lab/EVIDENCE.md) · [Lab](https://0thernes.github.io/contextuality-evidence-lab/) |
+| `0TH-2026-004` | 2026-11-25 | Quantum Foundations / Combinatorics | [Certified exact minima of Kochen-Specker sets inside coordinate pools (31, 33, 18, 29)](papers/0TH-2026-004_kochen-specker-extremal-lab/ks-minimum.pdf) | `v1.9.0` | **Pure Lean 4.35.0 (zero Mathlib, exhaustive 149-theorem `KS` axiom audit, `lake env leanchecker --fresh Solution`, 3 adversarial false-variant Lean refutations, 6 independent kernels via `lake comparator --paranoid`, Sigstore Rekor `4116355625` & Release `4116572137`)** + checked DRUP UNSAT proofs, 33/33 Crossref non-retracted DOIs, `0.00 pt` PDF, Build Standard v1.2.0 & Playbook v1.3 (`ERRATA.md`, CRediT/COI, SWH `swh:1:snp:6df0f79e...`) | [Repo](https://github.com/0thernes/kochen-specker-extremal-lab) · [Evidence](papers/0TH-2026-004_kochen-specker-extremal-lab/EVIDENCE.md) · [Site](https://0thernes.github.io/kochen-specker-extremal-lab/) · [Release](https://github.com/0thernes/kochen-specker-extremal-lab/releases/tag/v1.9.0) · [CI](https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45741815040) |
+| `0TH-2026-003` | 2026-11-10 | Quantum Foundations *(Historical -> `0TH-2026-009`)* | [Exact contextuality degrees for disjoint Mermin configurations](papers/0TH-2026-003_contextuality-tensor-lab/contextuality-tensor.pdf) | `v0.1.0` | Lean 4 (153-declaration axiom audit, standard axioms; archived snapshot superseded by `0TH-2026-009`) | [Repo](https://github.com/0thernes/contextuality-tensor-lab) · [Evidence](papers/0TH-2026-003_contextuality-tensor-lab/EVIDENCE.md) · [Lab](https://0thernes.github.io/contextuality-tensor-lab/) |
+| `0TH-2026-002` | 2026-11-21 | Quantum Foundations *(Historical -> `0TH-2026-009`)* | [Spectral bounds and their limits in Pauli contextuality: exact configurations and a proof of Jonah's Conjecture E](papers/0TH-2026-002_hoggar-bound-lab/unified-contextuality.pdf) | `v1.8.0` | Lean 4.35.0 (+13,910 lines, 100 audited decls, standard axioms; archived snapshot superseded by `0TH-2026-009`) | [Repo](https://github.com/0thernes/hoggar-bound-lab) · [Evidence](papers/0TH-2026-002_hoggar-bound-lab/EVIDENCE.md) · [Site](https://0thernes.github.io/hoggar-bound-lab/) · [CI](https://github.com/0thernes/hoggar-bound-lab/actions/runs/44959312365) |
+| `0TH-2026-001` | 2026-11-09 | Quantum Foundations *(Historical -> `0TH-2026-009`)* | [A third-moment bound on the contextuality degree of multiqubit Pauli configurations](papers/0TH-2026-001_hoggar-bound/main.pdf) | `v1.0.0` | Lean 4 / Mathlib third-moment & Kramers bounds (archived snapshot superseded by `0TH-2026-009`) | [Repo](https://github.com/0thernes/hoggar-bound) · [Evidence](papers/0TH-2026-001_hoggar-bound/EVIDENCE.md) |
 
 Full Tier I registry: [`registry/PAPERS.md`](registry/PAPERS.md) · Machine-readable schema: [`registry/PAPERS.json`](registry/PAPERS.json)
 
@@ -40,19 +63,21 @@ Full Tier I registry: [`registry/PAPERS.md`](registry/PAPERS.md) · Machine-read
 
 ## Tier II — Public Build White Papers & Embedded Pure Lean 4 Suites (`registry/BUILD_PAPERS.json`)
 
-Public engineering and laboratory repositories containing embedded technical white papers, verification audits, and **440 additional live-compiled Lean 4 (`v4.35.0`, zero Mathlib, zero `sorry`) machine-checked invariants** (409 strictly within `[propext, Classical.choice, Quot.sound]` or zero axioms, plus 31 `bv_decide`-reflected bitvector theorems in `autophage`):
+Public engineering and laboratory repositories containing embedded technical white papers, verification audits, and **588 additional live-compiled Lean 4 (`v4.35.0`, zero Mathlib, zero `sorry`) machine-checked declarations** (557 strictly within `[propext, Classical.choice, Quot.sound]` or zero axioms, plus 31 `bv_decide`-reflected bitvector theorems in `autophage`):
 
 | ID | Date | Build Repo & Version | Embedded Pure Lean 4.35.0 Suite | Archived White Paper / Artifact | Dossier |
 |---|---|---|---|---|---|
 | `0TH-BUILD-001` | 2026-11-21 | [`cellulogonic-mecha`](https://github.com/0thernes/cellulogonic-mecha) `v1.2.1` | **58 audited theorems** (8 files, 1,438 lines, 0 `sorry`) | [Donahue_2026_cellulogonic_mecha.pdf](builds/0TH-BUILD-001_cellulogonic-mecha/Donahue_2026_cellulogonic_mecha.pdf) · [WHITE_PAPER.md](builds/0TH-BUILD-001_cellulogonic-mecha/WHITE_PAPER.md) · [VERIFICATION.md](builds/0TH-BUILD-001_cellulogonic-mecha/VERIFICATION.md) | [Evidence](builds/0TH-BUILD-001_cellulogonic-mecha/EVIDENCE.md) · [CI](https://github.com/0thernes/cellulogonic-mecha/actions/runs/44903924086) |
-| `0TH-BUILD-002` | 2026-11-25 | [`planaria`](https://github.com/0thernes/planaria) `v2.3.0` | **70 audited theorems + 70-target Palomar comparator** (11 files, 2,628 lines, **all 6 kernels via `lake check --paranoid` & `lake comparator --paranoid`**, Rekor `4115101651`, 81/81 Build Standard v1.2.0) | [Donahue_2026_planaria.pdf](builds/0TH-BUILD-002_planaria/Donahue_2026_planaria.pdf) · [WHITE_PAPER.md](builds/0TH-BUILD-002_planaria/WHITE_PAPER.md) · [VERIFICATION.md](builds/0TH-BUILD-002_planaria/VERIFICATION.md) · [CLAIMS.md](builds/0TH-BUILD-002_planaria/CLAIMS.md) · [LIMITATIONS.md](builds/0TH-BUILD-002_planaria/LIMITATIONS.md) · [10-Pass Audit](builds/0TH-BUILD-002_planaria/2026-11-25-10-pass-red-team-audit.md) | [Evidence](builds/0TH-BUILD-002_planaria/EVIDENCE.md) · [Studio](https://0thernes.github.io/planaria/) · [Release](https://github.com/0thernes/planaria/releases/tag/v2.3.0) · [6-Kernel CI](https://github.com/0thernes/planaria/actions/runs/45732566225) |
-| `0TH-BUILD-003` | 2026-11-25 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) `v1.4.1` | **120 audited decls + 8 comparator targets** (9 files, 3,218 lines, **all 6 kernels via `lake comparator --paranoid`**, SLSA `72456984`, 80/80 Build Standard v1.2.0, 0 `ruff`/0 `mypy`) | [Donahue_2026_Ultrametrica.pdf](builds/0TH-BUILD-003_ultrametrica/Donahue_2026_Ultrametrica.pdf) · [WHITE_PAPER.md](builds/0TH-BUILD-003_ultrametrica/WHITE_PAPER.md) · [CLAIMS.md](builds/0TH-BUILD-003_ultrametrica/CLAIMS.md) · [Mega-Atlas](builds/0TH-BUILD-003_ultrametrica/MEGA_ATLAS_CROSSCHECK.md) · [Hardening](builds/0TH-BUILD-003_ultrametrica/2026-11-25-hardening-cycles.md) | [Evidence](builds/0TH-BUILD-003_ultrametrica/EVIDENCE.md) · [Lab](https://0thernes.github.io/ultrametrica/) · [Release](https://github.com/0thernes/ultrametrica/releases/tag/v1.4.1) · [6-Kernel CI](https://github.com/0thernes/ultrametrica/actions/runs/45740525070) |
-| `0TH-BUILD-004` | 2026-07-01 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) `2026-07-02-qa` | Adversarial QA & Editorial Review (non-Lean) | [Collatz Case Study](builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md) · [QA Audit](builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md) · [Editorial Review](builds/0TH-BUILD-004_unsolved-mathematics/EDITORIAL-REVIEW-WHITEPAPER-2026-07-01.md) | [Evidence](builds/0TH-BUILD-004_unsolved-mathematics/EVIDENCE.md) |
+| `0TH-BUILD-002` | 2026-11-25 | [`planaria`](https://github.com/0thernes/planaria) `v2.3.0` | **70 audited theorems + 70-target Palomar comparator** (11 files, 2,628 lines, **all 6 kernels**, Rekor `4115101651`, 81/81 Build Standard v1.2.0) | [Donahue_2026_planaria.pdf](builds/0TH-BUILD-002_planaria/Donahue_2026_planaria.pdf) · [WHITE_PAPER.md](builds/0TH-BUILD-002_planaria/WHITE_PAPER.md) · [10-Pass Audit](builds/0TH-BUILD-002_planaria/2026-11-25-10-pass-red-team-audit.md) | [Evidence](builds/0TH-BUILD-002_planaria/EVIDENCE.md) · [Studio](https://0thernes.github.io/planaria/) · [Release](https://github.com/0thernes/planaria/releases/tag/v2.3.0) · [6-Kernel CI](https://github.com/0thernes/planaria/actions/runs/45732566225) |
+| `0TH-BUILD-003` | 2026-11-25 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) `v1.4.1` | **120 audited decls + 8 comparator targets** (9 files, 3,218 lines, **all 6 kernels**, SLSA `72456984`, 80/80 Build Standard v1.2.0) | [Donahue_2026_Ultrametrica.pdf](builds/0TH-BUILD-003_ultrametrica/Donahue_2026_Ultrametrica.pdf) · [WHITE_PAPER.md](builds/0TH-BUILD-003_ultrametrica/WHITE_PAPER.md) · [Mega-Atlas](builds/0TH-BUILD-003_ultrametrica/MEGA_ATLAS_CROSSCHECK.md) | [Evidence](builds/0TH-BUILD-003_ultrametrica/EVIDENCE.md) · [Lab](https://0thernes.github.io/ultrametrica/) · [Release](https://github.com/0thernes/ultrametrica/releases/tag/v1.4.1) · [6-Kernel CI](https://github.com/0thernes/ultrametrica/actions/runs/45740525070) |
+| `0TH-BUILD-004` | 2026-11-25 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) `v0.5.0` | **69 audited decls** (45 theorems + 10 `NonVacuity` + 14 `Adversarial` across 8 domains; 15 files, 2,964 lines, **all 6 kernels via `lake comparator --paranoid`**) | [Donahue_2026_unsolved_mathematics_atlas-v0.5.0.pdf](builds/0TH-BUILD-004_unsolved-mathematics/Donahue_2026_unsolved_mathematics_atlas-v0.5.0.pdf) · [Six-Kernel Audit](builds/0TH-BUILD-004_unsolved-mathematics/six_kernel_audit.txt) · [Collatz Case Study](builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md) | [Evidence](builds/0TH-BUILD-004_unsolved-mathematics/EVIDENCE.md) · [Site](https://0thernes.github.io/unsolved-mathematics/) · [Release](https://github.com/0thernes/unsolved-mathematics/releases/tag/v0.5.0) · [CI](https://github.com/0thernes/unsolved-mathematics/actions/runs/45742870717) |
 | `0TH-BUILD-005` | 2026-06-27 | [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) `v0.14.3` | A-Life Verification Audit PDF (non-Lean) | [cqm-alife-audit.pdf](builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/cqm-alife-audit.pdf) | [Evidence](builds/0TH-BUILD-005_cosmogonic-quantum-mechalogodrom/EVIDENCE.md) |
 | `0TH-BUILD-006` | 2026-11-10 | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) `main+research` | **8 zero-axiom `rfl` theorems** (`ClassicalGR.lean`, 0 axioms) | [ClassicalGR.lean](builds/0TH-BUILD-006_black-hole-simulation-lab/ClassicalGR.lean) · [M5_SHADOW_ASYMMETRY.md](builds/0TH-BUILD-006_black-hole-simulation-lab/M5_SHADOW_ASYMMETRY.md) | [Evidence](builds/0TH-BUILD-006_black-hole-simulation-lab/EVIDENCE.md) |
-| `0TH-BUILD-007` | 2026-11-25 | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) `v2.4.0` | **92 audited theorems + 8 Palomar targets** (13 files, 1,538 lines, **all 6 kernels via `lake check --paranoid` & `lake comparator --paranoid`**, zero `Classical.choice`, 73/73 Build Standard v1.2.0) | [Donahue_2026_unsolved_problems_mega_atlas.pdf](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/Donahue_2026_unsolved_problems_mega_atlas.pdf) · [WHITE_PAPER.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/WHITE_PAPER.md) · [CLAIMS.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/CLAIMS.md) · [HARDENING_LOG.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/HARDENING_LOG.md) · [RANKING.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/RANKING.md) · [VERIFICATION.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/VERIFICATION.md) · [DATASHEET.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/DATASHEET.md) | [Evidence](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/EVIDENCE.md) · [Web Atlas](https://0thernes.github.io/unsolved-problems-mega-atlas/) · [Blueprint](https://0thernes.github.io/unsolved-problems-mega-atlas/blueprint/) · [Release](https://github.com/0thernes/unsolved-problems-mega-atlas/releases/tag/v2.4.0) · [6-Kernel CI](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/45728933812) |
+| `0TH-BUILD-007` | 2026-11-26 | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) `v2.5.0` | **103 audited theorems + 9 Palomar targets** (14 files, 1,707 lines, incl. 12 `NonVacuity` + 10 `AdversarialTests`, **all 6 kernels via `scripts/verify_lean_six_kernels.sh`**, zero `Classical.choice`, 73/73 Build Standard v1.2.0) | [Donahue_2026_unsolved_problems_mega_atlas.pdf](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/Donahue_2026_unsolved_problems_mega_atlas.pdf) · [Solved Audit (0/1,900)](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md) · [WHITE_PAPER.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/WHITE_PAPER.md) · [CLAIMS.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/CLAIMS.md) · [HARDENING_LOG.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/HARDENING_LOG.md) · [RANKING.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/RANKING.md) · [VERIFICATION.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/VERIFICATION.md) · [DATASHEET.md](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/DATASHEET.md) | [Evidence](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/EVIDENCE.md) · [Web Atlas](https://0thernes.github.io/unsolved-problems-mega-atlas/) · [Blueprint](https://0thernes.github.io/unsolved-problems-mega-atlas/blueprint/) · [Release](https://github.com/0thernes/unsolved-problems-mega-atlas/releases/tag/v2.5.0) · [6-Kernel CI](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/45743507132) |
 | `0TH-BUILD-008` | 2026-11-21 | [`cellular-engine-omega`](https://github.com/0thernes/cellular-engine-omega) `v4.2.0` | **61 audited theorems** (12 files, 1,197 lines, 0 `sorry`) | [Frontier Theorems & Conjectures](builds/0TH-BUILD-008_cellular-engine-omega/CELLULAR_BLEEDING_EDGE_THEOREMS_CONJECTURES_AND_HARD_PROBLEMS.md) · [VERIFICATION.md](builds/0TH-BUILD-008_cellular-engine-omega/VERIFICATION.md) | [Evidence](builds/0TH-BUILD-008_cellular-engine-omega/EVIDENCE.md) · [CI](https://github.com/0thernes/cellular-engine-omega/actions/runs/44887931871) |
 | `0TH-BUILD-009` | 2026-11-21 | [`autophage`](https://github.com/0thernes/autophage) `v1.0.0` | **31 audited theorems** (1 file, 394 lines, 0 `sorry`, `bv_decide`) | [VERIFICATION.md](builds/0TH-BUILD-009_autophage/VERIFICATION.md) · [ARCHITECTURE.md](builds/0TH-BUILD-009_autophage/ARCHITECTURE.md) | [Evidence](builds/0TH-BUILD-009_autophage/EVIDENCE.md) · [CI](https://github.com/0thernes/autophage/actions/runs/44887958546) |
+| `0TH-BUILD-010` | 2026-11-22 | [`noetic-organism-omega`](https://github.com/0thernes/noetic-organism-omega) `main-ci-verified` | **48 audited theorems** (2 files, 487 lines, 0 `sorry`, CI `#45076052369` GREEN) | [NoeticProofs.lean](builds/0TH-BUILD-010_noetic-organism-omega/NoeticProofs.lean) · [LiveC11Receipt.lean](builds/0TH-BUILD-010_noetic-organism-omega/LiveC11Receipt.lean) | [Evidence](builds/0TH-BUILD-010_noetic-organism-omega/EVIDENCE.md) · [CI](https://github.com/0thernes/noetic-organism-omega/actions/runs/45076052369) |
+| `0TH-BUILD-011` | 2026-11-22 | [`asmodensius-native`](https://github.com/0thernes/asmodensius-native) `main-snapshot` | **20 audited declarations (`A01`–`A20`)** (1 file, 155 lines, 0 `sorry`; `A15/A16/A20` disclosed as arithmetic `rfl` accounting witnesses) | [AsmodensiusProofs.lean](builds/0TH-BUILD-011_asmodensius-native/AsmodensiusProofs.lean) | [Evidence](builds/0TH-BUILD-011_asmodensius-native/EVIDENCE.md) |
 
 Full Tier II registry: [`registry/BUILD_PAPERS.md`](registry/BUILD_PAPERS.md) · Machine-readable schema: [`registry/BUILD_PAPERS.json`](registry/BUILD_PAPERS.json)
 
@@ -60,7 +85,7 @@ Full Tier II registry: [`registry/BUILD_PAPERS.md`](registry/BUILD_PAPERS.md) ·
 
 ## Tier III — Public Laws, Pre-Registered Empirical Claims, Discoveries & Open-Problem Atlases (`registry/LAWS_AND_DISCOVERIES.json`)
 
-Strictly separated from Lean-proved theorems, Tier III preserves SHA-256-verified snapshots of binding architectural laws, pre-registered empirical falsification tables (including null/falsified results), finite computational certificates, and open-problem catalogues across public repositories:
+Strictly separated from Lean-proved theorems, Tier III preserves SHA-256-verified snapshots of binding architectural laws, pre-registered empirical falsification tables (including null/falsified results), finite computational certificates, open-problem catalogues, and ecosystem synthesis dossiers across public repositories:
 
 | ID | Epistemic Tier | Source Repo | Highlights | Dossier |
 |---|---|---|---|---|
@@ -69,11 +94,13 @@ Strictly separated from Lean-proved theorems, Tier III preserves SHA-256-verifie
 | `0TH-DISC-003` | `preregistered_empirical_claims` | [`neuralese`](https://github.com/0thernes/neuralese) | SHA-256-locked pre-registrations & interpretability falsification tables (`v11`–`v14x`) | [Evidence](discoveries/0TH-DISC-003_neuralese-preregistered-claims/EVIDENCE.md) |
 | `0TH-DISC-004` | `preregistered_empirical_claims` | [`neuralese-diffusion`](https://github.com/0thernes/neuralese-diffusion) | Cross-modality diffusion interpretability pre-registered claims & negative results (`v1`–`v2`) | [Evidence](discoveries/0TH-DISC-004_neuralese-diffusion-claims/EVIDENCE.md) |
 | `0TH-DISC-005` | `finite_computational_certificate_and_open_problem_atlas` | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | 900+ open-problem atlas, finite Odd-Unit Lock Bridge Certificate (proves no part of Collatz) & Failed-Attempts Atlas | [Evidence](discoveries/0TH-DISC-005_unsolved-math-certificates-and-atlas/EVIDENCE.md) |
-| `0TH-DISC-006` | `open_problem_catalogue` | [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | 16 ranked unsolved black-hole problems with CI citation integrity & 6 truth tiers | [Evidence](discoveries/0TH-DISC-006_unsolved-black-hole-problems/EVIDENCE.md) |
+| `0TH-DISC-006` | `open_problem_catalogue` | [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | 16 ranked unsolved black-hole problems with CI citation integrity, 6 truth tiers & live-sync hub banner | [Evidence](discoveries/0TH-DISC-006_unsolved-black-hole-problems/EVIDENCE.md) |
 | `0TH-DISC-007` | `technical_synthesis_compendium` | [`glitchling-jam`](https://github.com/0thernes/glitchling-jam) | 29-PDF Master Technical Compendium (1,932 pages distilled) under Principle P1 honesty rules | [Evidence](discoveries/0TH-DISC-007_glitchling-master-compendium/EVIDENCE.md) |
 | `0TH-DISC-008` | `architectural_synthesis_report` | [`dimension-omega-singularity`](https://github.com/0thernes/dimension-omega-singularity) | 3×1,000 mechanism architectural synthesis reports (Substrates, High-Weirdness, A-Life) | [Evidence](discoveries/0TH-DISC-008_dimension-omega-3000-catalogs/EVIDENCE.md) |
 | `0TH-DISC-009` | `computational_reference_atlas` | [`grimoire-algorithms-of-the-arcane`](https://github.com/0thernes/grimoire-algorithms-of-the-arcane) / [`professional-calculator`](https://github.com/0thernes/professional-calculator) | Closed-form `MATH_STUDY_ATLAS.md` (1,123 tests) & 1,000-algorithm source/verification ledger | [Evidence](discoveries/0TH-DISC-009_math-and-algorithm-atlases/EVIDENCE.md) |
-| `0TH-DISC-010` | `formal_addenda_and_provenance_map` | [`hoggar-bound-lab`](https://github.com/0thernes/hoggar-bound-lab) | Provenance map of 3 historical component papers, `CLAIMS.md`, `ADDENDUM-conjecture-e.md`, v1.7.0–v1.8.0 exact JSON certificates (`368/344`, `\|Ψ_{3m}⟩`, `N=4..5` 42-orbit), and **v1.8.0 100-declaration axiom log** | [Evidence](discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/EVIDENCE.md) |
+| `0TH-DISC-010` | `formal_addenda_and_provenance_map` | [`hoggar-bound-lab`](https://github.com/0thernes/hoggar-bound-lab) | Provenance map of 3 historical component papers, `CLAIMS.md`, `ADDENDUM-conjecture-e.md`, exact JSON certificates, and v1.8.0 100-decl axiom log | [Evidence](discoveries/0TH-DISC-010_hoggar-component-map-and-addenda/EVIDENCE.md) |
+| `0TH-DISC-011` | `ecosystem_synthesis_dossier` | [`alife-singularity-omega-package`](https://github.com/0thernes/alife-singularity-omega-package) | 7-repo A-Life Singularity SuperLife Omega Master Dossier PDF (1.13 MB) & SHA-256 manifest (`v3.3.0-omega`) | [Evidence](discoveries/0TH-DISC-011_alife-singularity-omega-package/EVIDENCE.md) |
+| `0TH-DISC-012` | `interactive_observatory_architecture` | [`omega-triscale-observatory`](https://github.com/0thernes/omega-triscale-observatory) | 7-repo Omega TriScale Observatory (`v6.6.0`) telemetry & relay blueprint | [Evidence](discoveries/0TH-DISC-012_omega-triscale-observatory/EVIDENCE.md) |
 
 Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_DISCOVERIES.md) · Machine-readable schema: [`registry/LAWS_AND_DISCOVERIES.json`](registry/LAWS_AND_DISCOVERIES.json)
 
@@ -83,22 +110,22 @@ Full Tier III registry: [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_D
 
 1. **Kernel-Checked Proofs:** Formalized claims compile in Lean 4 with zero `sorry`, zero `admit`, zero custom axioms, and explicit `#print axioms` audits strictly within `[propext, Classical.choice, Quot.sound]`.
 2. **Independent Falsifiability:** Every Tier I & Tier II entry ships an explicit reproduction and falsification command so any third party can independently test every claim.
-3. **Cryptographic Immutability:** Every frozen release PDF, Lean certificate, white paper, and discovery snapshot is hashed in [`CHECKSUMS.sha256`](CHECKSUMS.sha256), matched against pinned public Git submodules under `repos/`, and audited by GitHub Actions CI on every push.
+3. **Cryptographic Immutability & Live Mirroring:** Every frozen release PDF, Lean certificate, white paper, bridge table, live mirror snapshot, and discovery record is hashed in [`CHECKSUMS.sha256`](CHECKSUMS.sha256), matched against 23 pinned public Git submodules under `repos/`, and audited by GitHub Actions CI on every push.
 4. **Honest Boundaries & Privacy Discipline:** Every dossier explicitly separates kernel-checked theorems, paper proofs, pre-registered empirical claims, finite computational certificates, exploratory syntheses, and open questions. Private repositories and third-party forks remain strictly excluded from this public archive.
 
 ---
 
 ## Quickstart
 
-Clone the archive and run the full cryptographic & structural audit:
+Clone the archive and run the full cryptographic, link, and structural audit:
 
 ```bash
-# Clone the archive (add --recursive to also fetch all 20 pinned PUBLIC submodules)
+# Clone the archive (add --recursive to also fetch all 23 pinned PUBLIC submodules)
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 python3 -m pip install -r requirements.txt
 
-# Verify every SHA-256 digest, ORCID, axiom allowlist, and all 20 public submodule pins
+# Verify every SHA-256 digest, ORCID, axiom allowlist, markdown link, and all 23 public submodule pins
 python3 scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
 python3 -m pytest -v tests/
@@ -107,32 +134,40 @@ python3 -m pytest -v tests/
 ## Usage Examples
 
 ```bash
-just reproduce   # Full clean verification + static portal + Build Standard v1.2.0 audit
-just sync        # Deterministically regenerate all dossiers, markdown registries & SHA-256 manifests
-just test        # Run integrity, Hypothesis property, negative, mutation & privacy-firewall tests
+just reproduce   # Full clean verification + WCAG 3-tier portal + Build Standard v1.2.0 audit
+just live-sync   # Query live GitHub API across all tracked public repos, re-sync & rebuild portal
+just sync        # Deterministically regenerate all dossiers, markdown registries & SHA-256 manifests offline
+just test        # Run integrity, link, privacy-firewall, failure-injection, Hypothesis & mutation tests
 just audit       # Score repository against Build Standard v1.2.0
 ```
 
 ## Maintenance Status
 
-**Status: Active** (repostatus: `active`). Updated whenever a public Lean 4–verified preprint, build white paper, or discovery registry ships a new verified release (see [CLAIMS.md](CLAIMS.md), [LIMITATIONS.md](LIMITATIONS.md), [REPLICATION.md](REPLICATION.md), and [ROADMAP.md](ROADMAP.md)).
+**Status: Active** (repostatus: `active`). Automatically refreshes its live upstream mirror every 2 hours and on `repository_dispatch` via [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml), and updates frozen release pins whenever upstream repositories publish verified releases (see [CLAIMS.md](CLAIMS.md), [LIMITATIONS.md](LIMITATIONS.md), [REPLICATION.md](REPLICATION.md), [ROADMAP.md](ROADMAP.md), and [HARDENING_INDEX.md](HARDENING_INDEX.md)).
 
-=== CLAIMS.md ===
+
+---
+
+<!-- FILE: CLAIMS.md -->
 
 # Claims Ledger (`CLAIMS.md`)
 
 | ID | Claim | Verification Tier | Evidence | What Would Prove Us Wrong |
 |---|---|---|---|---|
-| **C1** | Every archived PDF, white paper, Lean certificate, metadata file, and discovery snapshot across all 31 entries (12 Tier I + 9 Tier II + 10 Tier III) matches its byte-exact SHA-256 digest in `CHECKSUMS.sha256`, `data/MANIFEST.sha256`, and `registry/*.json`. | **Cryptographic SHA-256 check** | `scripts/verify_archive.py`, `sha256sum -c CHECKSUMS.sha256`, `tests/test_archive_integrity.py` | Any SHA-256 mismatch, missing file, or unregistered PDF in `papers/`. |
-| **C2** | Every pinned public Git submodule under `repos/` (`20` public repositories) matches the exact commit SHA recorded in `registry/PAPERS.json` and `registry/BUILD_PAPERS.json`. | **Exact Git index check** | `get_git_submodule_commits` in `scripts/verify_archive.py` | Any submodule drift between `git ls-files --stage repos` and `pinned_commit`. |
-| **C3** | Every entry across all three tiers carries canonical ORCID `0009-0006-8168-9648`, an explicit `verification_boundary`, and Lean axiom allowlists strictly within `[propext, Classical.choice, Quot.sound]`. | **Automated schema & policy check** | `scripts/verify_archive.py`, `tests/test_archive_integrity.py` | Any missing ORCID, missing verification boundary, or non-standard axiom in any allowlist. |
-| **C4** | Zero private repositories or third-party forks are exposed anywhere in `registry/`, `repos/`, or `.gitmodules`. | **Automated visibility & privacy check** | `test_privacy_firewall_no_private_repos` in `tests/test_archive_integrity.py` | Any `visibility != "PUBLIC"` entry or any private repository slug appearing in public manifests. |
+| **C1** | Every archived PDF, white paper, Lean certificate, metadata file, bridge table, live mirror JSON, and discovery snapshot across all 36 entries (13 Tier I + 11 Tier II + 12 Tier III) matches its byte-exact SHA-256 digest in `CHECKSUMS.sha256`, `data/MANIFEST.sha256`, and `registry/*.json`. | **Cryptographic SHA-256 check** | `scripts/verify_archive.py`, `sha256sum -c CHECKSUMS.sha256`, `tests/test_archive_integrity.py` | Any SHA-256 mismatch, missing file, artifact > 5 MB, or unregistered PDF in `papers/`. |
+| **C2** | Every pinned public Git submodule under `repos/` (`23` public repositories) matches the exact commit SHA recorded in `registry/PAPERS.json` and `registry/BUILD_PAPERS.json`. | **Exact Git index check** | `get_git_submodule_commits` in `scripts/verify_archive.py` | Any submodule drift between `git ls-files --stage repos` and `pinned_commit`. |
+| **C3** | Every entry across all three tiers and the Mega-Atlas bridge carries canonical ORCID `0009-0006-8168-9648`, zero unformed LLC entity assertions, an explicit `verification_boundary`, and Lean axiom allowlists strictly within `[propext, Classical.choice, Quot.sound]`. | **Automated schema & policy check** | `scripts/verify_archive.py`, `tests/test_archive_integrity.py` | Any missing ORCID, legacy unformed LLC string, missing verification boundary, or non-standard axiom in any allowlist. |
+| **C4** | Zero private repositories or third-party forks are exposed anywhere in `registry/`, `repos/`, `llms.txt`, `LIVE_ECOSYSTEM_MIRROR.json`, or `.gitmodules`. | **Automated visibility & privacy check** | `test_privacy_firewall_no_private_repos` & `test_live_sync_privacy_firewall_and_failure_injection` | Any `visibility != "PUBLIC"` entry, `private == true`, `fork == true`, or private repository slug appearing in public manifests. |
+| **C5** | Zero relative markdown links are broken across root docs, `docs/`, `registry/`, and per-entry `EVIDENCE.md` dossiers, and `SOLVED_AND_ATLAS_BRIDGE.json` strictly reports `0 / 1,900` grand Mega-Atlas problems retired. | **Automated link & epistemic honesty check** | `check_markdown_links` in `scripts/verify_archive.py`, `test_solved_and_atlas_bridge_epistemic_honesty` | Any broken local markdown link or any entry falsely claiming retirement of a grand Mega-Atlas problem. |
 
 ## What Would Prove Us Wrong (Falsification Protocol)
 
 Any failing run of `python3 scripts/verify_archive.py`, `sha256sum -c CHECKSUMS.sha256`, or `python3 -m pytest -v tests/` immediately falsifies the corresponding integrity claim above. External critics can also independently clone any pinned submodule at its exact commit SHA and run the entry's `falsification_command` from `EVIDENCE.md`.
 
-=== LIMITATIONS.md ===
+
+---
+
+<!-- FILE: LIMITATIONS.md -->
 
 # Limitations, Epistemic Boundaries & Real-vs-Metaphor (`LIMITATIONS.md`)
 
@@ -148,28 +183,32 @@ Any failing run of `python3 scripts/verify_archive.py`, `sha256sum -c CHECKSUMS.
 - **"Vault" / "Frozen":** Literally means committed Git blobs hashed with SHA-256 inside `CHECKSUMS.sha256` and verified on every push by GitHub Actions CI.
 - **"Tier I / Tier II / Tier III":** Strict epistemic separation: Tier I holds standalone research preprints; Tier II holds engineering build white papers and embedded Pure Lean invariant suites; Tier III holds architectural laws, pre-registered empirical claims (including null results), finite computational certificates, and open-problem atlases—never conflated with Lean-proved general mathematical theorems.
 
-=== REPLICATION.md ===
+
+---
+
+<!-- FILE: REPLICATION.md -->
 
 # Replication Protocol (`REPLICATION.md`)
 
-Any third party can verify the entire master archive and independently reproduce any individual Tier I or Tier II entry from a clean clone:
+Any third party can verify the entire canonical master archive, live ecosystem mirror, and Mega-Atlas bridge from a clean clone:
 
 ```bash
-# 1. Clone the archive (add --recursive to fetch all 20 pinned public submodules)
+# 1. Clone the archive (add --recursive to fetch all 23 pinned public submodules)
 git clone https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
 python3 -m pip install -r requirements.txt
 
-# 2. Verify every SHA-256 digest, ORCID, axiom policy, README sync, and submodule pin
+# 2. Verify every SHA-256 digest, ORCID, axiom policy, zero broken links, README sync, and submodule pin
 python3 scripts/verify_archive.py
 sha256sum -c CHECKSUMS.sha256
 
-# 3. Run automated integrity, property, negative, and mutation tests
+# 3. Run automated integrity, privacy-firewall, failure-injection, property, negative, mutation & idempotence tests
 python3 -m pytest -v tests/
+python3 scripts/build_site.py
 bash scripts/audit-repo.sh .
 ```
 
-To verify a specific paper's Lean 4 formal proof from scratch, run `git submodule update --init repos/<slug>` and execute the exact `falsification_command` printed in `papers/<id>/EVIDENCE.md`.
+To refresh the live upstream status mirror against GitHub right now, run `python3 scripts/live_sync.py`. To verify a specific paper's Lean 4 formal proof from scratch, run `git submodule update --init repos/<slug>` and execute the exact `falsification_command` printed in `papers/<id>/EVIDENCE.md`.
 
 ## Replication Log
 
@@ -177,106 +216,233 @@ To verify a specific paper's Lean 4 formal proof from scratch, run `git submodul
 |---|---|---|---|---|---|
 | 2026-11-25 | Alexander S. Donahue (author) | Windows 11, Python 3.13.12 | `2026.11.25` | PASS | Full `verify_archive.py --sync`, pytest ladder, `Audit-Repo.ps1` 100.0%. |
 | 2026-11-25 | GitHub Actions CI (`ubuntu-latest`, `windows-latest`, `macos-latest`) | Hosted runners, Python 3.12 | `2026.11.25` | PASS (3 OSes) | Cross-platform verification, static Pages portal, and `SHA256SUMS` + SLSA release. |
+| 2026-11-26 | Alexander S. Donahue + 3-Cycle Hardening Audit | Windows 11 + Ubuntu/macOS/Windows CI | `2026.11.26` | PASS | Consolidated 36 entries / 23 submodules, `0TH-2026-013`, `0TH-BUILD-004 v0.5.0`, `0TH-BUILD-010/011`, `0TH-DISC-011/012`, live sync mirror (`live-sync.yml`), Mega-Atlas bridge, WCAG 2.2 AA 3-tier portal, zero broken links, zero unformed LLC strings. |
 
-=== docs/index.md ===
 
-# Documentation Index (`0thernes-research-archive`)
+---
 
-- [Architecture](architecture.md) — Three-tier cryptographic vault architecture and submodule pinning model.
-- [Configuration](configuration.md) — Declarative manifests, Python verification environment, and CI checks.
-- [Operations, Backups & Offsite Mirror](operations.md) — Git bundle creation, offsite mirroring, and Software Heritage preservation.
-- [Threat Model](threat-model.md) — Integrity, provenance, privacy-firewall, and supply-chain risks.
-- [ADR 0001: Three-Tier Epistemic Separation](adr/0001-three-tier-epistemic-archive.md)
-- [Run Log](run-log.md)
-- [Red-Team & Hardening Review (2026-11-25)](reviews/red-team-2026-11-25.md)
-- [FAQ](faq.md) · [Glossary](glossary.md) · [Build Standard v1.2.0 Reference](build-standard.md)
+<!-- FILE: AGENTS.md -->
 
-=== docs/architecture.md ===
+# AGENTS.md — Canonical Agent Instructions (`0thernes-research-archive`)
+
+This file is the canonical instruction file for all AI agents (`CLAUDE.md`, `GEMINI.md`, and `.cursor/rules/build-standard.mdc` point here).
+
+## Mission & Identity
+
+- **Repository:** `https://github.com/0thernes/0thernes-research-archive`
+- **Author:** Alexander Stephen Donahue (`Independent Researcher, Spokane, WA, USA`, ORCID `0009-0006-8168-9648`, `0_0@0thernes.art`). Do NOT assert an unformed LLC entity in new headers or metadata.
+- **Privacy Firewall (MANDATORY):** NEVER register, mention, or submodule private repositories or third-party forks. Every entry MUST be `PUBLIC`.
+
+## Hard Rules (`R1`–`R8`)
+
+1. Commit and push straight to `main` (`R1`/`R2`); CI is informational (`R3`); zero banned files such as `PULL_REQUEST_TEMPLATE.md` or `dependabot.yml` (`R4`).
+2. Never fabricate SHA-256 digests, CI run URLs, DOIs, or peer-review status (`R6`).
+3. Always run `python3 scripts/verify_archive.py --sync` after updating any PDF, artifact, or submodule pin, and copy `CHECKSUMS.sha256` to `data/MANIFEST.sha256`.
+4. Classify every defect into one of the 10 Build Standard classes (`R7`; `docs/glossary.md`).
+
+## Core Commands
+
+```bash
+just reproduce   # Verify archive, checksums, pytest suite, static site, and Build Standard audit
+just sync        # Regenerate METADATA.json, EVIDENCE.md, registry/*.md, CHECKSUMS.sha256, data/MANIFEST.sha256
+just test        # Run pytest integrity/property/negative/mutation suite
+just audit       # Score repo against Build Standard v1.2.0
+```
+
+
+---
+
+<!-- FILE: registry/SOLVED_AND_ATLAS_BRIDGE.md -->
+
+# Solved Sub-Conjectures & Mega-Atlas V2 Cross-Reference Bridge
+
+**Audit Date:** `2026-11-25` · **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Mega-Atlas Grand Problems Retired:** **`0 / 1900`**  
+**Peer-Literature Open Sub-Conjectures / Open Questions Proved in Lean 4.35.0:** **4** (+ 1 preprint conjecture with explicit external-citation caveat)
+
+> **Epistemic Boundary:** Strictly 0 of 1,900 grand open problems in Unsolved Problems Mega-Atlas V2 are retired. Four peer-literature open sub-conjectures/open questions and one unreviewed-preprint conjecture (modulo one cited theorem outside Lean) are completely machine-checked in Lean 4.35.0 within their published scopes, alongside bounded coordinate-pool minima, barrier formalizations, and discrete invariant suites.
+
+| Archive ID | Repository | Version | Epistemic Class | Mega-Atlas IDs | Grand Problem Retired? | Verified Result & Boundary |
+|---|---|---|---|---|---|---|
+| `0TH-2026-006` | [`multinomial-tv-conjecture`](https://github.com/0thernes/multinomial-tv-conjecture) | `v2.1.0` | `SOLVED_SUB_CONJECTURE` | `STAT-001` | No | Conjecture 7.7 (conj:atriangle) of Banic & Elezovic (arXiv:2610.17046v1, confirmed open in arXiv:2611.14735v1): a_triangle = 1/32 - 4*sqrt(3)/243, rendering gamma(n) and gamma_c(n) unconditional for n >= 5. *(Boundary: Completely resolves the standalone peer-literature sub-conjecture within its exact published scope; adjacent to STAT-001 and does not retire any of the 1,900 Mega-Atlas grand problems.)* |
+| `0TH-2026-010` | [`catalytic-register-frontiers`](https://github.com/0thernes/catalytic-register-frontiers) | `v1.0.1` | `SOLVED_SUB_CONJECTURE` | `CS-005` | No | Two open questions of Vinciguerra (arXiv:2609.18692, Sec. 6): complete base-p digit-sum dichotomy for 2-register passive catalytic programs over F_p, and unique global 3-register minimizer exponent log_13(8) ~ 0.8107 breaking log_5(4) ~ 0.8614. *(Boundary: Resolves the two published passive catalytic register sub-questions; parent complexity separations in CS-005 (L vs P, P vs PSPACE, general catalytic space) remain completely OPEN.)* |
+| `0TH-2026-009` | [`pauli-contextuality-lab`](https://github.com/0thernes/pauli-contextuality-lab) | `v2.9.0` | `SOLVED_SUB_CONJECTURE` | `QM-011`, `QC-037`, `QC-013` | No | Track 2 answers Sec. 6 of Muller & Saniga (arXiv:2609.19862v1) with exact disjoint Mermin copy degrees (7^k - 5^k)/2 and (6^k - 4^k)/2; Track 1 proves eigenvalue-multiset Jonah Conjecture E across all 9 vertex cases for all N >= 4, exact 4-qubit C3 binary optima (368 vs 344), and infinite floor-saturating |Psi_{3m}> family; Track 3 proves adaptive-tree sequential evidence and 11/12 setting-bias cap. *(Boundary: Resolves Muller-Saniga Sec. 6 and bounded finite-dimensional Pauli sub-cases of QM-011; Jonah's preprint is unreviewed and single-orbit transitivity cites Theorem B4 outside Lean. Grand QM-011/QC-037/QC-013 remain OPEN.)* |
+| `0TH-2026-012` | [`coded-pir-mlwe-complexity-lab`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab) | `v3.0.0` | `SOLVED_SUB_CONJECTURE` | `CS-053`, `CS-026`, `QC-042`, `CS-004`, `CS-001`, `CS-010`, `CS-012`, `CS-051` | No | Resolves Sun-Tao-Xu-Zhang (arXiv:2603.10769) Schur-product syzygy rank via Koszul-Veronese annihilation (4/7 -> 10/17); proves strict domination over Sun-Zhang (arXiv:2610.37412) LFSR PIR; refutes Luo (arXiv:2604.15858) via det(B)=q^m; proves anti-periodic DFT cancellation (Chen ePrint 2024/555 Step 9); certifies 8/13 polymatroid defeating all Matus M_s inequalities; proves exact Strassen-Winograd rank_F(<2,2,2>)=7 and all-m Koszul rank >= m^2+2. *(Boundary: Resolves published coded-PIR syzygy & refutation sub-problems and certifies finite/structural bounds; parent grand problems CS-053, CS-026, QC-042, CS-004 (omega=2), CS-001 (P!=NP), CS-010, CS-012 (VP!=VNP), CS-051 remain OPEN.)* |
+| `0TH-2026-004` | [`kochen-specker-extremal-lab`](https://github.com/0thernes/kochen-specker-extremal-lab) | `v1.9.0` | `PARTIAL_BOUNDED_CASE` | `QM-011` | No | Certifies exact minimal Kochen-Specker set sizes inside finite coordinate pools: 31 (3D |c|<=2..4), 33 (3D roots of unity), 18 (4D {0,+1,-1}), and 29 (5D {0,+1,-1}). *(Boundary: Pool-restricted exact minima only; the unrestricted minimal Kochen-Specker set size in R^3 (QM-011) remains OPEN.)* |
+| `0TH-2026-011` | [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `v2.4.0` | `PARTIAL_BOUNDED_CASE` | `QC-021`, `CS-002`, `CS-026`, `CS-028`, `CS-030`, `CS-053`, `CS-061`, `QC-004`, `QC-018`, `QC-030`, `QC-042`, `STAT-014`, `SYS-024` | No | Proves Chern-Concurrence-Entropy Conservation Law (c_eff^2 + C^2 = 1), Toner quantum CHSH monogamy, exact Hiding-Binding Conservation Law (TV + Overlap = 1), and sharp FIPS 203 Compress_1 margin |e| <= 831. *(Boundary: Proves finite algebraic/information-theoretic conservation laws and cryptographic margins; all 13 related Mega-Atlas conjectures remain OPEN.)* |
+| `0TH-2026-013` | [`p-vs-np-frontier-lab`](https://github.com/0thernes/p-vs-np-frontier-lab) | `v1.1.0` | `BARRIER_FORMALIZATION` | `CS-001`, `CS-005`, `CS-010`, `CS-012`, `QM-011` | No | Machine-checks 14 classical complexity-barrier theorems (Baker-Gill-Solovay relativization, Markov/Fischer negation, Razborov-Rudich natural proofs, Schaefer dichotomy, multiplicative/catalytic barriers) and empirically/algebraically falsifies 4 aggressive P=NP heuristics. *(Boundary: Formalizes known barriers and falsifies heuristic attacks; explicitly does NOT resolve P vs NP (CS-001) or any related complexity separation.)* |
+| `0TH-2026-007` | [`human-synaptic-bouton-verification`](https://github.com/0thernes/human-synapse-bouton-lab) | `v1.2.0` | `PARTIAL_BOUNDED_CASE` | `NEURO-001`, `NEURO-019` | No | Proves 18 algebraic biophysical invariants in Lean 4.35.0 and refutes pre-registered 40 Hz mitochondrial ATP sustainability (f_crit = 29.5625 Hz); companion 0TH-2026-008 proves 2x2 weight-table factorization bounds. *(Boundary: Discrete biophysical invariants and controlled model refutation only; NEURO-001 and NEURO-019 remain completely OPEN.)* |
+| `0TH-BUILD-003` | [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `v1.4.1` | `FORMAL_INVARIANT_SUITE` | `SUB-032`, `GR-001`, `GR-002`, `GR-003` | No | 120 pure Lean 4.35.0 declarations + 8 Palomar targets for discrete p-adic AdS/CFT holography, multi-edge curved Gauss-Bonnet curvature, and weighted-graph RT strong subadditivity. *(Boundary: Discrete non-Archimedean model invariants only; continuum quantum gravity (SUB-032, GR-001..003) remains OPEN.)* |
+| `0TH-BUILD-004` | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `v0.5.0` | `FORMAL_INVARIANT_SUITE` | `NT-005`, `NT-066`, `NT-078`, `COMB-002` | No | 8-domain structural Lean 4.35.0 core (45 theorems, 10 non-vacuity witnesses, 14 adversarial refutations = 69 decls) covering Collatz, Erdos-Straus, Lonely Runner, Brocard, Primes/Twin Primes, Goldbach, Odd Perfect/Mersenne, and Ramsey R(3,3)=6. *(Boundary: Classical foundations, modular reductions, and sharpness bounds only; explicitly solves 0 open conjectures.)* |
+| `0TH-BUILD-007` | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `v2.5.0` | `FORMAL_INVARIANT_SUITE` | *(infrastructure / A-Life)* | No | 103 pure Lean 4.35.0 invariants + 9 Palomar targets + 10 adversarial refutations verifying CSS scoring, Titan Index, biconnected connectome handshaking, and AutoResearch ratchet for the 1,900-problem atlas itself. *(Boundary: Infrastructure and scoring-rubric invariants only; 0/1,900 catalogued open problems retired.)* |
+| `0TH-BUILD-002` | [`planaria`](https://github.com/0thernes/planaria) | `v2.3.0` | `FORMAL_INVARIANT_SUITE` | *(infrastructure / A-Life)* | No | 70 pure Lean 4.35.0 theorems + 70-target Palomar comparator verifying .hbin holographic erasure coding, GF(2^8) MDS recovery, Merkle authentication, and quorum elections. *(Boundary: Systems architecture and coding-theory invariants only; 0/1,900 Mega-Atlas problems retired.)* |
+| `0TH-BUILD-006` | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) | `main+research-branch` | `FORMAL_INVARIANT_SUITE` | `GR-001`, `GR-002` | No | 8 zero-axiom rfl Lean 4.35.0 theorems certifying classical Schwarzschild photon-sphere, ISCO, and BPT rational limits (ClassicalGR.lean). *(Boundary: Exact rational checks of classical textbook Schwarzschild limits; solves 0 black-hole open problems.)* |
+| `0TH-BUILD-001` | [`cellulogonic-mecha`](https://github.com/0thernes/cellulogonic-mecha) | `v1.2.1` | `FORMAL_INVARIANT_SUITE` | *(infrastructure / A-Life)* | No | 58 pure Lean 4.35.0 discrete biophysical & developmental invariants (paired with cellular-engine-omega 61, autophage 31, noetic-organism-omega 48, asmodensius-native 20 in the A-Life Omega stack). *(Boundary: Discrete simulation model invariants only; explicitly disclaims wet-lab proof, sentience, or retiring any Mega-Atlas problem.)* |
+
+
+---
+
+<!-- FILE: registry/LIVE_ECOSYSTEM_MIRROR.md -->
+
+# Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
+
+**Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
+**Synced (UTC):** `2026-11-26T02:45:06Z` · **Mode:** `live-github-api`  
+**Tracked Public Repositories:** 32 (`23` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+
+> **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
+
+| Repository | Archive IDs | Tiers | Archived Pin | Live `main` HEAD | Release | Latest CI | Sync Status |
+|---|---|---|---|---|---|---|---|
+| [`alife-singularity-omega-package`](https://github.com/0thernes/alife-singularity-omega-package) | `0TH-DISC-011` | Tier III | `c5319dd045` | `c5319dd045` | `main` | — | `EXACT_PIN_MATCH` |
+| [`Asmodensius`](https://github.com/0thernes/Asmodensius) | `0TH-DISC-002` | Tier III | `c72a4ec9a0` | `c72a4ec9a0` | `main` | [`success`](https://github.com/0thernes/Asmodensius/actions/runs/44051073860) | `EXACT_PIN_MATCH` |
+| [`asmodensius-native`](https://github.com/0thernes/asmodensius-native) | `0TH-BUILD-011` | Tier II | `782cd0ed5f` | `782cd0ed5f` | `main-snapshot` | — | `EXACT_PIN_MATCH` |
+| [`autophage`](https://github.com/0thernes/autophage) | `0TH-BUILD-009` | Tier II | `185bd16c9c` | `1f39157b3c` | `v1.0.0` | [`failure`](https://github.com/0thernes/autophage/actions/runs/45076037305) | `AHEAD_OF_PIN` |
+| [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) | `0TH-BUILD-006` | Tier II | `050455db86` | `050455db86` | `main+research-branch` | [`success`](https://github.com/0thernes/black-hole-simulation-lab/actions/runs/40110397354) | `EXACT_PIN_MATCH` |
+| [`catalytic-register-frontiers`](https://github.com/0thernes/catalytic-register-frontiers) | `0TH-2026-010` | Tier I | `4bfeabb05a` | `a83d79ea27` | `v1.0.1` | [`success`](https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45742997377) | `AHEAD_OF_PIN` |
+| [`cellular-engine-omega`](https://github.com/0thernes/cellular-engine-omega) | `0TH-BUILD-008` | Tier II | `9f08027892` | `62d00a6ba5` | `v4.2.0` | [`success`](https://github.com/0thernes/cellular-engine-omega/actions/runs/45076046922) | `AHEAD_OF_PIN` |
+| [`cellulogonic-mecha`](https://github.com/0thernes/cellulogonic-mecha) | `0TH-BUILD-001` | Tier II | `73ee3216a5` | `3b85b1515a` | `v1.2.1` | [`success`](https://github.com/0thernes/cellulogonic-mecha/actions/runs/45076041787) | `AHEAD_OF_PIN` |
+| [`coded-pir-mlwe-complexity-lab`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab) | `0TH-2026-012` | Tier I | `2ced9ee2ab` | `2ced9ee2ab` | `v3.0.0` | [`success`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45741284900) | `EXACT_PIN_MATCH` |
+| [`contextuality-evidence-lab`](https://github.com/0thernes/contextuality-evidence-lab) | `0TH-2026-005` | Tier I | `ef0682cd24` | `e3811f332c` | `v1.0.0` | [`success`](https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42815130874) | `HISTORICAL_ARCHIVED` |
+| [`contextuality-tensor-lab`](https://github.com/0thernes/contextuality-tensor-lab) | `0TH-2026-003` | Tier I | `f7a1e6e74f` | `81f8d20c95` | `v0.1.0` | [`success`](https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42752465789) | `HISTORICAL_ARCHIVED` |
+| [`cosmogonic-quantum-mechalogodrom`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom) | `0TH-BUILD-005`, `0TH-DISC-001` | Tier II / Tier III | `b0dcf153b9` | `b0dcf153b9` | `v0.23.0` | [`success`](https://github.com/0thernes/cosmogonic-quantum-mechalogodrom/actions/runs/45117980365) | `EXACT_PIN_MATCH` |
+| [`dimension-omega-singularity`](https://github.com/0thernes/dimension-omega-singularity) | `0TH-DISC-008` | Tier III | `947054ec64` | `947054ec64` | `main` | [`success`](https://github.com/0thernes/dimension-omega-singularity/actions/runs/42080074964) | `EXACT_PIN_MATCH` |
+| [`glitchling-jam`](https://github.com/0thernes/glitchling-jam) | `0TH-DISC-007` | Tier III | `2fb111f12e` | `97a7c604bd` | `main` | [`success`](https://github.com/0thernes/glitchling-jam/actions/runs/45558058418) | `AHEAD_OF_PIN` |
+| [`grimoire-algorithms-of-the-arcane`](https://github.com/0thernes/grimoire-algorithms-of-the-arcane) | `0TH-DISC-009` | Tier III | `edca7f8dc2` | `edca7f8dc2` | `main` | [`success`](https://github.com/0thernes/grimoire-algorithms-of-the-arcane/actions/runs/28751566956) | `EXACT_PIN_MATCH` |
+| [`hoggar-bound`](https://github.com/0thernes/hoggar-bound) | `0TH-2026-001` | Tier I | `c74135c429` | `4dd33138c3` | `v1.0.0` | — | `HISTORICAL_ARCHIVED` |
+| [`hoggar-bound-lab`](https://github.com/0thernes/hoggar-bound-lab) | `0TH-2026-002`, `0TH-DISC-010` | Tier I / Tier III | `eb2d83ef72` | `3ef737d7f0` | `v1.8.0` | [`success`](https://github.com/0thernes/hoggar-bound-lab/actions/runs/45367463693) | `HISTORICAL_ARCHIVED` |
+| [`human-synapse-bouton-lab`](https://github.com/0thernes/human-synapse-bouton-lab) | `0TH-2026-007`, `0TH-2026-008` | Tier I | `4539a48c36` | `4539a48c36` | `v1.2.0` | [`success`](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45277848980) | `EXACT_PIN_MATCH` |
+| [`kochen-specker-extremal-lab`](https://github.com/0thernes/kochen-specker-extremal-lab) | `0TH-2026-004` | Tier I | `03c8910e5a` | `03c8910e5a` | `v1.9.0` | [`success`](https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45741815040) | `EXACT_PIN_MATCH` |
+| [`multinomial-tv-conjecture`](https://github.com/0thernes/multinomial-tv-conjecture) | `0TH-2026-006` | Tier I | `6b0bca3a1f` | `6b0bca3a1f` | `v2.1.0` | [`success`](https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/45741329456) | `EXACT_PIN_MATCH` |
+| [`neuralese`](https://github.com/0thernes/neuralese) | `0TH-DISC-003` | Tier III | `2527d67355` | `2527d67355` | `v17.3.0` | [`success`](https://github.com/0thernes/neuralese/actions/runs/41337677626) | `EXACT_PIN_MATCH` |
+| [`neuralese-diffusion`](https://github.com/0thernes/neuralese-diffusion) | `0TH-DISC-004` | Tier III | `13e3b0e22e` | `13e3b0e22e` | `main` | [`failure`](https://github.com/0thernes/neuralese-diffusion/actions/runs/43396645937) | `EXACT_PIN_MATCH` |
+| [`noetic-organism-omega`](https://github.com/0thernes/noetic-organism-omega) | `0TH-BUILD-010` | Tier II | `0c372fdae4` | `0c372fdae4` | `main-ci-verified` | [`success`](https://github.com/0thernes/noetic-organism-omega/actions/runs/45076052369) | `EXACT_PIN_MATCH` |
+| [`omega-triscale-observatory`](https://github.com/0thernes/omega-triscale-observatory) | `0TH-DISC-012` | Tier III | `3aaac2f036` | `3aaac2f036` | `main` | — | `EXACT_PIN_MATCH` |
+| [`p-vs-np-frontier-lab`](https://github.com/0thernes/p-vs-np-frontier-lab) | `0TH-2026-013` | Tier I | `01e56da105` | `01e56da105` | `v1.1.0` | [`success`](https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45743257294) | `EXACT_PIN_MATCH` |
+| [`pauli-contextuality-lab`](https://github.com/0thernes/pauli-contextuality-lab) | `0TH-2026-009` | Tier I | `cbf384a47d` | `cbf384a47d` | `v2.9.0` | [`success`](https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45741807491) | `EXACT_PIN_MATCH` |
+| [`planaria`](https://github.com/0thernes/planaria) | `0TH-BUILD-002` | Tier II | `2fb167331f` | `2fb167331f` | `v2.3.0` | [`success`](https://github.com/0thernes/planaria/actions/runs/45732566225) | `EXACT_PIN_MATCH` |
+| [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `0TH-2026-011` | Tier I | `0b0033a377` | `0b0033a377` | `v2.4.0` | [`success`](https://github.com/0thernes/secmesh-pqsi/actions/runs/45740501716) | `EXACT_PIN_MATCH` |
+| [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `f11ddc5cef` | `f11ddc5cef` | `v1.4.1` | [`success`](https://github.com/0thernes/ultrametrica/actions/runs/45740532073) | `EXACT_PIN_MATCH` |
+| [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | `0TH-DISC-006` | Tier III | `0686cf9729` | `0686cf9729` | `main` | [`success`](https://github.com/0thernes/unsolved-black-hole-problems/actions/runs/45743010356) | `EXACT_PIN_MATCH` |
+| [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `0TH-BUILD-004`, `0TH-DISC-005` | Tier II / Tier III | `0604df5c70` | `0604df5c70` | `v0.5.0` | [`success`](https://github.com/0thernes/unsolved-mathematics/actions/runs/45742870717) | `EXACT_PIN_MATCH` |
+| [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `0TH-BUILD-007` | Tier II | `ceeee0c0a9` | `ceeee0c0a9` | `v2.5.0` | [`success`](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/45743513612) | `EXACT_PIN_MATCH` |
+
+---
+
+## Automatic Real-Time Sync Protocol
+
+- **Push-based dispatch:** Upstream repositories carrying `.github/workflows/notify-archive.yml` dispatch `upstream-repo-updated` to this hub on every `main` push (see [`docs/upstream-notify-workflow.yml`](../docs/upstream-notify-workflow.yml)).
+- **Scheduled pull mirror:** [`.github/workflows/live-sync.yml`](../.github/workflows/live-sync.yml) refreshes this mirror every 2 hours (`0 */2 * * *`), re-verifies SHA-256 integrity and `pytest`, and republishes the live GitHub Pages portal automatically whenever upstream status changes.
+- **Immutability rule:** Release-pinned frozen PDFs and Rekor-attested submodules are only advanced when matching frozen artifacts are archived; post-release upstream commits appear immediately as `AHEAD_OF_PIN` with live CI links.
+
+
+---
+
+<!-- FILE: docs/architecture.md -->
 
 # Archive Architecture (`docs/architecture.md`)
 
-`0thernes-research-archive` organizes all public scientific outputs authored by Alexander Stephen Donahue (`ORCID 0009-0006-8168-9648`) into **three strictly separated epistemic tiers**, backed by **20 pinned public Git submodules** under `repos/` and a unified SHA-256 integrity manifest (`CHECKSUMS.sha256` & `data/MANIFEST.sha256`).
+`0thernes-research-archive` is the **single canonical public master hub** organizing all public scientific outputs authored by Alexander Stephen Donahue (`ORCID 0009-0006-8168-9648`) into **three strictly separated epistemic tiers** (**36 entries**: 13 Tier I + 11 Tier II + 12 Tier III), backed by **23 pinned public Git submodules** under `repos/`, a **Solved Sub-Conjectures & Mega-Atlas V2 Bridge**, a **Real-Time Live Upstream Ecosystem Mirror**, and a unified SHA-256 integrity manifest (`CHECKSUMS.sha256` & `data/MANIFEST.sha256`).
 
 ```mermaid
 flowchart LR
-    R1["registry/PAPERS.json<br/>Tier I: 12 Standalone Preprints"] --> V["scripts/verify_archive.py"]
-    R2["registry/BUILD_PAPERS.json<br/>Tier II: 9 Public Build Papers & Lean Suites"] --> V
-    R3["registry/LAWS_AND_DISCOVERIES.json<br/>Tier III: 10 Public Laws, Claims & Atlases"] --> V
-    S["repos/* (20 Pinned Public Submodules)"] --> V
+    UP["Upstream Public 0thernes/* Repos"] -->|repository_dispatch / 2h cron| LS["scripts/live_sync.py"]
+    R1["registry/PAPERS.json<br/>Tier I: 13 Standalone Preprints"] --> V["scripts/verify_archive.py"]
+    R2["registry/BUILD_PAPERS.json<br/>Tier II: 11 Build Papers & Lean Suites"] --> V
+    R3["registry/LAWS_AND_DISCOVERIES.json<br/>Tier III: 12 Laws, Claims & Atlases"] --> V
+    BR["registry/SOLVED_AND_ATLAS_BRIDGE.json<br/>0/1900 Grand · 4 Peer Sub-Conjectures"] --> V
+    LS --> LM["registry/LIVE_ECOSYSTEM_MIRROR.json/.md"]
+    LM --> V
+    S["repos/* (23 Pinned Public Submodules)"] --> V
     V --> C["CHECKSUMS.sha256 & data/MANIFEST.sha256"]
     V --> D["Per-Entry METADATA.json + EVIDENCE.md"]
-    V --> P["scripts/build_site.py -> GitHub Pages Portal"]
+    V --> P["scripts/build_site.py -> WCAG 2.2 AA Pages Portal"]
 ```
 
 ## Verification Invariants
 
-1. **Single-script deterministic derivation (`scripts/verify_archive.py --sync`):** Regenerates all `METADATA.json`, `EVIDENCE.md`, `registry/*.md`, and `CHECKSUMS.sha256` directly from the three canonical JSON registries.
-2. **Exact submodule commit pinning:** Every `pinned_commit` in `PAPERS.json` and `BUILD_PAPERS.json` is cross-checked against `git ls-files --stage repos`.
-3. **Strict axiom & ORCID enforcement:** Every entry must carry ORCID `0009-0006-8168-9648`, an explicit `verification_boundary`, and Lean axiom allowlists strictly within `[propext, Classical.choice, Quot.sound]`.
-4. **Public-only privacy firewall:** Zero private repositories or third-party forks may appear in `registry/` or `.gitmodules`.
+1. **Single-script deterministic derivation (`scripts/verify_archive.py --sync`):** Regenerates all `METADATA.json`, `EVIDENCE.md`, `registry/*.md`, `CHECKSUMS.sha256`, and `data/MANIFEST.sha256` directly from the canonical JSON registries (verified idempotent by B14 tests).
+2. **Real-time live upstream mirror (`scripts/live_sync.py` + `.github/workflows/live-sync.yml`):** Tracks live `main` HEADs, latest releases, and CI status across all public non-fork `0thernes/*` repositories without disturbing immutable release-pinned frozen PDFs.
+3. **Exact submodule commit pinning & A24 size caps:** Every `pinned_commit` in `PAPERS.json` and `BUILD_PAPERS.json` matches `git ls-files --stage repos`, and every archived file is strictly `< 5 MB`.
+4. **Strict axiom, identity, link & ORCID enforcement:** Every entry carries ORCID `0009-0006-8168-9648`, zero unformed `"0thernes LLC"` assertions, an explicit `verification_boundary`, Lean axiom allowlists strictly within `[propext, Classical.choice, Quot.sound]`, and zero broken relative markdown links.
+5. **Public-only privacy firewall:** Zero private repositories or third-party forks may appear anywhere in `registry/`, `repos/`, `llms.txt`, or `.gitmodules`.
 
-=== docs/threat-model.md ===
 
-# Threat Model (`docs/threat-model.md`)
+---
 
-| Threat ID | Threat | Impact | Mitigations |
-|---|---|---|---|
-| **T1** | **Artifact tampering / silent PDF substitution** | Frozen paper differs from verified release | Byte-exact SHA-256 verification on every push in `scripts/verify_archive.py`, `sha256sum -c CHECKSUMS.sha256`, and `data/MANIFEST.sha256`; SLSA attestations on releases. |
-| **T2** | **Submodule drift** (registry claims commit X while `repos/` points to commit Y) | Reproduction tests wrong source tree | `get_git_submodule_commits` cross-checks `git ls-files --stage repos` against every `pinned_commit` in CI. |
-| **T3** | **Privacy-firewall leakage** (accidental inclusion of a private repository in public vault) | Exposure of private/proprietary paths or slugs | Automated visibility enforcement (`visibility == "PUBLIC"`) and private-slug guard in `tests/test_archive_integrity.py`. |
-| **T4** | **Epistemic tier conflation** (presenting empirical/exploratory Tier III items as Lean-proved Tier I theorems) | Misleading scientific claims | Three physically separated JSON/MD registries with mandatory `verification_boundary` fields checked in CI. |
-| **T5** | **Secret leakage or CI compromise** | Credential exposure | `gitleaks` report-only scan in `.github/workflows/archive-audit.yml`; minimal `contents: read` permissions on CI jobs. |
+<!-- FILE: docs/adr/0001-three-tier-epistemic-archive.md -->
 
-=== docs/operations.md ===
+# ADR 0001: Three-Tier Epistemic Separation and Pinned Submodule Vault Architecture
 
-# Operations, Backups & Offsite Mirror (`docs/operations.md`)
+- **Status:** Accepted
+- **Date:** 2026-11-21 (formalized in ADR format 2026-11-25)
 
-## 1. Syncing & Verifying Cryptographic Digests
+## Context
+A single researcher producing both standalone machine-checked mathematical preprints, engineering systems with embedded formal invariant proofs, and empirical/exploratory open-problem atlases risks conflating distinct levels of proof rigor if all artifacts sit in one flat bibliography.
 
-After updating any archived PDF, artifact, or pinned submodule commit:
+## Decision
+Separate the public master archive into three machine-readable registries (`registry/PAPERS.json`, `registry/BUILD_PAPERS.json`, `registry/LAWS_AND_DISCOVERIES.json`), require an explicit `verification_boundary` on every entry, pin every public source repository as an exact Git submodule under `repos/`, and lock every frozen artifact with byte-exact SHA-256 digests (`CHECKSUMS.sha256` & `data/MANIFEST.sha256`) verified on every push.
 
-```bash
-python3 scripts/verify_archive.py --sync
-cp CHECKSUMS.sha256 data/MANIFEST.sha256
-sha256sum -c CHECKSUMS.sha256
-python3 -m pytest -v tests/
-```
+## Consequences
+- Readers and auditors can immediately distinguish 6-kernel Lean 4 proofs (Tier I) from engineering invariant suites (Tier II) and empirical/atlas registries (Tier III).
+- Any upstream tampering or accidental submodule drift immediately fails `scripts/verify_archive.py`.
 
-## 2. Creating an Offline Git Bundle Backup
 
-Create a self-contained single-file backup of all archive metadata, frozen PDFs, and submodule pin pointers:
+---
 
-```bash
-git bundle create 0thernes-research-archive-$(cat VERSION).bundle --all
-git bundle verify 0thernes-research-archive-$(cat VERSION).bundle
-sha256sum 0thernes-research-archive-$(cat VERSION).bundle
-```
+<!-- FILE: docs/adr/0002-canonical-hub-and-live-sync.md -->
 
-## 3. Offsite Mirrors & Long-Term Preservation
+# ADR 0002: Single Canonical Public Hub, Atlas Consolidation, and Real-Time Live Sync
 
-- **GitHub Releases (`release.yml`):** Every `v*` tag publishes all three JSON registries, `CHECKSUMS.sha256`, `SHA256SUMS`, and Sigstore SLSA build-provenance attestations (`actions/attest-build-provenance@v2`).
-- **Software Heritage & Zenodo:** Archive snapshots and individual paper repositories are preserved independently of GitHub via Software Heritage (`Save Code Now`) and Zenodo DOIs (e.g., `10.5281/zenodo.24517198` on `0TH-2026-010`).
-- **Secondary Git remote mirror:** `git remote add mirror <url> && git push --mirror mirror`.
+- **Status:** Accepted (`2026-11-25`)
+- **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA; ORCID `0009-0006-8168-9648`)
+- **Supersedes:** Scattered ad-hoc manual synchronization across specialist catalogues
 
-=== docs/faq.md ===
+## Context
+
+Across the `0thernes` GitHub ecosystem, five repositories previously appeared to act as overlapping "lists or archives":
+
+1. `0thernes/0thernes-research-archive` — Public cryptographic master vault of all Tier I preprints, Tier II build white papers & Lean 4 suites, and Tier III laws/discoveries/atlases.
+2. `0thernes/unsolved-problems-mega-atlas` — Cross-disciplinary 1,900-problem open-problems connectome (`0TH-BUILD-007`).
+3. `0thernes/unsolved-mathematics` — Mathematics-focused open-problem atlas and 8-domain Lean 4 structural core (`0TH-BUILD-004`, `0TH-DISC-005`).
+4. `0thernes/unsolved-black-hole-problems` — 16-problem ranked black-hole physics catalogue (`0TH-DISC-006`).
+5. Private research staging repositories (strictly non-public; never referenced or indexed in public vaults).
+
+Without a unified live-sync layer and cross-atlas bridge, readers and agents had to inspect multiple repositories to answer basic questions: *"Which repository is the authoritative master list?"*, *"Which upstream repos have moved ahead of their frozen release pin?"*, and *"Have any of the 1,900 Mega-Atlas problems or smaller peer-literature conjectures been formally proved?"*
+
+## Decision
+
+1. **Single Canonical Public Hub:** Establish `0thernes/0thernes-research-archive` (and its GitHub Pages portal `https://0thernes.github.io/0thernes-research-archive/`) as the **one authoritative public master hub**. Specialist open-problem catalogues remain focused domain spokes indexed inside Tier II / Tier III and link back to the hub.
+2. **Authoritative Solved-Subconjecture & Mega-Atlas Bridge:** Maintain `registry/SOLVED_AND_ATLAS_BRIDGE.json` (and derived `.md`) inside this hub, explicitly enforcing `grand_problems_retired = 0 / 1900` while indexing every machine-checked peer-literature sub-conjecture, bounded partial result, barrier formalization, and discrete invariant suite.
+3. **Hybrid Pull + Push Real-Time Live Sync (Preserving Release Immutability):**
+   - **Pull-based scheduled mirror (zero secrets required):** `.github/workflows/live-sync.yml` runs `scripts/live_sync.py` every 2 hours (`0 */2 * * *`) using the standard `GITHUB_TOKEN` to refresh `registry/LIVE_ECOSYSTEM_MIRROR.json/.md`, update `README.md`'s bounded live status block, re-run `verify_archive.py --sync` + `pytest`, and commit straight to `main` (which immediately redeploys GitHub Pages).
+   - **Push-based instant dispatch (opt-in):** Upstream repos carrying `.github/workflows/notify-archive.yml` (template in `docs/upstream-notify-workflow.yml`) fire `repository_dispatch` (`upstream-repo-updated`) on every `main` push once `ARCHIVE_SYNC_TOKEN` is configured.
+   - **Why we do NOT inject commits into already-attested Tier I release repos:** Pushing cosmetic workflow files onto completed, Sigstore/Rekor-attested releases would break `HEAD == release_tag` parity and trigger redundant 20-minute 6-kernel CI runs. The 2-hour scheduled pull mirror already tracks every public repo automatically without disturbing immutable release tags.
+4. **Strict Public-Only Privacy Firewall:** `scripts/live_sync.py` rejects any repository where `private == true`, `fork == true`, or `owner != 0thernes`, enforced both at runtime and in `tests/test_archive_integrity.py`.
+
+## Consequences
+
+- **Positive:** One single canonical source of truth, automatically refreshed live mirror and GitHub Pages portal, zero broken cross-atlas links, and strict separation between immutable frozen release pins and live upstream `main` HEADs.
+- **Trade-off:** Instant sub-minute push updates require setting one optional `ARCHIVE_SYNC_TOKEN` secret on upstream repos; without it, sync latency is bounded by the 2-hour schedule (or instant via manual `workflow_dispatch`).
+
+
+---
+
+<!-- FILE: docs/faq.md -->
 
 # Frequently Asked Questions (`docs/faq.md`)
 
-### 1. Why are entries split into Tier I, Tier II, and Tier III?
-To enforce epistemic honesty: Tier I holds standalone formalized research preprints (`PAPERS.json`), Tier II holds public software/engineering builds with embedded white papers and Pure Lean 4 invariant suites (`BUILD_PAPERS.json`), and Tier III holds architectural laws, pre-registered empirical claims (including null results), finite certificates, and open-problem atlases (`LAWS_AND_DISCOVERIES.json`).
+### 1. Which repository is the single canonical master archive of everything `0thernes` has solved or verified?
+**This repository (`0thernes/0thernes-research-archive`)** — along with its live GitHub Pages portal at [`https://0thernes.github.io/0thernes-research-archive/`](https://0thernes.github.io/0thernes-research-archive/). Specialist open-problem catalogues (`unsolved-problems-mega-atlas`, `unsolved-mathematics`, `unsolved-black-hole-problems`) remain focused domain spokes indexed inside this hub and kept live-synced via [`.github/workflows/live-sync.yml`](../.github/workflows/live-sync.yml) (see [ADR 0002](adr/0002-canonical-hub-and-live-sync.md)).
 
-### 2. Have any papers in this archive retired one of the 1,900 Mega-Atlas problems?
-**No (`0 / 1,900` grand Mega-Atlas problems retired).** Specialized open conjectures such as Conjecture 7.7 of Banić & Elezović (`0TH-2026-006`) and Jonah's Conjecture E (`0TH-2026-009`) are formally proved in Lean 4 within their exact published scopes; see [`builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md`](../builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md).
+### 2. Why are entries split into Tier I, Tier II, and Tier III?
+To enforce epistemic honesty: Tier I holds standalone formalized research preprints (`PAPERS.json`), Tier II holds public software/engineering builds with embedded white papers and Pure Lean 4 invariant suites (`BUILD_PAPERS.json`), and Tier III holds architectural laws, pre-registered empirical claims (including null results), finite certificates, synthesis dossiers, and open-problem atlases (`LAWS_AND_DISCOVERIES.json`).
 
-### 3. How do I verify every archived PDF and submodule pin locally?
-Run `python3 scripts/verify_archive.py` and `sha256sum -c CHECKSUMS.sha256`. Every hash and Git submodule pin is verified in under 2 seconds.
+### 3. Have any papers in this archive retired one of the 1,900 Mega-Atlas problems?
+**No (`0 / 1,900` grand Mega-Atlas problems retired).** Four peer-literature open sub-conjectures/questions (`0TH-2026-006` Conjecture 7.7, `0TH-2026-010` Vinciguerra Sec. 6, `0TH-2026-009` Track 2 Muller–Saniga Sec. 6, `0TH-2026-012` Sun–Tao–Xu–Zhang Schur-syzygy rank) plus Jonah's Conjecture E (`0TH-2026-009` Track 1, with cited Theorem B4 outside Lean) are formally proved in Lean 4.35.0 within their exact published scopes; see [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](../registry/SOLVED_AND_ATLAS_BRIDGE.md) and [`builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md`](../builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md).
 
-=== docs/glossary.md ===
+### 4. How does real-time live synchronization work across upstream repos?
+Every 2 hours (and immediately whenever an upstream repo dispatches `upstream-repo-updated` via `.github/workflows/notify-archive.yml`), `.github/workflows/live-sync.yml` runs `scripts/live_sync.py`, updates `registry/LIVE_ECOSYSTEM_MIRROR.json/.md` and the bounded live status block in `README.md`, re-verifies SHA-256 digests and `pytest`, and redeploys GitHub Pages automatically.
 
-# Glossary (`docs/glossary.md`)
-
-- **Tier I (`PAPERS.json`):** Standalone research preprints with frozen PDFs, Lean 4 formal proofs, and falsification commands.
-- **Tier II (`BUILD_PAPERS.json`):** Public engineering builds shipping embedded white papers and Pure Lean 4.35.0 invariant suites.
-- **Tier III (`LAWS_AND_DISCOVERIES.json`):** Public architectural laws, pre-registered empirical falsification ledgers, finite certificates, and open-problem atlases.
-- **Pinned Git Submodule:** Exact 40-character Git commit SHA under `repos/` verified against `registry/*.json` via `git ls-files --stage repos`.
-- **Ten Finding Classes (Build Standard `R7`):** `bug`, `error`, `issue`, `problem`, `concern`, `dilemma`, `conflict`, `gap`, `hole`, `blindspot` (see `.github/labels.tsv` for concise definitions).
+### 5. How do I verify every archived PDF, link, and submodule pin locally?
+Run `python3 scripts/verify_archive.py`, `sha256sum -c CHECKSUMS.sha256`, and `python3 -m pytest -v tests/`. Every hash, relative link, privacy-firewall invariant, and Git submodule pin is verified in seconds.

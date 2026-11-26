@@ -1,5 +1,7 @@
 # Unsolved Black-Hole Problems
 
+> **Canonical Ecosystem Hub:** This repository is the focused 16-problem black-hole physics catalogue (archived as **`0TH-DISC-006`**). For the **single consolidated master index** of all verified Lean 4 proofs, AMS-LaTeX white papers, computational builds, and live-synced cross-atlas status across `0thernes`, see [`0thernes/0thernes-research-archive`](https://github.com/0thernes/0thernes-research-archive) ([Live Portal](https://0thernes.github.io/0thernes-research-archive/)). For the unified 1,900-problem cross-disciplinary open-problems atlas, see [`0thernes/unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) (`0TH-BUILD-007`).
+
 A ranked, research-grade catalogue of the major **open problems** about black
 holes — from the deepest, oldest foundational mysteries to the more tractable,
 observationally-progressing questions. Each problem gets its own subfolder with

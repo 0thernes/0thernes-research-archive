@@ -1,7 +1,7 @@
 # Discovery / Law / Pre-Registered Evidence Dossier — `0TH-DISC-008`
 
 **Title:** Dimension Omega Singularity: 3,000-Mechanism Architectural Synthesis Reports (Biologic Substrates, High-Weirdness & A-Life/Consciousness Indicators)  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Epistemic Tier:** `architectural_synthesis_report`  
 **Domain:** Artificial Life / Computational Architecture / Exploratory Synthesis · **Date:** 2026-11-05
 

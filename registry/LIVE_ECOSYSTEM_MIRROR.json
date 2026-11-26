@@ -1,0 +1,828 @@
+{
+  "schema_version": "1.0.0",
+  "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
+  "synced_utc": "2026-11-26T02:45:06Z",
+  "sync_mode": "live-github-api",
+  "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
+  "counts": {
+    "tier1_papers": 13,
+    "tier2_builds": 11,
+    "tier3_discoveries": 12,
+    "total_entries": 36,
+    "unique_public_repositories": 32,
+    "pinned_submodules": 23,
+    "exact_pin_match": 23,
+    "ahead_of_pin": 5,
+    "historical_archived": 4,
+    "api_errors": 0
+  },
+  "repositories": [
+    {
+      "slug": "alife-singularity-omega-package",
+      "repository": "https://github.com/0thernes/alife-singularity-omega-package",
+      "archive_ids": [
+        "0TH-DISC-011"
+      ],
+      "tiers": [
+        "Tier III"
+      ],
+      "pinned_commit": "c5319dd04507a3a45e00536704974009e0c8f11e",
+      "archived_version": "main",
+      "submodule_path": null,
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "c5319dd04507a3a45e00536704974009e0c8f11e",
+      "latest_release_tag": null,
+      "pushed_at": "2026-11-22T22:09:58Z",
+      "ci_run_id": null,
+      "ci_conclusion": null,
+      "ci_html_url": null,
+      "pages_url": null,
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "Asmodensius",
+      "repository": "https://github.com/0thernes/Asmodensius",
+      "archive_ids": [
+        "0TH-DISC-002"
+      ],
+      "tiers": [
+        "Tier III"
+      ],
+      "pinned_commit": "c72a4ec9a0cba60b302a796be48def072abe9f53",
+      "archived_version": "main",
+      "submodule_path": null,
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "c72a4ec9a0cba60b302a796be48def072abe9f53",
+      "latest_release_tag": null,
+      "pushed_at": "2026-11-17T08:56:47Z",
+      "ci_run_id": 44051073860,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/Asmodensius/actions/runs/44051073860",
+      "pages_url": "https://0thernes.github.io/Asmodensius/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "asmodensius-native",
+      "repository": "https://github.com/0thernes/asmodensius-native",
+      "archive_ids": [
+        "0TH-BUILD-011"
+      ],
+      "tiers": [
+        "Tier II"
+      ],
+      "pinned_commit": "782cd0ed5f2aa06383c6b6279ac6ff22b42e8f47",
+      "archived_version": "main-snapshot",
+      "submodule_path": "repos/asmodensius-native",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "782cd0ed5f2aa06383c6b6279ac6ff22b42e8f47",
+      "latest_release_tag": null,
+      "pushed_at": "2026-11-22T22:08:38Z",
+      "ci_run_id": null,
+      "ci_conclusion": null,
+      "ci_html_url": null,
+      "pages_url": null,
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "autophage",
+      "repository": "https://github.com/0thernes/autophage",
+      "archive_ids": [
+        "0TH-BUILD-009"
+      ],
+      "tiers": [
+        "Tier II"
+      ],
+      "pinned_commit": "185bd16c9c2dfcfacc1a7ef3caf99b78c1c0f44a",
+      "archived_version": "v1.0.0",
+      "submodule_path": "repos/autophage",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "1f39157b3c2f214917447aedacb286f2eeb4b67f",
+      "latest_release_tag": "v1.0.0",
+      "pushed_at": "2026-11-22T22:08:41Z",
+      "ci_run_id": 45076037305,
+      "ci_conclusion": "failure",
+      "ci_html_url": "https://github.com/0thernes/autophage/actions/runs/45076037305",
+      "pages_url": null,
+      "sync_status": "AHEAD_OF_PIN",
+      "error": null
+    },
+    {
+      "slug": "black-hole-simulation-lab",
+      "repository": "https://github.com/0thernes/black-hole-simulation-lab",
+      "archive_ids": [
+        "0TH-BUILD-006"
+      ],
+      "tiers": [
+        "Tier II"
+      ],
+      "pinned_commit": "050455db866d32eb115d0cd1a39f9b90a76fdd6f",
+      "archived_version": "main+research-branch",
+      "submodule_path": "repos/black-hole-simulation-lab",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "050455db866d32eb115d0cd1a39f9b90a76fdd6f",
+      "latest_release_tag": null,
+      "pushed_at": "2026-11-10T14:53:07Z",
+      "ci_run_id": 40110397354,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/black-hole-simulation-lab/actions/runs/40110397354",
+      "pages_url": "https://0thernes.github.io/black-hole-simulation-lab/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "catalytic-register-frontiers",
+      "repository": "https://github.com/0thernes/catalytic-register-frontiers",
+      "archive_ids": [
+        "0TH-2026-010"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "4bfeabb05a960450114f975f477259ccf189cdf1",
+      "archived_version": "v1.0.1",
+      "submodule_path": "repos/catalytic-register-frontiers",
+      "registered_pages_url": "https://0thernes.github.io/catalytic-register-frontiers/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "a83d79ea27136a4b4a7bf4e7e5a74680d2e336a1",
+      "latest_release_tag": "v1.0.1",
+      "pushed_at": "2026-11-26T02:31:27Z",
+      "ci_run_id": 45742997377,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45742997377",
+      "pages_url": "https://0thernes.github.io/catalytic-register-frontiers/",
+      "sync_status": "AHEAD_OF_PIN",
+      "error": null
+    },
+    {
+      "slug": "cellular-engine-omega",
+      "repository": "https://github.com/0thernes/cellular-engine-omega",
+      "archive_ids": [
+        "0TH-BUILD-008"
+      ],
+      "tiers": [
+        "Tier II"
+      ],
+      "pinned_commit": "9f0802789219929a05a00fc6b97d82a69c359946",
+      "archived_version": "v4.2.0",
+      "submodule_path": "repos/cellular-engine-omega",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "62d00a6ba567cd6dad8f49b4745b1c5903d3ee87",
+      "latest_release_tag": "v4.2.0",
+      "pushed_at": "2026-11-22T22:08:47Z",
+      "ci_run_id": 45076046922,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/cellular-engine-omega/actions/runs/45076046922",
+      "pages_url": null,
+      "sync_status": "AHEAD_OF_PIN",
+      "error": null
+    },
+    {
+      "slug": "cellulogonic-mecha",
+      "repository": "https://github.com/0thernes/cellulogonic-mecha",
+      "archive_ids": [
+        "0TH-BUILD-001"
+      ],
+      "tiers": [
+        "Tier II"
+      ],
+      "pinned_commit": "73ee3216a509a908ecf6e9d76ca5b5cb467e2138",
+      "archived_version": "v1.2.1",
+      "submodule_path": "repos/cellulogonic-mecha",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "3b85b1515af7507e7ddd1ce132d8a0e091fa5ee9",
+      "latest_release_tag": "v1.2.1",
+      "pushed_at": "2026-11-22T22:08:44Z",
+      "ci_run_id": 45076041787,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/cellulogonic-mecha/actions/runs/45076041787",
+      "pages_url": null,
+      "sync_status": "AHEAD_OF_PIN",
+      "error": null
+    },
+    {
+      "slug": "coded-pir-mlwe-complexity-lab",
+      "repository": "https://github.com/0thernes/coded-pir-mlwe-complexity-lab",
+      "archive_ids": [
+        "0TH-2026-012"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "2ced9ee2ab3b9d5b574eeb4fdbb164e2bd14d0f8",
+      "archived_version": "v3.0.0",
+      "submodule_path": "repos/coded-pir-mlwe-complexity-lab",
+      "registered_pages_url": "https://0thernes.github.io/coded-pir-mlwe-complexity-lab/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "2ced9ee2ab3b9d5b574eeb4fdbb164e2bd14d0f8",
+      "latest_release_tag": "v3.0.0",
+      "pushed_at": "2026-11-26T02:20:38Z",
+      "ci_run_id": 45741284900,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45741284900",
+      "pages_url": "https://0thernes.github.io/coded-pir-mlwe-complexity-lab/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "contextuality-evidence-lab",
+      "repository": "https://github.com/0thernes/contextuality-evidence-lab",
+      "archive_ids": [
+        "0TH-2026-005"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "ef0682cd24ca248c5e502731c462272a4ac93432",
+      "archived_version": "v1.0.0",
+      "submodule_path": "repos/contextuality-evidence-lab",
+      "registered_pages_url": "https://0thernes.github.io/contextuality-evidence-lab/",
+      "default_branch": "main",
+      "archived": true,
+      "live_head_commit": "e3811f332ca4d908b4a91474bc667a0584d8ac28",
+      "latest_release_tag": "v1.0.0",
+      "pushed_at": "2026-11-24T09:41:53Z",
+      "ci_run_id": 42815130874,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42815130874",
+      "pages_url": "https://0thernes.github.io/contextuality-evidence-lab/",
+      "sync_status": "HISTORICAL_ARCHIVED",
+      "error": null
+    },
+    {
+      "slug": "contextuality-tensor-lab",
+      "repository": "https://github.com/0thernes/contextuality-tensor-lab",
+      "archive_ids": [
+        "0TH-2026-003"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "f7a1e6e74f8590d9cee0aa4c01f9ea3800f7fe87",
+      "archived_version": "v0.1.0",
+      "submodule_path": "repos/contextuality-tensor-lab",
+      "registered_pages_url": "https://0thernes.github.io/contextuality-tensor-lab/",
+      "default_branch": "main",
+      "archived": true,
+      "live_head_commit": "81f8d20c95339f8b2161abc971882e60c954aab9",
+      "latest_release_tag": "v0.1.0",
+      "pushed_at": "2026-11-24T09:41:42Z",
+      "ci_run_id": 42752465789,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42752465789",
+      "pages_url": "https://0thernes.github.io/contextuality-tensor-lab/",
+      "sync_status": "HISTORICAL_ARCHIVED",
+      "error": null
+    },
+    {
+      "slug": "cosmogonic-quantum-mechalogodrom",
+      "repository": "https://github.com/0thernes/cosmogonic-quantum-mechalogodrom",
+      "archive_ids": [
+        "0TH-BUILD-005",
+        "0TH-DISC-001"
+      ],
+      "tiers": [
+        "Tier II",
+        "Tier III"
+      ],
+      "pinned_commit": "b0dcf153b93af839a8f7406795dd2e0e45777df4",
+      "archived_version": "v0.14.3",
+      "submodule_path": "repos/cosmogonic-quantum-mechalogodrom",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "b0dcf153b93af839a8f7406795dd2e0e45777df4",
+      "latest_release_tag": "v0.23.0",
+      "pushed_at": "2026-11-05T20:06:21Z",
+      "ci_run_id": 45117980365,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/cosmogonic-quantum-mechalogodrom/actions/runs/45117980365",
+      "pages_url": "https://0thernes.github.io/cosmogonic-quantum-mechalogodrom/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "dimension-omega-singularity",
+      "repository": "https://github.com/0thernes/dimension-omega-singularity",
+      "archive_ids": [
+        "0TH-DISC-008"
+      ],
+      "tiers": [
+        "Tier III"
+      ],
+      "pinned_commit": "947054ec64878530d0f9abdddb9316494a9de34f",
+      "archived_version": "main",
+      "submodule_path": null,
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "947054ec64878530d0f9abdddb9316494a9de34f",
+      "latest_release_tag": null,
+      "pushed_at": "2026-11-05T18:00:21Z",
+      "ci_run_id": 42080074964,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/dimension-omega-singularity/actions/runs/42080074964",
+      "pages_url": "https://0thernes.github.io/dimension-omega-singularity/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "glitchling-jam",
+      "repository": "https://github.com/0thernes/glitchling-jam",
+      "archive_ids": [
+        "0TH-DISC-007"
+      ],
+      "tiers": [
+        "Tier III"
+      ],
+      "pinned_commit": "2fb111f12e85a13f22357e74bbe9921a0884c935",
+      "archived_version": "main",
+      "submodule_path": null,
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "97a7c604bd16da86212d0a26a54d01b6223295f4",
+      "latest_release_tag": null,
+      "pushed_at": "2026-11-25T06:05:31Z",
+      "ci_run_id": 45558058418,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/glitchling-jam/actions/runs/45558058418",
+      "pages_url": "https://0thernes.github.io/glitchling-jam/",
+      "sync_status": "AHEAD_OF_PIN",
+      "error": null
+    },
+    {
+      "slug": "grimoire-algorithms-of-the-arcane",
+      "repository": "https://github.com/0thernes/grimoire-algorithms-of-the-arcane",
+      "archive_ids": [
+        "0TH-DISC-009"
+      ],
+      "tiers": [
+        "Tier III"
+      ],
+      "pinned_commit": "edca7f8dc2f8bba27402a248301dd30d19ff1781",
+      "archived_version": "main",
+      "submodule_path": null,
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "edca7f8dc2f8bba27402a248301dd30d19ff1781",
+      "latest_release_tag": null,
+      "pushed_at": "2026-07-05T19:03:17Z",
+      "ci_run_id": 28751566956,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/grimoire-algorithms-of-the-arcane/actions/runs/28751566956",
+      "pages_url": "https://0thernes.github.io/grimoire-algorithms-of-the-arcane/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "hoggar-bound",
+      "repository": "https://github.com/0thernes/hoggar-bound",
+      "archive_ids": [
+        "0TH-2026-001"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "c74135c429a0ef827c757df5fc76139aed62a819",
+      "archived_version": "v1.0.0",
+      "submodule_path": "repos/hoggar-bound",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": true,
+      "live_head_commit": "4dd33138c3552e1f896f86c918605f793518decc",
+      "latest_release_tag": "v1.0.0",
+      "pushed_at": "2026-11-24T09:41:35Z",
+      "ci_run_id": null,
+      "ci_conclusion": null,
+      "ci_html_url": null,
+      "pages_url": null,
+      "sync_status": "HISTORICAL_ARCHIVED",
+      "error": null
+    },
+    {
+      "slug": "hoggar-bound-lab",
+      "repository": "https://github.com/0thernes/hoggar-bound-lab",
+      "archive_ids": [
+        "0TH-2026-002",
+        "0TH-DISC-010"
+      ],
+      "tiers": [
+        "Tier I",
+        "Tier III"
+      ],
+      "pinned_commit": "eb2d83ef72f882b33a89d81bead66def2ab5283d",
+      "archived_version": "v1.8.0",
+      "submodule_path": "repos/hoggar-bound-lab",
+      "registered_pages_url": "https://0thernes.github.io/hoggar-bound-lab/",
+      "default_branch": "main",
+      "archived": true,
+      "live_head_commit": "3ef737d7f0725508dda60315673cddfb4c255053",
+      "latest_release_tag": "v1.8.0",
+      "pushed_at": "2026-11-24T09:41:29Z",
+      "ci_run_id": 45367463693,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/hoggar-bound-lab/actions/runs/45367463693",
+      "pages_url": "https://0thernes.github.io/hoggar-bound-lab/",
+      "sync_status": "HISTORICAL_ARCHIVED",
+      "error": null
+    },
+    {
+      "slug": "human-synapse-bouton-lab",
+      "repository": "https://github.com/0thernes/human-synapse-bouton-lab",
+      "archive_ids": [
+        "0TH-2026-007",
+        "0TH-2026-008"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "4539a48c362e473a91f4b2d7c610962e04878b1a",
+      "archived_version": "v1.2.0",
+      "submodule_path": "repos/human-synapse-bouton-lab",
+      "registered_pages_url": "https://0thernes.github.io/human-synapse-bouton-lab/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "4539a48c362e473a91f4b2d7c610962e04878b1a",
+      "latest_release_tag": "v1.2.0",
+      "pushed_at": "2026-11-23T22:15:00Z",
+      "ci_run_id": 45277848980,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45277848980",
+      "pages_url": "https://0thernes.github.io/human-synapse-bouton-lab/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "kochen-specker-extremal-lab",
+      "repository": "https://github.com/0thernes/kochen-specker-extremal-lab",
+      "archive_ids": [
+        "0TH-2026-004"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "03c8910e5abce13b8dcfcb6974c69ca1fd709c8f",
+      "archived_version": "v1.9.0",
+      "submodule_path": "repos/kochen-specker-extremal-lab",
+      "registered_pages_url": "https://0thernes.github.io/kochen-specker-extremal-lab/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "03c8910e5abce13b8dcfcb6974c69ca1fd709c8f",
+      "latest_release_tag": "v1.9.0",
+      "pushed_at": "2026-11-26T02:42:46Z",
+      "ci_run_id": 45741815040,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45741815040",
+      "pages_url": "https://0thernes.github.io/kochen-specker-extremal-lab/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "multinomial-tv-conjecture",
+      "repository": "https://github.com/0thernes/multinomial-tv-conjecture",
+      "archive_ids": [
+        "0TH-2026-006"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "6b0bca3a1f4b94851a60dd7f95c3ef9a1d228a3f",
+      "archived_version": "v2.1.0",
+      "submodule_path": "repos/multinomial-tv-conjecture",
+      "registered_pages_url": "https://0thernes.github.io/multinomial-tv-conjecture/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "6b0bca3a1f4b94851a60dd7f95c3ef9a1d228a3f",
+      "latest_release_tag": "v2.1.0",
+      "pushed_at": "2026-11-26T02:16:35Z",
+      "ci_run_id": 45741329456,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/45741329456",
+      "pages_url": "https://0thernes.github.io/multinomial-tv-conjecture/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "neuralese",
+      "repository": "https://github.com/0thernes/neuralese",
+      "archive_ids": [
+        "0TH-DISC-003"
+      ],
+      "tiers": [
+        "Tier III"
+      ],
+      "pinned_commit": "2527d67355524c873be7acfa0b5560af0076f144",
+      "archived_version": "main+gh-pages",
+      "submodule_path": null,
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "2527d67355524c873be7acfa0b5560af0076f144",
+      "latest_release_tag": "v17.3.0",
+      "pushed_at": "2026-11-25T18:48:05Z",
+      "ci_run_id": 41337677626,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/neuralese/actions/runs/41337677626",
+      "pages_url": "https://0thernes.github.io/neuralese/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "neuralese-diffusion",
+      "repository": "https://github.com/0thernes/neuralese-diffusion",
+      "archive_ids": [
+        "0TH-DISC-004"
+      ],
+      "tiers": [
+        "Tier III"
+      ],
+      "pinned_commit": "13e3b0e22ea756da26c4e0a98c9eccf1bec92e98",
+      "archived_version": "main",
+      "submodule_path": null,
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "13e3b0e22ea756da26c4e0a98c9eccf1bec92e98",
+      "latest_release_tag": null,
+      "pushed_at": "2026-10-27T06:52:06Z",
+      "ci_run_id": 43396645937,
+      "ci_conclusion": "failure",
+      "ci_html_url": "https://github.com/0thernes/neuralese-diffusion/actions/runs/43396645937",
+      "pages_url": "https://0thernes.github.io/neuralese-diffusion/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "noetic-organism-omega",
+      "repository": "https://github.com/0thernes/noetic-organism-omega",
+      "archive_ids": [
+        "0TH-BUILD-010"
+      ],
+      "tiers": [
+        "Tier II"
+      ],
+      "pinned_commit": "0c372fdae4d9794021b04128df3f95ea50727452",
+      "archived_version": "main-ci-verified",
+      "submodule_path": "repos/noetic-organism-omega",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "0c372fdae4d9794021b04128df3f95ea50727452",
+      "latest_release_tag": null,
+      "pushed_at": "2026-11-22T22:08:50Z",
+      "ci_run_id": 45076052369,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/noetic-organism-omega/actions/runs/45076052369",
+      "pages_url": null,
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "omega-triscale-observatory",
+      "repository": "https://github.com/0thernes/omega-triscale-observatory",
+      "archive_ids": [
+        "0TH-DISC-012"
+      ],
+      "tiers": [
+        "Tier III"
+      ],
+      "pinned_commit": "3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9",
+      "archived_version": "main",
+      "submodule_path": null,
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9",
+      "latest_release_tag": null,
+      "pushed_at": "2026-11-22T22:10:49Z",
+      "ci_run_id": null,
+      "ci_conclusion": null,
+      "ci_html_url": null,
+      "pages_url": null,
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "p-vs-np-frontier-lab",
+      "repository": "https://github.com/0thernes/p-vs-np-frontier-lab",
+      "archive_ids": [
+        "0TH-2026-013"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "01e56da105db4ec7cabb8aa19b8c7f6dfd48ac67",
+      "archived_version": "v1.1.0",
+      "submodule_path": "repos/p-vs-np-frontier-lab",
+      "registered_pages_url": "https://0thernes.github.io/p-vs-np-frontier-lab/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "01e56da105db4ec7cabb8aa19b8c7f6dfd48ac67",
+      "latest_release_tag": "v1.1.0",
+      "pushed_at": "2026-11-26T02:33:56Z",
+      "ci_run_id": 45743257294,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45743257294",
+      "pages_url": "https://0thernes.github.io/p-vs-np-frontier-lab/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "pauli-contextuality-lab",
+      "repository": "https://github.com/0thernes/pauli-contextuality-lab",
+      "archive_ids": [
+        "0TH-2026-009"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "cbf384a47db065f0aed7d0b5fce6d3ec72b03794",
+      "archived_version": "v2.9.0",
+      "submodule_path": "repos/pauli-contextuality-lab",
+      "registered_pages_url": "https://0thernes.github.io/pauli-contextuality-lab/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "cbf384a47db065f0aed7d0b5fce6d3ec72b03794",
+      "latest_release_tag": "v2.9.0",
+      "pushed_at": "2026-11-26T02:45:22Z",
+      "ci_run_id": 45741807491,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45741807491",
+      "pages_url": "https://0thernes.github.io/pauli-contextuality-lab/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "planaria",
+      "repository": "https://github.com/0thernes/planaria",
+      "archive_ids": [
+        "0TH-BUILD-002"
+      ],
+      "tiers": [
+        "Tier II"
+      ],
+      "pinned_commit": "2fb167331f55a800c212f3578a7358337ed37ef4",
+      "archived_version": "v2.3.0",
+      "submodule_path": "repos/planaria",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "2fb167331f55a800c212f3578a7358337ed37ef4",
+      "latest_release_tag": "v2.3.0",
+      "pushed_at": "2026-11-26T00:58:57Z",
+      "ci_run_id": 45732566225,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/planaria/actions/runs/45732566225",
+      "pages_url": "https://0thernes.github.io/planaria/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "secmesh-pqsi",
+      "repository": "https://github.com/0thernes/secmesh-pqsi",
+      "archive_ids": [
+        "0TH-2026-011"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "0b0033a377e47a0ac4e2cf91f0d5c10509d32ecf",
+      "archived_version": "v2.4.0",
+      "submodule_path": "repos/secmesh-pqsi",
+      "registered_pages_url": "https://0thernes.github.io/secmesh-pqsi/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "0b0033a377e47a0ac4e2cf91f0d5c10509d32ecf",
+      "latest_release_tag": "v2.4.0",
+      "pushed_at": "2026-11-26T02:09:13Z",
+      "ci_run_id": 45740501716,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/secmesh-pqsi/actions/runs/45740501716",
+      "pages_url": "https://0thernes.github.io/secmesh-pqsi/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "ultrametrica",
+      "repository": "https://github.com/0thernes/ultrametrica",
+      "archive_ids": [
+        "0TH-BUILD-003"
+      ],
+      "tiers": [
+        "Tier II"
+      ],
+      "pinned_commit": "f11ddc5ceff1a696c5677449d4dd59df608a535b",
+      "archived_version": "v1.4.1",
+      "submodule_path": "repos/ultrametrica",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "f11ddc5ceff1a696c5677449d4dd59df608a535b",
+      "latest_release_tag": "v1.4.1",
+      "pushed_at": "2026-11-26T02:09:29Z",
+      "ci_run_id": 45740532073,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/ultrametrica/actions/runs/45740532073",
+      "pages_url": "https://0thernes.github.io/ultrametrica/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "unsolved-black-hole-problems",
+      "repository": "https://github.com/0thernes/unsolved-black-hole-problems",
+      "archive_ids": [
+        "0TH-DISC-006"
+      ],
+      "tiers": [
+        "Tier III"
+      ],
+      "pinned_commit": "0686cf9729fa62185e719c1a4ed750d0fc6f7093",
+      "archived_version": "main",
+      "submodule_path": null,
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "0686cf9729fa62185e719c1a4ed750d0fc6f7093",
+      "latest_release_tag": null,
+      "pushed_at": "2026-11-26T02:31:34Z",
+      "ci_run_id": 45743010356,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/unsolved-black-hole-problems/actions/runs/45743010356",
+      "pages_url": null,
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "unsolved-mathematics",
+      "repository": "https://github.com/0thernes/unsolved-mathematics",
+      "archive_ids": [
+        "0TH-BUILD-004",
+        "0TH-DISC-005"
+      ],
+      "tiers": [
+        "Tier II",
+        "Tier III"
+      ],
+      "pinned_commit": "0604df5c70c850df44f3fdd20519e46c82925224",
+      "archived_version": "v0.5.0",
+      "submodule_path": "repos/unsolved-mathematics",
+      "registered_pages_url": "https://0thernes.github.io/unsolved-mathematics/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "0604df5c70c850df44f3fdd20519e46c82925224",
+      "latest_release_tag": "v0.5.0",
+      "pushed_at": "2026-11-26T02:30:24Z",
+      "ci_run_id": 45742870717,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/unsolved-mathematics/actions/runs/45742870717",
+      "pages_url": "https://0thernes.github.io/unsolved-mathematics/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    },
+    {
+      "slug": "unsolved-problems-mega-atlas",
+      "repository": "https://github.com/0thernes/unsolved-problems-mega-atlas",
+      "archive_ids": [
+        "0TH-BUILD-007"
+      ],
+      "tiers": [
+        "Tier II"
+      ],
+      "pinned_commit": "ceeee0c0a9a68becf402ce4c3c475cdeff053d3b",
+      "archived_version": "v2.5.0",
+      "submodule_path": "repos/unsolved-problems-mega-atlas",
+      "registered_pages_url": null,
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "ceeee0c0a9a68becf402ce4c3c475cdeff053d3b",
+      "latest_release_tag": "v2.5.0",
+      "pushed_at": "2026-11-26T02:42:40Z",
+      "ci_run_id": 45743513612,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/45743513612",
+      "pages_url": "https://0thernes.github.io/unsolved-problems-mega-atlas/",
+      "sync_status": "EXACT_PIN_MATCH",
+      "error": null
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # Build White Paper & Proof Evidence Dossier — `0TH-BUILD-001`
 
 **Title:** CELLULOGONIC MECHA v1.2.1: Non-Equilibrium Chemiosmotic, Elastic-Membrane, Endosymbiotic, Bioelectric & Morphogenetic-GRN Cellular Artificial Life Laboratory with 58 Pure Lean 4.35.0 Proofs  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Artificial Life / Biophysical Simulation / Developmental Biology / Formal Methods  
 **Version / Date:** `v1.2.1` (2026-11-21)
 

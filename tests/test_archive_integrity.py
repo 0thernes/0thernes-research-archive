@@ -1,4 +1,4 @@
-"""Automated integrity, property-based, negative, mutation, and privacy-firewall tests for 0thernes-research-archive."""
+"""Automated integrity, property-based, negative, mutation, failure-injection, link, and privacy-firewall tests for 0thernes-research-archive."""
 from __future__ import annotations
 
 import hashlib
@@ -6,9 +6,12 @@ import json
 import re
 import subprocess
 import sys
+import urllib.error
 from pathlib import Path
+from typing import Any
 
 import jsonschema
+import pytest
 import yaml
 from hypothesis import given, settings
 from hypothesis import strategies as st
@@ -16,6 +19,8 @@ from hypothesis import strategies as st
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
+import build_site as bs  # noqa: E402
+import live_sync as ls  # noqa: E402
 import verify_archive as va  # noqa: E402
 
 
@@ -48,24 +53,43 @@ def test_r4_no_banned_files() -> None:
 
 
 def test_privacy_firewall_no_private_repos() -> None:
-    """Ensure private repository slugs never leak into public archive manifests."""
+    """Ensure private repository slugs never leak into public archive manifests or docs."""
     private_slugs = ("0thernes-private-research-vault", "gigachad-browser", "grade-a-standard")
     for rel in (
         "README.md",
         ".gitmodules",
+        "llms.txt",
         "registry/PAPERS.json",
         "registry/BUILD_PAPERS.json",
         "registry/LAWS_AND_DISCOVERIES.json",
+        "registry/SOLVED_AND_ATLAS_BRIDGE.json",
+        "registry/LIVE_ECOSYSTEM_MIRROR.json",
     ):
         txt = (ROOT / rel).read_text(encoding="utf-8")
         for slug in private_slugs:
             assert slug not in txt, f"Private slug '{slug}' leaked in {rel}"
 
 
-def test_active_archive_headers_no_unformed_llc() -> None:
-    for rel in ("README.md", "CITATION.cff", "NOTICE", "AGENTS.md", "CLAIMS.md", "LIMITATIONS.md"):
+def test_active_archive_headers_and_registries_no_unformed_llc() -> None:
+    for rel in va.ACTIVE_IDENTITY_FILES:
         txt = (ROOT / rel).read_text(encoding="utf-8")
         assert "0thernes LLC" not in txt, f"Unformed entity '0thernes LLC' found in {rel}"
+
+    for reg_rel, key in (
+        ("registry/PAPERS.json", "papers"),
+        ("registry/BUILD_PAPERS.json", "builds"),
+        ("registry/LAWS_AND_DISCOVERIES.json", "discoveries"),
+    ):
+        entries = json.loads((ROOT / reg_rel).read_text(encoding="utf-8"))[key]
+        for entry in entries:
+            assert "0thernes LLC" not in str(entry.get("affiliation", "")), (
+                f"Unformed LLC in {reg_rel} entry {entry['id']}"
+            )
+
+
+def test_zero_broken_relative_markdown_links() -> None:
+    broken = va.check_markdown_links(ROOT)
+    assert broken == [], "\n".join(broken)
 
 
 def test_verify_archive_end_to_end_and_data_manifest_parity() -> None:
@@ -84,29 +108,124 @@ def test_verify_archive_end_to_end_and_data_manifest_parity() -> None:
     assert c1 == c2
 
 
-def test_0th_2026_006_and_0th_build_007_registered_at_latest_versions() -> None:
+def test_consolidated_latest_entries_registered() -> None:
     papers = {
         p["id"]: p
         for p in json.loads((ROOT / "registry" / "PAPERS.json").read_text(encoding="utf-8"))["papers"]
     }
-    p6 = papers["0TH-2026-006"]
-    assert p6["version"] == "v2.1.0"
-    assert p6["lean_verification"]["audited_theorems"] == 576
-    assert "45741323731" in p6["ci_run_url"]
+    assert papers["0TH-2026-006"]["version"] == "v2.1.0"
+    assert papers["0TH-2026-006"]["lean_verification"]["audited_theorems"] == 576
+    assert "0TH-2026-013" in papers
+    assert papers["0TH-2026-013"]["slug"] == "p-vs-np-frontier-lab"
+    assert papers["0TH-2026-013"]["version"] == "v1.1.0"
 
     builds = {
         b["id"]: b
         for b in json.loads((ROOT / "registry" / "BUILD_PAPERS.json").read_text(encoding="utf-8"))["builds"]
     }
-    b7 = builds["0TH-BUILD-007"]
-    assert b7["version"] == "v2.5.0"
-    assert b7["lean_verification"]["audited_theorems"] == 103
-    assert "45743507132" in b7["lean_verification"]["live_audit_status"]
+    assert builds["0TH-BUILD-004"]["version"] == "v0.5.0"
+    assert builds["0TH-BUILD-004"]["lean_verification"]["audited_theorems"] == 69
+    assert builds["0TH-BUILD-007"]["version"] == "v2.5.0"
+    assert builds["0TH-BUILD-007"]["lean_verification"]["audited_theorems"] == 103
+    assert papers["0TH-2026-009"]["version"] == "v2.9.0"
+    assert papers["0TH-2026-004"]["version"] == "v1.9.0"
+    assert "0TH-BUILD-010" in builds and builds["0TH-BUILD-010"]["slug"] == "noetic-organism-omega"
+    assert "0TH-BUILD-011" in builds and builds["0TH-BUILD-011"]["slug"] == "asmodensius-native"
+
+    discs = {
+        d["id"]: d
+        for d in json.loads((ROOT / "registry" / "LAWS_AND_DISCOVERIES.json").read_text(encoding="utf-8"))["discoveries"]
+    }
+    assert "0TH-DISC-011" in discs and discs["0TH-DISC-011"]["slug"] == "alife-singularity-omega-package"
+    assert "0TH-DISC-012" in discs and discs["0TH-DISC-012"]["slug"] == "omega-triscale-observatory"
+
+
+def test_solved_and_atlas_bridge_epistemic_honesty() -> None:
+    bridge = json.loads((ROOT / "registry" / "SOLVED_AND_ATLAS_BRIDGE.json").read_text(encoding="utf-8"))
+    assert bridge["mega_atlas_total_problems"] == 1900
+    assert bridge["grand_problems_retired"] == 0
+    assert bridge["author"]["orcid"] == va.EXPECTED_ORCID
+    assert len(bridge["entries"]) >= 12
+    for entry in bridge["entries"]:
+        assert entry["grand_atlas_problem_retired"] is False
+        assert entry["honesty_boundary"]
+    assert (ROOT / "registry" / "SOLVED_AND_ATLAS_BRIDGE.md").exists()
+
+
+def test_live_sync_privacy_firewall_and_failure_injection() -> None:
+    """Negative & failure-injection tests (B06, B21) for live_sync.py."""
+    with pytest.raises(ValueError, match="Privacy firewall"):
+        ls.parse_repo_slug("https://github.com/0thernes/0thernes-private-research-vault")
+
+    with pytest.raises(ValueError, match="Non-0thernes"):
+        ls.parse_repo_slug("https://github.com/someone-else/some-repo")
+
+    with pytest.raises(ValueError, match="is private"):
+        ls.assert_public_repo_metadata({"private": True, "fork": False, "owner": {"login": "0thernes"}}, "secret")
+
+    with pytest.raises(ValueError, match="third-party fork"):
+        ls.assert_public_repo_metadata({"private": False, "fork": True, "owner": {"login": "0thernes"}}, "forked")
+
+    rec = {
+        "slug": "p-vs-np-frontier-lab",
+        "repository": "https://github.com/0thernes/p-vs-np-frontier-lab",
+        "archive_ids": ["0TH-2026-013"],
+        "tiers": ["Tier I"],
+        "pinned_commit": "01e56da105db4ec7cabb8aa19b8c7f6dfd48ac67",
+        "archived_version": "v1.1.0",
+        "submodule_path": "repos/p-vs-np-frontier-lab",
+        "registered_pages_url": "https://0thernes.github.io/p-vs-np-frontier-lab/",
+    }
+
+    def fail_http_500(endpoint: str, token: str | None = None) -> Any:
+        raise urllib.error.HTTPError(endpoint, 500, "Internal Server Error", hdrs=None, fp=None)  # type: ignore[arg-type]
+
+    err_state = ls.fetch_repo_live_state(rec, offline=False, token=None, fetcher=fail_http_500)
+    assert err_state["sync_status"] == "API_ERROR"
+    assert "500" in str(err_state["error"])
+
+    offline_state = ls.fetch_repo_live_state(rec, offline=True, token=None)
+    assert offline_state["sync_status"] == "OFFLINE_PIN_ONLY"
+
+
+def test_build_site_wcag_and_all_tiers_and_endpoints() -> None:
+    rc = bs.main()
+    assert rc == 0
+    html_txt = (ROOT / "build" / "site" / "index.html").read_text(encoding="utf-8")
+    assert 'class="skip-link"' in html_txt
+    assert "0TH-2026-013" in html_txt
+    assert "0TH-BUILD-010" in html_txt
+    assert "0TH-DISC-012" in html_txt
+    assert "Solved Sub-Conjectures" in html_txt
+    assert "Live Upstream Ecosystem Mirror" in html_txt
+    for fname in (
+        "PAPERS.json",
+        "BUILD_PAPERS.json",
+        "LAWS_AND_DISCOVERIES.json",
+        "SOLVED_AND_ATLAS_BRIDGE.json",
+        "LIVE_ECOSYSTEM_MIRROR.json",
+    ):
+        assert (ROOT / "build" / "site" / "registry" / fname).is_file()
+
+
+def test_metamorphic_sync_idempotence() -> None:
+    """Metamorphic idempotence check (B14): verify_archive.py --sync leaves tracked outputs byte-identical."""
+    before = (ROOT / "CHECKSUMS.sha256").read_bytes()
+    proc = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "verify_archive.py"), "--sync"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    assert proc.returncode == 0, proc.stdout + proc.stderr
+    after = (ROOT / "CHECKSUMS.sha256").read_bytes()
+    assert before == after
 
 
 @given(payload=st.binary(min_size=1, max_size=4096))
 @settings(max_examples=80, derandomize=True)
-def test_property_sha256_file_matches_hashlib(tmp_path_factory, payload: bytes) -> None:
+def test_property_sha256_file_matches_hashlib(tmp_path_factory: pytest.TempPathFactory, payload: bytes) -> None:
     """Hypothesis property-based test (B10) & differential oracle (B11) for sha256_file."""
     p = tmp_path_factory.mktemp("hashprop") / "blob.bin"
     p.write_bytes(payload)

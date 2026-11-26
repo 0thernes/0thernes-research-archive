@@ -1,16 +1,24 @@
 # Build White Paper & Proof Evidence Dossier — `0TH-BUILD-004`
 
-**Title:** Adversarial Verification in AI-Assisted Collatz Research: An Eight-Hour Repository Case Study  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
-**Domain:** Research Methodology / Adversarial Verification  
-**Version / Date:** `2026-07-02-qa` (2026-07-01)
+**Title:** The Unsolved Mathematics Atlas (v0.5.0): Eight-Domain Multi-Kernel Lean 4.35.0 Structural Core (69 Declarations), 10-Page Monograph, and Adversarial Collatz Case Study  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Domain:** Mathematics / Open Problems / Adversarial Verification / Formal Methods  
+**Version / Date:** `v0.5.0` (2026-11-25)
 
 ## Cryptographic Identity & Provenance
 
 | Field | Value |
 |---|---|
 | Source Repository | https://github.com/0thernes/unsolved-mathematics |
-| Pinned Git Submodule | `repos/unsolved-mathematics` @ `f32ae651500631df90685e57b673868a9ef39e31` |
+| Pinned Git Submodule | `repos/unsolved-mathematics` @ `0604df5c70c850df44f3fdd20519e46c82925224` |
+| Archived Artifact | `builds/0TH-BUILD-004_unsolved-mathematics/Donahue_2026_unsolved_mathematics_atlas-v0.5.0.pdf` (from `releases/v0.5.0/Donahue_2026_unsolved_mathematics_atlas-v0.5.0.pdf`) |
+| Artifact SHA-256 | `6e1e2dfd804ac43a92e2513a967260867f6fa48962e35fcd37a73ef2a407bed6` |
+| Archived Artifact | `builds/0TH-BUILD-004_unsolved-mathematics/arxiv_submission-v0.5.0.tar.gz` (from `releases/v0.5.0/arxiv_submission-v0.5.0.tar.gz`) |
+| Artifact SHA-256 | `8fac8e524b06bdda7f6bca732c4a5daece812ceffbc7a60b13c8fed054414f44` |
+| Archived Artifact | `builds/0TH-BUILD-004_unsolved-mathematics/six_kernel_audit.txt` (from `lean/six_kernel_audit.txt`) |
+| Artifact SHA-256 | `a15373ee6d68cfeedd76df0050be8d494b17496c666bc2307d81c5632e298408` |
+| Archived Artifact | `builds/0TH-BUILD-004_unsolved-mathematics/formalization.yaml` (from `lean/formalization.yaml`) |
+| Artifact SHA-256 | `da2982fb7fe7c99e71e732a347acfdd63a143159570df0887a514e1dc8614b51` |
 | Archived Artifact | `builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md` (from `docs/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md`) |
 | Artifact SHA-256 | `30a5b117b5aa5eab3a6d38cf44fb19be9392f7f2ab4630d53dc140f87e864f96` |
 | Archived Artifact | `builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md` (from `docs/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01-QA-AUDIT-2026-07-02.md`) |
@@ -20,25 +28,25 @@
 
 ## Summary
 
-Eight-hour multi-model empirical case study on adversarial QA and artifact grounding in AI-assisted mathematics research, accompanied by an independent QA audit and editorial review inside the Unsolved Mathematics Atlas.
+Specialist open-mathematics research atlas upgraded to v0.5.0 with an 8-domain zero-Mathlib Lean 4.35.0 structural core (45 theorems + 10 concrete non-vacuity witnesses + 14 adversarial false-variant refutations = 69 audited declarations verified across all 6 independent kernels) covering Collatz, Erdos-Straus, Lonely Runner, Brocard, Primes/Twin Primes, Goldbach, Odd Perfect/Mersenne Primes, and Ramsey R(3,3)=6, paired with a 10-page AMS-LaTeX monograph PDF, standalone arXiv source bundle, FAIR metadata, live GitHub Pages site, and the preserved July 2026 adversarial Collatz multi-model case study.
 
 ## Embedded Lean 4 Proof Suite Audit
 
-- **Framework:** Empirical & repository-audit case study (no Lean proofs)
-- **Lean Modules / Lines:** 0 files / 0 lines
-- **Audited Theorems (`#print axioms`):** 0
-- **Entry Point:** `N/A`
-- **Permitted Axioms:** `N/A`
-- **Live Audit Status:** N/A (methodology & adversarial verification study)
+- **Framework:** Pure Lean 4.35.0 (zero Mathlib, Palomar Challenge/Solution/NonVacuity/Adversarial, 6-kernel lake comparator --paranoid)
+- **Lean Modules / Lines:** 15 files / 2964 lines
+- **Audited Theorems (`#print axioms`):** 69
+- **Entry Point:** `lean/Solution.lean`
+- **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
+- **Live Audit Status:** GitHub Actions CI GREEN (run #45742870717, v0.5.0 release); 69 audited declarations (45 headline theorems + 10 concrete NonVacuity witnesses + 14 adversarial false-variant refutations) verified across all 6 independent kernels (lean, leanchecker-paranoid, lean4lean 2,729 decls, nanoda_bin 3,017 decls, con-leche 2,732 decls, con-ron 2,732 decls) strictly within [propext, Classical.choice, Quot.sound]
 
 ## Verification Boundary
 
-Explicitly proves and claims no part of the Collatz Conjecture (status: OPEN). Serves as a reproducible methodological case study grounded in committed git artifacts.
+All 69 Lean 4.35.0 declarations compile with zero Mathlib, zero sorry, and strictly standard axioms across 6 independent kernels (CI #45742870717). Explicitly proves ZERO open conjectures (Collatz, Erdos-Straus, Lonely Runner, Brocard, Twin Primes, Goldbach, Odd Perfect Numbers, Mersenne infinitude all remain OPEN); formalizes classical foundations, modular reductions, sharpness bounds, and adversarial refutations only.
 
 ## Independent Reproduction & Falsification Protocol
 
 ```bash
 git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
 cd 0thernes-research-archive
-ls repos/unsolved-mathematics/problems/collatz-conjecture repos/unsolved-mathematics/docs
+cd repos/unsolved-mathematics/lean && lake build && lake env lean VerifyAxioms.lean && lake comparator --config comparator.json --paranoid
 ```

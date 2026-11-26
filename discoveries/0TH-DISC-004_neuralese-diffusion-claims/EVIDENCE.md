@@ -1,7 +1,7 @@
 # Discovery / Law / Pre-Registered Evidence Dossier — `0TH-DISC-004`
 
 **Title:** Neuralese Diffusion: Pre-Registered Cross-Modality Diffusion Interpretability Claims & Falsifications (v1–v2)  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Epistemic Tier:** `preregistered_empirical_claims`  
 **Domain:** Generative Models / Mechanistic Interpretability / Empirical ML · **Date:** 2026-10-27
 

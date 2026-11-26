@@ -1,7 +1,7 @@
 # Discovery / Law / Pre-Registered Evidence Dossier — `0TH-DISC-003`
 
 **Title:** NEURALESE: SHA-256-Locked Pre-Registrations & White-Box Mechanistic Interpretability Falsification Tables (v11–v14x)  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Epistemic Tier:** `preregistered_empirical_claims`  
 **Domain:** Mechanistic Interpretability / Empirical ML / Pre-Registered Testing · **Date:** 2026-11-04
 

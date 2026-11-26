@@ -7,9 +7,16 @@ default:
 setup:
     python3 -m pip install -r requirements.txt
 
-sync:
+live-sync:
+    python3 scripts/live_sync.py
     python3 scripts/verify_archive.py --sync
-    cp CHECKSUMS.sha256 data/MANIFEST.sha256
+    python3 scripts/generate_llms_full.py
+    python3 scripts/build_site.py
+
+sync:
+    python3 scripts/live_sync.py --offline
+    python3 scripts/verify_archive.py --sync
+    python3 scripts/generate_llms_full.py
 
 test:
     python3 -m pytest -v tests/

@@ -31,6 +31,8 @@
 | Artifact SHA-256 | `a8374365492abf881452ef93bb3f197cc0d6cc7fd7b22c39d2a9aa9099889b03` |
 | Archived Artifact | `builds/0TH-BUILD-007_unsolved-problems-mega-atlas/lean_axioms.txt` (from `results/lean_axioms.txt`) |
 | Artifact SHA-256 | `5e9c607d6eb0fc02f85b0ad749ffe3836b2db4dc6356b9ae17ae406a41fff5d7` |
+| Archived Artifact | `builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md` (from `archive-audit/0THERNES_SOLVED_AUDIT_2026-11-25.md`) |
+| Artifact SHA-256 | `2121008740f466a509a13604067d499817f190732c9b828d99e20f20f0bc0fbd` |
 
 ## Summary
 

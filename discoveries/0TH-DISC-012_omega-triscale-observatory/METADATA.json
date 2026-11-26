@@ -1,0 +1,31 @@
+{
+  "id": "0TH-DISC-012",
+  "slug": "omega-triscale-observatory",
+  "visibility": "PUBLIC",
+  "epistemic_tier": "interactive_observatory_architecture",
+  "title": "Omega TriScale Observatory (v6.6.0): Unified 7-Repo Multi-Scale A-Life Telemetry & Relay Architecture",
+  "domain": "Artificial Life / Scientific Visualization / Telemetry Engineering",
+  "date": "2026-11-22",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "Independent Researcher, Spokane, WA, USA",
+  "repository": "https://github.com/0thernes/omega-triscale-observatory",
+  "branch": "main",
+  "pinned_commit": "3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9",
+  "summary": "Real-time multi-scale telemetry relay and interactive WebGL/Node observatory bridging the 7 public A-Life Singularity Omega repositories across molecular, cellular, and macro-organism scales.",
+  "verification_boundary": "Engineering observatory and interactive telemetry interface; not a formal theorem-proving artifact and makes zero claims of sentience or consciousness.",
+  "archived_artifacts": [
+    {
+      "path": "discoveries/0TH-DISC-012_omega-triscale-observatory/README.md",
+      "bytes": 3646,
+      "sha256": "b1096c62f1aa21f49383d642ba77a2925435899dacc2aa305678c3cbb41adcff",
+      "source_path": "README.md@3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9"
+    },
+    {
+      "path": "discoveries/0TH-DISC-012_omega-triscale-observatory/ASMODENSIUS_HANDOFF_PATCH_BLUEPRINT.md",
+      "bytes": 3151,
+      "sha256": "701ce6689b1ad609d0048376fd7fca5bfa8474289dd71d115e5298409bb7d7ef",
+      "source_path": "ASMODENSIUS_HANDOFF_PATCH_BLUEPRINT.md@3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9"
+    }
+  ]
+}

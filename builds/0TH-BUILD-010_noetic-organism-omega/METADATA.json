@@ -1,0 +1,48 @@
+{
+  "id": "0TH-BUILD-010",
+  "slug": "noetic-organism-omega",
+  "title": "NOETIC ORGANISM OMEGA: Native C11+AVX2 Artificial Life & Neural-Circuit Simulation Engine with 48 Pure Lean 4.35.0 Formal Theorems",
+  "domain": "Artificial Life / Synthetic Cognition / Biophysical Simulation / Formal Methods",
+  "date": "2026-11-22",
+  "version": "main-ci-verified",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "Independent Researcher, Spokane, WA, USA",
+  "repository": "https://github.com/0thernes/noetic-organism-omega",
+  "submodule_path": "repos/noetic-organism-omega",
+  "pinned_commit": "0c372fdae4d9794021b04128df3f95ea50727452",
+  "archived_artifacts": [
+    {
+      "path": "builds/0TH-BUILD-010_noetic-organism-omega/README.md",
+      "source_path": "README.md",
+      "sha256": "662ee7358d26ee4b822f206e09e6b4d61d0387e230b19269a66069618e3646a8"
+    },
+    {
+      "path": "builds/0TH-BUILD-010_noetic-organism-omega/NoeticProofs.lean",
+      "source_path": "lean/NoeticProofs.lean",
+      "sha256": "1fc13b29d7d4e60b5b0fc936594669eb07f2b4bfeba76dc69279488c1276ff10"
+    },
+    {
+      "path": "builds/0TH-BUILD-010_noetic-organism-omega/LiveC11Receipt.lean",
+      "source_path": "lean/NoeticProofs/LiveC11Receipt.lean",
+      "sha256": "0562c8e9f8fdb39e8afbfa9e5b29c9ac91c41fd5d8b57580d9c7fe4c07af2952"
+    }
+  ],
+  "lean_verification": {
+    "has_lean": true,
+    "framework": "Pure Lean 4.35.0 (zero Mathlib, zero native_decide)",
+    "modules": 2,
+    "lines": 487,
+    "audited_theorems": 48,
+    "axiom_allowlist": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "entry_point": "lean/NoeticProofs.lean",
+    "live_audit_status": "GitHub Actions CI GREEN (run #45076052369); 48 Pure Lean 4 theorems (NoeticProofs.lean + LiveC11Receipt.lean), zero sorry, zero custom axioms, strictly within [propext, Classical.choice, Quot.sound]"
+  },
+  "summary": "Part of the 7-repository A-Life Singularity Omega architecture pairing a native C11+AVX2 organism simulation kernel with 48 Pure Lean 4.35.0 machine-checked discrete invariants (NoeticProofs.lean & LiveC11Receipt.lean) verified in GitHub Actions CI (#45076052369).",
+  "verification_boundary": "All 48 Lean 4 theorems certify discrete algebraic, conservation, and receipt-consistency invariants of the simulation model with zero sorry and standard axioms; explicitly disclaims biological wet-lab validation, consciousness, sentience, or retiring any Mega-Atlas open problem.",
+  "falsification_command": "cd repos/noetic-organism-omega/lean && lake build"
+}

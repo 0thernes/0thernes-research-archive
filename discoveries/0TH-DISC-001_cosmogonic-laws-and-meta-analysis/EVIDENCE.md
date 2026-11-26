@@ -1,7 +1,7 @@
 # Discovery / Law / Pre-Registered Evidence Dossier — `0TH-DISC-001`
 
 **Title:** Cosmogonic Quantum Mechalogodrom: Social Contact Density Law (ADR 0016), CQM-25 Capability Law (ADR 0018), and 500-Checkpoint Peer-Review Meta-Analysis  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Epistemic Tier:** `binding_architectural_law_and_meta_analysis`  
 **Domain:** Artificial Life / Experimental Governance / Capability Metrology · **Date:** 2026-10-22
 

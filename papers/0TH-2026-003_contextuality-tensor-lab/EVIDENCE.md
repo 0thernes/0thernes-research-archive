@@ -1,7 +1,7 @@
 # Evidence & Falsification Dossier — `0TH-2026-003`
 
 **Title:** Exact contextuality degrees for disjoint Mermin configurations  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Quantum Foundations / Quantum Contextuality  
 **Version / Date:** `v0.1.0` (2026-11-10)  
 **Status:** Research preprint (not peer reviewed; AI-assisted under human direction)

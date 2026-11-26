@@ -6,7 +6,7 @@
     "orcid": "0009-0006-8168-9648",
     "affiliation": "Independent Researcher, Spokane, WA, USA"
   },
-  "updated_utc": "2026-11-25T23:59:00Z",
+  "updated_utc": "2026-11-26T02:40:14Z",
   "discoveries": [
     {
       "id": "0TH-DISC-001",
@@ -18,7 +18,7 @@
       "date": "2026-10-22",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/cosmogonic-quantum-mechalogodrom",
       "branch": "main",
       "pinned_commit": "b0dcf153b93af839a8f7406795dd2e0e45777df4",
@@ -73,7 +73,7 @@
       "date": "2026-11-17",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/Asmodensius",
       "branch": "main",
       "pinned_commit": "c72a4ec9a0cba60b302a796be48def072abe9f53",
@@ -104,7 +104,7 @@
       "date": "2026-11-04",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/neuralese",
       "branch": "main+gh-pages",
       "pinned_commit": "2527d67355524c873be7acfa0b5560af0076f144",
@@ -153,7 +153,7 @@
       "date": "2026-10-27",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/neuralese-diffusion",
       "branch": "main",
       "pinned_commit": "13e3b0e22ea756da26c4e0a98c9eccf1bec92e98",
@@ -184,7 +184,7 @@
       "date": "2026-07-05",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/unsolved-mathematics",
       "branch": "main+codex/collatz-catalog-qa-routing",
       "pinned_commit": "f32ae651500631df90685e57b673868a9ef39e31",
@@ -224,21 +224,21 @@
       "epistemic_tier": "open_problem_catalogue",
       "title": "Unsolved Black-Hole Problems: Ranked 16-Problem Research Catalogue with CI-Enforced Citation Integrity & 6 Truth Tiers",
       "domain": "Theoretical Physics / General Relativity / Quantum Gravity",
-      "date": "2026-06-14",
+      "date": "2026-11-25",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/unsolved-black-hole-problems",
       "branch": "main",
-      "pinned_commit": "cf11c68c3953e0d73b13efdbf014ecaae9c947a8",
+      "pinned_commit": "0686cf9729fa62185e719c1a4ed750d0fc6f7093",
       "summary": "Machine-validated, RAG-ready meta-analysis ranking 16 major unsolved problems in black-hole physics (originators, ~25 DOI/arXiv-pinned papers per problem, 6 epistemic truth tiers, automated citation validation).",
       "verification_boundary": "AI-assisted literature catalogue directed and reviewed by Alexander S. Donahue; solves no open physics problem and labels all conjectures explicitly.",
       "archived_artifacts": [
         {
           "path": "discoveries/0TH-DISC-006_unsolved-black-hole-problems/README.md",
-          "source_path": "README.md@cf11c68c3953e0d73b13efdbf014ecaae9c947a8",
-          "bytes": 6964,
-          "sha256": "ca4faa86ae17048cf1f4a8f4c2b386eade88ae9f59bedbce9aa8cf5975630477"
+          "source_path": "README.md@0686cf9729fa62185e719c1a4ed750d0fc6f7093",
+          "bytes": 7640,
+          "sha256": "6409a511be186605799921229c54cc4ae6dea60714b0273af0f89bd386d81e16"
         },
         {
           "path": "discoveries/0TH-DISC-006_unsolved-black-hole-problems/AI_REVIEW.md",
@@ -264,7 +264,7 @@
       "date": "2026-11-12",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/glitchling-jam",
       "branch": "main",
       "pinned_commit": "2fb111f12e85a13f22357e74bbe9921a0884c935",
@@ -301,7 +301,7 @@
       "date": "2026-11-05",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/dimension-omega-singularity",
       "branch": "main",
       "pinned_commit": "947054ec64878530d0f9abdddb9316494a9de34f",
@@ -338,7 +338,7 @@
       "date": "2026-07-05",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/grimoire-algorithms-of-the-arcane",
       "branch": "main",
       "pinned_commit": "edca7f8dc2f8bba27402a248301dd30d19ff1781",
@@ -375,7 +375,7 @@
       "date": "2026-11-21",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/hoggar-bound-lab",
       "branch": "main",
       "pinned_commit": "eb2d83ef72f882b33a89d81bead66def2ab5283d",
@@ -429,6 +429,74 @@
           "source_path": "results/exact_degrees_n4_n5.json@eb2d83ef72f882b33a89d81bead66def2ab5283d",
           "bytes": 510,
           "sha256": "4027583c228d33a70e24551048a94d8cdc7696ee34f228235ec5a9a138931618"
+        }
+      ]
+    },
+    {
+      "id": "0TH-DISC-011",
+      "slug": "alife-singularity-omega-package",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "ecosystem_synthesis_dossier",
+      "title": "A-Life Singularity SuperLife Omega Package (v3.3.0-omega): 7-Repository Master Synthesis Dossier & Manifest",
+      "domain": "Artificial Life / Systems Integration / Cross-Repository Verification",
+      "date": "2026-11-22",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/alife-singularity-omega-package",
+      "branch": "main",
+      "pinned_commit": "c5319dd04507a3a45e00536704974009e0c8f11e",
+      "summary": "Public master synthesis dossier and manifest unifying the 7-repository A-Life Singularity Omega stack (AUTOPHAGE, Cellulogonic Mecha, Cellular Engine Omega, Noetic Organism Omega, Asmodensius Native, Omega TriScale Observatory, and this package), archived with its 1.13 MB master PDF dossier and SHA-256 manifest.",
+      "verification_boundary": "Cross-repository engineering synthesis dossier and manifest; individual Lean 4 proofs live in their respective Tier II build repositories (0TH-BUILD-001, 008, 009, 010, 011). Explicitly disclaims sentience, consciousness, or wet-lab biological proof.",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-011_alife-singularity-omega-package/README.md",
+          "bytes": 11658,
+          "sha256": "75b94f07a279e32e74589406096ee7a05a82e1976b94a6013f8cd13574239b6d",
+          "source_path": "README.md@c5319dd04507a3a45e00536704974009e0c8f11e"
+        },
+        {
+          "path": "discoveries/0TH-DISC-011_alife-singularity-omega-package/MANIFEST.json",
+          "bytes": 14332,
+          "sha256": "58ba115f6db7299bb89fb301a090eb6796a91b3af3a39897c863ac0bc7981c7d",
+          "source_path": "MANIFEST.json@c5319dd04507a3a45e00536704974009e0c8f11e"
+        },
+        {
+          "path": "discoveries/0TH-DISC-011_alife-singularity-omega-package/ALife_Singularity_SuperLife_Omega_Master_Dossier.pdf",
+          "bytes": 1136909,
+          "sha256": "eb8a5d5148bd36e6513d267b27f9c1d39a50d0b8da88330b0343d4a53d9b04fa",
+          "source_path": "pdf/ALife_Singularity_SuperLife_Omega_Master_Dossier.pdf@c5319dd04507a3a45e00536704974009e0c8f11e"
+        }
+      ]
+    },
+    {
+      "id": "0TH-DISC-012",
+      "slug": "omega-triscale-observatory",
+      "visibility": "PUBLIC",
+      "epistemic_tier": "interactive_observatory_architecture",
+      "title": "Omega TriScale Observatory (v6.6.0): Unified 7-Repo Multi-Scale A-Life Telemetry & Relay Architecture",
+      "domain": "Artificial Life / Scientific Visualization / Telemetry Engineering",
+      "date": "2026-11-22",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/omega-triscale-observatory",
+      "branch": "main",
+      "pinned_commit": "3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9",
+      "summary": "Real-time multi-scale telemetry relay and interactive WebGL/Node observatory bridging the 7 public A-Life Singularity Omega repositories across molecular, cellular, and macro-organism scales.",
+      "verification_boundary": "Engineering observatory and interactive telemetry interface; not a formal theorem-proving artifact and makes zero claims of sentience or consciousness.",
+      "archived_artifacts": [
+        {
+          "path": "discoveries/0TH-DISC-012_omega-triscale-observatory/README.md",
+          "bytes": 3646,
+          "sha256": "b1096c62f1aa21f49383d642ba77a2925435899dacc2aa305678c3cbb41adcff",
+          "source_path": "README.md@3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9"
+        },
+        {
+          "path": "discoveries/0TH-DISC-012_omega-triscale-observatory/ASMODENSIUS_HANDOFF_PATCH_BLUEPRINT.md",
+          "bytes": 3151,
+          "sha256": "701ce6689b1ad609d0048376fd7fca5bfa8474289dd71d115e5298409bb7d7ef",
+          "source_path": "ASMODENSIUS_HANDOFF_PATCH_BLUEPRINT.md@3aaac2f036e1bf31e24dd1a7f30509c69d8e7ae9"
         }
       ]
     }

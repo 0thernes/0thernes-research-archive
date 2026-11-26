@@ -1,7 +1,7 @@
 # Build White Paper & Proof Evidence Dossier — `0TH-BUILD-008`
 
 **Title:** CELLULAR ENGINE OMEGA v4.2: Deep Strata Biophysics, Bio-Frostbite Interaction Nets & Virtual-Cell Singularity with 61 Pure Lean 4.35.0 Theorems  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Biophysics / Artificial Life / Formal Methods  
 **Version / Date:** `v4.2.0` (2026-11-21)
 

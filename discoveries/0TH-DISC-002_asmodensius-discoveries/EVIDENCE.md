@@ -1,7 +1,7 @@
 # Discovery / Law / Pre-Registered Evidence Dossier — `0TH-DISC-002`
 
 **Title:** Asmodensius (Creature #1): Pre-Registered Controlled Empirical Discoveries & Null Results Ledger (DISCOVERIES.md, R20)  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Epistemic Tier:** `empirical_discovery_ledger`  
 **Domain:** Artificial Life / Tokenless Synthetic Cognition / Controlled Experiments · **Date:** 2026-11-17
 

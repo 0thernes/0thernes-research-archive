@@ -15,7 +15,7 @@
       "github": "https://github.com/0thernes",
       "website": "https://0thernes.art"
     },
-    "updated_utc": "2026-11-26T02:20:00Z"
+    "updated_utc": "2026-11-26T02:40:14Z"
   },
   "papers": [
     {
@@ -28,7 +28,7 @@
       "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction)",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/hoggar-bound",
       "submodule_path": "repos/hoggar-bound",
       "pinned_commit": "c74135c429a0ef827c757df5fc76139aed62a819",
@@ -68,7 +68,7 @@
       "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; listed on ORCID)",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/hoggar-bound-lab",
       "submodule_path": "repos/hoggar-bound-lab",
       "pinned_commit": "eb2d83ef72f882b33a89d81bead66def2ab5283d",
@@ -139,7 +139,7 @@
       "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction)",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/contextuality-tensor-lab",
       "submodule_path": "repos/contextuality-tensor-lab",
       "pinned_commit": "f7a1e6e74f8590d9cee0aa4c01f9ea3800f7fe87",
@@ -223,7 +223,7 @@
       "peer_review_status": "Research methods artifact & preprint (not peer reviewed; AI-assisted under human direction)",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/contextuality-evidence-lab",
       "submodule_path": "repos/contextuality-evidence-lab",
       "pinned_commit": "ef0682cd24ca248c5e502731c462272a4ac93432",
@@ -614,6 +614,52 @@
       "core_result": "Machine-checks 23 zero-Mathlib Lean 4.35.0 theorems (T1a-T3h, 14 files / 6,272 lines) spanning Coded/Byzantine PIR (CS-053), Module-LWE reduction tightness & constant-time Dyadic-256/Dyadic-512 + exact FIPS 203 DFRs (CS-026/QC-042/CM-048), and Exact Strassen-Winograd rank_F(<2,2,2>)=7, All-m Koszul MatMul rank >= m^2+2, & complexity-theoretic barriers around P != NP, matrix multiplication omega, and VP vs VNP (CS-001/CS-004/CS-010/CS-012/CS-051). Pillar I (CS-053): resolves the open Schur-product syzygy rank problem of Sun-Tao-Xu-Zhang (arXiv:2603.10769) via shifted-difference Koszul-Veronese moment annihilation over any CommRing with exact Pascal savings, raising Example VII.A (6,3,3) from 4/7 to zero-error 10/17 even over F_7 (T1a); proves K<->T symmetry and universal strict domination over Sun-Zhang (arXiv:2610.37412) LFSR capacity by (K-1)(T-1)E^2 > 0 in both single-file and P-out-of-M multi-file regimes (T1b); establishes Byzantine-robust double-counting converse reduction, exact unrestricted capacity at E=K+1 (breaking E>=KT for all K>=2), and kernel-certifies an explicit F_11 zero-error Byzantine rate-2/5 witness at (M=2,N=6,K=2,T=2,B=1,E=4) with all 90 exact matrix inverses (T1c); proves sharp flag-privacy thresholds and overlap feasibility Ew <= K*delta*sigma (T1d); kernel-certifies ([propext] alone) a 330-orbit scale-128 pure-integer 12-variable polymatroid h_uncond satisfying all 270,336 elemental Shannon inequalities, 99 PIR equalities, 1,485 singleton Ingletons, and 3,814,209 retrieval-subsystem Ingletons at 8/13 > 3/5 (T1e); proves projective P^3 linear impossibility over any SimpleField F (T1f); proves exact algebraic Zhang-Yeung (1998) reduction and symmetric M >= 3 1-flag Koszul breaking E >= KT (T1g); and proves a universal 7-parameter non-Shannon cone reduction showing h_uncond simultaneously defeats ALL infinitely many Matus (2007) inequalities M_s (forall s in N, recovering ZY98 at s=1; 14,850 singleton s=1..5 checks with 0 violations) plus exact all-M Koszul contraction rho_KV^j < rho_LFSR^j (T1h). Pillar II (CS-026/QC-042/CM-048): proves determinant-ideal secret independence det(B)=q^m over any CommRing refuting Luo arXiv:2604.15858 (T2a); proves ring-universal anti-periodic DFT cancellation (Chen ePrint 2024/555 Step 9, T2b) and its universal m-twisted DFT selection rule ([propext] alone, T2f); certifies FIPS 203 CBD2/CBD3 moments, cyclotomic trace-orthogonality, and 60-digit 4.96x Renyi-2 cliff (T2c); establishes QGTL shifted-LWE Berry curvature (T2d); proves Cauchy-Schwarz finite-support Renyi-2 floor, optimal 1-byte constant-time Dyadic-256 (Var=1, 17.7x collapse to 2.138 bits at ML-KEM-1024 and 1.604 bits at ML-KEM-768), QGTL Provost-Vallee PSD 4 det(g) >= Omega^2, and Metric-Kurtosis ordering 3/8 < 15/32 < 1/2 (T2e); and proves a universal non-asymptotic Pearson chi^2/Hermite-4 QGTL variational Renyi-2 bridge (capturing 75.5% of R2-1 for CBD2 and 89.5% for Dyadic-256 at sigma=1) plus optimal 9-bit constant-time zero-excess-kurtosis Dyadic-512 (Var=3/2, mu4=27/4, exact kappa_ex=0, exact Gaussian QGTL det(g)=1/2, 12.89x collapse from 7.630 to 0.592 bits at ML-KEM-512) with exact FIPS 203 discrete-convolution DFRs passing all three NIST targets (2^-139.26, 2^-166.12, 2^-174.26; T2g). Pillar III (CS-001/CS-004/CS-010/CS-012/CS-051): formalizes constructive multilinear-extension uniqueness over any field (Algebrization core, T3a), LWE PRF -> Natural Proofs obstruction (T3b), Katz-Trevisan B-Byzantine PIR <-> LDC distance 2B+1 (T3c) and smoothness plus Shannon (1949) circuit counting (T3f), sharp FIPS 203 Compress_1 margin |e| <= 831 (failing at +832, T3d), field-universal Landsberg-Ottaviani Koszul flattenings (rank_F(T_3)>=5, T3e), a symbolic ALL-m 1-nnz/row monomial left-inverse proving rank_F(<m,m,m>) >= m^2+2 for EVERY m >= 2 and EVERY field F incl. char 2 plus degree-(m-1) ceiling m^2+m (with Phi_2(<3,3,3>) exact rank 324 over F_2 & F_101 giving >= 12; T3g), and complete characteristic-free Exact Strassen-Winograd rank_F(<2,2,2>) = 7 over EVERY SimpleField F including F_2 (T3h, StrassenWinograd.lean). Verified across 6/6 Lean kernels (2,963-2,995 decls), zero-warning C11 + ASan/UBSan + 512/512 fuzz (57/57 unit tests), Eshkol v1.3.6 AD (3/3, <2e-13), 16/16 pytest (10/10 mutants killed), 28/28 live HTTP-200 citations, 100.0% Build Standard v1.2.0 (69/69 applicable, 29/29 core, A27 PASS), live interactive 23-theorem GitHub Pages Proof Blueprint, and a 16-page 0-overfull AMS-LaTeX preprint + clean-room arXiv tarball.",
       "verification_boundary": "All 23 headline theorems (T1a-T3h), master conjunction, and concrete NonVacuity witnesses (SimpleField (Fin 5), SimpleField (Fin 11), CommRing Int, anti-periodic D=3, 2-var Boolean XOR, 3-rep LDC) are 100% kernel-checked in zero-Mathlib Lean 4.35.0 across all 6 independent kernels on Ubuntu CI run 45741278208 (zero sorry, zero native_decide, zero warnings, strictly within [propext, Classical.choice, Quot.sound]; T1e and T2f use [propext] alone). Transcendental 60-digit Renyi-2 curves, exact FIPS 203 discrete-convolution DFRs, and continuous DFT/QGTL spectra are verified in Tier-2 exact Python, C11, and Eshkol dual-number AD (<2e-13). Explicitly affirms that P != NP & explicit circuit lower bounds (CS-001/CS-010), matrix multiplication exponent omega = 2 (CS-004), Valiant VP != VNP (CS-012), non-linear C(2,4,2,2) in [3/5, 8/13], general M >= 3 non-LFSR PIR capacity above Sun-Zhang when E >= KT, arbitrary T >= 4 zero-error schemes, and worst-case quantum MLWE lower bounds remain completely OPEN. Claims no external peer review or external DOI; Software Heritage Save Code Now awaits manual browser PoW completion.",
       "falsification_command": "cd repos/coded-pir-mlwe-complexity-lab && make -C native clean test && node eshkol/run_eshkol_ad.mjs && PYTHONPATH=python pytest tests/test_all.py -v && python scripts/check_readme_axioms.py && cd lean && lake build && lake env lean VerifyAxioms.lean && lake comparator --config comparator.json --paranoid"
+    },
+    {
+      "id": "0TH-2026-013",
+      "slug": "p-vs-np-frontier-lab",
+      "title": "Anatomy of the P vs. NP Barrier: Zero-Mathlib Lean 4 Formalization of Classical Obstructions, Exact SAT Multiplicative Complexity, and Four Algorithmic Falsifiers",
+      "domain": "Computational Complexity / Proof Complexity / Formal Verification",
+      "date_released": "2026-11-25",
+      "version": "v1.1.0",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 & cross-platform CI verified)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/p-vs-np-frontier-lab",
+      "submodule_path": "repos/p-vs-np-frontier-lab",
+      "pinned_commit": "01e56da105db4ec7cabb8aa19b8c7f6dfd48ac67",
+      "release_url": "https://github.com/0thernes/p-vs-np-frontier-lab/releases/tag/v1.1.0",
+      "pages_url": "https://0thernes.github.io/p-vs-np-frontier-lab/",
+      "pdf_archive_path": "papers/0TH-2026-013_p-vs-np-frontier-lab/Donahue_2026_p_vs_np_barrier_anatomy.pdf",
+      "pdf_sha256": "c82738df5d755b38bf8cff70e33cd39f589eb4f80b407dc2da987ffb33591983",
+      "arxiv_bundle_url": "https://github.com/0thernes/p-vs-np-frontier-lab/releases/download/v1.1.0/arxiv_submission.tar.gz",
+      "arxiv_bundle_sha256": "46ab7262d8b5a85266fba751035df028b39c7dc3e87a937b585731c7abe6d0aa",
+      "lean_verification": {
+        "framework": "Lean 4.35.0 (zero Mathlib, 15 module files / 8,078+ lines, 14 headline barrier theorems C1-C14 + prove_all = 15 Palomar comparator targets, zero sorry, zero native_decide, autoImplicit = false; verified across 6 independent kernels via lake check --paranoid & lake comparator --paranoid on Ubuntu CI)",
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/Solution.lean",
+        "axiom_audit_file": "lean/VerifyAxioms.lean",
+        "additional_audit_files": [
+          "lean/Challenge.lean",
+          "lean/PalomarChallenge.lean",
+          "lean/PalomarSolution.lean"
+        ],
+        "audited_theorems": 15
+      },
+      "ci_run_url": "https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45743257383",
+      "preservation": {
+        "software_heritage": null,
+        "wayback_machine": null,
+        "doi": null
+      },
+      "core_result": "Machine-checks 14 classical complexity-barrier theorems (C1-C14) in zero-Mathlib Lean 4.35.0 with Palomar Challenge/Solution isolation (15 comparator targets): Baker-Gill-Solovay relativization (C1-C2), Markov-Fischer bounded-negation theorem & slice monotonicity (C3-C5), Razborov-Rudich natural proofs obstruction (C6), Schaefer polymorphism rigidity (C7-C9), algebraic/multiplicative & catalytic complexity bounds (C10-C13), and permanent-vs-determinant characteristic-2 collapse (C14). Paired with exact CaDiCaL 2.1.2 SAT multiplicative-complexity synthesis cross-checked by exhaustive brute-force enumeration, 4 rigorous falsifiers of aggressive P=NP heuristics (CTDS ODE blowup, rational LP integrality gaps, 3-adic Hensel non-Boolean root, completely rigid |Aut|=1 3-SAT instance), 12/12 cross-OS pytest+Hypothesis tests, 15-page zero-overfull AMS-LaTeX preprint + standalone arXiv tarball, live GitHub Pages Proof Blueprint, and 100.0% (63/63) Build Standard v1.2.0 compliance.",
+      "verification_boundary": "All 14 classical barrier theorems plus master conjunction (15 audited targets) are 100% kernel-checked in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound]. Explicitly formalizes known barriers and refutes heuristic attacks \u2014 makes ZERO claim to resolve P vs NP (Mega-Atlas CS-001) or any open complexity separation. Attack A (CTDS ODE) is explicitly tagged numerical_approximation; no external peer review or external DOI is claimed.",
+      "falsification_command": "cd repos/p-vs-np-frontier-lab && python -m pytest -v tests/test_all.py && python scripts/check_readme_axioms.py && cd lean && lake build && lake build PalomarChallenge && lake env lean VerifyAxioms.lean && lake comparator --config comparator.json --paranoid"
     }
   ]
 }

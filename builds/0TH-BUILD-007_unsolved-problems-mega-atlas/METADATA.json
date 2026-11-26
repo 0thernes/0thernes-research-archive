@@ -61,6 +61,11 @@
       "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/lean_axioms.txt",
       "source_path": "results/lean_axioms.txt",
       "sha256": "5e9c607d6eb0fc02f85b0ad749ffe3836b2db4dc6356b9ae17ae406a41fff5d7"
+    },
+    {
+      "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md",
+      "source_path": "archive-audit/0THERNES_SOLVED_AUDIT_2026-11-25.md",
+      "sha256": "2121008740f466a509a13604067d499817f190732c9b828d99e20f20f0bc0fbd"
     }
   ],
   "lean_verification": {

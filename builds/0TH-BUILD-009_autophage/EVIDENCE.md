@@ -1,7 +1,7 @@
 # Build White Paper & Proof Evidence Dossier — `0TH-BUILD-009`
 
 **Title:** AUTOPHAGE v1.0: Bare-Metal Polymorphic x86-64 Galois-Field Genetic Engine with 31 Lean 4.35.0 Formal Theorems  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Systems Architecture / Coding Theory / Artificial Life / Formal Methods  
 **Version / Date:** `v1.0.0` (2026-11-21)
 

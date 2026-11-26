@@ -6,7 +6,7 @@
     "orcid": "0009-0006-8168-9648",
     "affiliation": "Independent Researcher, Spokane, WA, USA"
   },
-  "updated_utc": "2026-11-26T02:38:00Z",
+  "updated_utc": "2026-11-26T02:40:14Z",
   "builds": [
     {
       "id": "0TH-BUILD-001",
@@ -17,7 +17,7 @@
       "version": "v1.2.1",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/cellulogonic-mecha",
       "submodule_path": "repos/cellulogonic-mecha",
       "pinned_commit": "73ee3216a509a908ecf6e9d76ca5b5cb467e2138",
@@ -220,17 +220,37 @@
     {
       "id": "0TH-BUILD-004",
       "slug": "unsolved-mathematics",
-      "title": "Adversarial Verification in AI-Assisted Collatz Research: An Eight-Hour Repository Case Study",
-      "domain": "Research Methodology / Adversarial Verification",
-      "date": "2026-07-01",
-      "version": "2026-07-02-qa",
+      "title": "The Unsolved Mathematics Atlas (v0.5.0): Eight-Domain Multi-Kernel Lean 4.35.0 Structural Core (69 Declarations), 10-Page Monograph, and Adversarial Collatz Case Study",
+      "domain": "Mathematics / Open Problems / Adversarial Verification / Formal Methods",
+      "date": "2026-11-25",
+      "version": "v0.5.0",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/unsolved-mathematics",
       "submodule_path": "repos/unsolved-mathematics",
-      "pinned_commit": "f32ae651500631df90685e57b673868a9ef39e31",
+      "pinned_commit": "0604df5c70c850df44f3fdd20519e46c82925224",
       "archived_artifacts": [
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/Donahue_2026_unsolved_mathematics_atlas-v0.5.0.pdf",
+          "source_path": "releases/v0.5.0/Donahue_2026_unsolved_mathematics_atlas-v0.5.0.pdf",
+          "sha256": "6e1e2dfd804ac43a92e2513a967260867f6fa48962e35fcd37a73ef2a407bed6"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/arxiv_submission-v0.5.0.tar.gz",
+          "source_path": "releases/v0.5.0/arxiv_submission-v0.5.0.tar.gz",
+          "sha256": "8fac8e524b06bdda7f6bca732c4a5daece812ceffbc7a60b13c8fed054414f44"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/six_kernel_audit.txt",
+          "source_path": "lean/six_kernel_audit.txt",
+          "sha256": "a15373ee6d68cfeedd76df0050be8d494b17496c666bc2307d81c5632e298408"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/formalization.yaml",
+          "source_path": "lean/formalization.yaml",
+          "sha256": "da2982fb7fe7c99e71e732a347acfdd63a143159570df0887a514e1dc8614b51"
+        },
         {
           "path": "builds/0TH-BUILD-004_unsolved-mathematics/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md",
           "source_path": "docs/WHITEPAPER-COLLATZ-MULTI-MODEL-CASE-STUDY-2026-07-01.md",
@@ -248,18 +268,23 @@
         }
       ],
       "lean_verification": {
-        "has_lean": false,
-        "framework": "Empirical & repository-audit case study (no Lean proofs)",
-        "modules": 0,
-        "lines": 0,
-        "audited_theorems": 0,
-        "axiom_allowlist": [],
-        "entry_point": null,
-        "live_audit_status": "N/A (methodology & adversarial verification study)"
+        "has_lean": true,
+        "framework": "Pure Lean 4.35.0 (zero Mathlib, Palomar Challenge/Solution/NonVacuity/Adversarial, 6-kernel lake comparator --paranoid)",
+        "modules": 15,
+        "lines": 2964,
+        "audited_theorems": 69,
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/Solution.lean",
+        "live_audit_status": "GitHub Actions CI GREEN (run #45742870717, v0.5.0 release); 69 audited declarations (45 headline theorems + 10 concrete NonVacuity witnesses + 14 adversarial false-variant refutations) verified across all 6 independent kernels (lean, leanchecker-paranoid, lean4lean 2,729 decls, nanoda_bin 3,017 decls, con-leche 2,732 decls, con-ron 2,732 decls) strictly within [propext, Classical.choice, Quot.sound]"
       },
-      "summary": "Eight-hour multi-model empirical case study on adversarial QA and artifact grounding in AI-assisted mathematics research, accompanied by an independent QA audit and editorial review inside the Unsolved Mathematics Atlas.",
-      "verification_boundary": "Explicitly proves and claims no part of the Collatz Conjecture (status: OPEN). Serves as a reproducible methodological case study grounded in committed git artifacts.",
-      "falsification_command": "ls repos/unsolved-mathematics/problems/collatz-conjecture repos/unsolved-mathematics/docs"
+      "summary": "Specialist open-mathematics research atlas upgraded to v0.5.0 with an 8-domain zero-Mathlib Lean 4.35.0 structural core (45 theorems + 10 concrete non-vacuity witnesses + 14 adversarial false-variant refutations = 69 audited declarations verified across all 6 independent kernels) covering Collatz, Erdos-Straus, Lonely Runner, Brocard, Primes/Twin Primes, Goldbach, Odd Perfect/Mersenne Primes, and Ramsey R(3,3)=6, paired with a 10-page AMS-LaTeX monograph PDF, standalone arXiv source bundle, FAIR metadata, live GitHub Pages site, and the preserved July 2026 adversarial Collatz multi-model case study.",
+      "verification_boundary": "All 69 Lean 4.35.0 declarations compile with zero Mathlib, zero sorry, and strictly standard axioms across 6 independent kernels (CI #45742870717). Explicitly proves ZERO open conjectures (Collatz, Erdos-Straus, Lonely Runner, Brocard, Twin Primes, Goldbach, Odd Perfect Numbers, Mersenne infinitude all remain OPEN); formalizes classical foundations, modular reductions, sharpness bounds, and adversarial refutations only.",
+      "falsification_command": "cd repos/unsolved-mathematics/lean && lake build && lake env lean VerifyAxioms.lean && lake comparator --config comparator.json --paranoid",
+      "pages_url": "https://0thernes.github.io/unsolved-mathematics/"
     },
     {
       "id": "0TH-BUILD-005",
@@ -270,7 +295,7 @@
       "version": "v0.14.3",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/cosmogonic-quantum-mechalogodrom",
       "submodule_path": "repos/cosmogonic-quantum-mechalogodrom",
       "pinned_commit": "b0dcf153b93af839a8f7406795dd2e0e45777df4",
@@ -304,7 +329,7 @@
       "version": "main+research-branch",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/black-hole-simulation-lab",
       "submodule_path": "repos/black-hole-simulation-lab",
       "pinned_commit": "050455db866d32eb115d0cd1a39f9b90a76fdd6f",
@@ -403,6 +428,11 @@
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/lean_axioms.txt",
           "source_path": "results/lean_axioms.txt",
           "sha256": "5e9c607d6eb0fc02f85b0ad749ffe3836b2db4dc6356b9ae17ae406a41fff5d7"
+        },
+        {
+          "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md",
+          "source_path": "archive-audit/0THERNES_SOLVED_AUDIT_2026-11-25.md",
+          "sha256": "2121008740f466a509a13604067d499817f190732c9b828d99e20f20f0bc0fbd"
         }
       ],
       "lean_verification": {
@@ -431,7 +461,7 @@
       "version": "v4.2.0",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/cellular-engine-omega",
       "submodule_path": "repos/cellular-engine-omega",
       "pinned_commit": "9f0802789219929a05a00fc6b97d82a69c359946",
@@ -483,7 +513,7 @@
       "version": "v1.0.0",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/autophage",
       "submodule_path": "repos/autophage",
       "pinned_commit": "185bd16c9c2dfcfacc1a7ef3caf99b78c1c0f44a",
@@ -522,6 +552,97 @@
       "summary": "Bare-metal polymorphic x86-64 Galois-field genetic engine with 31 Lean 4.35.0 theorems covering GFNI affine involutions, Weismann roundtrip, GF(256)/Cauchy ECC recovery, 64-bit Toffoli/Fredkin symplectic reversibility and Landauer erasure, 2-adic Strong Triangle Inequality, JIT bounds, and thermodynamic monotonicity.",
       "verification_boundary": "Compiles cleanly in Lean 4.35.0 on Ubuntu CI with 0 sorry and 0 custom user axioms; transparently discloses reliance on Lean 4's built-in bv_decide native bitvector reflection axioms for finite BitVec theorems. Runtime verified by 18 silicon falsification gates and 6 planted negative mutants on Win64 and Linux.",
       "falsification_command": "cd repos/autophage/lean && lean AutophageProofs.lean"
+    },
+    {
+      "id": "0TH-BUILD-010",
+      "slug": "noetic-organism-omega",
+      "title": "NOETIC ORGANISM OMEGA: Native C11+AVX2 Artificial Life & Neural-Circuit Simulation Engine with 48 Pure Lean 4.35.0 Formal Theorems",
+      "domain": "Artificial Life / Synthetic Cognition / Biophysical Simulation / Formal Methods",
+      "date": "2026-11-22",
+      "version": "main-ci-verified",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/noetic-organism-omega",
+      "submodule_path": "repos/noetic-organism-omega",
+      "pinned_commit": "0c372fdae4d9794021b04128df3f95ea50727452",
+      "archived_artifacts": [
+        {
+          "path": "builds/0TH-BUILD-010_noetic-organism-omega/README.md",
+          "source_path": "README.md",
+          "sha256": "662ee7358d26ee4b822f206e09e6b4d61d0387e230b19269a66069618e3646a8"
+        },
+        {
+          "path": "builds/0TH-BUILD-010_noetic-organism-omega/NoeticProofs.lean",
+          "source_path": "lean/NoeticProofs.lean",
+          "sha256": "1fc13b29d7d4e60b5b0fc936594669eb07f2b4bfeba76dc69279488c1276ff10"
+        },
+        {
+          "path": "builds/0TH-BUILD-010_noetic-organism-omega/LiveC11Receipt.lean",
+          "source_path": "lean/NoeticProofs/LiveC11Receipt.lean",
+          "sha256": "0562c8e9f8fdb39e8afbfa9e5b29c9ac91c41fd5d8b57580d9c7fe4c07af2952"
+        }
+      ],
+      "lean_verification": {
+        "has_lean": true,
+        "framework": "Pure Lean 4.35.0 (zero Mathlib, zero native_decide)",
+        "modules": 2,
+        "lines": 487,
+        "audited_theorems": 48,
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/NoeticProofs.lean",
+        "live_audit_status": "GitHub Actions CI GREEN (run #45076052369); 48 Pure Lean 4 theorems (NoeticProofs.lean + LiveC11Receipt.lean), zero sorry, zero custom axioms, strictly within [propext, Classical.choice, Quot.sound]"
+      },
+      "summary": "Part of the 7-repository A-Life Singularity Omega architecture pairing a native C11+AVX2 organism simulation kernel with 48 Pure Lean 4.35.0 machine-checked discrete invariants (NoeticProofs.lean & LiveC11Receipt.lean) verified in GitHub Actions CI (#45076052369).",
+      "verification_boundary": "All 48 Lean 4 theorems certify discrete algebraic, conservation, and receipt-consistency invariants of the simulation model with zero sorry and standard axioms; explicitly disclaims biological wet-lab validation, consciousness, sentience, or retiring any Mega-Atlas open problem.",
+      "falsification_command": "cd repos/noetic-organism-omega/lean && lake build"
+    },
+    {
+      "id": "0TH-BUILD-011",
+      "slug": "asmodensius-native",
+      "title": "Asmodensius Native: Bare-Metal C11/Vulkan Organism Runtime with 20 Pure Lean 4.35.0 Discrete Invariants (A01-A20)",
+      "domain": "Artificial Life / Systems Engineering / Formal Methods",
+      "date": "2026-11-22",
+      "version": "main-snapshot",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/asmodensius-native",
+      "submodule_path": "repos/asmodensius-native",
+      "pinned_commit": "782cd0ed5f2aa06383c6b6279ac6ff22b42e8f47",
+      "archived_artifacts": [
+        {
+          "path": "builds/0TH-BUILD-011_asmodensius-native/AsmodensiusProofs.lean",
+          "source_path": "lean/AsmodensiusProofs.lean",
+          "sha256": "c29ebfc856ea241ab71b016e0b54c03597216777329dedc5bca8065f818bac8a"
+        },
+        {
+          "path": "builds/0TH-BUILD-011_asmodensius-native/AGENTS.md",
+          "source_path": "AGENTS.md",
+          "sha256": "6ce72bfe1eeea640bed2bd5fd9d2073b82141a882d9927c55dbdca30db1594e8"
+        }
+      ],
+      "lean_verification": {
+        "has_lean": true,
+        "framework": "Pure Lean 4.35.0 Core (zero Mathlib, zero native_decide)",
+        "modules": 1,
+        "lines": 155,
+        "audited_theorems": 20,
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/AsmodensiusProofs.lean",
+        "live_audit_status": "20 Pure Lean 4 declarations (A01-A20, zero sorry, explicit #print axioms strictly standard); NOTE: A15, A16, and A20 are disclosed arithmetic rfl accounting witnesses rather than deep behavioral proofs"
+      },
+      "summary": "Native runtime component of the A-Life Singularity Omega stack carrying 20 Pure Lean 4.35.0 declarations (AsmodensiusProofs.lean, A01-A20) covering mass/energy conservation, species cap refusal boundaries, arena rollback, observer hash invariance, Philox RNG key equivalence, and CPU/GPU twin hash parity.",
+      "verification_boundary": "Certifies discrete arithmetic, state-transition, and hash-parity invariants of the native simulation runtime; explicitly discloses that A15, A16, and A20 are trivial arithmetic rfl accounting witnesses and makes zero claims of sentience, consciousness, or resolving any open mathematical/scientific problem.",
+      "falsification_command": "cd repos/asmodensius-native/lean && lean AsmodensiusProofs.lean"
     }
   ]
 }

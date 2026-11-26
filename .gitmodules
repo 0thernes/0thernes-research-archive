@@ -58,3 +58,12 @@
 [submodule "repos/coded-pir-mlwe-complexity-lab"]
 	path = repos/coded-pir-mlwe-complexity-lab
 	url = https://github.com/0thernes/coded-pir-mlwe-complexity-lab.git
+[submodule "repos/p-vs-np-frontier-lab"]
+	path = repos/p-vs-np-frontier-lab
+	url = https://github.com/0thernes/p-vs-np-frontier-lab.git
+[submodule "repos/noetic-organism-omega"]
+	path = repos/noetic-organism-omega
+	url = https://github.com/0thernes/noetic-organism-omega.git
+[submodule "repos/asmodensius-native"]
+	path = repos/asmodensius-native
+	url = https://github.com/0thernes/asmodensius-native.git

@@ -1,0 +1,66 @@
+# Live Cross-Repository Ecosystem Sync & Portal Refresh (ADR 0002)
+# Triggers automatically via repository_dispatch from upstream 0thernes repos,
+# every 2 hours on schedule, or on manual workflow_dispatch.
+name: Live Ecosystem Sync & Mirror
+
+on:
+  repository_dispatch:
+    types: [upstream-repo-updated, sync-archive]
+  schedule:
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: archive-live-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  live-sync:
+    name: Refresh Live Upstream Mirror, Bridge, Checksums & Context
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout canonical archive hub
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Query live GitHub API across all tracked public 0thernes repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/live_sync.py
+
+      - name: Synchronize derived dossiers, manifests, LLM context & static portal
+        run: |
+          python scripts/verify_archive.py --sync
+          python scripts/generate_llms_full.py
+          python scripts/build_site.py
+
+      - name: Verify full archive integrity and pytest suite
+        run: |
+          python scripts/verify_archive.py
+          python -m pytest -v tests/
+
+      - name: Commit and push live mirror update directly to main (if changed)
+        run: |
+          if git diff --quiet -- registry/ README.md CHECKSUMS.sha256 data/MANIFEST.sha256 llms.txt llms-full.txt; then
+            echo "Live ecosystem mirror already up to date; nothing to commit."
+            exit 0
+          fi
+          git config user.name "0thernes-live-sync[bot]"
+          git config user.email "0_0@0thernes.art"
+          git add registry/LIVE_ECOSYSTEM_MIRROR.json registry/LIVE_ECOSYSTEM_MIRROR.md registry/SOLVED_AND_ATLAS_BRIDGE.md README.md CHECKSUMS.sha256 data/MANIFEST.sha256 llms.txt llms-full.txt
+          git commit -m "chore(live-sync): refresh upstream ecosystem mirror [skip-sync]"
+          git pull --rebase origin main
+          git push origin main

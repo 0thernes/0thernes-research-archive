@@ -2,7 +2,7 @@
 # Project manifest for Build Standard for LLMs v1.2.0.
 standard: "1.2.0"
 name: "0thernes-research-archive"
-description: "Cryptographically audited master vault of 31 public Lean 4-verified research preprints, build white papers, laws, pre-registered empirical claims, frozen PDFs, SHA-256 manifests, and 20 pinned public Git submodules authored by Alexander Stephen Donahue."
+description: "Canonical public master vault, live ecosystem mirror, and Mega-Atlas V2 bridge of 36 public Lean 4-verified research preprints, build white papers, laws, pre-registered empirical claims, frozen PDFs, SHA-256 manifests, and 23 pinned public Git submodules authored by Alexander Stephen Donahue."
 owner: "Alexander S. Donahue (0thernes)"
 year: "2026"
 project_type: research
@@ -32,7 +32,7 @@ items:
   A05: {status: n/a, note: "Cryptographic research registry vault, no interactive UI"}
   A06: {status: done, evidence: "LICENSE"}
   A07: {status: done, evidence: "CHANGELOG.md"}
-  A08: {status: done, evidence: "VERSION (2026.11.25) matches CHANGELOG.md and CITATION.cff"}
+  A08: {status: done, evidence: "VERSION (2026.11.26) matches CHANGELOG.md and CITATION.cff"}
   A09: {status: done, evidence: "tests/test_archive_integrity.py"}
   A10: {status: done, evidence: ".github/workflows/archive-audit.yml"}
   A11: {status: done, evidence: ".github/workflows/release.yml"}
@@ -43,9 +43,9 @@ items:
   A16: {status: done, evidence: "SECURITY.md"}
   A17: {status: done, evidence: "SUPPORT.md"}
   A18: {status: done, evidence: ".github/ISSUE_TEMPLATE/{bug,feature,question,config}.yml; zero PR template (R4)"}
-  A19: {status: done, evidence: "GitHub About description and topics set"}
-  A20: {status: done, evidence: "docs/index.md and docs/architecture.md"}
-  A21: {status: done, evidence: "docs/adr/0001-three-tier-epistemic-archive.md"}
+  A19: {status: done, evidence: "GitHub About description, topics, and homepageUrl (https://0thernes.github.io/0thernes-research-archive/) set"}
+  A20: {status: done, evidence: "docs/index.md, docs/architecture.md, and HARDENING_INDEX.md"}
+  A21: {status: done, evidence: "docs/adr/0001-three-tier-epistemic-archive.md and docs/adr/0002-canonical-hub-and-live-sync.md"}
   A22: {status: done, evidence: "CITATION.cff"}
   A23: {status: done, evidence: "main branch with verified author identity"}
   A24: {status: done, evidence: "Zero secrets, build caches, .env, or >5 MB files tracked"}
@@ -74,11 +74,11 @@ items:
   B02: {status: done, evidence: "requirements.txt"}
   B03: {status: done, evidence: "Deterministic registry generation and SHA-256 verification"}
   B04: {status: done, evidence: "CLAIMS.md"}
-  B05: {status: done, evidence: "Claims C1-C4 mapped to scripts/verify_archive.py and tests/test_archive_integrity.py"}
-  B06: {status: done, evidence: "Negative tamper-detection tests in tests/test_archive_integrity.py"}
-  B07: {status: done, evidence: "Regression tests for privacy firewall, R4 banned files, and LLC cleanup"}
-  B08: {status: done, evidence: "Byte-exact SHA-256 checksums across all 31 entries"}
-  B09: {status: n/a, note: "No external network API"}
+  B05: {status: done, evidence: "Claims C1-C5 mapped to scripts/verify_archive.py and tests/test_archive_integrity.py"}
+  B06: {status: done, evidence: "Negative tamper-detection, broken-link, and privacy-firewall rejection tests in tests/test_archive_integrity.py"}
+  B07: {status: done, evidence: "Regression tests for privacy firewall, R4 banned files, zero broken links, and zero unformed LLC assertions"}
+  B08: {status: done, evidence: "Byte-exact SHA-256 checksums across all 36 entries, bridge, and live mirror"}
+  B09: {status: done, evidence: "GitHub REST API contract & privacy-firewall checks in scripts/live_sync.py and tests/test_archive_integrity.py"}
   B10: {status: done, evidence: "Hypothesis property-based hash & metadata checks in tests/test_archive_integrity.py"}
   B11: {status: done, evidence: "Differential verification comparing Python sha256_file vs CHECKSUMS.sha256 & git ls-files submodule pins"}
   B12: {status: done, evidence: "External sha256sum -c CHECKSUMS.sha256 oracle in CI"}
@@ -90,7 +90,7 @@ items:
   B18: {status: done, evidence: "mypy (report-only) in .github/workflows/archive-audit.yml"}
   B19: {status: n/a, note: "Deterministic single-threaded cryptographic verification"}
   B20: {status: n/a, note: "No floating-point numerical computation"}
-  B21: {status: n/a, note: "No networked service"}
+  B21: {status: done, evidence: "HTTP 500 failure-injection and offline-mode fallback tests for scripts/live_sync.py in tests/test_archive_integrity.py"}
   B22: {status: n/a, note: "Lean 4 proofs live inside pinned Tier I & Tier II submodules verified by their own CI"}
   B23: {status: n/a, note: "Archive vault, not a distributed protocol"}
   B24: {status: n/a, note: "Python archival tooling"}
@@ -114,4 +114,4 @@ items:
   B42: {status: done, evidence: "CLAIMS.md What Would Prove Us Wrong"}
   B43: {status: done, evidence: "REPLICATION.md"}
   B44: {status: done, evidence: "REPLICATION.md dated replication table"}
-  B45: {status: done, evidence: "docs/reviews/red-team-2026-11-25.md"}
+  B45: {status: done, evidence: "docs/reviews/red-team-2026-11-25.md and docs/reviews/2026-11-25-3cycle-hardening-log.md"}

@@ -1,7 +1,7 @@
 # Evidence & Falsification Dossier — `0TH-2026-005`
 
 **Title:** Contextuality Evidence Lab: Exact Sequential Certificates and a Constructive Setting-Bias Attack  
-**Author:** Alexander Stephen Donahue (0thernes LLC, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Quantum Foundations / Statistical Hypothesis Testing  
 **Version / Date:** `v1.0.0` (2026-11-10)  
 **Status:** Research methods artifact & preprint (not peer reviewed; AI-assisted under human direction)

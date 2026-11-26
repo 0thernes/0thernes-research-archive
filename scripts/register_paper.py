@@ -94,7 +94,7 @@ def main() -> None:
         "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction)",
         "author": "Alexander Stephen Donahue",
         "orcid": "0009-0006-8168-9648",
-        "affiliation": "0thernes LLC",
+        "affiliation": "Independent Researcher, Spokane, WA, USA",
         "repository": args.repo.rstrip("/"),
         "submodule_path": sub_rel,
         "pinned_commit": sha,
