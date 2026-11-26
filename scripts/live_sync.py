@@ -490,9 +490,16 @@ def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
     # still looking structurally valid.  Offline mode is intentionally exempt:
     # it is the deterministic pinned-manifest renderer used for local builds.
     if not offline and counts["api_errors"]:
+        error_samples = [
+            f"{r['slug']}: {r['error']}"
+            for r in mirror_repos
+            if r["sync_status"] == "API_ERROR" and r.get("error")
+        ][:5]
+        detail = " | ".join(error_samples)
         raise RuntimeError(
             f"live GitHub sync aborted with {counts['api_errors']} API errors; "
-            "preserving the previous mirror (use --offline for a pinned snapshot)"
+            "preserving the previous mirror (use --offline for a pinned snapshot). "
+            f"Sample failures: {detail or 'no error details captured'}"
         )
 
     inventory = collect_public_inventory(
