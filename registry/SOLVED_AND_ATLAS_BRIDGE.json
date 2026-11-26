@@ -16,9 +16,9 @@
     "grand_mega_atlas_problems_retired": 0,
     "published_open_subconjectures_proved_in_lean": 5,
     "preprint_conjectures_proved_with_external_citation_caveat": 1,
-    "bounded_partial_or_barrier_preprint_suites": 6,
+    "bounded_partial_or_barrier_preprint_suites": 8,
     "embedded_discrete_lean_build_suites": 15,
-    "statement": "Strictly 0 of 1,900 grand open problems in Unsolved Problems Mega-Atlas V2 are retired. Five peer-literature open sub-conjectures/open questions (Conjecture 7.7 in 0TH-2026-006, Vinciguerra Sec. 6 in 0TH-2026-010, Muller-Saniga Sec. 6 in 0TH-2026-009 Track 2, Sun-Tao-Xu-Zhang Schur-syzygy rank in 0TH-2026-012, and Tandon arXiv:2608.30273 Open Problem #2 plus 4 odd-cycle Shannon capacity world records in 0TH-2026-016) and one unreviewed-preprint conjecture (Jonah Conjecture E in 0TH-2026-009 Track 1, modulo cited Theorem B4 outside Lean) are completely machine-checked in Lean 4.35.0 within their published scopes, alongside 6 bounded/partial/barrier Tier I suites and 15 embedded Pure Lean 4.35.0 Tier II build invariant suites (1,058 declarations)."
+    "statement": "Strictly 0 of 1,900 grand open problems in Unsolved Problems Mega-Atlas V2 are retired. Five peer-literature open sub-conjectures/open questions (Conjecture 7.7 in 0TH-2026-006, Vinciguerra Sec. 6 in 0TH-2026-010, Muller-Saniga Sec. 6 in 0TH-2026-009 Track 2, Sun-Tao-Xu-Zhang Schur-syzygy rank in 0TH-2026-012, and Tandon arXiv:2608.30273 Open Problem #2 plus 4 odd-cycle Shannon capacity world records in 0TH-2026-016) and one unreviewed-preprint conjecture (Jonah Conjecture E in 0TH-2026-009 Track 1, modulo cited Theorem B4 outside Lean) are completely machine-checked in Lean 4.35.0 within their published scopes, alongside 8 bounded/partial/barrier Tier I suites and 15 embedded Pure Lean 4.35.0 Tier II build invariant suites (1,058 declarations)."
   },
   "entries": [
     {
@@ -490,6 +490,23 @@
       "target_statement": "Machine-checks 15 headline theorems (T1a-T3e) + master conjunction + NonVacuity + Adversarial in zero-Mathlib Lean 4.35.0: self-contained Eisenstein (1844) QR & zero-GCD Dehn-twist CRT proof of HKRS (Annals 2024) Apollonian obstruction, Octahedral Q(sqrt(-2)) obstruction, Soddy d in {2,3} dichotomy, universal Abelian sandpile confluence + exact Matrix-Tree dets (192, 100352), original Triangular Lattice A2 Even-Laplacian Rigidity (K % 2 = 0 -> K=5 universally obstructed), Kalinin-Shkolnikov tropical balancing, SL2(Z) Fricke-Cohn correspondence, Exact Mod-32 Theorem for even Markov numbers (m % 32 = 2), universal Hensel sqrt(-1) mod p^k uniqueness, 5-step symbolic Markov cluster Laurent positivity (2 non-monomial cancellations P1, P2), and complete Markov-Hurwitz n=4 classification.",
       "lean_verification": "Zero-Mathlib Lean 4.35.0, 18 audited decls across 11 Palomar module files, all 6 independent kernels accepted 5,012 exported decls via lake comparator --paranoid inside bubblewrap (CI run 45849166650, SLSA #72728455 / Rekor 4128618149, SWH swh:1:snp:5dac6e269ff3c673fa6ee9b7520365de44109a16).",
       "honesty_boundary": "Proves 15 unconditional algebraic, reciprocity, discrete-potential, and descent theorems; overarching grand open conjectures (full Apollonian local-global classification, continuum sandpile scaling limit STAT-058, and general-composite Markov Uniqueness NT-083) remain explicitly OPEN."
+    },
+    {
+      "archive_id": "0TH-2026-019",
+      "slug": "cayley-dickson-terrace-frontier",
+      "repository": "https://github.com/0thernes/cayley-dickson-terrace-frontier",
+      "version": "v1.0.0",
+      "resolution_class": "PARTIAL_BOUNDED_CASE",
+      "grand_atlas_problem_retired": false,
+      "related_mega_atlas_ids": [
+        "ALG-035",
+        "ALG-039",
+        "XGEOM-031",
+        "COMB-040"
+      ],
+      "target_statement": "Machine-checks 19 headline theorems (T1a-T1e, T2a-T2f, T3a-T3d, T4a-T4d) + master conjunction (20 Palomar targets) plus 4 NonVacuity witnesses and 6 AdversarialTests sharpness refutations in zero-Mathlib Lean 4.35.0: Universal Nilpotent Mirror Conservation across all generalized Cayley-Dickson signatures CD_n(gamma), the exact Dyadic-Palindromic Terrace Law & All-Signature Midpoint 42 Law H_n^gamma(2^(n-2)) = 42*2^(n-4), the exact right-compatibility clique number omega(G_n^comp) = n+5 & Dimension-64 Hurwitz-Radon Bott Rupture n+5 < rho(2^n) for all n >= 6 (11 < 12 at n=6), and complete sedenion/pathion finite certificates (Fano 7+28+7=42, 7 x K_{2,2,2} box-kites, 1:1:7:7 & 4x1+4x7 split phases, [14,14,32] & [16,16,64] witnesses), differentially audited across 496 algebras CD_4-CD_8 in Rust, ISO C11, and exact Q Python.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 30 audited decls across 14 Palomar module files, all 6 independent kernels verified via lake check --paranoid (59,188-59,191 decls) & lake comparator --paranoid (3,767-3,770 decls) + live negative tamper gate (CI run 45859629245, SLSA #72758106 / Rekor 4129728240).",
+      "honesty_boundary": "Proves universal Cayley-Dickson mirror/terrace theorems, all-n >= 6 coordinate Hurwitz-Radon Bott rupture, and finite sedenion/pathion certificates; overarching grand open problems (ALG-035, ALG-039, XGEOM-031, COMB-040 and general non-coordinate composition-pair problems) remain explicitly OPEN."
     }
   ]
 }

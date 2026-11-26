@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0.0",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
-  "synced_utc": "2026-11-26T15:37:47Z",
+  "synced_utc": "2026-11-26T17:02:45Z",
   "sync_mode": "live-github-api",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
-    "tier1_papers": 18,
+    "tier1_papers": 19,
     "tier2_builds": 17,
     "tier3_discoveries": 12,
-    "total_entries": 47,
-    "unique_public_repositories": 40,
-    "pinned_submodules": 34,
-    "exact_pin_match": 31,
+    "total_entries": 48,
+    "unique_public_repositories": 41,
+    "pinned_submodules": 35,
+    "exact_pin_match": 32,
     "ahead_of_pin": 5,
     "historical_archived": 4,
     "api_errors": 0
@@ -86,10 +86,10 @@
       "archived": false,
       "live_head_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
       "latest_release_tag": "v1.0.0",
-      "pushed_at": "2026-11-26T15:31:45Z",
-      "ci_run_id": 45849166650,
+      "pushed_at": "2026-11-26T15:48:31Z",
+      "ci_run_id": 45852589226,
       "ci_conclusion": "success",
-      "ci_html_url": "https://github.com/0thernes/apollonian-sandpile-markov/actions/runs/45849166650",
+      "ci_html_url": "https://github.com/0thernes/apollonian-sandpile-markov/actions/runs/45852589226",
       "pages_url": "https://0thernes.github.io/apollonian-sandpile-markov/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -245,6 +245,31 @@
       "error": null
     },
     {
+      "slug": "cayley-dickson-terrace-frontier",
+      "repository": "https://github.com/0thernes/cayley-dickson-terrace-frontier",
+      "archive_ids": [
+        "0TH-2026-019"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "archived_version": "v1.0.0",
+      "submodule_path": "repos/cayley-dickson-terrace-frontier",
+      "registered_pages_url": "https://0thernes.github.io/cayley-dickson-terrace-frontier/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": "564e1787e66e2736fbff54c7917d1a5a84e4999c",
+      "latest_release_tag": "v1.0.0",
+      "pushed_at": "2026-11-26T16:57:24Z",
+      "ci_run_id": 45862753345,
+      "ci_conclusion": "success",
+      "ci_html_url": "https://github.com/0thernes/cayley-dickson-terrace-frontier/actions/runs/45862753345",
+      "pages_url": "https://0thernes.github.io/cayley-dickson-terrace-frontier/",
+      "sync_status": "AHEAD_OF_PIN",
+      "error": null
+    },
+    {
       "slug": "cellular-engine-omega",
       "repository": "https://github.com/0thernes/cellular-engine-omega",
       "archive_ids": [
@@ -303,20 +328,20 @@
       "tiers": [
         "Tier I"
       ],
-      "pinned_commit": "a2967e4b945322938b16d96702a06397b0e473f7",
-      "archived_version": "v4.0.0",
+      "pinned_commit": "674b5dac3a94825cb7791ac74b38ffd0fef23f1c",
+      "archived_version": "v5.0.0",
       "submodule_path": "repos/coded-pir-mlwe-complexity-lab",
       "registered_pages_url": "https://0thernes.github.io/coded-pir-mlwe-complexity-lab/",
       "default_branch": "main",
       "archived": false,
-      "live_head_commit": "865e83e546134b5534634ee03cf5915026b05d9c",
-      "latest_release_tag": "v4.0.0",
-      "pushed_at": "2026-11-26T15:26:45Z",
-      "ci_run_id": 45849177789,
+      "live_head_commit": "674b5dac3a94825cb7791ac74b38ffd0fef23f1c",
+      "latest_release_tag": "v5.0.0",
+      "pushed_at": "2026-11-26T15:45:58Z",
+      "ci_run_id": 45850785203,
       "ci_conclusion": "success",
-      "ci_html_url": "https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45849177789",
+      "ci_html_url": "https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45850785203",
       "pages_url": "https://0thernes.github.io/coded-pir-mlwe-complexity-lab/",
-      "sync_status": "AHEAD_OF_PIN",
+      "sync_status": "EXACT_PIN_MATCH",
       "error": null
     },
     {

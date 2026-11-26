@@ -100,3 +100,6 @@
 [submodule "repos/apollonian-sandpile-markov"]
 	path = repos/apollonian-sandpile-markov
 	url = https://github.com/0thernes/apollonian-sandpile-markov.git
+[submodule "repos/cayley-dickson-terrace-frontier"]
+	path = repos/cayley-dickson-terrace-frontier
+	url = https://github.com/0thernes/cayley-dickson-terrace-frontier.git
