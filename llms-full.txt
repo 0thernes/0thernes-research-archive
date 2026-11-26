@@ -23,7 +23,7 @@
 - **Scope:** **48 public research entries** (`19 Tier I + 17 Tier II + 12 Tier III`) + **35 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 <!-- LIVE_ECOSYSTEM_STATUS:START -->
-> **Live Canonical Hub Mirror (`2026-11-26T17:02:45Z`):** Tracking **48 public research entries** (19 Tier I preprints · 17 Tier II builds · 12 Tier III laws/discoveries/atlases) across **41 unique public repositories** and **35 pinned Git submodules** (`32` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
+> **Live Canonical Hub Mirror (`2026-11-26T17:22:10Z`):** Tracking **48 public research entries** (19 Tier I preprints · 17 Tier II builds · 12 Tier III laws/discoveries/atlases) across **41 unique public repositories** and **35 pinned Git submodules** (`32` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
 > **Mega-Atlas V2 Cross-Check:** **`0 / 1900` grand open problems retired** · **5 peer-literature open sub-conjectures/questions formally proved in Lean 4.35.0** across 6 independent kernels. Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
 <!-- LIVE_ECOSYSTEM_STATUS:END -->
 
@@ -314,7 +314,7 @@ just audit       # Score repo against Build Standard v1.2.0
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-26T17:02:45Z` · **Mode:** `live-github-api`  
+**Synced (UTC):** `2026-11-26T17:22:10Z` · **Mode:** `live-github-api`  
 **Tracked Public Repositories:** 41 (`32` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
@@ -369,6 +369,7 @@ just audit       # Score repo against Build Standard v1.2.0
 
 - **Push-based dispatch:** Upstream repositories carrying `.github/workflows/notify-archive.yml` dispatch `upstream-repo-updated` to this hub on every `main` push (see [`docs/upstream-notify-workflow.yml`](../docs/upstream-notify-workflow.yml)).
 - **Scheduled pull mirror:** [`.github/workflows/live-sync.yml`](../.github/workflows/live-sync.yml) refreshes this mirror every 2 hours (`0 */2 * * *`), re-verifies SHA-256 integrity and `pytest`, and republishes the live GitHub Pages portal automatically whenever upstream status changes.
+- **Discovery inventory:** [`PUBLIC_REPO_INVENTORY.md`](PUBLIC_REPO_INVENTORY.md) lists every public, non-fork owner repository and marks unregistered repositories as candidates without promoting them into the epistemic archive.
 - **Immutability rule:** Release-pinned frozen PDFs and Rekor-attested submodules are only advanced when matching frozen artifacts are archived; post-release upstream commits appear immediately as `AHEAD_OF_PIN` with live CI links.
 
 
