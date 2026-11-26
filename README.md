@@ -7,7 +7,7 @@
 [![Checksums Verified](https://img.shields.io/badge/Integrity-SHA--256_Manifest-blue.svg)](CHECKSUMS.sha256)
 [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
-**Single canonical public master vault, live-synced upstream mirror, and Unsolved Problems Mega-Atlas V2 bridge for all PUBLIC Lean 4–verified research preprints, embedded build white papers, pure Lean 4 proof suites, architectural laws, pre-registered empirical claims, controlled discoveries, frozen PDFs, falsification dossiers, and pinned source repositories authored by Alexander Stephen Donahue (`Independent Researcher`).**
+**Single canonical public master vault, hourly-refreshed upstream mirror, and Unsolved Problems Mega-Atlas V2 bridge for all PUBLIC Lean 4–verified research preprints, embedded build white papers, pure Lean 4 proof suites, architectural laws, pre-registered empirical claims, controlled discoveries, frozen PDFs, falsification dossiers, and pinned source repositories authored by Alexander Stephen Donahue (`Independent Researcher`).**
 
 - **Author:** Alexander Stephen Donahue (`Alexander S. Donahue`) · **Independent Researcher**, Spokane, WA, USA
 - **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)
@@ -16,7 +16,7 @@
 - **Scope:** **48 public research entries** (`19 Tier I + 17 Tier II + 12 Tier III`) + **35 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 <!-- LIVE_ECOSYSTEM_STATUS:START -->
-> **Live Canonical Hub Mirror (`2026-11-26T17:47:52Z`):** Tracking **48 public research entries** (19 Tier I preprints · 17 Tier II builds · 12 Tier III laws/discoveries/atlases) across **41 unique public repositories** and **35 pinned Git submodules** (`32` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
+> **Live Canonical Hub Mirror (`2026-11-26T21:09:23Z`):** Tracking **48 public research entries** (19 Tier I preprints · 17 Tier II builds · 12 Tier III laws/discoveries/atlases) across **41 unique public repositories** and **35 pinned Git submodules** (`32` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
 > **Mega-Atlas V2 Cross-Check:** **`0 / 1900` grand open problems retired** · **5 peer-literature open sub-conjectures/questions formally proved in Lean 4.35.0** across 6 independent kernels. Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
 <!-- LIVE_ECOSYSTEM_STATUS:END -->
 
@@ -37,7 +37,7 @@ Public repositories discovered but not yet promoted into the research registries
 
 This repository is the **single authoritative public master hub** consolidating all research outputs across `0thernes` ([ADR 0002](docs/adr/0002-canonical-hub-and-live-sync.md)):
 
-- **Master Solved & Verified Hub (this repo):** [`0thernes/0thernes-research-archive`](https://github.com/0thernes/0thernes-research-archive) — live-synced via [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml) (`repository_dispatch` + 2-hour cron) and [`scripts/live_sync.py`](scripts/live_sync.py).
+- **Master Solved & Verified Hub (this repo):** [`0thernes/0thernes-research-archive`](https://github.com/0thernes/0thernes-research-archive) — refreshed hourly by [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml) and [`scripts/live_sync.py`](scripts/live_sync.py) (a scheduled pull from the GitHub API; push-triggered refresh is optional and not yet configured on the source repositories).
 - **Specialist Open-Problem Atlases (spokes indexed below):** [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) (`0TH-BUILD-007`, 1,900 problems), [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) (`0TH-BUILD-004` frozen `v0.5.0`; separately verified upstream candidate `v0.6.0` in [`registry/UPSTREAM_RELEASE_SNAPSHOTS.json`](registry/UPSTREAM_RELEASE_SNAPSHOTS.json) & `0TH-DISC-005`), and [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) (`0TH-DISC-006`).
 - **Honest Mega-Atlas V2 Audit (`0 / 1,900` grand open problems retired):** **Zero** grand open problems in Mega-Atlas V2 are completely retired, while **5 peer-literature open sub-conjectures/questions** (`0TH-2026-006` Conjecture 7.7, `0TH-2026-010` Vinciguerra Sec. 6, `0TH-2026-009` Track 2 Muller–Saniga Sec. 6, `0TH-2026-012` Sun–Tao–Xu–Zhang Schur-syzygy rank, `0TH-2026-016` Tandon `arXiv:2608.30273` Open Problem #2 + 4 odd-cycle Shannon capacity world records) plus Jonah's Conjecture E (`0TH-2026-009` Track 1, with cited Theorem B4 outside Lean) are completely machine-checked in Lean 4.35.0 across 6 independent kernels. See [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) and [`0THERNES_SOLVED_AUDIT_2026-11-25.md`](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md).
 
@@ -159,4 +159,4 @@ just audit       # Score repository against Build Standard v1.2.0
 
 ## Maintenance Status
 
-**Status: Active** (repostatus: `active`). Automatically refreshes its live upstream mirror every 2 hours and on `repository_dispatch` via [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml). Upstream releases are reported in the live mirror; immutable frozen release pins are advanced only through a reviewed archive update that adds and verifies the corresponding frozen artifacts (see [CLAIMS.md](CLAIMS.md), [LIMITATIONS.md](LIMITATIONS.md), [REPLICATION.md](REPLICATION.md), [ROADMAP.md](ROADMAP.md), and [HARDENING_INDEX.md](HARDENING_INDEX.md)).
+**Status: Active** (repostatus: `active`). Automatically refreshes its upstream mirror every hour, and on `repository_dispatch` where an upstream repository is configured for it, via [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml). Upstream releases are reported in the live mirror; immutable frozen release pins are advanced only through a reviewed archive update that adds and verifies the corresponding frozen artifacts (see [CLAIMS.md](CLAIMS.md), [LIMITATIONS.md](LIMITATIONS.md), [REPLICATION.md](REPLICATION.md), [ROADMAP.md](ROADMAP.md), and [HARDENING_INDEX.md](HARDENING_INDEX.md)).

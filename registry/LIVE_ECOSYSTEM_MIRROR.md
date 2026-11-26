@@ -1,7 +1,7 @@
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-26T17:47:52Z` · **Mode:** `live-github-api`  
+**Synced (UTC):** `2026-11-26T21:09:23Z` · **Mode:** `live-github-api`  
 **Tracked Public Repositories:** 41 (`32` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
@@ -45,16 +45,17 @@
 | [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `0TH-2026-011` | Tier I | `6c7f642146` | `6c7f642146` | `v2.5.0` | [`success`](https://github.com/0thernes/secmesh-pqsi/actions/runs/45745957907) | `EXACT_PIN_MATCH` |
 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `06461739b0` | `10923469a4` | `v1.5.0` | [`success`](https://github.com/0thernes/ultrametrica/actions/runs/45823023293) | `AHEAD_OF_PIN` |
 | [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | `0TH-DISC-006` | Tier III | `0686cf9729` | `0686cf9729` | `main` | [`success`](https://github.com/0thernes/unsolved-black-hole-problems/actions/runs/45743010356) | `EXACT_PIN_MATCH` |
-| [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `0TH-BUILD-004`, `0TH-DISC-005` | Tier II / Tier III | `0604df5c70` | `4ce816d6fa` | `v0.6.0` | [`success`](https://github.com/0thernes/unsolved-mathematics/actions/runs/45829951457) | `AHEAD_OF_PIN` |
+| [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `0TH-BUILD-004`, `0TH-DISC-005` | Tier II / Tier III | `0604df5c70` | `bdc67d5e4d` | `v0.6.0` | [`success`](https://github.com/0thernes/unsolved-mathematics/actions/runs/45881955327) | `AHEAD_OF_PIN` |
 | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `0TH-BUILD-007` | Tier II | `9e16554260` | `9e16554260` | `v2.8.0` | [`success`](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/45833490569) | `EXACT_PIN_MATCH` |
 | [`xiaomi-17t-pro-lab`](https://github.com/0thernes/xiaomi-17t-pro-lab) | `0TH-BUILD-012` | Tier II | `f1da68b78e` | `f1da68b78e` | `v3.1.0` | [`success`](https://github.com/0thernes/xiaomi-17t-pro-lab/actions/runs/45821462528) | `EXACT_PIN_MATCH` |
 | [`zero-error-torus-frontier`](https://github.com/0thernes/zero-error-torus-frontier) | `0TH-2026-016` | Tier I | `af343aaa17` | `af343aaa17` | `v1.0.0` | [`success`](https://github.com/0thernes/zero-error-torus-frontier/actions/runs/45762976065) | `EXACT_PIN_MATCH` |
 
 ---
 
-## Automatic Real-Time Sync Protocol
+## How this mirror is refreshed
 
-- **Push-based dispatch:** Upstream repositories carrying `.github/workflows/notify-archive.yml` dispatch `upstream-repo-updated` to this hub on every `main` push (see [`docs/upstream-notify-workflow.yml`](../docs/upstream-notify-workflow.yml)).
-- **Scheduled pull mirror:** [`.github/workflows/live-sync.yml`](../.github/workflows/live-sync.yml) refreshes this mirror every 2 hours (`0 */2 * * *`), re-verifies SHA-256 integrity and `pytest`, and republishes the live GitHub Pages portal automatically whenever upstream status changes.
+- **Scheduled pull (active):** [`.github/workflows/live-sync.yml`](../.github/workflows/live-sync.yml) queries the GitHub API every hour (`17 * * * *`), re-verifies SHA-256 integrity and `pytest`, and commits only when upstream state changed. GitHub may start scheduled runs late, so this table can lag the source repositories by an hour or more. The `Synced (UTC)` stamp above is the time of the last change, not of the last check.
+- **Manual refresh (active):** run the workflow by hand (`workflow_dispatch`) or `python scripts/live_sync.py` locally.
+- **Push dispatch (optional, needs setup):** an upstream repository with [`docs/upstream-notify-workflow.yml`](../docs/upstream-notify-workflow.yml) installed as `.github/workflows/notify-archive.yml` and an `ARCHIVE_SYNC_TOKEN` secret triggers a refresh on every push to `main`. Without the secret the workflow skips the dispatch, and the hourly pull still applies.
 - **Discovery inventory:** [`PUBLIC_REPO_INVENTORY.md`](PUBLIC_REPO_INVENTORY.md) lists every public, non-fork owner repository and marks unregistered repositories as candidates without promoting them into the epistemic archive.
 - **Immutability rule:** Release-pinned frozen PDFs and Rekor-attested submodules are only advanced when matching frozen artifacts are archived; post-release upstream commits appear immediately as `AHEAD_OF_PIN` with live CI links.

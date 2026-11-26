@@ -30,3 +30,13 @@ Without a unified live-sync layer and cross-atlas bridge, readers and agents had
 
 - **Positive:** One single canonical source of truth, automatically refreshed live mirror and GitHub Pages portal, zero broken cross-atlas links, and strict separation between immutable frozen release pins and live upstream `main` HEADs.
 - **Trade-off:** Instant sub-minute push updates require setting one optional `ARCHIVE_SYNC_TOKEN` secret on upstream repos; without it, sync latency is bounded by the 2-hour schedule (or instant via manual `workflow_dispatch`).
+
+## Update (2026-11-26): what is actually running
+
+An audit of the workflow history and the upstream repositories on 2026-11-26 found that the push path had never fired: 0 of the hub's sync runs were started by `repository_dispatch`, 2 of the 41 tracked repositories carried a notify workflow, and none had the `ARCHIVE_SYNC_TOKEN` secret. The mirror is therefore a scheduled pull, and calling it "real-time" overstated it. Changes made:
+
+- The schedule moved from every 2 hours to hourly (`17 * * * *`; minute 17 avoids the top-of-hour queue, where GitHub delays scheduled runs most).
+- Generated and hand-written text now says "refreshed hourly" and states that push dispatch is optional and not configured.
+- The mirror's `synced_utc` stamp is the time of the last change in upstream state, not of the last check; the generated page says so.
+
+Push-triggered refresh remains available as an owner action: create one fine-grained token that may send `repository_dispatch` to this repository, and store it as `ARCHIVE_SYNC_TOKEN` in each upstream repository that carries the notify workflow. Tokens are never created or stored by automation in this repository. The numbered results list ([ADR 0003](0003-numbered-results-ledger.md)) does not depend on this path: it joins versions and pins from the registries on every sync and marks results whose source has moved past the audited commit.

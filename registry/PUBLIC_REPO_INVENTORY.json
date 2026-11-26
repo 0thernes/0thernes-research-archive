@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
-  "synced_utc": "2026-11-26T17:47:52Z",
+  "synced_utc": "2026-11-26T21:09:23Z",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "repositories": [
     {
@@ -586,7 +586,7 @@
       "description": "Audited, FAIR-indexed atlas of 106 open math problems with an 8-domain, 6-kernel Lean 4.35.0 core (53 theorems / 81 decls: Lonely Runner n<=3, Euclid even-perfect, R(3,4)=9), dual RFC3161/OTS timestamps & AMS-LaTeX paper.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-26T13:31:23Z",
+      "pushed_at": "2026-11-26T19:12:56Z",
       "homepage": "https://0thernes.github.io/unsolved-mathematics/",
       "latest_release": null,
       "archive_registered": true,

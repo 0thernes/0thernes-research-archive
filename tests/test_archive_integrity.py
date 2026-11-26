@@ -254,6 +254,29 @@ def test_live_sync_privacy_firewall_and_failure_injection() -> None:
     assert offline_state["sync_status"] == "OFFLINE_PIN_ONLY"
 
 
+def test_offline_sync_keeps_last_known_live_state(tmp_path: Path) -> None:
+    """Regression (2026-11-26): an offline run must not replace committed live records with placeholders."""
+    reg = tmp_path / "registry"
+    reg.mkdir()
+    live = {
+        "slug": "demo-repo", "archive_ids": ["0TH-2026-999"], "pinned_commit": "a" * 40,
+        "sync_status": "EXACT_PIN_MATCH", "live_head_commit": "a" * 40, "ci_conclusion": "success",
+    }
+    stale = dict(live, slug="moved-repo", pinned_commit="b" * 40)
+    (reg / "LIVE_ECOSYSTEM_MIRROR.json").write_text(
+        json.dumps({"sync_mode": "live-github-api", "repositories": [live, stale]}), encoding="utf-8"
+    )
+    offline = [
+        {"slug": "demo-repo", "archive_ids": ["0TH-2026-999"], "pinned_commit": "a" * 40, "sync_status": "OFFLINE_PIN_ONLY"},
+        {"slug": "moved-repo", "archive_ids": ["0TH-2026-999"], "pinned_commit": "c" * 40, "sync_status": "OFFLINE_PIN_ONLY"},
+        {"slug": "new-repo", "archive_ids": ["0TH-2026-998"], "pinned_commit": "d" * 40, "sync_status": "OFFLINE_PIN_ONLY"},
+    ]
+    kept = ls.preserve_last_known_live_state(tmp_path, offline)
+    assert kept[0]["sync_status"] == "EXACT_PIN_MATCH" and kept[0]["ci_conclusion"] == "success"
+    assert kept[1]["sync_status"] == "OFFLINE_PIN_ONLY", "a moved pin must not inherit stale live data"
+    assert kept[2]["sync_status"] == "OFFLINE_PIN_ONLY"
+
+
 def test_live_sync_api_errors_preserve_last_known_good_mirror(monkeypatch: pytest.MonkeyPatch) -> None:
     """A failed live refresh must not overwrite the canonical mirror with null metadata."""
     mirror_paths = (

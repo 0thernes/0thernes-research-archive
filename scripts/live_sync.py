@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Real-time live cross-repository sync, mirror, and Mega-Atlas bridge generator
-for the canonical 0thernes Research Archive hub.
+Scheduled cross-repository mirror and Mega-Atlas bridge generator for the canonical
+0thernes Research Archive hub. It runs hourly in CI (.github/workflows/live-sync.yml),
+on manual dispatch, and on repository_dispatch from any upstream repository that has
+the notify workflow and its token configured. It is a polling mirror, not a push feed.
 
 Responsibilities:
   1. Collect every unique public 0thernes repository referenced across Tier I
@@ -364,10 +366,11 @@ def render_live_mirror_md(mirror: dict[str, Any]) -> str:
             "",
             "---",
             "",
-            "## Automatic Real-Time Sync Protocol",
+            "## How this mirror is refreshed",
             "",
-            "- **Push-based dispatch:** Upstream repositories carrying `.github/workflows/notify-archive.yml` dispatch `upstream-repo-updated` to this hub on every `main` push (see [`docs/upstream-notify-workflow.yml`](../docs/upstream-notify-workflow.yml)).",
-            "- **Scheduled pull mirror:** [`.github/workflows/live-sync.yml`](../.github/workflows/live-sync.yml) refreshes this mirror every 2 hours (`0 */2 * * *`), re-verifies SHA-256 integrity and `pytest`, and republishes the live GitHub Pages portal automatically whenever upstream status changes.",
+            "- **Scheduled pull (active):** [`.github/workflows/live-sync.yml`](../.github/workflows/live-sync.yml) queries the GitHub API every hour (`17 * * * *`), re-verifies SHA-256 integrity and `pytest`, and commits only when upstream state changed. GitHub may start scheduled runs late, so this table can lag the source repositories by an hour or more. The `Synced (UTC)` stamp above is the time of the last change, not of the last check.",
+            "- **Manual refresh (active):** run the workflow by hand (`workflow_dispatch`) or `python scripts/live_sync.py` locally.",
+            "- **Push dispatch (optional, needs setup):** an upstream repository with [`docs/upstream-notify-workflow.yml`](../docs/upstream-notify-workflow.yml) installed as `.github/workflows/notify-archive.yml` and an `ARCHIVE_SYNC_TOKEN` secret triggers a refresh on every push to `main`. Without the secret the workflow skips the dispatch, and the hourly pull still applies.",
             "- **Discovery inventory:** [`PUBLIC_REPO_INVENTORY.md`](PUBLIC_REPO_INVENTORY.md) lists every public, non-fork owner repository and marks unregistered repositories as candidates without promoting them into the epistemic archive.",
             "- **Immutability rule:** Release-pinned frozen PDFs and Rekor-attested submodules are only advanced when matching frozen artifacts are archived; post-release upstream commits appear immediately as `AHEAD_OF_PIN` with live CI links.",
             "",
@@ -476,6 +479,35 @@ def resolve_local_github_token() -> str | None:
     return None
 
 
+def preserve_last_known_live_state(root: Path, offline_repos: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """In offline mode, keep the last live record of every repository whose pin is unchanged.
+
+    Without this, a local `--offline` run (as `just sync` does) replaced every live field of the
+    committed mirror with pin-only placeholders, so a commit made after a local sync silently
+    erased the public live status until the next scheduled run. Repositories that are new or
+    whose pin changed keep the OFFLINE_PIN_ONLY placeholder, because no live data exists for them.
+    """
+    path = root / "registry" / "LIVE_ECOSYSTEM_MIRROR.json"
+    if not path.exists():
+        return offline_repos
+    try:
+        previous = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return offline_repos
+    by_slug = {r.get("slug"): r for r in previous.get("repositories", [])}
+    kept: list[dict[str, Any]] = []
+    for rec in offline_repos:
+        old = by_slug.get(rec["slug"])
+        same = (
+            old is not None
+            and old.get("pinned_commit") == rec.get("pinned_commit")
+            and old.get("archive_ids") == rec.get("archive_ids")
+            and old.get("sync_status") not in (None, "OFFLINE_PIN_ONLY", "API_ERROR")
+        )
+        kept.append(dict(old) if same and old is not None else rec)
+    return kept
+
+
 def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
     papers_data = json.loads((root / "registry" / "PAPERS.json").read_text(encoding="utf-8"))
     builds_data = json.loads((root / "registry" / "BUILD_PAPERS.json").read_text(encoding="utf-8"))
@@ -488,6 +520,8 @@ def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
         fetch_repo_live_state(rec, offline=offline, token=token)
         for rec in tracked.values()
     ]
+    if offline:
+        mirror_repos = preserve_last_known_live_state(root, mirror_repos)
 
     counts = {
         "tier1_papers": len(papers_data["papers"]),
@@ -541,16 +575,20 @@ def run_sync(root: Path, *, offline: bool, token: str | None) -> dict[str, Any]:
     # Zero-noise idempotence: preserve synced_utc whenever upstream state & counts are unchanged
     mirror_json_path = root / "registry" / "LIVE_ECOSYSTEM_MIRROR.json"
     synced_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    sync_mode = "offline" if offline else "live-github-api"
     if mirror_json_path.exists():
         prev = json.loads(mirror_json_path.read_text(encoding="utf-8"))
         if offline or (prev.get("repositories") == mirror_repos and prev.get("counts") == counts):
             synced_utc = prev.get("synced_utc", synced_utc)
+        # An offline run that kept every live record unchanged is still the last live snapshot.
+        if offline and all(r.get("sync_status") != "OFFLINE_PIN_ONLY" for r in mirror_repos):
+            sync_mode = prev.get("sync_mode", sync_mode)
 
     mirror: dict[str, Any] = {
         "schema_version": "1.0.0",
         "canonical_hub": f"https://github.com/{OWNER}/{ARCHIVE_SLUG}",
         "synced_utc": synced_utc,
-        "sync_mode": "offline" if offline else "live-github-api",
+        "sync_mode": sync_mode,
         "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
         "counts": counts,
         "repositories": mirror_repos,

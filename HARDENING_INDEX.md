@@ -55,7 +55,7 @@ Complete structural index and audit checklist for **0thernes Research Archive (`
 ## 5. CI/CD, Live Sync, Pages & Provenance Workflows (`.github/workflows/`)
 
 - [`.github/workflows/archive-audit.yml`](.github/workflows/archive-audit.yml) — 3-OS (`ubuntu`, `windows`, `macos`) cryptographic audit + `pytest` + `build_site.py` + `ruff`/`mypy` + Build Standard v1.2.0 + `gitleaks`.
-- [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml) — Real-time sync on `repository_dispatch`, 2-hour `cron` (`0 */2 * * *`), and `workflow_dispatch`.
+- [`.github/workflows/live-sync.yml`](.github/workflows/live-sync.yml) — Hourly `cron` (`17 * * * *`), `workflow_dispatch`, and `repository_dispatch` from upstream repositories that carry the notify workflow and its token.
 - [`.github/workflows/pages.yml`](.github/workflows/pages.yml) — Static portal build & GitHub Pages deployment.
 - [`.github/workflows/release.yml`](.github/workflows/release.yml) — Release tarball, `SHA256SUMS`, and Sigstore SLSA build provenance attestation.
 

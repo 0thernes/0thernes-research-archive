@@ -1,13 +1,13 @@
-# Live Cross-Repository Ecosystem Sync & Portal Refresh (ADR 0002)
-# Triggers automatically via repository_dispatch from upstream 0thernes repos,
-# every 2 hours on schedule, or on manual workflow_dispatch.
+# Scheduled Cross-Repository Mirror & Portal Refresh (ADR 0002, ADR 0003)
+# Runs hourly (minute 17, away from the top-of-hour queue), on manual workflow_dispatch,
+# and on repository_dispatch from upstream repos that carry the notify workflow and token.
 name: Live Ecosystem Sync & Mirror
 
 on:
   repository_dispatch:
     types: [upstream-repo-updated, sync-archive]
   schedule:
-    - cron: "0 */2 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 concurrency:

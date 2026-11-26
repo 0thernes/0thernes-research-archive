@@ -1,6 +1,6 @@
 # Public 0thernes Repository Inventory
 
-**Synced (UTC):** `2026-11-26T17:47:52Z` · **Public non-fork repositories:** `54` · **Registered:** `41` · **Unregistered candidates:** `13`
+**Synced (UTC):** `2026-11-26T21:09:23Z` · **Public non-fork repositories:** `54` · **Registered:** `41` · **Unregistered candidates:** `13`
 
 > This is a discovery inventory, not an epistemic registry. An unregistered repository is not asserted to contain a paper, proof, solved conjecture, or research result. Private repositories and third-party forks are excluded by the privacy firewall.
 
@@ -54,7 +54,7 @@
 | [`tsotchke-chaos`](https://github.com/0thernes/tsotchke-chaos) | `UNREGISTERED_PUBLIC_REPO` | `main` | `2026-10-27T03:51:58Z` | Tsotchke Chaos Diffusion - live in-browser demo |
 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `REGISTERED` | `main` | `2026-11-26T12:47:52Z` | Real-time p-adic AdS/CFT Holographic Quantum Gravity, Kerr-BTZ Black Holes, Global Curved Gauss-Bonnet, Holographic RT SSA & 120 Pure Lean 4.35.0 Proofs (6-Kernel Verified) |
 | [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | `REGISTERED` | `main` | `2026-11-26T02:31:34Z` | Ranked research catalogue of every major unsolved black-hole problem: originators, key papers, active researchers, and RAG-ready structured data. Tier-1 physics research-ops. |
-| [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `REGISTERED` | `main` | `2026-11-26T13:31:23Z` | Audited, FAIR-indexed atlas of 106 open math problems with an 8-domain, 6-kernel Lean 4.35.0 core (53 theorems / 81 decls: Lonely Runner n<=3, Euclid even-perfect, R(3,4)=9), dual RFC3161/OTS timestamps & AMS-LaTeX paper. |
+| [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `REGISTERED` | `main` | `2026-11-26T19:12:56Z` | Audited, FAIR-indexed atlas of 106 open math problems with an 8-domain, 6-kernel Lean 4.35.0 core (53 theorems / 81 decls: Lonely Runner n<=3, Euclid even-perfect, R(3,4)=9), dual RFC3161/OTS timestamps & AMS-LaTeX paper. |
 | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `REGISTERED` | `main` | `2026-11-26T14:02:49Z` | 1,900 deduplicated unsolved & hard problems across 8 Pillars x 28 Superdomains x 8 Substrates x 7 Layers in 1 biconnected 5,808-edge graph, 103 Pure Lean 4.35.0 theorems (6 kernels), 10-page AMS-LaTeX paper, dual RFC 3161/OTS, 100% MRR@5 RAG, 11-tool MCP, 3 Track B probes & AutoResearch (AQS=97.99). |
 | [`xenophora`](https://github.com/0thernes/xenophora) | `UNREGISTERED_PUBLIC_REPO` | `main` | `2026-11-19T19:35:45Z` | Real-time 4D non-Euclidean piezo-optical manifold coupled to an operator-split Complex Ginzburg-Landau chimera PDE in bare-metal WebGL2 + Web Audio (zero dependencies) |
 | [`xiaomi-17t-pro-lab`](https://github.com/0thernes/xiaomi-17t-pro-lab) | `REGISTERED` | `main` | `2026-11-26T12:37:56Z` | Forensic silicon-to-quantum hardware lab, 60-digit differential oracle, pure Lean 4.35.0 six-kernel formal core, and AMS-LaTeX white paper for the Xiaomi 17T Pro & Dimensity 9500. |
