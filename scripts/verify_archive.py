@@ -405,17 +405,19 @@ def sync_derived_files(root: Path, data: dict, bdata: dict | None, ddata: dict |
         dreg_json.write_text(json.dumps(ddata, indent=2) + "\n", encoding="utf-8", newline="\n")
         checksum_entries.append((sha256_file(dreg_json), "registry/LAWS_AND_DISCOVERIES.json"))
 
-    checksums_path = root / "CHECKSUMS.sha256"
-    checksums_path.write_text(
-        "\n".join(f"{digest}  {rel}" for digest, rel in sorted(checksum_entries, key=lambda x: x[1])) + "\n",
-        encoding="utf-8",
-        newline="\n",
+    checksums_text = (
+        "\n".join(f"{digest}  {rel}" for digest, rel in sorted(checksum_entries, key=lambda x: x[1])) + "\n"
     )
+    checksums_path = root / "CHECKSUMS.sha256"
+    checksums_path.write_text(checksums_text, encoding="utf-8", newline="\n")
+    data_manifest = root / "data" / "MANIFEST.sha256"
+    data_manifest.parent.mkdir(parents=True, exist_ok=True)
+    data_manifest.write_text(checksums_text, encoding="utf-8", newline="\n")
     bcount = len(bdata["builds"]) if bdata else 0
     dcount = len(ddata["discoveries"]) if ddata else 0
     print(
         f"Synced {len(data['papers'])} Tier-I papers + {bcount} Tier-II builds + {dcount} Tier-III discoveries, "
-        f"registry markdowns, and CHECKSUMS.sha256 ({len(checksum_entries)} hashed files)."
+        f"registry markdowns, CHECKSUMS.sha256, and data/MANIFEST.sha256 ({len(checksum_entries)} hashed files)."
     )
 
 
