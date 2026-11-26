@@ -21,7 +21,7 @@ Complete structural index and audit checklist for **0thernes Research Archive (`
 
 | File | Role | Audit Status |
 |---|---|---|
-| [`README.md`](README.md) | Canonical hub overview, live mirror status block, 3-tier tables (**45 entries** / **32 submodules**), Quickstart & Usage | Audited Round 1 & Round 2 (`H-19` split Tier II table fixed, `H-20` counts enforced in CI) |
+| [`README.md`](README.md) | Canonical hub overview, live mirror status block, 3-tier tables (**45 entries** / **35 submodules**), Quickstart & Usage | Audited Round 1 & Round 2 (`H-19` split Tier II table fixed, `H-20` counts enforced in CI) |
 | [`VERSION`](VERSION) / [`CITATION.cff`](CITATION.cff) / [`CHANGELOG.md`](CHANGELOG.md) | Single-source release versioning (`2026.11.26`) & academic citation | Audited Rounds 1–2 (enforced by `test_single_version_consistency`) |
 | [`LICENSE`](LICENSE) / [`NOTICE`](NOTICE) / [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) | Dual MIT / CC-BY-4.0 notice, clean Independent Researcher identity (zero unformed LLC) | Audited Rounds 1–2 |
 | [`CLAIMS.md`](CLAIMS.md) / [`LIMITATIONS.md`](LIMITATIONS.md) / [`REPLICATION.md`](REPLICATION.md) / [`ROADMAP.md`](ROADMAP.md) | Claims C1–C5, Real-vs-Metaphor, reproducible protocol, roadmap | Audited Rounds 1–2 (synced to 45 entries / 32 submodules / 5 sub-conjectures / RFC 3161 TSA) |
@@ -37,7 +37,7 @@ Complete structural index and audit checklist for **0thernes Research Archive (`
 - [`registry/BUILD_PAPERS.json`](registry/BUILD_PAPERS.json) & [`registry/BUILD_PAPERS.md`](registry/BUILD_PAPERS.md) — **17 Tier II public builds & embedded Pure Lean 4.35.0 suites** (`0TH-BUILD-001` through `0TH-BUILD-017`, **1,058 audited Pure Lean 4.35.0 declarations** across 15 Lean-bearing builds).
 - [`registry/LAWS_AND_DISCOVERIES.json`](registry/LAWS_AND_DISCOVERIES.json) & [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_DISCOVERIES.md) — **12 Tier III public laws, pre-registered empirical claims, discoveries, synthesis dossiers & open-problem atlases** (`0TH-DISC-001` through `0TH-DISC-012`).
 - [`registry/SOLVED_AND_ATLAS_BRIDGE.json`](registry/SOLVED_AND_ATLAS_BRIDGE.json) & [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) — **26 version-checked rows** cross-referencing all 1,900 Mega-Atlas V2 problems (`0 / 1,900` grand problems retired; **5** peer-literature open sub-conjectures/questions proved in Lean 4.35.0).
-- [`registry/LIVE_ECOSYSTEM_MIRROR.json`](registry/LIVE_ECOSYSTEM_MIRROR.json) & [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) — Live upstream commit, release, CI, and Pages status across all **38 unique tracked public non-fork `0thernes/*` repositories**.
+- [`registry/LIVE_ECOSYSTEM_MIRROR.json`](registry/LIVE_ECOSYSTEM_MIRROR.json) & [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) — Live upstream commit, release, CI, and Pages status across all **41 unique tracked public non-fork `0thernes/*` repositories**.
 
 ## 3. Automation, Verification, Live Sync & Portal Scripts (`scripts/`)
 
@@ -64,7 +64,7 @@ Complete structural index and audit checklist for **0thernes Research Archive (`
 - `papers/` — **16** directories (`0TH-2026-001`..`0TH-2026-016`), each with frozen PDF(s), `METADATA.json`, `EVIDENCE.md`.
 - `builds/` — **17** directories (`0TH-BUILD-001`..`0TH-BUILD-017`), including updated [`builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md`](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md).
 - `discoveries/` — **12** directories (`0TH-DISC-001`..`0TH-DISC-012`), all `< 5 MB` per file.
-- `repos/` — **32** pinned public Git submodules (`160000` gitlinks verified against registry JSONs).
+- `repos/` — **35** pinned public Git submodules (`160000` gitlinks verified against registry JSONs).
 
 ## 7. Architecture, ADRs, Run Logs & 3-Cycle Hardening Dossiers (`docs/`)
 
