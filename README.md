@@ -16,7 +16,7 @@
 - **Scope:** **48 public research entries** (`19 Tier I + 17 Tier II + 12 Tier III`) + **35 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 <!-- LIVE_ECOSYSTEM_STATUS:START -->
-> **Live Canonical Hub Mirror (`2026-11-26T17:44:25Z`):** Tracking **48 public research entries** (19 Tier I preprints · 17 Tier II builds · 12 Tier III laws/discoveries/atlases) across **41 unique public repositories** and **35 pinned Git submodules** (`32` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
+> **Live Canonical Hub Mirror (`2026-11-26T17:47:52Z`):** Tracking **48 public research entries** (19 Tier I preprints · 17 Tier II builds · 12 Tier III laws/discoveries/atlases) across **41 unique public repositories** and **35 pinned Git submodules** (`32` exact pin matches · `5` active upstream ahead of release pin · `4` archived historical snapshots).  
 > **Mega-Atlas V2 Cross-Check:** **`0 / 1900` grand open problems retired** · **5 peer-literature open sub-conjectures/questions formally proved in Lean 4.35.0** across 6 independent kernels. Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
 <!-- LIVE_ECOSYSTEM_STATUS:END -->
 

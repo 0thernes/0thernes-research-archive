@@ -256,6 +256,7 @@ def fetch_repo_live_state(
         "ci_run_id": None,
         "ci_conclusion": None,
         "ci_html_url": None,
+        "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
         "pages_url": rec.get("registered_pages_url"),
         "sync_status": "OFFLINE_PIN_ONLY",
         "error": None,
@@ -309,6 +310,7 @@ def fetch_repo_live_state(
                 out["ci_run_id"] = latest.get("id")
                 out["ci_conclusion"] = latest.get("conclusion") or latest.get("status")
                 out["ci_html_url"] = latest.get("html_url")
+                out["ci_status_reason"] = None
         except urllib.error.HTTPError as exc:
             if exc.code not in (403, 404):
                 raise

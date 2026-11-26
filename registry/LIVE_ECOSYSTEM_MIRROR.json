@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
-  "synced_utc": "2026-11-26T17:44:25Z",
+  "synced_utc": "2026-11-26T17:47:52Z",
   "sync_mode": "live-github-api",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
@@ -38,6 +38,7 @@
       "ci_run_id": 45824894491,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/ALife-Framework/actions/runs/45824894491",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/ALife-Framework/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -65,6 +66,7 @@
       "ci_run_id": 45821196180,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/alife-singularity-omega-package/actions/runs/45821196180",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/alife-singularity-omega-package/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -90,6 +92,7 @@
       "ci_run_id": 45849166650,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/apollonian-sandpile-markov/actions/runs/45849166650",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/apollonian-sandpile-markov/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -115,6 +118,7 @@
       "ci_run_id": 44051073860,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/Asmodensius/actions/runs/44051073860",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/Asmodensius/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -140,6 +144,7 @@
       "ci_run_id": 45748401683,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/asmodensius-native/actions/runs/45748401683",
+      "ci_status_reason": null,
       "pages_url": null,
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -165,6 +170,7 @@
       "ci_run_id": 45751051356,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/autophage/actions/runs/45751051356",
+      "ci_status_reason": null,
       "pages_url": null,
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -190,6 +196,7 @@
       "ci_run_id": 45826608002,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/beast-civilization/actions/runs/45826608002",
+      "ci_status_reason": null,
       "pages_url": null,
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -215,6 +222,7 @@
       "ci_run_id": 40110397354,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/black-hole-simulation-lab/actions/runs/40110397354",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/black-hole-simulation-lab/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -240,6 +248,7 @@
       "ci_run_id": 45828647594,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45828647594",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/catalytic-register-frontiers/",
       "sync_status": "AHEAD_OF_PIN",
       "error": null
@@ -265,6 +274,7 @@
       "ci_run_id": 45862555668,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/cayley-dickson-terrace-frontier/actions/runs/45862555668",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/cayley-dickson-terrace-frontier/",
       "sync_status": "AHEAD_OF_PIN",
       "error": null
@@ -290,6 +300,7 @@
       "ci_run_id": 45810663954,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/cellular-engine-omega/actions/runs/45810663954",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/cellular-engine-omega/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -315,6 +326,7 @@
       "ci_run_id": 45812871840,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/cellulogonic-mecha/actions/runs/45812871840",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/cellulogonic-mecha/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -340,6 +352,7 @@
       "ci_run_id": 45850785203,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/45850785203",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/coded-pir-mlwe-complexity-lab/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -365,6 +378,7 @@
       "ci_run_id": 42815130874,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42815130874",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/contextuality-evidence-lab/",
       "sync_status": "HISTORICAL_ARCHIVED",
       "error": null
@@ -390,6 +404,7 @@
       "ci_run_id": 42752465789,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42752465789",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/contextuality-tensor-lab/",
       "sync_status": "HISTORICAL_ARCHIVED",
       "error": null
@@ -417,6 +432,7 @@
       "ci_run_id": 45117980365,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/cosmogonic-quantum-mechalogodrom/actions/runs/45117980365",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/cosmogonic-quantum-mechalogodrom/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -442,6 +458,7 @@
       "ci_run_id": null,
       "ci_conclusion": null,
       "ci_html_url": null,
+      "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
       "pages_url": "https://0thernes.github.io/dimension-omega-singularity/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -469,6 +486,7 @@
       "ci_run_id": 45823061012,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/glitchling-jam/actions/runs/45823061012",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/glitchling-jam/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -494,6 +512,7 @@
       "ci_run_id": null,
       "ci_conclusion": null,
       "ci_html_url": null,
+      "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
       "pages_url": "https://0thernes.github.io/grimoire-algorithms-of-the-arcane/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -519,6 +538,7 @@
       "ci_run_id": null,
       "ci_conclusion": null,
       "ci_html_url": null,
+      "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
       "pages_url": null,
       "sync_status": "HISTORICAL_ARCHIVED",
       "error": null
@@ -546,6 +566,7 @@
       "ci_run_id": 45367463693,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/hoggar-bound-lab/actions/runs/45367463693",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/hoggar-bound-lab/",
       "sync_status": "HISTORICAL_ARCHIVED",
       "error": null
@@ -572,6 +593,7 @@
       "ci_run_id": 45822607945,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45822607945",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/human-synapse-bouton-lab/",
       "sync_status": "AHEAD_OF_PIN",
       "error": null
@@ -597,6 +619,7 @@
       "ci_run_id": 45825147353,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45825147353",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/kochen-specker-extremal-lab/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -622,6 +645,7 @@
       "ci_run_id": 45749048047,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/monodromia/actions/runs/45749048047",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/monodromia/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -647,6 +671,7 @@
       "ci_run_id": 45832736195,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/45832736195",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/multinomial-tv-conjecture/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -672,6 +697,7 @@
       "ci_run_id": null,
       "ci_conclusion": null,
       "ci_html_url": null,
+      "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
       "pages_url": "https://0thernes.github.io/neuralese/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -697,6 +723,7 @@
       "ci_run_id": 40342126770,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/neuralese-diffusion/actions/runs/40342126770",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/neuralese-diffusion/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -722,6 +749,7 @@
       "ci_run_id": 45752970555,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/noetic-organism-omega/actions/runs/45752970555",
+      "ci_status_reason": null,
       "pages_url": null,
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -747,6 +775,7 @@
       "ci_run_id": 45845614936,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/octonionica/actions/runs/45845614936",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/octonionica/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -774,6 +803,7 @@
       "ci_run_id": 45751750665,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/omega-triscale-observatory/actions/runs/45751750665",
+      "ci_status_reason": null,
       "pages_url": null,
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -799,6 +829,7 @@
       "ci_run_id": 45829725341,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45829725341",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/p-vs-np-frontier-lab/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -824,6 +855,7 @@
       "ci_run_id": 45826042756,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45826042756",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/pauli-contextuality-lab/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -849,6 +881,7 @@
       "ci_run_id": 45750499053,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/planaria/actions/runs/45750499053",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/planaria/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -874,6 +907,7 @@
       "ci_run_id": 45751946493,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/promislow-fracton-amoeba/actions/runs/45751946493",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/promislow-fracton-amoeba/studio/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -899,6 +933,7 @@
       "ci_run_id": 45745957907,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/secmesh-pqsi/actions/runs/45745957907",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/secmesh-pqsi/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -924,6 +959,7 @@
       "ci_run_id": 45823023293,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/ultrametrica/actions/runs/45823023293",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/ultrametrica/",
       "sync_status": "AHEAD_OF_PIN",
       "error": null
@@ -949,6 +985,7 @@
       "ci_run_id": 45743010356,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/unsolved-black-hole-problems/actions/runs/45743010356",
+      "ci_status_reason": null,
       "pages_url": null,
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -976,6 +1013,7 @@
       "ci_run_id": 45829951457,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/unsolved-mathematics/actions/runs/45829951457",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/unsolved-mathematics/",
       "sync_status": "AHEAD_OF_PIN",
       "error": null
@@ -1001,6 +1039,7 @@
       "ci_run_id": 45833490569,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/45833490569",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/unsolved-problems-mega-atlas/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -1026,6 +1065,7 @@
       "ci_run_id": 45821462528,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/xiaomi-17t-pro-lab/actions/runs/45821462528",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/xiaomi-17t-pro-lab/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null
@@ -1051,6 +1091,7 @@
       "ci_run_id": 45762976065,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/zero-error-torus-frontier/actions/runs/45762976065",
+      "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/zero-error-torus-frontier/",
       "sync_status": "EXACT_PIN_MATCH",
       "error": null

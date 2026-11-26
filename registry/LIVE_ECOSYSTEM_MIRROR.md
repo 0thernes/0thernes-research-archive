@@ -1,7 +1,7 @@
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-26T17:44:25Z` · **Mode:** `live-github-api`  
+**Synced (UTC):** `2026-11-26T17:47:52Z` · **Mode:** `live-github-api`  
 **Tracked Public Repositories:** 41 (`32` exact pin match, `5` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
