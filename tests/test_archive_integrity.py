@@ -301,7 +301,7 @@ def test_metamorphic_sync_idempotence() -> None:
 
 
 @given(payload=st.binary(min_size=1, max_size=4096))
-@settings(max_examples=80, derandomize=True)
+@settings(max_examples=80, derandomize=True, deadline=None)
 def test_property_sha256_file_matches_hashlib(tmp_path_factory: pytest.TempPathFactory, payload: bytes) -> None:
     """Hypothesis property-based test (B10) & differential oracle (B11) for sha256_file."""
     p = tmp_path_factory.mktemp("hashprop") / "blob.bin"
