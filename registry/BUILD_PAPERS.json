@@ -6,7 +6,7 @@
     "orcid": "0009-0006-8168-9648",
     "affiliation": "Independent Researcher, Spokane, WA, USA"
   },
-  "updated_utc": "2026-11-26T00:30:00Z",
+  "updated_utc": "2026-11-26T01:02:00Z",
   "builds": [
     {
       "id": "0TH-BUILD-001",
@@ -69,60 +69,80 @@
     {
       "id": "0TH-BUILD-002",
       "slug": "planaria",
-      "title": "PLANARIA: Progressive Holographic Executable Architecture (.hbin), Multi-Stratum Compilation, Autonomous Control-Flow Anastomosis, and Cryptographic Cellular Quorum",
+      "title": "PLANARIA v2.3.0: Progressive Holographic Executable Architecture (.hbin), Multi-Stratum Compilation, Autonomous Control-Flow Anastomosis, Cryptographic Cellular Quorum, and 6-Kernel Lean 4.35.0 Verification",
       "domain": "Systems Architecture / Coding Theory / Formal Methods",
-      "date": "2026-11-21",
-      "version": "v2.2.0",
+      "date": "2026-11-25",
+      "version": "v2.3.0",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
-      "affiliation": "0thernes LLC",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/planaria",
       "submodule_path": "repos/planaria",
-      "pinned_commit": "b4eaf7cfc88ccc12191f86e910448db43b42c993",
+      "pinned_commit": "2fb167331f55a800c212f3578a7358337ed37ef4",
       "archived_artifacts": [
         {
           "path": "builds/0TH-BUILD-002_planaria/Donahue_2026_planaria.pdf",
           "source_path": "dist/Donahue_2026_planaria.pdf",
-          "sha256": "a7d24c36cf82b398cc850232f34f0775bc2efc925341e4558f3352813be0dfbd"
+          "sha256": "5db1abf271baf32c1a5863fe2f7689a827ddbb13378ff778e19525c761cdd4f7"
         },
         {
           "path": "builds/0TH-BUILD-002_planaria/WHITE_PAPER.md",
           "source_path": "paper/WHITE_PAPER.md",
-          "sha256": "c5ad237b447249fffb2737fa5ad09aad24daad62ac56eb43fa8cfc39d250a29c"
+          "sha256": "87658e550a8ebc8e10abde5bd81412a210355babbe692b9fdef1ed5bfecb295c"
         },
         {
           "path": "builds/0TH-BUILD-002_planaria/VERIFICATION.md",
           "source_path": "VERIFICATION.md",
-          "sha256": "eb8cd6058f417c2431900048701f529e3a8ffb5cf6e2e8a8c86abc8d3b47d675"
+          "sha256": "84797ebfbef7215c553d0b82b65a74739abbf8b2545b928a6ef7d47809fb762c"
+        },
+        {
+          "path": "builds/0TH-BUILD-002_planaria/CLAIMS.md",
+          "source_path": "CLAIMS.md",
+          "sha256": "9375a051d38b06dfcc7184b5c27d807c0b897b3745060725b3188b1010ae983c"
+        },
+        {
+          "path": "builds/0TH-BUILD-002_planaria/LIMITATIONS.md",
+          "source_path": "LIMITATIONS.md",
+          "sha256": "edfa479c3b633f19d90198d5bbb9cc2b205e27a9e77a6eb1591678d58f851df0"
+        },
+        {
+          "path": "builds/0TH-BUILD-002_planaria/2026-11-25-10-pass-red-team-audit.md",
+          "source_path": "docs/reviews/2026-11-25-10-pass-red-team-audit.md",
+          "sha256": "c15788a8d3f0992476cebcc96ed462d2c300f4b5f6aa8090d5ce5aeb9bd8e859"
         },
         {
           "path": "builds/0TH-BUILD-002_planaria/lean4-audit.txt",
           "source_path": "results/lean4-audit.txt",
-          "sha256": "736c60670a2b88945f8aea0d879d1a459e05c078108d4e201b7c8fb12705489c"
+          "sha256": "a14dfd32d9fcb8a7762d77b542b013677d88025e1d3636bcd13f96a303a824c3"
+        },
+        {
+          "path": "builds/0TH-BUILD-002_planaria/lean4-multi-kernel.txt",
+          "source_path": "results/lean4-multi-kernel.txt",
+          "sha256": "23e746ab434efb65ceb8db0b33e02f3155ef70d6a00a45914093406f7eb84ad6"
         },
         {
           "path": "builds/0TH-BUILD-002_planaria/arxiv_submission.tar.gz",
           "source_path": "dist/arxiv_submission.tar.gz",
-          "sha256": "dedf23610126025f99361b818ad8888c0b9c58932b0c5641b1a4d82e4eb944f7"
+          "sha256": "0e570f3c0d685ba72f1fa8cd84be432e1b9cbb74a2a99f5daf5fa1d75bfa118c"
         }
       ],
       "lean_verification": {
         "has_lean": true,
-        "framework": "Pure Lean 4.35.0 (zero Mathlib, zero native_decide)",
-        "modules": 7,
-        "lines": 1772,
-        "audited_theorems": 62,
+        "framework": "Pure Lean 4.35.0 (zero Mathlib, module system, zero native_decide, 6-kernel lake check --paranoid & lake comparator --paranoid)",
+        "modules": 11,
+        "lines": 2628,
+        "audited_theorems": 70,
         "axiom_allowlist": [
           "propext",
           "Classical.choice",
           "Quot.sound"
         ],
-        "entry_point": "lean/PlanariaProofs.lean",
-        "live_audit_status": "Build completed successfully (9 jobs); 0 warnings; 0 sorry; all 62 #print axioms strictly within [propext, Classical.choice, Quot.sound] (10 zero-axiom constructive); GitHub CI #44910075875 (3/3 jobs GREEN); GitHub Release v2.2.0; prior Software Heritage save #2675014 (v2.2.0 public Save Code Now gated by Anubis PoW)"
+        "entry_point": "lean/VerifyAxioms.lean",
+        "live_audit_status": "GitHub Actions CI GREEN (run #45732566225, 6/6 jobs: ubuntu/macos/windows 28/28 suites + 10/10 100% mutation kills + 0-finding lint + 22/22 verified citations + Tectonic 0-overfull 10-page AMS-LaTeX PDF & clean-room arXiv tarball + SLSA provenance Sigstore Rekor 4115101651 + 100.0% 81/81 Build Standard v1.2.0 + gitleaks/osv-scanner + 6-kernel bubblewrap lake check --paranoid & 70-theorem lake comparator --paranoid PASS across lean4, leanchecker-paranoid, lean4lean, nanoda_bin, con-leche, con-ron), Pages GREEN (#45732565624 -> https://0thernes.github.io/planaria/), Release v2.3.0 SLSA attested (#45729743547, Sigstore Rekor 4114739359); 70/70 audited declarations (12 zero-axiom constructive, 5 non-vacuity witnesses, 3 statement-fidelity closures) strictly within [propext, Classical.choice, Quot.sound]"
       },
-      "summary": "Progressive Holographic Instruction Stratification (.hbin) architecture hardened by a 5-layer adversarial audit (v2.2.0): Overlap-Eclipse-resistant byte-granular sync scanning, canonical header invariants, GF(2^8) RS(254,238)/Cauchy MDS coding, Depth-8 0x00/0x01/0x02 SHA-256-128 Merkle authentication, exact integer low-discrepancy placement schedule, strict Plang compiler, caller-windowed PVM-32 anastomosis VM, 4 compiled living .hbin species with SPECIES_MAGIC logic Xenografts, WebGL2 3D temporal-quantum engine (4-qubit Horodecki CHSH & Mermin GHZ, O(1) 360-frame RingBuffer rewind, PolyBLEP 48 kHz AudioWorklet, exact 6,421,059,993,600 reachable discrete combinations), hardened CSP/realpathSync Studio server, 24-suite falsification & security harness, 44-file Ed25519 self-consistency seal, frozen 8-page AMS-LaTeX PDF + standalone arXiv bundle, and 62 pure Lean 4 (v4.35.0) machine-checked proofs.",
-      "verification_boundary": "All 62 Lean 4.35.0 theorems (1,772 lines across 7 files, covering full 65,536-pair/16,777,216-triple GF(256) field axioms & concrete Char2Field Cauchy invertibility, exact integer placement schedule zero-tie halves, 7-bundle anastomosis vs RS(40,16) and equal-storage RS(192,48), byte-list Hamming/tight 16B-18B bursts/8-level Merkle & unpinned Sybil counterexample, signed BitVec 32 sandboxing & non-vacuous B0/B6 sovereignty, full 4-qubit 16-amplitude complex unitarity, bounded 360-frame RingBuffer rewind, and exact 6,421,059,993,600 combinatorial count) compile cleanly in pure Lean 4.35.0 with zero Mathlib, zero native_decide, and zero sorry, strictly within [propext, Classical.choice, Quot.sound]. Runtime JS implementation, Monte Carlo survival curves, CLI/HTTP security, and WebGL2 3D engine are separately tested by the 24-suite falsification & security harness (npm test) and Ubuntu CI.",
-      "falsification_command": "cd repos/planaria && npm run build && npm test && cd lean && lake clean && lake build"
+      "summary": "Progressive Holographic Instruction Stratification (.hbin) architecture hardened through 3 complete audit cycles (114 findings across all 10 finding classes, 10-pass red-team review) and 100.0% (81/81) Build Standard v1.2.0 compliance: Overlap-Eclipse-resistant byte-granular sync scanning, GF(2^8) RS(254,238)/Cauchy MDS coding, Depth-8 0x00/0x01/0x02 SHA-256-128 Merkle authentication, exact integer low-discrepancy placement schedule, strict Plang compiler (with scratch-register overflow guard), caller-windowed PVM-32 anastomosis VM (42.85 MIPS), 4 compiled living .hbin species with 5/5 verified Cross-Species Xenograft Chimeras, live WCAG-hardened GitHub Pages WebGL2 + 48 kHz AudioWorklet 3D temporal-quantum Studio (https://0thernes.github.io/planaria/), pre-registered 4-architecture paired statistical benchmarks (N=40 paired seeds x 25 erasure points = 4,000 trials vs. LINBIN01, RS(40,16), and Equal-Storage Flat RS(192,48) with Wilson 95% CIs, exact paired McNemar, Cohen's h, and Holm-Bonferroni p_Holm <= 6.26e-7 at 76-92% erasure), 28/28 falsification/property/metamorphic suites + 10/10 (100%) surgical mutation kills, 61-file Ed25519 self-consistency seal, frozen 10-page zero-overflow AMS-LaTeX PDF (22 verified DOIs) + standalone arXiv bundle, honest 0/1,900 Unsolved Problems Mega-Atlas cross-check, and 70 pure Lean 4.35.0 proofs (including shared Spec.lean, Challenge.lean, Solution.lean) verified across all 6 independent kernels.",
+      "verification_boundary": "All 70 audited Lean 4.35.0 declarations (2,628 lines across 11 files, including 5 explicit non-vacuity witnesses and 3 statement-fidelity closures: hbin.js Step 4 viability_s3_without_b2_matches_hbin, executable electUnpinnedQuorum majority/tie/Sybil, and true all192LexKeys.Nodup + sorted-halves proof) compile cleanly with zero Mathlib, zero native_decide, zero sorry, and strictly [propext, Classical.choice, Quot.sound], verified across all 6 independent kernels via sandboxed bubblewrap lake check --paranoid and lake comparator --config comparator.json --paranoid on Ubuntu CI (#45732566225). Runtime JS implementation, 4-architecture statistical benchmarks, 28/28 test suites, 10/10 mutants, CLI/HTTP security, and WebGL2 3D engine lie outside the Lean kernel boundary and are separately tested across Ubuntu/macOS/Windows CI. Explicitly claims 0/1,900 Mega-Atlas open problems solved and no discovery of new laws of physics.",
+      "falsification_command": "cd repos/planaria && npm run build && npm test && npm run mutate && npm run lint && npm run check:citations && (cd lean && lake clean && lake build && lake build Challenge && lake env lean VerifyAxioms.lean && lake check --paranoid && lake comparator --config comparator.json --paranoid)"
     },
     {
       "id": "0TH-BUILD-003",
