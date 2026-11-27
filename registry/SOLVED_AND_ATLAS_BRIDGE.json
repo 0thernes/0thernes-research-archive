@@ -45,15 +45,15 @@
       "archive_id": "0TH-2026-006",
       "slug": "multinomial-tv-conjecture",
       "repository": "https://github.com/0thernes/multinomial-tv-conjecture",
-      "version": "v2.6.0",
+      "version": "v2.7.0",
       "resolution_class": "SOLVED_SUB_CONJECTURE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "STAT-001"
       ],
       "target_statement": "Conjecture 7.7 (conj:atriangle), quantitative O(L^-2) Lemma 7.3 remainder (lemma_7_3_O_inv_sq), and literal Part 2 Sec. 7.2 n=3 bridge (gamma3_source_form) of Banic & Elezovic (unrefereed arXiv v1 preprint arXiv:2610.17046v1, confirmed open in arXiv:2611.14735v1): a_triangle = 1/32 - 4*sqrt(3)/243 and |h_adj(L) - c_L*L - a_* - b_{L mod 3}/L| <= C/L^2 for all L >= 1, which removes the sole conjectural input from the Banic-Elezovic formulas for gamma(n), gamma_c(n) (n >= 5), gamma(3;N), and gamma(4;N); those variance statements still rest on theorems of the same unrefereed preprints (Part 2 Thm 7.6, Lemmas 7.2 & 7.5, Sec. 7.2/8; Part 5 Thm 3.10) that are not formalized.",
-      "lean_verification": "Lean 4.35.0 / Mathlib v4.35.0 (Palomar module headers + weak.linter.mathlibStandardSet = true across all 10 files, 8,138 lines, no warnings outside statement-only Challenge.lean), 189 author-written theorems and lemmas (894 audited theorem constants including compiler-generated auxiliaries, 57 explicit #print axioms), 10 targets (incl. target_lemma_7_3_O_inv_sq & target_gamma3_source_form) / 20 NonVacuity (replayed standalone via lake env leanchecker MultinomialTVConjecture.NonVacuity), six comparator checker runs (CI run 45951940106: lean4lean 41,899 decls, con-leche & con-ron 41,902 decls), Rekor 4143298863 & Release v2.6.0 Rekor 4143181508 (verified via gh attestation verify), 22/22 isolated code mutants killed.",
-      "honesty_boundary": "Proves Conjecture 7.7, quantitative O(L^-2) Lemma 7.3, and the literal Part 2 Sec. 7.2 n=3 algebraic bridge as stated in unrefereed arXiv v1 preprint 2610.17046v1 (posted 2026-10-12); the proof itself is not peer reviewed, independent session re-audit of the v2.6.0 pin in RESULTS_LEDGER.json is pending, external human replication (B44: partial, 98.5% in Audit-Repo) is open, and this work is adjacent to STAT-001 without retiring any of the 2,000 Mega-Atlas grand problems."
+      "lean_verification": "Lean 4.35.0 / Mathlib v4.35.0 (Palomar module headers + weak.linter.mathlibStandardSet = true + zero @[nolint] suppressions across all 10 files, 8,193 lines, no warnings outside statement-only Challenge.lean), 191 author-written theorems and lemmas (896 audited theorem constants + 65 audited definitions, 59 explicit #print axioms), 10 targets / 22 NonVacuity (covering all 10 targets, replayed standalone via lake env leanchecker MultinomialTVConjecture.NonVacuity), six comparator checker runs + live negative sorry-tamper rejection (CI run 46048238909: lean4lean 41,899 decls, con-leche & con-ron 41,902 decls), Rekor 4150767694 & Release v2.7.0 Rekor 4150752299 (verified via gh attestation verify), 3-OS OpenSSL X.509 openssl ts -verify, 24/24 isolated non-equivalent code mutants killed.",
+      "honesty_boundary": "Proves Conjecture 7.7, quantitative O(L^-2) Lemma 7.3, and the literal Part 2 Sec. 7.2 n=3 algebraic bridge as stated in unrefereed arXiv v1 preprint 2610.17046v1 (posted 2026-10-12); the proof itself is not peer reviewed, independent session re-audit of the v2.7.0 pin in RESULTS_LEDGER.json is pending, external human replication (B44: partial, 98.5% in Audit-Repo) is open, and this work is adjacent to STAT-001 without retiring any of the 2,000 Mega-Atlas grand problems."
     },
     {
       "archive_id": "0TH-2026-007",

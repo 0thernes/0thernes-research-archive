@@ -129,8 +129,8 @@ def test_consolidated_latest_entries_registered() -> None:
         for p in json.loads((ROOT / "registry" / "PAPERS.json").read_text(encoding="utf-8"))["papers"]
     }
     assert len(papers) == 28
-    assert papers["0TH-2026-006"]["version"] == "v2.6.0"
-    assert papers["0TH-2026-006"]["lean_verification"]["audited_theorems"] == 894
+    assert papers["0TH-2026-006"]["version"] == "v2.7.0"
+    assert papers["0TH-2026-006"]["lean_verification"]["audited_theorems"] == 896
     assert papers["0TH-2026-009"]["version"] == "v3.2.0"
     assert papers["0TH-2026-009"]["lean_verification"]["audited_theorems"] == 2306
     assert papers["0TH-2026-009"]["lean_verification"]["comparator_targets"] == 18

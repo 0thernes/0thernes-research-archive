@@ -1,8 +1,8 @@
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-27T19:08:21Z` · **Mode:** `live-github-api`  
-**Tracked Public Repositories:** 50 (`15` exact pin match, `31` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Synced (UTC):** `2026-11-27T19:08:21Z` · **Mode:** `offline`  
+**Tracked Public Repositories:** 50 (`15` exact pin match, `30` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -33,7 +33,7 @@
 | [`human-synapse-bouton-lab`](https://github.com/0thernes/human-synapse-bouton-lab) | `0TH-2026-007`, `0TH-2026-008` | Tier I | `06e0dcdd5f` | `4466841943` | `v1.3.0` | [`success`](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45914037000) | `AHEAD_OF_PIN` |
 | [`kochen-specker-extremal-lab`](https://github.com/0thernes/kochen-specker-extremal-lab) | `0TH-2026-004` | Tier I | `a433e72a4d` | `a433e72a4d` | `v2.2.0` | [`success`](https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45947576829) | `EXACT_PIN_MATCH` |
 | [`monodromia`](https://github.com/0thernes/monodromia) | `0TH-2026-014` | Tier I | `153792bdae` | `63ea36f338` | `v1.0.0` | [`success`](https://github.com/0thernes/monodromia/actions/runs/45913981647) | `AHEAD_OF_PIN` |
-| [`multinomial-tv-conjecture`](https://github.com/0thernes/multinomial-tv-conjecture) | `0TH-2026-006` | Tier I | `4d8321fde5` | `b8874b7659` | `v2.7.0` | [`success`](https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/46048238818) | `AHEAD_OF_PIN` |
+| [`multinomial-tv-conjecture`](https://github.com/0thernes/multinomial-tv-conjecture) | `0TH-2026-006` | Tier I | `5b3d51071d` | — | `v2.7.0` | — | `OFFLINE_PIN_ONLY` |
 | [`neuralese`](https://github.com/0thernes/neuralese) | `0TH-DISC-003` | Tier III | `2527d67355` | `2527d67355` | `v17.3.0` | — | `EXACT_PIN_MATCH` |
 | [`neuralese-diffusion`](https://github.com/0thernes/neuralese-diffusion) | `0TH-DISC-004` | Tier III | `13e3b0e22e` | `13e3b0e22e` | `main` | [`success`](https://github.com/0thernes/neuralese-diffusion/actions/runs/40342126770) | `EXACT_PIN_MATCH` |
 | [`noetic-organism-omega`](https://github.com/0thernes/noetic-organism-omega) | `0TH-BUILD-010` | Tier II | `c4301d926f` | `dcf7704913` | `v2.1.0` | [`success`](https://github.com/0thernes/noetic-organism-omega/actions/runs/46045130003) | `AHEAD_OF_PIN` |
