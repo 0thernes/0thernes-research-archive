@@ -2,7 +2,7 @@
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
 **Synced (UTC):** `2026-11-27T19:08:21Z` · **Mode:** `offline`  
-**Tracked Public Repositories:** 50 (`16` exact pin match, `26` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Tracked Public Repositories:** 50 (`17` exact pin match, `25` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -14,7 +14,7 @@
 | [`Asmodensius`](https://github.com/0thernes/Asmodensius) | `0TH-DISC-002` | Tier III | `c72a4ec9a0` | `c72a4ec9a0` | `main` | [`success`](https://github.com/0thernes/Asmodensius/actions/runs/44051073860) | `EXACT_PIN_MATCH` |
 | [`asmodensius-native`](https://github.com/0thernes/asmodensius-native) | `0TH-BUILD-011` | Tier II | `67bedd4abb` | `3397bf9289` | `v1.1.0` | [`success`](https://github.com/0thernes/asmodensius-native/actions/runs/46046843059) | `AHEAD_OF_PIN` |
 | [`autophage`](https://github.com/0thernes/autophage) | `0TH-BUILD-009` | Tier II | `1956c2cc54` | `cd97242228` | `v1.4.0` | [`success`](https://github.com/0thernes/autophage/actions/runs/46045074354) | `AHEAD_OF_PIN` |
-| [`beast-civilization`](https://github.com/0thernes/beast-civilization) | `0TH-BUILD-017` | Tier II | `c4211353bb` | `5c1aeb8746` | `v0.7.0` | [`success`](https://github.com/0thernes/beast-civilization/actions/runs/45914102872) | `AHEAD_OF_PIN` |
+| [`beast-civilization`](https://github.com/0thernes/beast-civilization) | `0TH-BUILD-017` | Tier II | `ccb67a8f60` | `ccb67a8f60` | `v1.0.0` | [`success`](https://github.com/0thernes/beast-civilization/actions/runs/46056427586) | `EXACT_PIN_MATCH` |
 | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) | `0TH-BUILD-006` | Tier II | `050455db86` | `5e49e2ceaf` | `main+research-branch` | [`success`](https://github.com/0thernes/black-hole-simulation-lab/actions/runs/46047521068) | `AHEAD_OF_PIN` |
 | [`catalytic-register-frontiers`](https://github.com/0thernes/catalytic-register-frontiers) | `0TH-2026-010` | Tier I | `4bfeabb05a` | `cc8f237ff8` | `v1.0.1` | [`success`](https://github.com/0thernes/catalytic-register-frontiers/actions/runs/46047660215) | `AHEAD_OF_PIN` |
 | [`cayley-dickson-terrace-frontier`](https://github.com/0thernes/cayley-dickson-terrace-frontier) | `0TH-2026-019` | Tier I | `cbd146a3f1` | `cbd146a3f1` | `v2.0.0` | [`success`](https://github.com/0thernes/cayley-dickson-terrace-frontier/actions/runs/45944568675) | `EXACT_PIN_MATCH` |

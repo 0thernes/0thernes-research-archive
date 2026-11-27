@@ -6,7 +6,7 @@
 flowchart LR
     UP["Upstream Public 0thernes/* Repos (50 tracked)"] -->|hourly cron; repository_dispatch optional, not configured| LS["scripts/live_sync.py"]
     R1["registry/PAPERS.json<br/>Tier I: 28 Standalone Preprints"] --> V["scripts/verify_archive.py"]
-    R2["registry/BUILD_PAPERS.json<br/>Tier II: 17 Builds · 1,050 Lean Decls at pins"] --> V
+    R2["registry/BUILD_PAPERS.json<br/>Tier II: 17 Builds · 1,119 Lean Decls at pins"] --> V
     R3["registry/LAWS_AND_DISCOVERIES.json<br/>Tier III: 12 Laws, Claims & Atlases"] --> V
     RL["registry/RESULTS_LEDGER.json<br/>94 Audited Results"] --> BL["scripts/build_ledger.py -> RESULTS.md"]
     BL --> V

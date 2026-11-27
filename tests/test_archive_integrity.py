@@ -197,7 +197,8 @@ def test_consolidated_latest_entries_registered() -> None:
     assert builds["0TH-BUILD-015"]["slug"] == "glitchling-jam"
     assert builds["0TH-BUILD-016"]["slug"] == "ALife-Framework"
     assert builds["0TH-BUILD-017"]["slug"] == "beast-civilization"
-    assert builds["0TH-BUILD-017"]["version"] == "v0.7.0"
+    assert builds["0TH-BUILD-017"]["version"] == "v1.0.0"
+    assert builds["0TH-BUILD-017"]["lean_verification"]["audited_theorems"] == 81
 
     discs = {
         d["id"]: d

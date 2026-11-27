@@ -91,12 +91,12 @@
     {
       "slug": "beast-civilization",
       "repository": "https://github.com/0thernes/beast-civilization",
-      "description": "Zig/Rust/CUDA multi-agent AI systems project with GGUF Q4_0 codec, local OpenAI-compatible server and QEMU microkernel boot, plus a 65-theorem Lean 4.35.0 suite of spec arithmetic and small models (not linked to the shipped code). Runtime results are empirical.",
+      "description": "Zero-dependency bare-metal polyglot multi-colony AI engine (Zig 0.17.1, Rust 1.94.1, CRuby 3.4.9, C11, Blackwell sm_12.0 PTX) with pre-registered N=24 stats & 81 six-kernel Lean 4.35.0 proofs",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-26T23:59:35Z",
-      "homepage": null,
-      "latest_release": null,
+      "pushed_at": "2026-11-27T19:23:55Z",
+      "homepage": "https://0thernes.github.io/beast-civilization/",
+      "latest_release": "v1.0.0",
       "archive_registered": true,
       "inventory_status": "REGISTERED"
     },
