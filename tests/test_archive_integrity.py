@@ -164,8 +164,8 @@ def test_consolidated_latest_entries_registered() -> None:
     assert papers["0TH-2026-022"]["version"] == "v1.1.1"
     assert papers["0TH-2026-022"]["lean_verification"]["audited_theorems"] == 38
     assert papers["0TH-2026-023"]["slug"] == "quantum-latin-spectrum-frontier"
-    assert papers["0TH-2026-023"]["version"] == "v1.0.0"
-    assert papers["0TH-2026-023"]["lean_verification"]["audited_theorems"] == 32
+    assert papers["0TH-2026-023"]["version"] == "v2.0.0"
+    assert papers["0TH-2026-023"]["lean_verification"]["audited_theorems"] == 43
     assert papers["0TH-2026-024"]["slug"] == "spectral-eclipse-frontier"
     assert papers["0TH-2026-024"]["version"] == "v1.1.0"
     assert papers["0TH-2026-024"]["lean_verification"]["audited_theorems"] == 572
