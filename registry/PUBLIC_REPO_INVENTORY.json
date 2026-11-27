@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
-  "synced_utc": "2026-11-27T05:24:00Z",
+  "synced_utc": "2026-11-27T14:01:09Z",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "repositories": [
     {
@@ -22,7 +22,7 @@
       "description": "Zero-Mathlib Lean 4.35.0 model of an integer scoring and access-control scheme (36 core + 4 Palomar declarations, mostly bound and monotonicity facts and literal sums), a 748-run paired in-silico A-Life simulation, a white paper, and a 1,900-problem atlas crosswalk retiring none.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T00:52:51Z",
+      "pushed_at": "2026-11-27T06:23:40Z",
       "homepage": null,
       "latest_release": null,
       "archive_registered": true,
@@ -34,7 +34,7 @@
       "description": "Zero-Mathlib Lean 4 formalizations of known results (HKRS square obstruction for three Apollonian packings, Zhang's mod-32 theorem for Markov numbers, Hurwitz n=4, Abelian sandpile laws), small computations, and an elementary triangular-lattice parity lemma, with Rust, C11 and Python checks.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T05:09:47Z",
+      "pushed_at": "2026-11-27T13:40:18Z",
       "homepage": "https://0thernes.github.io/apollonian-sandpile-markov/",
       "latest_release": null,
       "archive_registered": true,
@@ -82,7 +82,7 @@
       "description": "C11 x86-64 artificial-life engine with 48 kernel-checked Lean 4.35.0 theorems about its own finite-field, bitvector and ledger models (not its machine code), an 18-gate falsification suite and a preprint. Resolves no open problem.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T00:46:46Z",
+      "pushed_at": "2026-11-27T06:11:52Z",
       "homepage": "https://0thernes.github.io/autophage/",
       "latest_release": null,
       "archive_registered": true,
@@ -118,7 +118,7 @@
       "description": "Zero-Mathlib Lean 4 results extending Vinciguerra's register-program paper (arXiv:2609.18692): a prime-field digit-sum characterisation of two-register passive programs (formal-polynomial model) and explicit three-register programs improving a powering exponent bound. Not peer reviewed.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T00:11:51Z",
+      "pushed_at": "2026-11-27T13:39:47Z",
       "homepage": "https://0thernes.github.io/catalytic-register-frontiers/",
       "latest_release": null,
       "archive_registered": true,
@@ -130,7 +130,7 @@
       "description": "Zero-Mathlib Lean 4.35.0 (6 kernels, 23 Palomar targets, T1a-T4f incl. Pathion r_max=14 & dim-64 gap), Rust/C11/Python verifiers, RFC 3161+OTS timestamps, 21-page paper & 3D Canvas observatory",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T05:14:02Z",
+      "pushed_at": "2026-11-27T06:20:55Z",
       "homepage": "https://0thernes.github.io/cayley-dickson-terrace-frontier/",
       "latest_release": null,
       "archive_registered": true,
@@ -159,6 +159,18 @@
       "latest_release": null,
       "archive_registered": true,
       "inventory_status": "REGISTERED"
+    },
+    {
+      "slug": "clifford-radon-stabilizers",
+      "repository": "https://github.com/0thernes/clifford-radon-stabilizers",
+      "description": "Lean 4.35.0 formalization (0 Mathlib, 33/33 audited) & 10-engine polyglot verification of Clifford-Radon stabilizers, modulo-3 CCZ phase transitions, Type-I TQD obstructions & quantum geometry",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-27T13:49:06Z",
+      "homepage": "https://0thernes.github.io/clifford-radon-stabilizers/",
+      "latest_release": null,
+      "archive_registered": false,
+      "inventory_status": "UNREGISTERED_PUBLIC_REPO"
     },
     {
       "slug": "coded-pir-mlwe-complexity-lab",
@@ -346,7 +358,7 @@
       "description": "Exact minimum Kochen-Specker set sizes inside nine finite ray pools. Lean 4 proves 31 (49-ray pool B(3,2)) and 18 (40-ray pool in 4D); 31, 33 and 29 in seven other pools rest on SAT certificates. The general minimum problem stays open.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T04:29:56Z",
+      "pushed_at": "2026-11-27T13:25:31Z",
       "homepage": "https://0thernes.github.io/kochen-specker-extremal-lab/",
       "latest_release": null,
       "archive_registered": true,
@@ -370,7 +382,7 @@
       "description": "Lean 4.35.0 proof of Conjecture 7.7 (a_triangle = 1/32 - 4*sqrt(3)/243) from the Banic-Elezovic arXiv preprint 2610.17046v1, with exact and 80-digit Python checks. Not peer reviewed; the variance corollaries rest on cited, unformalized theorems.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T05:09:32Z",
+      "pushed_at": "2026-11-27T13:23:04Z",
       "homepage": "https://0thernes.github.io/multinomial-tv-conjecture/",
       "latest_release": null,
       "archive_registered": true,
@@ -466,7 +478,7 @@
       "description": "Lean 4 proofs and exact verifiers for Pauli contextuality: formalized spectral floors (Jonah), disjoint Peres-Mermin square and pentagram degrees (Muller-Saniga Sec. 6), strict-law failure for one representative per case of Jonah's Conjecture E, finite sequential bounds. Unreviewed.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T04:43:54Z",
+      "pushed_at": "2026-11-27T13:26:28Z",
       "homepage": "https://0thernes.github.io/pauli-contextuality-lab/",
       "latest_release": null,
       "archive_registered": true,
@@ -521,6 +533,30 @@
       "inventory_status": "UNREGISTERED_PUBLIC_REPO"
     },
     {
+      "slug": "quantum-latin-spectrum-frontier",
+      "repository": "https://github.com/0thernes/quantum-latin-spectrum-frontier",
+      "description": "Zero-Mathlib Lean 4.35.0 six-kernel formalization and 11-engine polyglot verification closing the QLS cardinality spectrum for all v >= 8 (87/87) and resolving MCISQLS(n) across all residues mod 4.",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-27T13:45:59Z",
+      "homepage": "https://0thernes.github.io/quantum-latin-spectrum-frontier/",
+      "latest_release": null,
+      "archive_registered": false,
+      "inventory_status": "UNREGISTERED_PUBLIC_REPO"
+    },
+    {
+      "slug": "quantum-phasespace-rigidity",
+      "repository": "https://github.com/0thernes/quantum-phasespace-rigidity",
+      "description": "Discrete Symplectic Phase-Space Rigidity (0TH-2026-020): Complete Cyclic Z_{2l} AME Dichotomy, Maximal-Cardinality t-RQLS, and ASTAB/AWP Magic Geometry \u2014 Pure Lean 4.35.0 (6-Kernel) + 7 Polyglot Engines",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-27T06:02:48Z",
+      "homepage": "https://0thernes.github.io/quantum-phasespace-rigidity/",
+      "latest_release": null,
+      "archive_registered": true,
+      "inventory_status": "REGISTERED"
+    },
+    {
       "slug": "secmesh-pqsi",
       "repository": "https://github.com/0thernes/secmesh-pqsi",
       "description": "Post-Quantum & Post-Super-Intelligence Onion-Artichoke cyber-defense suite (Levels 1-3): C11 CT coprocessor + dudect + TUN/Wintun (69/69), Argon2id Vault + 3-Hop Onion + UDP L3 VPN + Firewall (34/34 Node), 28 Lean 4.35 theorems across 6 kernels, 2 white papers + 3-page NIST brief.",
@@ -531,6 +567,18 @@
       "latest_release": null,
       "archive_registered": true,
       "inventory_status": "REGISTERED"
+    },
+    {
+      "slug": "spectral-eclipse-frontier",
+      "repository": "https://github.com/0thernes/spectral-eclipse-frontier",
+      "description": "Lean 4.35.0 six-kernel formalization resolving Conjecture 4.1 (arXiv:2507.18767v1) & establishing sharp Early State Exclusion phase transitions (N=8, 9, 11, 3R+2), complex J_{a,b}, QGTL speed limits, 8-engine polyglot/quantum observatory, and AMS-LaTeX preprint.",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-27T13:51:32Z",
+      "homepage": "https://0thernes.github.io/spectral-eclipse-frontier/",
+      "latest_release": null,
+      "archive_registered": false,
+      "inventory_status": "UNREGISTERED_PUBLIC_REPO"
     },
     {
       "slug": "thingmaker",
@@ -562,7 +610,7 @@
       "description": "Discrete p-adic (Bruhat-Tits tree) holography laboratory: Tate-curve BTZ quotients, Ollivier-Ricci curvature, graph-cut strong subadditivity, and 149 zero-Mathlib Lean 4.35.0 declarations about the discrete model. No physical or quantum-gravity result is claimed.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T04:44:35Z",
+      "pushed_at": "2026-11-27T13:47:18Z",
       "homepage": "https://0thernes.github.io/ultrametrica/",
       "latest_release": null,
       "archive_registered": true,
@@ -583,10 +631,10 @@
     {
       "slug": "unsolved-mathematics",
       "repository": "https://github.com/0thernes/unsolved-mathematics",
-      "description": "Audited 106-problem mathematical atlas (v0.7.0) with standalone 8-domain, 6-kernel Lean 4.35.0 core (66 theorems / 102 decls), daily guarded Left to Solve program mirror (25 programs / 59,396 targets), live citation & retraction audit, FAIR RO-Crate/Croissant metadata, dual RFC 3161 + Bitcoin OTS timestamps, and 0-warning AMS-LaTeX white paper.",
+      "description": "Audited, ranked Atlas of 120 unsolved mathematical problems (+ daily 59,396-item mirror of all 25 Left to Solve programs), 8-domain 6-kernel Lean 4.35.0 formal core (66 thms / 102 decls), 531 API-verified citations (0 retracted), FAIR metadata & AMS-LaTeX white paper.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T04:31:28Z",
+      "pushed_at": "2026-11-27T05:59:15Z",
       "homepage": "https://0thernes.github.io/unsolved-mathematics/",
       "latest_release": null,
       "archive_registered": true,
@@ -598,8 +646,32 @@
       "description": "2,000 deduplicated open problems + daily 59,396-target Left to Solve 25-front mirror & 16-registry GitHub sync; 6,108 biconnected edges; 103 Lean 4.35.0 software-model theorems; 100% MRR@5 RAG & 13-tool MCP; 11-page AMS-LaTeX paper; 0/2,000 solved.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T05:42:55Z",
+      "pushed_at": "2026-11-27T06:08:06Z",
       "homepage": "https://0thernes.github.io/unsolved-problems-mega-atlas/",
+      "latest_release": null,
+      "archive_registered": true,
+      "inventory_status": "REGISTERED"
+    },
+    {
+      "slug": "weyl-magic-obstruction-frontier",
+      "repository": "https://github.com/0thernes/weyl-magic-obstruction-frontier",
+      "description": "Zero-Mathlib Lean 4.35.0 six-kernel formalization (22 theorem groups T1a-T5d) & nine-engine polyglot verifier for Weyl-Heisenberg magic obstructions, n=4 bent-hyperplane rupture, Super-MUB torsion anomalies, and char-3 Alltop constructions (0TH-2026-022).",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-27T13:23:59Z",
+      "homepage": "https://0thernes.github.io/weyl-magic-obstruction-frontier/",
+      "latest_release": null,
+      "archive_registered": true,
+      "inventory_status": "REGISTERED"
+    },
+    {
+      "slug": "weyl-magic-stabilizer-frontier",
+      "repository": "https://github.com/0thernes/weyl-magic-stabilizer-frontier",
+      "description": "Zero-Mathlib Lean 4.35.0 6-kernel formalization & 9-language polyglot/quantum stack refuting Erew-Goldstein Conj. 1, proving Conj. 2 (high-mana), Alltop magic attainment & ruptures, Conj. 24, and settling d_min(Q(7,2))=8 (0TH-2026-021)",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-27T06:23:30Z",
+      "homepage": "https://0thernes.github.io/weyl-magic-stabilizer-frontier/",
       "latest_release": null,
       "archive_registered": true,
       "inventory_status": "REGISTERED"
@@ -653,6 +725,6 @@
       "inventory_status": "REGISTERED"
     }
   ],
-  "sync_status": "OFFLINE_PRESERVED_LAST_KNOWN_GOOD",
+  "sync_status": "LIVE_GITHUB_API",
   "error": null
 }
