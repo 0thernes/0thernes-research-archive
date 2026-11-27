@@ -315,7 +315,7 @@
       "archive_id": "0TH-BUILD-003",
       "slug": "ultrametrica",
       "repository": "https://github.com/0thernes/ultrametrica",
-      "version": "v1.6.0",
+      "version": "v1.7.0",
       "resolution_class": "FORMAL_INVARIANT_SUITE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
@@ -324,9 +324,9 @@
         "GR-002",
         "GR-003"
       ],
-      "target_statement": "148 pure Lean 4.35.0 declarations (104 core theorems & corollaries + 29 zero-Mathlib helper lemmas + 5 AdversarialTests + 10 isolated comparator target bindings across 11 modular files all <1,000 lines) for discrete p-adic AdS/CFT model invariants, curved-tree Kantorovich reductions, and weighted-graph RT strong subadditivity.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 148 decls across 11 Palomar module files, lake check --paranoid + 6-kernel lake comparator --paranoid on the 10 isolated comparator targets and dependency closure (CI run 45940965936), SLSA 72943284 / Rekor 4141673065.",
-      "honesty_boundary": "Discrete non-Archimedean model invariants only; continuum quantum gravity (SUB-032, GR-001..003) remains OPEN. Lean does not define the Vladimirov operator, hybrid Hamiltonian H_theta, or bulk solver; Monna digit reversal (Monna 1970) and graph-cut SSA (Headrick-Takayanagi 2007) are standard prior work; BTZ and bridge-edge optimal transport proofs cover hand-coded 3-class reductions."
+      "target_statement": "202 pure Lean 4.35.0 declarations (127 core theorems & corollaries + 56 zero-Mathlib helper lemmas + 7 AdversarialTests + 12 isolated comparator target bindings across 13 modular files all <1,000 lines) for discrete p-adic AdS/CFT model invariants, finite-graph edge-sum curved Gauss-Bonnet conservation, discrete radial Vladimirov/Kozyrev-Haar eigenfunctions & [D_K, J]=0 parity, curved-tree Kantorovich reductions, and weighted-graph RT strong subadditivity.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 202 decls across 13 Palomar module files, lake check --paranoid + 6-kernel lake comparator --paranoid on all 12 isolated comparator targets and dependency closure + live negative tamper-rejection gate (CI run 46014442260), SLSA 73145649 / Rekor 4149833247.",
+      "honesty_boundary": "Discrete non-Archimedean model invariants only; continuum quantum gravity (SUB-032, GR-001..003) remains OPEN. v1.7.0 closes finite-graph edge-sum curved Gauss-Bonnet and discrete radial Vladimirov/Kozyrev-Haar wavelets in Lean 4; Lean still does not define the full complex Fourier-basis hybrid H_theta, continuum PDE evolution, or the O(V) floating-point bulk solver; Monna digit reversal (Monna 1970), Kozyrev wavelets (Kozyrev 2002), and graph-cut SSA (Headrick-Takayanagi 2007) are standard prior work; BTZ and bridge-edge optimal transport proofs cover hand-coded 3-class reductions."
     },
     {
       "archive_id": "0TH-BUILD-004",

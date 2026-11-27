@@ -607,7 +607,7 @@
     {
       "slug": "ultrametrica",
       "repository": "https://github.com/0thernes/ultrametrica",
-      "description": "Discrete p-adic (Bruhat-Tits tree) holography laboratory: Tate-curve BTZ quotients, Ollivier-Ricci curvature, graph-cut strong subadditivity, and 149 zero-Mathlib Lean 4.35.0 declarations about the discrete model. No physical or quantum-gravity result is claimed.",
+      "description": "Discrete p-adic (Bruhat-Tits tree) holography laboratory: Tate-curve BTZ quotients, curved finite-graph Gauss-Bonnet, discrete Vladimirov/Kozyrev wavelets, graph-cut strong subadditivity, and 202 zero-Mathlib Lean 4.35.0 declarations about the discrete model. No physical or quantum-gravity result is claimed.",
       "default_branch": "main",
       "archived": false,
       "pushed_at": "2026-11-27T13:47:18Z",
