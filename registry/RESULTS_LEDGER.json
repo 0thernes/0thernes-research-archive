@@ -1149,7 +1149,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "29a63e7cc8ae9d62584813e07c1d27b981a9768b",
+      "audited_commit": "e13761c9334da43ac160cbe0f0e14013bbd87ff1",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -1178,16 +1178,16 @@
         {
           "decl": "TriadFrontier.MLWETightness.t2b_chen_step9_antiperiodic_dft_cancellation",
           "file": "lean/TriadFrontier/MLWETightness.lean",
-          "line": 108
+          "line": 110
         },
         {
           "decl": "TriadFrontier.MLWETightness.t2f_universal_twisted_dft_selection_rule",
           "file": "lean/TriadFrontier/MLWETightness.lean",
-          "line": 661
+          "line": 663
         }
       ],
       "axioms": "propext, Quot.sound (T2b); propext (T2f)",
-      "audited_commit": "29a63e7cc8ae9d62584813e07c1d27b981a9768b",
+      "audited_commit": "e13761c9334da43ac160cbe0f0e14013bbd87ff1",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -1239,7 +1239,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "29a63e7cc8ae9d62584813e07c1d27b981a9768b",
+      "audited_commit": "e13761c9334da43ac160cbe0f0e14013bbd87ff1",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
