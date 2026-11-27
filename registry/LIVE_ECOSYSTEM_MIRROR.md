@@ -2,7 +2,7 @@
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
 **Synced (UTC):** `2026-11-27T14:01:09Z` · **Mode:** `offline`  
-**Tracked Public Repositories:** 44 (`11` exact pin match, `28` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Tracked Public Repositories:** 45 (`11` exact pin match, `28` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -42,6 +42,7 @@
 | [`pauli-contextuality-lab`](https://github.com/0thernes/pauli-contextuality-lab) | `0TH-2026-009` | Tier I | `3cd387d84c` | `9d57651a4a` | `v3.1.0` | [`success`](https://github.com/0thernes/pauli-contextuality-lab/actions/runs/46007131046) | `AHEAD_OF_PIN` |
 | [`planaria`](https://github.com/0thernes/planaria) | `0TH-BUILD-002` | Tier II | `6979cc1be4` | `be2038b8e2` | `v2.4.0` | [`success`](https://github.com/0thernes/planaria/actions/runs/45911933357) | `AHEAD_OF_PIN` |
 | [`promislow-fracton-amoeba`](https://github.com/0thernes/promislow-fracton-amoeba) | `0TH-2026-015` | Tier I | `c829ab8115` | `660fbf41b5` | `v1.0.0` | [`success`](https://github.com/0thernes/promislow-fracton-amoeba/actions/runs/45917303503) | `AHEAD_OF_PIN` |
+| [`quantum-latin-spectrum-frontier`](https://github.com/0thernes/quantum-latin-spectrum-frontier) | `0TH-2026-023` | Tier I | `c53def9c92` | — | `v1.0.0` | — | `OFFLINE_PIN_ONLY` |
 | [`quantum-phasespace-rigidity`](https://github.com/0thernes/quantum-phasespace-rigidity) | `0TH-2026-020` | Tier I | `1c3214973e` | `4a4cd71900` | `v1.0.0` | [`success`](https://github.com/0thernes/quantum-phasespace-rigidity/actions/runs/45949375196) | `AHEAD_OF_PIN` |
 | [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `0TH-2026-011` | Tier I | `6c7f642146` | `96f7d2b72d` | `v3.0.1` | [`success`](https://github.com/0thernes/secmesh-pqsi/actions/runs/45915650756) | `AHEAD_OF_PIN` |
 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `77f03245d4` | `c0a955294c` | `v1.7.0` | [`failure`](https://github.com/0thernes/ultrametrica/actions/runs/46010118697) | `AHEAD_OF_PIN` |

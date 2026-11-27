@@ -5,12 +5,12 @@
   "sync_mode": "offline",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
-    "tier1_papers": 22,
+    "tier1_papers": 23,
     "tier2_builds": 17,
     "tier3_discoveries": 12,
-    "total_entries": 51,
-    "unique_public_repositories": 44,
-    "pinned_submodules": 38,
+    "total_entries": 52,
+    "unique_public_repositories": 45,
+    "pinned_submodules": 39,
     "exact_pin_match": 11,
     "ahead_of_pin": 28,
     "historical_archived": 4,
@@ -910,6 +910,32 @@
       "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/promislow-fracton-amoeba/studio/",
       "sync_status": "AHEAD_OF_PIN",
+      "error": null
+    },
+    {
+      "slug": "quantum-latin-spectrum-frontier",
+      "repository": "https://github.com/0thernes/quantum-latin-spectrum-frontier",
+      "archive_ids": [
+        "0TH-2026-023"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "c53def9c92b900a50f075e710543fddbe89cd073",
+      "archived_version": "v1.0.0",
+      "submodule_path": "repos/quantum-latin-spectrum-frontier",
+      "registered_pages_url": "https://0thernes.github.io/quantum-latin-spectrum-frontier/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": null,
+      "latest_release_tag": null,
+      "pushed_at": null,
+      "ci_run_id": null,
+      "ci_conclusion": null,
+      "ci_html_url": null,
+      "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
+      "pages_url": "https://0thernes.github.io/quantum-latin-spectrum-frontier/",
+      "sync_status": "OFFLINE_PIN_ONLY",
       "error": null
     },
     {

@@ -1,11 +1,11 @@
 # Archive Architecture (`docs/architecture.md`)
 
-`0thernes-research-archive` is the **single canonical public master hub** organizing all public scientific outputs authored by Alexander Stephen Donahue (`ORCID 0009-0006-8168-9648`) into **three strictly separated epistemic tiers** (**51 entries**: 22 Tier I + 17 Tier II + 12 Tier III), backed by **38 pinned public Git submodules** under `repos/`, a **94-result audited Results Ledger** (`RESULTS.md` generated from `registry/RESULTS_LEDGER.json`), a **28-row Solved Sub-Conjectures & Mega-Atlas V2 Bridge**, an **hourly-refreshed Upstream Ecosystem Mirror** (the current count is generated in `registry/LIVE_ECOSYSTEM_MIRROR.json` and `registry/PUBLIC_REPO_INVENTORY.json`), a unified SHA-256 integrity manifest (`CHECKSUMS.sha256` & `data/MANIFEST.sha256`), and an immutable DigiCert RFC 3161 TSA–sealed frozen release manifest (`data/RELEASE_FREEZE.sha256` + `data/RELEASE_FREEZE.sha256.tsr`).
+`0thernes-research-archive` is the **single canonical public master hub** organizing all public scientific outputs authored by Alexander Stephen Donahue (`ORCID 0009-0006-8168-9648`) into **three strictly separated epistemic tiers** (**52 entries**: 23 Tier I + 17 Tier II + 12 Tier III), backed by **39 pinned public Git submodules** under `repos/`, a **94-result audited Results Ledger** (`RESULTS.md` generated from `registry/RESULTS_LEDGER.json`), a **28-row Solved Sub-Conjectures & Mega-Atlas V2 Bridge**, an **hourly-refreshed Upstream Ecosystem Mirror** (the current count is generated in `registry/LIVE_ECOSYSTEM_MIRROR.json` and `registry/PUBLIC_REPO_INVENTORY.json`), a unified SHA-256 integrity manifest (`CHECKSUMS.sha256` & `data/MANIFEST.sha256`), and an immutable DigiCert RFC 3161 TSA–sealed frozen release manifest (`data/RELEASE_FREEZE.sha256` + `data/RELEASE_FREEZE.sha256.tsr`).
 
 ```mermaid
 flowchart LR
-    UP["Upstream Public 0thernes/* Repos (44 tracked)"] -->|hourly cron; repository_dispatch optional, not configured| LS["scripts/live_sync.py"]
-    R1["registry/PAPERS.json<br/>Tier I: 22 Standalone Preprints"] --> V["scripts/verify_archive.py"]
+    UP["Upstream Public 0thernes/* Repos (45 tracked)"] -->|hourly cron; repository_dispatch optional, not configured| LS["scripts/live_sync.py"]
+    R1["registry/PAPERS.json<br/>Tier I: 23 Standalone Preprints"] --> V["scripts/verify_archive.py"]
     R2["registry/BUILD_PAPERS.json<br/>Tier II: 17 Builds · 1,050 Lean Decls at pins"] --> V
     R3["registry/LAWS_AND_DISCOVERIES.json<br/>Tier III: 12 Laws, Claims & Atlases"] --> V
     RL["registry/RESULTS_LEDGER.json<br/>94 Audited Results"] --> BL["scripts/build_ledger.py -> RESULTS.md"]
@@ -14,7 +14,7 @@ flowchart LR
     LS --> LM["registry/LIVE_ECOSYSTEM_MIRROR.json/.md & PUBLIC_REPO_INVENTORY.json"]
     LM --> V
     PR["scripts/privacy.py<br/>Hashed Privacy Firewall"] --> V
-    S["repos/* (38 Pinned Public Submodules)"] --> V
+    S["repos/* (39 Pinned Public Submodules)"] --> V
     V --> C["CHECKSUMS.sha256 & data/MANIFEST.sha256"]
     V --> FZ["data/RELEASE_FREEZE.sha256 + DigiCert .tsr"]
     V --> D["Per-Entry METADATA.json + EVIDENCE.md"]

@@ -121,7 +121,7 @@ def test_consolidated_latest_entries_registered() -> None:
         p["id"]: p
         for p in json.loads((ROOT / "registry" / "PAPERS.json").read_text(encoding="utf-8"))["papers"]
     }
-    assert len(papers) == 22
+    assert len(papers) == 23
     assert papers["0TH-2026-006"]["version"] == "v2.6.0"
     assert papers["0TH-2026-006"]["lean_verification"]["audited_theorems"] == 894
     assert papers["0TH-2026-009"]["version"] == "v3.1.0"
@@ -153,6 +153,9 @@ def test_consolidated_latest_entries_registered() -> None:
     assert papers["0TH-2026-022"]["slug"] == "weyl-magic-obstruction-frontier"
     assert papers["0TH-2026-022"]["version"] == "v1.0.2"
     assert papers["0TH-2026-022"]["lean_verification"]["audited_theorems"] == 36
+    assert papers["0TH-2026-023"]["slug"] == "quantum-latin-spectrum-frontier"
+    assert papers["0TH-2026-023"]["version"] == "v1.0.0"
+    assert papers["0TH-2026-023"]["lean_verification"]["audited_theorems"] == 32
 
     builds = {
         b["id"]: b

@@ -1,6 +1,6 @@
 # 0thernes Research Archive (2026.11.26)
 
-> Canonical public master vault, live ecosystem mirror, and Mega-Atlas V2 cross-reference bridge for Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA; ORCID 0009-0006-8168-9648). Tracks 51 public research entries (22 Tier I preprints, 17 Tier II build papers & Lean 4 suites, 12 Tier III laws/discoveries/atlases) with byte-exact SHA-256 provenance and zero private repository leakage.
+> Canonical public master vault, live ecosystem mirror, and Mega-Atlas V2 cross-reference bridge for Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA; ORCID 0009-0006-8168-9648). Tracks 52 public research entries (23 Tier I preprints, 17 Tier II build papers & Lean 4 suites, 12 Tier III laws/discoveries/atlases) with byte-exact SHA-256 provenance and zero private repository leakage.
 
 ## Start Here
 - [Results Ledger: one numbered list of what has been proven and what has not](RESULTS.md) · [JSON](registry/RESULTS_LEDGER.json)
@@ -17,7 +17,7 @@
 - Grand Mega-Atlas V2 open problems retired: 0 / 2000
 - Audited results in the Results Ledger: 94 (3 open questions from the literature answered; 11 new theorems; 11 bounded or partial cases; 55 known results formalized; 14 engineering invariant suites); none is peer reviewed
 - Open questions from published preprints answered in Lean 4.35.0 (not peer reviewed): 3 (RESULTS.md section A)
-- Tracked unique public repositories: 44
+- Tracked unique public repositories: 45
 - Primary verifier: `python3 scripts/verify_archive.py` and `python3 -m pytest -v tests/`
 
 ## Governance & Documentation
