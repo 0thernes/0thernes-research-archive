@@ -124,3 +124,6 @@
 [submodule "repos/schur-clifford-frontier"]
 	path = repos/schur-clifford-frontier
 	url = https://github.com/0thernes/schur-clifford-frontier.git
+[submodule "repos/nonlocal-magic-spectral-frontier"]
+	path = repos/nonlocal-magic-spectral-frontier
+	url = https://github.com/0thernes/nonlocal-magic-spectral-frontier.git

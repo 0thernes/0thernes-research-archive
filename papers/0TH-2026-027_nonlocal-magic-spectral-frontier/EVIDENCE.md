@@ -1,0 +1,48 @@
+# Evidence & Falsification Dossier — `0TH-2026-027`
+
+**Title:** Spectral Geometry of Nonlocal Stabilizer Entropy and Two-Qudit Magic: Machine-Checked All-N Bounds, Fano-7 Duality, Rank-2 Majorization, and Cubic-Trace Pareto Frontiers  
+**Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
+**Domain:** Quantum Information Theory / Combinatorics / Number Theory / Formal Verification  
+**Version / Date:** `v1.0.0` (2026-11-27)  
+**Status:** Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 & 3-OS CI verified)
+
+## Cryptographic Identity & Provenance
+
+| Field | Value |
+|---|---|
+| Source Repository | https://github.com/0thernes/nonlocal-magic-spectral-frontier |
+| Pinned Git Submodule | `repos/nonlocal-magic-spectral-frontier` @ `c91dcf709e1555db79afa52591bb07a36f9f22d3` |
+| GitHub Release | https://github.com/0thernes/nonlocal-magic-spectral-frontier/releases/tag/v1.0.0 |
+| Frozen Archived PDF | `papers/0TH-2026-027_nonlocal-magic-spectral-frontier/Donahue_2026_nonlocal_magic_spectral_frontier.pdf` |
+| Frozen PDF SHA-256 | `21a1265fad82df5a6265c27a9e7d81f0ad24781a86c5f590ba1b76aaad9741f4` |
+| arXiv / Source Bundle SHA-256 | `90ea0092e21585a93a4e5a494b054315bc836e13e7921a1ba0f9400cc1fb9fd9` |
+| CI Verification Run | https://github.com/0thernes/nonlocal-magic-spectral-frontier/actions/runs/46023868392 |
+| Software Heritage SWHID | `swh:1:snp:2a1d3c3be3d538dff9d8f3227431c6f77fea070f` |
+| Wayback Machine Snapshot | Not yet captured |
+| External DOI | None claimed |
+
+## Core Result
+
+Resolves and sharpens four interconnected open problems from the 2026 nonlocal stabilizer entropy (Sierant arXiv:2609.13106v2) and two-qudit maximal magic (Knipfer et al. arXiv:2607.07197v1) literature, verified in zero-Mathlib Lean 4.35.0 (38 audited declarations strictly within [propext, Classical.choice, Quot.sound], all 6 independent proof kernels + live tamper-rejection gate green on Ubuntu CI run 46023868392, SLSA #73170543) and a 9-engine cross-language differential verification harness: (I) Unconditional all-N universal gap B20(r,s) <= 3*N_CB(n;r,s) proving c_1 <= log_2(3) ~= 1.58496 bits (60.4% additive / 5.33x multiplicative tightening over Sierant Thm. 3 c_1 <= 4 bits) via AG(3,2) 56-basis matroid elimination, Myhill-Nerode minimal backward automata (6/12/21/44 states, 370x speedup), and asymmetric-D half-open dyadic trees (60/212/1084/2769 leaves), sharpened in zero-dep Rust to K_4 = 5/2 (1.32193 bits, 41,522 leaves) and bracketed below by Lean-proved Jacobsthal closed forms (85/37), super-Jacobsthal r=43 (N4=1,487,389), and exact r <= 2^20 sweep maximizer r=175,629 (N4=413,828,458,373,169,667,113, c_1 >= 1.20109 bits); (II) Complete 210/210 Fano-7 rank-7 LP duality (119 rows, 640 denominator-12 duals), strict cut necessity of pair5 and blossom6, and exact d=8 fermionic quasispin CAR closure (mHat = 2q); (III) Exact all-16 Pauli majorization and discrete Karamata convex majorization for 1+1 rank-2 states over any linearly ordered field F (all alpha > 1), plus formalized Finding H-002 3-kink concavity counterexample [5,5,4,2,2,2] (14 > 13 at k=3) obstructing naive M >= 2 proofs; (IV) Explicit finite-field cubic-trace two-qudit family |Psi_cubic(p,nu)> for every prime p >= 5 proving universal Hessian non-degeneracy, M_2 = ln(p^4/(2p^2-1)), and exact Schmidt spectrum ((2/p)^((p-1)/2), 1/p, 0^((p-1)/2)) with S_1 = log_2(p)-(p-1)/p, reproducing Knipfer et al. Table 2 Max 1 at p=5 and proving sharpness at p=3. Cross-verified across 9 engines (Python exact + 80-digit mpmath, Rust 1.94, ISO C11 -Werror + ASan/UBSan + 100k fuzz, Win64/SysV x86-64 NASM WHT, Zig 0.17.0, C++20 quasispin, Eshkol dual-number AD, pinned MIT QGTL+QRNG, pinned MIT Moonlab 1.2.1 WASM), pre-registered study (Holm-Bonferroni p=4e-4), 14 live HTTP-200 non-retracted citations, 0-warning 13-page AMS-LaTeX PDF + clean-room arXiv tarball, DigiCert RFC 3161 (.tsr) + 3-calendar OTS (.ots), SWH swh:1:snp:2a1d3c3be3d538dff9d8f3227431c6f77fea070f, and 74/74 (100.0%, Core 32/32) Build Standard v1.2.0 compliance.
+
+## Lean 4 Formal Verification & Axiom Allowlist
+
+- **Framework:** Pure Lean 4.35.0 (zero Mathlib, 38 audited declarations across Solution.lean [18], PalomarSolution.lean [14], and NonVacuity.lean [6] strictly within [propext, Classical.choice, Quot.sound], zero sorry outside PalomarChallenge.lean, zero native_decide; all 6 independent kernels passed on Ubuntu CI run 46023868392 via bubblewrap-sandboxed lake check --paranoid & lake comparator --config comparator.json --paranoid + live tamper-rejection gate: lean, leanchecker-paranoid, lean4lean [3,927 decls], nanoda, con-leche --verified [3,930 decls], con-ron --verified [3,930 decls]; SLSA #73170543)
+- **Library Entry Point:** `lean/Solution.lean`
+- **Primary Axiom Audit Script:** `lean/VerifyAxioms.lean`
+- **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
+- **Additional Audit Scripts:** `lean/Challenge.lean, lean/PalomarChallenge.lean, lean/PalomarSolution.lean, lean/NonlocalMagic/NonVacuity.lean, lean/NonlocalMagic/AdversarialTests.lean`
+
+## Verification Boundary (Honest Epistemic Scope)
+
+All 38 audited declarations (18 Solution + 14 Palomar + 6 NonVacuity) are machine-checked in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound] across all 6 independent kernels plus live tamper-rejection gate on Ubuntu CI run 46023868392 (zero sorry outside PalomarChallenge.lean, zero native_decide). Tighter K_4 = 5/2 (41,522 leaves) and r <= 2^20 maximizer r=175,629 are [EXACT-COMP] in zero-dependency Rust/C11/Zig/Python outside Lean; transcendental log_2/ln evaluations are [PAPER-PROOF] verified to 80 digits in mpmath; C++20 d=16 probe, Eshkol AD, pinned QGTL+QRNG, pinned Moonlab 1.2.1 WASM, and pre-registered Monte Carlo study are [NUMERICAL] (no quantum hardware claimed). Sharp constant c_1* in [1.20109, 1.32193], operator-level pair5/blossom6 bounds for n >= 4, multi-block M >= 2 rank-2 majorization, and global optimality over all two-qudit states remain explicitly [OPEN]. Retires 0/2,000 historical Mega-Atlas grand problems; claims no external peer review or external DOI.
+
+## Independent Reproduction & Falsification Protocol
+
+To verify or attempt to falsify this paper from scratch:
+
+```bash
+git clone --recursive https://github.com/0thernes/0thernes-research-archive.git
+cd 0thernes-research-archive
+cd repos/nonlocal-magic-spectral-frontier && (cd lean && lake build --wfail && lake build PalomarChallenge && lake env lean VerifyAxioms.lean && lake check --paranoid && lake comparator --config comparator.json --paranoid) && (cd native/rust && cargo clippy --all-targets -- -D warnings && cargo test --release && cargo run --release -- --json) && (cd native/zig && zig build test && zig build -Doptimize=ReleaseFast && ./zig-out/bin/magic_zig) && python examples/quickstart_demo.py && pytest -v tests/test_all.py && python scripts/check_readme_axioms.py
+```

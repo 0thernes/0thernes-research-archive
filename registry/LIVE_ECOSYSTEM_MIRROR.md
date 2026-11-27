@@ -1,8 +1,8 @@
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-27T15:22:29Z` · **Mode:** `live-github-api`  
-**Tracked Public Repositories:** 48 (`20` exact pin match, `24` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Synced (UTC):** `2026-11-27T15:22:29Z` · **Mode:** `offline`  
+**Tracked Public Repositories:** 49 (`20` exact pin match, `24` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -37,6 +37,7 @@
 | [`neuralese`](https://github.com/0thernes/neuralese) | `0TH-DISC-003` | Tier III | `2527d67355` | `2527d67355` | `v17.3.0` | — | `EXACT_PIN_MATCH` |
 | [`neuralese-diffusion`](https://github.com/0thernes/neuralese-diffusion) | `0TH-DISC-004` | Tier III | `13e3b0e22e` | `13e3b0e22e` | `main` | [`success`](https://github.com/0thernes/neuralese-diffusion/actions/runs/40342126770) | `EXACT_PIN_MATCH` |
 | [`noetic-organism-omega`](https://github.com/0thernes/noetic-organism-omega) | `0TH-BUILD-010` | Tier II | `c4301d926f` | `676c3b80d3` | `v2.1.0` | [`success`](https://github.com/0thernes/noetic-organism-omega/actions/runs/45915275475) | `AHEAD_OF_PIN` |
+| [`nonlocal-magic-spectral-frontier`](https://github.com/0thernes/nonlocal-magic-spectral-frontier) | `0TH-2026-027` | Tier I | `c91dcf709e` | — | `v1.0.0` | — | `OFFLINE_PIN_ONLY` |
 | [`octonionica`](https://github.com/0thernes/octonionica) | `0TH-2026-017` | Tier I | `e064cb44d0` | `e064cb44d0` | `v1.2.0` | [`success`](https://github.com/0thernes/octonionica/actions/runs/46015598749) | `EXACT_PIN_MATCH` |
 | [`omega-triscale-observatory`](https://github.com/0thernes/omega-triscale-observatory) | `0TH-BUILD-014`, `0TH-DISC-012` | Tier II / Tier III | `bbe4da96c5` | `423e45490f` | `v6.7.0` | [`success`](https://github.com/0thernes/omega-triscale-observatory/actions/runs/45915382968) | `AHEAD_OF_PIN` |
 | [`p-vs-np-frontier-lab`](https://github.com/0thernes/p-vs-np-frontier-lab) | `0TH-2026-013` | Tier I | `a70733fc38` | `12cee0ec6a` | `v1.2.0` | [`success`](https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45913353493) | `AHEAD_OF_PIN` |
