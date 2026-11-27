@@ -372,3 +372,22 @@ def test_negative_and_mutation_tampered_digest_and_axiom_killed() -> None:
     mutated_digest = ("0" if digest[0] != "0" else "1") + digest[1:]
     assert va.sha256_file(ROOT / rel) == digest
     assert va.sha256_file(ROOT / rel) != mutated_digest
+
+
+def test_prose_counts_guards_hardening_index_and_colon_format(tmp_path: Path) -> None:
+    """Regression guard: check_prose_counts catches drift in HARDENING_INDEX.md and colon-format Tier counts."""
+    assert "HARDENING_INDEX.md" in va.COUNT_GUARDED_FILES
+    (tmp_path / "docs").mkdir()
+    (tmp_path / "docs" / "architecture.md").write_text(
+        "Tier I: 18 Standalone Preprints\n`34` submodules\n",
+        encoding="utf-8",
+    )
+    (tmp_path / "HARDENING_INDEX.md").write_text(
+        "**45 public research entries** and **34 submodules**\n",
+        encoding="utf-8",
+    )
+    issues = va.check_prose_counts(tmp_path, total=48, pcount=19, bcount=17, dcount=12, subcount=35)
+    joined = "\n".join(issues)
+    assert "docs/architecture.md:1" in joined and "Tier I" in joined
+    assert "HARDENING_INDEX.md:1" in joined and "public research entries" in joined
+    assert "HARDENING_INDEX.md:1" in joined and "pinned submodules" in joined

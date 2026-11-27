@@ -10,6 +10,7 @@
 - [Threat Model](threat-model.md) — Integrity, provenance, privacy-firewall, and supply-chain risks.
 - [Run Log](run-log.md)
 - [Master Hardening Index & Table of Contents](../HARDENING_INDEX.md)
+- [Round 3 3-Cycle Fleet & Archive Hardening Log (2026-11-26)](reviews/2026-11-26-round3-3cycle-hardening-log.md) — CI crash diagnosis, live citation title/author verification, typecheck & prose-count guards
 - [Statement Audit of Every Result (2026-11-26)](reviews/2026-11-26-statement-audit.md) — method, rebuilds and per-entry corrections behind RESULTS.md
 - [Round 2 Overnight Consolidation & Hardening Log (2026-11-26)](reviews/2026-11-26-overnight-hardening-log.md)
 - [3-Cycle Hardening & Consolidation Audit Log (2026-11-25/26)](reviews/2026-11-25-3cycle-hardening-log.md)

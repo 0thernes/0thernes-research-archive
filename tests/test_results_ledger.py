@@ -175,7 +175,7 @@ def test_pin_move_is_rendered_as_reaudit_pending(tmp_path: Path) -> None:
 
 def test_upstream_ahead_of_pin_is_disclosed() -> None:
     ent = _index()["0TH-TEST-001"]
-    live = {
+    live: dict[str, Any] = {
         "synced_utc": "2026-11-26T00:00:00Z",
         "repos": {"test-repo": {"sync_status": "AHEAD_OF_PIN", "latest_release_tag": "v1.1.0"}},
     }

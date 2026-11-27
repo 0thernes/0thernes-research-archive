@@ -625,6 +625,7 @@ COUNT_GUARDED_FILES = (
     "CLAIMS.md",
     "LIMITATIONS.md",
     "AGENTS.md",
+    "HARDENING_INDEX.md",
     "repo.yaml",
     "llms.txt",
     "docs/architecture.md",
@@ -634,9 +635,12 @@ COUNT_GUARDED_FILES = (
 _COUNT_PATTERNS = (
     ("public research entries", re.compile(r"\*{0,2}(\d[\d,]*)\*{0,2}\s+public\s+(?:research\s+)?entries", re.I)),
     ("Tier I", re.compile(r"\b(\d+)\s+Tier\s+I(?![IVX])")),
+    ("Tier I", re.compile(r"\bTier\s+I(?![IVX])\s*:\s*(\d+)\b")),
     ("Tier II", re.compile(r"\b(\d+)\s+Tier\s+II(?![IVX])")),
+    ("Tier II", re.compile(r"\bTier\s+II(?![IVX])\s*:\s*(\d+)\b")),
     ("Tier III", re.compile(r"\b(\d+)\s+Tier\s+III(?![IVX])")),
-    ("pinned submodules", re.compile(r"\*{0,2}(\d+)\*{0,2}\s+pinned\s+(?:PUBLIC\s+|public\s+)?(?:Git\s+)?submodules", re.I)),
+    ("Tier III", re.compile(r"\bTier\s+III(?![IVX])\s*:\s*(\d+)\b")),
+    ("pinned submodules", re.compile(r"\*{0,2}(\d+)\*{0,2}\s+(?:pinned\s+)?(?:PUBLIC\s+|public\s+)?(?:Git\s+)?submodules", re.I)),
 )
 
 
