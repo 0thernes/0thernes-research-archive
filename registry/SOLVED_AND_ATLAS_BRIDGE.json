@@ -31,7 +31,7 @@
       "archive_id": "0TH-2026-004",
       "slug": "kochen-specker-extremal-lab",
       "repository": "https://github.com/0thernes/kochen-specker-extremal-lab",
-      "version": "v2.0.0",
+      "version": "v2.1.0",
       "resolution_class": "PARTIAL_BOUNDED_CASE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
@@ -74,7 +74,7 @@
       "archive_id": "0TH-2026-009",
       "slug": "pauli-contextuality-lab",
       "repository": "https://github.com/0thernes/pauli-contextuality-lab",
-      "version": "v3.0.0",
+      "version": "v3.1.0",
       "resolution_class": "SOLVED_SUB_CONJECTURE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
