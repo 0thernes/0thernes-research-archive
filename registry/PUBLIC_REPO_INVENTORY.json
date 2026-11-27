@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
-  "synced_utc": "2026-11-27T05:19:32Z",
+  "synced_utc": "2026-11-27T05:24:00Z",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "repositories": [
     {
@@ -595,7 +595,7 @@
     {
       "slug": "unsolved-problems-mega-atlas",
       "repository": "https://github.com/0thernes/unsolved-problems-mega-atlas",
-      "description": "Dataset of 1,900 open problems with a Python-audited 5,808-edge knowledge graph, offline search, an MCP server, and 103 Lean 4 theorems about the atlas scoring software. It claims no solution to any catalogued problem; results of related work are listed in the archive ledger RESULTS.md.",
+      "description": "2,000 deduplicated open problems (incl. 25 Left to Solve fronts) across 8 Pillars, 28 Superdomains & 6,108 biconnected edges; daily 16-registry GitHub sync; 103 Lean 4.35.0 software-model theorems; 100% MRR@5 offline RAG & 12-tool MCP; 11-page AMS-LaTeX white paper; 0/2,000 solved.",
       "default_branch": "main",
       "archived": false,
       "pushed_at": "2026-11-27T04:41:05Z",

@@ -1145,11 +1145,11 @@
         {
           "decl": "TriadFrontier.PIRKoszul.t1a_koszul_veronese_rank_identity",
           "file": "lean/TriadFrontier/PIRKoszul.lean",
-          "line": 89
+          "line": 79
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "674b5dac3a94825cb7791ac74b38ffd0fef23f1c",
+      "audited_commit": "d942e537c56393fa9899c748f4e9abb265bfad4d",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -1178,16 +1178,16 @@
         {
           "decl": "TriadFrontier.MLWETightness.t2b_chen_step9_antiperiodic_dft_cancellation",
           "file": "lean/TriadFrontier/MLWETightness.lean",
-          "line": 110
+          "line": 108
         },
         {
           "decl": "TriadFrontier.MLWETightness.t2f_universal_twisted_dft_selection_rule",
           "file": "lean/TriadFrontier/MLWETightness.lean",
-          "line": 663
+          "line": 661
         }
       ],
       "axioms": "propext, Quot.sound (T2b); propext (T2f)",
-      "audited_commit": "674b5dac3a94825cb7791ac74b38ffd0fef23f1c",
+      "audited_commit": "d942e537c56393fa9899c748f4e9abb265bfad4d",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -1195,7 +1195,7 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "The T2a 'refutation of Luo' and the Gaussian DFR 'paradox' are not supported (see findings); the Chen Step-9 bug was found by Hongxun Wu and Thomas Vidick (IACR ePrint 2024/555 update note), uncredited.",
+        "The earlier T2a 'refutation of Luo' and Gaussian DFR 'paradox' prose claims were withdrawn and removed in v5.1.0 (ERRATA A04, A07, S02), and Hongxun Wu and Thomas Vidick are credited for finding the Chen Step-9 bug (ERRATA A06, L04).",
         "The integer Cauchy-Schwarz, Holder, data-processing and q^m determinant lemmas in the same file (t2a, t2c-t2i) are not cited by this record and are not covered by it.",
         "Lattice hardness of MLWE is untouched."
       ],
@@ -1239,7 +1239,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "674b5dac3a94825cb7791ac74b38ffd0fef23f1c",
+      "audited_commit": "d942e537c56393fa9899c748f4e9abb265bfad4d",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
