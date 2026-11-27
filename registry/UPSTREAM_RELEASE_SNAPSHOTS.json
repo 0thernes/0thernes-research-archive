@@ -50,6 +50,33 @@
       ],
       "promotion_status": "CANDIDATE_SEPARATE_FROM_FROZEN_V0.5.0",
       "claim_boundary": "Bounded structural formal results only (66 theorems, 102 audited declarations across 8 domains + 6/6 statement-audit resolution + guarded daily Left to Solve mirror); grand open conjectures remain open."
+    },
+    {
+      "repository": "https://github.com/0thernes/unsolved-mathematics",
+      "release": "v0.8.1",
+      "commit": "8aeba1ae351ad704d09bafd80bec456f16b889c1",
+      "ci_run": "https://github.com/0thernes/unsolved-mathematics/actions/runs/45949011546",
+      "release_run": "https://github.com/0thernes/unsolved-mathematics/actions/runs/45949011416",
+      "artifacts": [
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.8.1/Donahue_2026_unsolved_mathematics_atlas-v0.8.1.pdf",
+          "sha256": "b769dc62009adb7431edee30098dc51b6c37242911c9f7ef88af5629b567f497"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.8.1/arxiv_submission-v0.8.1.tar.gz",
+          "sha256": "5e17c3ce79b31e8e6470b73a72b8222bba95934cb3bef6171ca163b257ae522f"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.8.1/MANIFEST-v0.8.1.sha256",
+          "sha256": "9c867407fecf361cf153a6f354e2d0ebf30448a03282898b7f048a31f298b853"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.8.1/six_kernel_audit-v0.8.1.txt",
+          "sha256": "105d13225241e7711114af453a22392ee1406ffdb87956b15fe280344f16e86b"
+        }
+      ],
+      "promotion_status": "CANDIDATE_SEPARATE_FROM_FROZEN_V0.5.0",
+      "claim_boundary": "Bounded structural formal results only (66 theorems, 102 audited declarations across 8 domains + 120 curated open-problem dossiers + daily sharded mirror of all 25 Left to Solve programs / 59,396 targets with CC BY-SA carve-out and solved_by_kind disaggregation + zero-drift RAG corpus 3,979 chunks / 821,708 tokens); grand open conjectures remain open."
     }
   ]
 }
