@@ -725,6 +725,6 @@
       "inventory_status": "REGISTERED"
     }
   ],
-  "sync_status": "LIVE_GITHUB_API",
+  "sync_status": "OFFLINE_PRESERVED_LAST_KNOWN_GOOD",
   "error": null
 }

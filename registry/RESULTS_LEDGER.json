@@ -2535,7 +2535,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
+      "audited_commit": "94ece6a8dce9c9a30c6a2ada2eb335cb0501f770",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -2956,7 +2956,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
+      "audited_commit": "94ece6a8dce9c9a30c6a2ada2eb335cb0501f770",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -2988,7 +2988,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
+      "audited_commit": "94ece6a8dce9c9a30c6a2ada2eb335cb0501f770",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3705,7 +3705,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
+      "audited_commit": "94ece6a8dce9c9a30c6a2ada2eb335cb0501f770",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3741,7 +3741,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
+      "audited_commit": "94ece6a8dce9c9a30c6a2ada2eb335cb0501f770",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3786,7 +3786,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
+      "audited_commit": "94ece6a8dce9c9a30c6a2ada2eb335cb0501f770",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3825,7 +3825,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
+      "audited_commit": "94ece6a8dce9c9a30c6a2ada2eb335cb0501f770",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3858,7 +3858,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
+      "audited_commit": "94ece6a8dce9c9a30c6a2ada2eb335cb0501f770",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3889,7 +3889,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
+      "audited_commit": "94ece6a8dce9c9a30c6a2ada2eb335cb0501f770",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
