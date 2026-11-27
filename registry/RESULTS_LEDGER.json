@@ -4088,7 +4088,7 @@
       },
       "limits": [
         "The 42 assessors and the 7 box-kites are due to de Marrais (arXiv:math/0011260, 2000); this is a formal six-kernel re-verification.",
-        "In v2.0.0–v2.1.0, inter-strut disjointness is proved directly from pure vanishing-product adjacency (boxKiteGraphAdj / hasCrossEdgeVtx) linked to cdMulCoordGamma without XOR pre-filtering.",
+        "In v2.0.0\u2013v2.1.0, inter-strut disjointness is proved directly from pure vanishing-product adjacency (boxKiteGraphAdj / hasCrossEdgeVtx) linked to cdMulCoordGamma without XOR pre-filtering.",
         "Norm-multiplicativity of span{e_0,\u2026,e_8} is checked via isNormMultMask 4 511 (cross-term cancellation over basis quadruples)."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -4352,7 +4352,7 @@
       "key": "ENG-1",
       "status": "ACTIVE",
       "title": "Lean invariants of a discrete p-adic tree holography model",
-      "statement": "For the software model's own definitions: base-p digit reversal is an involution preserving p-adic balls; hand-coded BTZ and bridge-edge transport bounds are met by explicit non-negative plans; curved Gauss-Bonnet holds both per vertex and as a direct edge-sum over arbitrary finite weighted edge lists; discrete radial ultrametric/Vladimirov operators have Kozyrev-Haar eigenfunctions and commute with J; cut-capacity strong subadditivity, K-packet Z[i] splitting, and rank-1 Sherman-Morrison identities hold.",
+      "statement": "For the software model's own definitions: base-p digit reversal preserves p-adic balls; literal (p+2)x(p+2) BTZ and bridge-edge transport bounds are met by non-negative plans; curved Gauss-Bonnet holds over arbitrary finite weighted edge lists; discrete radial Vladimirov operators have Kozyrev-Haar eigenfunctions; symmetry-commuting operators yield odd-prime orthogonal doublets over Z[i]^N; gauge-covariant bulk Laplacians (m^2>0) are SPD with positive RatQ tree Schur pivots; graph-cut SSA and K-packet splitting hold.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Spectral, soliton-dynamics and solver-accuracy claims are numerical or exact-rational Python checks outside Lean.",
@@ -4369,14 +4369,29 @@
           "line": 261
         },
         {
+          "decl": "Ultrametrica.commuting_diag_block_diagonal",
+          "file": "lean/UltrametricaProofs/OperatorAndSpectrum.lean",
+          "line": 183
+        },
+        {
+          "decl": "Ultrametrica.odd_prime_sector_eigenvector_orthogonal_doublet",
+          "file": "lean/UltrametricaProofs/OperatorAndSpectrum.lean",
+          "line": 421
+        },
+        {
           "decl": "Ultrametrica.btz_wasserstein_lower_bound",
           "file": "lean/UltrametricaProofs/HolographyCurvature.lean",
           "line": 226
         },
         {
-          "decl": "Ultrametrica.btz_primal_cost_exact",
-          "file": "lean/UltrametricaProofs/HolographyCurvature.lean",
-          "line": 332
+          "decl": "Ultrametrica.fullBtz_wasserstein_lower_bound",
+          "file": "lean/UltrametricaProofs/FullGraphBTZ.lean",
+          "line": 149
+        },
+        {
+          "decl": "Ultrametrica.fullBtz_primal_optimal_exists",
+          "file": "lean/UltrametricaProofs/FullGraphBTZ.lean",
+          "line": 235
         },
         {
           "decl": "Ultrametrica.gen_bridge_wasserstein_lower_bound_sub",
@@ -4387,11 +4402,6 @@
           "decl": "Ultrametrica.gen_bridge_primal_sub_optimal",
           "file": "lean/UltrametricaProofs/MultiEdgeHolography.lean",
           "line": 730
-        },
-        {
-          "decl": "Ultrametrica.global_multi_edge_vertex_charge_conservation",
-          "file": "lean/UltrametricaProofs/MultiEdgeHolography.lean",
-          "line": 252
         },
         {
           "decl": "Ultrametrica.finite_graph_curved_gauss_bonnet_sum",
@@ -4427,10 +4437,25 @@
           "decl": "Ultrametrica.sherman_morrison_exact_identity",
           "file": "lean/UltrametricaProofs/SolitonAndSolver.lean",
           "line": 396
+        },
+        {
+          "decl": "Ultrametrica.bulk_operator_strictly_pos_def",
+          "file": "lean/UltrametricaProofs/BulkOperatorPositivity.lean",
+          "line": 164
+        },
+        {
+          "decl": "Ultrametrica.spd_operator_sherman_morrison_den_ge_one",
+          "file": "lean/UltrametricaProofs/BulkOperatorPositivity.lean",
+          "line": 195
+        },
+        {
+          "decl": "Ultrametrica.tree_schur_pivot_stays_positive",
+          "file": "lean/UltrametricaProofs/BulkOperatorPositivity.lean",
+          "line": 225
         }
       ],
-      "axioms": "propext, Classical.choice, Quot.sound (union over all 202 audited declarations: 127 core theorems & corollaries + 56 zero-Mathlib helper lemmas + 7 adversarial refutations + 12 isolated comparator target bindings across 8 proof modules; individual theorems use subsets)",
-      "audited_commit": "c0bbefe13b609d918d19fbae3a389b8be3de34da",
+      "axioms": "propext, Classical.choice, Quot.sound (union over all 250 audited declarations \u2014 100.0% public theorem coverage, 0 unaudited: 144 core theorems & corollaries + 81 zero-Mathlib helper lemmas + 10 adversarial refutations + 15 isolated comparator target bindings across 11 proof modules; individual theorems use subsets)",
+      "audited_commit": "add5e5580f0b4ce6996986e4042167188190cf5d",
       "audit": {
         "date": "2026-11-27",
         "rebuild": "PASS",
@@ -4439,15 +4464,14 @@
       },
       "limits": [
         "Concerns the repository's discrete software model only; no continuum, physical or quantum-gravity statement is proved and no open problem is retired.",
-        "In v1.7.0 Lean now formalizes both the discrete radial ultrametric/Vladimirov operator D_K and discrete Kozyrev-Haar eigenfunctions + [D_K, J]=0 (VladimirovOperator.lean, Target 12) and direct finite-graph edge-sum curved Gauss-Bonnet conservation over arbitrary List (WeightedEdge n) on Fin n (FiniteGraphGaussBonnet.lean, Target 11). Lean still does not define the full complex Fourier-basis hybrid Hamiltonian H_theta, continuum PDE time evolution, positivity of T above the BF bound, or the O(V) floating-point bulk solver; those claims remain numerical or exact-rational checks.",
-        "The BTZ curvature law is proved for a hand-coded 3-class neighbour reduction with marginals (M, M, pM); the symmetry reduction from the full graph is not formalized.",
+        "In v1.8.0 Lean closes literal (p+2)x(p+2) full-graph BTZ symmetry reduction (FullGraphBTZ.lean, Target 13), operator-level block-diagonality & odd-prime orthogonal doublets over Z[i]^N (OperatorAndSpectrum.lean, Target 14), and bulk gauge-covariant Laplacian strict positive definiteness T > 0 (m^2 > 0), end-to-end Sherman-Morrison den >= 1 discharge & RatQ tree Schur pivots (BulkOperatorPositivity.lean, Target 15), alongside FiniteGraphGaussBonnet.lean (Target 11) and VladimirovOperator.lean (Target 12). Operating strictly over exact rings (Z, Z[i], RatQ), Lean still does not formalize the irrational-root DFT matrix H_theta, continuum PDE time evolution, the floating-point JS O(V) solver implementation, or tachyonic negative-mass BF-window positivity (m^2 in (m_BF^2, 0)).",
         "Graph-cut submodularity and the Headrick-Takayanagi (2007) strong subadditivity argument are known results; Monna digit reversal (Monna 1970) and Kozyrev wavelets (Kozyrev 2002) are standard prior work.",
-        "The 202 audited declarations decompose into 127 core theorems/corollaries, 56 zero-Mathlib helper lemmas, 7 adversarial refutations, and 12 isolated comparator target bindings across 13 Palomar module files all <1,000 lines.",
-        "Six-kernel lake comparator --paranoid checks ran on Ubuntu CI run 46014442260 (bubblewrap) covering all 12 isolated comparator targets and their dependency closure, alongside live negative tamper-rejection (scripts/test_lean_negative.py --with-comparator); full-library compilation was checked by lake build, leanchecker --fresh, and lake check --paranoid.",
-        "Both btz_primal_feasible and gen_bridge_primal_sub_optimal / gen_bridge_primal_sup_optimal prove plan non-negativity and marginal feasibility in Lean for the 3-class reductions, while FiniteGraphGaussBonnet.lean directly sums curvedGenKappaQ over arbitrary finite weighted edge lists.",
+        "All 250/250 public theorems (100.0% coverage, 0 unaudited, enforced by verify_exact.py) decompose into 144 core theorems/corollaries, 81 zero-Mathlib helper lemmas, 10 adversarial refutations, and 15 isolated comparator target bindings across 17 Palomar module files all <1,000 lines.",
+        "Six-kernel lake comparator --paranoid checks ran on Ubuntu CI run 46056989161 (bubblewrap, SLSA 73254262) covering all 15 isolated comparator targets and their dependency closure, alongside live negative tamper-rejection (scripts/test_lean_negative.py --with-comparator); full-library compilation was checked by lake build, leanchecker --fresh, and lake check --paranoid.",
+        "FullGraphBTZ.lean proves literal (p+2)x(p+2) non-negative full-graph BTZ optimality, MultiEdgeHolography.lean proves non-negative bridge-edge plans, and FiniteGraphGaussBonnet.lean directly sums curvedGenKappaQ over arbitrary finite weighted edge lists.",
         "Strong subadditivity uses Nat edge weights and Bool vertex sets and takes S(ABC) and S(B) as hypothesised lower bounds over homologous cuts."
       ],
-      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
+      "check": "cd lean && lake build UltrametricaProofs SolutionBridge Challenge Solution && lake env lean VerifyAxioms.lean"
     },
     {
       "n": 85,
