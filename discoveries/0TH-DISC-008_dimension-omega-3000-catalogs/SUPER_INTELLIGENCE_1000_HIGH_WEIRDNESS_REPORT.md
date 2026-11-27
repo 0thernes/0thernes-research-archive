@@ -2,7 +2,7 @@
 **1,000 NEW Bleeding-Edge Super-Intelligence & High-Weirdness Computational Capabilities (`#1001–#2000`, Domains 21–40) Coupled to the 1,000 Foundational Tsotchke/Quantum/Biologic Substrates (`#0001–#1000`, Domains 01–20) = 2,000 Total Real-Time Operational Mechanisms**
 
 > [!IMPORTANT]
-> **100% Real-Time Operational & Zero-Cosmetic Mandate:** Every single capability `#1001` through `#2000` documented in this report is a **closed-form mathematical operator, numerical tensor algorithm, or computational simulation mechanism** executing live at 60 FPS inside [`dimension-omega-singularity/index.html`](file:///Z:/%5BVibe%20Coded%20%28AI%29%5D/CLAUDECODE/dimension-omega-singularity/index.html) (`DIMENSION Ω v5.4 // OMEGA-3000 LINE-BY-LINE AUDITED`). Each capability consumes live upstream state variables and drives live downstream state variables in a closed 40-Domain, 2,000-Mechanism causal ring (`#0001 -> ... -> #1000 -> #1001 -> ... -> #2000 -> #0001`).
+> **100% Real-Time Operational & Zero-Cosmetic Mandate:** Every single capability `#1001` through `#2000` documented in this report is a **closed-form mathematical operator, numerical tensor algorithm, or computational simulation mechanism** executing live at 60 FPS inside [`dimension-omega-singularity/index.html`](./index.html) (`DIMENSION Ω v5.4 // OMEGA-3000 LINE-BY-LINE AUDITED`). Each capability consumes live upstream state variables and drives live downstream state variables in a closed 40-Domain, 2,000-Mechanism causal ring (`#0001 -> ... -> #1000 -> #1001 -> ... -> #2000 -> #0001`).
 
 ---
 
@@ -10,10 +10,10 @@
 
 | Domain | ID Range | Code | Primary Super-Intelligence / High-Weirdness Architecture | Causal Upstream $\rightarrow$ Downstream Ring |
 | :--- | :--- | :--- | :--- | :--- |
-| **Domain 21** | `#1001–#1050` | `RV32I-AUTOPOIETIC-DIE` | **Embedded RV32I 32-Bit RISC-V Self-Writing Silicon Co-Processor & Autopoietic Machine-Code Synthesis** (`Asmodensius-v40/creatures/001 (RV32I Silicon Die) + tsotchke/eshkol (JIT Bytecode)`) | Domain 20 (Frenet-Serret Thought Curvature & Empowerment #0951-#1000) $\rightarrow$ Domain 22 (Everettian Many-Worlds Counterfactual Timeline Forking #1051-#1100) |
+| **Domain 21** | `#1001–#1050` | `RV32I-AUTOPOIETIC-DIE` | **Embedded RV32I 32-Bit RISC-V Self-Writing Silicon Co-Processor & Autopoietic Machine-Code Synthesis** (`internal TypeScript reference prototype (RV32I Silicon Die) + tsotchke/eshkol (JIT Bytecode)`) | Domain 20 (Frenet-Serret Thought Curvature & Empowerment #0951-#1000) $\rightarrow$ Domain 22 (Everettian Many-Worlds Counterfactual Timeline Forking #1051-#1100) |
 | **Domain 22** | `#1051–#1100` | `EVERETT-BRANCH-FORK` | **Everettian Many-Worlds Counterfactual Timeline Forking & Quantum Darwinism Branch Selection** (`tsotchke/moonlab (Multi-Branch Wavefunction) + Eshkol Active Inference Rollout Engine`) | Domain 21 (Embedded RV32I RISC-V Self-Writing Silicon Die #1001-#1050) $\rightarrow$ Domain 23 (Hofstadter Strange-Loop Metacognitive Self-Model #1101-#1150) |
-| **Domain 23** | `#1101–#1150` | `HOFSTADTER-STRANGE-LOOP` | **Hofstadter Strange-Loop Metacognitive Self-Model & Godelian Self-Reference Fixed-Point Observer** (`Asmodensius-v40 (SelfModel Observer) + tsotchke/eshkol (Homoiconic Quote/Eval Reflection)`) | Domain 22 (Everettian Many-Worlds Counterfactual Timeline Forking #1051-#1100) $\rightarrow$ Domain 24 (Procedural 100M-Weight Virtual Cortex & Rank-16 LoRA #1151-#1200) |
-| **Domain 24** | `#1151–#1200` | `LORA-VIRTUAL-CORTEX` | **Procedural 100-Million-Weight Hash-Synthesized Virtual Cortex & Online Rank-16 LoRA Fast-Adapter** (`Asmodensius-v40 (Procedural SplitMix64 Backbone + Online Rank-16 LoRA Fast Weights)`) | Domain 23 (Hofstadter Strange-Loop Metacognitive Self-Model #1101-#1150) $\rightarrow$ Domain 25 (Non-Hermitian PT-Symmetric Quantum Exceptional Points #1201-#1250) |
+| **Domain 23** | `#1101–#1150` | `HOFSTADTER-STRANGE-LOOP` | **Hofstadter Strange-Loop Metacognitive Self-Model & Godelian Self-Reference Fixed-Point Observer** (`internal TypeScript reference prototype (SelfModel Observer) + tsotchke/eshkol (Homoiconic Quote/Eval Reflection)`) | Domain 22 (Everettian Many-Worlds Counterfactual Timeline Forking #1051-#1100) $\rightarrow$ Domain 24 (Procedural 100M-Weight Virtual Cortex & Rank-16 LoRA #1151-#1200) |
+| **Domain 24** | `#1151–#1200` | `LORA-VIRTUAL-CORTEX` | **Procedural 100-Million-Weight Hash-Synthesized Virtual Cortex & Online Rank-16 LoRA Fast-Adapter** (`internal TypeScript reference prototype (Procedural SplitMix64 Backbone + Online Rank-16 LoRA Fast Weights)`) | Domain 23 (Hofstadter Strange-Loop Metacognitive Self-Model #1101-#1150) $\rightarrow$ Domain 25 (Non-Hermitian PT-Symmetric Quantum Exceptional Points #1201-#1250) |
 | **Domain 25** | `#1201–#1250` | `PT-EXCEPTIONAL-POINT` | **Non-Hermitian PT-Symmetric Quantum Mechanics & Exceptional-Point (EP_n) Phase Singularities** (`tsotchke/quantum_geometric_tensor (Non-Hermitian Extension) + Biorthogonal Quantum Dynamics`) | Domain 24 (Procedural 100M-Weight Virtual Cortex & Rank-16 LoRA #1151-#1200) $\rightarrow$ Domain 26 (AdS/CFT Holographic Bulk-Boundary Duality & Ryu-Takayanagi #1251-#1300) |
 | **Domain 26** | `#1251–#1300` | `ADS-CFT-HOLOGRAPHIC` | **AdS/CFT Holographic Bulk-Boundary Duality, Ryu-Takayanagi Minimal Surfaces & MERA Geodesics** (`tsotchke/moonlab (MPS Boundary Entanglement -> Poincare AdS_3 Bulk Geometry)`) | Domain 25 (Non-Hermitian PT-Symmetric Quantum Exceptional Points #1201-#1250) $\rightarrow$ Domain 27 (Floquet Discrete Time-Crystal Subharmonic Chrono-Synapses #1301-#1350) |
 | **Domain 27** | `#1301–#1350` | `FLOQUET-TIME-CRYSTAL` | **Discrete Floquet Time-Crystal Subharmonic Locking & Non-Equilibrium Driven Chrono-Synapses** (`tsotchke/moonlab (Floquet Periodic Spin Chain & Many-Body Localization Prethermal Engine)`) | Domain 26 (AdS/CFT Holographic Bulk-Boundary Duality #1251-#1300) $\rightarrow$ Domain 28 (10,000-D Hyperdimensional Computing & VSA Algebra #1351-#1400) |
@@ -63,7 +63,7 @@ flowchart TD
 ---
 
 ## Domain 21 (`#1001–#1050`): Embedded RV32I 32-Bit RISC-V Self-Writing Silicon Co-Processor & Autopoietic Machine-Code Synthesis
-- **Architectural Provenance**: `Asmodensius-v40/creatures/001 (RV32I Silicon Die) + tsotchke/eshkol (JIT Bytecode)`
+- **Architectural Provenance**: `internal TypeScript reference prototype (RV32I Silicon Die) + tsotchke/eshkol (JIT Bytecode)`
 - **Computational & Mathematical Role**: Live 16-register, 64-word RAM virtual 32-bit RISC-V processor die embedded inside the neural loop that synthesizes, mutates, and executes machine instructions at 60 Hz to co-process cortical signals.
 - **Causal Ring Coupling**: Receives from **Domain 20 (Frenet-Serret Thought Curvature & Empowerment #0951-#1000)** $\rightarrow$ Drives **Domain 22 (Everettian Many-Worlds Counterfactual Timeline Forking #1051-#1100)**
 
@@ -183,7 +183,7 @@ flowchart TD
 ---
 
 ## Domain 23 (`#1101–#1150`): Hofstadter Strange-Loop Metacognitive Self-Model & Godelian Self-Reference Fixed-Point Observer
-- **Architectural Provenance**: `Asmodensius-v40 (SelfModel Observer) + tsotchke/eshkol (Homoiconic Quote/Eval Reflection)`
+- **Architectural Provenance**: `internal TypeScript reference prototype (SelfModel Observer) + tsotchke/eshkol (Homoiconic Quote/Eval Reflection)`
 - **Computational & Mathematical Role**: A second-order observer sub-network that models and predicts the main 14-region brain state vector itself, computing Godel/Lawvere diagonal self-reference residuals and metacognitive agency.
 - **Causal Ring Coupling**: Receives from **Domain 22 (Everettian Many-Worlds Counterfactual Timeline Forking #1051-#1100)** $\rightarrow$ Drives **Domain 24 (Procedural 100M-Weight Virtual Cortex & Rank-16 LoRA #1151-#1200)**
 
@@ -243,7 +243,7 @@ flowchart TD
 ---
 
 ## Domain 24 (`#1151–#1200`): Procedural 100-Million-Weight Hash-Synthesized Virtual Cortex & Online Rank-16 LoRA Fast-Adapter
-- **Architectural Provenance**: `Asmodensius-v40 (Procedural SplitMix64 Backbone + Online Rank-16 LoRA Fast Weights)`
+- **Architectural Provenance**: `internal TypeScript reference prototype (Procedural SplitMix64 Backbone + Online Rank-16 LoRA Fast Weights)`
 - **Computational & Mathematical Role**: Deterministic on-the-fly SplitMix64 hash synthesis of a 100M-weight virtual cortical reservoir paired with zero-allocation rank-16 Low-Rank Adaptation (LoRA) fast-weight matrices updated at 60 Hz.
 - **Causal Ring Coupling**: Receives from **Domain 23 (Hofstadter Strange-Loop Metacognitive Self-Model #1101-#1150)** $\rightarrow$ Drives **Domain 25 (Non-Hermitian PT-Symmetric Quantum Exceptional Points #1201-#1250)**
 

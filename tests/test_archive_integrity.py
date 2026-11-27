@@ -76,6 +76,13 @@ def test_privacy_firewall_detects_a_leak_without_naming_it(tmp_path: Path, monke
     (tmp_path / "README.md").write_text(f"links: {SYNTHETIC_PRIVATE}\n", encoding="utf-8")
     issues = va.check_privacy_firewall(tmp_path)
     assert issues and all(SYNTHETIC_PRIVATE not in i for i in issues), issues
+    # Regression guard: Tier I/II/III snapshot trees (papers/, builds/, discoveries/) are also scanned.
+    for tree in ("papers", "builds", "discoveries"):
+        troot = tmp_path / f"case_{tree}"
+        (troot / tree).mkdir(parents=True)
+        (troot / tree / "note.md").write_text(f"ref: {SYNTHETIC_PRIVATE}\n", encoding="utf-8")
+        t_issues = va.check_privacy_firewall(troot)
+        assert t_issues and all(SYNTHETIC_PRIVATE not in i for i in t_issues), (tree, t_issues)
 
 
 def test_active_archive_headers_and_registries_no_unformed_llc() -> None:

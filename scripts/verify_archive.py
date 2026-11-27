@@ -58,7 +58,7 @@ PRIVACY_SCANNED_FILES = (
     "llms.txt",
     "llms-full.txt",
 )
-PRIVACY_SCANNED_DIRS = ("registry", "scripts", "tests", "docs")
+PRIVACY_SCANNED_DIRS = ("registry", "scripts", "tests", "docs", "papers", "builds", "discoveries")
 ACTIVE_IDENTITY_FILES = (
     "README.md",
     "LICENSE",
@@ -697,10 +697,8 @@ def check_live_status_block(root: Path, pcount: int, bcount: int, dcount: int, s
 
 
 def check_privacy_firewall(root: Path) -> list[str]:
-    """No non-public repository name may appear in the archive's own registries, code or docs.
-
-    Frozen Tier III snapshots under discoveries/ are byte-for-byte copies of public upstream
-    files sealed by the RFC 3161 release freeze; they are reported in LIMITATIONS.md instead.
+    """No non-public repository name may appear anywhere in the public archive (registries,
+    code, tests, docs, papers, builds, or Tier III discovery snapshots).
     """
     issues: list[str] = []
     paths = [root / rel for rel in PRIVACY_SCANNED_FILES]

@@ -2,7 +2,7 @@
 **20 Core Scientific & Tsotchke Domains × 50 Real-Time Operational Mechanisms = 1,000 Coupled Biologic-Quantum-Neural Substrates**
 
 > [!IMPORTANT]
-> **Zero-Cosmetic Causal Mandate:** Every single mechanism `#0001` through `#1000` cataloged in this report is a **real-time, closed-form mathematical operator** wired into a unified 60-FPS causal loop in [`dimension-omega-singularity/index.html`](file:///Z:/%5BVibe%20Coded%20%28AI%29%5D/CLAUDECODE/dimension-omega-singularity/index.html). Every mechanism consumes live upstream state variables and drives live downstream state variables across the **14 Macro-Brain Organs**, **112 Meso `sLTC × Selective SSM` Hybrid Cortical Columns**, **32-Qubit `Moonlab` Matrix Product State (MPS) Tensor Chain ($2^{32} = 4.29\times 10^9$ Hilbert Space)**, **`QGTL` Quantum Geometric Tensor**, **`ESHKOL` Homoiconic Differentiable Consciousness Engine**, **`Tsotchke QRNG`**, and **3D Non-Euclidean Bizarro-Land Embodiment**.
+> **Zero-Cosmetic Causal Mandate:** Every single mechanism `#0001` through `#1000` cataloged in this report is a **real-time, closed-form mathematical operator** wired into a unified 60-FPS causal loop in [`dimension-omega-singularity/index.html`](./index.html). Every mechanism consumes live upstream state variables and drives live downstream state variables across the **14 Macro-Brain Organs**, **112 Meso `sLTC × Selective SSM` Hybrid Cortical Columns**, **32-Qubit `Moonlab` Matrix Product State (MPS) Tensor Chain ($2^{32} = 4.29\times 10^9$ Hilbert Space)**, **`QGTL` Quantum Geometric Tensor**, **`ESHKOL` Homoiconic Differentiable Consciousness Engine**, **`Tsotchke QRNG`**, and **3D Non-Euclidean Bizarro-Land Embodiment**.
 
 ---
 
@@ -20,16 +20,16 @@
 | **Domain 08** | `#0351–#0400` | `LIBIRREP-SKYRMION-MZM` | **LIBIRREP v1.5.0 — BdG Superconducting Skyrmions, Berg-Lüscher Charge & Braided Majorana Zero-Modes** (`tsotchke/libirrep (src/bdg_skyrmion.c + sim/irrep-symmetry.ts + cqm_libirrep_bdg_skyrmion_mzm)`) | Domain 07 (MOONLAB x QGTL Topological QWZ Chern Insulators) $\rightarrow$ Domain 09 (SPIN_BASED_NEURAL_NETWORK v0.6 NQS & MinSR) |
 | **Domain 09** | `#0401–#0450` | `SBNN-NQS-MINSR` | **SPIN_BASED_NEURAL_NETWORK v0.6 — Neural Quantum States (NQS), Sample-Space MinSR & Spin Glasses** (`tsotchke/spin_based_neural_network (src/nqs/nqs_optimizer.c + cqm_sbnn_minsr_step)`) | Domain 08 (LIBIRREP BdG Skyrmions & Majorana Zero-Modes) $\rightarrow$ Domain 10 (TSOTCHKE QRNG v3.0.1 & Classical-Contrast Control) |
 | **Domain 10** | `#0451–#0500` | `TSOTCHKE-QRNG-TOEPLITZ` | **TSOTCHKE QRNG v3.0.1 — Bell-Entangled Statevector Chaos, Toeplitz Whitening & NIST SP 800-90B** (`tsotchke/quantum_rng + Tsotchke-Corporation/Quantum-RNG-API (cqm_qrng_quantum_chaos_step + qrng_py.py)`) | Domain 09 (SPIN_BASED_NEURAL_NETWORK v0.6 NQS & MinSR) $\rightarrow$ Domain 11 (Biomimetic sLTC x Selective SSM Hybrid Cortical Columns) |
-| **Domain 11** | `#0501–#0550` | `SLTC-SELECTIVE-SSM` | **Biomimetic sLTC × Selective SSM Hybrid Cortical Columns & Two-Compartment NMDA Dendrites** (`tsotchke-diffusion-app/core/neuro.py + Asmodensius-v40/creatures/001/src/page.tsx`) | Domain 10 (TSOTCHKE QRNG v3.0.1) $\rightarrow$ Domain 12 (14-Region Anatomical Macro-Connectome & ESHKOL 2-Hop Reach) |
-| **Domain 12** | `#0551–#0600` | `CONNECTOME-14R-ESHKOL` | **14-Region Anatomical Macro-Connectome & ESHKOL 2-Hop Tensor-Logic Transitive Reach** (`Asmodensius-v40/creatures/001/src/page.tsx + dimension-omega-singularity/index.html`) | Domain 11 (Biomimetic sLTC x Selective SSM Hybrid Cortical Columns) $\rightarrow$ Domain 13 (Multi-Timescale Synaptic Plasticity: e-prop, STDP, STP) |
-| **Domain 13** | `#0601–#0650` | `PLASTICITY-EPROP-STDP` | **Multi-Timescale Synaptic Plasticity — Three-Factor e-prop, STDP, Tsodyks-Markram STP & Homeostasis** (`Asmodensius-v40/creatures/001/src/page.tsx + organism/v40mods.ts`) | Domain 12 (14-Region Anatomical Macro-Connectome) $\rightarrow$ Domain 14 (Four-Pool Neuromodulatory Volume Transmission) |
-| **Domain 14** | `#0651–#0700` | `NEUROMOD-4POOL-MM` | **Four-Pool Neuromodulatory Volume Transmission (DA, ACh, NE, 5-HT) & Michaelis-Menten Kinetics** (`Asmodensius-v40/creatures/001/src/page.tsx + dimension-omega-singularity/index.html`) | Domain 13 (Multi-Timescale Synaptic Plasticity) $\rightarrow$ Domain 15 (Tripartite Astrocyte Ca2+ Waves, Ephaptic LFP & SWR Replay) |
-| **Domain 15** | `#0701–#0750` | `ASTROCYTE-EPHAPTIC-SWR` | **Tripartite Astrocyte Ca²⁺ Syncytium, Ephaptic LFP Wireless Coupling & Hippocampal SWR Replay** (`Asmodensius-v40/creatures/001/src/organism/v40mods.ts + dimension-omega-singularity`) | Domain 14 (Four-Pool Neuromodulatory Volume Transmission) $\rightarrow$ Domain 16 (Enteric Gut-Brain ENS, Vagal Axis & Landauer Thermodynamics) |
-| **Domain 16** | `#0751–#0800` | `ENS-GUT-THERMODYNAMICS` | **Enteric Nervous System (ENS Gut-Brain), Vagal Axis, Kilojoule ATP Ledger & Landauer Heat** (`Asmodensius-v40/creatures/001/src/page.tsx + CORE-ARCHITECTURE.md`) | Domain 15 (Tripartite Astrocyte Ca2+ Waves, Ephaptic LFP & SWR Replay) $\rightarrow$ Domain 17 (Next-Gen Differential AI: KAN, TTT, Rough Paths & Graph Waves) |
+| **Domain 11** | `#0501–#0550` | `SLTC-SELECTIVE-SSM` | **Biomimetic sLTC × Selective SSM Hybrid Cortical Columns & Two-Compartment NMDA Dendrites** (`internal diffusion prototype (neuro.py) + internal TypeScript reference prototype (page.tsx)`) | Domain 10 (TSOTCHKE QRNG v3.0.1) $\rightarrow$ Domain 12 (14-Region Anatomical Macro-Connectome & ESHKOL 2-Hop Reach) |
+| **Domain 12** | `#0551–#0600` | `CONNECTOME-14R-ESHKOL` | **14-Region Anatomical Macro-Connectome & ESHKOL 2-Hop Tensor-Logic Transitive Reach** (`internal TypeScript reference prototype (page.tsx) + dimension-omega-singularity/index.html`) | Domain 11 (Biomimetic sLTC x Selective SSM Hybrid Cortical Columns) $\rightarrow$ Domain 13 (Multi-Timescale Synaptic Plasticity: e-prop, STDP, STP) |
+| **Domain 13** | `#0601–#0650` | `PLASTICITY-EPROP-STDP` | **Multi-Timescale Synaptic Plasticity — Three-Factor e-prop, STDP, Tsodyks-Markram STP & Homeostasis** (`internal TypeScript reference prototype (page.tsx) + organism/v40mods.ts`) | Domain 12 (14-Region Anatomical Macro-Connectome) $\rightarrow$ Domain 14 (Four-Pool Neuromodulatory Volume Transmission) |
+| **Domain 14** | `#0651–#0700` | `NEUROMOD-4POOL-MM` | **Four-Pool Neuromodulatory Volume Transmission (DA, ACh, NE, 5-HT) & Michaelis-Menten Kinetics** (`internal TypeScript reference prototype (page.tsx) + dimension-omega-singularity/index.html`) | Domain 13 (Multi-Timescale Synaptic Plasticity) $\rightarrow$ Domain 15 (Tripartite Astrocyte Ca2+ Waves, Ephaptic LFP & SWR Replay) |
+| **Domain 15** | `#0701–#0750` | `ASTROCYTE-EPHAPTIC-SWR` | **Tripartite Astrocyte Ca²⁺ Syncytium, Ephaptic LFP Wireless Coupling & Hippocampal SWR Replay** (`internal TypeScript reference prototype (v40mods.ts) + dimension-omega-singularity`) | Domain 14 (Four-Pool Neuromodulatory Volume Transmission) $\rightarrow$ Domain 16 (Enteric Gut-Brain ENS, Vagal Axis & Landauer Thermodynamics) |
+| **Domain 16** | `#0751–#0800` | `ENS-GUT-THERMODYNAMICS` | **Enteric Nervous System (ENS Gut-Brain), Vagal Axis, Kilojoule ATP Ledger & Landauer Heat** (`internal TypeScript reference prototype (page.tsx) + CORE-ARCHITECTURE.md`) | Domain 15 (Tripartite Astrocyte Ca2+ Waves, Ephaptic LFP & SWR Replay) $\rightarrow$ Domain 17 (Next-Gen Differential AI: KAN, TTT, Rough Paths & Graph Waves) |
 | **Domain 17** | `#0801–#0850` | `KAN-TTT-ROUGH-WAVES` | **Next-Gen Differential AI — Kolmogorov-Arnold Chebyshev Synapses, Test-Time Training & Graph Waves** (`Cosmogonic Quantum Mechalogodrom/src/sim + dimension-omega-singularity`) | Domain 16 (Enteric Gut-Brain ENS & Landauer Thermodynamics) $\rightarrow$ Domain 18 (Tsotchke Wave-2 Physics: PINN, PIMC, Gray-Scott, TDSE) |
 | **Domain 18** | `#0851–#0900` | `PINN-PIMC-GRAYSCOTT-TDSE` | **Tsotchke Physics Substrates — PINN Residuals, PIMC Path Integrals, Gray-Scott & Symplectic TDSE** (`tsotchke/PINN + tsotchke/PIMC + zig/src/root.zig (cqm_gray_scott_step + cqm_tdse_step)`) | Domain 17 (Next-Gen Differential AI: KAN, TTT, Rough Paths & Graph Waves) $\rightarrow$ Domain 19 (Tsotchke Wave-2 Verification: Rosette-Wire, PQ-BFT, GeoRefine, Bonsai) |
 | **Domain 19** | `#0901–#0950` | `ROSETTE-PQ-GEOREFINE-BONSAI` | **Tsotchke Wave-2 — Rosette-Wire FNV-1a, Post-Quantum BFT, GeoRefine Simplex & Bonsai 63-Layer SAE** (`tsotchke/rosette-wire + Tsotchke-Corporation/{pq-consensus-bandwidth, GeoRefine, bonsai-fidelity-study, ulg, logo-lab}`) | Domain 18 (Tsotchke Physics: PINN, PIMC, Gray-Scott, TDSE) $\rightarrow$ Domain 20 (Thought Curvature kappa, Empowerment, Integrated Phi & Finsler Bizarro Land) |
-| **Domain 20** | `#0951–#1000` | `CURVATURE-EMPOWERMENT-FINSLER` | **Frenet-Serret Thought Curvature κ(t), Information Empowerment, Integrated Φ & Finsler Bizarro Land** (`Asmodensius-v40/creatures/001/src/page.tsx + dimension-omega-singularity/index.html`) | Domain 19 (Tsotchke Wave-2 Verification & Fidelity) $\rightarrow$ Domain 01 (ESHKOL Taylor Jets — Feeds Domain 21 (#1001) in the 60-Domain / 3,000-Mechanism OMEGA-3000 Causal Ring) |
+| **Domain 20** | `#0951–#1000` | `CURVATURE-EMPOWERMENT-FINSLER` | **Frenet-Serret Thought Curvature κ(t), Information Empowerment, Integrated Φ & Finsler Bizarro Land** (`internal TypeScript reference prototype (page.tsx) + dimension-omega-singularity/index.html`) | Domain 19 (Tsotchke Wave-2 Verification & Fidelity) $\rightarrow$ Domain 01 (ESHKOL Taylor Jets — Feeds Domain 21 (#1001) in the 60-Domain / 3,000-Mechanism OMEGA-3000 Causal Ring) |
 
 ---
 
@@ -662,7 +662,7 @@ flowchart TD
 ---
 
 ## Domain 11 (`#0501–#0550`): Biomimetic sLTC × Selective SSM Hybrid Cortical Columns & Two-Compartment NMDA Dendrites
-- **Source Corpus / Provenance**: `tsotchke-diffusion-app/core/neuro.py + Asmodensius-v40/creatures/001/src/page.tsx`
+- **Source Corpus / Provenance**: `internal diffusion prototype (neuro.py) + internal TypeScript reference prototype (page.tsx)`
 - **Functional Role**: 112 hybrid units (14 regions x 8 cortical columns) fusing input/neuromodulator-warped Liquid Time Constants tau(u) with Mamba-style Selective State-Space recurrence and two-compartment Apical/Basal NMDA coincidence plateaus.
 - **Causal Ring Coupling**: Receives from **Domain 10 (TSOTCHKE QRNG v3.0.1)** $\rightarrow$ Drives **Domain 12 (14-Region Anatomical Macro-Connectome & ESHKOL 2-Hop Reach)**
 
@@ -722,7 +722,7 @@ flowchart TD
 ---
 
 ## Domain 12 (`#0551–#0600`): 14-Region Anatomical Macro-Connectome & ESHKOL 2-Hop Tensor-Logic Transitive Reach
-- **Source Corpus / Provenance**: `Asmodensius-v40/creatures/001/src/page.tsx + dimension-omega-singularity/index.html`
+- **Source Corpus / Provenance**: `internal TypeScript reference prototype (page.tsx) + dimension-omega-singularity/index.html`
 - **Functional Role**: 14 biological neuro-anatomical organs (CTX, THAL, HIP, STR, INS, LC, VTA, BF, RAPHE, HYP, SCN, SENS, MOT, ENS) wired by 24 structural projections expanded via Eshkol 2-hop reach into 73 directed pathways.
 - **Causal Ring Coupling**: Receives from **Domain 11 (Biomimetic sLTC x Selective SSM Hybrid Cortical Columns)** $\rightarrow$ Drives **Domain 13 (Multi-Timescale Synaptic Plasticity: e-prop, STDP, STP)**
 
@@ -782,7 +782,7 @@ flowchart TD
 ---
 
 ## Domain 13 (`#0601–#0650`): Multi-Timescale Synaptic Plasticity — Three-Factor e-prop, STDP, Tsodyks-Markram STP & Homeostasis
-- **Source Corpus / Provenance**: `Asmodensius-v40/creatures/001/src/page.tsx + organism/v40mods.ts`
+- **Source Corpus / Provenance**: `internal TypeScript reference prototype (page.tsx) + organism/v40mods.ts`
 - **Functional Role**: Real-time biological learning across 4 timescales: milliseconds (Tsodyks-Markram short-term vesicle depression), tens of milliseconds (asymmetric STDP), seconds (3-factor e-prop eligibility traces), and minutes (Turrigiano synaptic scaling).
 - **Causal Ring Coupling**: Receives from **Domain 12 (14-Region Anatomical Macro-Connectome)** $\rightarrow$ Drives **Domain 14 (Four-Pool Neuromodulatory Volume Transmission)**
 
@@ -842,7 +842,7 @@ flowchart TD
 ---
 
 ## Domain 14 (`#0651–#0700`): Four-Pool Neuromodulatory Volume Transmission (DA, ACh, NE, 5-HT) & Michaelis-Menten Kinetics
-- **Source Corpus / Provenance**: `Asmodensius-v40/creatures/001/src/page.tsx + dimension-omega-singularity/index.html`
+- **Source Corpus / Provenance**: `internal TypeScript reference prototype (page.tsx) + dimension-omega-singularity/index.html`
 - **Functional Role**: Extracellular volume transmission of Dopamine (DA), Acetylcholine (ACh), Norepinephrine (NE), and Serotonin (5-HT) governed by saturating Michaelis-Menten enzymatic clearance (DAT, AChE, NET, SERT) and receptor subtype opposing gates.
 - **Causal Ring Coupling**: Receives from **Domain 13 (Multi-Timescale Synaptic Plasticity)** $\rightarrow$ Drives **Domain 15 (Tripartite Astrocyte Ca2+ Waves, Ephaptic LFP & SWR Replay)**
 
@@ -902,7 +902,7 @@ flowchart TD
 ---
 
 ## Domain 15 (`#0701–#0750`): Tripartite Astrocyte Ca²⁺ Syncytium, Ephaptic LFP Wireless Coupling & Hippocampal SWR Replay
-- **Source Corpus / Provenance**: `Asmodensius-v40/creatures/001/src/organism/v40mods.ts + dimension-omega-singularity`
+- **Source Corpus / Provenance**: `internal TypeScript reference prototype (v40mods.ts) + dimension-omega-singularity`
 - **Functional Role**: Non-synaptic wetware physics: IP3-triggered astrocytic calcium reaction-diffusion waves across gap-junction syncytia, extracellular Local Field Potential (LFP) ephaptic voltage coupling, and 10x time-reversed Sharp-Wave Ripple replay.
 - **Causal Ring Coupling**: Receives from **Domain 14 (Four-Pool Neuromodulatory Volume Transmission)** $\rightarrow$ Drives **Domain 16 (Enteric Gut-Brain ENS, Vagal Axis & Landauer Thermodynamics)**
 
@@ -962,7 +962,7 @@ flowchart TD
 ---
 
 ## Domain 16 (`#0751–#0800`): Enteric Nervous System (ENS Gut-Brain), Vagal Axis, Kilojoule ATP Ledger & Landauer Heat
-- **Source Corpus / Provenance**: `Asmodensius-v40/creatures/001/src/page.tsx + CORE-ARCHITECTURE.md`
+- **Source Corpus / Provenance**: `internal TypeScript reference prototype (page.tsx) + CORE-ARCHITECTURE.md`
 - **Functional Role**: Autonomous 48-neuron Enteric Nervous System (myenteric & submucosal plexuses), bidirectional vagus nerve signaling, exact kilojoule (kJ) ATP metabolic energy accounting, and Landauer bit-erasure thermodynamic heat dissipation.
 - **Causal Ring Coupling**: Receives from **Domain 15 (Tripartite Astrocyte Ca2+ Waves, Ephaptic LFP & SWR Replay)** $\rightarrow$ Drives **Domain 17 (Next-Gen Differential AI: KAN, TTT, Rough Paths & Graph Waves)**
 
@@ -1202,7 +1202,7 @@ flowchart TD
 ---
 
 ## Domain 20 (`#0951–#1000`): Frenet-Serret Thought Curvature κ(t), Information Empowerment, Integrated Φ & Finsler Bizarro Land
-- **Source Corpus / Provenance**: `Asmodensius-v40/creatures/001/src/page.tsx + dimension-omega-singularity/index.html`
+- **Source Corpus / Provenance**: `internal TypeScript reference prototype (page.tsx) + dimension-omega-singularity/index.html`
 - **Functional Role**: 6D cognitive manifold trajectory projection, discrete Frenet-Serret curvature kappa(t) and torsion tau_F(t), Klyubin-Polani Empowerment, Geometric Integrated Information Phi_G, and Finsler-Randers / Poincare non-Euclidean 3D space warping.
 - **Causal Ring Coupling**: Receives from **Domain 19 (Tsotchke Wave-2 Verification & Fidelity)** $\rightarrow$ Drives **Domain 01 (ESHKOL Taylor Jets — Closing the 20-Domain Causal Ring)**
 
