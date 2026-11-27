@@ -115,3 +115,6 @@
 [submodule "repos/quantum-latin-spectrum-frontier"]
 	path = repos/quantum-latin-spectrum-frontier
 	url = https://github.com/0thernes/quantum-latin-spectrum-frontier.git
+[submodule "repos/spectral-eclipse-frontier"]
+	path = repos/spectral-eclipse-frontier
+	url = https://github.com/0thernes/spectral-eclipse-frontier.git

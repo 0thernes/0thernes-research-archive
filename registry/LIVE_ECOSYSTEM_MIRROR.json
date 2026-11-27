@@ -5,12 +5,12 @@
   "sync_mode": "offline",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
-    "tier1_papers": 23,
+    "tier1_papers": 24,
     "tier2_builds": 17,
     "tier3_discoveries": 12,
-    "total_entries": 52,
-    "unique_public_repositories": 45,
-    "pinned_submodules": 39,
+    "total_entries": 53,
+    "unique_public_repositories": 46,
+    "pinned_submodules": 40,
     "exact_pin_match": 11,
     "ahead_of_pin": 27,
     "historical_archived": 4,
@@ -988,6 +988,32 @@
       "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/secmesh-pqsi/",
       "sync_status": "AHEAD_OF_PIN",
+      "error": null
+    },
+    {
+      "slug": "spectral-eclipse-frontier",
+      "repository": "https://github.com/0thernes/spectral-eclipse-frontier",
+      "archive_ids": [
+        "0TH-2026-024"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "8d6cf7cabff4e6e2d135b15f912f1919e405c3ea",
+      "archived_version": "v1.0.0",
+      "submodule_path": "repos/spectral-eclipse-frontier",
+      "registered_pages_url": "https://0thernes.github.io/spectral-eclipse-frontier/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": null,
+      "latest_release_tag": null,
+      "pushed_at": null,
+      "ci_run_id": null,
+      "ci_conclusion": null,
+      "ci_html_url": null,
+      "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
+      "pages_url": "https://0thernes.github.io/spectral-eclipse-frontier/",
+      "sync_status": "OFFLINE_PIN_ONLY",
       "error": null
     },
     {

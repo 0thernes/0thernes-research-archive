@@ -2,7 +2,7 @@
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
 **Synced (UTC):** `2026-11-27T14:01:09Z` · **Mode:** `offline`  
-**Tracked Public Repositories:** 45 (`11` exact pin match, `27` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Tracked Public Repositories:** 46 (`11` exact pin match, `27` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -45,6 +45,7 @@
 | [`quantum-latin-spectrum-frontier`](https://github.com/0thernes/quantum-latin-spectrum-frontier) | `0TH-2026-023` | Tier I | `c53def9c92` | — | `v1.0.0` | — | `OFFLINE_PIN_ONLY` |
 | [`quantum-phasespace-rigidity`](https://github.com/0thernes/quantum-phasespace-rigidity) | `0TH-2026-020` | Tier I | `1c3214973e` | `4a4cd71900` | `v1.0.0` | [`success`](https://github.com/0thernes/quantum-phasespace-rigidity/actions/runs/45949375196) | `AHEAD_OF_PIN` |
 | [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `0TH-2026-011` | Tier I | `6c7f642146` | `96f7d2b72d` | `v3.0.1` | [`success`](https://github.com/0thernes/secmesh-pqsi/actions/runs/45915650756) | `AHEAD_OF_PIN` |
+| [`spectral-eclipse-frontier`](https://github.com/0thernes/spectral-eclipse-frontier) | `0TH-2026-024` | Tier I | `8d6cf7cabf` | — | `v1.0.0` | — | `OFFLINE_PIN_ONLY` |
 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `c0bbefe13b` | — | `v1.7.0` | — | `OFFLINE_PIN_ONLY` |
 | [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | `0TH-DISC-006` | Tier III | `0686cf9729` | `9604bc4c36` | `main` | [`success`](https://github.com/0thernes/unsolved-black-hole-problems/actions/runs/45912603955) | `AHEAD_OF_PIN` |
 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `0TH-BUILD-004`, `0TH-DISC-005` | Tier II / Tier III | `0604df5c70` | `8aeba1ae35` | `v0.8.1` | [`success`](https://github.com/0thernes/unsolved-mathematics/actions/runs/45949011437) | `AHEAD_OF_PIN` |
