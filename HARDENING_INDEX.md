@@ -21,20 +21,20 @@ Complete structural index and audit checklist for **0thernes Research Archive (`
 
 | File | Role | Audit Status |
 |---|---|---|
-| [`README.md`](README.md) | Canonical hub overview, live mirror status block, 3-tier tables (**56 public research entries** / **43 pinned public submodules**), Quickstart & Usage | Audited Rounds 1–3 (`H-19` split Tier II table fixed, `H-20` counts & live block enforced in CI) |
+| [`README.md`](README.md) | Canonical hub overview, live mirror status block, 3-tier tables (**57 public research entries** / **44 pinned public submodules**), Quickstart & Usage | Audited Rounds 1–3 (`H-19` split Tier II table fixed, `H-20` counts & live block enforced in CI) |
 | [`RESULTS.md`](RESULTS.md) | Single numbered, statement-audited Results Ledger (**94 active results**: A=3, B=11, C=11, D=0, E=55, F=14) generated deterministically from `registry/RESULTS_LEDGER.json` | Verified by `scripts/build_ledger.py --check` & `tests/test_results_ledger.py` ([ADR 0003](docs/adr/0003-numbered-results-ledger.md)) |
 | [`VERSION`](VERSION) / [`CITATION.cff`](CITATION.cff) / [`CHANGELOG.md`](CHANGELOG.md) | Single-source release versioning (`2026.11.26`) & academic citation | Audited Rounds 1–3 (enforced by `test_single_version_consistency`) |
 | [`LICENSE`](LICENSE) / [`NOTICE`](NOTICE) / [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) | Dual MIT / CC-BY-4.0 notice, clean Independent Researcher identity (zero unformed LLC) | Audited Rounds 1–3 |
-| [`CLAIMS.md`](CLAIMS.md) / [`LIMITATIONS.md`](LIMITATIONS.md) / [`REPLICATION.md`](REPLICATION.md) / [`ROADMAP.md`](ROADMAP.md) | Claims C1–C6, Real-vs-Metaphor, reproducible protocol, roadmap | Audited Rounds 1–3 (synced to 56 public research entries / 43 pinned public submodules / 3 answered preprint questions / RFC 3161 TSA) |
+| [`CLAIMS.md`](CLAIMS.md) / [`LIMITATIONS.md`](LIMITATIONS.md) / [`REPLICATION.md`](REPLICATION.md) / [`ROADMAP.md`](ROADMAP.md) | Claims C1–C6, Real-vs-Metaphor, reproducible protocol, roadmap | Audited Rounds 1–3 (synced to 57 public research entries / 44 pinned public submodules / 3 answered preprint questions / RFC 3161 TSA) |
 | [`SECURITY.md`](SECURITY.md) / [`CONTRIBUTING.md`](CONTRIBUTING.md) / [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) / [`SUPPORT.md`](SUPPORT.md) | Community & vulnerability governance | Audited Rounds 1–3 |
 | [`AGENTS.md`](AGENTS.md) / [`CLAUDE.md`](CLAUDE.md) / [`GEMINI.md`](GEMINI.md) / [`llms.txt`](llms.txt) / [`llms-full.txt`](llms-full.txt) | AI coding-agent instruction & context stack (A32) | Regenerated deterministically via `scripts/generate_llms_full.py` |
 | [`repo.yaml`](repo.yaml) / [`repo-standard.schema.json`](repo-standard.schema.json) | Build Standard v1.2.0 Draft 2020-12 validated project manifest | Validated in pytest & CI |
-| [`justfile`](justfile) / [`pytest.ini`](pytest.ini) / [`requirements.txt`](requirements.txt) / [`.gitmodules`](.gitmodules) / [`.gitattributes`](.gitattributes) / [`.gitignore`](.gitignore) | Task runner, bracket-safe pytest config, pinned deps, **43 pinned public submodules**, LF enforcement | Audited Rounds 1–3 |
+| [`justfile`](justfile) / [`pytest.ini`](pytest.ini) / [`requirements.txt`](requirements.txt) / [`.gitmodules`](.gitmodules) / [`.gitattributes`](.gitattributes) / [`.gitignore`](.gitignore) | Task runner, bracket-safe pytest config, pinned deps, **44 pinned public submodules**, LF enforcement | Audited Rounds 1–3 |
 | [`CHECKSUMS.sha256`](CHECKSUMS.sha256) / [`data/MANIFEST.sha256`](data/MANIFEST.sha256) / [`data/RELEASE_FREEZE.sha256`](data/RELEASE_FREEZE.sha256) / [`data/RELEASE_FREEZE.sha256.tsr`](data/RELEASE_FREEZE.sha256.tsr) | Byte-identical SHA-256 manifests + live DigiCert RFC 3161 TSA seal over immutable frozen release artifacts | Verified on 3 OSes (`sha256sum -c`, Python oracle & DER digest check) |
 
 ## 2. Canonical Registries, Results Ledger, Bridge & Live Mirror (`registry/`)
 
-- [`registry/PAPERS.json`](registry/PAPERS.json) & [`registry/PAPERS.md`](registry/PAPERS.md) — **27 Tier I standalone preprints** (`0TH-2026-001` through `0TH-2026-026`, with `001/002/003/005` clearly marked as archived historical snapshots consolidated into `0TH-2026-009`).
+- [`registry/PAPERS.json`](registry/PAPERS.json) & [`registry/PAPERS.md`](registry/PAPERS.md) — **28 Tier I standalone preprints** (`0TH-2026-001` through `0TH-2026-026`, with `001/002/003/005` clearly marked as archived historical snapshots consolidated into `0TH-2026-009`).
 - [`registry/BUILD_PAPERS.json`](registry/BUILD_PAPERS.json) & [`registry/BUILD_PAPERS.md`](registry/BUILD_PAPERS.md) — **17 Tier II public builds & embedded Pure Lean 4.35.0 suites** (`0TH-BUILD-001` through `0TH-BUILD-017`, **1,050 audited Pure Lean 4.35.0 declarations** across 14 builds with Lean at the pinned commit; the 8 `rfl` theorems of `0TH-BUILD-006` are only on its unmerged branch `pr9`).
 - [`registry/LAWS_AND_DISCOVERIES.json`](registry/LAWS_AND_DISCOVERIES.json) & [`registry/LAWS_AND_DISCOVERIES.md`](registry/LAWS_AND_DISCOVERIES.md) — **12 Tier III public laws, pre-registered empirical claims, discoveries, synthesis dossiers & open-problem atlases** (`0TH-DISC-001` through `0TH-DISC-012`).
 - [`registry/RESULTS_LEDGER.json`](registry/RESULTS_LEDGER.json) — Machine-validated source of truth for [`RESULTS.md`](RESULTS.md) (**94 active audited results** covering every registered Tier I & Tier II entry).
@@ -68,10 +68,10 @@ Complete structural index and audit checklist for **0thernes Research Archive (`
 
 ## 6. Frozen Cryptographic Archives (`papers/`, `builds/`, `discoveries/`) & Submodules (`repos/`)
 
-- `papers/` — **26** directories (`0TH-2026-001`..`0TH-2026-026`), each with frozen PDF(s), `METADATA.json`, `EVIDENCE.md`.
+- `papers/` — **28** directories (`0TH-2026-001`..`0TH-2026-028`), each with frozen PDF(s), `METADATA.json`, `EVIDENCE.md`.
 - `builds/` — **17** directories (`0TH-BUILD-001`..`0TH-BUILD-017`), including [`builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md`](builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md).
 - `discoveries/` — **12** directories (`0TH-DISC-001`..`0TH-DISC-012`), all `< 5 MB` per file.
-- `repos/` — **43 pinned public submodules** (`160000` gitlinks verified against registry JSONs).
+- `repos/` — **44 pinned public submodules** (`160000` gitlinks verified against registry JSONs).
 
 ## 7. Architecture, ADRs, Run Logs & 3-Cycle Hardening Dossiers (`docs/`)
 

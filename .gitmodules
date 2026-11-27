@@ -127,3 +127,6 @@
 [submodule "repos/nonlocal-magic-spectral-frontier"]
 	path = repos/nonlocal-magic-spectral-frontier
 	url = https://github.com/0thernes/nonlocal-magic-spectral-frontier.git
+[submodule "repos/quantum-latin-design-frontier"]
+	path = repos/quantum-latin-design-frontier
+	url = https://github.com/0thernes/quantum-latin-design-frontier.git
