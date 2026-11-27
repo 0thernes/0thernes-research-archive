@@ -15,7 +15,7 @@
       "github": "https://github.com/0thernes",
       "website": "https://0thernes.art"
     },
-    "updated_utc": "2026-11-27T14:51:00Z"
+    "updated_utc": "2026-11-27T15:03:11Z"
   },
   "papers": [
     {
@@ -1247,7 +1247,55 @@
       "core_result": "Machine-checks 19 headline theorems (T1a-T6c) + master conjunction (= 20 Palomar targets) plus 5 NonVacuity witnesses (explicit quotient faithfulPhaseRing & intMomentRing) and 8 AdversarialTests sharpness refutations (33 audited declarations in zero-Mathlib Lean 4.35.0, all 6 independent proof kernels verified inside bubblewrap on Ubuntu CI run 46015384386 + live negative tamper rejection, SLSA #73145344 / Rekor 4149831095) across four linked problems rooted in Fechisin et al. (arXiv:2610.00464v1): (I) Universal resolution of Conjecture B.5 (Eqs. 118-119) for all primes p and all m >= 2 via first-principles p-adic orbit-sum drop (T1a-T1b), hyperplane Radon drop (T1c), constructive Newton-binomial CGK lift (T1d), and finite-field projective Radon inversion with zero affine shifts (T2a-T2c); (II) Exact ancilla complexity & newly discovered Modulo-3 arithmetic phase transition of CCZ_p: qubit Walsh-Hadamard lower bound r_ab(C^{l-1} Z) = 2^l - 1 - l (T3a), universal 6-qudit non-abelian level-2 stabilizer r_nonab(CCZ_p) = 3 for all primes p (T3b), abelian DFT-3 collapse r_ab(CCZ_p) = 3 for all p == 1 (mod 3) (T3c), and uniform obstruction r_ab(CCZ_p) >= 4 for p = 3 and all p == 2 (mod 3) (T3d); (III) Canonical Type-I twisted quantum double (TQD) tetrahedron phase phi_{omega_I}(a,b,c) = (a/p)*floor((b+c)/p) exact Clifford level p + 1 vs. Type-III constant level 3 (T4), universal exponent-p collapse (T5a), on-site phase stripping (T5b), 1D Else-Nayak Type-I/II boundary-anomaly vanishing for 1 <= k <= p - 1 (T5c), and sharp carry SPT saturation at k = p (T5d, with exact L = 2 2-gon cancellation to p - 1); and (IV) Exact Fubini-Study QGT-covariance law with identically zero Berry curvature Omega_{ab} == 0 (T6a), PSD metric (T6b), and exact Weyl-Heisenberg 2*alpha-moment / Stabilizer Renyi Entropy invariance (T6c, M_2(|CCZ_2>) = log_2(32/11)). Differentially audited across 10 polyglot engines (Rust 1.94.1 #![forbid(unsafe_code)] 3-OS, Zig 0.17.0, ISO C11 -Werror + ASan/UBSan + 100k fuzz, C++23 -Werror + ASan/UBSan, dual Win64/ELF64 x86-64 NASM Assembly + ASan/UBSan, Python 3 exact Fraction oracle + Hypothesis + 8/8 100% mutation kill, Moonlab WASM, QGTL ASan/UBSan, QRNG ASan/UBSan, and Native Eshkol LLVM AD), 19/19 live non-retracted Crossref/arXiv citations, 0-warning/0.00pt AMS-LaTeX PDF + clean-room arXiv tarball, live GitHub Pages Observatory & Proof Blueprint, DigiCert RFC 3161 (.tsr) + Bitcoin OpenTimestamps (.ots), Software Heritage full snapshot swh:1:snp:b1e6a8db318398d0fd9107670632d564e0840c23, 3x1,000 hardening cycles (0 findings), and 73/73 (100.0%, Core 31/31) Build Standard v1.2.0 compliance.",
       "verification_boundary": "All 33 audited declarations across T1a-T6c, master conjunction, NonVacuity (5), and AdversarialTests (8) are kernel-checked in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound] across all 6 independent kernels inside bubblewrap plus a live tamper-injecting negative gate on Ubuntu CI run 46015384386 (zero sorry outside PalomarChallenge.lean, zero native_decide). Multi-engine computations in Rust, Zig, ISO C11 (ASan/UBSan + 100k fuzz), C++23 (ASan/UBSan), x86-64 NASM Assembly, Python exact Fraction, Moonlab WASM CPU statevector simulation, QGTL differential geometry, deterministic seeded QRNG Born sampling, and Eshkol LLVM AD are strictly classical deterministic cross-checks outside the Lean kernel (no quantum hardware or physical entropy source claimed). Bulk 2D phase Conjecture V.4 of Fechisin et al. (arXiv:2610.00464v1) remains explicitly [OPEN], and 0/2,000 overarching Mega-Atlas grand open problems are retired. Claims no external peer review or external DOI.",
       "falsification_command": "cd repos/clifford-radon-stabilizers && (cd lean && lake build && lake build PalomarChallenge CliffordRadon.NonVacuity CliffordRadon.AdversarialTests && lake env lean VerifyAxioms.lean && lake check --paranoid && lake comparator --config comparator.json --paranoid) && (cd engines/rust && cargo clippy --all-targets -- -D warnings && cargo test --release) && (cd engines/zig && zig build test) && node engines/quantum/moonlab_radon_verify.mjs && (cd engines/python && pytest -v test_oracle.py && python3 mutation_test.py) && python3 scripts/check_readme_axioms.py --run-tamper-test && python3 scripts/generate_manifests.py --verify-only"
+    },
+    {
+      "id": "0TH-2026-026",
+      "slug": "schur-clifford-frontier",
+      "title": "The Schur-Clifford Frontier: Hypergraph-Product Codes, Defect-2 and Prime-Power Ceilings, 2-Local Non-Clifford Escapes, and Exact 21-Orbit AGL(4,2) Galois Classification",
+      "domain": "Quantum Error Correction / Quantum Information Theory / Finite Geometry / Formal Verification",
+      "date_released": "2026-11-27",
+      "version": "v1.0.0",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 & 3-OS polyglot CI verified)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/schur-clifford-frontier",
+      "submodule_path": "repos/schur-clifford-frontier",
+      "pinned_commit": "02f3c09345f0a5d0a62577f723569688af0c5890",
+      "release_url": "https://github.com/0thernes/schur-clifford-frontier/releases/tag/v1.0.0",
+      "pages_url": "https://0thernes.github.io/schur-clifford-frontier/",
+      "pdf_archive_path": "papers/0TH-2026-026_schur-clifford-frontier/Donahue_2026_schur_clifford_frontier.pdf",
+      "pdf_sha256": "26d1bc8c8652ef542492d3ed1ef30f9a2eaf4a9a66faaacf313bcba21a675bc7",
+      "arxiv_bundle_url": "https://github.com/0thernes/schur-clifford-frontier/releases/download/v1.0.0/arxiv_submission.tar.gz",
+      "arxiv_bundle_sha256": "b533e2e4bbbcdae984112d78c06a3423e742438acfe366f95535b198cd20ca7a",
+      "lean_verification": {
+        "framework": "Zero-Mathlib Lean 4.35.0 (14 Lean module files; 13 sorry-free and PalomarChallenge.lean holds the 20 intentional sorry stubs; 30 audited declarations: 20 headline theorems T1a-T5d [= 20 Palomar targets] + 5 NonVacuity witnesses + 5 AdversarialTests boundary refutations strictly within [propext, Classical.choice, Quot.sound], zero native_decide; all 20 Palomar comparator targets passed all 6 independent proof kernels inside bubblewrap on Ubuntu CI lake comparator --config comparator.json --paranoid + live sorry tamper-rejection gate on exported t5d_e6_irreducibility)",
+        "axiom_allowlist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/PalomarSolution.lean",
+        "axiom_audit_file": "lean/VerifyAxioms.lean",
+        "additional_audit_files": [
+          "lean/Challenge.lean",
+          "lean/Solution.lean",
+          "lean/PalomarChallenge.lean",
+          "lean/SchurClifford/NonVacuity.lean",
+          "lean/SchurClifford/AdversarialTests.lean"
+        ],
+        "audited_theorems": 30
+      },
+      "ci_run_url": "https://github.com/0thernes/schur-clifford-frontier/actions/runs/46020696987",
+      "preservation": {
+        "software_heritage": "swh:1:snp:1e58851ad4961ba1ea57bb6a9c0705bfadf12bad",
+        "wayback_machine": null,
+        "doi": null
+      },
+      "core_result": "Unifies five interconnected frontiers in fault-tolerant transversal non-Clifford quantum gates and Clifford-hierarchy algebraic geometry across 20 machine-checked headline theorems (T1a-T5d [= 20 Palomar targets]) + 5 NonVacuity witnesses + 5 AdversarialTests boundary refutations (30 audited declarations in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound], accepted by all 6 independent proof kernels via lake comparator --paranoid + live sorry tamper rejection on exported t5d_e6_irreducibility): (I) Resolves Open Problem 1 of Luo et al. (arXiv:2611.31953v1) by proving the Schur-product invariance of hypergraph-product (HGP) codes fails to be strictly quadratic for q >= 5 ([[18, 2, 2]]_5 circulant HGP code with dim(A*A)=3 and non-vanishing Schur-complement obstruction) and establishing the universal Kronecker-rank lower bound; (II) Resolves Open Problem 2 of Luo et al. via exact Defect-2 / Defect-3 transversal Clifford-level ceiling classification and explicit sharpness witnesses; (III) Resolves Open Problem 3 of Luo et al. via prime-power Frobenius-twist separation between char-2 F_8 (k=3, exact Schur collapse, 21-dimensional Z-module rigidity) and odd char-3 F_9 (Frobenius escape lifting Clifford level beyond the prime-field ceiling); (IV) Resolves Open Problem 4 of Luo et al. via explicit 2-local non-Clifford diagonal phase escapes (T4a-T4d) with sharp logical-addressability and Hamming-weight bounds; and (V) Advances Wang & Zhang (arXiv:2610.06402v1) and independently certifies E_6 Sp(6, F_2) irreducibility (arXiv:2609.11903v1): exact 21-orbit AGL(4, 2) collapse of all 32,768 four-qubit Galois cocycles (sum of orbit sizes = 32,768), universal quartic full-rank-14 derivative span across all 16,384 quartic cocycles, universal n-qubit rank-2 stabilizer hyperplane bijection (cardinality 2^(n-1)), and pure-kernel E_6 Sp(6, F_2) irreducibility (0 of 135 Lagrangians jointly invariant under A, B of order 12 via irreducible z^6+z^3+1). Differentially verified bit-for-bit across 6 independent exact engines (Python 3.13, naive oracle, ISO C11 -Werror + dual-ABI Win64/SysV x86-64 NASM + ASan/UBSan + 100k fuzz + CBMC harness, ISO C++20 -Werror, safe Rust #![forbid(unsafe_code)], Zig 0.17.0 -- identical canonical SHA-256 ba16da522768c0c25e89c77dd0874a5025d85f8640dcbc7d674d05aacb6c8439) plus quarantined numerical_approximation companions (vendored QGTL/QRNG, Moonlab 1.2.1 WASM, Eshkol/R7RS AD), 17/17 live Crossref/arXiv citations (0 retractions), 0-overfull/0-warning AMS-LaTeX PDF + clean-room arXiv tarball, live GitHub Pages Observatory & SVG Lean Blueprint, DigiCert RFC 3161 (.tsr) + 3-calendar Bitcoin OpenTimestamps (.ots), Software Heritage full snapshot swh:1:snp:1e58851ad4961ba1ea57bb6a9c0705bfadf12bad, SLSA build provenance, 3x1,000 hardening cycles (0 findings), and 72/72 (100.0%, Core 30/30) Build Standard v1.2.0 compliance.",
+      "verification_boundary": "All 30 audited declarations across Pillars I-V (T1a-T5d + 5 NonVacuity + 5 AdversarialTests) are kernel-checked in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound] across all 6 independent proof kernels inside bubblewrap plus a live sorry tamper-rejection gate on Ubuntu CI (zero sorry outside PalomarChallenge.lean, zero native_decide). The 6 independent exact algebraic engines (Python, naive oracle, C11+x86-64 NASM, C++20, safe Rust, Zig) cross-check identical canonical certificates (SHA-256 ba16da522768c0c25e89c77dd0874a5025d85f8640dcbc7d674d05aacb6c8439) outside the Lean kernel; vendored QGTL/QRNG, Moonlab 1.2.1 WASM, and Eshkol/R7RS AD scripts are strictly quarantined as numerical_approximation classical cross-checks (no quantum hardware or physical entropy source claimed). Analytic Hilbert-space bridges are proved in paper/main.tex and audited line-by-line in docs/statement-fidelity.md. Wang & Zhang Conjecture 2 (arXiv:2610.06402v1) for general n >= 4 remains explicitly OPEN, and 0/2,000 overarching Mega-Atlas grand open problems are retired. Claims no external peer review or external DOI.",
+      "falsification_command": "cd repos/schur-clifford-frontier && (cd lean && lake build && lake build PalomarChallenge && lake env lean VerifyAxioms.lean && lake env leanchecker --fresh PalomarSolution && lake comparator --config comparator.json --paranoid) && (cd native/c && make test) && (cd native/rust && cargo test --release) && (cd native/zig && zig test schur_verifier.zig) && python3 scripts/check_readme_axioms.py && python3 scripts/stamp_timestamps.py --verify --negative-test && pytest -v"
     }
   ],
-  "updated_utc": "2026-11-27T14:46:00Z"
+  "updated_utc": "2026-11-27T15:03:11Z"
 }

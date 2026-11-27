@@ -5,12 +5,12 @@
   "sync_mode": "offline",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
-    "tier1_papers": 25,
+    "tier1_papers": 26,
     "tier2_builds": 17,
     "tier3_discoveries": 12,
-    "total_entries": 54,
-    "unique_public_repositories": 47,
-    "pinned_submodules": 41,
+    "total_entries": 55,
+    "unique_public_repositories": 48,
+    "pinned_submodules": 42,
     "exact_pin_match": 11,
     "ahead_of_pin": 24,
     "historical_archived": 4,
@@ -988,6 +988,32 @@
       "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/quantum-phasespace-rigidity/",
       "sync_status": "AHEAD_OF_PIN",
+      "error": null
+    },
+    {
+      "slug": "schur-clifford-frontier",
+      "repository": "https://github.com/0thernes/schur-clifford-frontier",
+      "archive_ids": [
+        "0TH-2026-026"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "02f3c09345f0a5d0a62577f723569688af0c5890",
+      "archived_version": "v1.0.0",
+      "submodule_path": "repos/schur-clifford-frontier",
+      "registered_pages_url": "https://0thernes.github.io/schur-clifford-frontier/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": null,
+      "latest_release_tag": null,
+      "pushed_at": null,
+      "ci_run_id": null,
+      "ci_conclusion": null,
+      "ci_html_url": null,
+      "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
+      "pages_url": "https://0thernes.github.io/schur-clifford-frontier/",
+      "sync_status": "OFFLINE_PIN_ONLY",
       "error": null
     },
     {

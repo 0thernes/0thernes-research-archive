@@ -121,3 +121,6 @@
 [submodule "repos/clifford-radon-stabilizers"]
 	path = repos/clifford-radon-stabilizers
 	url = https://github.com/0thernes/clifford-radon-stabilizers.git
+[submodule "repos/schur-clifford-frontier"]
+	path = repos/schur-clifford-frontier
+	url = https://github.com/0thernes/schur-clifford-frontier.git
