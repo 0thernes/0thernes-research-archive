@@ -4524,7 +4524,7 @@
         }
       ],
       "axioms": "propext, Quot.sound",
-      "audited_commit": "af0a8506b86f7ec7aace0ae868ad8f00001d79a1",
+      "audited_commit": "04363498711358f96cc50b06f1da423bae0a4de9",
       "audit": {
         "date": "2026-11-27",
         "rebuild": "PASS",

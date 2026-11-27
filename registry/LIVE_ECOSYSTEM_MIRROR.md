@@ -2,7 +2,7 @@
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
 **Synced (UTC):** `2026-11-27T14:01:09Z` · **Mode:** `offline`  
-**Tracked Public Repositories:** 47 (`11` exact pin match, `27` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Tracked Public Repositories:** 47 (`12` exact pin match, `26` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -50,7 +50,7 @@
 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `c0bbefe13b` | — | `v1.7.0` | — | `OFFLINE_PIN_ONLY` |
 | [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | `0TH-DISC-006` | Tier III | `0686cf9729` | `9604bc4c36` | `main` | [`success`](https://github.com/0thernes/unsolved-black-hole-problems/actions/runs/45912603955) | `AHEAD_OF_PIN` |
 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `0TH-BUILD-004`, `0TH-DISC-005` | Tier II / Tier III | `0604df5c70` | `8aeba1ae35` | `v0.8.1` | [`success`](https://github.com/0thernes/unsolved-mathematics/actions/runs/45949011437) | `AHEAD_OF_PIN` |
-| [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `0TH-BUILD-007` | Tier II | `af0a8506b8` | `d66bcb048f` | `v2.9.0` | [`success`](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/45949918133) | `AHEAD_OF_PIN` |
+| [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `0TH-BUILD-007` | Tier II | `0436349871` | `0436349871` | `v2.10.0` | [`success`](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/46015278037) | `EXACT_PIN_MATCH` |
 | [`weyl-magic-obstruction-frontier`](https://github.com/0thernes/weyl-magic-obstruction-frontier) | `0TH-2026-022` | Tier I | `688f23a681` | `688f23a681` | `v1.0.2` | [`success`](https://github.com/0thernes/weyl-magic-obstruction-frontier/actions/runs/46006772796) | `EXACT_PIN_MATCH` |
 | [`weyl-magic-stabilizer-frontier`](https://github.com/0thernes/weyl-magic-stabilizer-frontier) | `0TH-2026-021` | Tier I | `da2aa5d9e4` | `da2aa5d9e4` | `v1.0.0` | [`success`](https://github.com/0thernes/weyl-magic-stabilizer-frontier/actions/runs/45951544806) | `EXACT_PIN_MATCH` |
 | [`xiaomi-17t-pro-lab`](https://github.com/0thernes/xiaomi-17t-pro-lab) | `0TH-BUILD-012` | Tier II | `f1da68b78e` | `87e1e7a952` | `v3.1.0` | [`success`](https://github.com/0thernes/xiaomi-17t-pro-lab/actions/runs/45912330941) | `AHEAD_OF_PIN` |
