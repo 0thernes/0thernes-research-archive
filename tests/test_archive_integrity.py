@@ -136,8 +136,8 @@ def test_consolidated_latest_entries_registered() -> None:
     assert papers["0TH-2026-015"]["slug"] == "promislow-fracton-amoeba"
     assert papers["0TH-2026-016"]["slug"] == "zero-error-torus-frontier"
     assert papers["0TH-2026-017"]["slug"] == "octonionica"
-    assert papers["0TH-2026-017"]["version"] == "v1.0.0"
-    assert papers["0TH-2026-017"]["lean_verification"]["audited_theorems"] == 93
+    assert papers["0TH-2026-017"]["version"] == "v1.1.0"
+    assert papers["0TH-2026-017"]["lean_verification"]["audited_theorems"] == 108
     assert papers["0TH-2026-018"]["slug"] == "apollonian-sandpile-markov"
     assert papers["0TH-2026-018"]["version"] == "v1.0.0"
     assert papers["0TH-2026-018"]["lean_verification"]["audited_theorems"] == 18

@@ -3319,7 +3319,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audited_commit": "05c41f5769a2b339726155f3b74aed3077fce756",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3353,46 +3353,46 @@
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.phi3_totally_skew",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 41
+          "line": 42
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.malcev_jacobi_associator_defect",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 47
+          "line": 48
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.g2_derivs_noncommuting",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 73
+          "line": 75
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.s6_strictly_nearly_kahler",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 86
+          "line": 89
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.s6_nijenhuis_universal_norm_obstruction",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 193
+          "line": 196
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.s6_nijenhuis_nowhere_zero_on_complex_ortho",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 206
+          "line": 209
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.g2_derivA_leibniz",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 60
+          "line": 62
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.g2_derivB_leibniz",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 66
+          "line": 68
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audited_commit": "05c41f5769a2b339726155f3b74aed3077fce756",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3400,9 +3400,9 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "No manifold, connection, Lie bracket or real scalars exist in the Lean development; s6NablaJ and s6Nijenhuis (lean/OctonionicaProofs/Spec.lean:169,175) are hand-written polynomial formulas over Int.",
-        "The norm is zero for Y in span{X, J_p X}; positivity is proved only under <X,Y> = 0 and <J_p X, Y> = 0, so the public '> 0' without hypotheses is not what is proved.",
-        "'Calibrated G2 3-form', 'g2 = Der(O)' and 'strictly nearly Kahler' exceed the theorems: only skew-symmetry, two derivations and (nabla_X J)X = 0 are proved.",
+        "No manifold, connection, Lie bracket or real scalars exist in the Lean development; s6NablaJ and s6Nijenhuis are hand-written polynomial formulas over Int.",
+        "The norm is zero for Y in span{X, J_p X}; positivity is proved strictly under <X,Y> = 0 and <J_p X, Y> = 0 (included directly in comparator target T2 in v1.1.0).",
+        "Calibration of phi, full g2 = Der(O) Lie-algebra identification, and dim g2 = 14 are not formalized: only skew-symmetry, two non-commuting derivations, and (nabla_X J)X = 0 are proved.",
         "Non-integrability of the octonionic almost complex structure on S^6 is classical (Eckmann-Frolicher and Ehresmann-Libermann 1951); the norm identity is Gray's constant-type condition. The existence of other complex structures on S^6 stays open and is not addressed."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -3436,11 +3436,11 @@
         {
           "decl": "Octonionica.AlbertJordan.albert_op2_primitive_idempotent",
           "file": "lean/OctonionicaProofs/AlbertJordan.lean",
-          "line": 306
+          "line": 307
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audited_commit": "05c41f5769a2b339726155f3b74aed3077fce756",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3459,11 +3459,11 @@
       "archive_id": "0TH-2026-017",
       "key": "T4a",
       "status": "ACTIVE",
-      "title": "Evenness of 2E8, determinant of the E8 Cartan matrix, and the Golay code weight enumerator",
-      "statement": "Every x in Z^8 whose coordinates share one parity and sum to 0 mod 4 has |x|^2 = 0 mod 8. The stated 8x8 E8 Cartan matrix has determinant 1. The 4,096 F2-combinations of the 12 stated generator rows have weights 0, 8, 12, 16, 24 with multiplicities 1, 759, 2576, 759, 1 and no other weight.",
+      "title": "2E8 evenness, Cartan-linked simple basis, exact 240-vector minimal shell, and Golay [24,12,8] weight enumerator",
+      "statement": "Every x in 2E8 has |x|^2 = 0 mod 8. Eight explicit vectors in {v in 2E8 : |v|^2 = 8} have Gram matrix 4*G_E8 with det G_E8 = 1. The duplicate-free 240-element list twoE8MinimalShell equals {x in 2E8 : |x|^2 = 8} universally over Z^8. All 4,096 Golay codewords have weights (0, 8, 12, 16, 24) with multiplicities (1, 759, 2576, 759, 1).",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "Determinant and weight enumerator are finite decide computations.",
+      "evidence_note": "Cartan determinant, basis Gram matrix, and 4,096-codeword Golay enumerator are finite kernel evaluations; 240-vector shell soundness and completeness are proved universally over Z^8 by structural induction.",
       "asked_in": null,
       "lean": [
         {
@@ -3477,23 +3477,32 @@
           "line": 71
         },
         {
+          "decl": "Octonionica.E8GolayMoonshine.two_e8_basis_gram_eq_cartan",
+          "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
+          "line": 85
+        },
+        {
+          "decl": "Octonionica.E8GolayMoonshine.two_e8_minimal_shell_exact_240",
+          "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
+          "line": 320
+        },
+        {
           "decl": "Octonionica.E8GolayMoonshine.golay_exact_weight_enumerator",
           "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
-          "line": 90
+          "line": 481
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audited_commit": "05c41f5769a2b339726155f3b74aed3077fce756",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
-        "fidelity": "AUDITED_NARROWER",
+        "fidelity": "AUDITED_MATCH",
         "prior_work": "KNOWN"
       },
       "limits": [
-        "No theorem links the Cartan matrix to the set 2E8, so 'E8 is even unimodular' is assembled from two unconnected facts.",
-        "The claimed '240 minimal roots', 'Leech kissing number 196,560' and 'Moonshine 196,884' are NOT covered: their Lean statements are a closed-form count and natural-number arithmetic (see findings).",
-        "Classical results; a Lean formalization of E8 sphere-packing optimality (Sphere-Packing-Lean) exists and is not cited."
+        "Conway's 196,560 Leech kissing number and 196,884 = 1 + 196,883 identities remain natural-number arithmetic checks using the kernel-computed octad count 759; the Leech lattice Lambda_24, modular j-function, and Monster group are not formalized in Lean.",
+        "Classical results; prior Lean formalization of E8 sphere-packing optimality (Sphere-Packing-Lean) is cited in v1.1.0."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -3512,11 +3521,11 @@
         {
           "decl": "Octonionica.E8GolayMoonshine.ramanujan_tau_exact_mod691_and_lehmer",
           "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
-          "line": 111
+          "line": 504
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audited_commit": "05c41f5769a2b339726155f3b74aed3077fce756",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3535,11 +3544,16 @@
       "key": "T5",
       "status": "ACTIVE",
       "title": "Fibonacci anyon F and R matrices: coherence identities and infinite order of a braid word",
-      "statement": "For explicit 2x2 matrices F, R over Z[zeta_10] (reduced modulo Phi_10): F^2 = I, both hexagon identities in the stated gauge, and the braid relation s1 s2 s1 = s2 s1 s2 with s1 = R, s2 = F R F. For every k >= 1, (s1 s2^-1)^k != I.",
+      "statement": "For explicit 2x2 matrices F, R over Z[zeta_10] (reduced modulo Phi_10): F^2 = I, the direct 3x3 matrix Mac Lane pentagon equation M2(F)*M1(F) = R3(F)*M1(F)*M2(F) built from the entries of F holds with zero axioms, both hexagon identities hold in the stated gauge, the Artin B3 braid relation s1 s2 s1 = s2 s1 s2 holds with s1 = R, s2 = F R F, and for every k >= 1, (s1 s2^-1)^k != I.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
       "lean": [
+        {
+          "decl": "Octonionica.FibonacciAnyons.fib_mac_lane_pentagon_matrix",
+          "file": "lean/OctonionicaProofs/FibonacciAnyons.lean",
+          "line": 105
+        },
         {
           "decl": "Octonionica.FibonacciAnyons.fib_coherence_hexagon_and_yang_baxter",
           "file": "lean/OctonionicaProofs/FibonacciAnyons.lean",
@@ -3548,11 +3562,11 @@
         {
           "decl": "Octonionica.FibonacciAnyons.fib_braid_word_infinite_order",
           "file": "lean/OctonionicaProofs/FibonacciAnyons.lean",
-          "line": 252
+          "line": 258
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audited_commit": "05c41f5769a2b339726155f3b74aed3077fce756",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3560,8 +3574,8 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "The claimed '5-part Mac Lane pentagon' (fib_mac_lane_pentagon_exact) is five scalar identities in Z[phi] that never mention F; the reduction from the categorical pentagon is by hand and is not covered by this record.",
-        "Infinite order follows from a standard trace argument (Tr W = 2 - phi, whose Galois conjugate 1 + phi exceeds 2), which is how Lean proves it. Density of the Fibonacci braid representation (Freedman-Larsen-Wang 2002, doi:10.1007/s002200200636) implies an infinite image but not this element's order, and is not formalized."
+        "In v1.1.0, the 3x3 matrix Mac Lane pentagon equation built directly from fibF (fib_mac_lane_pentagon_matrix, 0 axioms) is included in comparator target T5 alongside the retained scalar component identities.",
+        "Infinite order follows from a standard trace argument (Tr W = 2 - phi, whose Galois conjugate 1 + phi exceeds 2), which is how Lean proves it. Density of the Fibonacci braid representation (Freedman-Larsen-Wang 2002) is classical and not formalized."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -3608,7 +3622,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e4a7f2e866e526aa971144bae80416a073fce8f1",
+      "audited_commit": "05c41f5769a2b339726155f3b74aed3077fce756",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",

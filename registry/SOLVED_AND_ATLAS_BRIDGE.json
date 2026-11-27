@@ -225,7 +225,7 @@
       "archive_id": "0TH-2026-017",
       "slug": "octonionica",
       "repository": "https://github.com/0thernes/octonionica",
-      "version": "v1.0.0",
+      "version": "v1.1.0",
       "resolution_class": "KNOWN_RESULTS_FORMALIZED",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
@@ -237,9 +237,9 @@
         "NT-083",
         "QM-020"
       ],
-      "target_statement": "Formalizes classical identities over the integers in zero-Mathlib Lean 4.35.0: the integer octonion composition law and Moufang identities, a sedenion zero divisor, 7-dimensional cross-product identities and a cleared-denominator Nijenhuis norm identity for S^6, Albert-algebra identities, evenness of 2E8 and the E8 Cartan determinant, the Golay weight enumerator, Ramanujan tau congruences for n <= 20, Fibonacci anyon coherence identities, and Markov-equation descent and congruences. No new mathematics is claimed.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 93 audited decls in 14 module files, checked by the Lean kernel (lake build, leanchecker --fresh); the 8 Palomar targets and their 3,636-declaration dependency closure were accepted by 6 independent kernels inside bubblewrap (CI run 45845614936), SLSA #72724149 / Rekor 4128481032, SWH swh:1:snp:266d5a76ea960d33a48f78bd4550629e488fc9a8.",
-      "honesty_boundary": "All formalized statements are classical; the contribution is the dependency-free formalization. Statements are over Z: the real octonions, the manifold S^6, the Leech lattice and the Monster are not formalized, and the E8 240-root, Leech 196,560, Moonshine 196,884 and Hurwitz items are closed-form counts or plain arithmetic. Lehmer's conjecture, Markov uniqueness and the existence of a complex structure on S^6 remain OPEN and are not addressed."
+      "target_statement": "Formalizes classical identities over the integers in zero-Mathlib Lean 4.35.0: the integer octonion composition law and Moufang identities, a sedenion zero divisor, 7-dimensional cross-product identities and a cleared-denominator Nijenhuis norm identity (with positivity in T2) for S^6, Albert-algebra identities, evenness of 2E8, an explicit 8-vector simple root basis linked to e8Cartan (det = 1), a sound/complete/Nodup enumeration of all 240 minimal vectors of 2E8, the 4,096-codeword Golay weight enumerator, Ramanujan tau congruences for n <= 20, Fibonacci anyon coherence including a direct 3x3 matrix Mac Lane pentagon built from F and infinite order of (s1*s2^-1)^k, and Markov-equation descent and mod-3/mod-4 congruences. No new mathematics is claimed.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 108 explicit + 662-decl exhaustive Lean.collectAxioms audit across 14 module files, checked by Lean (lake build, leanchecker --fresh); all 8 strengthened Palomar targets and their 3,879-3,882 declaration closure accepted by 6 independent kernels inside bubblewrap + 3/3 live negative kernel tamper tests (CI run 45941305624), Release SLSA #72942722 / Rekor 4141636778, CI SLSA #72944890 / Rekor 4141814189, SWH swh:1:snp:63447769d9005106cafb2e8d0a29eb7c404bb793.",
+      "honesty_boundary": "All formalized statements are classical; the contribution is the dependency-free formalization and verification engineering. Statements are over Z: the real octonions, the smooth manifold S^6, the Leech lattice, the modular j-function, the Monster group, the universal Albert Jordan identity, OP^2 parametrization, and the Lagrange spectrum are not formalized (Conway 196,560/196,884 and markov_hurwitz_lagrange_barrier are arithmetic/inequality checks only). Lehmer's conjecture, Markov uniqueness, and the existence of a complex structure on S^6 remain OPEN and are not addressed."
     },
     {
       "archive_id": "0TH-2026-018",
