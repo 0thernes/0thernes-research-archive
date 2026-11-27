@@ -1482,7 +1482,7 @@ Registered in the archive but not yet audited into this ledger:
 - `0TH-2026-021` [weyl-magic-stabilizer-frontier](https://github.com/0thernes/weyl-magic-stabilizer-frontier) `v1.0.0`
 - `0TH-2026-022` [weyl-magic-obstruction-frontier](https://github.com/0thernes/weyl-magic-obstruction-frontier) `v1.0.2`
 - `0TH-2026-023` [quantum-latin-spectrum-frontier](https://github.com/0thernes/quantum-latin-spectrum-frontier) `v1.0.0`
-- `0TH-2026-024` [spectral-eclipse-frontier](https://github.com/0thernes/spectral-eclipse-frontier) `v1.0.0`
+- `0TH-2026-024` [spectral-eclipse-frontier](https://github.com/0thernes/spectral-eclipse-frontier) `v1.1.0`
 - `0TH-2026-025` [clifford-radon-stabilizers](https://github.com/0thernes/clifford-radon-stabilizers) `v1.0.0`
 - `0TH-2026-026` [schur-clifford-frontier](https://github.com/0thernes/schur-clifford-frontier) `v1.0.0`
 - `0TH-2026-027` [nonlocal-magic-spectral-frontier](https://github.com/0thernes/nonlocal-magic-spectral-frontier) `v1.0.0`
