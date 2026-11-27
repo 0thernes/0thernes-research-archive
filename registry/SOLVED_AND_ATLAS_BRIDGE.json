@@ -260,7 +260,7 @@
       "archive_id": "0TH-2026-019",
       "slug": "cayley-dickson-terrace-frontier",
       "repository": "https://github.com/0thernes/cayley-dickson-terrace-frontier",
-      "version": "v1.0.0",
+      "version": "v2.0.0",
       "resolution_class": "NEW_THEOREM_SUITE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
@@ -269,9 +269,9 @@
         "XGEOM-031",
         "COMB-040"
       ],
-      "target_statement": "Machine-checks 19 headline theorems (T1a-T1e, T2a-T2f, T3a-T3d, T4a-T4d) + master conjunction (20 Palomar targets) plus 4 NonVacuity witnesses and 6 AdversarialTests sharpness refutations in zero-Mathlib Lean 4.35.0: Universal Nilpotent Mirror Conservation across all generalized Cayley-Dickson signatures CD_n(gamma), the exact Dyadic-Palindromic Terrace Law & All-Signature Midpoint 42 Law H_n^gamma(2^(n-2)) = 42*2^(n-4), the exact right-compatibility clique number omega(G_n^comp) = n+5 & coordinate deficit n+5 < rho(2^n) for all n >= 6 (11 < 12 at n=6; Euclidean CD_n, coordinate right-multiplier sets), and complete sedenion/pathion finite certificates (Fano 7+28+7=42, de Marrais's 7 x K_{2,2,2} box-kites (re-verified), 1:1:7:7 & 4x1+4x7 split phases, [14,14,32] & [16,16,64] witnesses), differentially audited across 496 algebras CD_4-CD_8 in Rust, ISO C11, and exact Q Python.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 30 audited decls across 13 Lean module files (12 sorry-free), all 6 independent kernels verified via lake check --paranoid (59,188-59,191 decls) & lake comparator --paranoid (3,767-3,770 decls) + live negative tamper gate (CI run 45859629245, SLSA #72758106 / Rekor 4129728240).",
-      "honesty_boundary": "Proves universal Cayley-Dickson mirror/terrace theorems, the all-n >= 6 gap n+5 < rho(2^n) for coordinate right-multiplier sets in the Euclidean CD_n, and finite sedenion/pathion certificates; overarching grand open problems (ALG-035, ALG-039, XGEOM-031, COMB-040 and general non-coordinate composition-pair problems) remain explicitly OPEN."
+      "target_statement": "Machine-checks 22 headline theorems (T1a-T1f, T2a-T2f, T3a-T3d, T4a-T4f) + master conjunction (23 Palomar targets) plus 4 NonVacuity witnesses and 8 AdversarialTests sharpness refutations (35 audited decls) in zero-Mathlib Lean 4.35.0: Universal Nilpotent Mirror Conservation & explicit Z-basis isomorphism for ker L_{e_i+e_j} under cdMulCoordGamma (T1a-T1f), exact Dyadic-Palindromic Terrace Law, uniqueness of BDI equality at n=4, & All-Signature Midpoint 42 Law H_n^gamma(2^(n-2))=42*2^(n-4) (T2a-T2f), exact right-compatibility clique number omega(G_n^comp)=n+5 & Euclidean coordinate deficit n+5 < rho(2^n) for all n>=6 (T3a-T3d), complete sedenion certificates (Fano 7+28+7=42 + 2+2 bad-plane splitting, non-circular de Marrais 7xK_{2,2,2} box-kites), pure-kernel 2^32 Pathion ceiling r_max(CD_5)=14 & strict 7+7 rigidity retiring HiGHS MILP (T4e), and pure-kernel CD_6(56) interior spectral gap H_6^56(20)=0 (T4f), differentially audited across 496 algebras CD_4-CD_8 and all 280 Pathion 14D subspaces in Rust, ISO C11, and exact Q Python.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 35 audited decls across 14 Lean module files (13 sorry-free), all 6 independent kernels verified via lake check --paranoid (60,087-60,090 decls) & lake comparator --paranoid (4,482-4,485 decls) + real tamper-injecting negative comparator/axiom gate (CI run 45944568675, SLSA #72949127 / Rekor 4142185254, DigiCert RFC 3161 .tsr + 3-calendar Bitcoin .ots).",
+      "honesty_boundary": "Proves universal Cayley-Dickson mirror/terrace/kernel-basis theorems, the all-n>=6 gap n+5 < rho(2^n) for Euclidean coordinate right-multiplier sets, exact sedenion/pathion coordinate ceilings (including pure-kernel r_max(CD_5)=14 with 7+7 rigidity), and the CD_6(56) interior spectral gap; overarching grand open problems (ALG-035, ALG-039, XGEOM-031, COMB-040 and general non-coordinate composition-pair problems) remain explicitly OPEN."
     },
     {
       "archive_id": "0TH-BUILD-001",

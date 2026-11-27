@@ -2556,7 +2556,7 @@
       "key": "T1",
       "status": "ACTIVE",
       "title": "Signature change of the Cayley–Dickson sign table and 2-blade nullities",
-      "statement": "For all n and every signature γ ∈ {±1}ⁿ: σ_n^γ(i,j) = σ_n(i,j)·(−1)^popcount(i∧j∧flip(γ)); the 2×2 block sign of e_i+e_j flips by (−1)^popcount((i⊕j)∧flip(γ)) for every k; hence ν_n^γ(i,j) equals ν_n(i,j) or 2^(n−1) − ν_n(i,j), and the sums H(v)+H(2^(n−1)−v) and the bin H(2^(n−2)) do not depend on γ.",
+      "statement": "For all n and every signature γ ∈ {±1}ⁿ: σ_n^γ(i,j) = σ_n(i,j)(−1)^popcount(i∧j∧flip(γ)); block signs flip by (−1)^popcount((i⊕j)∧flip(γ)); under bilinear cdMulCoordGamma, (e_i+e_j)² = 0 iff σ_n^γ(i,i)+σ_n^γ(j,j)=0 and ν_n^γ(i,j) equals the cardinality of an explicit ℤ-basis of ker L_{e_i+e_j} (T1f); hence H(v)+H(2^(n−1)−v) and H(2^(n−2)) are signature-invariant.",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -2572,6 +2572,11 @@
           "line": 21
         },
         {
+          "decl": "CDTerrace.Palomar.prove_t1c",
+          "file": "lean/PalomarSolution.lean",
+          "line": 22
+        },
+        {
           "decl": "CDTerrace.Palomar.prove_t1d",
           "file": "lean/PalomarSolution.lean",
           "line": 23
@@ -2582,43 +2587,57 @@
           "line": 24
         },
         {
+          "decl": "CDTerrace.Palomar.prove_t1f",
+          "file": "lean/PalomarSolution.lean",
+          "line": 25
+        },
+        {
           "decl": "CDTerrace.cdSignGamma_factorization",
           "file": "lean/CDTerrace/MirrorConservation.lean",
-          "line": 197
+          "line": 204
         },
         {
           "decl": "CDTerrace.blockDeltaGamma_eq",
           "file": "lean/CDTerrace/MirrorConservation.lean",
-          "line": 294
+          "line": 301
+        },
+        {
+          "decl": "CDTerrace.twoblade_nilpotent_full_iff",
+          "file": "lean/CDTerrace/MirrorConservation.lean",
+          "line": 433
         },
         {
           "decl": "CDTerrace.nilpotent_mirror_law",
           "file": "lean/CDTerrace/MirrorConservation.lean",
-          "line": 465
+          "line": 619
         },
         {
           "decl": "CDTerrace.mirror_sum_conservation",
           "file": "lean/CDTerrace/MirrorConservation.lean",
-          "line": 569
+          "line": 723
         },
         {
           "decl": "CDTerrace.midpoint_stratum_invariance",
           "file": "lean/CDTerrace/MirrorConservation.lean",
-          "line": 578
+          "line": 732
+        },
+        {
+          "decl": "CDTerrace.twoblade_left_annihilator_basis_exact",
+          "file": "lean/CDTerrace/MirrorConservation.lean",
+          "line": 1040
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
-        "fidelity": "AUDITED_NARROWER",
+        "fidelity": "AUDITED_MATCH",
         "prior_work": "NONE_FOUND"
       },
       "limits": [
-        "Lean proves facts about the explicit Cayley–Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
-        "The nilpotency criterion T1c states only that the scalar part of (e_i+e_j)² cancels; the cross term is not part of the Lean statement.",
-        "Prior-work search was limited; the twisted-group-algebra description of Cayley–Dickson algebras with parameters (Albuquerque–Majid, Morier-Genoud–Ovsienko) was not compared with the cocycle formula."
+        "Applies to canonical 2-blades e_i + e_j (1 ≤ i < j < 2^n); higher-blade elements (3+ basis terms) are not covered by T1a–T1f.",
+        "The cochain factorization T1a is explicitly credited in context to the twisted group-algebra framework of Albuquerque–Majid (1999) and Morier-Genoud–Ovsienko (2011)."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -2628,7 +2647,7 @@
       "key": "T2",
       "status": "ACTIVE",
       "title": "Doubling recurrence and closed forms for Euclidean 2-blade nullities",
-      "statement": "Standard CD_n, 0 < i ≠ j < 2ⁿ: ν_{n+1} obeys a four-branch doubling recurrence in ν_n; 4 | ν for n ≥ 3; ν ≤ 2^(n−1) − 4 for n ≥ 4. For n ≥ 3: Σν = 8(2^(n−1)−1)(2^(n−2)−1)(2^(n−3)−1); H_n(0) = (6n−9)·2^(n−2)+3; H_{n+1}(8m) = 2H_n(4m) for m ≥ 1; H_{n+1}(2ⁿ−4−8m) = 2H_n(4m) for 8m < 2ⁿ−4; an interior palindrome; H_{n+1}(2ⁿ−4) = 2H_n(0) > 0 (bound attained).",
+      "statement": "In Euclidean CD_n: ν_{n+1} obeys a four-branch doubling recurrence; 4 | ν (n ≥ 3); ν ≤ 2^(n−1)−4 (attained, matching the BDI formula 2^n−4n+4 uniquely at n = 4 and strictly below it for all n ≥ 5); for n ≥ 3, Σν = 8(2^(n−1)−1)(2^(n−2)−1)(2^(n−3)−1), H_n(0) = (6n−9)2^(n−2)+3, H_{n+1} interleaves 2H_n palindromically, and H_{n+1}(2^n−4) = 2H_n(0).",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -2636,73 +2655,80 @@
         {
           "decl": "CDTerrace.Palomar.prove_t2a",
           "file": "lean/PalomarSolution.lean",
-          "line": 25
+          "line": 26
         },
         {
           "decl": "CDTerrace.Palomar.prove_t2b",
           "file": "lean/PalomarSolution.lean",
-          "line": 26
+          "line": 27
         },
         {
           "decl": "CDTerrace.Palomar.prove_t2c",
           "file": "lean/PalomarSolution.lean",
-          "line": 27
+          "line": 28
         },
         {
           "decl": "CDTerrace.Palomar.prove_t2d",
           "file": "lean/PalomarSolution.lean",
-          "line": 28
+          "line": 29
         },
         {
           "decl": "CDTerrace.Palomar.prove_t2e",
           "file": "lean/PalomarSolution.lean",
-          "line": 29
+          "line": 30
         },
         {
           "decl": "CDTerrace.nullity_doubling_cross",
           "file": "lean/CDTerrace/TerraceLaw.lean",
-          "line": 551
+          "line": 557
         },
         {
           "decl": "CDTerrace.nullity_mod4_and_bound",
           "file": "lean/CDTerrace/TerraceLaw.lean",
-          "line": 684
+          "line": 690
+        },
+        {
+          "decl": "CDTerrace.twoblade_strictly_below_bdi",
+          "file": "lean/CDTerrace/TerraceLaw.lean",
+          "line": 788
+        },
+        {
+          "decl": "CDTerrace.twoblade_bdi_eq_iff_four",
+          "file": "lean/CDTerrace/TerraceLaw.lean",
+          "line": 844
         },
         {
           "decl": "CDTerrace.totalNullityMass_all_n",
           "file": "lean/CDTerrace/TerraceLaw.lean",
-          "line": 1217
+          "line": 1274
         },
         {
           "decl": "CDTerrace.nonZDCount_all_n",
           "file": "lean/CDTerrace/TerraceLaw.lean",
-          "line": 1316
+          "line": 1373
         },
         {
           "decl": "CDTerrace.terrace_palindrome_all_n",
           "file": "lean/CDTerrace/TerraceLaw.lean",
-          "line": 1446
+          "line": 1503
         },
         {
           "decl": "CDTerrace.terrace_top_bin_all_n",
           "file": "lean/CDTerrace/TerraceLaw.lean",
-          "line": 1461
+          "line": 1518
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
-        "fidelity": "AUDITED_NARROWER",
+        "fidelity": "AUDITED_MATCH",
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "Lean proves facts about the explicit Cayley–Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
-        "4 | ν is the 2-blade case of Moreno's theorem that annihilator dimensions in Cayley–Dickson algebras are multiples of four (quoted in Biss–Dugger–Isaksen, arXiv:math/0511691); the paper does not credit it.",
-        "The comparison with the Biss–Dugger–Isaksen bound 2ⁿ−4n+4 compares two closed formulas in Lean; the BDI theorem itself is not formalized.",
-        "Zhilina (Int. J. Algebra Comput. 31 (2021); arXiv:2608.28176) classifies zero divisors with basis-element components; the overlap with the ν = 0 versus ν > 0 split was not assessed.",
-        "Euclidean signature only."
+        "Euclidean signature only for the doubling terrace law; 4 | ν is the 2-blade case of Moreno (1998) / Biss–Dugger–Isaksen (2008).",
+        "The comparison with the BDI ceiling compares the proved 2-blade ceiling 2^(n-1)-4 against the closed BDI formula 2^n-4n+4 (the general-element BDI upper bound itself is cited, not formalized)."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -2720,30 +2746,30 @@
         {
           "decl": "CDTerrace.Palomar.prove_t2f",
           "file": "lean/PalomarSolution.lean",
-          "line": 30
+          "line": 31
         },
         {
           "decl": "CDTerrace.terrace_midpoint_std_all_n",
           "file": "lean/CDTerrace/TerraceLaw.lean",
-          "line": 1515
+          "line": 1572
         },
         {
           "decl": "CDTerrace.universal_split_midpoint_42",
           "file": "lean/CDTerrace/TerraceLaw.lean",
-          "line": 1539
+          "line": 1596
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
-        "fidelity": "AUDITED_NARROWER",
+        "fidelity": "AUDITED_MATCH",
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "Lean proves facts about the explicit Cayley–Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
-        "The case n = 4 (42) is de Marrais's 42 sedenion assessors (arXiv:math/0011260); the extension to all n and all signatures was not found in a limited search."
+        "With T1f (exact ℤ-basis isomorphism for ker L_{e_i+e_j}), the Lean statement now directly certifies the exact annihilator dimension of canonical 2-blades across all signatures.",
+        "The base case n = 4 (42) corresponds to de Marrais (arXiv:math/0011260); the all-n, all-2^n-signature generalization was not found in a bounded search."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -2761,61 +2787,60 @@
         {
           "decl": "CDTerrace.Palomar.prove_t3a",
           "file": "lean/PalomarSolution.lean",
-          "line": 31
+          "line": 32
         },
         {
           "decl": "CDTerrace.Palomar.prove_t3b",
           "file": "lean/PalomarSolution.lean",
-          "line": 32
+          "line": 33
         },
         {
           "decl": "CDTerrace.Palomar.prove_t3c",
           "file": "lean/PalomarSolution.lean",
-          "line": 33
+          "line": 34
         },
         {
           "decl": "CDTerrace.Palomar.prove_t3d",
           "file": "lean/PalomarSolution.lean",
-          "line": 34
+          "line": 35
         },
         {
           "decl": "CDTerrace.universal_right_multipliers_all_n",
           "file": "lean/CDTerrace/HurwitzRupture.lean",
-          "line": 355
+          "line": 358
         },
         {
           "decl": "CDTerrace.compat_clique_le_all_n",
           "file": "lean/CDTerrace/HurwitzRupture.lean",
-          "line": 547
+          "line": 550
         },
         {
           "decl": "CDTerrace.cdMaxClique_valid",
           "file": "lean/CDTerrace/HurwitzRupture.lean",
-          "line": 658
+          "line": 661
         },
         {
           "decl": "CDTerrace.hurwitz_radon_rupture_all_ge6",
           "file": "lean/CDTerrace/HurwitzRupture.lean",
-          "line": 719
+          "line": 722
         },
         {
           "decl": "CDTerrace.asymmetric_doubling_tower_all_n",
           "file": "lean/CDTerrace/HurwitzRupture.lean",
-          "line": 747
+          "line": 750
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
-        "fidelity": "AUDITED_NARROWER",
+        "fidelity": "AUDITED_MATCH",
         "prior_work": "NONE_FOUND"
       },
       "limits": [
-        "Only coordinate (basis-index) subsets with the full basis as left factor, and only the Euclidean signature; nothing is shown about non-coordinate subspaces or the general Hurwitz–Radon problem.",
-        "The comparison with ρ(2ⁿ) (T3c) is arithmetic on the formula 8⌊n/4⌋+2^(n mod 4); that this formula is the Hurwitz–Radon number is classical and not proved in Lean.",
-        "Prior-work search was limited: Adem (1975) on Cayley–Dickson normed maps was not read; Moreno (arXiv:math/0404395) on alternative elements is related and not cited."
+        "Only coordinate (basis-index) subsets with the full basis as left factor in the Euclidean signature; nothing is shown about non-coordinate subspaces or general Hurwitz–Radon bilinear maps.",
+        "The comparison with ρ(2ⁿ) (T3c) is arithmetic on the closed formula 8⌊n/4⌋+2^(n mod 4); its classical identification with the Hurwitz–Radon number is cited (Hurwitz 1922, Radon 1922) and not proved in Lean."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -2981,8 +3006,8 @@
       "archive_id": "0TH-2026-019",
       "key": "T4fin",
       "status": "ACTIVE",
-      "title": "Finite certificates for sedenion, pathion and chingon coordinate subspaces",
-      "statement": "By exhaustive kernel computation: in CD_4, 42 of the 140 affine 2-planes are bad, exactly 42 coordinate subsets of size 10 are norm-multiplicative (7, 28, 7 by overlap 8, 5, 2 with e_0…e_7) and none of size ≥ 11; over all signatures the histogram profiles of CD_4 and CD_5 occur with multiplicities 1,1,7,7 and 1,1,1,1,7,7,7,7; norm-multiplicative coordinate sets of size 14 in CD_5 and 16 in CD_6 exist.",
+      "title": "Finite certificates for sedenion, pathion r_max=14 (7+7 rigidity), and chingon split gap",
+      "statement": "By pure-kernel Lean exhaustion (zero MILP): in CD_4, all 42 bad affine 2-planes split 2+2, exactly 42 10D coordinate subspaces are norm-multiplicative (7+28+7) and 0 at ≥11D (T4a); over all 2^32 subsets of CD_5, |S| ≤ 14 (attained) with strict 7+7 half-balance rigidity (T4e); CD_6(flip=56) has interior spectral gap H_6^56(20)=0 (T4f); CD_4/CD_5 split phases and [16,16,64] witness hold (T4c–T4d).",
       "kind": "BOUNDED_CASE",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -2990,46 +3015,66 @@
         {
           "decl": "CDTerrace.Palomar.prove_t4a",
           "file": "lean/PalomarSolution.lean",
-          "line": 35
+          "line": 36
         },
         {
           "decl": "CDTerrace.Palomar.prove_t4c",
           "file": "lean/PalomarSolution.lean",
-          "line": 37
+          "line": 38
         },
         {
           "decl": "CDTerrace.Palomar.prove_t4d",
           "file": "lean/PalomarSolution.lean",
-          "line": 38
+          "line": 39
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t4e",
+          "file": "lean/PalomarSolution.lean",
+          "line": 40
+        },
+        {
+          "decl": "CDTerrace.Palomar.prove_t4f",
+          "file": "lean/PalomarSolution.lean",
+          "line": 41
         },
         {
           "decl": "CDTerrace.sedenion_42_fano_duality",
           "file": "lean/CDTerrace/FiniteCertificates.lean",
-          "line": 1486
+          "line": 1543
         },
         {
           "decl": "CDTerrace.sedenion_no_11d_coord_subspace",
           "file": "lean/CDTerrace/FiniteCertificates.lean",
-          "line": 1590
+          "line": 1647
         },
         {
           "decl": "CDTerrace.split_sedenion_4_phases",
           "file": "lean/CDTerrace/FiniteCertificates.lean",
-          "line": 1813
+          "line": 2001
         },
         {
           "decl": "CDTerrace.split_pathion_8_phases",
           "file": "lean/CDTerrace/FiniteCertificates.lean",
-          "line": 1958
+          "line": 2146
         },
         {
           "decl": "CDTerrace.pathion_14_and_chingon_16_witnesses",
           "file": "lean/CDTerrace/FiniteCertificates.lean",
-          "line": 224
+          "line": 253
+        },
+        {
+          "decl": "CDTerrace.pathion_exact_ceiling_14_and_7_7_rigidity",
+          "file": "lean/CDTerrace/PathionRupture.lean",
+          "line": 1765
+        },
+        {
+          "decl": "CDTerrace.cd6_split56_interior_spectral_gap",
+          "file": "lean/CDTerrace/PathionRupture.lean",
+          "line": 2168
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3037,10 +3082,9 @@
         "prior_work": "NONE_FOUND"
       },
       "limits": [
-        "Coordinate subsets only, with x and y in the same span.",
-        "The upper bound r_max(CD_5) = 14 is a HiGHS MILP certificate outside Lean; the CD_6–CD_8 phase tables are Rust/C/Python computations outside Lean.",
-        "The other conjuncts of T4d (c² = 1 ⇒ c = ±1 in integral domains, ℤ, ℤ[i]) are textbook facts and do not bear on Zhang and Zhu's base-field result (arXiv:2605.00590, 2026).",
-        "Prior-work search was limited."
+        "Coordinate subsets only, with x and y in the same span; non-coordinate real/integer bilinear maps (e.g. Yiu [16,16,32]) are outside scope.",
+        "The exact count of 280 Pathion 14D subspaces (C2) and the full 448-algebra split-phase tables for CD_6–CD_8 (C1) are verified in Rust/C11/Python outside Lean; the upper bound r_max(CD_5)=14, 7+7 rigidity (T4e), and the CD_6(56) spectral gap (T4f) are now proved purely inside the Lean kernel.",
+        "Exact r_max(CD_6) (beyond the certified 16D witness) remains open."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -3877,16 +3921,16 @@
         {
           "decl": "CDTerrace.Palomar.prove_t4b",
           "file": "lean/PalomarSolution.lean",
-          "line": 36
+          "line": 37
         },
         {
           "decl": "CDTerrace.sedenion_box_kites_7x6",
           "file": "lean/CDTerrace/FiniteCertificates.lean",
-          "line": 1630
+          "line": 1776
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "f1a3ff375a945923b48a7f8fca5fb06f3ae93e88",
+      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3894,10 +3938,9 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "The 42 assessors and the 7 box-kites are due to de Marrais (arXiv:math/0011260, 2000); this is a formal re-verification.",
-        "The 'no edges between components' conjunct holds by the definition of the adjacency predicate.",
-        "In Lean the adjacency is the sign identity σ(i,k)σ(j,l) = σ(i,l)σ(j,k) with i⊕j = k⊕l, i ≠ k, j ≠ l. Its equivalence with (e_i+e_j)(e_k ± e_l) = 0 for some sign follows by expanding the product and is not proved in Lean.",
-        "Norm-multiplicativity of span{e_0,…,e_8} is checked through the Boolean predicate isNormMultMask 4 511, which tests the cross-term cancellation σ(a,c)σ(b,d) + σ(a,d)σ(b,c) = 0 over basis quadruples with a⊕b = c⊕d. Its equivalence with |xy|² = |x|²|y|² for all x, y in the span follows by expanding the norm and is not proved in Lean."
+        "The 42 assessors and the 7 box-kites are due to de Marrais (arXiv:math/0011260, 2000); this is a formal six-kernel re-verification.",
+        "In v2.0.0, inter-strut disjointness is proved directly from pure vanishing-product adjacency (isBoxKiteAssessor) linked to cdMulCoordGamma without XOR pre-filtering.",
+        "Norm-multiplicativity of span{e_0,…,e_8} is checked via isNormMultMask 4 511 (cross-term cancellation over basis quadruples)."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
