@@ -595,10 +595,10 @@
     {
       "slug": "unsolved-problems-mega-atlas",
       "repository": "https://github.com/0thernes/unsolved-problems-mega-atlas",
-      "description": "2,000 deduplicated open problems (incl. 25 Left to Solve fronts) across 8 Pillars, 28 Superdomains & 6,108 biconnected edges; daily 16-registry GitHub sync; 103 Lean 4.35.0 software-model theorems; 100% MRR@5 offline RAG & 12-tool MCP; 11-page AMS-LaTeX white paper; 0/2,000 solved.",
+      "description": "2,000 deduplicated open problems + daily 59,396-target Left to Solve 25-front mirror & 16-registry GitHub sync; 6,108 biconnected edges; 103 Lean 4.35.0 software-model theorems; 100% MRR@5 RAG & 13-tool MCP; 11-page AMS-LaTeX paper; 0/2,000 solved.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T04:41:05Z",
+      "pushed_at": "2026-11-27T05:42:55Z",
       "homepage": "https://0thernes.github.io/unsolved-problems-mega-atlas/",
       "latest_release": null,
       "archive_registered": true,
@@ -653,6 +653,6 @@
       "inventory_status": "REGISTERED"
     }
   ],
-  "sync_status": "LIVE_GITHUB_API",
+  "sync_status": "OFFLINE_PRESERVED_LAST_KNOWN_GOOD",
   "error": null
 }

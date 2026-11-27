@@ -152,7 +152,7 @@ def test_consolidated_latest_entries_registered() -> None:
     assert len(builds) == 17
     assert builds["0TH-BUILD-004"]["version"] == "v0.5.0"
     assert builds["0TH-BUILD-004"]["lean_verification"]["audited_theorems"] == 69
-    assert builds["0TH-BUILD-007"]["version"] == "v2.8.0"
+    assert builds["0TH-BUILD-007"]["version"] == "v2.9.0"
     assert builds["0TH-BUILD-007"]["lean_verification"]["audited_theorems"] == 103
     assert builds["0TH-BUILD-010"]["slug"] == "noetic-organism-omega"
     assert builds["0TH-BUILD-011"]["slug"] == "asmodensius-native"
@@ -178,7 +178,7 @@ def test_solved_and_atlas_bridge_epistemic_honesty() -> None:
     three of the five did not answer a question posed in their cited source.)
     """
     bridge = json.loads((ROOT / "registry" / "SOLVED_AND_ATLAS_BRIDGE.json").read_text(encoding="utf-8"))
-    assert bridge["mega_atlas_total_problems"] == 1900
+    assert bridge["mega_atlas_total_problems"] == 2000
     assert bridge["grand_problems_retired"] == 0
     assert bridge["author"]["orcid"] == va.EXPECTED_ORCID
     solved = {e["archive_id"] for e in bridge["entries"] if e["resolution_class"] == "SOLVED_SUB_CONJECTURE"}

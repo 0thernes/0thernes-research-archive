@@ -14,7 +14,7 @@
 - [SHA-256 Master Checksums](CHECKSUMS.sha256) · [Data Manifest](data/MANIFEST.sha256)
 
 ## Epistemic Status & Verification
-- Grand Mega-Atlas V2 open problems retired: 0 / 1900
+- Grand Mega-Atlas V2 open problems retired: 0 / 2000
 - Audited results in the Results Ledger: 94 (3 open questions from the literature answered; 11 new theorems; 11 bounded or partial cases; 55 known results formalized; 14 engineering invariant suites); none is peer reviewed
 - Open questions from published preprints answered in Lean 4.35.0 (not peer reviewed): 3 (RESULTS.md section A)
 - Tracked unique public repositories: 41

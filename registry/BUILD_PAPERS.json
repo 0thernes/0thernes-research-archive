@@ -428,56 +428,56 @@
     {
       "id": "0TH-BUILD-007",
       "slug": "unsolved-problems-mega-atlas",
-      "title": "Unsolved Problems Mega-Atlas (V2.8.0): 1,900-Node Multi-Layer Biconnected Knowledge Connectome, Six-Kernel Lean 4.35.0 Palomar Formalization (103 Theorems), 10-Page AMS-LaTeX White Paper, 100% MRR@5 Hybrid RAG & 11-Tool MCP Server, External Registry Delta Auditor, 3 Track B Probes, Dual RFC 3161/OTS Timestamps & 100% Build Standard v1.2.0 Compliance",
+      "title": "Unsolved Problems Mega-Atlas (V2.9.0): 2,000-Node Multi-Layer Biconnected Knowledge Connectome, Left to Solve 25-Front Integration & Daily 59,396-Target Mirror, Pure Lean 4.35.0 Software-Model Invariants (103 Audited Theorems), 11-Page AMS-LaTeX White Paper, 100% MRR@5 Hybrid RAG & 13-Tool MCP Server, 3 Track B Probes, Dual RFC 3161/OTS Timestamps & 100% Build Standard v1.2.0 Compliance",
       "domain": "Cross-Disciplinary Open Problems / Knowledge Graphs / AutoResearch / Formal Methods",
-      "date": "2026-11-26",
-      "version": "v2.8.0",
+      "date": "2026-11-27",
+      "version": "v2.9.0",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
       "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/unsolved-problems-mega-atlas",
       "submodule_path": "repos/unsolved-problems-mega-atlas",
-      "pinned_commit": "9e16554260f624df7a023f4cf2f0a76e82f5435f",
+      "pinned_commit": "af0a8506b86f7ec7aace0ae868ad8f00001d79a1",
       "archived_artifacts": [
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/Donahue_2026_unsolved_problems_mega_atlas.pdf",
           "source_path": "dist/Donahue_2026_unsolved_problems_mega_atlas.pdf",
-          "sha256": "acfc0792aabb0259a24cb30c09e840d9e9b8103cc9833164dca97076ba2329d8"
+          "sha256": "95f247a8ed54d18a9fd070aeeda2c1c4c1823baf8a67d42d996ea5b6d84870d6"
         },
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/arxiv_submission.tar.gz",
           "source_path": "dist/arxiv_submission.tar.gz",
-          "sha256": "5f9d5edcc1673b75171aedf2d68d00b41ec44c62466f2c27610d13e5ae8b00ed"
+          "sha256": "3f70e4d2dda55c39cfa299c8bd0667370f9c87bea791c6bd537fdef75ebed60b"
         },
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/WHITE_PAPER.md",
           "source_path": "docs/WHITE_PAPER.md",
-          "sha256": "9fab473e081cd9accc73d5a97d96e958311faaac8663b4df4d9e46256d4d29b3"
+          "sha256": "afa51e5288bdaa8bb7fefdece4505e4a07528a6d2e7b73f7d56f9a9376ad10e2"
         },
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/CLAIMS.md",
           "source_path": "CLAIMS.md",
-          "sha256": "c119a58a3be7868d14875d2db247ee24bf069d43945efa76d9035058f3493271"
+          "sha256": "8723032a5608efdbc36409a2c601c379e08630a4a0219f7aa1560f0616fb2bbc"
         },
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/VERIFICATION.md",
           "source_path": "VERIFICATION.md",
-          "sha256": "1a0bcb11548b9996382164042bbac37adc07cb327d29a04a71be19a6a8c1bdce"
+          "sha256": "13b93ded53ec963359eade210bcaec6b65eed77c5e016f66b01de9eee6d3e423"
         },
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/RANKING.md",
           "source_path": "RANKING.md",
-          "sha256": "5796d49293a276335230c55c2276b6ac26c986aea9e76c2416a6edef1a9007fe"
+          "sha256": "64d94a3a8dde18a50745954de59dedbd5a678cac23c9d3185c750d5dab24f3bc"
         },
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/DATASHEET.md",
           "source_path": "docs/DATASHEET.md",
-          "sha256": "22cb0e6aff473ddbf7c02522693a995a3808aabd372e6ae8bbe58d530179ec2d"
+          "sha256": "d91930112b8ae8d8d45774455f75afd43cb2213e649b69cfa5b4e8e2509b1db0"
         },
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/HARDENING_LOG.md",
           "source_path": "HARDENING_LOG.md",
-          "sha256": "47869276b92c5cbb3c613b16d17df1b776edeaa6cee2ae8af9e1a843ba72d057"
+          "sha256": "66a34d297c213546b52c072df0660dfa03c03ea97ee6f155db83809c98c0f3d8"
         },
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/FORENSIC_AUDIT_V2.3.md",
@@ -492,12 +492,12 @@
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/CHECKSUMS.sha256.tsr",
           "source_path": "CHECKSUMS.sha256.tsr",
-          "sha256": "7346dd62a81ced80864adf7fac39cbd032e40cd9b59321cd9ef2d4d47c61cef3"
+          "sha256": "2b423c242525db3884a8fa9edf97180e186ec16e0c41991ad54b7989a93a9214"
         },
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/CHECKSUMS.sha256.ots",
           "source_path": "CHECKSUMS.sha256.ots",
-          "sha256": "bbd8f8fb808983dd3a0a7ac90c5502a3af4344f2ef831c420f3e15117bcee223"
+          "sha256": "cd4ab8159c9656b8bf2cee8d5f3e1ff8a40be5f33843fbce93a14cbdbdbf15b6"
         },
         {
           "path": "builds/0TH-BUILD-007_unsolved-problems-mega-atlas/0THERNES_SOLVED_AUDIT_2026-11-25.md",
@@ -507,7 +507,7 @@
       ],
       "lean_verification": {
         "has_lean": true,
-        "framework": "Pure Lean 4.35.0 (zero Mathlib, module headers, autoImplicit = false, zero native_decide, single-source scripts/verify_lean_six_kernels.sh with leanchecker --fresh, live negative kernel rejection, 6-kernel lake check --paranoid & lake comparator --paranoid)",
+        "framework": "Pure Lean 4.35.0 (zero Mathlib, module headers, autoImplicit = false, zero native_decide, single-source scripts/verify_lean_six_kernels.sh with leanchecker --fresh, live negative kernel rejection, 6 kernel checks across 5 distinct implementations on 9 Palomar targets)",
         "modules": 14,
         "lines": 1707,
         "audited_theorems": 103,
@@ -516,10 +516,10 @@
           "Quot.sound"
         ],
         "entry_point": "lean/MegaAtlasProofs/VerifyAxioms.lean",
-        "live_audit_status": "GitHub Actions CI GREEN (run #45833490569, 5/5 jobs: ubuntu/macos/windows 75/75 pytest + 59/59 SHA-256 + 1,000-example Hypothesis + 2,000+ 50-digit Decimal/Fraction oracle differential + 6/6 100% mutation kill + ruff/mypy 0 errors across 40 files + Tectonic 0-overfull 10-page AMS-LaTeX PDF & clean-room arXiv tarball + 12/12 live citations with 0 Crossref retractions + dual DigiCert RFC 3161 .tsr & 3-calendar Bitcoin .ots + SLSA provenance + 6-kernel bubblewrap scripts/verify_lean_six_kernels.sh PASS incl. leanchecker --fresh & live negative kernel rejection on 1,769 decls), Pages GREEN (#45833490085), Release v2.8.0 SLSA attested (#45835072315); 100.0% (73/73) Build Standard v1.2.0; 103/103 audited theorems strictly within [propext, Quot.sound] with zero Classical.choice and zero sorry"
+        "live_audit_status": "GitHub Actions CI GREEN (run #45946262545, 5/5 jobs: ubuntu/macos/windows 96/96 pytest + 78/78 SHA-256 + 1,000-example Hypothesis + 2,000+ 50-digit Decimal/Fraction oracle differential + 10/10 100% mutation kill + ruff/mypy 0 errors across 39 files + Tectonic 0-overfull 11-page AMS-LaTeX PDF & clean-room arXiv tarball + 15/15 live citations with Crossref/Zenodo title parity & 0 retractions + structurally verified dual DigiCert RFC 3161 .tsr & 3-calendar Bitcoin OTS v1 .ots + SLSA provenance + bubblewrap scripts/verify_lean_six_kernels.sh PASS incl. leanchecker --fresh & live negative kernel rejection), Pages GREEN (#45946262551), Daily 59,396-Target & 16-Registry Sync GREEN (#45946979995), Release v2.9.0 SLSA attested (#45947543767); 100.0% (73/73) Build Standard v1.2.0; 103/103 audited software-model declarations strictly within [propext, Quot.sound] per #print axioms"
       },
-      "summary": "Hardened cross-disciplinary open-problem research infrastructure cataloging 1,900 strictly deduplicated unsolved, open, and hard problems (48 typed fields) across 8 Macro-Pillars x 28 Superdomains x 8 Substrates x 7 Abstraction Layers, wired into 1 biconnected 5,808-edge graph (0 APs, 0 bridges, 0 dangling links), paired with 103 audited Pure Lean 4.35.0 theorems (including 10 constructive adversarial refutations) across 6 kernels (plus live negative rejection), 10-page Tectonic AMS-LaTeX white paper + clean-room arXiv tarball (12/12 live citations, 0 Crossref retractions), dual DigiCert RFC 3161 (.tsr) + 3-calendar Bitcoin OpenTimestamps (.ots) proofs, automated external registry delta auditor (Clay/Erdos/ProofAtlas, 3/3 HTTP 200 live), 3 reproducible Track B exact probes (LOG-002 Antihydra, NT-005 Collatz 1..100k + Terras bijection, COMB-001 7 Ramsey witnesses up to R(6,6)>101), community rubric sensitivity diff engine (Spearman rho/Kendall tau/Top-25 Jaccard) exposed as 11th MCP tool simulate_rubric_override, 100% MRR@5 Hybrid RAG (AQS=97.99), strict-CSP WCAG 2.2 AA web apps, 75-test pytest suite + 6/6 mutants, 100.0% (73/73) Build Standard v1.2.0, and live 43-entry companion archive audit (17 rows; 0/1,900 overarching Atlas parents retired).",
-      "verification_boundary": "All 103 Pure Lean 4.35.0 theorems (including 12 concrete NonVacuity inhabitants & sharp negative boundaries, 10 constructive AdversarialTests refutations, and 9 Palomar Challenge/Solution headline targets covering CSS bounds/monotonicity/300-year saturation, Titan Index, Near-Term Leverage, 4-Quadrant and 6-Era partitions, 8x28 taxonomy surjection, finite Handshaking Lemma, cross-partition edge hierarchy, deduplication cardinality bounds, Karpathy AutoResearch anti-reward-hacking ratchet, pairwise delta antisymmetry, and Substrate/Layer/Gradient/Margin/Bridge/Apex-Keystone invariants) compile cleanly with zero Mathlib, zero sorry, zero Classical.choice, and strictly constructive axioms ([propext, Quot.sound] or empty), verified across all 6 independent kernels (including leanchecker --fresh and a live negative kernel rejection test) via sandboxed scripts/verify_lean_six_kernels.sh on Ubuntu CI (#45833490569). Explicitly makes ZERO claim to solve or retire any of the 1,900 overarching open problems (0/1,900 retired across 76 public repos; 16 companion archive entries resolve only narrowly scoped sub-conjectures or discrete model invariants and are disclosed with COI flags); quantitative rubric inputs are disclosed solo-human + AI-assisted falsifiable editorial estimates, not peer-reviewed measurements.",
+      "summary": "Hardened cross-disciplinary open-problem research infrastructure cataloging 2,000 strictly deduplicated unsolved, open, and hard problems (48 typed fields; including 100 primary-registry-indexed conjectures across all 25 live Left to Solve fronts) across 8 Macro-Pillars x 28 Superdomains x 8 Substrates x 7 Abstraction Layers, wired into 1 biconnected 6,108-edge graph (0 APs, 0 bridges, 0 dangling links), paired with a daily-synced 59,396-problem Left to Solve sidecar mirror (199 curated crosswalk matches) & 16-registry tracker (daily-registry-sync.yml, isolated outside frozen CHECKSUMS.sha256), 103 audited Pure Lean 4.35.0 software-model theorems (of 117 decls in lean/; 6 kernel checks across 5 distinct implementations on 9 Palomar targets + live negative rejection), 11-page Tectonic AMS-LaTeX white paper + clean-room arXiv tarball (15/15 live citations, 0 retractions), structurally verified dual DigiCert RFC 3161 (.tsr) + 3-calendar Bitcoin OTS v1 (.ots) proofs, 3 reproducible Track B exact probes (LOG-002 Antihydra, NT-005 Collatz 1..100k + Terras bijection, COMB-002 7 Ramsey witnesses up to R(6,6)>101), 100% MRR@5 Hybrid RAG (immutable AQS=98.35, H-005) & 13-tool MCP server (incl. simulate_rubric_override, get_live_registry_tracker & query_lefttosolve_programs), 3.11 MB enum-compressed strict-CSP WCAG 2.2 AA web apps, 96-test pytest suite + 10/10 mutants, 100.0% (73/73) Build Standard v1.2.0, and Cycle-3 20-row companion archive reconciliation (0/2,000 overarching Atlas parents retired).",
+      "verification_boundary": "All 103 audited Pure Lean 4.35.0 declarations (of 117 theorem/lemma declarations in lean/: 72 core invariants, 12 NonVacuity inhabitants & negative boundaries, 10 constructive AdversarialTests refutations, and 9 Palomar Challenge/Solution headline targets) certify discrete properties of the atlas software model ONLY with zero Mathlib, zero sorry, and per-theorem #print axioms strictly within [propext, Quot.sound] (whole-env lake check --paranoid also lists Classical.choice from Lean core); the 9 Palomar targets pass 6 kernel checks across 5 distinct checker implementations plus a live negative kernel rejection check via sandboxed scripts/verify_lean_six_kernels.sh on Ubuntu CI (#45946262545). No Lean statement refers to the 2,000-row dataset, its 6,108-edge graph, biconnectivity, or IEEE-754 floats (checked in Python). Explicitly makes ZERO claim to solve or retire any of the 2,000 cataloged open problems (0/2,000 retired); quantitative rubric inputs are disclosed AI-assisted falsifiable editorial estimates, not peer-reviewed measurements.",
       "falsification_command": "cd repos/unsolved-problems-mega-atlas && pytest tests/ -v && python scripts/stamp_timestamps.py --verify && python scripts/audit_atlas.py --check-lean && python scripts/forensic_audit.py && python scripts/run_mutation_audit.py && python scripts/check_citations.py && python autoresearch/evaluate.py --verify-gates && python scripts/check_readme_axioms.py && bash scripts/verify_lean_six_kernels.sh"
     },
     {

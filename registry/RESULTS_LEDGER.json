@@ -4248,7 +4248,7 @@
       "statement": "In the atlas's Lean model: CSS, Titan, leverage and AQS bounds for in-range inputs; CSS, Titan and leverage monotone in each input (CSS non-increasing in tractability); exhaustive quadrant iff characterisations; a Q1 leverage floor of 56; a monotone era map; sizes of the 8-pillar, 28-superdomain, 8-substrate and 7-layer lists and completeness of the first three; gradient, margin and apex-keystone results; multigraph handshaking and edge-hierarchy lemmas; a dedup length bound; keep/discard ratchet rules; witnesses and refutations.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
-      "evidence_note": "Lean-to-Python formula correspondence and all properties of the 1,900-row data are checked by Python tests, not Lean.",
+      "evidence_note": "Lean-to-Python formula correspondence and all properties of the 2,000-row data are checked by Python tests, not Lean.",
       "asked_in": null,
       "lean": [
         {
@@ -4259,7 +4259,7 @@
         {
           "decl": "MegaAtlasProofs.Palomar.prove_all_mega_atlas_invariants",
           "file": "lean/PalomarSolution.lean",
-          "line": 44
+          "line": 45
         },
         {
           "decl": "MegaAtlasProofs.Scoring.cssBps_le_max",
@@ -4463,16 +4463,16 @@
         }
       ],
       "axioms": "propext, Quot.sound",
-      "audited_commit": "9e16554260f624df7a023f4cf2f0a76e82f5435f",
+      "audited_commit": "af0a8506b86f7ec7aace0ae868ad8f00001d79a1",
       "audit": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "rebuild": "PASS",
         "fidelity": "AUDITED_NARROWER",
         "prior_work": "KNOWN"
       },
       "limits": [
-        "Retires none of the 1,900 catalogued open problems.",
-        "No Lean statement refers to the atlas data, its 5,808-edge graph, or biconnectivity.",
+        "Retires none of the 2,000 catalogued open problems.",
+        "No Lean statement refers to the atlas data, its 6,108-edge graph, or biconnectivity.",
         "Several counted theorems are literal arithmetic identities or restate a hypothesis.",
         "Six-kernel replay is CI-only (Linux bubblewrap) and was not re-run in this audit.",
         "Bounds need the stated input ranges, for example CSS ≤ 10000 when difficulty, centrality and age are ≤ 100, and Titan in [90, 1000] when difficulty, impact and interdisciplinarity are in [1, 10] and the degree term is ≤ 100.",
