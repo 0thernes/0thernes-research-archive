@@ -131,11 +131,11 @@ def test_consolidated_latest_entries_registered() -> None:
     assert len(papers) == 28
     assert papers["0TH-2026-006"]["version"] == "v2.7.0"
     assert papers["0TH-2026-006"]["lean_verification"]["audited_theorems"] == 896
-    assert papers["0TH-2026-009"]["version"] == "v3.2.0"
-    assert papers["0TH-2026-009"]["lean_verification"]["audited_theorems"] == 2306
-    assert papers["0TH-2026-009"]["lean_verification"]["comparator_targets"] == 18
-    assert papers["0TH-2026-009"]["lean_verification"]["explicit_print_axioms"] == 198
-    assert papers["0TH-2026-004"]["version"] == "v2.2.0"
+    assert papers["0TH-2026-009"]["version"] == "v3.3.0"
+    assert papers["0TH-2026-009"]["lean_verification"]["audited_theorems"] == 2452
+    assert papers["0TH-2026-009"]["lean_verification"]["comparator_targets"] == 24
+    assert papers["0TH-2026-009"]["lean_verification"]["explicit_print_axioms"] == 217
+    assert papers["0TH-2026-004"]["version"] == "v2.3.0"
     assert papers["0TH-2026-011"]["version"] == "v2.5.0"
     assert papers["0TH-2026-012"]["version"] == "v5.3.0"
     assert papers["0TH-2026-012"]["lean_verification"]["audited_theorems"] == 35
