@@ -46,12 +46,12 @@
       "archive_id": "0TH-2026-006",
       "key": "conj-7.7",
       "status": "ACTIVE",
-      "title": "Closed form of the adjacent second-order constant a_\u25b3 (Bani\u0107\u2013Elezovi\u0107 Conjecture 7.7)",
-      "statement": "Let h(\u2113) = E|X\u2082\u2212X\u2081|\u00b7|X\u2083\u2212X\u2082| for (X\u2081,X\u2082,X\u2083) ~ Mult(\u2113; 1/3,1/3,1/3), c_L = 2\u221a3/(3\u03c0) + 1/9, a_* = \u22122\u221a3/(9\u03c0). The limits b_r = lim \u2113\u00b7(h(\u2113) \u2212 c_L\u00b7\u2113 \u2212 a_*) along \u2113 \u2261 r (mod 3) exist, with b\u2080 = 32\u221a3/(81\u03c0) and b\u2081 = b\u2082 = \u221222\u221a3/(81\u03c0). Hence a_\u25b3 := 1/32 + (\u03c0/9)(b\u2080+b\u2081+b\u2082) = 1/32 \u2212 4\u221a3/243 and \u03b3\u2082 := (64a_\u25b3\u22123)/(32\u03c0) = \u22121/(32\u03c0) \u2212 8\u221a3/(243\u03c0).",
+      "title": "Closed form of the adjacent second-order constant a_△ (Banić–Elezović Conjecture 7.7)",
+      "statement": "Let h(ℓ) = E|X₂−X₁|·|X₃−X₂| for (X₁,X₂,X₃) ~ Mult(ℓ; 1/3,1/3,1/3), c_L = 2√3/(3π) + 1/9, a_* = −2√3/(9π). The limits b_r = lim ℓ·(h(ℓ) − c_L·ℓ − a_*) along ℓ ≡ r (mod 3) exist, with b₀ = 32√3/(81π) and b₁ = b₂ = −22√3/(81π). Hence a_△ := 1/32 + (π/9)(b₀+b₁+b₂) = 1/32 − 4√3/243 and γ₂ := (64a_△−3)/(32π) = −1/(32π) − 8√3/(243π).",
       "kind": "ANSWERS_PUBLISHED_QUESTION",
       "evidence": "kernel-checked",
       "asked_in": {
-        "citation": "N. Bani\u0107, N. Elezovi\u0107, Discrete total variation under the multinomial, Part 2: variance under the uniform null (2026), arXiv:2610.17046",
+        "citation": "N. Banić, N. Elezović, Discrete total variation under the multinomial, Part 2: variance under the uniform null (2026), arXiv:2610.17046",
         "url": "https://arxiv.org/abs/2610.17046",
         "locator": "Conjecture 7.7"
       },
@@ -92,8 +92,8 @@
       },
       "limits": [
         "The source is an arXiv v1 preprint posted 2026-10-12 and not peer reviewed; this proof is also unreviewed and no independent mathematician has compared the 143-line statement file with the source line by line.",
-        "Lean proves the three limits, not the O(\u2113\u207b\u00b2) remainder that the source's Lemma 7.3 asserts.",
-        "The step from a_\u25b3 to the variance of the total-variation statistic (source Lemma 7.5 and Theorem 7.6) is not formalized.",
+        "Lean proves the three limits, not the O(ℓ⁻²) remainder that the source's Lemma 7.3 asserts.",
+        "The step from a_△ to the variance of the total-variation statistic (source Lemma 7.5 and Theorem 7.6) is not formalized.",
         "The prior-work search (arXiv, Semantic Scholar citations, one web search, 2026-11-26) found only the source series; MathSciNet and zbMATH were not searched."
       ],
       "check": "cd lean && lake exe cache get && lake build && lake env lean VerifyAxioms.lean"
@@ -104,7 +104,7 @@
       "key": "T1",
       "status": "ACTIVE",
       "title": "Digit-sum characterisation of two-register passive register programs with F_p constants",
-      "statement": "For p prime, t \u2265 1, f \u2208 F_p[x]: a passive two-register program (instructions O += P(R), R += c, O += \u03bbx, R += \u03bbx; constants in F_p) with at most t input accesses producing O + f(x) and restoring R, as an identity of formal polynomials in F_p[R, x], exists exactly when every d \u2265 2 with [x^d]f \u2260 0 has base-p digit sum s_p(d) \u2264 min(p\u22121, t\u22121).",
+      "statement": "For p prime, t ≥ 1, f ∈ F_p[x]: a passive two-register program (instructions O += P(R), R += c, O += λx, R += λx; constants in F_p) with at most t input accesses producing O + f(x) and restoring R, as an identity of formal polynomials in F_p[R, x], exists exactly when every d ≥ 2 with [x^d]f ≠ 0 has base-p digit sum s_p(d) ≤ min(p−1, t−1).",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
       "evidence_note": "Formal identity implies correct execution in every commutative ring of characteristic p (proved, T1s); the converse step is a paper argument.",
@@ -160,10 +160,10 @@
       "key": "T2",
       "status": "ACTIVE",
       "title": "Two-access programs for x^(2^k) in characteristic 2 using product updates only",
-      "statement": "For k \u2265 1 and every commutative ring with 2 = 0, a program on k+1 registers with instructions R_d += R_a\u00b7R_b (d \u2209 {a, b}; register 0 never read) and R_d += x uses 2 input accesses and 4k\u22122 products, adds x^(2^k) to register 0 and restores the others, from every initial state. With k+2 registers and copies R_d += R_s, the indices d, a, b are pairwise distinct.",
+      "statement": "For k ≥ 1 and every commutative ring with 2 = 0, a program on k+1 registers with instructions R_d += R_a·R_b (d ∉ {a, b}; register 0 never read) and R_d += x uses 2 input accesses and 4k−2 products, adds x^(2^k) to register 0 and restores the others, from every initial state. With k+2 registers and copies R_d += R_s, the indices d, a, b are pairwise distinct.",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
-      "evidence_note": "Elementary: repeated squaring with (a+b)\u00b2 = a\u00b2 + b\u00b2 in characteristic 2.",
+      "evidence_note": "Elementary: repeated squaring with (a+b)² = a² + b² in characteristic 2.",
       "asked_in": null,
       "lean": [
         {
@@ -213,11 +213,11 @@
       "archive_id": "0TH-2026-010",
       "key": "T3h",
       "status": "ACTIVE",
-      "title": "Four-register passive powering of x^N with fewer than (104/3)\u00b7N^(log\u2081\u2083 8) input accesses",
-      "statement": "Let N \u2265 1 have \u2113+1 base-13 digits. Over every commutative ring in which D_8 = 2656207148788801777680, 12! and (\u2113+1)! are invertible, some passive four-register program maps (o, u, r\u2081, r\u2082) to (o + x^N, u, r\u2081, r\u2082) with fewer than (104/3)\u00b78^\u2113 \u2264 (104/3)\u00b7N^(log\u2081\u2083 8) input accesses. Counting \u2113+1 base-7 digits instead: 6! and (\u2113+1)! invertible, fewer than (70/3)\u00b75^\u2113 accesses. The base-13 bound is also stated coordinatewise over R\u207f.",
+      "title": "Four-register passive powering of x^N with fewer than (104/3)·N^(log₁₃ 8) input accesses",
+      "statement": "Let N ≥ 1 have ℓ+1 base-13 digits. Over every commutative ring in which D_8 = 2656207148788801777680, 12! and (ℓ+1)! are invertible, some passive four-register program maps (o, u, r₁, r₂) to (o + x^N, u, r₁, r₂) with fewer than (104/3)·8^ℓ ≤ (104/3)·N^(log₁₃ 8) input accesses. Counting ℓ+1 base-7 digits instead: 6! and (ℓ+1)! invertible, fewer than (70/3)·5^ℓ accesses. The base-13 bound is also stated coordinatewise over Rⁿ.",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
-      "evidence_note": "Lean states 3\u00b7accesses < 104\u00b78^\u2113 with 13^\u2113 \u2264 N; the real-exponent form and the comparison with log\u2085 4 are paper-level conversions.",
+      "evidence_note": "Lean states 3·accesses < 104·8^ℓ with 13^ℓ ≤ N; the real-exponent form and the comparison with log₅ 4 are paper-level conversions.",
       "asked_in": null,
       "lean": [
         {
@@ -255,10 +255,10 @@
         "prior_work": "NONE_FOUND"
       },
       "limits": [
-        "Improves the exponent of Corollary 4.3.1 of arXiv:2609.18692 at four registers (log\u2085 4 \u2248 0.8614 to log\u2081\u2083 8 \u2248 0.8107); with the stated constants the bound is smaller than 20\u00b7N^(log\u2085 4) only for N above about 52,000 (base-7 variant: above about 90).",
-        "No lower bound is proved: log\u2081\u2083 8 is the smallest exponent among the constructed base programs (t = 8 minimises log_(2t\u22123) t over integers t \u2265 4, which is integer arithmetic), not a proven optimum for three-register base programs.",
-        "In prime characteristic p the hypotheses exclude p \u2208 {2, 3, 5, 7, 11, 137, 1602207194491} and require p > \u2113+1, which limits N.",
-        "With five registers the cited paper already has the smaller exponent log\u2087 4 \u2248 0.712.",
+        "Improves the exponent of Corollary 4.3.1 of arXiv:2609.18692 at four registers (log₅ 4 ≈ 0.8614 to log₁₃ 8 ≈ 0.8107); with the stated constants the bound is smaller than 20·N^(log₅ 4) only for N above about 52,000 (base-7 variant: above about 90).",
+        "No lower bound is proved: log₁₃ 8 is the smallest exponent among the constructed base programs (t = 8 minimises log_(2t−3) t over integers t ≥ 4, which is integer arithmetic), not a proven optimum for three-register base programs.",
+        "In prime characteristic p the hypotheses exclude p ∈ {2, 3, 5, 7, 11, 137, 1602207194491} and require p > ℓ+1, which limits N.",
+        "With five registers the cited paper already has the smaller exponent log₇ 4 ≈ 0.712.",
         "The coordinatewise corollary contains no stream model or space bound; the streaming and matrix-powering applications are paper arguments outside Lean."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -268,11 +268,11 @@
       "archive_id": "0TH-2026-016",
       "key": "T2ac",
       "status": "ACTIVE",
-      "title": "Lower bounds for the Shannon capacity of the odd cycles C\u2082\u2085 and C\u2082\u2089",
-      "statement": "C\u2082\u2085^\u22a0144 contains an independent set of size M with 12344196091426841^144 \u2264 M\u00b710^(15\u00b7144), and C\u2082\u2089^\u22a04 contains an independent set of size 42050, where 14319949949077991^4 \u2264 42050\u00b710^60. Consequently \u0398(C\u2082\u2085) \u2265 12.344196091426841 and \u0398(C\u2082\u2089) \u2265 14.319949949077991. Both exceed the largest earlier values found, 23125^(1/4) \u2248 12.3316 and 42017^(1/4) \u2248 14.3171 (Codenotti\u2013Gerace\u2013Resta 2003, Table 1).",
+      "title": "Lower bounds for the Shannon capacity of the odd cycles C₂₅ and C₂₉",
+      "statement": "C₂₅^⊠144 contains an independent set of size M with 12344196091426841^144 ≤ M·10^(15·144), and C₂₉^⊠4 contains an independent set of size 42050, where 14319949949077991^4 ≤ 42050·10^60. Consequently Θ(C₂₅) ≥ 12.344196091426841 and Θ(C₂₉) ≥ 14.319949949077991. Both exceed the largest earlier values found, 23125^(1/4) ≈ 12.3316 and 42017^(1/4) ≈ 14.3171 (Codenotti–Gerace–Resta 2003, Table 1).",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
-      "evidence_note": "\u0398 is not defined in Lean; the capacity bounds follow from the integer statements by \u0398(G) = sup \u03b1(G^\u22a0d)^(1/d).",
+      "evidence_note": "Θ is not defined in Lean; the capacity bounds follow from the integer statements by Θ(G) = sup α(G^⊠d)^(1/d).",
       "asked_in": null,
       "lean": [
         {
@@ -295,9 +295,9 @@
         "prior_work": "NONE_FOUND"
       },
       "limits": [
-        "Lower bounds only; the exact value of \u0398(C_n) is open for every odd n \u2265 7.",
-        "The margins over the 2003 values are 0.01257 (C\u2082\u2085) and 0.00281 (C\u2082\u2089, 33 more words in the fourth power), smaller than the gains the repository states against third-power values.",
-        "The C\u2082\u2085 base set has the 2003 published size 23125; the gain comes from a port system and the Buys\u2013Polak\u2013Zuiddam substitution tables, whose framework this follows.",
+        "Lower bounds only; the exact value of Θ(C_n) is open for every odd n ≥ 7.",
+        "The margins over the 2003 values are 0.01257 (C₂₅) and 0.00281 (C₂₉, 33 more words in the fourth power), smaller than the gains the repository states against third-power values.",
+        "The C₂₅ base set has the 2003 published size 23125; the gain comes from a port system and the Buys–Polak–Zuiddam substitution tables, whose framework this follows.",
         "The prior-work search was not exhaustive: Baumert et al. 1971 and Hales 1973 were not opened, and the 2003 table entries are printed cardinalities."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -308,7 +308,7 @@
       "key": "T1d",
       "status": "ACTIVE",
       "title": "Independent sets in the fourth strong power of C_n for n = 4m+1",
-      "statement": "For every m \u2265 5 with m \u2261 0 or 1 (mod 4) and n = 4m+1: \u03b1(C_n^\u22a04) \u2265 (m\u00b2 + \u230am/4\u230b)\u00b7n\u00b2. The set is lifted from m\u00b2 + \u230am/4\u230b = \u230an\u230an/4\u230b/4\u230b points of \u2124_n\u00b2, no two within circular distance 3 in both coordinates; no such point set is larger (n \u2265 4), and each one of size M lifts to M\u00b7n\u00b2 points (n \u2265 9).",
+      "statement": "For every m ≥ 5 with m ≡ 0 or 1 (mod 4) and n = 4m+1: α(C_n^⊠4) ≥ (m² + ⌊m/4⌋)·n². The set is lifted from m² + ⌊m/4⌋ = ⌊n⌊n/4⌋/4⌋ points of ℤ_n², no two within circular distance 3 in both coordinates; no such point set is larger (n ≥ 4), and each one of size M lifts to M·n² points (n ≥ 9).",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
       "evidence_note": "Three contract theorems: lifting (T1a), ceiling (T1b), family (T1d).",
@@ -339,10 +339,10 @@
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "For m \u2261 0 (mod 4), n = 16j+1, the size equals (n\u2074\u2212n\u00b3)/16, the exact value of \u03b1(C_n^\u22a04) credited to Baumert et al. (1971) in the 2003 paper of Codenotti, Gerace and Resta.",
-        "The case n = 21 (11466 words, 26 cosets of \u27e8(1,0,0,2),(0,1,2,0)\u27e9) is in the 2026 Lean repository of Buys, Polak and Zuiddam.",
-        "For m \u2261 1 (mod 4), m \u2265 9, the sizes exceed the 2003 table entries at n = 37 and n = 53 (113627 vs 113586, 483148 vs 483091); no search for later work on these n was done.",
-        "The ceiling bounds unions of cosets of one subgroup, not \u03b1(C_n^\u22a04); Lean proves the lifting direction only."
+        "For m ≡ 0 (mod 4), n = 16j+1, the size equals (n⁴−n³)/16, the exact value of α(C_n^⊠4) credited to Baumert et al. (1971) in the 2003 paper of Codenotti, Gerace and Resta.",
+        "The case n = 21 (11466 words, 26 cosets of ⟨(1,0,0,2),(0,1,2,0)⟩) is in the 2026 Lean repository of Buys, Polak and Zuiddam.",
+        "For m ≡ 1 (mod 4), m ≥ 9, the sizes exceed the 2003 table entries at n = 37 and n = 53 (113627 vs 113586, 483148 vs 483091); no search for later work on these n was done.",
+        "The ceiling bounds unions of cosets of one subgroup, not α(C_n^⊠4); Lean proves the lifting direction only."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -352,7 +352,7 @@
       "key": "B32-31",
       "status": "ACTIVE",
       "title": "Minimum Kochen-Specker set in the 49-ray integer pool B(3,2)",
-      "statement": "Let B(3,2) be the 49 primitive rays of \u2124\u00b3 with entries in {\u22122,\u2026,2}. Some 31 of them admit no Kochen\u2013Specker colouring (no two orthogonal rays coloured 1, every orthogonal triple inside the set containing a ray coloured 1), and every subset of at most 30 of them admits one.",
+      "statement": "Let B(3,2) be the 49 primitive rays of ℤ³ with entries in {−2,…,2}. Some 31 of them admit no Kochen–Specker colouring (no two orthogonal rays coloured 1, every orthogonal triple inside the set containing a ray coloured 1), and every subset of at most 30 of them admits one.",
       "kind": "BOUNDED_CASE",
       "evidence": "kernel-checked",
       "evidence_note": "The pool list is proved equal to all such rays, each once (rays_eq, boxRays_exact).",
@@ -379,7 +379,7 @@
       },
       "limits": [
         "Only rays inside B(3,2) are considered; the unrestricted minimum in dimension three (QM-011) is not affected.",
-        "The value 31 was reported earlier by Kernaghan (arXiv:2603.16988, v1\u2013v9); v10 (Appendix A, item C2) calls the earlier certification code unsound but keeps 31 for this pool after recomputing it.",
+        "The value 31 was reported earlier by Kernaghan (arXiv:2603.16988, v1–v9); v10 (Appendix A, item C2) calls the earlier certification code unsound but keeps 31 for this pool after recomputing it.",
         "An independent Lean proof for the same pool appeared in arXiv:2603.16988v10 on 23 Nov 2026, after this repository's v1.0.0 of 10 Nov 2026; v10 states that its Lean pool list is not proved to contain all rays.",
         "A ProblemHive forum note (post p/xfkay, October 2026, reference [33] of the repository paper) reported the minimum 31 for integer coordinates up to 2, 3 and 4, without a certificate.",
         "That there are exactly six minimum sets is not part of the Lean theorem."
@@ -392,7 +392,7 @@
       "key": "B3H-31",
       "status": "ACTIVE",
       "title": "Minimum Kochen-Specker set in the integer pools B(3,3) and B(3,4)",
-      "statement": "Among the 145 (H = 3) and the 289 (H = 4) rays of \u2124\u00b3 with a representative of max-norm at most H, every set of at most 30 rays admits a Kochen\u2013Specker colouring; a 31-ray set without one exists, since it lies in B(3,2).",
+      "statement": "Among the 145 (H = 3) and the 289 (H = 4) rays of ℤ³ with a representative of max-norm at most H, every set of at most 30 rays admits a Kochen–Specker colouring; a 31-ray set without one exists, since it lies in B(3,2).",
       "kind": "BOUNDED_CASE",
       "evidence": "certificate-checked",
       "evidence_note": "B(3,3): drat-trim/LRAT in CI and an independent auditor SAT run. B(3,4): only the project's DRUP checker, not re-run.",
@@ -410,7 +410,7 @@
         "There is no Lean proof (a B(3,3) Lean module was stopped after 49 minutes without a verdict and is not in the repository). B(3,3) rests on the Python CNF encoder with SAT proofs checked by the project's DRUP checker and by drat-trim/LRAT, and on a search-tree certificate replayed by the project's JavaScript verifier; B(3,4) rests on the encoder and the project's DRUP checker.",
         "The SAT encodings are sound only by paper lemmas of paper/PROOFS.md, not checked by machine: Lemma 1 (colouring cuts), Lemma 3 (conditions C1/C2 for critical sets) and Lemma 6 (symmetry normal form).",
         "For B(3,4) no proof file is tracked in git and no third-party checker was run.",
-        "Kernaghan (arXiv:2603.16988) already listed the minimum 31 for the 145-ray pool {0, \u00b11, \u00b12, \u00b13} (50 triads) in v1 of 17 Mar 2026 (Table 2), without a certificate; v10 (23 Nov 2026) certifies it.",
+        "Kernaghan (arXiv:2603.16988) already listed the minimum 31 for the 145-ray pool {0, ±1, ±2, ±3} (50 triads) in v1 of 17 Mar 2026 (Table 2), without a certificate; v10 (23 Nov 2026) certifies it.",
         "A ProblemHive forum note (post p/xfkay, October 2026, reference [33] of the repository paper) reported the minimum 31 for integer coordinates up to 3 and 4, without a certificate.",
         "The unrestricted minimum in dimension three is not affected."
       ],
@@ -422,7 +422,7 @@
       "key": "U3N-33",
       "status": "ACTIVE",
       "title": "Minimum Kochen-Specker set in roots-of-unity pools U(3,N), N = 6, 12, 18, 24",
-      "statement": "For N \u2208 {6, 12, 18, 24}, among the rays of \u2102\u00b3 whose entries are 0 or N-th roots of unity, every set of at most 32 rays admits a Kochen\u2013Specker colouring, and some 33-ray set admits none.",
+      "statement": "For N ∈ {6, 12, 18, 24}, among the rays of ℂ³ whose entries are 0 or N-th roots of unity, every set of at most 32 rays admits a Kochen–Specker colouring, and some 33-ray set admits none.",
       "kind": "BOUNDED_CASE",
       "evidence": "certificate-checked",
       "evidence_note": "Project DRUP checker only. The auditor's independent SAT run confirms N = 6 and N = 12; N = 18 and 24 were not re-run.",
@@ -453,8 +453,8 @@
       "archive_id": "0TH-2026-004",
       "key": "B51-29",
       "status": "ACTIVE",
-      "title": "Minimum Kochen-Specker set in the 121-ray pool {0, \u00b11}\u2075",
-      "statement": "Among the 121 rays of \u2124\u2075 with entries in {0, 1, \u22121}, every set of at most 28 rays admits a Kochen\u2013Specker colouring, and some 29-ray set admits none.",
+      "title": "Minimum Kochen-Specker set in the 121-ray pool {0, ±1}⁵",
+      "statement": "Among the 121 rays of ℤ⁵ with entries in {0, 1, −1}, every set of at most 28 rays admits a Kochen–Specker colouring, and some 29-ray set admits none.",
       "kind": "BOUNDED_CASE",
       "evidence": "certificate-checked",
       "evidence_note": "Rests on a paper lemma (Lemma 7, three cases by number of axes) and 83 SAT proofs checked by the project's own checker.",
@@ -472,7 +472,7 @@
         "There is no Lean proof, and no third-party proof checker was run.",
         "The case split (Lemma 7), the cube decomposition and the lemmas behind the SAT encoding (Lemma 1 colouring cuts, Lemma 3 conditions C1/C2, Lemma 6 symmetry normal form) are paper arguments, not checked by machine.",
         "Proof files are not tracked in git; re-checking means regenerating them (hours, per the README).",
-        "The value 29 was reported earlier, without a proof that nothing smaller exists, as the smallest critical set generated from the components 0, \u00b11 in dimension five (Pavi\u010di\u0107 and Megill, Phys. Rev. A 106, L060203 (2022), arXiv:2202.08197); the new part is the lower bound inside this pool.",
+        "The value 29 was reported earlier, without a proof that nothing smaller exists, as the smallest critical set generated from the components 0, ±1 in dimension five (Pavičić and Megill, Phys. Rev. A 106, L060203 (2022), arXiv:2202.08197); the new part is the lower bound inside this pool.",
         "Not re-run by this audit.",
         "The general minimum in dimension five is not affected."
       ],
@@ -531,11 +531,11 @@
       "archive_id": "0TH-2026-010",
       "key": "T3-programs",
       "status": "ACTIVE",
-      "title": "Three-register passive programs for x^(2t\u22123) with t = 5, \u2026, 9 input accesses",
-      "statement": "For t = 5,\u2026,9 and every commutative ring in which the integer D_t is invertible, a passive program on registers (O, u, v) with exactly t input accesses maps (o, u, v) to (o + x^(2t\u22123), u, v) for all x, o, u, v. D_5 = 576, D_6 = 382500000; D_7, D_8, D_9 have 23, 22 and 51 digits. Hence D^pass_3(t) \u2265 2t\u22123 for these t over such fields.",
+      "title": "Three-register passive programs for x^(2t−3) with t = 5, …, 9 input accesses",
+      "statement": "For t = 5,…,9 and every commutative ring in which the integer D_t is invertible, a passive program on registers (O, u, v) with exactly t input accesses maps (o, u, v) to (o + x^(2t−3), u, v) for all x, o, u, v. D_5 = 576, D_6 = 382500000; D_7, D_8, D_9 have 23, 22 and 51 digits. Hence D^pass_3(t) ≥ 2t−3 for these t over such fields.",
       "kind": "BOUNDED_CASE",
       "evidence": "kernel-checked",
-      "evidence_note": "Also re-derived in this audit by exact integer polynomial arithmetic outside Lean: each program adds D_t\u00b7x^(2t\u22123) and restores u, v.",
+      "evidence_note": "Also re-derived in this audit by exact integer polynomial arithmetic outside Lean: each program adds D_t·x^(2t−3) and restores u, v.",
       "asked_in": {
         "citation": "A. Vinciguerra, An Operator Approach to Register Programs for Catalytic Computing (2026), arXiv:2609.18692v1",
         "url": "https://arxiv.org/abs/2609.18692",
@@ -583,8 +583,8 @@
       },
       "limits": [
         "Lower bounds for three registers and five values of t only; the cited question is not answered: no upper bound on D^pass_3(t) is proved, and D^pass_3(4) is itself only known to be at least 5.",
-        "The companion question of the same section, whether D^pass_r(4) exceeds 2r\u22121, is not addressed.",
-        "No uniform family: nothing is constructed for t \u2265 10.",
+        "The companion question of the same section, whether D^pass_r(4) exceeds 2r−1, is not addressed.",
+        "No uniform family: nothing is constructed for t ≥ 10.",
         "Excluded characteristics are the prime factors of D_t (for t = 8: 2, 3, 5, 7, 137, 1602207194491).",
         "The cited source is an arXiv preprint (v1), not a refereed publication.",
         "Prior-work search limited to arXiv, Semantic Scholar and one web query on 2026-11-26."
@@ -596,11 +596,11 @@
       "archive_id": "0TH-2026-014",
       "key": "T6",
       "status": "ACTIVE",
-      "title": "Frozen bit strings of the 0110\u21941001 dipole-conserving gate",
-      "statement": "Swapping 0110 and 1001 preserves charge and dipole moment. The sequence Z with Z(0..4) = 1, 2, 4, 8, 14 and Z(L) = Z(L\u22121) + Z(L\u22122) + Z(L\u22124) for L \u2265 5 equals the number of length-L bit strings avoiding 0110 and 1001 for L = 1, \u2026, 6, and satisfies 2Z(L) < Z(L+4) for L \u2265 1. Over \u2124, x\u2074 \u2212 x\u00b3 \u2212 x\u00b2 \u2212 1 = (x+1)(x\u00b3 \u2212 2x\u00b2 + x \u2212 1).",
+      "title": "Frozen bit strings of the 0110↔1001 dipole-conserving gate",
+      "statement": "Swapping 0110 and 1001 preserves charge and dipole moment. The sequence Z with Z(0..4) = 1, 2, 4, 8, 14 and Z(L) = Z(L−1) + Z(L−2) + Z(L−4) for L ≥ 5 equals the number of length-L bit strings avoiding 0110 and 1001 for L = 1, …, 6, and satisfies 2Z(L) < Z(L+4) for L ≥ 1. Over ℤ, x⁴ − x³ − x² − 1 = (x+1)(x³ − 2x² + x − 1).",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "Count identity kernel-checked for L \u2264 6 only; agreement for larger L is computational (L \u2264 14 in the repository, L \u2264 15 in this audit).",
+      "evidence_note": "Count identity kernel-checked for L ≤ 6 only; agreement for larger L is computational (L ≤ 14 in the repository, L ≤ 15 in this audit).",
       "asked_in": null,
       "lean": [
         {
@@ -633,10 +633,10 @@
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "The 'Plastic-constant-squared' conjunct is vacuous: \u03c1\u00b3 = \u03c1 + 1 has no integer solution.",
-        "The growth rate \u03c1\u00b2 and \u0398(\u03c1^(2L)) are not in Lean.",
+        "The 'Plastic-constant-squared' conjunct is vacuous: ρ³ = ρ + 1 has no integer solution.",
+        "The growth rate ρ² and Θ(ρ^(2L)) are not in Lean.",
         "'Skin-effect immunity' of frozen strings follows directly from the definition of frozen.",
-        "The string count is kernel-checked only for L = 1, \u2026, 6. dfa_total_eq_zFrozen proves the recurrence for a four-state transfer count for every L, but that count is never proved equal to the number of bit strings.",
+        "The string count is kernel-checked only for L = 1, …, 6. dfa_total_eq_zFrozen proves the recurrence for a four-state transfer count for every L, but that count is never proved equal to the number of bit strings.",
         "The counting sequence coincides with OEIS A164394 (stated there for the pattern pair 0001, 0100) on L = 0..15; exponentially many frozen states under dipole-conserving dynamics are known (Sala et al. 2020; Khemani et al. 2020)."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -646,8 +646,8 @@
       "archive_id": "0TH-2026-004",
       "key": "B41-18",
       "status": "ACTIVE",
-      "title": "Minimum Kochen-Specker set in the 40-ray pool {0, \u00b11}\u2074",
-      "statement": "Let B(4,1) be the 40 rays of \u2124\u2074 with entries in {0, 1, \u22121}. Some 18 of them admit no Kochen\u2013Specker colouring (bases are orthogonal quadruples inside the set), and every subset of at most 17 of them admits one.",
+      "title": "Minimum Kochen-Specker set in the 40-ray pool {0, ±1}⁴",
+      "statement": "Let B(4,1) be the 40 rays of ℤ⁴ with entries in {0, 1, −1}. Some 18 of them admit no Kochen–Specker colouring (bases are orthogonal quadruples inside the set), and every subset of at most 17 of them admits one.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -672,7 +672,7 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "The bound 18 is known for all Kochen\u2013Specker sets in every dimension (Xu, Chen, G\u00fchne, arXiv:2001.07656); this record restricts it to one finite pool.",
+        "The bound 18 is known for all Kochen–Specker sets in every dimension (Xu, Chen, Gühne, arXiv:2001.07656); this record restricts it to one finite pool.",
         "That there are exactly 16 minimum sets in the pool is not part of the Lean theorem."
       ],
       "check": "cd lean && lake build KS Solution && lake env lean KS/Audit.lean"
@@ -682,15 +682,15 @@
       "archive_id": "0TH-2026-006",
       "key": "gamma-algebra",
       "status": "ACTIVE",
-      "title": "Algebraic closed forms of the Bani\u0107\u2013Elezovi\u0107 recombination expressions for \u03b3(n), \u03b3_c(n), \u03b3(3;N), \u03b3(4;N)",
-      "statement": "With p\u2081 = (n\u00b2\u22124n\u22124)/(32\u03c0n), q\u2081 = a_\u25b3\u00b7n/\u03c0 \u2212 (n+1)/(8\u03c0n), r\u2081 = \u2212(n+1)/(8\u03c0n) and a_\u25b3 = 1/32 \u2212 4\u221a3/243: for real n \u2260 0, (n\u22121)p\u2081 + 2(n\u22122)q\u2081 + (n\u22122)(n\u22123)r\u2081 = \u2212n(n+1)/(32\u03c0) \u2212 8\u221a3\u00b7n(n\u22122)/(243\u03c0) + (n\u22121)/(8\u03c0n), and n\u00b7p\u2081 + 2n\u00b7q\u2081 + n(n\u22123)r\u2081 = \u2212n(n+4)/(32\u03c0) \u2212 8\u221a3\u00b7n\u00b2/(243\u03c0). Two analogous identities hold at n = 3 and n = 4.",
+      "title": "Algebraic closed forms of the Banić–Elezović recombination expressions for γ(n), γ_c(n), γ(3;N), γ(4;N)",
+      "statement": "With p₁ = (n²−4n−4)/(32πn), q₁ = a_△·n/π − (n+1)/(8πn), r₁ = −(n+1)/(8πn) and a_△ = 1/32 − 4√3/243: for real n ≠ 0, (n−1)p₁ + 2(n−2)q₁ + (n−2)(n−3)r₁ = −n(n+1)/(32π) − 8√3·n(n−2)/(243π) + (n−1)/(8πn), and n·p₁ + 2n·q₁ + n(n−3)r₁ = −n(n+4)/(32π) − 8√3·n²/(243π). Two analogous identities hold at n = 3 and n = 4.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "Identities between real numbers only. That the left sides are variance coefficients is taken from Bani\u0107\u2013Elezovi\u0107, outside Lean.",
+      "evidence_note": "Identities between real numbers only. That the left sides are variance coefficients is taken from Banić–Elezović, outside Lean.",
       "asked_in": {
-        "citation": "N. Bani\u0107, N. Elezovi\u0107, Discrete total variation under the multinomial, Part 2: variance under the uniform null (2026), arXiv:2610.17046",
+        "citation": "N. Banić, N. Elezović, Discrete total variation under the multinomial, Part 2: variance under the uniform null (2026), arXiv:2610.17046",
         "url": "https://arxiv.org/abs/2610.17046",
-        "locator": "Theorem 7.6 and the consequences stated after Conjecture 7.7; for \u03b3_c, Theorem 3.10 of Part 5, arXiv:2611.14735"
+        "locator": "Theorem 7.6 and the consequences stated after Conjecture 7.7; for γ_c, Theorem 3.10 of Part 5, arXiv:2611.14735"
       },
       "lean": [
         {
@@ -723,10 +723,10 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "Lean defines no random variable, variance or expansion in N. That these expressions are the N\u207b\u00b2 coefficients of Var(d)/N rests on Theorem 7.6, Lemmas 7.2, 7.3, 7.5 and Section 8 of arXiv:2610.17046v1 and Theorem 3.10 of arXiv:2611.14735v1, which are unrefereed and not formalized.",
+        "Lean defines no random variable, variance or expansion in N. That these expressions are the N⁻² coefficients of Var(d)/N rests on Theorem 7.6, Lemmas 7.2, 7.3, 7.5 and Section 8 of arXiv:2610.17046v1 and Theorem 3.10 of arXiv:2611.14735v1, which are unrefereed and not formalized.",
         "The closed forms are already printed in the source as consequences conditional on Conjecture 7.7; these theorems machine-check that algebra.",
-        "In Lean n is any nonzero real; the source's statements are for integer n \u2265 5, with n = 3 and n = 4 treated separately.",
-        "In the n = 4 identity the term (\u22121)^N/(2\u03c0) appears unchanged on both sides, so the dependence on N is carried, not derived."
+        "In Lean n is any nonzero real; the source's statements are for integer n ≥ 5, with n = 3 and n = 4 treated separately.",
+        "In the n = 4 identity the term (−1)^N/(2π) appears unchanged on both sides, so the dependence on N is carried, not derived."
       ],
       "check": "cd lean && lake exe cache get && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -736,7 +736,7 @@
       "key": "T01-T06",
       "status": "ACTIVE",
       "title": "Inequalities for the Hill function of order four in cleared-denominator form",
-      "statement": "For naturals c, c1 < c2, kd > 0, x\u2074 written out: c\u2074 < c\u2074 + kd\u2074; c\u2074/(c\u2074+kd\u2074) strictly increases in c; it is at most 1/82 when 3c \u2264 kd; for kd = 2h, h > 0, its values at kd and h have ratio 17/2; for c > 0 it lies below c/(c+kd) when c < kd and above when c > kd; and 2\u00b7kd\u2074 = kd\u2074 + kd\u2074.",
+      "statement": "For naturals c, c1 < c2, kd > 0, x⁴ written out: c⁴ < c⁴ + kd⁴; c⁴/(c⁴+kd⁴) strictly increases in c; it is at most 1/82 when 3c ≤ kd; for kd = 2h, h > 0, its values at kd and h have ratio 17/2; for c > 0 it lies below c/(c+kd) when c < kd and above when c > kd; and 2·kd⁴ = kd⁴ + kd⁴.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -781,7 +781,7 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "Statements are over natural numbers with denominators cleared; no real-valued Hill function or Ca\u00b2\u207a model is defined.",
+        "Statements are over natural numbers with denominators cleared; no real-valued Hill function or Ca²⁺ model is defined.",
         "T02 is the identity 2x = x + x and its hypothesis kd > 0 is unused.",
         "These are textbook properties; a prior public Lean 4 formalisation of Hill monotonicity exists (marpaia/grn-lean, per the literature audit)."
       ],
@@ -792,8 +792,8 @@
       "archive_id": "0TH-2026-007",
       "key": "T07-T11,T20-T24",
       "status": "ACTIVE",
-      "title": "Integer bounds for a short-term-plasticity step, conductance means, a blocking factor and 2\u00d72 determinants",
-      "statement": "Over integers with stated positivity, denominators cleared: one Tsodyks\u2013Markram step u\u207a = u + \u230au\u2080(S\u2212u)/S\u230b keeps u \u2264 u\u207a \u2264 S and releases at most x; eI\u00b7G \u2264 \u03a3g\u1d62e\u1d62 \u2264 eE\u00b7G, strictly lowered when gI > 0; D/(D+m\u00b7e) < 1, decreasing in e; \u03c3\u00b2N < \u03c3\u00b2NK for K \u2265 2; kc/(kc+kOff) increases in c; rank-one 2\u00d72 tables have det 0; diagonal excess gives |det| > 0.",
+      "title": "Integer bounds for a short-term-plasticity step, conductance means, a blocking factor and 2×2 determinants",
+      "statement": "Over integers with stated positivity, denominators cleared: one Tsodyks–Markram step u⁺ = u + ⌊u₀(S−u)/S⌋ keeps u ≤ u⁺ ≤ S and releases at most x; eI·G ≤ Σgᵢeᵢ ≤ eE·G, strictly lowered when gI > 0; D/(D+m·e) < 1, decreasing in e; σ²N < σ²NK for K ≥ 2; kc/(kc+kOff) increases in c; rank-one 2×2 tables have det 0; diagonal excess gives |det| > 0.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -858,10 +858,10 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "T11 is monotonicity in an abstract natural e; the voltage dependence of NMDA Mg\u00b2\u207a unblock (exp(\u22120.062 V)) is not formalised.",
+        "T11 is monotonicity in an abstract natural e; the voltage dependence of NMDA Mg²⁺ unblock (exp(−0.062 V)) is not formalised.",
         "T10 states two numerator identities; the divisive ratio (gL+gE)/(gL+gE+gI) is not itself a Lean statement.",
-        "T07 covers one spike update only, and its hypothesis u\u2080 > 0 is unused.",
-        "T22\u2013T24 concern four integers and contain no notion of integration, causality or nanocolumn structure; they are also listed under companion entry 0TH-2026-008."
+        "T07 covers one spike update only, and its hypothesis u₀ > 0 is unused.",
+        "T22–T24 concern four integers and contain no notion of integration, causality or nanocolumn structure; they are also listed under companion entry 0TH-2026-008."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -871,7 +871,7 @@
       "key": "T4",
       "status": "ACTIVE",
       "title": "Clean product of 2^k inputs by a balanced four-step telescoping recursion",
-      "statement": "For every k, sign \u00b11 and duplicate-free register list target :: pool with |pool| \u2265 k+1 when k \u2265 1, a program of (7\u00b74^k \u2212 4)/3 instructions of the forms R_i \u00b1 x_l and R_i \u00b1 R_a\u00b7R_b (i, a, b pairwise distinct) adds \u00b1 x_off \u00b7 \u2026 \u00b7 x_(off+2^k\u22121) to the target register and leaves every other register unchanged, over every commutative ring and from every initial state.",
+      "statement": "For every k, sign ±1 and duplicate-free register list target :: pool with |pool| ≥ k+1 when k ≥ 1, a program of (7·4^k − 4)/3 instructions of the forms R_i ± x_l and R_i ± R_a·R_b (i, a, b pairwise distinct) adds ± x_off · … · x_(off+2^k−1) to the target register and leaves every other register unchanged, over every commutative ring and from every initial state.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Variant of the classical four-term clean-product recursion; the exact instruction count in this instruction set was not located in the literature.",
@@ -907,7 +907,7 @@
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "The publicly quoted register count log\u2082 d + 2 is not a conjunct of the Lean statement at the audited commit; it is read off the program definition (the conjunct was added upstream after this commit).",
+        "The publicly quoted register count log₂ d + 2 is not a conjunct of the Lean statement at the audited commit; it is read off the program definition (the conjunct was added upstream after this commit).",
         "Overlap with earlier work: Ben-Or and Cleve (SIAM J. Comput. 1992) give polynomial-length three-register programs for all polynomial-size formulas in a neighbouring instruction set and report earlier logarithmic-register methods; the paper does not position this result against them.",
         "No lower bound is proved; the words 'optimal' and 'sharp' used for this result in the paper are unsupported.",
         "Number of inputs is a power of two."
@@ -920,7 +920,7 @@
       "key": "T5",
       "status": "ACTIVE",
       "title": "ML-KEM parameter arithmetic and a Compress_1 decoding margin",
-      "statement": "3329 is prime and 17 has multiplicative order 256 modulo 3329; signed Montgomery reduction returns r with r\u00b72^16 \u2261 a (mod 3329) and |r| < 3329 for |a| < 2^15\u00b73329; for b \u2208 {0,1} and |e| \u2264 831 the repository's Lean function mlkemCompress1 maps b\u00b71665 + e to b.",
+      "statement": "3329 is prime and 17 has multiplicative order 256 modulo 3329; signed Montgomery reduction returns r with r·2^16 ≡ a (mod 3329) and |r| < 3329 for |a| < 2^15·3329; for b ∈ {0,1} and |e| ≤ 831 the repository's Lean function mlkemCompress1 maps b·1665 + e to b.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "mlkemCompress1 uses offset 1665 and differs from FIPS 203 Compress_1 only at x = 832, which this margin statement never reaches.",
@@ -963,8 +963,8 @@
       "archive_id": "0TH-2026-011",
       "key": "T2-T3",
       "status": "ACTIVE",
-      "title": "Combinatorial cores of one-time pad, XOR combining, Toeplitz hashing, Shamir sharing and Reed\u2013Solomon decoding",
-      "statement": "Over Boolean vectors: the one-time-pad key and each XOR-combiner factor are unique given the rest; for x \u2260 y, some m-bit Toeplitz seed window, given the other seed bits, is fixed uniquely by each target hash difference. Over any SimpleField: a nonzero polynomial with \u2264 d+1 coefficients has \u2264 d distinct roots; t points determine f(0) for length \u2264 t; t\u22121 shares fit every secret; f(0) is uniquely decodable when n \u2265 t + 2b.",
+      "title": "Combinatorial cores of one-time pad, XOR combining, Toeplitz hashing, Shamir sharing and Reed–Solomon decoding",
+      "statement": "Over Boolean vectors: the one-time-pad key and each XOR-combiner factor are unique given the rest; for x ≠ y, some m-bit Toeplitz seed window, given the other seed bits, is fixed uniquely by each target hash difference. Over any SimpleField: a nonzero polynomial with ≤ d+1 coefficients has ≤ d distinct roots; t points determine f(0) for length ≤ t; t−1 shares fit every secret; f(0) is uniquely decodable when n ≥ t + 2b.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -1011,7 +1011,7 @@
       "limits": [
         "Probabilistic secrecy, universal-hash collision probability and the leftover hash lemma are not formalized; only bijection and counting cores are.",
         "The 'tightness' part of t3b is only the arithmetic d = 2b; no counterexample is built.",
-        "All are textbook results (Shannon 1949, Carter\u2013Wegman, Shamir 1979, Reed\u2013Solomon decoding)."
+        "All are textbook results (Shannon 1949, Carter–Wegman, Shamir 1979, Reed–Solomon decoding)."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -1020,8 +1020,8 @@
       "archive_id": "0TH-2026-011",
       "key": "T7b-T7c",
       "status": "ACTIVE",
-      "title": "Total-variation/overlap identity and classical Fuchs\u2013van de Graaf bounds for finite distributions",
-      "statement": "For P0, P1 : \u2115 \u2192 \u2115 with equal totals D: \u03a3|P0\u2212P1| + 2\u00b7\u03a3min(P0,P1) = 2D, with three corollaries. For r, s : \u2115 \u2192 \u2115 with \u03a3r\u00b2 = \u03a3s\u00b2 = M and B = \u03a3 r\u00b7s: overlap \u2264 B \u2264 M, 2M \u2264 TV\u2082 + 2B and TV\u2082\u00b2 + 4B\u00b2 \u2264 4M\u00b2; and |\u27e8u,v\u27e9|\u00b2 \u2264 M\u00b2 for complex integer vectors of squared norm M.",
+      "title": "Total-variation/overlap identity and classical Fuchs–van de Graaf bounds for finite distributions",
+      "statement": "For P0, P1 : ℕ → ℕ with equal totals D: Σ|P0−P1| + 2·Σmin(P0,P1) = 2D, with three corollaries. For r, s : ℕ → ℕ with Σr² = Σs² = M and B = Σ r·s: overlap ≤ B ≤ M, 2M ≤ TV₂ + 2B and TV₂² + 4B² ≤ 4M²; and |⟨u,v⟩|² ≤ M² for complex integer vectors of squared norm M.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -1047,8 +1047,8 @@
       },
       "limits": [
         "No commitment protocol is formalized; bit-commitment impossibility and 'architectural necessity' are informal readings.",
-        "Only the classical case with perfect-square integer weights is covered; quantum Fuchs\u2013van de Graaf for density operators is not.",
-        "The pure-state relation D_tr\u00b2 + F = 1 holds by the definition of D_tr\u00b2 in Lean.",
+        "Only the classical case with perfect-square integer weights is covered; quantum Fuchs–van de Graaf for density operators is not.",
+        "The pure-state relation D_tr² + F = 1 holds by the definition of D_tr² in Lean.",
         "No EFI pair or computational indistinguishability is defined."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -1059,7 +1059,7 @@
       "key": "T4",
       "status": "ACTIVE",
       "title": "Polynomial identities for a one-parameter two-qubit family",
-      "statement": "For integers with ca\u00b2 + sa\u00b2 = R\u00b2: (sa\u00b2\u2212ca\u00b2)\u00b2 + (2\u00b7ca\u00b7sa)\u00b2 = R\u2074 (read on paper as c_eff\u00b2 + C\u00b2 = 1); with also ch\u00b2 + sh\u00b2 = R\u00b2, a scaled identity the paper reads as det(g) \u2212 \u03a9\u00b2/4 = (C\u00b2/4)\u00b7sin\u00b2(\u03b8/2); and Cauchy\u2013Schwarz-type bounds for sums over Gaussian-integer vectors.",
+      "statement": "For integers with ca² + sa² = R²: (sa²−ca²)² + (2·ca·sa)² = R⁴ (read on paper as c_eff² + C² = 1); with also ch² + sh² = R², a scaled identity the paper reads as det(g) − Ω²/4 = (C²/4)·sin²(θ/2); and Cauchy–Schwarz-type bounds for sums over Gaussian-integer vectors.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Interpretation as Berry flux, concurrence, quantum geometric tensor and min-entropy is paper-level and numerical.",
@@ -1090,10 +1090,10 @@
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "c_eff\u00b2 + C\u00b2 = 1 coincides with the complementarity relation C\u00b2 + S_k\u00b2 = 1 of Jakob and Bergou (arXiv:quant-ph/0302075, Eq. 11), which is not cited.",
-        "No Berry curvature, Chern number, entropy or quantum geometric tensor is defined in Lean; c_eff = \u2212cos 2\u03b1 is continuous, so 'topological' and 'quantized' do not apply.",
-        "H_min = 1 \u2212 log\u2082(1 + |c_eff|) is not kernel-checked.",
-        "Novelty of the det(g) \u2212 \u03a9\u00b2/4 formula was not searched."
+        "c_eff² + C² = 1 coincides with the complementarity relation C² + S_k² = 1 of Jakob and Bergou (arXiv:quant-ph/0302075, Eq. 11), which is not cited.",
+        "No Berry curvature, Chern number, entropy or quantum geometric tensor is defined in Lean; c_eff = −cos 2α is continuous, so 'topological' and 'quantized' do not apply.",
+        "H_min = 1 − log₂(1 + |c_eff|) is not kernel-checked.",
+        "Novelty of the det(g) − Ω²/4 formula was not searched."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -1103,7 +1103,7 @@
       "key": "T4c2",
       "status": "ACTIVE",
       "title": "Orthogonality and row weight of the gross-code parity-check matrices",
-      "statement": "For the two explicit 72\u00d7144 Boolean matrices in the repository: every entry of H_X\u00b7H_Z\u1d40 over GF(2) is 0 (5,184 entries) and every row of both matrices has weight 6.",
+      "statement": "For the two explicit 72×144 Boolean matrices in the repository: every entry of H_X·H_Zᵀ over GF(2) is 0 (5,184 entries) and every row of both matrices has weight 6.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Checked by kernel evaluation (decide +kernel); k = 12 comes from GF(2) rank in C11/Python, outside Lean.",
@@ -1169,7 +1169,7 @@
       "key": "T2-mlwe-identities",
       "status": "ACTIVE",
       "title": "Ring-universal vanishing of DFT coefficients for anti-periodic and block-twisted sequences",
-      "statement": "Over any commutative ring: if \u03c9^D = -1 and f(D+x) = -f(x) for x < D, every even-index coefficient of the length-2D DFT of f vanishes; if \u03c9^D = \u03b6, f(qD+x) = \u03b6^{qr} f(x) for q < m and x < D, and \u03a3_{q<m} \u03b6^{q(r+k)} = 0, the k-th length-mD DFT coefficient vanishes. For odd c and D, c(x+D)^2 = cx^2 + D\u00b7c(2x+D) with c(2x+D) odd.",
+      "statement": "Over any commutative ring: if ω^D = -1 and f(D+x) = -f(x) for x < D, every even-index coefficient of the length-2D DFT of f vanishes; if ω^D = ζ, f(qD+x) = ζ^{qr} f(x) for q < m and x < D, and Σ_{q<m} ζ^{q(r+k)} = 0, the k-th length-mD DFT coefficient vanishes. For odd c and D, c(x+D)^2 = cx^2 + D·c(2x+D) with c(2x+D) odd.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "All Renyi divergences, DFRs, 'constant-time' and 'Bai collapse' figures are float64/numeral results outside Lean; no lattice, sampler or divergence is defined in Lean.",
@@ -1248,7 +1248,7 @@
       },
       "limits": [
         "T3i's 2m^2-m is weaker than the published Brockett-Dobkin bound 2n^2-1 (Linear Algebra Appl. 1978, doi:10.1016/0024-3795(78)90012-5); the 'sandwich' is two one-sided bounds, not an exact value.",
-        "T3l's general clauses are conditional on the conference-graph and self-complementing-map hypotheses, which are verified only for C5 (in T3j), P13 and P17; infinitely many Paley graphs are not constructed. Theta = sqrt(n) for vertex-transitive self-complementary graphs is Lov\u00e1sz (1979, doi:10.1109/TIT.1979.1055985).",
+        "T3l's general clauses are conditional on the conference-graph and self-complementing-map hypotheses, which are verified only for C5 (in T3j), P13 and P17; infinitely many Paley graphs are not constructed. Theta = sqrt(n) for vertex-transitive self-complementary graphs is Lovász (1979, doi:10.1109/TIT.1979.1055985).",
         "omega=2 and the exact Theta(C7) stay open."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -1259,7 +1259,7 @@
       "key": "C1-C2",
       "status": "ACTIVE",
       "title": "Baker-Gill-Solovay oracle theorem in an explicit oracle Turing machine model",
-      "statement": "In a 4-tape oracle Turing machine model with time bounds (n+1)^c + c: for every oracle O, P^O \u2286 NP^O; there is an oracle A with P^A = NP^A; there is an oracle B and a language L with L \u2208 NP^B and L \u2209 P^B. Oracles are arbitrary functions from bit strings to Booleans.",
+      "statement": "In a 4-tape oracle Turing machine model with time bounds (n+1)^c + c: for every oracle O, P^O ⊆ NP^O; there is an oracle A with P^A = NP^A; there is an oracle B and a language L with L ∈ NP^B and L ∉ P^B. Oracles are arbitrary functions from bit strings to Booleans.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Six kernel checks seen in Ubuntu CI log only; not re-run on this machine.",
@@ -1318,7 +1318,7 @@
       "key": "C3-C5",
       "status": "ACTIVE",
       "title": "Counting lemma underlying the natural-proofs argument",
-      "statement": "For fixed n and k: if a Boolean property accepts at least numer/denom of all 2^(2^n) truth tables and rejects every member of a set F, and a keyed family maps every k-bit key into F, then the property accepts no key and its acceptance gap is at least numer/denom. Also: an integer telescoping pigeonhole bound, and 'non-constant' accepts at least half of all tables for n \u2265 1.",
+      "statement": "For fixed n and k: if a Boolean property accepts at least numer/denom of all 2^(2^n) truth tables and rejects every member of a set F, and a keyed family maps every k-bit key into F, then the property accepts no key and its acceptance gap is at least numer/denom. Also: an integer telescoping pigeonhole bound, and 'non-constant' accepts at least half of all tables for n ≥ 1.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -1365,7 +1365,7 @@
       "key": "C6-C9",
       "status": "ACTIVE",
       "title": "Minimally unsatisfiable parity systems and Boolean polymorphism facts",
-      "statement": "For every k \u2265 0 the system x_i \u2295 x_(i+1 mod 2k+1) = 1 on 2k+1 variables, and the 9-variable Mermin-Peres parity system, are unsatisfiable while every drop-one subsystem is satisfiable. x\u2295y\u2295z, AND, OR and majority preserve one XOR, Horn, dual-Horn and 2-clause relation respectively. Every Boolean operation of any arity preserving both x\u2228y\u2228z and \u00acx\u2228\u00acy\u2228\u00acz is a projection.",
+      "statement": "For every k ≥ 0 the system x_i ⊕ x_(i+1 mod 2k+1) = 1 on 2k+1 variables, and the 9-variable Mermin-Peres parity system, are unsatisfiable while every drop-one subsystem is satisfiable. x⊕y⊕z, AND, OR and majority preserve one XOR, Horn, dual-Horn and 2-clause relation respectively. Every Boolean operation of any arity preserving both x∨y∨z and ¬x∨¬y∨¬z is a projection.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -1422,7 +1422,7 @@
       "limits": [
         "'Maximally contextual' in the Lean code means minimal unsatisfiability; no sheaf, empirical model or cohomology is formalized.",
         "This is not Schaefer's dichotomy theorem; no CSP complexity is formalized.",
-        "k = 0 is the one-variable system x0 \u2295 x0 = 1."
+        "k = 0 is the one-variable system x0 ⊕ x0 = 1."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -1432,7 +1432,7 @@
       "key": "C10-C11",
       "status": "ACTIVE",
       "title": "Markov's negation bound for the inverter and a k-NOT compilation",
-      "statement": "No circuit over constants, AND, OR and NOT with at most r NOT gates computes all n negations when n \u2265 2^r. An explicit circuit with exactly k NOT gates computes all negations of 2^k \u2212 1 inputs. Every such circuit on 2^k \u2212 1 inputs whose gates read only earlier wires compiles to a circuit with exactly k NOT gates that reproduces each of its wires; no size bound is proved.",
+      "statement": "No circuit over constants, AND, OR and NOT with at most r NOT gates computes all n negations when n ≥ 2^r. An explicit circuit with exactly k NOT gates computes all negations of 2^k − 1 inputs. Every such circuit on 2^k − 1 inputs whose gates read only earlier wires compiles to a circuit with exactly k NOT gates that reproduces each of its wires; no size bound is proved.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -1468,7 +1468,7 @@
       },
       "limits": [
         "Fischer's 1975 theorem is a polynomial-size construction; the Lean compilation has no size bound and its inverter is exponential-size.",
-        "The upper bound and compilation cover n = 2^k \u2212 1 only, not all n \u2264 2^k \u2212 1."
+        "The upper bound and compilation cover n = 2^k − 1 only, not all n ≤ 2^k − 1."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -1478,7 +1478,7 @@
       "key": "C12-C13",
       "status": "ACTIVE",
       "title": "AND-count versus F2-degree, and permanent equals determinant modulo 2",
-      "statement": "Every wire of a circuit over constants, XOR and AND with a AND gates computes an F2-polynomial of degree at most a + 1, so for n \u2265 1 computing the n-input AND needs at least n \u2212 1 AND gates. For every n \u00d7 n integer matrix, permanent \u2261 determinant mod 2; for n \u2265 2 one 0/1 matrix has permanent 2 and determinant 0.",
+      "statement": "Every wire of a circuit over constants, XOR and AND with a AND gates computes an F2-polynomial of degree at most a + 1, so for n ≥ 1 computing the n-input AND needs at least n − 1 AND gates. For every n × n integer matrix, permanent ≡ determinant mod 2; for n ≥ 2 one 0/1 matrix has permanent 2 and determinant 0.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Permanent and determinant are defined by first-row Laplace expansion.",
@@ -1525,7 +1525,7 @@
       "key": "C14",
       "status": "ACTIVE",
       "title": "Reversibility of straight-line register programs and one recursive product program",
-      "statement": "Straight-line programs on integer registers built from add/subtract-constant and multiply-accumulate/subtract instructions, with destination distinct from operands, are undone by the reversed inverted program. For every nonempty list of d integers fixed in the program and every destination register with index \u2265 d, an explicit program of 3\u00b74^(d\u22121) \u2212 2 instructions adds \u00b1 their product to that register and restores every other register, whatever their initial contents.",
+      "statement": "Straight-line programs on integer registers built from add/subtract-constant and multiply-accumulate/subtract instructions, with destination distinct from operands, are undone by the reversed inverted program. For every nonempty list of d integers fixed in the program and every destination register with index ≥ d, an explicit program of 3·4^(d−1) − 2 instructions adds ± their product to that register and restores every other register, whatever their initial contents.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -1567,7 +1567,7 @@
       "key": "T1",
       "status": "ACTIVE",
       "title": "Imaginary-gauge intertwining and zero-energy identities for the integer Hatano-Nelson chain",
-      "statement": "For integers r, l and every N: the open Hatano-Nelson matrix with hoppings r\u00b2, l\u00b2 satisfies H\u00b7D = D\u00b7S entrywise for the gauge diagonal D and symmetric path S. Its characteristic recurrence satisfies P_2m(0) = (\u22121)^m (rl)^(2m), P_(2m+1)(0) = 0. The two-corner determinant formula holds for N = 3, 4. If 0 < l < r then l^(2m) < r^(2m).",
+      "statement": "For integers r, l and every N: the open Hatano-Nelson matrix with hoppings r², l² satisfies H·D = D·S entrywise for the gauge diagonal D and symmetric path S. Its characteristic recurrence satisfies P_2m(0) = (−1)^m (rl)^(2m), P_(2m+1)(0) = 0. The two-corner determinant formula holds for N = 3, 4. If 0 < l < r then l^(2m) < r^(2m).",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Link from the corner formula to spectra of general N rests on a determinant identity proven only for N = 3, 4.",
@@ -1616,10 +1616,10 @@
       "key": "T2",
       "status": "ACTIVE",
       "title": "Eigenvector identities for a corner-perturbed Jordan block of any order",
-      "statement": "For n \u2265 1 and integers \u03bb\u2080, w: N\u207f = 0 for the shift matrix with (N^(n\u22121))_(0,n\u22121) = 1; eigenvectors of J_n(\u03bb\u2080) vanish beyond index 0; (w^j), (w^(n\u22121\u2212j)) are right and left eigenvectors of J_n + w\u207fe_(n\u22121)e\u2080\u1d40 for \u03bb\u2080 + w; \u27e8L,R\u27e9\u00b2 = n\u00b2w^(2n\u22122); |L|\u00b2|R|\u00b2 = S_n(w\u00b2)\u00b2; for integer q > 0, n \u2265 2: S_n(q)\u00b2 > 1, S_n(q) < S_(n+1)(q).",
+      "statement": "For n ≥ 1 and integers λ₀, w: Nⁿ = 0 for the shift matrix with (N^(n−1))_(0,n−1) = 1; eigenvectors of J_n(λ₀) vanish beyond index 0; (w^j), (w^(n−1−j)) are right and left eigenvectors of J_n + wⁿe_(n−1)e₀ᵀ for λ₀ + w; ⟨L,R⟩² = n²w^(2n−2); |L|²|R|² = S_n(w²)²; for integer q > 0, n ≥ 2: S_n(q)² > 1, S_n(q) < S_(n+1)(q).",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "The quotient SNR_Pet\u00b2 = 1/S_n(q)\u00b2 and any Petermann or sensitivity quantity are formed on paper, not in Lean.",
+      "evidence_note": "The quotient SNR_Pet² = 1/S_n(q)² and any Petermann or sensitivity quantity are formed on paper, not in Lean.",
       "asked_in": null,
       "lean": [
         {
@@ -1652,7 +1652,7 @@
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "Covers one model: a single Jordan block with the corner perturbation w\u207f, w an integer.",
+        "Covers one model: a single Jordan block with the corner perturbation wⁿ, w an integer.",
         "No signal-to-noise ratio, Petermann factor or eigenvalue derivative is defined in Lean.",
         "Order-n Petermann-factor scaling is known at leading order (Wiersig, Phys. Rev. Research 5, 033042 (2023)); only the exact finite-q factor for this model may be new, and that was not searched."
       ],
@@ -1664,10 +1664,10 @@
       "key": "T3b-lucas",
       "status": "ACTIVE",
       "title": "Lucas trace and determinant identities for powers of [[2,1],[1,1]]",
-      "statement": "For M = [[2,1],[1,1]] and p \u2265 1: tr(M\u1d56) = L_2p and \u2212det(I \u2212 M\u1d56) = L_2p \u2212 2; L_2p \u2212 2 \u2260 L_2q \u2212 2 for p \u2260 q; L_4m \u2212 2 is not the square of any integer for m \u2265 1. Two fixed reduced Burau matrices over Laurent polynomials satisfy the braid relation.",
+      "statement": "For M = [[2,1],[1,1]] and p ≥ 1: tr(Mᵖ) = L_2p and −det(I − Mᵖ) = L_2p − 2; L_2p − 2 ≠ L_2q − 2 for p ≠ q; L_4m − 2 is not the square of any integer for m ≥ 1. Two fixed reduced Burau matrices over Laurent polynomials satisfy the braid relation.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "M is not proven equal to the Burau image of \u03c3\u2081\u03c3\u2082\u207b\u00b9 at t = \u22121 in Lean; knot determinants and Fox-Milnor are cited, not formalized.",
+      "evidence_note": "M is not proven equal to the Burau image of σ₁σ₂⁻¹ at t = −1 in Lean; knot determinants and Fox-Milnor are cited, not formalized.",
       "asked_in": null,
       "lean": [
         {
@@ -1700,8 +1700,8 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "Non-sliceness is not a Lean statement; via Fox-Milnor it applies only to even p not divisible by 3, since for 3 | p the closure of (\u03c3\u2081\u03c3\u2082\u207b\u00b9)\u1d56 is a 3-component link.",
-        "The values L_2p \u2212 2 are known determinants of Turk's head links THK(3,p) (OEIS A004146, comment of 2014).",
+        "Non-sliceness is not a Lean statement; via Fox-Milnor it applies only to even p not divisible by 3, since for 3 | p the closure of (σ₁σ₂⁻¹)ᵖ is a 3-component link.",
+        "The values L_2p − 2 are known determinants of Turk's head links THK(3,p) (OEIS A004146, comment of 2014).",
         "The braid family is the known lemniscate-of-Gerono family (Bode, Dennis, Foster, King, arXiv:1611.02563, after Perron).",
         "This is not progress on the slice-ribbon conjecture (GEOM-038)."
       ],
@@ -1712,8 +1712,8 @@
       "archive_id": "0TH-2026-014",
       "key": "T3b-knotdata",
       "status": "ACTIVE",
-      "title": "Finite TL\u2083 bracket evaluations and trapezoidality of two coefficient lists",
-      "statement": "In a hand-coded 5-dimensional Temperley-Lieb model TL\u2083: the closure brackets of (s\u2081s\u2082\u207b\u00b9)\u1d56 for p = 1, 2, 3, 4 equal explicit Laurent lists; the first is 1, the others differ from it and are palindromic; the bracket of s\u2081\u00b3s\u2082 differs from that of its mirror. The list of 2m+1 ones and the list [p, 2p+1, p] (p \u2265 1) satisfy the trapezoidal predicate.",
+      "title": "Finite TL₃ bracket evaluations and trapezoidality of two coefficient lists",
+      "statement": "In a hand-coded 5-dimensional Temperley-Lieb model TL₃: the closure brackets of (s₁s₂⁻¹)ᵖ for p = 1, 2, 3, 4 equal explicit Laurent lists; the first is 1, the others differ from it and are palindromic; the bracket of s₁³s₂ differs from that of its mirror. The list of 2m+1 ones and the list [p, 2p+1, p] (p ≥ 1) satisfy the trapezoidal predicate.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Identification of the lists with Jones or Alexander polynomials of named knots is not formalized.",
@@ -1752,8 +1752,8 @@
         "The lists are typed in by hand; no knot, Alexander polynomial or Jones polynomial is defined in Lean.",
         "Torus knots T(2,2m+1) and twist knots are two-bridge, a class for which Fox's trapezoidal conjecture is already proved (atlas GEOM-046 row; Hartley 1979 per the literature report).",
         "[p, 2p+1, p] covers one parity of twist knots only (standard formula, not source-checked).",
-        "4\u2081, the Borromean rings and 8\u2081\u2088 are table knots/links; this has no bearing on the Jones unknot question (GEOM-039).",
-        "The paper names the trefoil braid \u03c3\u2081\u00b2\u03c3\u2082 while Lean uses s\u2081\u00b3s\u2082."
+        "4₁, the Borromean rings and 8₁₈ are table knots/links; this has no bearing on the Jones unknot question (GEOM-039).",
+        "The paper names the trefoil braid σ₁²σ₂ while Lean uses s₁³s₂."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -1762,8 +1762,8 @@
       "archive_id": "0TH-2026-014",
       "key": "T4",
       "status": "ACTIVE",
-      "title": "Discriminant sign and exceptional-point nilpotency for a non-reciprocal 2\u00d72 integer system",
-      "statement": "For integers r_A, r_B, J_AB, J_BA: J_AB\u00b7J_BA \u2265 0 implies (r_A \u2212 r_B)\u00b2 + 4J_AB\u00b7J_BA \u2265 0; if that discriminant is 0, S = [[r_A\u2212r_B, 2J_AB],[2J_BA, r_B\u2212r_A]] satisfies S\u00b2 = 0, and S \u2260 0 unless J_AB = J_BA = 0. With r_A = r_B = R\u00b2, J_AB = J, J_BA = \u2212J, \u03c8_A = isR, \u03c8_B = R and s\u00b2 = 1, the cubic field is tangent at both sites, each with moment \u2212sJR\u00b2.",
+      "title": "Discriminant sign and exceptional-point nilpotency for a non-reciprocal 2×2 integer system",
+      "statement": "For integers r_A, r_B, J_AB, J_BA: J_AB·J_BA ≥ 0 implies (r_A − r_B)² + 4J_AB·J_BA ≥ 0; if that discriminant is 0, S = [[r_A−r_B, 2J_AB],[2J_BA, r_B−r_A]] satisfies S² = 0, and S ≠ 0 unless J_AB = J_BA = 0. With r_A = r_B = R², J_AB = J, J_BA = −J, ψ_A = isR, ψ_B = R and s² = 1, the cubic field is tangent at both sites, each with moment −sJR².",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Pointwise algebraic identities only; no differential equation, orbit or stability statement.",
@@ -1795,8 +1795,8 @@
       },
       "limits": [
         "No time crystal, limit cycle or attraction is formalized.",
-        "The 'non-variational curl' conjunct is J_AB \u2260 J_BA \u21d2 J_AB \u2212 J_BA \u2260 0, with the curl defined as subtraction.",
-        "The discriminant facts are textbook properties of real 2\u00d72 matrices.",
+        "The 'non-variational curl' conjunct is J_AB ≠ J_BA ⇒ J_AB − J_BA ≠ 0, with the curl defined as subtraction.",
+        "The discriminant facts are textbook properties of real 2×2 matrices.",
         "Atlas CM-043 asks about many-body time crystals and excludes limit-cycle synchronization; this result does not bear on it."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -1807,7 +1807,7 @@
       "key": "T5",
       "status": "ACTIVE",
       "title": "Intertwining metric and its positivity for the PT-symmetric dimer over the Gaussian integers",
-      "statement": "For integers g, k with H = [[ig, k],[k, \u2212ig]] and \u03b7 = [[k, \u2212ig],[ig, k]] over \u2124[i]: \u03b7H = H\u2020\u03b7; if 0 < k and g\u00b2 < k\u00b2, then Re(v\u2020\u03b7v) > 0 for every nonzero Gaussian-integer vector v; at g = k \u2260 0 the vector (1, \u2212i) has \u03b7-norm 0.",
+      "statement": "For integers g, k with H = [[ig, k],[k, −ig]] and η = [[k, −ig],[ig, k]] over ℤ[i]: ηH = H†η; if 0 < k and g² < k², then Re(v†ηv) > 0 for every nonzero Gaussian-integer vector v; at g = k ≠ 0 the vector (1, −i) has η-norm 0.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Reality of eigenvalues and impossibility of a positive metric in the broken phase are paper-level; their Lean conjuncts are scalar arithmetic.",
@@ -1849,8 +1849,8 @@
       "archive_id": "0TH-2026-016",
       "key": "T2bd",
       "status": "ACTIVE",
-      "title": "Kernel-checked lower bounds for C\u2082\u2087 and C\u2083\u2081 that are weaker than published values",
-      "statement": "C\u2082\u2087^\u22a02048 and C\u2083\u2081^\u22a02048 contain independent sets of sizes M\u2082\u2087 and M\u2083\u2081 with 13319390984674515^2048 \u2264 M\u2082\u2087\u00b710^(15\u00b72048) and 15308776193986504^2048 \u2264 M\u2083\u2081\u00b710^(15\u00b72048). Consequently \u0398(C\u2082\u2087) \u2265 13.319390984674515 and \u0398(C\u2083\u2081) \u2265 15.308776193986504. Both are smaller than 31522^(1/4) \u2248 13.3246 and 54934^(1/4) \u2248 15.3095, the values in Codenotti\u2013Gerace\u2013Resta 2003, Table 1.",
+      "title": "Kernel-checked lower bounds for C₂₇ and C₃₁ that are weaker than published values",
+      "statement": "C₂₇^⊠2048 and C₃₁^⊠2048 contain independent sets of sizes M₂₇ and M₃₁ with 13319390984674515^2048 ≤ M₂₇·10^(15·2048) and 15308776193986504^2048 ≤ M₃₁·10^(15·2048). Consequently Θ(C₂₇) ≥ 13.319390984674515 and Θ(C₃₁) ≥ 15.308776193986504. Both are smaller than 31522^(1/4) ≈ 13.3246 and 54934^(1/4) ≈ 15.3095, the values in Codenotti–Gerace–Resta 2003, Table 1.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Independent construction (Baumert expansion plus port systems); it does not formalise the 2003 sets and gives no new bound.",
@@ -1881,9 +1881,9 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "These are not best known bounds: the 2003 table lists \u03b1(C\u2082\u2087^\u22a04) \u2265 31522 and \u03b1(C\u2083\u2081^\u22a04) \u2265 54934, above the repository's fourth-power bases 31466 and 54913 and above its final bounds.",
+        "These are not best known bounds: the 2003 table lists α(C₂₇^⊠4) ≥ 31522 and α(C₃₁^⊠4) ≥ 54934, above the repository's fourth-power bases 31466 and 54913 and above its final bounds.",
         "The 2003 entries are printed cardinalities marked as obtained by expansion formulas and experiment; the explicit sets were not examined in this audit.",
-        "\u0398 is not defined in Lean; the expansion map is the known construction of Baumert et al. (1971)."
+        "Θ is not defined in Lean; the expansion map is the known construction of Baumert et al. (1971)."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -1893,10 +1893,10 @@
       "key": "T1e",
       "status": "ACTIVE",
       "title": "Coset codes in the fourth strong power of C_n for n = 8k+1 with published cardinalities",
-      "statement": "For every k \u2265 3 and n = 8k+1: \u03b1(C_n^\u22a04) \u2265 (4k\u00b2 + \u230ak/2\u230b)\u00b7n\u00b2. The set is lifted from 4k\u00b2 + \u230ak/2\u230b = \u230an\u230an/8\u230b/2\u230b points of \u2124_n\u00b2, no two within circular distance 1 in coordinate one and 7 in coordinate two; no such point set is larger (n \u2265 8), and each one of size M lifts to M\u00b7n\u00b2 points (n \u2265 15).",
+      "statement": "For every k ≥ 3 and n = 8k+1: α(C_n^⊠4) ≥ (4k² + ⌊k/2⌋)·n². The set is lifted from 4k² + ⌊k/2⌋ = ⌊n⌊n/8⌋/2⌋ points of ℤ_n², no two within circular distance 1 in coordinate one and 7 in coordinate two; no such point set is larger (n ≥ 8), and each one of size M lifts to M·n² points (n ≥ 15).",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "Same cardinalities as published bounds, obtained from cosets of \u27e8(1,0,0,2),(0,1,0,4)\u27e9.",
+      "evidence_note": "Same cardinalities as published bounds, obtained from cosets of ⟨(1,0,0,2),(0,1,0,4)⟩.",
       "asked_in": null,
       "lean": [
         {
@@ -1924,10 +1924,10 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "For odd k the size equals n\u00b2(n\u00b2\u2212n\u22128)/16, Theorem 1 (d = 3) of Codenotti, Gerace and Resta (2003); for even k it equals (n\u2074\u2212n\u00b3)/16, the Baumert et al. (1971) value.",
+        "For odd k the size equals n²(n²−n−8)/16, Theorem 1 (d = 3) of Codenotti, Gerace and Resta (2003); for even k it equals (n⁴−n³)/16, the Baumert et al. (1971) value.",
         "The repository does not cite the 2003 paper.",
-        "The contract statement contains conflict-pattern facts for odd k but no port system; the n\u00b2-port system is a separate kernel-checked definition outside the audited 32 declarations.",
-        "The companion theorem T1c is narrower than its prose: one of two claimed branches, n \u2265 9, ball sizes at four n."
+        "The contract statement contains conflict-pattern facts for odd k but no port system; the n²-port system is a separate kernel-checked definition outside the audited 32 declarations.",
+        "The companion theorem T1c is narrower than its prose: one of two claimed branches, n ≥ 9, ball sizes at four n."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -1936,11 +1936,11 @@
       "archive_id": "0TH-2026-016",
       "key": "T4",
       "status": "ACTIVE",
-      "title": "Haemers rank bound, Haemers's Schl\u00e4fli-graph example and Lov\u00e1sz's pentagon bound",
-      "statement": "If a matrix LR over a field, of inner width r, has nonzero diagonal and vanishes on all pairs of distinct non-adjacent vertices of G, then \u03b1(G^\u22a0d) \u2264 r^d for all d. For the Schl\u00e4fli graph S and its complement S\u0304: \u03b1(S^\u22a0d) \u2264 3^d, \u03b1(S\u0304^\u22a0d) \u2264 7^d and \u03b1(S \u22a0 S\u0304) \u2265 27 > 21. For the pentagon: \u03b1(C\u2085^\u22a02) \u2265 5 and \u03b1(C\u2085^\u22a0d)\u00b2 \u2264 5^d.",
+      "title": "Haemers rank bound, Haemers's Schläfli-graph example and Lovász's pentagon bound",
+      "statement": "If a matrix LR over a field, of inner width r, has nonzero diagonal and vanishes on all pairs of distinct non-adjacent vertices of G, then α(G^⊠d) ≤ r^d for all d. For the Schläfli graph S and its complement S̄: α(S^⊠d) ≤ 3^d, α(S̄^⊠d) ≤ 7^d and α(S ⊠ S̄) ≥ 27 > 21. For the pentagon: α(C₅^⊠2) ≥ 5 and α(C₅^⊠d)² ≤ 5^d.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "Results of Haemers (1979) and Lov\u00e1sz (1979); integer forms, without real numbers.",
+      "evidence_note": "Results of Haemers (1979) and Lovász (1979); integer forms, without real numbers.",
       "asked_in": null,
       "lean": [
         {
@@ -1973,7 +1973,7 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "\u0398 and \u221a5 are not defined in Lean; \u0398(C\u2085) = \u221a5 and \u0398(S \u22a0 S\u0304) > \u0398(S)\u00b7\u0398(S\u0304) are consequences outside Lean.",
+        "Θ and √5 are not defined in Lean; Θ(C₅) = √5 and Θ(S ⊠ S̄) > Θ(S)·Θ(S̄) are consequences outside Lean.",
         "That the defined 27-vertex graph is strongly regular (27,16,10,8) was checked by computation outside Lean; uniqueness of that graph is a cited fact.",
         "The orthogonal-representation bound T4b is proved for vectors of equal norm, while the paper states it for bounded norm.",
         "The claim to be the first such formal proof was not verified; the 1979 articles were not opened in this audit."
@@ -1986,7 +1986,7 @@
       "key": "T3",
       "status": "ACTIVE",
       "title": "Two-factor combining rule for separation systems, table admissibility, and the seven-label graph",
-      "statement": "If label systems are realised by independent families in G\u2081, G\u2082, and a table gives each target label a list of label pairs, where any two pairs in one list, or in the lists of two separated target labels, are separated in some coordinate, then product blocks realise the target system in G\u2081 \u22a0 G\u2082 with sizes \u03a3|R\u2081(a)|\u00b7|R\u2082(b)|. Five fixed tables pass the checks. For the seven-label graph G\u2087: \u03b1(G\u2087) \u2265 3, \u03b1(G\u2087^\u22a0d) \u2264 3^d.",
+      "statement": "If label systems are realised by independent families in G₁, G₂, and a table gives each target label a list of label pairs, where any two pairs in one list, or in the lists of two separated target labels, are separated in some coordinate, then product blocks realise the target system in G₁ ⊠ G₂ with sizes Σ|R₁(a)|·|R₂(b)|. Five fixed tables pass the checks. For the seven-label graph G₇: α(G₇) ≥ 3, α(G₇^⊠d) ≤ 3^d.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Two-input case of the BPZ combining rule (Tandon 2026, Proposition 1), allowing two alphabets.",
@@ -2018,9 +2018,9 @@
       },
       "limits": [
         "This does not resolve the two-sided extension of Theorem 1 that Tandon (arXiv:2608.30273, Section 5 and Remark 3) leaves for future work: no Gao gadget, compatibility condition or profile formula is derived.",
-        "The same rule exists for one alphabet in Tandon's Proposition 1 and in the Buys\u2013Polak\u2013Zuiddam Lean library (Realisation.multiSubst); the general theorem is never instantiated in the repository.",
+        "The same rule exists for one alphabet in Tandon's Proposition 1 and in the Buys–Polak–Zuiddam Lean library (Realisation.multiSubst); the general theorem is never instantiated in the repository.",
         "The tables are those of Buys, Polak and Zuiddam; only their admissibility is re-checked.",
-        "The G\u2087 bound is a 3-clique cover of the repository's own auxiliary graph; the weighted clique-cover theorem T3b gives upper bounds only (46875/2 is not shown optimal)."
+        "The G₇ bound is a 3-clique cover of the repository's own auxiliary graph; the weighted clique-cover theorem T3b gives upper bounds only (46875/2 is not shown optimal)."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -2030,7 +2030,7 @@
       "key": "T12-T19",
       "status": "ACTIVE",
       "title": "Conservation and monotonicity facts for the repository's discrete vesicle, ATP and SNARE models",
-      "statement": "For the repository's definitions: every valid vesicle-pool step list keeps rrp+recycling+reserve; if s<b+f\u00b7c, the store (a\u2080+s\u00b7t)\u2238(b+f\u00b7c)\u00b7t is below a\u2080 when a\u2080,t>0 and is 0 for t\u2265\u230aa\u2080/D\u230b+1, D=b+f\u00b7c\u2212s; if b,c>0 and b+f\u00b7c\u2264s, then f\u00b7c<s, (s\u2212b)\u00b7c<s\u00b7c, and \u230a(s\u2212b)/c\u230b<\u230as/c\u230b when c\u2264b; (8n)/8=n; the clamped SNARE barrier is non-increasing in Ca\u00b2\u207a and SNARE counts.",
+      "statement": "For the repository's definitions: every valid vesicle-pool step list keeps rrp+recycling+reserve; if s<b+f·c, the store (a₀+s·t)∸(b+f·c)·t is below a₀ when a₀,t>0 and is 0 for t≥⌊a₀/D⌋+1, D=b+f·c−s; if b,c>0 and b+f·c≤s, then f·c<s, (s−b)·c<s·c, and ⌊(s−b)/c⌋<⌊s/c⌋ when c≤b; (8n)/8=n; the clamped SNARE barrier is non-increasing in Ca²⁺ and SNARE counts.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "True by construction of self-defined update rules; the H3 simulation outcome itself rests on Rust code outside Lean.",
@@ -2088,7 +2088,7 @@
       "limits": [
         "T15 is an upper bound on the zero time, not an exact hitting time; it equals 3 s only for the deterministic mean-rate H3 constants, while the simulator jitters the rate each second.",
         "The ATP and SNARE constants are the author's and are not found in the cited sources; the Lean definitions are hand-written analogues of the TypeScript/Rust engines with no tested link.",
-        "T17 contains no kinesin model; the SNARE-barrier claims of T18 and T19 are non-strict (T19's only strict part is the zipper energy 115\u00b7n\u2081 < 115\u00b7n\u2082).",
+        "T17 contains no kinesin model; the SNARE-barrier claims of T18 and T19 are non-strict (T19's only strict part is the zipper energy 115·n₁ < 115·n₂).",
         "No part of NEURO-001 (consciousness) or NEURO-019 (20 W credit assignment) is addressed."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -2098,11 +2098,11 @@
       "archive_id": "0TH-2026-009",
       "key": "T2-disjoint",
       "status": "ACTIVE",
-      "title": "Contextuality degree of k disjoint Peres\u2013Mermin squares and Mermin pentagrams",
-      "statement": "For every k \u2265 0: on k vertex-disjoint Peres\u2013Mermin squares (9 points, 6 signed lines each), with contexts the nonempty unions of at most one line per copy and product signs, the minimum number of violated contexts over \u00b11 assignments is (7\u1d4f\u22125\u1d4f)/2 of 7\u1d4f\u22121. For Mermin pentagrams (10 points, 5 lines) it is (6\u1d4f\u22124\u1d4f)/2 of 6\u1d4f\u22121. Hence 2d_k/|H_k| \u2192 1.",
+      "title": "Contextuality degree of k disjoint Peres–Mermin squares and Mermin pentagrams",
+      "statement": "For every k ≥ 0: on k vertex-disjoint Peres–Mermin squares (9 points, 6 signed lines each), with contexts the nonempty unions of at most one line per copy and product signs, the minimum number of violated contexts over ±1 assignments is (7ᵏ−5ᵏ)/2 of 7ᵏ−1. For Mermin pentagrams (10 points, 5 lines) it is (6ᵏ−4ᵏ)/2 of 6ᵏ−1. Hence 2d_k/|H_k| → 1.",
       "kind": "ANSWERS_PUBLISHED_QUESTION",
       "evidence": "kernel-checked",
-      "evidence_note": "Identification with the source's hypergraph support HS(kG) rests on Python enumeration (k \u2264 2) and the source's Sec. 4.2, not on Lean.",
+      "evidence_note": "Identification with the source's hypergraph support HS(kG) rests on Python enumeration (k ≤ 2) and the source's Sec. 4.2, not on Lean.",
       "asked_in": {
         "citation": "A. Muller, M. Saniga, Automated search for highly contextual Kochen-Specker proofs (2026), arXiv:2609.19862",
         "url": "https://arxiv.org/abs/2609.19862v1",
@@ -2170,8 +2170,8 @@
       "archive_id": "0TH-2026-009",
       "key": "T1-ConjE",
       "status": "ACTIVE",
-      "title": "Strict-law failure in the nine vertex cases of Jonah's Conjecture E, every N \u2265 4",
-      "statement": "For every N \u2265 4 and each of nine explicit pairs (X, d), with X one of W(2N\u22121,2), Q\u207a, Q\u207b or a perp-section of these, there are \u00b11 carriers \u03c3, \u03c4 whose section operators \u03a3\u03c3(s)P_s and \u03a3\u03c4(s)P_s have equal characteristic polynomials (equal eigenvalue multisets), while the completion matrices \u039b_\u03c3, \u039b_\u03c4 on the points anticommuting with d have different characteristic polynomials.",
+      "title": "Strict-law failure in the nine vertex cases of Jonah's Conjecture E, every N ≥ 4",
+      "statement": "For every N ≥ 4 and each of nine explicit pairs (X, d), with X one of W(2N−1,2), Q⁺, Q⁻ or a perp-section of these, there are ±1 carriers σ, τ whose section operators Σσ(s)P_s and Στ(s)P_s have equal characteristic polynomials (equal eigenvalue multisets), while the completion matrices Λ_σ, Λ_τ on the points anticommuting with d have different characteristic polynomials.",
       "kind": "ANSWERS_PUBLISHED_QUESTION",
       "evidence": "kernel-checked",
       "evidence_note": "Case labels for the nine pairs and coverage of whole cases (Jonah's Theorem B4, single orbits) are outside Lean.",
@@ -2212,7 +2212,7 @@
       },
       "limits": [
         "Lean proves failure for one explicit representative per case; that each representative lies in the named case is read off the source's tables, and transfer to every hyperplane of a case uses the source's Theorem B4, neither formalized.",
-        "The source already proves cases C1 and C6 for every n \u2265 3 and reported N = 4 counterexample pairs for six further cases; case C3 for N \u2265 4 was open there.",
+        "The source already proves cases C1 and C6 for every n ≥ 3 and reported N = 4 counterexample pairs for six further cases; case C3 for N ≥ 4 was open there.",
         "The source is an unreviewed, AI-assisted and AI-refereed Zenodo preprint; its conjecture, definitions and Theorem B4 were read in this audit through a PDF text-extraction tool.",
         "No later resolution was found in a bounded Zenodo and web search (2026-11-26)."
       ],
@@ -2224,10 +2224,10 @@
       "key": "T1-Psi3m",
       "status": "ACTIVE",
       "title": "Infinite family of non-closed multi-qubit Pauli sets attaining the spectral floor",
-      "statement": "For every m \u2265 1, with q = 2^m, there is a set S of (q\u00b3\u22121)q\u00b2 non-identity 3m-qubit Pauli labels, containing two distinct commuting elements whose product is not in S, with 6\u00b7#lines = (q\u00b3\u22121)q\u2074(q\u00b2+q\u22123), whose minimum number of violated lines over \u00b11 assignments is (q\u00b3\u22121)q\u00b3(q\u22121)(q\u22122)/12. These counts give equality in the spectral floor; the minimum is positive for m \u2265 2.",
+      "statement": "For every m ≥ 1, with q = 2^m, there is a set S of (q³−1)q² non-identity 3m-qubit Pauli labels, containing two distinct commuting elements whose product is not in S, with 6·#lines = (q³−1)q⁴(q²+q−3), whose minimum number of violated lines over ±1 assignments is (q³−1)q³(q−1)(q−2)/12. These counts give equality in the spectral floor; the minimum is positive for m ≥ 2.",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
-      "evidence_note": "Floor equality follows from the stated counts by arithmetic (checked in this audit); flatness of the |\u03a8\u2083\u2098\u27e9 state is a separate Lean theorem.",
+      "evidence_note": "Floor equality follows from the stated counts by arithmetic (checked in this audit); flatness of the |Ψ₃ₘ⟩ state is a separate Lean theorem.",
       "asked_in": null,
       "lean": [
         {
@@ -2260,7 +2260,7 @@
         "prior_work": "NONE_FOUND"
       },
       "limits": [
-        "The m = 1 member (3 qubits) has degree 0 and is not contextual, although CLAIMS.md C06 and the module title call the family contextual for m \u2265 1.",
+        "The m = 1 member (3 qubits) has degree 0 and is not contextual, although CLAIMS.md C06 and the module title call the family contextual for m ≥ 1.",
         "The question it answers was posed in the repository's own manuscript, not by another author.",
         "The m = 2 member has degree 2016; the separately claimed finite degrees 75, 480 and 729344 are in modules not compiled at the pinned commit.",
         "The prior-work search was bounded; an independent Zenodo deposit made after the pinned commit (doi:10.5281/zenodo.24567331) reports related floor results and should be compared."
@@ -2273,7 +2273,7 @@
       "key": "T1-C3opt",
       "status": "ACTIVE",
       "title": "Exact binary completion optima 368 and 344 for one four-qubit C3 sign pair",
-      "statement": "On the four-qubit hyperbolic quadric Q\u207a(7,2) cut by the hyperplane of one fixed point (71 section points, 64 outside points), for two explicit \u00b11 sign patterns on the section, each with four \u22121 entries, the minimum over \u00b11 values on the 64 outside points of the number of violated outside lines is 368 and 344 respectively, each attained.",
+      "statement": "On the four-qubit hyperbolic quadric Q⁺(7,2) cut by the hyperplane of one fixed point (71 section points, 64 outside points), for two explicit ±1 sign patterns on the section, each with four −1 entries, the minimum over ±1 values on the 64 outside points of the number of violated outside lines is 368 and 344 respectively, each attained.",
       "kind": "BOUNDED_CASE",
       "evidence": "kernel-checked",
       "evidence_note": "Lower bounds use integer SDP-dual certificates verified inside the Lean kernel by decide +kernel.",
@@ -2315,7 +2315,7 @@
       "key": "T1-floor",
       "status": "ACTIVE",
       "title": "Spectral floor for arbitrary Pauli sets, its Kramers variant, and saturation conditions",
-      "statement": "For N \u2265 1, every set S of non-identity N-qubit Pauli labels and every \u00b11 assignment f on S satisfy (2^N\u22121)\u03b2\u2086 \u2264 (2^N\u22122)|S|\u221a((2^N\u22121)|S|), where \u03b2\u2086 = 6\u00b7(satisfied \u2212 violated commuting 3-point lines in S). For S inside an elliptic quadric (N \u2265 2) the same holds with 2^(N\u22121). For nonempty S, equality is equivalent to four spectral or flat-state conditions, and for N \u2265 2 it forces (2^N\u22121)|S| to be a square.",
+      "statement": "For N ≥ 1, every set S of non-identity N-qubit Pauli labels and every ±1 assignment f on S satisfy (2^N−1)β₆ ≤ (2^N−2)|S|√((2^N−1)|S|), where β₆ = 6·(satisfied − violated commuting 3-point lines in S). For S inside an elliptic quadric (N ≥ 2) the same holds with 2^(N−1). For nonempty S, equality is equivalent to four spectral or flat-state conditions, and for N ≥ 2 it forces (2^N−1)|S| to be a square.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "The floor and its Kramers variant are Jonah's prior results (doi:10.5281/zenodo.23538829); the stated contribution is the formalization and arbitrary supports.",
@@ -2358,7 +2358,7 @@
       "limits": [
         "The repository's paper calls the bounds prior work of Jonah; README, CLAIMS.md and the hub list them as results without that label.",
         "Jonah's preprint abstract states an attainment criterion (violation-regular assignment with simple top eigenvalue) for closed families; its overlap with the five-way equivalence was not compared line by line.",
-        "The perfect-square condition is an elementary consequence of \u03b2\u2086 being an integer.",
+        "The perfect-square condition is an elementary consequence of β₆ being an integer.",
         "Contexts are only commuting 3-point lines {u, v, u+v}; an independent Lean formalization of a similar floor was deposited on Zenodo after the pinned commit (doi:10.5281/zenodo.24567331)."
       ],
       "check": "cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean"
@@ -2368,11 +2368,11 @@
       "archive_id": "0TH-2026-009",
       "key": "T1-N45",
       "status": "ACTIVE",
-      "title": "Kernel-checked lower bounds for the contextuality degrees of W(7,2) and Q\u207a(9,2)",
-      "statement": "Every \u00b11 assignment on the 255 non-identity four-qubit Pauli labels violates at least 1455 commuting 3-point lines of W(7,2), and every \u00b11 assignment on the non-identity five-qubit labels with q\u2080 = 0 violates at least 6444 lines of Q\u207a(9,2).",
+      "title": "Kernel-checked lower bounds for the contextuality degrees of W(7,2) and Q⁺(9,2)",
+      "statement": "Every ±1 assignment on the 255 non-identity four-qubit Pauli labels violates at least 1455 commuting 3-point lines of W(7,2), and every ±1 assignment on the non-identity five-qubit labels with q₀ = 0 violates at least 6444 lines of Q⁺(9,2).",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "The repository's exact values 1575 and 6975 are proved in Lean only conditionally on d(Q\u207b(7,2)) \u2265 315, which rests on a C census.",
+      "evidence_note": "The repository's exact values 1575 and 6975 are proved in Lean only conditionally on d(Q⁻(7,2)) ≥ 315, which rests on a C census.",
       "asked_in": {
         "citation": "Z. Li, A. Gupta, V. Ganesh, The Four-Qubit Hyperbolic Quadric Has Contextuality Degree 315 (2026), arXiv:2610.26465",
         "url": "https://arxiv.org/abs/2610.26465v1",
@@ -2409,7 +2409,7 @@
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "These are lower bounds; Li, Gupta and Ganesh ask for the exact degrees. 1455 raises their stated lower bound 1071 for W(7,2), and 6444 > 4743 gives a negative answer to their question whether deg Q\u207a(9,2) = 4743.",
+        "These are lower bounds; Li, Gupta and Ganesh ask for the exact degrees. 1455 raises their stated lower bound 1071 for W(7,2), and 6444 > 4743 gives a negative answer to their question whether deg Q⁺(9,2) = 4743.",
         "Jonah's unreviewed, computer-assisted note of 20 October 2026 (doi:10.5281/zenodo.23510634) already claimed the exact values 1575 and 6975 and the negative answer; README and CLAIMS.md do not say so.",
         "The repository's own notes state these bounds should not be presented as new resolutions."
       ],
@@ -2420,8 +2420,8 @@
       "archive_id": "0TH-2026-009",
       "key": "T3",
       "status": "ACTIVE",
-      "title": "Peres\u2013Mermin setting-bias failure floor and finite betting-tree hitting bound",
-      "statement": "For nonnegative weights p on the six Peres\u2013Mermin contexts, minimal at c, every deterministic \u00b11 table on the nine observables fails on contexts of total weight \u2265 p(c), and some table attains p(c). In every finite binary betting tree whose nodes have win chance q \u2208 [0,1] and factors A, B \u2265 0 with qA+(1\u2212q)B \u2264 1, wealth reaches T > 0 from z \u2265 0 with probability \u2264 z/T.",
+      "title": "Peres–Mermin setting-bias failure floor and finite betting-tree hitting bound",
+      "statement": "For nonnegative weights p on the six Peres–Mermin contexts, minimal at c, every deterministic ±1 table on the nine observables fails on contexts of total weight ≥ p(c), and some table attains p(c). In every finite binary betting tree whose nodes have win chance q ∈ [0,1] and factors A, B ≥ 0 with qA+(1−q)B ≤ 1, wealth reaches T > 0 from z ≥ 0 with probability ≤ z/T.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "The repository's PRIOR_ART.md calls both bounds elementary consequences of their assumptions and cites Ville's inequality as established.",
@@ -2474,8 +2474,8 @@
       "archive_id": "0TH-2026-009",
       "key": "T1-small",
       "status": "ACTIVE",
-      "title": "Kernel-checked contextuality degrees of Q\u207a(3,2), W(5,2) and Q\u207b(5,2), with bounds for W(3,2)",
-      "statement": "Minimum numbers of violated commuting 3-point lines over \u00b11 assignments: 1 on the two-qubit hyperbolic quadric Q\u207a(3,2) (nine observables), 63 on W(5,2), and 9 on one three-qubit elliptic quadric Q\u207b(5,2); on W(3,2) every assignment violates at least 2 lines and one assignment violates 3.",
+      "title": "Kernel-checked contextuality degrees of Q⁺(3,2), W(5,2) and Q⁻(5,2), with bounds for W(3,2)",
+      "statement": "Minimum numbers of violated commuting 3-point lines over ±1 assignments: 1 on the two-qubit hyperbolic quadric Q⁺(3,2) (nine observables), 63 on W(5,2), and 9 on one three-qubit elliptic quadric Q⁻(5,2); on W(3,2) every assignment violates at least 2 lines and one assignment violates 3.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -2511,8 +2511,8 @@
       },
       "limits": [
         "The repository's paper calls 63 and 9 known exact degrees; README and CLAIMS.md C03 do not label them as known.",
-        "d(W(3,2)) is not determined exactly in Lean (only 2 \u2264 d \u2264 3), although arXiv:2610.26465, Sec. 1, reports the value 3 as known.",
-        "Literature status: Li, Gupta and Ganesh (arXiv:2610.26465, Sec. 1) list W(5,2) (63) and its quadrics (21 and 9) as known exact values. They cite de Boutray et al. (J. Phys. A 55 (2022) 475301, arXiv:2105.13798) and Muller et al. (Math. Struct. Comp. Sci. 34 (2024) 322\u2013343, arXiv:2305.10225); those sources were not re-read here. Q\u207a(3,2) is the Peres\u2013Mermin square."
+        "d(W(3,2)) is not determined exactly in Lean (only 2 ≤ d ≤ 3), although arXiv:2610.26465, Sec. 1, reports the value 3 as known.",
+        "Literature status: Li, Gupta and Ganesh (arXiv:2610.26465, Sec. 1) list W(5,2) (63) and its quadrics (21 and 9) as known exact values. They cite de Boutray et al. (J. Phys. A 55 (2022) 475301, arXiv:2105.13798) and Muller et al. (Math. Struct. Comp. Sci. 34 (2024) 322–343, arXiv:2305.10225); those sources were not re-read here. Q⁺(3,2) is the Peres–Mermin square."
       ],
       "check": "cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean"
     },
@@ -2522,10 +2522,10 @@
       "key": "T2d",
       "status": "ACTIVE",
       "title": "Even-Laplacian parity for quadratic-plus-periodic integer functions on the triangular lattice",
-      "statement": "Let M \u2265 1, \u03c8 doubly periodic with periods \u2265 1, and u: \u2124\u00b2 \u2192 \u2124 with M\u00b7u = Ax\u00b2 + Bxy + Cy\u00b2 + Dx + Ey + \u03c8. If M\u00b7K = 4A \u2212 2B + 4C and the six-neighbour triangular-lattice Laplacian of u is \u2264 K everywhere, then K is even; so K = 5 is impossible in this class. Explicit functions attain constant Laplacian 4 and 2.",
+      "statement": "Let M ≥ 1, ψ doubly periodic with periods ≥ 1, and u: ℤ² → ℤ with M·u = Ax² + Bxy + Cy² + Dx + Ey + ψ. If M·K = 4A − 2B + 4C and the six-neighbour triangular-lattice Laplacian of u is ≤ K everywhere, then K is even; so K = 5 is impossible in this class. Explicit functions attain constant Laplacian 4 and 2.",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
-      "evidence_note": "Elementary: the hypotheses force constant Laplacian, and integer-valued quadratics have even A\u2082 Laplacian.",
+      "evidence_note": "Elementary: the hypotheses force constant Laplacian, and integer-valued quadratics have even A₂ Laplacian.",
       "asked_in": null,
       "lean": [
         {
@@ -2535,7 +2535,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -2543,10 +2543,10 @@
         "prior_work": "NONE_FOUND"
       },
       "limits": [
-        "Requires the Laplacian bound K to equal the mean curvature (4A \u2212 2B + 4C)/M; envelopes with smaller mean are not covered.",
-        "Says nothing about sandpile configurations of height 5 or the A\u2082 sandpile identity.",
-        "No prior statement found in two literature searches, but the argument is elementary and the hub's 'universally obstructing K = 5' wording overstates it.",
-        "The description of integer superharmonic matrices on A\u2082 (an open problem posed by Levine-Pegden-Smart for periodic graphs) is not addressed."
+        "Requires the Laplacian bound K to equal the mean curvature (4A − 2B + 4C)/M; envelopes with smaller mean are not covered.",
+        "Says nothing about sandpile configurations of height 5 or the A₂ sandpile identity (v2.0.0 removed the unsupported causal remark from paper and figures).",
+        "No prior statement found in two literature searches, though the argument is elementary (v2.0.0 also adds a constructive joint NonVacuity witness for the hypothesis bundle).",
+        "The description of integer superharmonic matrices on A₂ (an open problem posed by Levine-Pegden-Smart for periodic graphs) is not addressed."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -2555,8 +2555,8 @@
       "archive_id": "0TH-2026-019",
       "key": "T1",
       "status": "ACTIVE",
-      "title": "Signature change of the Cayley\u2013Dickson sign table and 2-blade nullities",
-      "statement": "For all n and every signature \u03b3 \u2208 {\u00b11}\u207f: \u03c3_n^\u03b3(i,j) = \u03c3_n(i,j)\u00b7(\u22121)^popcount(i\u2227j\u2227flip(\u03b3)); the 2\u00d72 block sign of e_i+e_j flips by (\u22121)^popcount((i\u2295j)\u2227flip(\u03b3)) for every k; hence \u03bd_n^\u03b3(i,j) equals \u03bd_n(i,j) or 2^(n\u22121) \u2212 \u03bd_n(i,j), and the sums H(v)+H(2^(n\u22121)\u2212v) and the bin H(2^(n\u22122)) do not depend on \u03b3.",
+      "title": "Signature change of the Cayley–Dickson sign table and 2-blade nullities",
+      "statement": "For all n and every signature γ ∈ {±1}ⁿ: σ_n^γ(i,j) = σ_n(i,j)·(−1)^popcount(i∧j∧flip(γ)); the 2×2 block sign of e_i+e_j flips by (−1)^popcount((i⊕j)∧flip(γ)) for every k; hence ν_n^γ(i,j) equals ν_n(i,j) or 2^(n−1) − ν_n(i,j), and the sums H(v)+H(2^(n−1)−v) and the bin H(2^(n−2)) do not depend on γ.",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -2616,9 +2616,9 @@
         "prior_work": "NONE_FOUND"
       },
       "limits": [
-        "Lean proves facts about the explicit Cayley\u2013Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
-        "The nilpotency criterion T1c states only that the scalar part of (e_i+e_j)\u00b2 cancels; the cross term is not part of the Lean statement.",
-        "Prior-work search was limited; the twisted-group-algebra description of Cayley\u2013Dickson algebras with parameters (Albuquerque\u2013Majid, Morier-Genoud\u2013Ovsienko) was not compared with the cocycle formula."
+        "Lean proves facts about the explicit Cayley–Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
+        "The nilpotency criterion T1c states only that the scalar part of (e_i+e_j)² cancels; the cross term is not part of the Lean statement.",
+        "Prior-work search was limited; the twisted-group-algebra description of Cayley–Dickson algebras with parameters (Albuquerque–Majid, Morier-Genoud–Ovsienko) was not compared with the cocycle formula."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -2628,7 +2628,7 @@
       "key": "T2",
       "status": "ACTIVE",
       "title": "Doubling recurrence and closed forms for Euclidean 2-blade nullities",
-      "statement": "Standard CD_n, 0 < i \u2260 j < 2\u207f: \u03bd_{n+1} obeys a four-branch doubling recurrence in \u03bd_n; 4 | \u03bd for n \u2265 3; \u03bd \u2264 2^(n\u22121) \u2212 4 for n \u2265 4. For n \u2265 3: \u03a3\u03bd = 8(2^(n\u22121)\u22121)(2^(n\u22122)\u22121)(2^(n\u22123)\u22121); H_n(0) = (6n\u22129)\u00b72^(n\u22122)+3; H_{n+1}(8m) = 2H_n(4m) for m \u2265 1; H_{n+1}(2\u207f\u22124\u22128m) = 2H_n(4m) for 8m < 2\u207f\u22124; an interior palindrome; H_{n+1}(2\u207f\u22124) = 2H_n(0) > 0 (bound attained).",
+      "statement": "Standard CD_n, 0 < i ≠ j < 2ⁿ: ν_{n+1} obeys a four-branch doubling recurrence in ν_n; 4 | ν for n ≥ 3; ν ≤ 2^(n−1) − 4 for n ≥ 4. For n ≥ 3: Σν = 8(2^(n−1)−1)(2^(n−2)−1)(2^(n−3)−1); H_n(0) = (6n−9)·2^(n−2)+3; H_{n+1}(8m) = 2H_n(4m) for m ≥ 1; H_{n+1}(2ⁿ−4−8m) = 2H_n(4m) for 8m < 2ⁿ−4; an interior palindrome; H_{n+1}(2ⁿ−4) = 2H_n(0) > 0 (bound attained).",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -2698,10 +2698,10 @@
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "Lean proves facts about the explicit Cayley\u2013Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
-        "4 | \u03bd is the 2-blade case of Moreno's theorem that annihilator dimensions in Cayley\u2013Dickson algebras are multiples of four (quoted in Biss\u2013Dugger\u2013Isaksen, arXiv:math/0511691); the paper does not credit it.",
-        "The comparison with the Biss\u2013Dugger\u2013Isaksen bound 2\u207f\u22124n+4 compares two closed formulas in Lean; the BDI theorem itself is not formalized.",
-        "Zhilina (Int. J. Algebra Comput. 31 (2021); arXiv:2608.28176) classifies zero divisors with basis-element components; the overlap with the \u03bd = 0 versus \u03bd > 0 split was not assessed.",
+        "Lean proves facts about the explicit Cayley–Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
+        "4 | ν is the 2-blade case of Moreno's theorem that annihilator dimensions in Cayley–Dickson algebras are multiples of four (quoted in Biss–Dugger–Isaksen, arXiv:math/0511691); the paper does not credit it.",
+        "The comparison with the Biss–Dugger–Isaksen bound 2ⁿ−4n+4 compares two closed formulas in Lean; the BDI theorem itself is not formalized.",
+        "Zhilina (Int. J. Algebra Comput. 31 (2021); arXiv:2608.28176) classifies zero divisors with basis-element components; the overlap with the ν = 0 versus ν > 0 split was not assessed.",
         "Euclidean signature only."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -2711,8 +2711,8 @@
       "archive_id": "0TH-2026-019",
       "key": "T2f",
       "status": "ACTIVE",
-      "title": "Midpoint bin count 42\u00b72^(n\u22124) for all Cayley\u2013Dickson signatures",
-      "statement": "For every n \u2265 4 and every signature \u03b3 \u2208 {\u00b11}\u207f, the number of pairs 1 \u2264 i < j < 2\u207f whose 2-blade e_i+e_j has nullity 2^(n\u22122) in CD_n(\u03b3) equals 42\u00b72^(n\u22124).",
+      "title": "Midpoint bin count 42·2^(n−4) for all Cayley–Dickson signatures",
+      "statement": "For every n ≥ 4 and every signature γ ∈ {±1}ⁿ, the number of pairs 1 ≤ i < j < 2ⁿ whose 2-blade e_i+e_j has nullity 2^(n−2) in CD_n(γ) equals 42·2^(n−4).",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -2742,7 +2742,7 @@
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "Lean proves facts about the explicit Cayley\u2013Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
+        "Lean proves facts about the explicit Cayley–Dickson sign table and block counts; that the counted quantity equals the dimension of the left annihilator of e_i+e_j is a paper lemma, not formalized.",
         "The case n = 4 (42) is de Marrais's 42 sedenion assessors (arXiv:math/0011260); the extension to all n and all signatures was not found in a limited search."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -2752,8 +2752,8 @@
       "archive_id": "0TH-2026-019",
       "key": "T3",
       "status": "ACTIVE",
-      "title": "Coordinate right-multiplier families in Euclidean Cayley\u2013Dickson algebras",
-      "statement": "In the Euclidean CD_n: for n \u2265 3 a set of basis indices with pairwise compatible right multiplications (a norm-multiplicative [2\u207f, s, 2\u207f] coordinate pair) has at most n+5 elements, attained; for n \u2265 4 only e_0 and e_{2^(n\u22121)} are compatible with all indices; a [2^(n\u22121), 2(n+4), 2\u207f] coordinate pair exists for n \u2265 4; n+5 = \u03c1(2\u207f) for n = 3,4,5 and n+5 < \u03c1(2\u207f) for n \u2265 6.",
+      "title": "Coordinate right-multiplier families in Euclidean Cayley–Dickson algebras",
+      "statement": "In the Euclidean CD_n: for n ≥ 3 a set of basis indices with pairwise compatible right multiplications (a norm-multiplicative [2ⁿ, s, 2ⁿ] coordinate pair) has at most n+5 elements, attained; for n ≥ 4 only e_0 and e_{2^(n−1)} are compatible with all indices; a [2^(n−1), 2(n+4), 2ⁿ] coordinate pair exists for n ≥ 4; n+5 = ρ(2ⁿ) for n = 3,4,5 and n+5 < ρ(2ⁿ) for n ≥ 6.",
       "kind": "NEW_THEOREM",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -2813,9 +2813,9 @@
         "prior_work": "NONE_FOUND"
       },
       "limits": [
-        "Only coordinate (basis-index) subsets with the full basis as left factor, and only the Euclidean signature; nothing is shown about non-coordinate subspaces or the general Hurwitz\u2013Radon problem.",
-        "The comparison with \u03c1(2\u207f) (T3c) is arithmetic on the formula 8\u230an/4\u230b+2^(n mod 4); that this formula is the Hurwitz\u2013Radon number is classical and not proved in Lean.",
-        "Prior-work search was limited: Adem (1975) on Cayley\u2013Dickson normed maps was not read; Moreno (arXiv:math/0404395) on alternative elements is related and not cited."
+        "Only coordinate (basis-index) subsets with the full basis as left factor, and only the Euclidean signature; nothing is shown about non-coordinate subspaces or the general Hurwitz–Radon problem.",
+        "The comparison with ρ(2ⁿ) (T3c) is arithmetic on the formula 8⌊n/4⌋+2^(n mod 4); that this formula is the Hurwitz–Radon number is classical and not proved in Lean.",
+        "Prior-work search was limited: Adem (1975) on Cayley–Dickson normed maps was not read; Moreno (arXiv:math/0404395) on alternative elements is related and not cited."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -2825,10 +2825,10 @@
       "key": "T1df",
       "status": "ACTIVE",
       "title": "Sign-point determinants and the sign lifts of Gardam's support",
-      "statement": "For all integers P, Q, R, S, the determinant of the defined 4\u00d74 matrix blochAtSign(P,Q,R,S) at each point (\u00b11,\u00b11,\u00b11) equals a stated product of linear forms, a square, or a product of sums of two squares. For every \u00b11 choice on Gardam's 21 support coefficients these eight determinants are not all \u00b11, also when the p-part is any function even at sign points.",
+      "statement": "For all integers P, Q, R, S, the determinant of the defined 4×4 matrix blochAtSign(P,Q,R,S) at each point (±1,±1,±1) equals a stated product of linear forms, a square, or a product of sums of two squares. For every ±1 choice on Gardam's 21 support coefficients these eight determinants are not all ±1, also when the p-part is any function even at sign points.",
       "kind": "BOUNDED_CASE",
       "evidence": "kernel-checked",
-      "evidence_note": "'Unit in \u2124[P] \u21d2 all sign-point determinants are \u00b11' is a paper argument; Lean has no determinant multiplicativity.",
+      "evidence_note": "'Unit in ℤ[P] ⇒ all sign-point determinants are ±1' is a paper argument; Lean has no determinant multiplicativity.",
       "asked_in": null,
       "lean": [
         {
@@ -2861,10 +2861,10 @@
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "Lean does not state that the lifts are non-units in \u2124[P]; it states that a necessary determinant test fails.",
+        "Lean does not state that the lifts are non-units in ℤ[P]; it states that a necessary determinant test fails.",
         "blochAtSign is a separate definition with no lemma linking it to the Bloch evaluation map.",
-        "Tabei, arXiv:2608.00103 (2026-07-30, preprint), proves that no unit of \u2124[P] supported in B(4) has nontrivial reduction mod 2, which implies the non-unit conclusion for all these lifts.",
-        "Whether \u2124[P] has any non-trivial unit remains open (Gardam, arXiv:2312.05240, found none)."
+        "Tabei, arXiv:2608.00103 (2026-07-30, preprint), proves that no unit of ℤ[P] supported in B(4) has nontrivial reduction mod 2, which implies the non-unit conclusion for all these lifts.",
+        "Whether ℤ[P] has any non-trivial unit remains open (Gardam, arXiv:2312.05240, found none)."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -2874,10 +2874,10 @@
       "key": "T2bd",
       "status": "ACTIVE",
       "title": "Finite computations for signed Haah conics and odd-order CC1 points over F_p",
-      "statement": "On the 64 sign tuples, the defined function signedHaahConicDet takes the values \u221212, \u22128, \u22124, 4, 8, 12 with counts 12, 16, 4, 4, 16, 12, none divisible by a prime p \u2265 5. No (x,y,z) \u2208 (F_p^\u00d7)\u00b3 of odd order satisfies 1+x+y+z = 0 and 1+xy+yz+zx = 0 for p = 3, 5, 7, 11, 13, 17, 19; such points exist for p = 23 and 31.",
+      "statement": "On the 64 sign tuples, the defined function signedHaahConicDet takes the values −12, −8, −4, 4, 8, 12 with counts 12, 16, 4, 4, 16, 12, none divisible by a prime p ≥ 5. No (x,y,z) ∈ (F_p^×)³ of odd order satisfies 1+x+y+z = 0 and 1+xy+yz+zx = 0 for p = 3, 5, 7, 11, 13, 17, 19; such points exist for p = 23 and 31.",
       "kind": "BOUNDED_CASE",
       "evidence": "kernel-checked",
-      "evidence_note": "Code dimensions such as k\u2082\u2083(11) = 6 are Rust/Python computations.",
+      "evidence_note": "Code dimensions such as k₂₃(11) = 6 are Rust/Python computations.",
       "asked_in": null,
       "lean": [
         {
@@ -2905,7 +2905,7 @@
         "prior_work": "NOT_SEARCHED"
       },
       "limits": [
-        "The map from signed codes to conic discriminants is a definition, not derived, and smoothness \u21d4 nonzero discriminant is not formalized.",
+        "The map from signed codes to conic discriminants is a definition, not derived, and smoothness ⇔ nonzero discriminant is not formalized.",
         "Points over extension fields F_{p^k} are not covered.",
         "No code dimension k_p(L) is defined in Lean.",
         "No literature search was done for these computations, and no source is cited that poses the all-primes question as open."
@@ -2918,7 +2918,7 @@
       "key": "T1d",
       "status": "ACTIVE",
       "title": "Mod-8 residue locking in one integral octahedral circle packing",
-      "statement": "The eight octahedral face reflections are involutions preserving the octahedral Descartes equations. Every sextuple reachable from (\u22126,10,17,40,24,17) has residues (2,2,1,0,0,1) mod 8; hence b\u2081, b\u2082 are never squares and b\u2083, b\u2086 are never twice a square. A \u221a\u22122 norm identity holds for octahedral sextuples.",
+      "statement": "The eight octahedral face reflections are involutions preserving the octahedral Descartes equations. Every sextuple reachable from (−6,10,17,40,24,17) has residues (2,2,1,0,0,1) mod 8; hence b₁, b₂ are never squares and b₃, b₆ are never twice a square. A √−2 norm identity holds for octahedral sextuples.",
       "kind": "BOUNDED_CASE",
       "evidence": "kernel-checked",
       "evidence_note": "The exclusion follows from congruences mod 8; no reciprocity argument is formalized.",
@@ -2931,7 +2931,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -2939,9 +2939,9 @@
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "Nothing is shown about squares at b\u2083\u2013b\u2086 or twice-squares at b\u2081, b\u2082, b\u2084, b\u2085.",
+        "Nothing is shown about squares at b₃–b₆ or twice-squares at b₁, b₂, b₄, b₅.",
         "The 'Jacobi' conjunct consists of closed numeric evaluations unrelated to the orbit.",
-        "Quadratic reciprocity obstructions for octahedral packings were published earlier in arXiv:2510.21702 (Shi, Shi, Whitehead, Williams-Tracy, Zhang, 2025), which the repository does not cite."
+        "Quadratic reciprocity obstructions for octahedral packings were published earlier by Shi, Shi, Whitehead, Williams-Tracy, and Zhang (arXiv:2510.21702, 2025), which v2.0.0 cites."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -2951,7 +2951,7 @@
       "key": "T2c",
       "status": "ACTIVE",
       "title": "Square-lattice obstruction for an isotropic quadratic-plus-periodic integer function",
-      "statement": "There is no integer function u on \u2124\u00b2 with 4u = 3(x\u00b2+y\u00b2) + \u03c8, \u03c8 doubly periodic with periods \u2265 1, whose square-lattice Laplacian is at most 3 everywhere. Four explicit integer functions have constant Laplacian 2 or 3.",
+      "statement": "There is no integer function u on ℤ² with 4u = 3(x²+y²) + ψ, ψ doubly periodic with periods ≥ 1, whose square-lattice Laplacian is at most 3 everywhere. Four explicit integer functions have constant Laplacian 2 or 3.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -2963,7 +2963,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -2971,8 +2971,8 @@
         "prior_work": "OVERLAP_FOUND"
       },
       "limits": [
-        "One isotropic quadratic of the exact form (3(x\u00b2+y\u00b2)+\u03c8)/4, not the general problem: the set of quadratic growths of integer superharmonic functions on \u2124\u00b2 was determined by Levine, Pegden and Smart (Ann. of Math. 186 (2017), arXiv:1309.3267).",
-        "Filed with known mathematics because the set of attainable quadratic growths on \u2124\u00b2 is classified by Levine, Pegden and Smart (2017); whether this exact case follows from that classification was not checked, and no prior-work search is recorded."
+        "One isotropic quadratic of the exact form (3(x²+y²)+ψ)/4, not the general problem: the set of quadratic growths of integer superharmonic functions on ℤ² was determined by Levine, Pegden and Smart (Ann. of Math. 186 (2017), arXiv:1309.3267).",
+        "Filed with known mathematics because the set of attainable quadratic growths on ℤ² is classified by Levine, Pegden and Smart (2017); whether this exact case follows from that classification was not checked, and no prior-work search is recorded."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -2982,7 +2982,7 @@
       "key": "T4fin",
       "status": "ACTIVE",
       "title": "Finite certificates for sedenion, pathion and chingon coordinate subspaces",
-      "statement": "By exhaustive kernel computation: in CD_4, 42 of the 140 affine 2-planes are bad, exactly 42 coordinate subsets of size 10 are norm-multiplicative (7, 28, 7 by overlap 8, 5, 2 with e_0\u2026e_7) and none of size \u2265 11; over all signatures the histogram profiles of CD_4 and CD_5 occur with multiplicities 1,1,7,7 and 1,1,1,1,7,7,7,7; norm-multiplicative coordinate sets of size 14 in CD_5 and 16 in CD_6 exist.",
+      "statement": "By exhaustive kernel computation: in CD_4, 42 of the 140 affine 2-planes are bad, exactly 42 coordinate subsets of size 10 are norm-multiplicative (7, 28, 7 by overlap 8, 5, 2 with e_0…e_7) and none of size ≥ 11; over all signatures the histogram profiles of CD_4 and CD_5 occur with multiplicities 1,1,7,7 and 1,1,1,1,7,7,7,7; norm-multiplicative coordinate sets of size 14 in CD_5 and 16 in CD_6 exist.",
       "kind": "BOUNDED_CASE",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -3038,8 +3038,8 @@
       },
       "limits": [
         "Coordinate subsets only, with x and y in the same span.",
-        "The upper bound r_max(CD_5) = 14 is a HiGHS MILP certificate outside Lean; the CD_6\u2013CD_8 phase tables are Rust/C/Python computations outside Lean.",
-        "The other conjuncts of T4d (c\u00b2 = 1 \u21d2 c = \u00b11 in integral domains, \u2124, \u2124[i]) are textbook facts and do not bear on Zhang and Zhu's base-field result (arXiv:2605.00590, 2026).",
+        "The upper bound r_max(CD_5) = 14 is a HiGHS MILP certificate outside Lean; the CD_6–CD_8 phase tables are Rust/C/Python computations outside Lean.",
+        "The other conjuncts of T4d (c² = 1 ⇒ c = ±1 in integral domains, ℤ, ℤ[i]) are textbook facts and do not bear on Zhang and Zhu's base-field result (arXiv:2605.00590, 2026).",
         "Prior-work search was limited."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -3049,8 +3049,8 @@
       "archive_id": "0TH-2026-015",
       "key": "T1ab",
       "status": "ACTIVE",
-      "title": "Hantzsche\u2013Wendt group model and its 4\u00d74 Bloch evaluation map",
-      "statement": "A concrete multiplication on \u2124\u00b3 \u00d7 {e,a,b,ab} satisfies the group axioms and the relations a\u207b\u00b9b\u00b2a = b\u207b\u00b2, b\u207b\u00b9a\u00b2b = a\u207b\u00b2, and is non-abelian and torsion-free. Over any commutative ring in the repository's class, 4\u00d74 Bloch evaluation at points with given inverses preserves 1, + and \u00d7; a separately defined formal coefficient map is injective.",
+      "title": "Hantzsche–Wendt group model and its 4×4 Bloch evaluation map",
+      "statement": "A concrete multiplication on ℤ³ × {e,a,b,ab} satisfies the group axioms and the relations a⁻¹b²a = b⁻², b⁻¹a²b = a⁻², and is non-abelian and torsion-free. Over any commutative ring in the repository's class, 4×4 Bloch evaluation at points with given inverses preserves 1, + and ×; a separately defined formal coefficient map is injective.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Faithfulness is proved for a separate coefficient map, not for the evaluation map.",
@@ -3087,8 +3087,8 @@
       },
       "limits": [
         "The isomorphism between the normal-form model and the presented group is not formalized.",
-        "No lemma links the injective coefficient map psiFormal to the evaluation map, and over \u2124 the evaluation map alone is not injective.",
-        "The 4\u00d74 representation is standard (Passman, arXiv:2108.06570) and is not cited by the repository."
+        "No lemma links the injective coefficient map psiFormal to the evaluation map, and over ℤ the evaluation map alone is not injective.",
+        "The 4×4 representation is standard (Passman, arXiv:2108.06570) and is not cited by the repository."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -3097,8 +3097,8 @@
       "archive_id": "0TH-2026-015",
       "key": "T1eg",
       "status": "ACTIVE",
-      "title": "Gardam's unit in F\u2082[P]: inverse check, reversible cellular automaton, lift determinant data",
-      "statement": "Gardam's 21-term \u03b1, \u03b2 satisfy \u03b1\u03b2 = \u03b2\u03b1 = 1 in F\u2082[P]. The repository's sparse 4\u00d74 Laurent determinant of the 0/1 lift of \u03b1 has 89 terms, constant term 97 and coefficient sum 945; it is V\u2084-invariant and \u2261 1 mod 2 and mod 4. Convolutions by \u03b1 and \u03b2 on configurations P \u2192 F\u2082 are mutually inverse, and convolution by \u03b1 commutes with left shifts.",
+      "title": "Gardam's unit in F₂[P]: inverse check, reversible cellular automaton, lift determinant data",
+      "statement": "Gardam's 21-term α, β satisfy αβ = βα = 1 in F₂[P]. The repository's sparse 4×4 Laurent determinant of the 0/1 lift of α has 89 terms, constant term 97 and coefficient sum 945; it is V₄-invariant and ≡ 1 mod 2 and mod 4. Convolutions by α and β on configurations P → F₂ are mutually inverse, and convolution by α commutes with left shifts.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "The 2-adic Hensel tower and inverse support sizes are Rust/Python computations; Lean has only a generic identity.",
@@ -3134,7 +3134,7 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "The unit \u03b1\u03b2 = 1 in F\u2082[P] is Gardam's (arXiv:2102.11818).",
+        "The unit αβ = 1 in F₂[P] is Gardam's (arXiv:2102.11818).",
         "The theorem named for the Hensel tower contains no Hensel statement; the generic identity is never applied to Gardam's unit.",
         "No theorem links the determinant routine to the Bloch evaluation map.",
         "Surjunctivity is already known for the sofic group P; the cellular automaton is the standard one attached to a unit."
@@ -3147,7 +3147,7 @@
       "key": "T2c",
       "status": "ACTIVE",
       "title": "Monomials are non-constant on a rational parametrization of Haah's CC1 curve",
-      "statement": "Let K be an integral domain with 2 \u2260 0 in which Px = \u2212(1+3t+t\u00b2), Py = 1+t\u2212t\u00b2 and Pz = \u22121+t+t\u00b2 each have a root, and let D = 1+t+t\u00b2. If Px^a\u00b7Py^b\u00b7Pz^c\u00b7D^(\u2212a\u2212b\u2212c), cleared of negative powers, equals a nonzero constant for every t \u2208 K, then a = b = c = 0. The analogous statement holds on one explicit line over F\u2084.",
+      "statement": "Let K be an integral domain with 2 ≠ 0 in which Px = −(1+3t+t²), Py = 1+t−t² and Pz = −1+t+t² each have a root, and let D = 1+t+t². If Px^a·Py^b·Pz^c·D^(−a−b−c), cleared of negative powers, equals a nonzero constant for every t ∈ K, then a = b = c = 0. The analogous statement holds on one explicit line over F₄.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "The reduction from string logical operators to this monomial condition is on paper only.",
@@ -3174,8 +3174,8 @@
       },
       "limits": [
         "String logical operators are not defined in Lean.",
-        "The hypotheses fail over \u2124, \u211a and F_p with p \u2261 \u00b12 mod 5 (the quadratics have discriminant 5), so those cases need an extension field.",
-        "Characteristic 2 is covered only by one line over F\u2084.",
+        "The hypotheses fail over ℤ, ℚ and F_p with p ≡ ±2 mod 5 (the quadratics have discriminant 5), so those cases need an extension field.",
+        "Characteristic 2 is covered only by one line over F₄.",
         "The qubit no-strings property is Haah's (arXiv:1101.1962), and Kim (arXiv:1202.0052) gives no-string conditions for qudit cubic codes; the repository compares with neither."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -3185,8 +3185,8 @@
       "archive_id": "0TH-2026-015",
       "key": "T2ae",
       "status": "ACTIVE",
-      "title": "Unit-twisted CSS commutation identity and two explicit CSS pairs over \u2124[P]",
-      "statement": "In any associative structure satisfying the listed involution axioms, fg = gf and uv = 1 imply (fu)(g*v*)* \u2212 (gu)(f*v*)* = 0. For Haah's f, g on P twisted by Gardam's \u03b1, \u03b2, the four check polynomials have 52, 52, 52 and 56 terms mod 2; the commutator vanishes mod 2 and has 342 terms over \u2124. A second explicit pair commutes in \u2124[P] and is not central.",
+      "title": "Unit-twisted CSS commutation identity and two explicit CSS pairs over ℤ[P]",
+      "statement": "In any associative structure satisfying the listed involution axioms, fg = gf and uv = 1 imply (fu)(g*v*)* − (gu)(f*v*)* = 0. For Haah's f, g on P twisted by Gardam's α, β, the four check polynomials have 52, 52, 52 and 56 terms mod 2; the commutator vanishes mod 2 and has 342 terms over ℤ. A second explicit pair commutes in ℤ[P] and is not central.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "No code distance, logical-qubit count or fracton property is formalized.",
@@ -3218,8 +3218,8 @@
       },
       "limits": [
         "The identity also holds for u = 1, so commutation does not depend on Gardam's unit.",
-        "The paper's k(M_L) = 4\u00b7k_Haah(L) is not in Lean.",
-        "Related prior constructions exist (Tian\u2013Samperton\u2013Wang arXiv:1812.02101; Lin\u2013Pryadko arXiv:2306.16400); 'first' is unsupported."
+        "The paper's k(M_L) = 4·k_Haah(L) is not in Lean.",
+        "Related prior constructions exist (Tian–Samperton–Wang arXiv:1812.02101; Lin–Pryadko arXiv:2306.16400); 'first' is unsupported."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -3228,11 +3228,11 @@
       "archive_id": "0TH-2026-015",
       "key": "T3ac",
       "status": "ACTIVE",
-      "title": "Origin minimum of symmetric midpoint-convex functions and generation of S\u2084 by two permutations",
-      "statement": "Every R : \u211a\u00b3 \u2192 \u211a that respects rational equality, is midpoint convex and is invariant under the three double sign flips satisfies R(0,0,0) \u2264 R(x,y,z). In a 4-tuple model of S\u2084, the adjacent transpositions satisfy the braid relations; (1 2) and (0 2 1 3) do not commute, satisfy g\u2081\u00b2 = id and g\u2082\u2074 = id, and generate all 24 permutations.",
+      "title": "Origin minimum of symmetric midpoint-convex functions and generation of S₄ by two permutations",
+      "statement": "Every R : ℚ³ → ℚ that respects rational equality, is midpoint convex and is invariant under the three double sign flips satisfies R(0,0,0) ≤ R(x,y,z). In a 4-tuple model of S₄, the adjacent transpositions satisfy the braid relations; (1 2) and (0 2 1 3) do not commute, satisfy g₁² = id and g₂⁴ = id, and generate all 24 permutations.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "Ronkin functions and the monodromy of \u03a8(\u03b1\u0303) appear only in Rust/Python numerics.",
+      "evidence_note": "Ronkin functions and the monodromy of Ψ(α̃) appear only in Rust/Python numerics.",
       "asked_in": null,
       "lean": [
         {
@@ -3267,7 +3267,7 @@
       "limits": [
         "The minimum is not strict: the constant function satisfies all hypotheses.",
         "No Ronkin function or real-valued function is formalized.",
-        "No braid group B\u2084 is defined, and that the two permutations are monodromies is numerical."
+        "No braid group B₄ is defined, and that the two permutations are monodromies is numerical."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -3413,7 +3413,7 @@
       "key": "T3",
       "status": "ACTIVE",
       "title": "Albert algebra identities over the integers: commutativity, Freudenthal adjoint, cubic Cayley-Hamilton",
-      "statement": "For all Hermitian 3x3 matrices X, Y over integer octonions, with cleared product X\u2218\u2082Y = 2(X\u2218Y), X\u00b2 := X\u2218\u2082X and X\u00b3 := X\u2218\u2082X\u00b2: X\u2218\u2082Y = Y\u2218\u2082X, X\u2218\u2082X# = 2det(X)I, and X\u00b3 \u2212 2Tr(X)X\u00b2 + 4S(X)X \u2212 4det(X)I = 0. For all u, v \u2208 Z\u2078, the matrix P(u,v) with diagonal (1, |u|\u00b2, |v|\u00b2) and off-diagonal entries (\u016bv, v\u0304, u) has P# = 0, det P = 0, P\u2218\u2082P = 2Tr(P)P.",
+      "statement": "For all Hermitian 3x3 matrices X, Y over integer octonions, with cleared product X∘₂Y = 2(X∘Y), X² := X∘₂X and X³ := X∘₂X²: X∘₂Y = Y∘₂X, X∘₂X# = 2det(X)I, and X³ − 2Tr(X)X² + 4S(X)X − 4det(X)I = 0. For all u, v ∈ Z⁸, the matrix P(u,v) with diagonal (1, |u|², |v|²) and off-diagonal entries (ūv, v̄, u) has P# = 0, det P = 0, P∘₂P = 2Tr(P)P.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -3643,7 +3643,7 @@
       "key": "T1b+T3c",
       "status": "ACTIVE",
       "title": "Jacobi symbol reciprocity laws and uniqueness of square roots of -1 modulo odd prime powers",
-      "statement": "For odd n \u2265 1 the Jacobi symbol (built from Euler's criterion) satisfies the (\u22121/n) and (2/n) laws, multiplicativity, (a\u00b2/n) = 1 when gcd(a,n) = 1, and reciprocity for coprime odd m, n \u2265 1. For an odd prime p and k \u2265 1, if p\u1d4f divides r\u2081\u00b2+1 and r\u2082\u00b2+1 then p\u1d4f divides r\u2081\u2212r\u2082 or r\u2081+r\u2082.",
+      "statement": "For odd n ≥ 1 the Jacobi symbol (built from Euler's criterion) satisfies the (−1/n) and (2/n) laws, multiplicativity, (a²/n) = 1 when gcd(a,n) = 1, and reciprocity for coprime odd m, n ≥ 1. For an odd prime p and k ≥ 1, if pᵏ divides r₁²+1 and r₂²+1 then pᵏ divides r₁−r₂ or r₁+r₂.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Zero-Mathlib Lean 4.35.0 development.",
@@ -3657,11 +3657,11 @@
         {
           "decl": "ApollonianSandpileMarkov.Palomar.t3c_hensel_sqrt_neg1_prime_power_uniqueness",
           "file": "lean/PalomarSolution.lean",
-          "line": 56
+          "line": 59
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3679,7 +3679,7 @@
       "key": "T1c",
       "status": "ACTIVE",
       "title": "Absence of square curvatures in three integral Apollonian circle packings",
-      "statement": "In the Apollonian packings generated by (\u22123,5,8,8), (\u22127,17,12,20) and (\u221211,21,24,28) \u2014 every quadruple reachable from the root by the four Descartes reflections \u2014 no curvature equals m\u00b2 for any integer m. Supporting identities: the reflections are involutions preserving the Descartes form, and (a+b)(a+c) = a\u00b2 + k\u00b2 for Descartes quadruples.",
+      "statement": "In the Apollonian packings generated by (−3,5,8,8), (−7,17,12,20) and (−11,21,24,28) — every quadruple reachable from the root by the four Descartes reflections — no curvature equals m² for any integer m. Supporting identities: the reflections are involutions preserving the Descartes form, and (a+b)(a+c) = a² + k² for Descartes quadruples.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Formalizes Haag-Kertzer-Rickards-Stange Theorem 1.6 and two Table A instances.",
@@ -3697,7 +3697,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3707,7 +3707,7 @@
       "limits": [
         "Covers three specific packings, not the HKRS families of obstructed packings.",
         "The result is due to Haag, Kertzer, Rickards and Stange (Ann. of Math. 2024, arXiv:2307.02749); only the zero-Mathlib proof route is new.",
-        "The contrast packing (\u22124,8,9,9) is only shown to contain 9; HKRS list quadratic (3n\u00b2, 6n\u00b2) and quartic obstructions for it, so it is not unobstructed.",
+        "The contrast packing rootSquareContrast = (−4,8,9,9) is only shown to contain 9; HKRS list quadratic (3n², 6n²) and quartic (n⁴, 4n⁴) obstructions for it, so it is not unobstructed (v2.0.0 renamed rootUnobstructed -> rootSquareContrast).",
         "The mod-24 residue-set comparison is computational, not in Lean.",
         "The full Apollonian local-global problem remains open."
       ],
@@ -3716,13 +3716,13 @@
     {
       "n": 76,
       "archive_id": "0TH-2026-018",
-      "key": "T2a+T2b",
+      "key": "T2a+T2b+T2f",
       "status": "ACTIVE",
       "title": "Abelian sandpile toppling laws and small-grid Laplacian computations",
-      "statement": "For symmetric zero-diagonal adjacency on integer configurations: topplings commute; any legal trace fires each vertex at most w times for a stabilizing odometer w; two legal stabilizing traces have equal counts and results. The 2\u00d72 grid Dirichlet Laplacian has determinant 192; the 3\u00d73 one satisfies L\u00b7Q = Q\u00b7D for an integer matrix Q with Q\u00b7Q\u2032 = 4I and block-diagonal D, and 4\u00b7det(B\u2082)\u00b2\u00b7det(B\u2084) = 100352; explicit Dhar traces reach the stated identity configurations.",
+      "statement": "For symmetric zero-diagonal adjacency on integer configurations: topplings commute; any legal trace fires each vertex at most w times for a stabilizing odometer w; two legal stabilizing traces have equal counts and results. Via a zero-Mathlib n×n Laplace determinant detMat, Lean proves detMat 4 (gridLap 2) = 192, detMat 9 (gridLap 3) = 100352 (T2b), detMat 4 (a2GridLap 2) = 1092, detMat 9 (a2GridLap 3) = 5393920 (T2f), and legal Z² and A₂ Dhar traces.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "det(L_3\u00d73) = 100352 itself relies on unformalized determinant multiplicativity; A\u2082 determinants are Rust/Python only.",
+      "evidence_note": "v2.0.0 proves the 9×9 Z² and A₂ Dirichlet Laplacian determinants directly via zero-Mathlib detMat (replacing the v1.0.0 indirect similarity factorization); the Matrix-Tree / sandpile-group-order interpretation remains outside Lean.",
       "asked_in": null,
       "lean": [
         {
@@ -3734,10 +3734,15 @@
           "decl": "ApollonianSandpileMarkov.Palomar.t2b_dhar_critical_identity_and_grid_orders",
           "file": "lean/PalomarSolution.lean",
           "line": 38
+        },
+        {
+          "decl": "ApollonianSandpileMarkov.Palomar.t2f_a2_grid_orders_and_dhar_identity",
+          "file": "lean/PalomarSolution.lean",
+          "line": 50
         }
       ],
-      "axioms": "propext, Classical.choice, Quot.sound (t2a); propext, Quot.sound (t2b)",
-      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3746,7 +3751,7 @@
       },
       "limits": [
         "No sink condition and no termination of stabilization are formalized.",
-        "No 9\u00d79 determinant and no Matrix-Tree or sandpile-group-order link is stated in Lean.",
+        "The 4×4 and 9×9 determinants are proved directly in Lean via detMat (v2.0.0), but the Matrix-Tree theorem and sandpile-group-order identification are not formalized.",
         "The identity configurations are shown to be stabilizations from Dhar's formula, not proved to be the group identity.",
         "Abelian property (Dhar 1990) and least action principle are known."
       ],
@@ -3758,7 +3763,7 @@
       "key": "T3a+T3b",
       "status": "ACTIVE",
       "title": "Fricke-Cohn trace identity and congruences of Markov numbers, including Zhang's mod-32 theorem",
-      "statement": "For 2\u00d72 integer matrices of determinant 1, tr(A)\u00b2 + tr(B)\u00b2 + tr(AB)\u00b2 = tr A\u00b7tr B\u00b7tr AB + tr[A,B] + 2, and Cohn-tree nodes give Markov triples via tr/3. For triples reachable from (1,1,1) by Vieta moves: pairwise coprime; odd prime divisors are \u2261 1 (mod 4); odd entries are \u2261 1 (mod 4); even entries are \u2261 2 (mod 32), with 2 and 34 both occurring.",
+      "statement": "For 2×2 integer matrices of determinant 1, tr(A)² + tr(B)² + tr(AB)² = tr A·tr B·tr AB + tr[A,B] + 2, and Cohn-tree nodes satisfy 3 | tr(A), 3 | tr(B), 3 | tr(AB) and give Markov triples via tr/3. For triples reachable from (1,1,1) by Vieta moves: pairwise coprime; odd prime divisors and odd entries are ≡ 1 (mod 4); even entries are ≡ 2 (mod 32), with 2 and 34 occurring.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Mod-32 statement is Zhang, Acta Arith. 128 (2007), arXiv:math/0612620.",
@@ -3767,16 +3772,16 @@
         {
           "decl": "ApollonianSandpileMarkov.Palomar.t3a_sl2z_fricke_cohn_markov_correspondence",
           "file": "lean/PalomarSolution.lean",
-          "line": 50
+          "line": 53
         },
         {
           "decl": "ApollonianSandpileMarkov.Palomar.t3b_markov_coprimality_odd_primes_and_mod32",
           "file": "lean/PalomarSolution.lean",
-          "line": 53
+          "line": 56
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3784,9 +3789,8 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "The mod-32 theorem and its sharpness witnesses were published by Ying Zhang (2007); the repository calls it 'our Exact Mod-32 Theorem' and does not cite Zhang.",
+        "The mod-32 theorem and its sharpness witnesses were published by Ying Zhang (Acta Arith. 128 (2007), arXiv:math/0612620); v2.0.0 attributes the theorem to Zhang and drops the v1.0.0 'our Exact Mod-32 Theorem' phrasing.",
         "Statements are for the first coordinate of tree triples; that every positive Markov triple lies in the tree (Markov's theorem) is not formalized.",
-        "The exported Cohn statement uses integer division tr/3 without stating 3 | tr.",
         "The Markov uniqueness conjecture (NT-083) remains open and is not addressed."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -3797,7 +3801,7 @@
       "key": "T3d",
       "status": "ACTIVE",
       "title": "Exchange identities along one five-step mutation sequence of the Markov quiver",
-      "statement": "For explicit subtraction-free integer polynomials P\u2081,\u2026,P\u2085 in x\u2081, x\u2082, x\u2083: P\u2081P\u2084 = x\u2081\u2074x\u2082\u00b2x\u2083\u00b2P\u2082\u00b2 + P\u2083\u00b2 and P\u2082P\u2085 = x\u2081\u2076x\u2082\u2074x\u2083\u00b2P\u2083\u00b2 + P\u2084\u00b2 identically; each P\u1d62 \u2265 1 at positive integer inputs; at (1,1,1) the values are 2, 5, 29, 433, 37666.",
+      "statement": "For explicit subtraction-free integer polynomials P₁,…,P₅ in x₁, x₂, x₃: P₁P₄ = x₁⁴x₂²x₃²P₂² + P₃² and P₂P₅ = x₁⁶x₂⁴x₃²P₃² + P₄² identically; each Pᵢ ≥ 1 at positive integer inputs; at (1,1,1) the values are 2, 5, 29, 433, 37666.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Positive Laurent coefficients follow by inspection of the definitions, not from a stated theorem.",
@@ -3806,11 +3810,11 @@
         {
           "decl": "ApollonianSandpileMarkov.Palomar.t3d_cluster_algebra_markov_laurent_positivity",
           "file": "lean/PalomarSolution.lean",
-          "line": 59
+          "line": 62
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3829,7 +3833,7 @@
       "key": "T3e",
       "status": "ACTIVE",
       "title": "Admissible coefficients of the four-variable Markov-Hurwitz equation",
-      "statement": "Positive integer solutions of x\u2081\u00b2 + x\u2082\u00b2 + x\u2083\u00b2 + x\u2084\u00b2 = a\u00b7x\u2081x\u2082x\u2083x\u2084 exist only for a = 1 (all x\u1d62 \u2261 2 mod 4) or a = 4 (all x\u1d62 odd); there are none for a \u2208 {2, 3} or a \u2265 5. Explicit solutions are given for a = 1 and a = 4.",
+      "statement": "Positive integer solutions of x₁² + x₂² + x₃² + x₄² = a·x₁x₂x₃x₄ exist only for a = 1 (all xᵢ ≡ 2 mod 4) or a = 4 (all xᵢ odd); there are none for a ∈ {2, 3} or a ≥ 5. Explicit solutions are given for a = 1 and a = 4.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -3837,11 +3841,11 @@
         {
           "decl": "ApollonianSandpileMarkov.Palomar.t3e_markov_hurwitz_n4_complete_classification",
           "file": "lean/PalomarSolution.lean",
-          "line": 62
+          "line": 65
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "0cf60c5cc6fec86dd9ab8a029abb3acf6fc6f317",
+      "audited_commit": "cdadedb27edde4b634859a68989e02238cbc694b",
       "audit": {
         "date": "2026-11-26",
         "rebuild": "PASS",
@@ -3849,9 +3853,9 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "Classical (Hurwitz 1907, per secondary sources); Hurwitz is not cited in the repository.",
-        "The description of all solutions as Vieta orbits is not part of the exported statement, so 'complete classification' overstates it.",
-        "Hurwitz equations for n \u2265 5 are not addressed."
+        "Classical (Hurwitz 1907, Arch. Math. Phys. 11, 185-196); v2.0.0 cites Hurwitz (1907).",
+        "The description of all solutions as Vieta orbits is not part of the exported statement; v2.0.0 narrows the prose to admissible coefficient classification (keeping the Lean identifier name for comparator continuity).",
+        "Hurwitz equations for n ≥ 5 are not addressed."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -3861,7 +3865,7 @@
       "key": "T4b",
       "status": "ACTIVE",
       "title": "Sedenion box-kite structure of the 42 assessors",
-      "statement": "The 42 sedenion pairs (i, j), 1 \u2264 i \u2264 7, 9 \u2264 j \u2264 15, j \u2260 i+8, with adjacency '(e_i+e_j)(e_k \u00b1 e_l) = 0 for some sign', form a 4-regular graph that splits into 7 components of 6 vertices, each 4-regular (an octahedron K_{2,2,2}); span{e_0,\u2026,e_8} is norm-multiplicative.",
+      "statement": "The 42 sedenion pairs (i, j), 1 ≤ i ≤ 7, 9 ≤ j ≤ 15, j ≠ i+8, with adjacency '(e_i+e_j)(e_k ± e_l) = 0 for some sign', form a 4-regular graph that splits into 7 components of 6 vertices, each 4-regular (an octahedron K_{2,2,2}); span{e_0,…,e_8} is norm-multiplicative.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": {
@@ -3892,8 +3896,8 @@
       "limits": [
         "The 42 assessors and the 7 box-kites are due to de Marrais (arXiv:math/0011260, 2000); this is a formal re-verification.",
         "The 'no edges between components' conjunct holds by the definition of the adjacency predicate.",
-        "In Lean the adjacency is the sign identity \u03c3(i,k)\u03c3(j,l) = \u03c3(i,l)\u03c3(j,k) with i\u2295j = k\u2295l, i \u2260 k, j \u2260 l. Its equivalence with (e_i+e_j)(e_k \u00b1 e_l) = 0 for some sign follows by expanding the product and is not proved in Lean.",
-        "Norm-multiplicativity of span{e_0,\u2026,e_8} is checked through the Boolean predicate isNormMultMask 4 511, which tests the cross-term cancellation \u03c3(a,c)\u03c3(b,d) + \u03c3(a,d)\u03c3(b,c) = 0 over basis quadruples with a\u2295b = c\u2295d. Its equivalence with |xy|\u00b2 = |x|\u00b2|y|\u00b2 for all x, y in the span follows by expanding the norm and is not proved in Lean."
+        "In Lean the adjacency is the sign identity σ(i,k)σ(j,l) = σ(i,l)σ(j,k) with i⊕j = k⊕l, i ≠ k, j ≠ l. Its equivalence with (e_i+e_j)(e_k ± e_l) = 0 for some sign follows by expanding the product and is not proved in Lean.",
+        "Norm-multiplicativity of span{e_0,…,e_8} is checked through the Boolean predicate isNormMultMask 4 511, which tests the cross-term cancellation σ(a,c)σ(b,d) + σ(a,d)σ(b,c) = 0 over basis quadruples with a⊕b = c⊕d. Its equivalence with |xy|² = |x|²|y|² for all x, y in the span follows by expanding the norm and is not proved in Lean."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -3903,10 +3907,10 @@
       "key": "UM-core",
       "status": "ACTIVE",
       "title": "Lean formalization of classical structural lemmas and finite checks for eight open-problem domains",
-      "statement": "In Lean 4.35.0 without Mathlib: the Collatz shortcut-map intercept law, Terras parity-word bijection, B\u00f6hm\u2013Sontacchi cycle equation, and cycles at \u22125, \u221217 (3n+1) and 5, 17 (3n\u22121); Mordell's mod-840 Erd\u0151s\u2013Straus reduction; for speeds 1..n, some runner is within 1/(n+1) at every rational time, and Lonely Runner for n = 1, 2; Brocard solutions for n \u2264 20; infinitely many primes; arbitrarily long prime gaps; Goldbach for even n \u2264 100; R(3,3) = 6.",
+      "statement": "In Lean 4.35.0 without Mathlib: the Collatz shortcut-map intercept law, Terras parity-word bijection, Böhm–Sontacchi cycle equation, and cycles at −5, −17 (3n+1) and 5, 17 (3n−1); Mordell's mod-840 Erdős–Straus reduction; for speeds 1..n, some runner is within 1/(n+1) at every rational time, and Lonely Runner for n = 1, 2; Brocard solutions for n ≤ 20; infinitely many primes; arbitrarily long prime gaps; Goldbach for even n ≤ 100; R(3,3) = 6.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "Perfect-number items use a computational divSum whose equality with \u03c3(n) is checked only in pytest; finite checks by kernel decide.",
+      "evidence_note": "Perfect-number items use a computational divSum whose equality with σ(n) is checked only in pytest; finite checks by kernel decide.",
       "asked_in": null,
       "lean": [
         {
@@ -3999,12 +4003,12 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "No open conjecture is proven: Collatz, Erd\u0151s\u2013Straus, Lonely Runner, Brocard, twin primes, Goldbach, odd perfect numbers and Mersenne infinitude all remain open.",
-        "All headline results are classical or elementary. The Lonely Runner conjecture is proved for up to 13 runners in recent preprints (Rosenfeld, arXiv:2509.14111; Trakulthongchai, arXiv:2511.22427; Sungkawichai and Trakulthongchai, arXiv:2604.23906), far beyond the n \u2264 2 cases and the t = 1/4 subfamily of n = 3 formalized here.",
+        "No open conjecture is proven: Collatz, Erdős–Straus, Lonely Runner, Brocard, twin primes, Goldbach, odd perfect numbers and Mersenne infinitude all remain open.",
+        "All headline results are classical or elementary. The Lonely Runner conjecture is proved for up to 13 runners in recent preprints (Rosenfeld, arXiv:2509.14111; Trakulthongchai, arXiv:2511.22427; Sungkawichai and Trakulthongchai, arXiv:2604.23906), far beyond the n ≤ 2 cases and the t = 1/4 subfamily of n = 3 formalized here.",
         "The n = 3 Lonely Runner item covers 27 of 64 speed-triple classes mod 4, not 7/8 as the prose states.",
-        "The '\u03b5-invariance barrier' is formalized only as facts about the 3n\u22121 map; the claim that \u03b5-symmetric arguments cannot settle Collatz is informal.",
+        "The 'ε-invariance barrier' is formalized only as facts about the 3n−1 map; the claim that ε-symmetric arguments cannot settle Collatz is informal.",
         "Six-kernel replay and lake comparator were not re-run locally; evidence is CI run 45742865067 at the pinned commit.",
-        "Also kernel-checked: 2^n \u2212 1 prime implies n prime (thm_mersenne_exponent_prime)."
+        "Also kernel-checked: 2^n − 1 prime implies n prime (thm_mersenne_exponent_prime)."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -4014,7 +4018,7 @@
       "key": "INV-1",
       "status": "ACTIVE",
       "title": "Lean invariants of the CELLULOGONIC MECHA discrete reaction, membrane and development model",
-      "statement": "In the integer model lean/CellulogonicProofs/Spec.lean: all 19 tabulated reactions have zero mass delta and an exact first-law balance for all 4 solvents and every rotor stoichiometry nH; heat is positive when nH \u2265 minCRing sv; other theorems give (x\u00b2+y\u00b2)\u00b3 \u2264 2(x\u00b3+y\u00b3)\u00b2 for x, y > 0, conditional power-scaling bounds, a Fr\u00f6hlich update \u2264 1000 when coherence \u2264 1000, and a contact-exchange energy decrease when k > 0 and jAA+jBB < 2jAB. Not about src/*.c.",
+      "statement": "In the integer model lean/CellulogonicProofs/Spec.lean: all 19 tabulated reactions have zero mass delta and an exact first-law balance for all 4 solvents and every rotor stoichiometry nH; heat is positive when nH ≥ minCRing sv; other theorems give (x²+y²)³ ≤ 2(x³+y³)² for x, y > 0, conditional power-scaling bounds, a Fröhlich update ≤ 1000 when coherence ≤ 1000, and a contact-exchange energy decrease when k > 0 and jAA+jBB < 2jAB. Not about src/*.c.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Lean proves Spec.lean, not the C11 engine; C behaviour, parity and statistics rest on CI tests outside Lean.",
@@ -4079,7 +4083,7 @@
       "key": "INV-1",
       "status": "ACTIVE",
       "title": "Lean 4 model invariants for the PLANARIA .hbin erasure-coded executable format",
-      "statement": "In the Lean model: GF(2^8) arithmetic mod 0x11D forms a field; the 2\u00d72 Cauchy code decodes exactly for distinct coordinates \u2265 2 (k = 2 only); the fixed schedule gives each half \u2265 k+2 cells per bundle; a burst of \u2264 16 bytes touches \u2264 8 even and \u2264 8 odd positions; a quorum with two tied maximal buckets of count \u2265 2 returns none; RAM masking stays below 4096; CNOT preserves the squared norm.",
+      "statement": "In the Lean model: GF(2^8) arithmetic mod 0x11D forms a field; the 2×2 Cauchy code decodes exactly for distinct coordinates ≥ 2 (k = 2 only); the fixed schedule gives each half ≥ k+2 cells per bundle; a burst of ≤ 16 bytes touches ≤ 8 even and ≤ 8 odd positions; a quorum with two tied maximal buckets of count ≥ 2 returns none; RAM masking stays below 4096; CNOT preserves the squared norm.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Concerns a Lean model, not extracted code; RS decoding, k>2 recovery and benchmarks are tested outside Lean.",
@@ -4141,7 +4145,7 @@
       },
       "limits": [
         "Cauchy decoding is proved only for k = 2; bundles with k in {4, 6, 8, 16} rely on the classical Cauchy determinant theorem and tests.",
-        "No Reed-Solomon code or decoder is formalized; the 8-errors-per-lane radius is arithmetic on 254 \u2212 238 + 1.",
+        "No Reed-Solomon code or decoder is formalized; the 8-errors-per-lane radius is arithmetic on 254 − 238 + 1.",
         "The Merkle quarantine theorem assumes an authenticity-root correspondence (HashBinding) rather than deriving it from a hash.",
         "The JavaScript runtime, Python oracle and survival benchmarks lie outside Lean.",
         "The field laws, Cauchy inversion and counting bounds are textbook mathematics; no open problem is addressed.",
@@ -4156,7 +4160,7 @@
       "key": "ENG-1",
       "status": "ACTIVE",
       "title": "Lean invariants of a discrete p-adic tree holography model",
-      "statement": "For the software model's own definitions: base-p digit reversal is an involution mapping p-adic balls to contiguous blocks; for a hand-coded BTZ cost model and a subcritical bridge-edge cost model, stated lower bounds on transport cost hold and explicit plans reach them; per-vertex half-charges sum to \u2212(p\u22121); a cut-capacity form of strong subadditivity holds under its hypotheses; a packet identity over Z[i] and a rank-1 Sherman\u2013Morrison identity hold.",
+      "statement": "For the software model's own definitions: base-p digit reversal is an involution mapping p-adic balls to contiguous blocks; for a hand-coded BTZ cost model and a subcritical bridge-edge cost model, stated lower bounds on transport cost hold and explicit plans reach them; per-vertex half-charges sum to −(p−1); a cut-capacity form of strong subadditivity holds under its hypotheses; a packet identity over Z[i] and a rank-1 Sherman–Morrison identity hold.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Spectral, soliton-dynamics and solver-accuracy claims are numerical or exact-rational Python checks outside Lean.",
@@ -4471,7 +4475,7 @@
         "No Lean statement refers to the atlas data, its 5,808-edge graph, or biconnectivity.",
         "Several counted theorems are literal arithmetic identities or restate a hypothesis.",
         "Six-kernel replay is CI-only (Linux bubblewrap) and was not re-run in this audit.",
-        "Bounds need the stated input ranges, for example CSS \u2264 10000 when difficulty, centrality and age are \u2264 100, and Titan in [90, 1000] when difficulty, impact and interdisciplinarity are in [1, 10] and the degree term is \u2264 100.",
+        "Bounds need the stated input ranges, for example CSS ≤ 10000 when difficulty, centrality and age are ≤ 100, and Titan in [90, 1000] when difficulty, impact and interdisciplinarity are in [1, 10] and the degree term is ≤ 100.",
         "The 7-layer list has a size theorem only, and the era map has monotonicity and samples but no iff characterisation.",
         "AQS has a bound but is shown monotone in only three of its five inputs, so AQS monotonicity is not claimed.",
         "The handshaking lemma needs a duplicate-free vertex list that contains every edge endpoint."
@@ -4484,7 +4488,7 @@
       "key": "suite",
       "status": "ACTIVE",
       "title": "Discrete invariant suite for the Cellular Engine Omega software model",
-      "statement": "Lean 4.35.0 lemmas over Nat, Int and List about the engine's discrete software model: commutation of pointwise updates at distinct indices of a Nat\u2192Int map and list-sum conservation under local steps, an integer projection that zeroes a list sum, 2\u00d72 integer Jacobian sign algebra, Nat power inequalities, closed arithmetic checks on hard-coded constants, and equalities among C11-exported receipt literals (O63, O72); 100 audited items.",
+      "statement": "Lean 4.35.0 lemmas over Nat, Int and List about the engine's discrete software model: commutation of pointwise updates at distinct indices of a Nat→Int map and list-sum conservation under local steps, an integer projection that zeroes a list sum, 2×2 integer Jacobian sign algebra, Nat power inequalities, closed arithmetic checks on hard-coded constants, and equalities among C11-exported receipt literals (O63, O72); 100 audited items.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Receipt values come from one C11 run outside Lean; floating-point solvers and C memory safety are tested empirically, not proved.",
@@ -4530,7 +4534,7 @@
         "prior_work": "NOT_SEARCHED"
       },
       "limits": [
-        "The lemmas concern the integer software model; no biological or continuum-physics law (Poincar\u00e9\u2013Hopf, Turing instability, TUR) is formalized in general.",
+        "The lemmas concern the integer software model; no biological or continuum-physics law (Poincaré–Hopf, Turing instability, TUR) is formalized in general.",
         "At least 16 of the 100 items are closed arithmetic checks on literals, for example 661 + 274 + 20 + 45 = 1000.",
         "O63 and O72 check equalities among literals written by one C11 run at seed 2026001; no hash is verified in Lean.",
         "Independent-checker and comparator runs were confirmed only through CI run 45810663954, not reproduced locally.",
@@ -4544,7 +4548,7 @@
       "key": "SUITE",
       "status": "ACTIVE",
       "title": "Kernel-checked finite-field and bitvector invariants of the AUTOPHAGE engine model",
-      "statement": "For the repository's Lean models: under a trial-division irreducibility test (divisors of degree 1\u20134), exactly 30 of the 256 polynomials x\u2078+p over F\u2082 pass, and they match the 30-entry table in src/galois_math.c; for each, the 2\u00d72 Cauchy code [[1,3],[5,1]] recovers both data bytes from the two parity bytes; affine GF(2) maps with linear inverses round-trip; Fredkin conserves popcount; masked-XOR kinship is transitive; multi-step integer ledgers keep a zero residual.",
+      "statement": "For the repository's Lean models: under a trial-division irreducibility test (divisors of degree 1–4), exactly 30 of the 256 polynomials x⁸+p over F₂ pass, and they match the 30-entry table in src/galois_math.c; for each, the 2×2 Cauchy code [[1,3],[5,1]] recovers both data bytes from the two parity bytes; affine GF(2) maps with linear inverses round-trip; Fredkin conserves popcount; masked-XOR kinship is transitive; multi-step integer ledgers keep a zero residual.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Facts about Lean definitions, not the emitted x86-64 code; several of the 48 theorems are one-line arithmetic identities.",
@@ -4591,7 +4595,7 @@
       },
       "limits": [
         "The theorems are about Lean models; JIT machine-code emission, C11 memory safety and FP64 drift are checked only by tests.",
-        "T21, T28, T29 and T30 are tautologies (for example sink \u2264 sink + rad) despite Landauer, First-Law and Second-Law names.",
+        "T21, T28, T29 and T30 are tautologies (for example sink ≤ sink + rad) despite Landauer, First-Law and Second-Law names.",
         "The count of 30 irreducible binary octics and the reversible-gate identities are textbook results.",
         "No open problem, including AI-045 or BIO-001, is resolved; biological terms are metaphors (LIMITATIONS.md sec. 1).",
         "Six-kernel acceptance was confirmed from the CI log only; replay needs Linux bubblewrap."
@@ -4604,7 +4608,7 @@
       "key": "INV-1",
       "status": "ACTIVE",
       "title": "Lean invariants for a ten-pool integer energy-ledger model and helper encodings",
-      "statement": "In the Lean model of a ten-field unbounded-integer ledger: guarded ATP\u2192heat, patch\u2192gut and ATP\u2192tissue transfers, the equal-amount pair ATP\u2192neural then neural\u2192heat, and the composite tick built from them leave the field sum unchanged; ATP\u2192heat never lowers the heat field and preserves non-negativity of all fields. Also: a region<4 edit guard returns its input, 2-bit ternary encoding round-trips on {\u22121,0,1}, 2\u00b7(1+2+\u2026+n)=n(n+1), 16\u00b72^Q\u226416384 for Q\u226410, and hard-coded receipt constants satisfy stated equalities and bounds.",
+      "statement": "In the Lean model of a ten-field unbounded-integer ledger: guarded ATP→heat, patch→gut and ATP→tissue transfers, the equal-amount pair ATP→neural then neural→heat, and the composite tick built from them leave the field sum unchanged; ATP→heat never lowers the heat field and preserves non-negativity of all fields. Also: a region<4 edit guard returns its input, 2-bit ternary encoding round-trips on {−1,0,1}, 2·(1+2+…+n)=n(n+1), 16·2^Q≤16384 for Q≤10, and hard-coded receipt constants satisfy stated equalities and bounds.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Statements are about Lean definitions in lean/NoeticProofs/Spec.lean; the C11 engine is linked only by constants printed by export-lean.",
@@ -4685,7 +4689,7 @@
         "N24, N32 and N48 only check, by decide, constants printed by one C11 run; CI regenerates that file on Linux, where the world-state SHA-256 differs from the committed Windows receipt.",
         "N25 'Ring-0 ACL' is a one-line if-expression in Lean, not a hardware or C11 access-control proof; N02/N06 'Second-Law' are field monotonicity under a non-negative guard.",
         "No consciousness, cognition, biology or physics result is shown; 29 cognitive checks are indicator-only by the repository's own statement.",
-        "ATP\u2192neural and neural\u2192heat are proved to conserve the sum only as a pair with the same amount, not as separate public theorems.",
+        "ATP→neural and neural→heat are proved to conserve the sum only as a pair with the same amount, not as separate public theorems.",
         "The added N02, N04, N05 and N07 depend on propext and Quot.sound, like N01."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -4696,7 +4700,7 @@
       "key": "INV",
       "status": "ACTIVE",
       "title": "Arithmetic conservation and addressing checks for an abstract model of an artificial-life engine",
-      "statement": "In the engine's Lean model over \u2115: moving dm\u2264bioMass from biomass to cell mass, or de\u2264bioEnergy to heat, preserves the respective total; for cur\u2264cap a capped receive splits q into kept+rejected=q with cur+kept\u2264cap; six face fluxes each \u2264amt/8 sum to \u2264amt; converting k\u2264nutXMass weight-24 units into weight-16 biomass plus thermal energy preserves weighted energy; for uid<2^32, tkey0 xor (uid/2^32)=tkey0, but not universally; offsets 8\u00b7n are injective and below 32 GiB for n<2^32.",
+      "statement": "In the engine's Lean model over ℕ: moving dm≤bioMass from biomass to cell mass, or de≤bioEnergy to heat, preserves the respective total; for cur≤cap a capped receive splits q into kept+rejected=q with cur+kept≤cap; six face fluxes each ≤amt/8 sum to ≤amt; converting k≤nutXMass weight-24 units into weight-16 biomass plus thermal energy preserves weighted energy; for uid<2^32, tkey0 xor (uid/2^32)=tkey0, but not universally; offsets 8·n are injective and below 32 GiB for n<2^32.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Statements concern Spec.lean definitions only; the C23/NASM/PTX implementation is checked by tests outside Lean.",
@@ -4757,8 +4761,8 @@
         "About 14 of the 30 suite theorems (A06-A16, A18-A20) are constant identities, literal arithmetic, definitional or restated hypotheses and are not part of this record.",
         "Axioms shown are the union over the listed declarations; A21 alone needs Classical.choice, A30 only propext.",
         "No open problem is addressed; the repository reports 0 of 1,900 Mega-Atlas problems retired.",
-        "All quantities are natural numbers; the hypotheses dm \u2264 bioMass, de \u2264 bioEnergy and k \u2264 nutXMass rule out truncated subtraction.",
-        "In the conversion clause each converted unit adds the 24 \u2212 16 = 8 surplus to thermal energy; that term is what makes the weighted total balance.",
+        "All quantities are natural numbers; the hypotheses dm ≤ bioMass, de ≤ bioEnergy and k ≤ nutXMass rule out truncated subtraction.",
+        "In the conversion clause each converted unit adds the 24 − 16 = 8 surplus to thermal energy; that term is what makes the weighted total balance.",
         "The xor refutation is proved with the single witness tkey0 = 0, uid = 2^32."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -4769,7 +4773,7 @@
       "key": "XL-INV",
       "status": "ACTIVE",
       "title": "Constructive integer invariants for a Dimensity 9500 hardware and physics teaching workbench",
-      "statement": "In the lab's Lean model (\u2124, \u2115, \u2124[i]): roofline \u2264min(peak, ai\u00b7bw), monotone in bw for ai\u22650; k\u00b7\u03bb\u00b7NA and, for NA>0, k\u00b7\u03bb\u00b7NA\u00b2 strictly increase in NA when k,\u03bb>0; scalar Crank\u2013Nicolson steps with integer h preserve the norm; \u2212E<p<E when E\u22650, m>0, E\u00b2=p\u00b2+m\u00b2; a 5-point stencil min/max principle when rx,ry\u22650 and 2rx+2ry\u2264D; CHSH and Mermin-3 in [\u22122,2] for \u00b11 inputs; Peres\u2013Mermin: \u22645 of 6 contexts for integer 3\u00d73 assignments; 2\u00d72 determinants multiply; 2- and 4-point DFT Parseval.",
+      "statement": "In the lab's Lean model (ℤ, ℕ, ℤ[i]): roofline ≤min(peak, ai·bw), monotone in bw for ai≥0; k·λ·NA and, for NA>0, k·λ·NA² strictly increase in NA when k,λ>0; scalar Crank–Nicolson steps with integer h preserve the norm; −E<p<E when E≥0, m>0, E²=p²+m²; a 5-point stencil min/max principle when rx,ry≥0 and 2rx+2ry≤D; CHSH and Mermin-3 in [−2,2] for ±1 inputs; Peres–Mermin: ≤5 of 6 contexts for integer 3×3 assignments; 2×2 determinants multiply; 2- and 4-point DFT Parseval.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Physical readings, JavaScript simulators, Float64 rounding and shard files are tested outside Lean (oracle, Node tests, SHA-256).",
@@ -4842,11 +4846,11 @@
       "limits": [
         "The Lean statements concern integer models of formulas, not the Dimensity 9500 hardware or the browser simulators.",
         "Many of the 75 declarations are literal arithmetic on cited constants closed by decide.",
-        "Crank\u2013Nicolson unitarity is proven only for a scalar factor with integer h, not for the full operator.",
+        "Crank–Nicolson unitarity is proven only for a scalar factor with integer h, not for the full operator.",
         "All results are textbook mathematics in small finite or integer settings; no Mega-Atlas problem is retired.",
         "The six-kernel and negative-rejection checks rest on CI run 45821462528; this audit did not re-run them.",
         "Axioms are a per-declaration subset of propext and Quot.sound; 28 of 75 use none.",
-        "The Rayleigh and DOF results are strict monotonicity of integer products in NA; the readings CD = k1\u00b7\u03bb/NA and DOF = k2\u00b7\u03bb/NA\u00b2 are informal."
+        "The Rayleigh and DOF results are strict monotonicity of integer products in NA; the readings CD = k1·λ/NA and DOF = k2·λ/NA² are informal."
       ],
       "check": "cd lean && lake build XiaomiLabProofs Challenge Solution && lake env lean VerifyAxioms.lean"
     },
@@ -4856,7 +4860,7 @@
       "key": "INV-1",
       "status": "ACTIVE",
       "title": "Bound and monotonicity invariants of the OVBS-52 integer scoring and stage-classifier model",
-      "statement": "In the package's Lean model over \u2115: the raw score is monotone in each pillar; for pillars \u2264100 it is \u226410000, and so is the gated score when the penalty percentage is \u2264100; it is 0 on gate failure, else non-decreasing in that percentage; stage classification is monotone; min(100,(a+b)/2+k) is \u2264100, symmetric in a,b and monotone in a,b,k; the write predicate is false on every ring for norm >9900; Pareto dominance is irreflexive and transitive.",
+      "statement": "In the package's Lean model over ℕ: the raw score is monotone in each pillar; for pillars ≤100 it is ≤10000, and so is the gated score when the penalty percentage is ≤100; it is 0 on gate failure, else non-decreasing in that percentage; stage classification is monotone; min(100,(a+b)/2+k) is ≤100, symmetric in a,b and monotone in a,b,k; the write predicate is false on every ring for norm >9900; Pareto dominance is irreflexive and transitive.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Concerns the software model's definitions only; agreement with the Python scorers rests on tests outside Lean.",
@@ -4947,7 +4951,7 @@
       "key": "INV",
       "status": "ACTIVE",
       "title": "Lean invariant suite for the Glitchling artificial-life simulator model",
-      "statement": "In the simulator's Lean transcription: finite operation sequences keep the 11-pool energy ledger balanced; single soil-flux or soil-transfer steps keep N/C mass balanced; a Clausius numerator is \u22650 if 0<T_sky\u2264T_amb\u2264T_geo, fluxes \u22650; CEGA-18 is Kochen\u2013Specker uncolourable; CHSH \u2208[\u22122,2] for \u00b11 outcomes; GF(16) commutativity, \u00d7-associativity, left distributivity, a+a=0, unit, inverses, an order-15 element; seven seat weights summing to 100, each \u226446, have every seat <50 and any two \u226492; M\u00f6bius addition keeps scaled disk points inside.",
+      "statement": "In the simulator's Lean transcription: finite operation sequences keep the 11-pool energy ledger balanced; single soil-flux or soil-transfer steps keep N/C mass balanced; a Clausius numerator is ≥0 if 0<T_sky≤T_amb≤T_geo, fluxes ≥0; CEGA-18 is Kochen–Specker uncolourable; CHSH ∈[−2,2] for ±1 outcomes; GF(16) commutativity, ×-associativity, left distributivity, a+a=0, unit, inverses, an order-15 element; seven seat weights summing to 100, each ≤46, have every seat <50 and any two ≤92; Möbius addition keeps scaled disk points inside.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Concerns the Lean model, not the JavaScript code; RS distance and the C3 trace gap are literal arithmetic only.",
@@ -5051,12 +5055,12 @@
         "The theorems concern a hand-written Lean transcription; its correspondence to the JavaScript/TypeScript simulator is tested differentially, not proven.",
         "RS[15,11] minimum distance and decoding, and the C3 cubic traces, are not proven in Lean; only their arithmetic is.",
         "The Bell-diagonal no-signaling statement is definitional and models no density matrix.",
-        "CEGA-18 uncolourability, the CHSH bound and M\u00f6bius containment are known results (CEGA-18: Cabello, Estebaranz and Garc\u00eda-Alcaine 1996).",
+        "CEGA-18 uncolourability, the CHSH bound and Möbius containment are known results (CEGA-18: Cabello, Estebaranz and García-Alcaine 1996).",
         "No open problem is resolved, and no claim about physical quantum effects, biology or consciousness is supported.",
         "Mass is preserved step by step only; no theorem covers sequences of mass operations.",
         "The GF(16) facts are exhaustive decide checks; additive associativity and the additive identity are not stated.",
         "Two seats may still hold 92 of 100 between them, a majority; only single-seat majorities are excluded.",
-        "M\u00f6bius containment is stated for integer coordinates scaled by S with |u|\u00b2 and |v|\u00b2 below S\u00b2."
+        "Möbius containment is stated for integer coordinates scaled by S with |u|² and |v|² below S²."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
     },
@@ -5066,7 +5070,7 @@
       "key": "INV-1",
       "status": "ACTIVE",
       "title": "Integer ledger and carbon-nitrogen trace conservation and capped-simplex bounds for an artificial-life model",
-      "statement": "In the ALife software's integer Lean model: finite transfer/import/export traces leave the 11-pool residual total\u2212(initial+imports\u2212exports) unchanged; finite assimilate/shed/mineralize traces conserve total C and total N; each assimilation step changes biomass C by exactly 4 times its biomass N change; any 7 natural weights summing to 10000, each \u22644800, are all <5000 with at least 3 nonzero; plus Pythagoras for orthogonal equal-length integer lists, 2p\u00b3<p\u2074 for p\u22653, and arithmetic on hard-coded constants.",
+      "statement": "In the ALife software's integer Lean model: finite transfer/import/export traces leave the 11-pool residual total−(initial+imports−exports) unchanged; finite assimilate/shed/mineralize traces conserve total C and total N; each assimilation step changes biomass C by exactly 4 times its biomass N change; any 7 natural weights summing to 10000, each ≤4800, are all <5000 with at least 3 nonzero; plus Pythagoras for orthogonal equal-length integer lists, 2p³<p⁴ for p≥3, and arithmetic on hard-coded constants.",
       "kind": "ENGINEERING_INVARIANTS",
       "evidence": "kernel-checked",
       "evidence_note": "Lean models are not linked to the TypeScript/WASM runtime. Contextuality, Reed-Solomon and registry entries check only hard-coded constants.",

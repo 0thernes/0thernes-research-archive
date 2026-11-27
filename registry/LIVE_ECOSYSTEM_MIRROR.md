@@ -2,7 +2,7 @@
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
 **Synced (UTC):** `2026-11-27T04:44:29Z` · **Mode:** `offline`  
-**Tracked Public Repositories:** 41 (`6` exact pin match, `28` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Tracked Public Repositories:** 41 (`6` exact pin match, `27` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -10,7 +10,7 @@
 |---|---|---|---|---|---|---|---|
 | [`ALife-Framework`](https://github.com/0thernes/ALife-Framework) | `0TH-BUILD-016` | Tier II | `48a2a0aa2b` | `013eb16777` | `v3.0.0` | [`success`](https://github.com/0thernes/ALife-Framework/actions/runs/45913551629) | `AHEAD_OF_PIN` |
 | [`alife-singularity-omega-package`](https://github.com/0thernes/alife-singularity-omega-package) | `0TH-BUILD-013`, `0TH-DISC-011` | Tier II / Tier III | `a08294c97f` | `255ab4d4de` | `v3.4.0` | [`success`](https://github.com/0thernes/alife-singularity-omega-package/actions/runs/45919325599) | `AHEAD_OF_PIN` |
-| [`apollonian-sandpile-markov`](https://github.com/0thernes/apollonian-sandpile-markov) | `0TH-2026-018` | Tier I | `0cf60c5cc6` | `1115b7a68e` | `v1.0.0` | [`success`](https://github.com/0thernes/apollonian-sandpile-markov/actions/runs/45910573640) | `AHEAD_OF_PIN` |
+| [`apollonian-sandpile-markov`](https://github.com/0thernes/apollonian-sandpile-markov) | `0TH-2026-018` | Tier I | `cdadedb27e` | — | `v2.0.0` | — | `OFFLINE_PIN_ONLY` |
 | [`Asmodensius`](https://github.com/0thernes/Asmodensius) | `0TH-DISC-002` | Tier III | `c72a4ec9a0` | `c72a4ec9a0` | `main` | [`success`](https://github.com/0thernes/Asmodensius/actions/runs/44051073860) | `EXACT_PIN_MATCH` |
 | [`asmodensius-native`](https://github.com/0thernes/asmodensius-native) | `0TH-BUILD-011` | Tier II | `67bedd4abb` | `f816dd78d7` | `v1.1.0` | [`success`](https://github.com/0thernes/asmodensius-native/actions/runs/45914830579) | `AHEAD_OF_PIN` |
 | [`autophage`](https://github.com/0thernes/autophage) | `0TH-BUILD-009` | Tier II | `1956c2cc54` | `97fda88239` | `v1.4.0` | [`failure`](https://github.com/0thernes/autophage/actions/runs/45918728005) | `AHEAD_OF_PIN` |
