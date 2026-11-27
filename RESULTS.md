@@ -1484,7 +1484,7 @@ Registered in the archive but not yet audited into this ledger:
 - `0TH-2026-024` [spectral-eclipse-frontier](https://github.com/0thernes/spectral-eclipse-frontier) `v1.1.0`
 - `0TH-2026-025` [clifford-radon-stabilizers](https://github.com/0thernes/clifford-radon-stabilizers) `v1.0.0`
 - `0TH-2026-026` [schur-clifford-frontier](https://github.com/0thernes/schur-clifford-frontier) `v1.1.0`
-- `0TH-2026-027` [nonlocal-magic-spectral-frontier](https://github.com/0thernes/nonlocal-magic-spectral-frontier) `v1.0.0`
+- `0TH-2026-027` [nonlocal-magic-spectral-frontier](https://github.com/0thernes/nonlocal-magic-spectral-frontier) `v1.1.0`
 - `0TH-2026-028` [quantum-latin-design-frontier](https://github.com/0thernes/quantum-latin-design-frontier) `v1.0.0`
 
 ## Not claimed
