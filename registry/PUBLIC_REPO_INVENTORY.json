@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
-  "synced_utc": "2026-11-27T05:15:18Z",
+  "synced_utc": "2026-11-27T05:19:32Z",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "repositories": [
     {
@@ -163,10 +163,10 @@
     {
       "slug": "coded-pir-mlwe-complexity-lab",
       "repository": "https://github.com/0thernes/coded-pir-mlwe-complexity-lab",
-      "description": "Zero-Mathlib Lean 4.35.0 suite (31 kernel-checked theorems) of elementary identities, finite certificates and known results (rank of the 2x2 matmul tensor is 7, Schwartz-Zippel, integer form of Theta(C5)=sqrt5) for coded PIR, ML-KEM noise and tensor rank. Rates and DFRs are numerical.",
+      "description": "Zero-Mathlib Lean 4.35.0 proofs (31 theorem bundles T1a-T3l + 9 boundary tests, 1,330 axiom-swept decls, 6 kernels), C11/Python/Eshkol verifiers, and AMS-LaTeX preprint on coded/Byzantine PIR, MLWE noise & complexity barriers (v5.1.0)",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T05:07:40Z",
+      "pushed_at": "2026-11-27T05:17:05Z",
       "homepage": "https://0thernes.github.io/coded-pir-mlwe-complexity-lab/",
       "latest_release": null,
       "archive_registered": true,
