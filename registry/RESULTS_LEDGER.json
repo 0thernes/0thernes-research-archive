@@ -3320,8 +3320,8 @@
       "archive_id": "0TH-2026-017",
       "key": "T1",
       "status": "ACTIVE",
-      "title": "Integer octonion composition law, Moufang identities, non-associativity and a sedenion zero divisor",
-      "statement": "For the 8-dimensional algebra on Z^8 given by the stated Fano table: N(xy) = N(x)N(y) and the left, right and middle Moufang identities hold for all x, y, z; the associator of e1, e2, e3 is nonzero. In the integer Cayley-Dickson sedenions, (e1+e10)(e3+e14) = 0, and so are all nonzero integer rescalings of this pair.",
+      "title": "Integer octonion composition, Moufang identities, non-associativity, sedenion zero divisor, and 4D annihilator",
+      "statement": "For the 8-dimensional algebra on Z^8 given by the stated Fano table: N(xy) = N(x)N(y) and the left, right and middle Moufang identities hold for all x, y, z; [e1, e2, e3] = -2 e6 != 0. In integer Cayley-Dickson sedenions, (e1+e10)(e3+e14) = 0, and ker(L_{e1+e10}) has a unique unimodular rank-4 Z-basis bijection (Z^4).",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -3360,10 +3360,15 @@
           "decl": "Octonionica.OctonionsSedenions.sedenion_infinite_zero_divisor_family",
           "file": "lean/OctonionicaProofs/OctonionsSedenions.lean",
           "line": 356
+        },
+        {
+          "decl": "Octonionica.OctonionsSedenions.sedenion_annihilator_iff_unique_basis4",
+          "file": "lean/OctonionicaProofs/OctonionsSedenions.lean",
+          "line": 386
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e064cb44d0f4dff8bf9021f7a822d3517efe8e68",
+      "audited_commit": "b485fd9f67451ce8e7abfd95be85199782684955",
       "audit": {
         "date": "2026-11-27",
         "rebuild": "PASS",
@@ -3373,7 +3378,7 @@
       "limits": [
         "Proved over Z (integer coordinates) only; the extension to real octonions by the polynomial-identity argument is not formalized.",
         "Classical results (eight-square identity, Moufang 1935, Cayley-Dickson); an Isabelle AFP formalization of octonions (2018) already exists.",
-        "The 'infinite 2-parameter family' of sedenion zero divisors consists only of integer rescalings c*u, d*v of one pair."
+        "In v1.3.0, sedenion_annihilator_iff_unique_basis4 upgrades the scalar-rescaling family to the exact unimodular rank-4 Z-module bijection ker(L_{e1+e10}) ~= Z^4 (wired into T1)."
       ],
       "check": "cd lean && lake build --wfail && lake env lean VerifyAxioms.lean"
     },
@@ -3382,8 +3387,8 @@
       "archive_id": "0TH-2026-017",
       "key": "T2",
       "status": "ACTIVE",
-      "title": "7D cross product, unimodular rank-14 g2 = Der(O(Z)), and cleared-denominator S^6 Nijenhuis norm identity",
-      "statement": "Over Z^7: |u x v|^2 = |u|^2|v|^2 - <u,v>^2, <u x v, w> is totally skew, 2J(u,v,w) = -3 Im[u,v,w]. Octonion derivations Der(O(Z)) form a rank-14 Z-module with unique unimodular basis g2Basis, closed under Lie bracket, preserving the 3-form phi infinitesimally. For X, Y orthogonal to p, N(p;X,Y) satisfies |N|^2 = 16|p|^6(|X|^2|Y|^2 - <X,Y>^2) - 16|p|^4<p x X, Y>^2, strictly positive on complex-orthogonal pairs.",
+      "title": "7D cross product, Harvey-Lawson G2 calibration, compact rank-14 g2, and cleared-denominator S^6 Nijenhuis norm",
+      "statement": "Over Z^7: |u x v|^2 = |u|^2|v|^2 - <u,v>^2, 4 det G(u,v,w) = 4 phi^2 + |Im[u,v,w]|^2 (comass 1), and 2J = -3 Im[u,v,w]. Der(O(Z)) has a unimodular rank-14 Z-basis closed under Lie bracket, obeying Jacobi, with a rank-2 Cartan pair, Tr(L^2) <= 0, and phi-invariance. Integer N(p;X,Y) obeys |N|^2 = 16|p|^6(|X|^2|Y|^2-<X,Y>^2)-16|p|^4<p x X,Y>^2 > 0 on complex-orthogonal pairs.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "evidence_note": "Identification of the integer expression with the Nijenhuis tensor of the real manifold S^6 is an informal derivation outside Lean.",
@@ -3392,66 +3397,91 @@
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.cross7_lagrange_norm",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 34
+          "line": 36
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.phi3_totally_skew",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 42
+          "line": 44
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.malcev_jacobi_associator_defect",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 48
+          "line": 50
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.g2_derivA_leibniz",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 63
+          "line": 65
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.g2_derivB_leibniz",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 69
+          "line": 71
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.g2_derivs_noncommuting",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 76
+          "line": 78
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.s6_strictly_nearly_kahler",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 90
+          "line": 92
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.s6_nijenhuis_universal_norm_obstruction",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 196
+          "line": 198
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.s6_nijenhuis_nowhere_zero_on_complex_ortho",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 209
+          "line": 211
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.g2_deriv_iff_unique_basis14_comb",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 572
+          "line": 574
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.g2_deriv_bracket_closed",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 611
+          "line": 613
         },
         {
           "decl": "Octonionica.G2AndS6Nijenhuis.g2_deriv_preserves_phi3",
           "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
-          "line": 658
+          "line": 660
+        },
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.phi3_harvey_lawson_calibration_identity",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 787
+        },
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.phi3_comass_one_calibration",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 840
+        },
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.g2_deriv_bracket_jacobi",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 876
+        },
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.g2_cartan_rank2_commuting",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 901
+        },
+        {
+          "decl": "Octonionica.G2AndS6Nijenhuis.g2_trace_form_negative_definite",
+          "file": "lean/OctonionicaProofs/G2AndS6Nijenhuis.lean",
+          "line": 924
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e064cb44d0f4dff8bf9021f7a822d3517efe8e68",
+      "audited_commit": "b485fd9f67451ce8e7abfd95be85199782684955",
       "audit": {
         "date": "2026-11-27",
         "rebuild": "PASS",
@@ -3461,7 +3491,7 @@
       "limits": [
         "No manifold, connection, Lie bracket or real scalars exist in the Lean development; s6NablaJ and s6Nijenhuis are hand-written polynomial formulas over Int.",
         "The norm is zero for Y in span{X, J_p X}; positivity is proved strictly under <X,Y> = 0 and <J_p X, Y> = 0 (included directly in comparator target T2).",
-        "In v1.2.0, full unimodular rank-14 g2(Z) = Der(O(Z)), Lie bracket closure, and universal infinitesimal phi-invariance are proved in Lean and wired into comparator target T2; differential calibration of phi on smooth 7-manifolds remains unformalized.",
+        "In v1.3.0, the algebraic Harvey-Lawson G2 calibration identity (comass 1), Lie Jacobi, rank-2 commuting Cartan pair, and strict negative-definite trace form Tr(L^2) <= 0 are proved in Lean and wired into T2; exterior differentiation d(phi) = 0 on smooth 7-manifolds remains unformalized.",
         "Non-integrability of the octonionic almost complex structure on S^6 is classical (Eckmann-Frolicher and Ehresmann-Libermann 1951); the norm identity is Gray's constant-type condition. The existence of other complex structures on S^6 stays open and is not addressed."
       ],
       "check": "cd lean && lake build --wfail && lake env lean VerifyAxioms.lean"
@@ -3514,7 +3544,7 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e064cb44d0f4dff8bf9021f7a822d3517efe8e68",
+      "audited_commit": "b485fd9f67451ce8e7abfd95be85199782684955",
       "audit": {
         "date": "2026-11-27",
         "rebuild": "PASS",
@@ -3532,11 +3562,11 @@
       "archive_id": "0TH-2026-017",
       "key": "T4a",
       "status": "ACTIVE",
-      "title": "2E8 Z-basis and 240-shell, Golay [24,12,8] parity/encoding equivalence, and 24D Conway Leech lattice",
-      "statement": "In Z^8, 2E8 is even (|x|^2 = 0 mod 8), uniquely Z-spanned by eight roots with Gram matrix 4*G_E8 (det = 1), and its exact 240-vector minimal shell is duplicate-free. In F2^24, Golay parity check equals golayEncode image with weights (1, 759, 2576, 759, 1). Conway's 24D Leech lattice sqrt(8)*Lambda_24 is closed under +/-, even (|x|^2 = 0 mod 16), rootless (|x|^2 >= 32), with 3-shape minimal-shell classification.",
+      "title": "2E8 Z-basis and 240-shell, Golay [24,12,8] equivalence, and 24D Conway Leech 196,560 bijection",
+      "statement": "In Z^8, 2E8 is even (|x|^2 = 0 mod 8), uniquely Z-spanned by eight roots (Gram 4*G_E8, det 1), with duplicate-free 240-vector minimal shell. In F2^24, Golay parity check equals golayEncode with weights (1, 759, 2576, 759, 1). Conway's 24D Leech lattice sqrt(8)*Lambda_24 is closed under +/-, even (mod 16), rootless (>= 32), with 3-shape classification and constructive two-sided bijection Fin 196560 ~= LeechMinVec.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "Cartan determinant, basis Gram matrix, and 4,096-codeword Golay enumerator are finite kernel evaluations; 2E8 Z-basis spanning, 240-vector shell completeness, Golay parity/encoding equivalence, and 24D Conway Leech closure/evenness/rootlessness/3-shape classification are proved universally in Lean.",
+      "evidence_note": "Cartan determinant, basis Gram matrix, and 4,096-codeword Golay enumerator are finite kernel evaluations; 2E8 Z-basis spanning, 240-vector shell completeness, Golay parity/encoding equivalence, and 24D Conway Leech closure/evenness/rootlessness/3-shape classification + constructive two-sided bijection Fin 196560 ~= LeechMinVec (zero native_decide) are proved universally in Lean.",
       "asked_in": null,
       "lean": [
         {
@@ -3572,36 +3602,41 @@
         {
           "decl": "Octonionica.E8GolayMoonshine.golay_parity_equiv_encode",
           "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
-          "line": 926
+          "line": 930
         },
         {
           "decl": "Octonionica.E8GolayMoonshine.leech24_closed_add",
           "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
-          "line": 1326
+          "line": 1330
         },
         {
           "decl": "Octonionica.E8GolayMoonshine.leech24_even_norm_mod16",
           "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
-          "line": 1437
+          "line": 1441
         },
         {
           "decl": "Octonionica.E8GolayMoonshine.leech24_no_roots",
           "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
-          "line": 1523
+          "line": 1527
         },
         {
           "decl": "Octonionica.E8GolayMoonshine.leech24_minimal_shell_three_shapes",
           "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
-          "line": 1667
+          "line": 1671
         },
         {
           "decl": "Octonionica.E8GolayMoonshine.leech24_minimal_witnesses",
           "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
-          "line": 1805
+          "line": 1809
+        },
+        {
+          "decl": "Octonionica.E8GolayMoonshine.leech24_minimal_shell_card_196560",
+          "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
+          "line": 3149
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e064cb44d0f4dff8bf9021f7a822d3517efe8e68",
+      "audited_commit": "b485fd9f67451ce8e7abfd95be85199782684955",
       "audit": {
         "date": "2026-11-27",
         "rebuild": "PASS",
@@ -3609,7 +3644,7 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "Conway's 196,560 kissing number and 196,884 = 1 + 196,883 identities remain natural-number arithmetic checks substituting the kernel-computed octad count 759; the modular j-function, Griess algebra, and Monster group remain unformalized in Lean.",
+        "In v1.3.0, Conway's 196,560 Leech kissing number is proved as a true constructive two-sided bijection Fin 196560 ~= LeechMinVec (leech24_minimal_shell_card_196560, zero native_decide); separately, 196,884 = 1 + 196,883 remains an arithmetic check and the modular j-function, Griess algebra, and Monster group remain unformalized in Lean.",
         "Classical results (Golay 1949, Conway 1969, Viazovska 2017); prior Lean formalization of E8 sphere packing (Sphere-Packing-Lean) is cited."
       ],
       "check": "cd lean && lake build --wfail && lake env lean VerifyAxioms.lean"
@@ -3619,11 +3654,11 @@
       "archive_id": "0TH-2026-017",
       "key": "T4b",
       "status": "ACTIVE",
-      "title": "Ramanujan tau: Euler product equality, mod-691 congruence, and non-vanishing for n at most 20",
-      "statement": "Truncated at q^20, (E4^3 - E6^2)/1728 is integral and equals Ramanujan's Euler product q*prod_{m=1}^{20}(1-q^m)^24 identically (propext only); tau(1..12) = 1, -24, 252, -1472, 4830, -6048, -16744, 84480, -113643, -115920, 534612, -370944; for 1 <= n <= 20, tau(n) != 0 and tau(n) = sigma_11(n) mod 691; four Hecke instances (n = 4, 6, 9, 10) hold.",
+      "title": "Ramanujan tau(1..20): Euler product equality, mod-691, full Hecke relations, and integer Deligne bounds",
+      "statement": "Truncated at q^20, (E4^3 - E6^2)/1728 is integral and equals Ramanujan's Euler product q*prod_{m=1}^{20}(1-q^m)^24 identically (propext only); for 1 <= n <= 20, tau(n) != 0 and tau(n) = sigma_11(n) mod 691; all coprime Hecke multiplicativity relations mn <= 20, all prime-power recurrences (4, 8, 16, 9), and exact integer Deligne bounds tau(p)^2 <= 4 p^11 hold for all 8 primes p <= 19.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "Lean range is n <= 20; the Rust check to n = 120 and Deligne primes <= 113 lie outside Lean.",
+      "evidence_note": "Lean range is n <= 20 (including all coprime Hecke, prime-power recurrences, and exact integer Deligne for primes p <= 19); Rust checks n <= 120 and exact i128 Deligne primes <= 113 outside Lean.",
       "asked_in": null,
       "lean": [
         {
@@ -3634,11 +3669,16 @@
         {
           "decl": "Octonionica.E8GolayMoonshine.ramanujan_tau_eq_euler_product_20",
           "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
-          "line": 584
+          "line": 590
+        },
+        {
+          "decl": "Octonionica.E8GolayMoonshine.ramanujan_tau_hecke_and_deligne_20",
+          "file": "lean/OctonionicaProofs/E8GolayMoonshine.lean",
+          "line": 1846
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e064cb44d0f4dff8bf9021f7a822d3517efe8e68",
+      "audited_commit": "b485fd9f67451ce8e7abfd95be85199782684955",
       "audit": {
         "date": "2026-11-27",
         "rebuild": "PASS",
@@ -3647,7 +3687,7 @@
       },
       "limits": [
         "Lehmer's conjecture (tau(n) != 0 for all n) remains open; the checked range (n <= 20 in Lean, n <= 120 in Rust) is far below published verification ranges and is a sanity check, not progress.",
-        "In v1.2.0, exact equality of (E4^3 - E6^2)/1728 with q*prod(1-q^m)^24 is proved through q^20 (ramanujan_tau_eq_euler_product_20, propext only); general Hecke multiplicativity and modular transformation laws remain unformalized."
+        "In v1.3.0, ramanujan_tau_hecke_and_deligne_20 closes all coprime Hecke relations, prime-power recurrences, and exact integer Deligne bounds up to 20 inside Lean; general all-n Hecke multiplicativity and modular transformation laws remain unformalized."
       ],
       "check": "cd lean && lake build --wfail && lake env lean VerifyAxioms.lean"
     },
@@ -3656,8 +3696,8 @@
       "archive_id": "0TH-2026-017",
       "key": "T5",
       "status": "ACTIVE",
-      "title": "Fibonacci anyon F and R matrices: coherence identities and infinite order of a braid word",
-      "statement": "For explicit 2x2 matrices F, R over Z[zeta_10] (reduced modulo Phi_10): F^2 = I, the direct 3x3 matrix Mac Lane pentagon equation M2(F)*M1(F) = R3(F)*M1(F)*M2(F) built from the entries of F holds with zero axioms, both hexagon identities hold in the stated gauge, the Artin B3 braid relation s1 s2 s1 = s2 s1 s2 holds with s1 = R, s2 = F R F, and for every k >= 1, (s1 s2^-1)^k != I.",
+      "title": "Fibonacci anyon F and R matrices: coherence, exact U(2) Hermitian unitarity, and infinite order",
+      "statement": "For explicit 2x2 matrices F, R over Z[zeta_10]: F^2 = I, direct 3x3 matrix Mac Lane pentagon M2(F)M1(F) = R3(F)M1(F)M2(F) (0 axioms), both hexagons, and Artin B3 braid relation s1 s2 s1 = s2 s1 s2 hold. With H = diag(1, phi^-1), every generator F, R, s1, s2, W (0 axioms) and every power W^k satisfies exact U(2) unitarity M* H M = H, and W^k != I for all k >= 1.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -3676,10 +3716,25 @@
           "decl": "Octonionica.FibonacciAnyons.fib_braid_word_infinite_order",
           "file": "lean/OctonionicaProofs/FibonacciAnyons.lean",
           "line": 258
+        },
+        {
+          "decl": "Octonionica.FibonacciAnyons.cyc10_conj_involution_hom",
+          "file": "lean/OctonionicaProofs/FibonacciAnyons.lean",
+          "line": 275
+        },
+        {
+          "decl": "Octonionica.FibonacciAnyons.fib_braid_generators_unitary",
+          "file": "lean/OctonionicaProofs/FibonacciAnyons.lean",
+          "line": 300
+        },
+        {
+          "decl": "Octonionica.FibonacciAnyons.fib_wordW_pow_unitary",
+          "file": "lean/OctonionicaProofs/FibonacciAnyons.lean",
+          "line": 312
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e064cb44d0f4dff8bf9021f7a822d3517efe8e68",
+      "audited_commit": "b485fd9f67451ce8e7abfd95be85199782684955",
       "audit": {
         "date": "2026-11-27",
         "rebuild": "PASS",
@@ -3687,7 +3742,7 @@
         "prior_work": "KNOWN"
       },
       "limits": [
-        "In v1.1.0, the 3x3 matrix Mac Lane pentagon equation built directly from fibF (fib_mac_lane_pentagon_matrix, 0 axioms) is included in comparator target T5 alongside the retained scalar component identities.",
+        "In v1.3.0, exact algebraic U(2) Hermitian unitarity M* H M = H (H = diag(1, phi^-1)) is proved for all generators (0 axioms) and universally for every W^k and wired into T5.",
         "Infinite order follows from a standard trace argument (Tr W = 2 - phi, whose Galois conjugate 1 + phi exceeds 2), which is how Lean proves it. Density of the Fibonacci braid representation (Freedman-Larsen-Wang 2002) is classical and not formalized."
       ],
       "check": "cd lean && lake build --wfail && lake env lean VerifyAxioms.lean"
@@ -3697,8 +3752,8 @@
       "archive_id": "0TH-2026-017",
       "key": "T6",
       "status": "ACTIVE",
-      "title": "Markov equation: Vieta descent, congruences mod 3 and mod 4, Fibonacci and Pell branches, shared-maximum divisibility",
-      "statement": "For integers with x^2 + y^2 + z^2 = 3xyz: if 0 < x <= y < z then 0 < 3xy - z < z; positive solutions have no entry divisible by 3, and their residues mod 4 are (1,1,1) or a permutation of (2,1,1); (1, F(2k+1), F(2k+3)) and (2, P(2k+1), P(2k+3)) are solutions for all k; two solutions sharing z satisfy z | (x1y2 - x2y1)(x1y2 + x2y1).",
+      "title": "Markov tree: reachability, coprimality, singular triples, mod 3/4, branches, binary forms, and Hurwitz sqrt(5)",
+      "statement": "For positive integer solutions of x^2 + y^2 + z^2 = 3xyz: Vieta descent reaches (1,1,1) universally; all triples are pairwise coprime; only (1,1,1) and (1,1,2) have repeated entries; 3 !| m and residues mod 4 are (1,1,1) or permutations of (2,1,1); Fibonacci and Pell branches hold; shared z divides (x1y2-x2y1)(x1y2+x2y1); k^2+1 = lz gives disc 9z^2-4; and |(2p-q)^2 - 5q^2| >= 4 for all (p,q) != (0,0).",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -3732,10 +3787,35 @@
           "decl": "Octonionica.MarkovTree.markov_uniqueness_divisor_obstruction",
           "file": "lean/OctonionicaProofs/MarkovTree.lean",
           "line": 388
+        },
+        {
+          "decl": "Octonionica.MarkovTree.markov_reaches_root_111",
+          "file": "lean/OctonionicaProofs/MarkovTree.lean",
+          "line": 406
+        },
+        {
+          "decl": "Octonionica.MarkovTree.markov_pairwise_coprime",
+          "file": "lean/OctonionicaProofs/MarkovTree.lean",
+          "line": 550
+        },
+        {
+          "decl": "Octonionica.MarkovTree.markov_singular_triples",
+          "file": "lean/OctonionicaProofs/MarkovTree.lean",
+          "line": 560
+        },
+        {
+          "decl": "Octonionica.MarkovTree.markov_binary_form_discriminant",
+          "file": "lean/OctonionicaProofs/MarkovTree.lean",
+          "line": 581
+        },
+        {
+          "decl": "Octonionica.MarkovTree.hurwitz_golden_norm_barrier",
+          "file": "lean/OctonionicaProofs/MarkovTree.lean",
+          "line": 592
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e064cb44d0f4dff8bf9021f7a822d3517efe8e68",
+      "audited_commit": "b485fd9f67451ce8e7abfd95be85199782684955",
       "audit": {
         "date": "2026-11-27",
         "rebuild": "PASS",
@@ -3744,9 +3824,9 @@
       },
       "limits": [
         "The Markov uniqueness conjecture remains open; the divisor relation is a necessary condition that follows from x^2 + y^2 = 0 mod z and holds for identical or permuted triples, so it does not constrain counterexamples by itself.",
-        "The 'Hurwitz sqrt(5) barrier' theorem is the integer inequality 0 < 9m^2 - 4 < 9m^2 and is not covered by this record.",
+        "In v1.3.0, hurwitz_golden_norm_barrier proves the exact Hurwitz sqrt(5) barrier |(2p-q)^2 - 5q^2| >= 4 for all (p,q) != (0,0) (and markov_binary_form_discriminant proves disc = 9z^2 - 4); the general Lagrange spectrum beyond sqrt(5) remains unformalized.",
         "The Rust BFS over the 231 triples with maximum <= 10^15 is outside Lean and far below published verification ranges.",
-        "Congruences go back to Frobenius (1913), cited in the v1.1.0/v1.2.0 manuscript."
+        "Congruences and Hurwitz barrier are classical (Hurwitz 1891, Frobenius 1913)."
       ],
       "check": "cd lean && lake build --wfail && lake env lean VerifyAxioms.lean"
     },
