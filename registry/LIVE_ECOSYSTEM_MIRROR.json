@@ -5,12 +5,12 @@
   "sync_mode": "offline",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
-    "tier1_papers": 24,
+    "tier1_papers": 25,
     "tier2_builds": 17,
     "tier3_discoveries": 12,
-    "total_entries": 53,
-    "unique_public_repositories": 46,
-    "pinned_submodules": 40,
+    "total_entries": 54,
+    "unique_public_repositories": 47,
+    "pinned_submodules": 41,
     "exact_pin_match": 11,
     "ahead_of_pin": 27,
     "historical_archived": 4,
@@ -329,6 +329,32 @@
       "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/cellulogonic-mecha/",
       "sync_status": "AHEAD_OF_PIN",
+      "error": null
+    },
+    {
+      "slug": "clifford-radon-stabilizers",
+      "repository": "https://github.com/0thernes/clifford-radon-stabilizers",
+      "archive_ids": [
+        "0TH-2026-025"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "9db286fcb0b3cb8434fad053ed81dc4ab6fafe6a",
+      "archived_version": "v1.0.0",
+      "submodule_path": "repos/clifford-radon-stabilizers",
+      "registered_pages_url": "https://0thernes.github.io/clifford-radon-stabilizers/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": null,
+      "latest_release_tag": null,
+      "pushed_at": null,
+      "ci_run_id": null,
+      "ci_conclusion": null,
+      "ci_html_url": null,
+      "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
+      "pages_url": "https://0thernes.github.io/clifford-radon-stabilizers/",
+      "sync_status": "OFFLINE_PIN_ONLY",
       "error": null
     },
     {

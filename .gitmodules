@@ -118,3 +118,6 @@
 [submodule "repos/spectral-eclipse-frontier"]
 	path = repos/spectral-eclipse-frontier
 	url = https://github.com/0thernes/spectral-eclipse-frontier.git
+[submodule "repos/clifford-radon-stabilizers"]
+	path = repos/clifford-radon-stabilizers
+	url = https://github.com/0thernes/clifford-radon-stabilizers.git
