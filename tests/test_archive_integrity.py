@@ -158,7 +158,7 @@ def test_consolidated_latest_entries_registered() -> None:
     assert papers["0TH-2026-020"]["version"] == "v1.0.0"
     assert papers["0TH-2026-020"]["lean_verification"]["audited_theorems"] == 23
     assert papers["0TH-2026-021"]["slug"] == "weyl-magic-stabilizer-frontier"
-    assert papers["0TH-2026-021"]["version"] == "v1.0.0"
+    assert papers["0TH-2026-021"]["version"] == "v2.0.0"
     assert papers["0TH-2026-021"]["lean_verification"]["audited_theorems"] == 31
     assert papers["0TH-2026-022"]["slug"] == "weyl-magic-obstruction-frontier"
     assert papers["0TH-2026-022"]["version"] == "v1.0.2"
