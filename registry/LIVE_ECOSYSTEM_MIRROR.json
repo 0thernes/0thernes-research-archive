@@ -5,12 +5,12 @@
   "sync_mode": "offline",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
-    "tier1_papers": 20,
+    "tier1_papers": 21,
     "tier2_builds": 17,
     "tier3_discoveries": 12,
-    "total_entries": 49,
-    "unique_public_repositories": 42,
-    "pinned_submodules": 36,
+    "total_entries": 50,
+    "unique_public_repositories": 43,
+    "pinned_submodules": 37,
     "exact_pin_match": 12,
     "ahead_of_pin": 23,
     "historical_archived": 4,
@@ -1067,6 +1067,32 @@
       "ci_html_url": null,
       "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
       "pages_url": null,
+      "sync_status": "OFFLINE_PIN_ONLY",
+      "error": null
+    },
+    {
+      "slug": "weyl-magic-stabilizer-frontier",
+      "repository": "https://github.com/0thernes/weyl-magic-stabilizer-frontier",
+      "archive_ids": [
+        "0TH-2026-021"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "da2aa5d9e40a7a7e9d54fc18e7ff14a87f6f4617",
+      "archived_version": "v1.0.0",
+      "submodule_path": "repos/weyl-magic-stabilizer-frontier",
+      "registered_pages_url": "https://0thernes.github.io/weyl-magic-stabilizer-frontier/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": null,
+      "latest_release_tag": null,
+      "pushed_at": null,
+      "ci_run_id": null,
+      "ci_conclusion": null,
+      "ci_html_url": null,
+      "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
+      "pages_url": "https://0thernes.github.io/weyl-magic-stabilizer-frontier/",
       "sync_status": "OFFLINE_PIN_ONLY",
       "error": null
     },

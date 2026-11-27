@@ -106,3 +106,6 @@
 [submodule "repos/quantum-phasespace-rigidity"]
 	path = repos/quantum-phasespace-rigidity
 	url = https://github.com/0thernes/quantum-phasespace-rigidity.git
+[submodule "repos/weyl-magic-stabilizer-frontier"]
+	path = repos/weyl-magic-stabilizer-frontier
+	url = https://github.com/0thernes/weyl-magic-stabilizer-frontier.git
