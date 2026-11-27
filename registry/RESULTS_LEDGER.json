@@ -5443,6 +5443,247 @@
         "The pack/unpack theorem gives a left inverse on all 243 digit tuples; surjectivity onto 0 to 242 is not stated."
       ],
       "check": "cd lean && lake build"
+    },
+    {
+      "n": 95,
+      "archive_id": "0TH-2026-020",
+      "key": "T1",
+      "status": "ACTIVE",
+      "title": "Cyclic stabilizer AME graph lifts, Pless-Rains obstructions, and ring-versus-field separation at (4,4)",
+      "statement": "In zero-Mathlib Lean 4: radical divisor descent, prime-power ascent, and coprime CRT lifting hold for IsKUniformGraph; K_2, K_3, C_5, Prism_6, and W_5 are IsAMEGraph d for every d\u22652; Pless even/odd bounds force k<p\u00b2 and k<p\u00b2+p; Rains shadow equations fail at N\u2208{4,7,9,11}; torsion Singleton forcing, odd N\u22657 additive F_4-MDS obstructions (A_6=\u221221 at N=7), and Z_4-versus-F_4 separation hold at (4,4).",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "evidence_note": "All 14 Palomar targets and 311 project declarations passed 6 independent proof kernels and Lean.collectAxioms audit in CI run 46056858766.",
+      "asked_in": {
+        "citation": "A. W\u00f3jcik, Z. Raissi, D. Goyeneche, M. Grassl, M. Huber, K. \u017byczkowski, Stabilizer AME states over rings (2026), arXiv:2603.18193",
+        "url": "https://arxiv.org/abs/2603.18193",
+        "locator": "cyclic even-d stabilizer extension"
+      },
+      "lean": [
+        {
+          "decl": "QPRigidity.Palomar.prove_t1a",
+          "file": "lean/PalomarSolution.lean",
+          "line": 19
+        },
+        {
+          "decl": "QPRigidity.Palomar.prove_t1b",
+          "file": "lean/PalomarSolution.lean",
+          "line": 20
+        },
+        {
+          "decl": "QPRigidity.Palomar.prove_t1c",
+          "file": "lean/PalomarSolution.lean",
+          "line": 21
+        },
+        {
+          "decl": "QPRigidity.Palomar.prove_t1d",
+          "file": "lean/PalomarSolution.lean",
+          "line": 22
+        },
+        {
+          "decl": "QPRigidity.Palomar.prove_t1e",
+          "file": "lean/PalomarSolution.lean",
+          "line": 23
+        },
+        {
+          "decl": "QPRigidity.AMEGraph.universal_unimodular_graphs_all_d",
+          "file": "lean/QPRigidity/AMEGraph.lean",
+          "line": 1145
+        },
+        {
+          "decl": "QPRigidity.AMEGraph.pless_even_obstruction",
+          "file": "lean/QPRigidity/AMEGraph.lean",
+          "line": 1241
+        },
+        {
+          "decl": "QPRigidity.AMEGraph.rains_shadow_no_ame4",
+          "file": "lean/QPRigidity/AMEGraph.lean",
+          "line": 1421
+        },
+        {
+          "decl": "QPRigidity.AMEGraph.additive_mds_n7_impossible",
+          "file": "lean/QPRigidity/AMEGraph.lean",
+          "line": 1667
+        },
+        {
+          "decl": "QPRigidity.AMEGraph.z4_vs_f4_separation",
+          "file": "lean/QPRigidity/AMEGraph.lean",
+          "line": 1777
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "a99f327698a46ecc249f5cc1a98a387969d80d24",
+      "audit": {
+        "date": "2026-11-27",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "OVERLAP_FOUND"
+      },
+      "limits": [
+        "Lean formalizes the modular cross-adjacency, Pless, Rains shadow, torsion-rank, and F_4-CSS models; the bridge from arbitrary cyclic Weyl-Heisenberg Z_{2l}-stabilizer subgroups (including Helwig 2013 and MacWilliams duality) is proved in paper/main.tex outside Lean.",
+        "Extends prime-order stabilizer AME classifications (W\u00f3jcik et al., arXiv:2603.18193v3) and uses classical Rains (1999) qubit shadow obstructions; non-stabilizer even-d AME(N,d) existence remains open.",
+        "Statement audit performed during the v2.0.0 hardening session (internal audit, not independent external review)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean && lake env lean SweepAllAxioms.lean"
+    },
+    {
+      "n": 96,
+      "archive_id": "0TH-2026-020",
+      "key": "T2",
+      "status": "ACTIVE",
+      "title": "Trace-spanning resolvable quantum Latin squares, direct-product lifting, and F_8 orthomorphism rigidity",
+      "statement": "Over any abstract TraceFieldSpec, two-slope permutations on trace-spanning subgroups force non-constant linear trace combinations (T2a); explicit maximal-cardinality certificates hold for 2-RQLS(9), 3-RQLS(11), 4-RQLS(13), and 3-RQLS(16) (T2b); untwisted Q_1\u2297Q_2 and twist-separated Q_1\u2297_D C_2 products preserve ResolvableQLSSpec (T2c); and every orthomorphism of F_8 fixing 0 is F_2-linear, ruling out nonlinear direction permutations on F_8 (T2d).",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "evidence_note": "Complex orthogonality across all 198,820 pairs in Z[zeta_p] is additionally verified without floating point in C++20 and Zig.",
+      "asked_in": {
+        "citation": "S. Zhang, H. Cao, Resolvable quantum Latin squares (2026), arXiv:2608.29201",
+        "url": "https://arxiv.org/abs/2608.29201",
+        "locator": "t-RQLS constructions beyond t <= 2"
+      },
+      "lean": [
+        {
+          "decl": "QPRigidity.Palomar.prove_t2a",
+          "file": "lean/PalomarSolution.lean",
+          "line": 24
+        },
+        {
+          "decl": "QPRigidity.Palomar.prove_t2b",
+          "file": "lean/PalomarSolution.lean",
+          "line": 25
+        },
+        {
+          "decl": "QPRigidity.Palomar.prove_t2c",
+          "file": "lean/PalomarSolution.lean",
+          "line": 26
+        },
+        {
+          "decl": "QPRigidity.Palomar.prove_t2d",
+          "file": "lean/PalomarSolution.lean",
+          "line": 27
+        },
+        {
+          "decl": "QPRigidity.ResolvableQLS.trace_spanning_coset_nonconstant",
+          "file": "lean/QPRigidity/ResolvableQLS.lean",
+          "line": 64
+        },
+        {
+          "decl": "QPRigidity.ResolvableQLS.rqls16_t3_maximal_cert",
+          "file": "lean/QPRigidity/ResolvableQLS.lean",
+          "line": 345
+        },
+        {
+          "decl": "QPRigidity.ResolvableQLS.direct_product_quantum_quantum",
+          "file": "lean/QPRigidity/ResolvableQLS.lean",
+          "line": 425
+        },
+        {
+          "decl": "QPRigidity.ResolvableQLS.direct_product_rqls_lifting",
+          "file": "lean/QPRigidity/ResolvableQLS.lean",
+          "line": 495
+        },
+        {
+          "decl": "QPRigidity.ResolvableQLS.f8_every_orthomorphism_is_f2_linear",
+          "file": "lean/QPRigidity/ResolvableQLS.lean",
+          "line": 697
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "a99f327698a46ecc249f5cc1a98a387969d80d24",
+      "audit": {
+        "date": "2026-11-27",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "Complex root-of-unity orthogonality over C^q (verified without floating point across 198,820 pairs in C++20 Z[zeta_p]) and the generic phase-twist discharge of twistSep for Q_1\u2297_D C_2 are proved in paper/main.tex outside Lean; untwisted Q_1\u2297Q_2 requires no analytic twist.",
+        "Extends Zhang and Cao (arXiv:2608.29201v2) beyond t <= 2 for prime-power and composite orders; their 17 sporadic 1-RQLS orders (starting at v = 10) remain open.",
+        "Statement audit performed during the v2.0.0 hardening session (internal audit, not independent external review)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean && lake env lean SweepAllAxioms.lean"
+    },
+    {
+      "n": 97,
+      "archive_id": "0TH-2026-020",
+      "key": "T3",
+      "status": "ACTIVE",
+      "title": "Stabilizer-polytope global circumradii, symplectic marginal descent, and degree-2 RLT+SOS polynomial barrier",
+      "statement": "In zero-Mathlib Lean 4: the Gurvits-Barnum purity inequality and exact rational 2-qubit incomparability witnesses hold (T3a); universal global circumradius bounds hold over all ordered spectra in Z[\u221a3] for ASTAB_{2,2} and Z[\u221a5] for ASTAB_{1,3} (T3b); finite uniform-cover averaging yields C_n\u2264(7\u00b74^n+8)/(15\u00b72^n) with exact 15/7 squared-inball gain for all n\u22652 (T3c); and any pointwise degree-2 RLT+SOS certificate over facets with overlaps \u2265\u22121 forces M\u22654^n\u22121 (T3d).",
+      "kind": "NEW_THEOREM",
+      "evidence": "kernel-checked",
+      "evidence_note": "Rust 1.94 additionally exhaustively verifies all 1,770 Lambda_2 facet pairs (min overlap -1), all 240 CNC vertices (C_2 = 2), and all 336 n = 3 four-dimensional symplectic subspaces.",
+      "asked_in": {
+        "citation": "M. Zurel, S. Davis, Absolute stabilizer states and magic polytopes (2026), arXiv:2602.22336; Z. Liu et al. (2025), arXiv:2512.16777",
+        "url": "https://arxiv.org/abs/2602.22336",
+        "locator": "Sec. V.3 and Thm. 10"
+      },
+      "lean": [
+        {
+          "decl": "QPRigidity.Palomar.prove_t3a",
+          "file": "lean/PalomarSolution.lean",
+          "line": 28
+        },
+        {
+          "decl": "QPRigidity.Palomar.prove_t3b",
+          "file": "lean/PalomarSolution.lean",
+          "line": 29
+        },
+        {
+          "decl": "QPRigidity.Palomar.prove_t3c",
+          "file": "lean/PalomarSolution.lean",
+          "line": 30
+        },
+        {
+          "decl": "QPRigidity.Palomar.prove_t3d",
+          "file": "lean/PalomarSolution.lean",
+          "line": 31
+        },
+        {
+          "decl": "QPRigidity.MagicGeometry.two_qubit_astab_global_circumradius",
+          "file": "lean/QPRigidity/MagicGeometry.lean",
+          "line": 503
+        },
+        {
+          "decl": "QPRigidity.MagicGeometry.one_qutrit_astab_global_circumradius",
+          "file": "lean/QPRigidity/MagicGeometry.lean",
+          "line": 556
+        },
+        {
+          "decl": "QPRigidity.MagicGeometry.uniform_cover_avg_bound",
+          "file": "lean/QPRigidity/MagicGeometry.lean",
+          "line": 669
+        },
+        {
+          "decl": "QPRigidity.MagicGeometry.symplectic_marginal_descent_all_n",
+          "file": "lean/QPRigidity/MagicGeometry.lean",
+          "line": 709
+        },
+        {
+          "decl": "QPRigidity.MagicGeometry.deg2_rlt_sos_polynomial_barrier",
+          "file": "lean/QPRigidity/MagicGeometry.lean",
+          "line": 860
+        },
+        {
+          "decl": "QPRigidity.MagicGeometry.clifford_reynolds_deg2_rlt_barrier",
+          "file": "lean/QPRigidity/MagicGeometry.lean",
+          "line": 999
+        }
+      ],
+      "axioms": "propext, Classical.choice, Quot.sound",
+      "audited_commit": "a99f327698a46ecc249f5cc1a98a387969d80d24",
+      "audit": {
+        "date": "2026-11-27",
+        "rebuild": "PASS",
+        "fidelity": "AUDITED_NARROWER",
+        "prior_work": "NONE_FOUND"
+      },
+      "limits": [
+        "T3a cites Gurvits-Barnum Cor. 3 (PRA 66, 062311), Verstraete et al. (PRA 64, 012316), and Zurel-Davis (arXiv:2602.22336v2) outside Lean; T3c invokes Sp(2n,2) transitivity and C_2 = 2 (verified across 60 facets, 240 CNC vertices, and 336 n = 3 subspaces in Rust); T3d uses the overlap lower bound >= -1 (verified across all 1,770 Lambda_2 pairs in Rust).",
+        "Zurel-Davis Conjectures 1-2 for n >= 3 and odd-prime multipartite bound-entangled AWP remain open.",
+        "Statement audit performed during the v2.0.0 hardening session (internal audit, not independent external review)."
+      ],
+      "check": "cd lean && lake build && lake env lean VerifyAxioms.lean && lake env lean SweepAllAxioms.lean"
     }
   ]
 }

@@ -16,12 +16,12 @@
     "grand_mega_atlas_problems_retired": 0,
     "published_open_subconjectures_proved_in_lean": 2,
     "preprint_conjectures_proved_with_external_citation_caveat": 1,
-    "statement": "0 of the 2,000 catalogued problems in the Unsolved Problems Mega-Atlas are solved by this work. Two entries answer a question that another author stated as open in an arXiv preprint: Conjecture 7.7 of Banić and Elezović (arXiv:2610.17046v1) in 0TH-2026-006, and the limit question of Section 6 of Muller and Saniga (arXiv:2609.19862v1) in 0TH-2026-009 Track 2, where the identification of the formal objects with the preprint's hypergraphs rests partly on argument outside Lean. 0TH-2026-009 Track 1 also proves strict-law failure for one representative of each case of Jonah's Conjecture E from an unreviewed Zenodo preprint, with Theorem B4 cited from outside Lean. Neither these sources nor these proofs are peer reviewed. Each row's class follows the strongest kind among its results in RESULTS.md. Of the other 26 rows, 4 are new-theorem suites, 2 bounded or partial cases, 7 formalizations of known results (1 of them a barrier formalization) and 13 invariant suites of software models. Entries without a machine-checked result at their pinned commit have no row; RESULTS.md lists them with the reason.",
+    "statement": "0 of the 2,000 catalogued problems in the Unsolved Problems Mega-Atlas are solved by this work. Two entries answer a question that another author stated as open in an arXiv preprint: Conjecture 7.7 of Bani\u0107 and Elezovi\u0107 (arXiv:2610.17046v1) in 0TH-2026-006, and the limit question of Section 6 of Muller and Saniga (arXiv:2609.19862v1) in 0TH-2026-009 Track 2, where the identification of the formal objects with the preprint's hypergraphs rests partly on argument outside Lean. 0TH-2026-009 Track 1 also proves strict-law failure for one representative of each case of Jonah's Conjecture E from an unreviewed Zenodo preprint, with Theorem B4 cited from outside Lean. Neither these sources nor these proofs are peer reviewed. Each row's class follows the strongest kind among its results in RESULTS.md. Of the other 27 rows, 5 are new-theorem suites, 2 bounded or partial cases, 7 formalizations of known results (1 of them a barrier formalization) and 13 invariant suites of software models. Entries without a machine-checked result at their pinned commit have no row; RESULTS.md lists them with the reason.",
     "rows_by_class": {
       "BARRIER_FORMALIZATION": 1,
       "FORMAL_INVARIANT_SUITE": 13,
       "KNOWN_RESULTS_FORMALIZED": 6,
-      "NEW_THEOREM_SUITE": 4,
+      "NEW_THEOREM_SUITE": 5,
       "PARTIAL_BOUNDED_CASE": 2,
       "SOLVED_SUB_CONJECTURE": 2
     }
@@ -272,6 +272,23 @@
       "target_statement": "Machine-checks 22 headline theorems (T1a-T1f, T2a-T2f, T3a-T3d, T4a-T4f) + master conjunction (23 Palomar targets) plus 4 NonVacuity witnesses and 8 AdversarialTests sharpness refutations (35 audited decls) in zero-Mathlib Lean 4.35.0: Universal Nilpotent Mirror Conservation & explicit Z-basis isomorphism for ker L_{e_i+e_j} under cdMulCoordGamma (T1a-T1f), exact Dyadic-Palindromic Terrace Law, uniqueness of BDI equality at n=4, & All-Signature Midpoint 42 Law H_n^gamma(2^(n-2))=42*2^(n-4) (T2a-T2f), exact right-compatibility clique number omega(G_n^comp)=n+5 & Euclidean coordinate deficit n+5 < rho(2^n) for all n>=6 (T3a-T3d), complete sedenion certificates (Fano 7+28+7=42 + 2+2 bad-plane splitting, non-circular de Marrais 7xK_{2,2,2} box-kites), pure-kernel 2^32 Pathion ceiling r_max(CD_5)=14 & strict 7+7 rigidity retiring HiGHS MILP (T4e), and pure-kernel CD_6(56) interior spectral gap H_6^56(20)=0 (T4f), differentially audited across 496 algebras CD_4-CD_8 and all 280 Pathion 14D subspaces in Rust, ISO C11, and exact Q Python.",
       "lean_verification": "Zero-Mathlib Lean 4.35.0, 35 audited decls across 14 Lean module files (13 sorry-free), all 6 independent kernels verified via lake check --paranoid (60,087-60,090 decls) & lake comparator --paranoid (4,482-4,485 decls) + real tamper-injecting negative comparator/axiom gate (CI run 45944568675, SLSA #72949127 / Rekor 4142185254, DigiCert RFC 3161 .tsr + 3-calendar Bitcoin .ots).",
       "honesty_boundary": "Proves universal Cayley-Dickson mirror/terrace/kernel-basis theorems, the all-n>=6 gap n+5 < rho(2^n) for Euclidean coordinate right-multiplier sets, exact sedenion/pathion coordinate ceilings (including pure-kernel r_max(CD_5)=14 with 7+7 rigidity), and the CD_6(56) interior spectral gap; overarching grand open problems (ALG-035, ALG-039, XGEOM-031, COMB-040 and general non-coordinate composition-pair problems) remain explicitly OPEN."
+    },
+    {
+      "archive_id": "0TH-2026-020",
+      "slug": "quantum-phasespace-rigidity",
+      "repository": "https://github.com/0thernes/quantum-phasespace-rigidity",
+      "version": "v2.0.0",
+      "resolution_class": "NEW_THEOREM_SUITE",
+      "grand_atlas_problem_retired": false,
+      "related_mega_atlas_ids": [
+        "QM-011",
+        "QC-037",
+        "QC-013",
+        "COMB-040"
+      ],
+      "target_statement": "Machine-checks 13 headline theorems (T1a-T3d) + master conjunction (14 Palomar targets) + 3 NonVacuity witnesses + 6 AdversarialTests refutations in zero-Mathlib Lean 4.35.0: radical-CRT graph lifts and all-d unimodular AME lifts (K_2, K_3, C_5, Prism_6, 20-case W_5), Pless and Rains obstructions, torsion Singleton forcing, odd N >= 7 additive F_4-MDS impossibility (A_6 = -21 at N = 7), and Z_4-vs-F_4 separation at (4,4) (T1a-T1e); trace-spanning RQLS theorem, 2-RQLS(9)/3-RQLS(11)/4-RQLS(13)/3-RQLS(16) certificates, both untwisted Q_1 x Q_2 and twist-separated Q_1 x_D C_2 direct-product lifting, and exhaustive F_8 orthomorphism linearity (T2a-T2d); Gurvits-Barnum purity identity, 2-qubit rational incomparability witnesses, universal global ASTAB circumradii in Z[sqrt(3)] and Z[sqrt(5)], finite uniform-cover Symplectic Marginal Descent (exact 15/7 squared-inball gain), and first-principles multivariate polynomial degree-2 RLT+SOS barrier M >= 4^n - 1 (T3a-T3d).",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0 (warningAsError = true, 12 Lean files, 11 sorry-free), 23 explicit audited decls + 311 exhaustively axiom-swept project decls via SweepAllAxioms.lean (Lean.collectAxioms), all 14 Palomar targets accepted by all 6 independent proof kernels + live negative custom-axiom rejection (CI run 46056858766; Release v2.0.0 run 46055877113; DigiCert RFC 3161 .tsr + 3-calendar Bitcoin .ots; SWH v1.0.0 snapshot swh:1:snp:91466bc3ff5dad44fef051db37afc2dcb91aa57b).",
+      "honesty_boundary": "Analytic Hilbert-space bridges (cyclic Weyl-Heisenberg subgroup reduction, complex root-of-unity orthogonality verified without floats over 198,820 Z[zeta_p] pairs in C++20, generic phase twist D_phi for Q_1 x_D C_2, Gurvits-Barnum Cor. 3, and Sp(2n,2) transitivity / C_2 = 2 / Lambda_2 overlap >= -1 exhaustively verified in Rust) are proved in paper/main.tex outside Lean. Explicitly retires 0/2,000 Mega-Atlas grand open problems; non-stabilizer even-d AME(N,d), Zhang-Cao's 17 sporadic 1-RQLS orders, Zurel-Davis Conjectures 1-2 for n >= 3, and odd-prime multipartite bound-entangled AWP remain OPEN."
     },
     {
       "archive_id": "0TH-BUILD-001",
