@@ -173,8 +173,8 @@ def test_consolidated_latest_entries_registered() -> None:
     assert papers["0TH-2026-025"]["version"] == "v1.0.0"
     assert papers["0TH-2026-025"]["lean_verification"]["audited_theorems"] == 33
     assert papers["0TH-2026-026"]["slug"] == "schur-clifford-frontier"
-    assert papers["0TH-2026-026"]["version"] == "v1.0.0"
-    assert papers["0TH-2026-026"]["lean_verification"]["audited_theorems"] == 30
+    assert papers["0TH-2026-026"]["version"] == "v1.1.0"
+    assert papers["0TH-2026-026"]["lean_verification"]["audited_theorems"] == 33
     assert papers["0TH-2026-027"]["slug"] == "nonlocal-magic-spectral-frontier"
     assert papers["0TH-2026-027"]["version"] == "v1.0.0"
     assert papers["0TH-2026-027"]["lean_verification"]["audited_theorems"] == 38

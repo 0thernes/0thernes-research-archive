@@ -2,7 +2,7 @@
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
 **Synced (UTC):** `2026-11-27T19:08:21Z` · **Mode:** `offline`  
-**Tracked Public Repositories:** 50 (`16` exact pin match, `27` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Tracked Public Repositories:** 50 (`16` exact pin match, `26` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -47,7 +47,7 @@
 | [`quantum-latin-design-frontier`](https://github.com/0thernes/quantum-latin-design-frontier) | `0TH-2026-028` | Tier I | `c0ba7735c0` | `c0ba7735c0` | `v1.0.0` | [`success`](https://github.com/0thernes/quantum-latin-design-frontier/actions/runs/46047586056) | `EXACT_PIN_MATCH` |
 | [`quantum-latin-spectrum-frontier`](https://github.com/0thernes/quantum-latin-spectrum-frontier) | `0TH-2026-023` | Tier I | `c53def9c92` | `c53def9c92` | `v1.0.0` | [`success`](https://github.com/0thernes/quantum-latin-spectrum-frontier/actions/runs/46014056799) | `EXACT_PIN_MATCH` |
 | [`quantum-phasespace-rigidity`](https://github.com/0thernes/quantum-phasespace-rigidity) | `0TH-2026-020` | Tier I | `1c3214973e` | `4a4cd71900` | `v1.0.0` | [`success`](https://github.com/0thernes/quantum-phasespace-rigidity/actions/runs/45949375196) | `AHEAD_OF_PIN` |
-| [`schur-clifford-frontier`](https://github.com/0thernes/schur-clifford-frontier) | `0TH-2026-026` | Tier I | `02f3c09345` | `09ea389f20` | `v1.1.0` | [`in_progress`](https://github.com/0thernes/schur-clifford-frontier/actions/runs/46054378237) | `AHEAD_OF_PIN` |
+| [`schur-clifford-frontier`](https://github.com/0thernes/schur-clifford-frontier) | `0TH-2026-026` | Tier I | `09ea389f20` | — | `v1.1.0` | — | `OFFLINE_PIN_ONLY` |
 | [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `0TH-2026-011` | Tier I | `6c7f642146` | `96f7d2b72d` | `v3.0.1` | [`success`](https://github.com/0thernes/secmesh-pqsi/actions/runs/45915650756) | `AHEAD_OF_PIN` |
 | [`spectral-eclipse-frontier`](https://github.com/0thernes/spectral-eclipse-frontier) | `0TH-2026-024` | Tier I | `780519d24c` | — | `v1.1.0` | — | `OFFLINE_PIN_ONLY` |
 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `c0bbefe13b` | `c0bbefe13b` | `v1.7.0` | [`success`](https://github.com/0thernes/ultrametrica/actions/runs/46014442260) | `EXACT_PIN_MATCH` |
