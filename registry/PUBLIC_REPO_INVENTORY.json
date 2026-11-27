@@ -694,7 +694,7 @@
       "description": "Zero-Mathlib Lean 4.35.0 six-kernel formalization (22 theorem groups T1a-T5d) & nine-engine polyglot verifier for Weyl-Heisenberg magic obstructions, n=4 bent-hyperplane rupture, Super-MUB torsion anomalies, and char-3 Alltop constructions (0TH-2026-022).",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T13:23:59Z",
+      "pushed_at": "2026-11-27T19:25:13Z",
       "homepage": "https://0thernes.github.io/weyl-magic-obstruction-frontier/",
       "latest_release": null,
       "archive_registered": true,
