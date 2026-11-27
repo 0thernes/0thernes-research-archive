@@ -75,14 +75,14 @@ Source repositories at the last live sync (`2026-11-27T19:08:21Z`): 5 of 29 matc
 | [R41](#r41) | Haemers rank bound, Haemers's Schläfli-graph example and Lovász's pentagon bound | E | Lean kernel | `0TH-2026-016` v1.0.0 |
 | [R42](#r42) | Two-factor combining rule for separation systems, table admissibility, and the seven-label graph | E | Lean kernel | `0TH-2026-016` v1.0.0 |
 | [R43](#r43) | Conservation and monotonicity facts for the repository's discrete vesicle, ATP and SNARE models | F | Lean kernel | `0TH-2026-007` v1.3.0 |
-| [R44](#r44) | Contextuality degree of k disjoint Peres–Mermin squares and Mermin pentagrams | A | Lean kernel | `0TH-2026-009` v3.3.0 |
-| [R45](#r45) | Strict-law failure in the nine vertex cases of Jonah's Conjecture E, every N ≥ 4 | A | Lean kernel | `0TH-2026-009` v3.3.0 |
-| [R46](#r46) | Infinite family of non-closed multi-qubit Pauli sets attaining the spectral floor | B | Lean kernel | `0TH-2026-009` v3.3.0 |
-| [R47](#r47) | Exact binary completion optima 368 and 344 for one four-qubit C3 sign pair | C | Lean kernel | `0TH-2026-009` v3.3.0 |
-| [R48](#r48) | Spectral floor for arbitrary Pauli sets, its Kramers variant, and saturation conditions | E | Lean kernel | `0TH-2026-009` v3.3.0 |
-| [R49](#r49) | Kernel-checked lower bounds for the contextuality degrees of W(7,2) and Q⁺(9,2) | E | Lean kernel | `0TH-2026-009` v3.3.0 |
-| [R50](#r50) | Peres–Mermin setting-bias failure floor and finite betting-tree hitting bound | E | Lean kernel | `0TH-2026-009` v3.3.0 |
-| [R51](#r51) | Kernel-checked contextuality degrees of Q⁺(3,2), W(5,2) and Q⁻(5,2), with bounds for W(3,2) | E | Lean kernel | `0TH-2026-009` v3.3.0 |
+| [R44](#r44) | Contextuality degree of k disjoint Peres–Mermin squares and Mermin pentagrams | A | Lean kernel | `0TH-2026-009` v3.4.0 |
+| [R45](#r45) | Strict-law failure in the nine vertex cases of Jonah's Conjecture E, every N ≥ 4 | A | Lean kernel | `0TH-2026-009` v3.4.0 |
+| [R46](#r46) | Infinite family of non-closed multi-qubit Pauli sets attaining the spectral floor | B | Lean kernel | `0TH-2026-009` v3.4.0 |
+| [R47](#r47) | Exact binary completion optima 368 and 344 for one four-qubit C3 sign pair | C | Lean kernel | `0TH-2026-009` v3.4.0 |
+| [R48](#r48) | Spectral floor for arbitrary Pauli sets, its Kramers variant, and saturation conditions | E | Lean kernel | `0TH-2026-009` v3.4.0 |
+| [R49](#r49) | Kernel-checked lower bounds for the contextuality degrees of W(7,2) and Q⁺(9,2) | E | Lean kernel | `0TH-2026-009` v3.4.0 |
+| [R50](#r50) | Peres–Mermin setting-bias failure floor and finite betting-tree hitting bound | E | Lean kernel | `0TH-2026-009` v3.4.0 |
+| [R51](#r51) | Kernel-checked contextuality degrees of Q⁺(3,2), W(5,2) and Q⁻(5,2), with bounds for W(3,2) | E | Lean kernel | `0TH-2026-009` v3.4.0 |
 | [R52](#r52) | Even-Laplacian parity for quadratic-plus-periodic integer functions on the triangular lattice | B | Lean kernel | `0TH-2026-018` v3.0.0 |
 | [R53](#r53) | Signature change of the Cayley–Dickson sign table and 2-blade nullities | B | Lean kernel | `0TH-2026-019` v2.1.0 |
 | [R54](#r54) | Doubling recurrence and closed forms for Euclidean 2-blade nullities | B | Lean kernel | `0TH-2026-019` v2.1.0 |
@@ -157,12 +157,12 @@ Source repositories at the last live sync (`2026-11-27T19:08:21Z`): 5 of 29 matc
 - **Asked in.** [A. Muller, M. Saniga, Automated search for highly contextual Kochen-Specker proofs (2026), arXiv:2609.19862](https://arxiv.org/abs/2609.19862v1), Section 6 (Discussion and Outlooks), second paragraph, final clause.
 - **Evidence.** Lean kernel; declarations [`ContextualityTensor.square_minimum_closed_form`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/ContextualityTensor.lean#L243), [`ContextualityTensor.pentagram_minimum_closed_form`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/ContextualityTensor.lean#L254), [`ContextualityTensor.global_actual_square_minimum`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/ContextualityTensor/ActualModel.lean#L88), [`ContextualityTensor.global_actual_pentagram_minimum`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/ContextualityTensor/ActualModel.lean#L103), [`ContextualityTensor.actual_square_epsilon_tends_to_one`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/ContextualityTensor/ActualModel.lean#L140), [`ContextualityTensor.actual_pentagram_epsilon_tends_to_one`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/ContextualityTensor/ActualModel.lean#L145), [`PauliContextualityLab.ComparatorTarget.target_disjoint_square_degree`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Solution.lean#L104), [`PauliContextualityLab.ComparatorTarget.target_disjoint_pentagram_degree`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Solution.lean#L113); axioms: propext, Classical.choice, Quot.sound. Identification with the source's hypergraph support HS(kG) rests on Python enumeration (k ≤ 2) and the source's Sec. 4.2, not on Lean.
 - **Audit (2026-11-26).** Rebuilt from a clean clone at the audited commit: pass; the formal statement is narrower than the usual informal claim (see Limits); prior work: no earlier proof found.
-- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `53e9875`.
+- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `05c1e4a`.
 - **Limit.** Only homogeneous copies of the square and of the pentagram are covered; the two doily copies 2L(K6) named in the same source sentence, mixed unions and the other Section 6 outlooks are not.
 - **Limit.** No Lean theorem identifies the hard-coded seed lines with HS(L(K3,3)) or HS(Petersen), and the pentagram signs have no Pauli-matrix check in Lean (squares are checked for k = 2 only).
 - **Limit.** The source is an unreviewed arXiv v1 preprint and states this as an open question in its discussion, not as a conjecture; the prior-work search (arXiv, Semantic Scholar, Zenodo, web; 2026-11-26) was bounded.
 - **Check it.** `cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean`
-- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.3.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
+- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.4.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
 
 <a id="r45"></a>
 ### R45. Strict-law failure in the nine vertex cases of Jonah's Conjecture E, every N ≥ 4
@@ -171,13 +171,13 @@ Source repositories at the last live sync (`2026-11-27T19:08:21Z`): 5 of 29 matc
 - **Asked in.** [B. W. Jonah, The reach of the section-square law: hyperplane completions of symplectic and quadric Pauli configurations (2026), Zenodo preprint v0.5, doi:10.5281/zenodo.23524332](https://zenodo.org/records/23524332), Section 6, Conjecture E.
 - **Evidence.** Lean kernel; declarations [`HoggarBound.ConjectureE.jonah_conjecture_e_all_nine_cases`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/ConjectureE.lean#L2270), [`HoggarBound.AuditUpgrades.jonah_conjecture_e_all_nine_cases_spectra`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/AuditUpgrades.lean#L1060), [`HoggarBound.ConjectureE.completionMat`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/ConjectureECore.lean#L48), [`PauliContextualityLab.ComparatorTarget.target_jonah_conjecture_e_all_nine_cases`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Solution.lean#L76); axioms: propext, Classical.choice, Quot.sound. Case labels for the nine pairs and coverage of whole cases (Jonah's Theorem B4, single orbits) are outside Lean.
 - **Audit (2026-11-26).** Rebuilt from a clean clone at the audited commit: pass; the formal statement is narrower than the usual informal claim (see Limits); prior work: overlapping earlier or parallel work found (see Limits).
-- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `53e9875`.
+- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `05c1e4a`.
 - **Limit.** Lean proves failure for one explicit representative per case; that each representative lies in the named case is read off the source's tables, and transfer to every hyperplane of a case uses the source's Theorem B4, neither formalized.
 - **Limit.** The source already proves cases C1 and C6 for every n ≥ 3 and reported N = 4 counterexample pairs for six further cases; case C3 for N ≥ 4 was open there.
 - **Limit.** The source is an unreviewed, AI-assisted and AI-refereed Zenodo preprint; its conjecture, definitions and Theorem B4 were read in this audit through a PDF text-extraction tool.
 - **Limit.** No later resolution was found in a bounded Zenodo and web search (2026-11-26).
 - **Check it.** `cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean`
-- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.3.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
+- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.4.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
 
 <a id="section-b"></a>
 ## B. New theorems
@@ -263,13 +263,13 @@ Source repositories at the last live sync (`2026-11-27T19:08:21Z`): 5 of 29 matc
 - **Statement.** For every m ≥ 1, with q = 2^m, there is a set S of (q³−1)q² non-identity 3m-qubit Pauli labels, containing two distinct commuting elements whose product is not in S, with 6·#lines = (q³−1)q⁴(q²+q−3), whose minimum number of violated lines over ±1 assignments is (q³−1)q³(q−1)(q−2)/12. These counts give equality in the spectral floor; the minimum is positive for m ≥ 2.
 - **Evidence.** Lean kernel; declarations [`HoggarBound.NormPhaseFamily.infinite_nonclosed_saturated_family`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/NormPhaseFamily.lean#L1291), [`HoggarBound.NormPhaseFamily.infinite_nonclosed_family_contextual`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/NormPhaseFamily.lean#L1407), [`HoggarBound.NormPhaseFamily.detPhase_isFlatState`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/NormPhaseFamily.lean#L974), [`PauliContextualityLab.ComparatorTarget.target_infinite_nonclosed_saturated_family`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Solution.lean#L52); axioms: propext, Classical.choice, Quot.sound. Floor equality follows from the stated counts by arithmetic (checked in this audit); flatness of the |Ψ₃ₘ⟩ state is a separate Lean theorem.
 - **Audit (2026-11-26).** Rebuilt from a clean clone at the audited commit: pass; the formal statement matches the stated claim; prior work: no earlier proof found.
-- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `53e9875`.
+- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `05c1e4a`.
 - **Limit.** The m = 1 member (3 qubits) has degree 0 and is not contextual, although CLAIMS.md C06 and the module title call the family contextual for m ≥ 1.
 - **Limit.** The question it answers was posed in the repository's own manuscript, not by another author.
 - **Limit.** The m = 2 member has degree 2016; the separately claimed finite degrees 75, 480 and 729344 are in modules not compiled at the pinned commit.
 - **Limit.** The prior-work search was bounded; an independent Zenodo deposit made after the pinned commit (doi:10.5281/zenodo.24567331) reports related floor results and should be compared.
 - **Check it.** `cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean`
-- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.3.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
+- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.4.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
 
 <a id="r52"></a>
 ### R52. Even-Laplacian parity for quadratic-plus-periodic integer functions on the triangular lattice
@@ -471,11 +471,11 @@ Source repositories at the last live sync (`2026-11-27T19:08:21Z`): 5 of 29 matc
 - **Statement.** On the four-qubit hyperbolic quadric Q⁺(7,2) cut by the hyperplane of one fixed point (71 section points, 64 outside points), for two explicit ±1 sign patterns on the section, each with four −1 entries, the minimum over ±1 values on the 64 outside points of the number of violated outside lines is 368 and 344 respectively, each attained.
 - **Evidence.** Lean kernel; declarations [`HoggarBound.C3ExactOptima.corollary16_exact_binary_optima`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/C3ExactOptima.lean#L931), [`HoggarBound.ConjectureE.c3ViolatedOutsideContexts`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/ConjectureEExtras.lean#L581), [`PauliContextualityLab.ComparatorTarget.target_c3_exact_binary_optima`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Solution.lean#L65); axioms: propext, Classical.choice, Quot.sound. Lower bounds use integer SDP-dual certificates verified inside the Lean kernel by decide +kernel.
 - **Audit (2026-11-26).** Rebuilt from a clean clone at the audited commit: pass; the formal statement matches the stated claim; prior work: not yet searched.
-- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `53e9875`.
+- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `05c1e4a`.
 - **Limit.** A single finite instance (N = 4, two fixed sign patterns); no statement for other N or other pairs.
 - **Limit.** Jonah's preprint asks only for a cospectral C3 pair with different completion spectra; these optima are a self-posed additional statement.
 - **Check it.** `cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean`
-- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.3.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
+- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.4.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
 
 <a id="r57"></a>
 ### R57. Sign-point determinants and the sign lifts of Gardam's support
@@ -950,13 +950,13 @@ None recorded.
 - **Statement.** For N ≥ 1, every set S of non-identity N-qubit Pauli labels and every ±1 assignment f on S satisfy (2^N−1)β₆ ≤ (2^N−2)|S|√((2^N−1)|S|), where β₆ = 6·(satisfied − violated commuting 3-point lines in S). For S inside an elliptic quadric (N ≥ 2) the same holds with 2^(N−1). For nonempty S, equality is equivalent to four spectral or flat-state conditions, and for N ≥ 2 it forces (2^N−1)|S| to be a square.
 - **Evidence.** Lean kernel; declarations [`HoggarBound.hoggar_bound`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/Bound.lean#L169), [`HoggarBound.hoggar_bound_quaternionic`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/Kramers.lean#L439), [`HoggarBound.saturation_tfae`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/SaturationTheory.lean#L471), [`HoggarBound.saturation_mul_isSquare`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/SaturationTheory.lean#L822), [`PauliContextualityLab.ComparatorTarget.target_spectral_floor`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Solution.lean#L29); axioms: propext, Classical.choice, Quot.sound. The floor and its Kramers variant are Jonah's prior results (doi:10.5281/zenodo.23538829); the stated contribution is the formalization and arbitrary supports.
 - **Audit (2026-11-26).** Rebuilt from a clean clone at the audited commit: pass; the formal statement matches the stated claim; prior work: known mathematics.
-- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `53e9875`.
+- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `05c1e4a`.
 - **Limit.** The repository's paper calls the bounds prior work of Jonah; README, CLAIMS.md and the hub list them as results without that label.
 - **Limit.** Jonah's preprint abstract states an attainment criterion (violation-regular assignment with simple top eigenvalue) for closed families; its overlap with the five-way equivalence was not compared line by line.
 - **Limit.** The perfect-square condition is an elementary consequence of β₆ being an integer.
 - **Limit.** Contexts are only commuting 3-point lines {u, v, u+v}; an independent Lean formalization of a similar floor was deposited on Zenodo after the pinned commit (doi:10.5281/zenodo.24567331).
 - **Check it.** `cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean`
-- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.3.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
+- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.4.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
 
 <a id="r49"></a>
 ### R49. Kernel-checked lower bounds for the contextuality degrees of W(7,2) and Q⁺(9,2)
@@ -965,12 +965,12 @@ None recorded.
 - **Related source.** [Z. Li, A. Gupta, V. Ganesh, The Four-Qubit Hyperbolic Quadric Has Contextuality Degree 315 (2026), arXiv:2610.26465](https://arxiv.org/abs/2610.26465v1), Section Open problems, items 1 and 2.
 - **Evidence.** Lean kernel; declarations [`HoggarBound.ExactDegreesN4N5.w72_ge_1455`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/ExactDegreesN4N5.lean#L1078), [`HoggarBound.ExactDegreesN4N5.q9plus_ge_6444`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/ExactDegreesN4N5.lean#L1088), [`PauliContextualityLab.ComparatorTarget.target_w72_ge_1455`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Solution.lean#L94), [`PauliContextualityLab.ComparatorTarget.target_q9plus_ge_6444`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Solution.lean#L99); axioms: propext, Classical.choice, Quot.sound. The repository's exact values 1575 and 6975 are proved in Lean only conditionally on d(Q⁻(7,2)) ≥ 315, which rests on a C census.
 - **Audit (2026-11-26).** Rebuilt from a clean clone at the audited commit: pass; the formal statement is narrower than the usual informal claim (see Limits); prior work: overlapping earlier or parallel work found (see Limits).
-- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `53e9875`.
+- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `05c1e4a`.
 - **Limit.** These are lower bounds; Li, Gupta and Ganesh ask for the exact degrees. 1455 raises their stated lower bound 1071 for W(7,2), and 6444 > 4743 gives a negative answer to their question whether deg Q⁺(9,2) = 4743.
 - **Limit.** Jonah's unreviewed, computer-assisted note of 20 October 2026 (doi:10.5281/zenodo.23510634) already claimed the exact values 1575 and 6975 and the negative answer; README and CLAIMS.md do not say so.
 - **Limit.** The repository's own notes state these bounds should not be presented as new resolutions.
 - **Check it.** `cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean`
-- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.3.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
+- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.4.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
 
 <a id="r50"></a>
 ### R50. Peres–Mermin setting-bias failure floor and finite betting-tree hitting bound
@@ -978,13 +978,13 @@ None recorded.
 - **Statement.** For nonnegative weights p on the six Peres–Mermin contexts, minimal at c, every deterministic ±1 table on the nine observables fails on contexts of total weight ≥ p(c), and some table attains p(c). In every finite binary betting tree whose nodes have win chance q ∈ [0,1] and factors A, B ≥ 0 with qA+(1−q)B ≤ 1, wealth reaches T > 0 from z ≥ 0 with probability ≤ z/T.
 - **Evidence.** Lean kernel; declarations [`Evidence.sharp_minimum`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Evidence/Square.lean#L115), [`Evidence.biased_square_success_bound`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Evidence/Square.lean#L157), [`Evidence.BetTree.finite_hitting_bound`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Evidence/Sequential.lean#L110), [`PauliContextualityLab.ComparatorTarget.target_peres_mermin_sharp_minimum`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Solution.lean#L122), [`PauliContextualityLab.ComparatorTarget.target_sequential_hitting_bound`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/Solution.lean#L128); axioms: propext, Classical.choice, Quot.sound. The repository's PRIOR_ART.md calls both bounds elementary consequences of their assumptions and cites Ville's inequality as established.
 - **Audit (2026-11-26).** Rebuilt from a clean clone at the audited commit: pass; the formal statement matches the stated claim; prior work: known mathematics.
-- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `53e9875`.
+- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `05c1e4a`.
 - **Limit.** Finite horizon only; there is no infinite-horizon or measure-theoretic statement.
 - **Limit.** The 11/12 success cap is the value for one example distribution (weights 11/60 on five contexts, 1/12 on the sixth).
 - **Limit.** The 97.24% versus 0.89% miscalibration figures are exact-rational Python computations; Lean proves only a false-positive probability above 4.3% for a 36-round tree.
 - **Limit.** The statements concern a deterministic null model; measurement compatibility of a physical device is not addressed.
 - **Check it.** `cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean`
-- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.3.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
+- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.4.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
 
 <a id="r51"></a>
 ### R51. Kernel-checked contextuality degrees of Q⁺(3,2), W(5,2) and Q⁻(5,2), with bounds for W(3,2)
@@ -992,12 +992,12 @@ None recorded.
 - **Statement.** Minimum numbers of violated commuting 3-point lines over ±1 assignments: 1 on the two-qubit hyperbolic quadric Q⁺(3,2) (nine observables), 63 on W(5,2), and 9 on one three-qubit elliptic quadric Q⁻(5,2); on W(3,2) every assignment violates at least 2 lines and one assignment violates 3.
 - **Evidence.** Lean kernel; declarations [`HoggarBound.mermin_peres`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/TwoQubit.lean#L60), [`HoggarBound.doily_contexts`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/TwoQubit.lean#L98), [`HoggarBound.degree_three_qubit`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/Witness.lean#L135), [`HoggarBound.degree_three_qubit_elliptic`](https://github.com/0thernes/pauli-contextuality-lab/blob/b0f8a180f441674c439840d5125e2c4dcac55a18/lean/HoggarBound/Witness.lean#L143); axioms: propext, Classical.choice, Quot.sound.
 - **Audit (2026-11-26).** Rebuilt from a clean clone at the audited commit: pass; the formal statement matches the stated claim; prior work: known mathematics.
-- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `53e9875`.
+- **Re-audit pending.** Audited at commit `b0f8a18`; the archive pin has since moved to `05c1e4a`.
 - **Limit.** The repository's paper calls 63 and 9 known exact degrees; README and CLAIMS.md C03 do not label them as known.
 - **Limit.** d(W(3,2)) is not determined exactly in Lean (only 2 ≤ d ≤ 3), although arXiv:2610.26465, Sec. 1, reports the value 3 as known.
 - **Limit.** Literature status: Li, Gupta and Ganesh (arXiv:2610.26465, Sec. 1) list W(5,2) (63) and its quadrics (21 and 9) as known exact values. They cite de Boutray et al. (J. Phys. A 55 (2022) 475301, arXiv:2105.13798) and Muller et al. (Math. Struct. Comp. Sci. 34 (2024) 322–343, arXiv:2305.10225); those sources were not re-read here. Q⁺(3,2) is the Peres–Mermin square.
 - **Check it.** `cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean`
-- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.3.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
+- **Source.** [pauli-contextuality-lab](https://github.com/0thernes/pauli-contextuality-lab) `v3.4.0` · archive entry `0TH-2026-009` · [paper](papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf)
 
 <a id="r60"></a>
 ### R60. Square-lattice obstruction for an isotropic quadratic-plus-periodic integer function

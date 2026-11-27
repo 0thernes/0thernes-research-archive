@@ -895,8 +895,8 @@
       "tiers": [
         "Tier I"
       ],
-      "pinned_commit": "53e987595dc434e81dd393463e2587b4eb23eda5",
-      "archived_version": "v3.3.0",
+      "pinned_commit": "05c1e4a4a7999f3d8bac5f1e756cce94e5b9e110",
+      "archived_version": "v3.4.0",
       "submodule_path": "repos/pauli-contextuality-lab",
       "registered_pages_url": "https://0thernes.github.io/pauli-contextuality-lab/",
       "default_branch": "main",
