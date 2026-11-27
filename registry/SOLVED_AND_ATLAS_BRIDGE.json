@@ -260,7 +260,7 @@
       "archive_id": "0TH-2026-019",
       "slug": "cayley-dickson-terrace-frontier",
       "repository": "https://github.com/0thernes/cayley-dickson-terrace-frontier",
-      "version": "v2.0.0",
+      "version": "v2.1.0",
       "resolution_class": "NEW_THEOREM_SUITE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
@@ -269,8 +269,8 @@
         "XGEOM-031",
         "COMB-040"
       ],
-      "target_statement": "Machine-checks 22 headline theorems (T1a-T1f, T2a-T2f, T3a-T3d, T4a-T4f) + master conjunction (23 Palomar targets) plus 4 NonVacuity witnesses and 8 AdversarialTests sharpness refutations (35 audited decls) in zero-Mathlib Lean 4.35.0: Universal Nilpotent Mirror Conservation & explicit Z-basis isomorphism for ker L_{e_i+e_j} under cdMulCoordGamma (T1a-T1f), exact Dyadic-Palindromic Terrace Law, uniqueness of BDI equality at n=4, & All-Signature Midpoint 42 Law H_n^gamma(2^(n-2))=42*2^(n-4) (T2a-T2f), exact right-compatibility clique number omega(G_n^comp)=n+5 & Euclidean coordinate deficit n+5 < rho(2^n) for all n>=6 (T3a-T3d), complete sedenion certificates (Fano 7+28+7=42 + 2+2 bad-plane splitting, non-circular de Marrais 7xK_{2,2,2} box-kites), pure-kernel 2^32 Pathion ceiling r_max(CD_5)=14 & strict 7+7 rigidity retiring HiGHS MILP (T4e), and pure-kernel CD_6(56) interior spectral gap H_6^56(20)=0 (T4f), differentially audited across 496 algebras CD_4-CD_8 and all 280 Pathion 14D subspaces in Rust, ISO C11, and exact Q Python.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 35 audited decls across 14 Lean module files (13 sorry-free), all 6 independent kernels verified via lake check --paranoid (60,087-60,090 decls) & lake comparator --paranoid (4,482-4,485 decls) + real tamper-injecting negative comparator/axiom gate (CI run 45944568675, SLSA #72949127 / Rekor 4142185254, DigiCert RFC 3161 .tsr + 3-calendar Bitcoin .ots).",
+      "target_statement": "Machine-checks 22 headline theorems (T1a-T1f, T2a-T2f, T3a-T3d, T4a-T4f) + master conjunction (23 Palomar targets) plus 4 NonVacuity witnesses and 8 AdversarialTests sharpness refutations (35 audited decls) in zero-Mathlib Lean 4.35.0: Universal Nilpotent Mirror Conservation & explicit Z-basis isomorphism for ker L_{e_i+e_j} under cdMulCoordGamma (T1a-T1f), exact Dyadic-Palindromic Terrace Law, uniqueness of BDI equality at n=4, & All-Signature Midpoint 42 Law H_n^gamma(2^(n-2))=42*2^(n-4) (T2a-T2f), exact right-compatibility clique number omega(G_n^comp)=n+5 & Euclidean coordinate deficit n+5 < rho(2^n) for all n>=6 (T3a-T3d), complete sedenion certificates (Fano 7+28+7=42 + 2+2 bad-plane splitting, non-circular de Marrais 7xK_{2,2,2} box-kites), pure-kernel 2^32 Pathion ceiling r_max(CD_5)=14 & strict 7+7 rigidity retiring HiGHS MILP (T4e), and pure-kernel CD_6(56) interior spectral gap H_6^56(20)=0 (T4f), differentially audited across 496 algebras CD_4-CD_8 and all 280 Pathion 14D subspaces in Rust, ISO C11 (100k CD_1..CD_7 fuzz), and exact Q Python (15/15 pytest).",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 35 audited decls across 14 Lean module files (13 sorry-free), all 6 independent kernels verified via lake check --paranoid (60,087-60,090 decls) & lake comparator --paranoid (4,482-4,485 decls) + real tamper-injecting negative comparator/axiom gate (CI run 46055543755 [10/10 green], SLSA #73248368 / Rekor 4150903219, OpenSSL-verified DigiCert RFC 3161 .tsr + 3-calendar Bitcoin .ots).",
       "honesty_boundary": "Proves universal Cayley-Dickson mirror/terrace/kernel-basis theorems, the all-n>=6 gap n+5 < rho(2^n) for Euclidean coordinate right-multiplier sets, exact sedenion/pathion coordinate ceilings (including pure-kernel r_max(CD_5)=14 with 7+7 rigidity), and the CD_6(56) interior spectral gap; overarching grand open problems (ALG-035, ALG-039, XGEOM-031, COMB-040 and general non-coordinate composition-pair problems) remain explicitly OPEN."
     },
     {

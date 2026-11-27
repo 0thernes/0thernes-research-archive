@@ -2628,9 +2628,9 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
+      "audited_commit": "0ea58439e9f98b4f44f13fa484c5ee4b50badb10",
       "audit": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "rebuild": "PASS",
         "fidelity": "AUDITED_MATCH",
         "prior_work": "NONE_FOUND"
@@ -2719,9 +2719,9 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
+      "audited_commit": "0ea58439e9f98b4f44f13fa484c5ee4b50badb10",
       "audit": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "rebuild": "PASS",
         "fidelity": "AUDITED_MATCH",
         "prior_work": "OVERLAP_FOUND"
@@ -2760,9 +2760,9 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
+      "audited_commit": "0ea58439e9f98b4f44f13fa484c5ee4b50badb10",
       "audit": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "rebuild": "PASS",
         "fidelity": "AUDITED_MATCH",
         "prior_work": "OVERLAP_FOUND"
@@ -2822,18 +2822,18 @@
         {
           "decl": "CDTerrace.hurwitz_radon_rupture_all_ge6",
           "file": "lean/CDTerrace/HurwitzRupture.lean",
-          "line": 722
+          "line": 723
         },
         {
           "decl": "CDTerrace.asymmetric_doubling_tower_all_n",
           "file": "lean/CDTerrace/HurwitzRupture.lean",
-          "line": 750
+          "line": 751
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
+      "audited_commit": "0ea58439e9f98b4f44f13fa484c5ee4b50badb10",
       "audit": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "rebuild": "PASS",
         "fidelity": "AUDITED_MATCH",
         "prior_work": "NONE_FOUND"
@@ -3065,18 +3065,18 @@
         {
           "decl": "CDTerrace.pathion_exact_ceiling_14_and_7_7_rigidity",
           "file": "lean/CDTerrace/PathionRupture.lean",
-          "line": 1765
+          "line": 1766
         },
         {
           "decl": "CDTerrace.cd6_split56_interior_spectral_gap",
           "file": "lean/CDTerrace/PathionRupture.lean",
-          "line": 2168
+          "line": 2169
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
+      "audited_commit": "0ea58439e9f98b4f44f13fa484c5ee4b50badb10",
       "audit": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "rebuild": "PASS",
         "fidelity": "AUDITED_MATCH",
         "prior_work": "NONE_FOUND"
@@ -3999,16 +3999,16 @@
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "cbd146a3f174a39fe9cfb656d7fd6f93c5bd64be",
+      "audited_commit": "0ea58439e9f98b4f44f13fa484c5ee4b50badb10",
       "audit": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "rebuild": "PASS",
         "fidelity": "AUDITED_MATCH",
         "prior_work": "KNOWN"
       },
       "limits": [
         "The 42 assessors and the 7 box-kites are due to de Marrais (arXiv:math/0011260, 2000); this is a formal six-kernel re-verification.",
-        "In v2.0.0, inter-strut disjointness is proved directly from pure vanishing-product adjacency (isBoxKiteAssessor) linked to cdMulCoordGamma without XOR pre-filtering.",
+        "In v2.0.0–v2.1.0, inter-strut disjointness is proved directly from pure vanishing-product adjacency (boxKiteGraphAdj / hasCrossEdgeVtx) linked to cdMulCoordGamma without XOR pre-filtering.",
         "Norm-multiplicativity of span{e_0,\u2026,e_8} is checked via isNormMultMask 4 511 (cross-term cancellation over basis quadruples)."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"

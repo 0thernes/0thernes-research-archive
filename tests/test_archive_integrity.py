@@ -152,7 +152,7 @@ def test_consolidated_latest_entries_registered() -> None:
     assert papers["0TH-2026-018"]["version"] == "v3.0.0"
     assert papers["0TH-2026-018"]["lean_verification"]["audited_theorems"] == 19
     assert papers["0TH-2026-019"]["slug"] == "cayley-dickson-terrace-frontier"
-    assert papers["0TH-2026-019"]["version"] == "v2.0.0"
+    assert papers["0TH-2026-019"]["version"] == "v2.1.0"
     assert papers["0TH-2026-019"]["lean_verification"]["audited_theorems"] == 35
     assert papers["0TH-2026-020"]["slug"] == "quantum-phasespace-rigidity"
     assert papers["0TH-2026-020"]["version"] == "v2.0.0"

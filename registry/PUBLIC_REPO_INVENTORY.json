@@ -130,7 +130,7 @@
       "description": "Zero-Mathlib Lean 4.35.0 (6 kernels, 23 Palomar targets, T1a-T4f incl. Pathion r_max=14 & dim-64 gap), Rust/C11/Python verifiers, RFC 3161+OTS timestamps, 21-page paper & 3D Canvas observatory",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T06:20:55Z",
+      "pushed_at": "2026-11-27T20:07:01Z",
       "homepage": "https://0thernes.github.io/cayley-dickson-terrace-frontier/",
       "latest_release": null,
       "archive_registered": true,
