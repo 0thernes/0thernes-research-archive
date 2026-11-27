@@ -2,7 +2,7 @@
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
 **Synced (UTC):** `2026-11-27T19:08:21Z` · **Mode:** `offline`  
-**Tracked Public Repositories:** 50 (`14` exact pin match, `23` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Tracked Public Repositories:** 50 (`13` exact pin match, `23` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -20,7 +20,7 @@
 | [`cayley-dickson-terrace-frontier`](https://github.com/0thernes/cayley-dickson-terrace-frontier) | `0TH-2026-019` | Tier I | `0ea58439e9` | `0ea58439e9` | `v2.1.0` | [`success`](https://github.com/0thernes/cayley-dickson-terrace-frontier/actions/runs/46055543755) | `EXACT_PIN_MATCH` |
 | [`cellular-engine-omega`](https://github.com/0thernes/cellular-engine-omega) | `0TH-BUILD-008` | Tier II | `4b257af5f2` | `bf7391d104` | `v5.3.0` | [`success`](https://github.com/0thernes/cellular-engine-omega/actions/runs/46044870801) | `AHEAD_OF_PIN` |
 | [`cellulogonic-mecha`](https://github.com/0thernes/cellulogonic-mecha) | `0TH-BUILD-001` | Tier II | `d033ab025e` | `da99b117f8` | `v1.6.0` | [`success`](https://github.com/0thernes/cellulogonic-mecha/actions/runs/46044888462) | `AHEAD_OF_PIN` |
-| [`clifford-radon-stabilizers`](https://github.com/0thernes/clifford-radon-stabilizers) | `0TH-2026-025` | Tier I | `9db286fcb0` | `9db286fcb0` | `v1.0.0` | [`success`](https://github.com/0thernes/clifford-radon-stabilizers/actions/runs/46015384386) | `EXACT_PIN_MATCH` |
+| [`clifford-radon-stabilizers`](https://github.com/0thernes/clifford-radon-stabilizers) | `0TH-2026-025` | Tier I | `6fde4054f2` | — | `v1.1.0` | — | `OFFLINE_PIN_ONLY` |
 | [`coded-pir-mlwe-complexity-lab`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab) | `0TH-2026-012` | Tier I | `e13761c933` | `e13761c933` | `v5.3.0` | [`success`](https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/46045982407) | `EXACT_PIN_MATCH` |
 | [`contextuality-evidence-lab`](https://github.com/0thernes/contextuality-evidence-lab) | `0TH-2026-005` | Tier I | `ef0682cd24` | `e3811f332c` | `v1.0.0` | [`success`](https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42815130874) | `HISTORICAL_ARCHIVED` |
 | [`contextuality-tensor-lab`](https://github.com/0thernes/contextuality-tensor-lab) | `0TH-2026-003` | Tier I | `f7a1e6e74f` | `81f8d20c95` | `v0.1.0` | [`success`](https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42752465789) | `HISTORICAL_ARCHIVED` |
