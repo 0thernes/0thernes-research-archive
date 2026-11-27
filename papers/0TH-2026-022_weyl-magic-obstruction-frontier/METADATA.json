@@ -1,0 +1,48 @@
+{
+  "id": "0TH-2026-022",
+  "slug": "weyl-magic-obstruction-frontier",
+  "title": "The 2-Adic Magic Obstruction, Quaternary Bent-Hyperplane Rupture, Super-MUB Torsion Anomalies, and Divided-Power Characteristic-3 Alltop Constructions Across Product Weyl-Heisenberg Groups",
+  "domain": "Quantum Information Theory / Finite Geometry / Combinatorics / Formal Verification",
+  "date_released": "2026-11-27",
+  "version": "v1.0.2",
+  "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 & 3-OS CI verified)",
+  "author": "Alexander Stephen Donahue",
+  "orcid": "0009-0006-8168-9648",
+  "affiliation": "Independent Researcher, Spokane, WA, USA",
+  "repository": "https://github.com/0thernes/weyl-magic-obstruction-frontier",
+  "submodule_path": "repos/weyl-magic-obstruction-frontier",
+  "pinned_commit": "688f23a681cb0f77125be235da6ae5f0ad5efcab",
+  "release_url": "https://github.com/0thernes/weyl-magic-obstruction-frontier/releases/tag/v1.0.2",
+  "pages_url": "https://0thernes.github.io/weyl-magic-obstruction-frontier/",
+  "pdf_archive_path": "papers/0TH-2026-022_weyl-magic-obstruction-frontier/Donahue_2026_weyl_magic_obstruction_frontier.pdf",
+  "pdf_sha256": "c9711e317c3873b7abe3bcfa46c17fc4068599c69988d12578623358963209af",
+  "arxiv_bundle_url": "https://github.com/0thernes/weyl-magic-obstruction-frontier/releases/download/v1.0.2/arxiv_submission.tar.gz",
+  "arxiv_bundle_sha256": "77f265fe0d1806b5ac1ce3e9c0c9a886fe95b7a0d9305f02dc5d64cb019546df",
+  "lean_verification": {
+    "framework": "Pure Lean 4.35.0 (zero Mathlib, 14 Lean module files [13 sorry-free; PalomarChallenge.lean is the intentional statement-only sorry stub], 36 audited declarations across 22 numbered theorem groups T1a-T5d + prove_all_weyl_magic_theorems [= 23 Palomar targets, 3 zero-axiom] + 5 NonVacuity witnesses + 8 AdversarialTests boundary refutations strictly within [propext, Classical.choice, Quot.sound], autoImplicit = false, zero native_decide; all 6 independent kernels passed on Ubuntu CI via bubblewrap-sandboxed lake check --paranoid [58,675-58,678 decls] & lake comparator --config comparator.json --paranoid [3,664-3,667 decls] + live tamper-injecting negative comparator gate: lean, leanchecker-paranoid, lean4lean, nanoda, con-leche --verified, con-ron --verified; SLSA #72959549 / Rekor 4142920699)",
+    "axiom_allowlist": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "entry_point": "lean/Solution.lean",
+    "axiom_audit_file": "lean/VerifyAxioms.lean",
+    "additional_audit_files": [
+      "lean/Challenge.lean",
+      "lean/PalomarChallenge.lean",
+      "lean/PalomarSolution.lean",
+      "lean/WeylMagic/NonVacuity.lean",
+      "lean/WeylMagic/AdversarialTests.lean"
+    ],
+    "audited_theorems": 36
+  },
+  "ci_run_url": "https://github.com/0thernes/weyl-magic-obstruction-frontier/actions/runs/46006772561",
+  "preservation": {
+    "software_heritage": "swh:1:snp:955c878bdc1ebd454f0846dc7fac1938c244e3dc",
+    "wayback_machine": null,
+    "doi": null
+  },
+  "core_result": "Machine-checks 22 numbered theorem groups (T1a-T5d) + master conjunction prove_all_weyl_magic_theorems (23 Palomar targets, 3 strictly zero-axiom) plus 5 NonVacuity witnesses and 8 AdversarialTests sharpness refutations (36 audited declarations, zero Mathlib, zero native_decide, all 6 independent Lean 4.35.0 proof kernels verified inside bubblewrap on Ubuntu CI) across five linked pillars governing extremal Stabilizer Renyi Entropy across product Weyl-Heisenberg groups: (I) Universal 2-Adic Odd-Qubit Obstruction (T1a-T1d): for all odd n >= 3, v_2(2^n(2^n-2)^2) = n+2 is odd, unconditionally ruling out any n-qubit pure state with WH-MUB Pauli spectrum |c_P|^2 in {0, 2^{-n}} (zero subgroup or equimodularity assumptions), sharp at n=1 and n=2 ((1,1,1,i)/2, Phi_4 = 7/4); (II) Quaternary Bent-Hyperplane Rupture at n=4 (T2a-T2e): universal symplectic rigidity H^perp subseteq H, Fermat Gaussian-square phase locking R^2+I^2 = 4^m -> u_x in Z_4, universal Rothaus (1976) degree bound deg_ANF(f) <= m for all m >= 2, exhaustive F_2^4 classification (all 896 bent functions are quadratic, 0 of degree > 2), and universal 3-hyperplane zero-sum parity obstruction ruling out equimodular n=4 WH-MUB states; (III) Super-MUB Torsion Anomalies & alpha-Dependence (T3a-T3e): exact Z[zeta_8] WH-MUB fiducials in W(4)xW(2) (norm2=8) and W(4)xW(4) (norm2=320) alongside exact Z[i] Super-MUB witnesses v42 (norm2=1001) and v44 (norm2=1596) strictly beating WH-MUB at alpha=2 and alpha=3 while crossing above WH-MUB at alpha=4, paired with C++20 L-BFGS numerical evidence that direct alpha=4 re-optimization still beats WH-MUB; (IV) Two-Stabilizer Tower, n=5 SOS Rupture & AME Ceilings (T4a-T4d): universal 3-stratum Parseval unifying n=1,2,3 (4/3, 7/4, 16/9), exact n=4 cubic 453t^3-651t^2+311t-49=0 (t* = 0.37745680..., Phi_4* = 2.15052015..., M_2* = 2.00687898...), exact n=5 SOS floor Phi_4(Psi_5) >= 3 ruptured by exact Z[i]^32 witness (Phi_4 = 693568064/260144641 ~= 2.666086 < 3), and universal k-uniform/AME Cauchy-Schwarz ceilings (AME(2,2) >= 2, AME(5,2) >= 1879/918, AME(6,2) >= 13/6); and (V) Divided-Power Char-3 Alltop, Char-5 & Exact QGT (T5a-T5d): elementary Z_9 carry-quadratic formulation (explicitly crediting Damski et al. arXiv:2603.15550 for GR(9,n) existence), universal bilinear Gauss-sum flat-modulus theorem, exact radix-3 FFT Z[zeta_9] certificates for W(3)^tensor-{1,2,3} (extended to n=4, D=81 in Rust/C11), Z[zeta_5] certificates for W(5)^tensor-{1,2}, and exact Fubini-Study QGT metric g_{theta,theta} = (1-D^{-1})/(2+2D^{-1/2}cos theta)^2. Differentially cross-verified across 9 engines (Lean 4.35.0, safe Rust 3-OS, Zig comptime, strict ISO C11 + dual Win64/ELF64 x86-64 NASM 1.56x FWHT + ASan/UBSan + 100k fuzz + CBMC harness, C++20 L-BFGS, Python exact Fraction/Decimal + textbook O(D^3) oracle with 162/162 tests & 7/7 mutation kills & 0 ruff/mypy, plus explicitly labelled classical cross-checks via QGTL, Moonlab WASM, Eshkol AD, and deterministic SplitMix64/Xoshiro256++ mixer), 17/17 live Crossref/arXiv citations (0 retractions), 14-page 0-warning AMS-LaTeX PDF + clean-room arXiv tarball, live zero-CDN WebGL2 Observatory & Blueprint, DigiCert RFC 3161 (.tsr) + Bitcoin (.ots), SWH swh:1:snp:955c878bdc1ebd454f0846dc7fac1938c244e3dc, and 75/75 (100.0%, Core 31/31) Build Standard v1.2.0 compliance.",
+  "verification_boundary": "All 36 audited declarations across Pillars I-V (23 Palomar targets T1a-T5d + prove_all_weyl_magic_theorems, 5 NonVacuity witnesses, 8 AdversarialTests refutations) are kernel-checked in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound] across all 6 independent kernels plus a live tamper-injecting negative gate on Ubuntu CI (zero sorry outside PalomarChallenge.lean, zero native_decide). W(3)^tensor-4 (D=81) is verified in exact Z[zeta_9] in Rust and C11 ([EXACT-COMP], outside Lean). C++20 multi-start L-BFGS landscapes (including direct alpha=4 re-optimization), QGTL Richardson QGT cross-checks (max_rel_err 1.224e-8), Moonlab WASM CPU simulation (max_err 1.33e-14), Eshkol AD, and the SplitMix64/Xoshiro256++ mixer are strictly classical deterministic [NUMERICAL-APPROX] cross-checks (no quantum hardware or physical entropy source). Explicitly affirms 0/2,000 overarching Mega-Atlas grand open problems retired; non-equimodular global optimality of |Psi_4(theta*)> over C^16, strong form for even n >= 6 qubits, and non-cyclic WH-SIC exclusion in W(4)xW(2) and W(4)xW(4) remain OPEN. Claims no external peer review or external DOI.",
+  "falsification_command": "cd repos/weyl-magic-obstruction-frontier && (cd rust && cargo clippy --all-targets -- -D warnings && cargo test --release) && (cd zig && zig test src/main.zig && zig run -OReleaseFast src/main.zig) && node node/moonlab_crosscheck.cjs && PYTHONPATH=src:. pytest -v tests/test_all.py && PYTHONPATH=src:. python scripts/mutation_check.py && python scripts/check_readme_axioms.py && (cd lean && lake build && lake build PalomarChallenge && lake env lean VerifyAxioms.lean && lake check --paranoid && lake comparator --config comparator.json --paranoid)"
+}

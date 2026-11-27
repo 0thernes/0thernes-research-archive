@@ -109,3 +109,6 @@
 [submodule "repos/weyl-magic-stabilizer-frontier"]
 	path = repos/weyl-magic-stabilizer-frontier
 	url = https://github.com/0thernes/weyl-magic-stabilizer-frontier.git
+[submodule "repos/weyl-magic-obstruction-frontier"]
+	path = repos/weyl-magic-obstruction-frontier
+	url = https://github.com/0thernes/weyl-magic-obstruction-frontier.git

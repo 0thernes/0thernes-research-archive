@@ -5,12 +5,12 @@
   "sync_mode": "offline",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
-    "tier1_papers": 21,
+    "tier1_papers": 22,
     "tier2_builds": 17,
     "tier3_discoveries": 12,
-    "total_entries": 50,
-    "unique_public_repositories": 43,
-    "pinned_submodules": 37,
+    "total_entries": 51,
+    "unique_public_repositories": 44,
+    "pinned_submodules": 38,
     "exact_pin_match": 12,
     "ahead_of_pin": 23,
     "historical_archived": 4,
@@ -1067,6 +1067,32 @@
       "ci_html_url": null,
       "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
       "pages_url": null,
+      "sync_status": "OFFLINE_PIN_ONLY",
+      "error": null
+    },
+    {
+      "slug": "weyl-magic-obstruction-frontier",
+      "repository": "https://github.com/0thernes/weyl-magic-obstruction-frontier",
+      "archive_ids": [
+        "0TH-2026-022"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "688f23a681cb0f77125be235da6ae5f0ad5efcab",
+      "archived_version": "v1.0.2",
+      "submodule_path": "repos/weyl-magic-obstruction-frontier",
+      "registered_pages_url": "https://0thernes.github.io/weyl-magic-obstruction-frontier/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": null,
+      "latest_release_tag": null,
+      "pushed_at": null,
+      "ci_run_id": null,
+      "ci_conclusion": null,
+      "ci_html_url": null,
+      "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
+      "pages_url": "https://0thernes.github.io/weyl-magic-obstruction-frontier/",
       "sync_status": "OFFLINE_PIN_ONLY",
       "error": null
     },

@@ -2,7 +2,7 @@
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
 **Synced (UTC):** `2026-11-27T05:24:00Z` · **Mode:** `offline`  
-**Tracked Public Repositories:** 43 (`12` exact pin match, `23` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Tracked Public Repositories:** 44 (`12` exact pin match, `23` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -48,6 +48,7 @@
 | [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | `0TH-DISC-006` | Tier III | `0686cf9729` | `9604bc4c36` | `main` | [`success`](https://github.com/0thernes/unsolved-black-hole-problems/actions/runs/45912603955) | `AHEAD_OF_PIN` |
 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `0TH-BUILD-004`, `0TH-DISC-005` | Tier II / Tier III | `0604df5c70` | `8bce1ba25a` | `v0.7.0` | [`success`](https://github.com/0thernes/unsolved-mathematics/actions/runs/45940355767) | `AHEAD_OF_PIN` |
 | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `0TH-BUILD-007` | Tier II | `af0a8506b8` | — | `v2.9.0` | — | `OFFLINE_PIN_ONLY` |
+| [`weyl-magic-obstruction-frontier`](https://github.com/0thernes/weyl-magic-obstruction-frontier) | `0TH-2026-022` | Tier I | `688f23a681` | — | `v1.0.2` | — | `OFFLINE_PIN_ONLY` |
 | [`weyl-magic-stabilizer-frontier`](https://github.com/0thernes/weyl-magic-stabilizer-frontier) | `0TH-2026-021` | Tier I | `da2aa5d9e4` | — | `v1.0.0` | — | `OFFLINE_PIN_ONLY` |
 | [`xiaomi-17t-pro-lab`](https://github.com/0thernes/xiaomi-17t-pro-lab) | `0TH-BUILD-012` | Tier II | `f1da68b78e` | `87e1e7a952` | `v3.1.0` | [`success`](https://github.com/0thernes/xiaomi-17t-pro-lab/actions/runs/45912330941) | `AHEAD_OF_PIN` |
 | [`zero-error-torus-frontier`](https://github.com/0thernes/zero-error-torus-frontier) | `0TH-2026-016` | Tier I | `af343aaa17` | `2fc02e5480` | `v1.0.0` | [`success`](https://github.com/0thernes/zero-error-torus-frontier/actions/runs/45910934362) | `AHEAD_OF_PIN` |
