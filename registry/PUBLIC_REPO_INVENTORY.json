@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
-  "synced_utc": "2026-11-27T04:44:29Z",
+  "synced_utc": "2026-11-27T05:15:18Z",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "repositories": [
     {
@@ -34,7 +34,7 @@
       "description": "Zero-Mathlib Lean 4 formalizations of known results (HKRS square obstruction for three Apollonian packings, Zhang's mod-32 theorem for Markov numbers, Hurwitz n=4, Abelian sandpile laws), small computations, and an elementary triangular-lattice parity lemma, with Rust, C11 and Python checks.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-26T23:22:37Z",
+      "pushed_at": "2026-11-27T05:09:47Z",
       "homepage": "https://0thernes.github.io/apollonian-sandpile-markov/",
       "latest_release": null,
       "archive_registered": true,
@@ -127,10 +127,10 @@
     {
       "slug": "cayley-dickson-terrace-frontier",
       "repository": "https://github.com/0thernes/cayley-dickson-terrace-frontier",
-      "description": "Zero-Mathlib Lean 4 proofs of all-n counting identities for 2-blade nullities in the explicit Cayley-Dickson sign table, the bound n+5 for coordinate right-multiplier families in the Euclidean CD_n, and sedenion/pathion finite certificates, with Rust, C11 and Python cross-checks.",
+      "description": "Zero-Mathlib Lean 4.35.0 (6 kernels, 23 Palomar targets, T1a-T4f incl. Pathion r_max=14 & dim-64 gap), Rust/C11/Python verifiers, RFC 3161+OTS timestamps, 21-page paper & 3D Canvas observatory",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-26T23:25:20Z",
+      "pushed_at": "2026-11-27T05:14:02Z",
       "homepage": "https://0thernes.github.io/cayley-dickson-terrace-frontier/",
       "latest_release": null,
       "archive_registered": true,
@@ -166,7 +166,7 @@
       "description": "Zero-Mathlib Lean 4.35.0 suite (31 kernel-checked theorems) of elementary identities, finite certificates and known results (rank of the 2x2 matmul tensor is 7, Schwartz-Zippel, integer form of Theta(C5)=sqrt5) for coded PIR, ML-KEM noise and tensor rank. Rates and DFRs are numerical.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-26T23:20:36Z",
+      "pushed_at": "2026-11-27T05:07:40Z",
       "homepage": "https://0thernes.github.io/coded-pir-mlwe-complexity-lab/",
       "latest_release": null,
       "archive_registered": true,
@@ -370,7 +370,7 @@
       "description": "Lean 4.35.0 proof of Conjecture 7.7 (a_triangle = 1/32 - 4*sqrt(3)/243) from the Banic-Elezovic arXiv preprint 2610.17046v1, with exact and 80-digit Python checks. Not peer reviewed; the variance corollaries rest on cited, unformalized theorems.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T04:39:15Z",
+      "pushed_at": "2026-11-27T05:09:32Z",
       "homepage": "https://0thernes.github.io/multinomial-tv-conjecture/",
       "latest_release": null,
       "archive_registered": true,
@@ -562,7 +562,7 @@
       "description": "Discrete p-adic (Bruhat-Tits tree) holography laboratory: Tate-curve BTZ quotients, Ollivier-Ricci curvature, graph-cut strong subadditivity, and 149 zero-Mathlib Lean 4.35.0 declarations about the discrete model. No physical or quantum-gravity result is claimed.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T04:36:45Z",
+      "pushed_at": "2026-11-27T04:44:35Z",
       "homepage": "https://0thernes.github.io/ultrametrica/",
       "latest_release": null,
       "archive_registered": true,
@@ -653,6 +653,6 @@
       "inventory_status": "REGISTERED"
     }
   ],
-  "sync_status": "OFFLINE_PRESERVED_LAST_KNOWN_GOOD",
+  "sync_status": "LIVE_GITHUB_API",
   "error": null
 }

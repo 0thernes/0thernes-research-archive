@@ -4,6 +4,9 @@ All notable archive registrations, cryptographic pin updates, and hardening rele
 
 ## [Unreleased]
 
+### Updated
+- **Upgraded `0TH-2026-006` (`multinomial-tv-conjecture` → `v2.5.0`):** Advanced `repos/multinomial-tv-conjecture` to `dae0fc835908` (follow-up on `main` recording the verbatim 9-target CI comparator log of tag `v2.5.0` `ad699d8`), updated frozen 22-page `0.00pt` PDF (`aa0d4c71...`) and arXiv tarball (`4cfe2fcb...`), formally proved the quantitative $O(L^{-2})$ Lemma 7.3 remainder (`lemma_7_3_O_inv_sq`, Target 9; 8,089 Lean lines, 187 author-written theorems and lemmas / 892 audited theorem constants, six comparator checker runs `#45942992816` Rekor `4141986348` & Release `#45942993056` Rekor `4141888347` verified live via `gh attestation verify`), closed 100% of the 2026-11-26 statement audit across manuscript, metadata, Lean docstrings, Blueprint, portal, and CI (`E-2026-015`..`018`), added 3,000+ Hypothesis examples, 1,140-input differential oracle, and isolated AST code-mutation runner (`20/20` killed), re-rendered `RESULTS.md` (honestly preserving `audited_commit: 0a69443` as re-audit pending per ledger admission rule #2), and re-sealed `data/RELEASE_FREEZE.sha256.tsr`.
+
 ### Added
 - **Results Ledger** ([`RESULTS.md`](RESULTS.md), [ADR 0003](docs/adr/0003-numbered-results-ledger.md)): one numbered list of audited results with plain statements, evidence, Lean declarations at the audited commit, limits and a check command, generated from `registry/RESULTS_LEDGER.json` by `scripts/build_ledger.py` and checked by `scripts/verify_archive.py`.
 - [`docs/reviews/2026-11-26-statement-audit.md`](docs/reviews/2026-11-26-statement-audit.md): method, rebuild results and per-entry outcomes of the statement audit.
