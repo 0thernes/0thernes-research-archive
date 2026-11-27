@@ -1139,26 +1139,31 @@
       "statement": "Over any commutative ring, the inner product of the moment vector (1,a,...,a^{T-1}) with e_{r+1} - a e_r is 0 for r+1<T, and K*C(T,T') = (K+T-T')*C(T-1,T'-1) + (K-T')*C(T-1,T') for 1<=T'<=min(T,K); plus closed arithmetic at T=K=3: with L(T') = (6-T')*C(2,T'-1), 3L(1)+3L(2)+L(3) = 42 and 60/(60+42) = 10/17 > 4/7.",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
-      "evidence_note": "In v5.2.0, Lean T1k (PIRProtocol.lean) proves field-universal 2-file N-server K-MDS flag-private PIR exact zero-error decoding and two-sided colluder-transcript bijection Psi_I, instantiated in Python and ISO C11 by an explicit F_101 (6,3,3) rate-10/17 witness verified across all 20/20 colluding triples and 10/10 live encode/decode trials; the general min-formula remains outside Lean.",
+      "evidence_note": "In v5.4.0, Lean T1k (PIRProtocol.lean) proves field-universal 2-file N-server K-MDS flag-private PIR exact zero-error decoding and two-sided colluder-transcript bijection Psi_I, and T1l (PIRF101Cert.lean) certifies unconditional in-kernel constructive existence over SimpleField (Fin 101) of the explicit (6,3,3) rate-10/17 > 4/7 zero-error 20/20 T=3-private scheme with zero native_decide and zero external oracles (also cross-verified in Python and ISO C11); the general min-formula remains outside Lean.",
       "asked_in": null,
       "lean": [
         {
           "decl": "TriadFrontier.PIRKoszul.t1a_koszul_veronese_rank_identity",
           "file": "lean/TriadFrontier/PIRKoszul.lean",
           "line": 79
+        },
+        {
+          "decl": "TriadFrontier.Solution.t1l_f101_certified_pir_existence",
+          "file": "lean/Solution.lean",
+          "line": 72
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e13761c9334da43ac160cbe0f0e14013bbd87ff1",
+      "audited_commit": "84d2f721653d201a2573d4d0c43324f23c0d42da",
       "audit": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "rebuild": "PASS",
         "fidelity": "AUDITED_NARROWER",
         "prior_work": "KNOWN"
       },
       "limits": [
-        "Not shown in Lean: the general Schur-product min-formula or optimality over arbitrary query designs; v5.2.0 adds Lean T1k (field-universal exact decoding & bijection Psi_I) plus an explicit F_101 20/20 (6,3,3) witness in Python and C11 (closing ERRATA S01/A02).",
-        "The parent Sun-Tao-Xu-Zhang maximum-redundancy and zero-error T>=3 questions remain open.",
+        "Not shown in Lean: the general Schur-product min-formula or optimality over arbitrary query designs; v5.4.0 upgrades the explicit F_101 (6,3,3) rate-10/17 20/20 zero-error witness to unconditional in-kernel Lean constructive existence via T1k and T1l (closing ERRATA S01/A02 inside all 6 kernels).",
+        "The parent Sun-Tao-Xu-Zhang maximum-redundancy and general T>=4 zero-error questions remain open.",
         "The hub claim that this resolves a published question is not supported."
       ],
       "check": "cd lean && lake build && lake env lean VerifyAxioms.lean"
@@ -1187,9 +1192,9 @@
         }
       ],
       "axioms": "propext, Quot.sound (T2b); propext (T2f)",
-      "audited_commit": "e13761c9334da43ac160cbe0f0e14013bbd87ff1",
+      "audited_commit": "84d2f721653d201a2573d4d0c43324f23c0d42da",
       "audit": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "rebuild": "PASS",
         "fidelity": "AUDITED_NARROWER",
         "prior_work": "KNOWN"
@@ -1207,7 +1212,7 @@
       "key": "T3h-T3l-classical",
       "status": "ACTIVE",
       "title": "Characteristic-free formalizations of matrix-multiplication tensor rank, Schwartz-Zippel, and Shannon-capacity bounds for conference graphs",
-      "statement": "Over every field: the 2x2 matrix multiplication tensor has rank exactly 7; rank(<m,m,m>) >= 2m^2-m and the two-sided bound 2*4^k-2^k <= rank(<2^k,2^k,2^k>) <= 7^k; a Schwartz-Zippel root bound; Theta(C5)=sqrt(5) in integer form; and, for every self-complementary conference graph on 4k+1 vertices, alpha(G^t)^2 <= (4k+1)^t with alpha(G^{2m}) >= (4k+1)^m (instantiated for C5, P13, P17).",
+      "statement": "Over every field (including F_2): the 2x2 matrix multiplication tensor has rank exactly 7; 5*m^2 - 6*m <= 2*rank(<m,m,m>) (Blaser FOCS 1999, beating 2m^2-1 for all m >= 6) and 5*4^k - 6*2^k <= 2*rank(<2^k,2^k,2^k>) <= 2*7^k; Schwartz-Zippel holds; Theta(C5)=sqrt(5) in integer form; and every self-complementary conference graph on 4k+1 vertices satisfies alpha(G^t)^2 <= (4k+1)^t and alpha(G^{2m}) >= (4k+1)^m (checked for C5, P13, P17).",
       "kind": "KNOWN_RESULT_FORMALIZED",
       "evidence": "kernel-checked",
       "asked_in": null,
@@ -1236,18 +1241,23 @@
           "decl": "TriadFrontier.PaleyCapacity.t3l_infinite_paley_conference_shannon_capacity",
           "file": "lean/TriadFrontier/PaleyCapacity.lean",
           "line": 1909
+        },
+        {
+          "decl": "TriadFrontier.BlaserLowerBound.t3m_blaser_five_halves_matmul_bound",
+          "file": "lean/TriadFrontier/BlaserLowerBound.lean",
+          "line": 4292
         }
       ],
       "axioms": "propext, Classical.choice, Quot.sound",
-      "audited_commit": "e13761c9334da43ac160cbe0f0e14013bbd87ff1",
+      "audited_commit": "84d2f721653d201a2573d4d0c43324f23c0d42da",
       "audit": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "rebuild": "PASS",
         "fidelity": "AUDITED_MATCH",
         "prior_work": "KNOWN"
       },
       "limits": [
-        "T3i's 2m^2-m is weaker than the published Brockett-Dobkin bound 2n^2-1 (Linear Algebra Appl. 1978, doi:10.1016/0024-3795(78)90012-5); the 'sandwich' is two one-sided bounds, not an exact value.",
+        "T3m formalizes Markus Blaser's classical FOCS 1999 5/2 m^2 - 3m lower bound (doi:10.1109/SFFCS.1999.814576) over every field including F_2, superseding T3i's weaker 2m^2-m (ERRATA A10) and strictly surpassing Brockett-Dobkin's 2m^2-1 for all m >= 6 (certified at m=6 as r >= 72 > 71); the power-of-2 inequality is two one-sided bounds, not an exact value.",
         "T3l's general clauses are conditional on the conference-graph and self-complementing-map hypotheses, which are verified only for C5 (in T3j), P13 and P17; infinitely many Paley graphs are not constructed. Theta = sqrt(n) for vertex-transitive self-complementary graphs is Lov\u00e1sz (1979, doi:10.1109/TIT.1979.1055985).",
         "omega=2 and the exact Theta(C7) stay open."
       ],

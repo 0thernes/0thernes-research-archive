@@ -137,8 +137,8 @@ def test_consolidated_latest_entries_registered() -> None:
     assert papers["0TH-2026-009"]["lean_verification"]["explicit_print_axioms"] == 217
     assert papers["0TH-2026-004"]["version"] == "v2.3.0"
     assert papers["0TH-2026-011"]["version"] == "v2.5.0"
-    assert papers["0TH-2026-012"]["version"] == "v5.3.0"
-    assert papers["0TH-2026-012"]["lean_verification"]["audited_theorems"] == 35
+    assert papers["0TH-2026-012"]["version"] == "v5.4.0"
+    assert papers["0TH-2026-012"]["lean_verification"]["audited_theorems"] == 37
     assert papers["0TH-2026-013"]["slug"] == "p-vs-np-frontier-lab"
     assert papers["0TH-2026-013"]["version"] == "v1.2.0"
     assert papers["0TH-2026-013"]["lean_verification"]["audited_theorems"] == 25
