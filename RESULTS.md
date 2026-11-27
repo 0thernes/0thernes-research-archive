@@ -1482,6 +1482,10 @@ None recorded.
 | `0TH-BUILD-006` | [black-hole-simulation-lab](https://github.com/0thernes/black-hole-simulation-lab) | No machine-checked result at the pinned commit. Its Lean file (eight literal arithmetic identities) is on an unmerged branch; the build itself is a C++ ray-tracing lab. |
 | `0TH-BUILD-014` | [omega-triscale-observatory](https://github.com/0thernes/omega-triscale-observatory) | No machine-checked result at the pinned commit. The repository is a local artificial-life telemetry hub whose invariants are checked by unit, seeded-random and mutation tests, not by proofs; the 327 Lean proofs it displays belong to six other archived repositories. |
 
+Registered in the archive but not yet audited into this ledger:
+
+- `0TH-2026-020` [quantum-phasespace-rigidity](https://github.com/0thernes/quantum-phasespace-rigidity) `v1.0.0`
+
 ## Not claimed
 
 - No Millennium Prize problem and no grand open problem is solved here. P versus NP is open.

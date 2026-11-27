@@ -5,12 +5,12 @@
   "sync_mode": "offline",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "counts": {
-    "tier1_papers": 19,
+    "tier1_papers": 20,
     "tier2_builds": 17,
     "tier3_discoveries": 12,
-    "total_entries": 48,
-    "unique_public_repositories": 41,
-    "pinned_submodules": 35,
+    "total_entries": 49,
+    "unique_public_repositories": 42,
+    "pinned_submodules": 36,
     "exact_pin_match": 12,
     "ahead_of_pin": 24,
     "historical_archived": 4,
@@ -910,6 +910,32 @@
       "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/promislow-fracton-amoeba/studio/",
       "sync_status": "AHEAD_OF_PIN",
+      "error": null
+    },
+    {
+      "slug": "quantum-phasespace-rigidity",
+      "repository": "https://github.com/0thernes/quantum-phasespace-rigidity",
+      "archive_ids": [
+        "0TH-2026-020"
+      ],
+      "tiers": [
+        "Tier I"
+      ],
+      "pinned_commit": "1c3214973ea5b020fbcc93fd8e25e7688da84c98",
+      "archived_version": "v1.0.0",
+      "submodule_path": "repos/quantum-phasespace-rigidity",
+      "registered_pages_url": "https://0thernes.github.io/quantum-phasespace-rigidity/",
+      "default_branch": "main",
+      "archived": false,
+      "live_head_commit": null,
+      "latest_release_tag": null,
+      "pushed_at": null,
+      "ci_run_id": null,
+      "ci_conclusion": null,
+      "ci_html_url": null,
+      "ci_status_reason": "NO_SUBSTANTIVE_CI_RUN",
+      "pages_url": "https://0thernes.github.io/quantum-phasespace-rigidity/",
+      "sync_status": "OFFLINE_PIN_ONLY",
       "error": null
     },
     {

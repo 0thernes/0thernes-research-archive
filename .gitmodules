@@ -103,3 +103,6 @@
 [submodule "repos/cayley-dickson-terrace-frontier"]
 	path = repos/cayley-dickson-terrace-frontier
 	url = https://github.com/0thernes/cayley-dickson-terrace-frontier.git
+[submodule "repos/quantum-phasespace-rigidity"]
+	path = repos/quantum-phasespace-rigidity
+	url = https://github.com/0thernes/quantum-phasespace-rigidity.git
