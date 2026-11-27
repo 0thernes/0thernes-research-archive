@@ -23,6 +23,33 @@
       ],
       "promotion_status": "CANDIDATE_SEPARATE_FROM_FROZEN_V0.5.0",
       "claim_boundary": "Bounded structural formal results only; grand open conjectures remain open."
+    },
+    {
+      "repository": "https://github.com/0thernes/unsolved-mathematics",
+      "release": "v0.7.0",
+      "commit": "67c37b876d2041ac92ac4384ee443dcb564806ac",
+      "ci_run": "https://github.com/0thernes/unsolved-mathematics/actions/runs/45940334677",
+      "release_run": "https://github.com/0thernes/unsolved-mathematics/actions/runs/45940340185",
+      "artifacts": [
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.7.0/Donahue_2026_unsolved_mathematics_atlas-v0.7.0.pdf",
+          "sha256": "d5abcd83d2df82e712421071bc205383430c9e08e1cc476e2305fefb3a3499dc"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.7.0/arxiv_submission-v0.7.0.tar.gz",
+          "sha256": "bf51709f41164d7f2fbfe33d662fd25ea7f85cb3cf987b6c0549ae75e6f76974"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.7.0/MANIFEST-v0.7.0.sha256",
+          "sha256": "b35a3cdddd55c326e6a73a43983169e50652c140edad521fcb771ad32a98fffd"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.7.0/six_kernel_audit-v0.7.0.txt",
+          "sha256": "105d13225241e7711114af453a22392ee1406ffdb87956b15fe280344f16e86b"
+        }
+      ],
+      "promotion_status": "CANDIDATE_SEPARATE_FROM_FROZEN_V0.5.0",
+      "claim_boundary": "Bounded structural formal results only (66 theorems, 102 audited declarations across 8 domains + 6/6 statement-audit resolution + guarded daily Left to Solve mirror); grand open conjectures remain open."
     }
   ]
 }
