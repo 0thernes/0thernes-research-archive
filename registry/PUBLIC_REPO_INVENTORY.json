@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "canonical_hub": "https://github.com/0thernes/0thernes-research-archive",
-  "synced_utc": "2026-11-27T14:01:09Z",
+  "synced_utc": "2026-11-27T15:22:29Z",
   "privacy_firewall": "PUBLIC_NON_FORK_0THERNES_ONLY",
   "repositories": [
     {
@@ -34,7 +34,7 @@
       "description": "Zero-Mathlib Lean 4 formalizations of known results (HKRS square obstruction for three Apollonian packings, Zhang's mod-32 theorem for Markov numbers, Hurwitz n=4, Abelian sandpile laws), small computations, and an elementary triangular-lattice parity lemma, with Rust, C11 and Python checks.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T13:40:18Z",
+      "pushed_at": "2026-11-27T14:11:33Z",
       "homepage": "https://0thernes.github.io/apollonian-sandpile-markov/",
       "latest_release": null,
       "archive_registered": true,
@@ -166,11 +166,11 @@
       "description": "Lean 4.35.0 formalization (0 Mathlib, 33/33 audited) & 10-engine polyglot verification of Clifford-Radon stabilizers, modulo-3 CCZ phase transitions, Type-I TQD obstructions & quantum geometry",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T13:49:06Z",
+      "pushed_at": "2026-11-27T14:39:01Z",
       "homepage": "https://0thernes.github.io/clifford-radon-stabilizers/",
       "latest_release": null,
-      "archive_registered": false,
-      "inventory_status": "UNREGISTERED_PUBLIC_REPO"
+      "archive_registered": true,
+      "inventory_status": "REGISTERED"
     },
     {
       "slug": "coded-pir-mlwe-complexity-lab",
@@ -178,7 +178,7 @@
       "description": "Zero-Mathlib Lean 4.35.0 proofs (31 theorem bundles T1a-T3l + 9 boundary tests, 1,330 axiom-swept decls, 6 kernels), C11/Python/Eshkol verifiers, and AMS-LaTeX preprint on coded/Byzantine PIR, MLWE noise & complexity barriers (v5.1.0)",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T05:17:05Z",
+      "pushed_at": "2026-11-27T14:55:16Z",
       "homepage": "https://0thernes.github.io/coded-pir-mlwe-complexity-lab/",
       "latest_release": null,
       "archive_registered": true,
@@ -425,12 +425,24 @@
       "inventory_status": "REGISTERED"
     },
     {
+      "slug": "nonlocal-magic-spectral-frontier",
+      "repository": "https://github.com/0thernes/nonlocal-magic-spectral-frontier",
+      "description": "Six-kernel Lean 4.35.0 formalization & 9-engine parity of all-N nonlocal magic bounds (c1 <= log2 3), Fano-7 duality, rank-2 majorization, and two-qudit cubic MUBs",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-27T15:19:22Z",
+      "homepage": "https://0thernes.github.io/nonlocal-magic-spectral-frontier/",
+      "latest_release": null,
+      "archive_registered": false,
+      "inventory_status": "UNREGISTERED_PUBLIC_REPO"
+    },
+    {
       "slug": "octonionica",
       "repository": "https://github.com/0thernes/octonionica",
       "description": "Zero-Mathlib Lean 4 formalization over the integers of classical identities for octonions, S6, the Albert algebra, E8/Golay, Ramanujan tau, Fibonacci anyons and Markov triples, with Rust/Node/Python cross-checks. No new theorems are claimed.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T04:40:21Z",
+      "pushed_at": "2026-11-27T14:24:09Z",
       "homepage": "https://0thernes.github.io/octonionica/",
       "latest_release": null,
       "archive_registered": true,
@@ -478,7 +490,7 @@
       "description": "Lean 4 proofs and exact verifiers for Pauli contextuality: formalized spectral floors (Jonah), disjoint Peres-Mermin square and pentagram degrees (Muller-Saniga Sec. 6), strict-law failure for one representative per case of Jonah's Conjecture E, finite sequential bounds. Unreviewed.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T13:26:28Z",
+      "pushed_at": "2026-11-27T14:29:26Z",
       "homepage": "https://0thernes.github.io/pauli-contextuality-lab/",
       "latest_release": null,
       "archive_registered": true,
@@ -538,11 +550,11 @@
       "description": "Zero-Mathlib Lean 4.35.0 six-kernel formalization and 11-engine polyglot verification closing the QLS cardinality spectrum for all v >= 8 (87/87) and resolving MCISQLS(n) across all residues mod 4.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T13:45:59Z",
+      "pushed_at": "2026-11-27T14:14:04Z",
       "homepage": "https://0thernes.github.io/quantum-latin-spectrum-frontier/",
       "latest_release": null,
-      "archive_registered": false,
-      "inventory_status": "UNREGISTERED_PUBLIC_REPO"
+      "archive_registered": true,
+      "inventory_status": "REGISTERED"
     },
     {
       "slug": "quantum-phasespace-rigidity",
@@ -552,6 +564,18 @@
       "archived": false,
       "pushed_at": "2026-11-27T06:02:48Z",
       "homepage": "https://0thernes.github.io/quantum-phasespace-rigidity/",
+      "latest_release": null,
+      "archive_registered": true,
+      "inventory_status": "REGISTERED"
+    },
+    {
+      "slug": "schur-clifford-frontier",
+      "repository": "https://github.com/0thernes/schur-clifford-frontier",
+      "description": "Zero-Mathlib Lean 4.35.0 proofs & 6-engine exact verification resolving four Clifford-ceiling open problems and reducing the 32,768 four-qubit Galois cocycles to 21 AGL(4,2)-orbits.",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-27T14:58:32Z",
+      "homepage": "https://0thernes.github.io/schur-clifford-frontier/",
       "latest_release": null,
       "archive_registered": true,
       "inventory_status": "REGISTERED"
@@ -574,11 +598,11 @@
       "description": "Lean 4.35.0 six-kernel formalization resolving Conjecture 4.1 (arXiv:2507.18767v1) & establishing sharp Early State Exclusion phase transitions (N=8, 9, 11, 3R+2), complex J_{a,b}, QGTL speed limits, 8-engine polyglot/quantum observatory, and AMS-LaTeX preprint.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T13:51:32Z",
+      "pushed_at": "2026-11-27T14:32:14Z",
       "homepage": "https://0thernes.github.io/spectral-eclipse-frontier/",
       "latest_release": null,
-      "archive_registered": false,
-      "inventory_status": "UNREGISTERED_PUBLIC_REPO"
+      "archive_registered": true,
+      "inventory_status": "REGISTERED"
     },
     {
       "slug": "thingmaker",
@@ -610,7 +634,7 @@
       "description": "Discrete p-adic (Bruhat-Tits tree) holography laboratory: Tate-curve BTZ quotients, curved finite-graph Gauss-Bonnet, discrete Vladimirov/Kozyrev wavelets, graph-cut strong subadditivity, and 202 zero-Mathlib Lean 4.35.0 declarations about the discrete model. No physical or quantum-gravity result is claimed.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T13:47:18Z",
+      "pushed_at": "2026-11-27T14:16:34Z",
       "homepage": "https://0thernes.github.io/ultrametrica/",
       "latest_release": null,
       "archive_registered": true,
@@ -643,10 +667,10 @@
     {
       "slug": "unsolved-problems-mega-atlas",
       "repository": "https://github.com/0thernes/unsolved-problems-mega-atlas",
-      "description": "2,000 deduplicated open problems + daily 59,396-target Left to Solve 25-front mirror & 16-registry GitHub sync; 6,108 biconnected edges; 103 Lean 4.35.0 software-model theorems; 100% MRR@5 RAG & 13-tool MCP; 11-page AMS-LaTeX paper; 0/2,000 solved.",
+      "description": "2,000 deduplicated unsolved, open & hard problems across 8 Pillars, 28 Superdomains, 8 Substrates & 7 Layers (6,108 biconnected edges; 59,396-target Left to Solve daily mirror & 290 crosswalk matches), 103 Lean 4.35.0 software-model theorems, Hybrid RAG (100% MRR@5), 13-tool MCP, 12/12 mutation audit & AMS-LaTeX paper.",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T06:08:06Z",
+      "pushed_at": "2026-11-27T14:29:57Z",
       "homepage": "https://0thernes.github.io/unsolved-problems-mega-atlas/",
       "latest_release": null,
       "archive_registered": true,
@@ -725,6 +749,6 @@
       "inventory_status": "REGISTERED"
     }
   ],
-  "sync_status": "OFFLINE_PRESERVED_LAST_KNOWN_GOOD",
+  "sync_status": "LIVE_GITHUB_API",
   "error": null
 }
