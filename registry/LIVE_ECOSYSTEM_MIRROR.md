@@ -2,7 +2,7 @@
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
 **Synced (UTC):** `2026-11-27T19:08:21Z` · **Mode:** `offline`  
-**Tracked Public Repositories:** 50 (`15` exact pin match, `30` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Tracked Public Repositories:** 50 (`16` exact pin match, `28` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -49,11 +49,11 @@
 | [`quantum-phasespace-rigidity`](https://github.com/0thernes/quantum-phasespace-rigidity) | `0TH-2026-020` | Tier I | `1c3214973e` | `4a4cd71900` | `v1.0.0` | [`success`](https://github.com/0thernes/quantum-phasespace-rigidity/actions/runs/45949375196) | `AHEAD_OF_PIN` |
 | [`schur-clifford-frontier`](https://github.com/0thernes/schur-clifford-frontier) | `0TH-2026-026` | Tier I | `02f3c09345` | `09ea389f20` | `v1.1.0` | [`in_progress`](https://github.com/0thernes/schur-clifford-frontier/actions/runs/46054378237) | `AHEAD_OF_PIN` |
 | [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `0TH-2026-011` | Tier I | `6c7f642146` | `96f7d2b72d` | `v3.0.1` | [`success`](https://github.com/0thernes/secmesh-pqsi/actions/runs/45915650756) | `AHEAD_OF_PIN` |
-| [`spectral-eclipse-frontier`](https://github.com/0thernes/spectral-eclipse-frontier) | `0TH-2026-024` | Tier I | `8d6cf7cabf` | `780519d24c` | `v1.0.0` | [`in_progress`](https://github.com/0thernes/spectral-eclipse-frontier/actions/runs/46054312867) | `AHEAD_OF_PIN` |
+| [`spectral-eclipse-frontier`](https://github.com/0thernes/spectral-eclipse-frontier) | `0TH-2026-024` | Tier I | `780519d24c` | — | `v1.1.0` | — | `OFFLINE_PIN_ONLY` |
 | [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `c0bbefe13b` | `c0bbefe13b` | `v1.7.0` | [`success`](https://github.com/0thernes/ultrametrica/actions/runs/46014442260) | `EXACT_PIN_MATCH` |
 | [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | `0TH-DISC-006` | Tier III | `0686cf9729` | `cfcfd8ebe3` | `main` | [`success`](https://github.com/0thernes/unsolved-black-hole-problems/actions/runs/46047529782) | `AHEAD_OF_PIN` |
 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `0TH-BUILD-004`, `0TH-DISC-005` | Tier II / Tier III | `0604df5c70` | `510dc640c5` | `v0.8.2` | [`success`](https://github.com/0thernes/unsolved-mathematics/actions/runs/46043383151) | `AHEAD_OF_PIN` |
-| [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `0TH-BUILD-007` | Tier II | `0436349871` | `908da5bd95` | `v2.10.0` | [`success`](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/46046681865) | `AHEAD_OF_PIN` |
+| [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `0TH-BUILD-007` | Tier II | `e488704150` | `e488704150` | `v2.11.0` | [`success`](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/46056026679) | `EXACT_PIN_MATCH` |
 | [`weyl-magic-obstruction-frontier`](https://github.com/0thernes/weyl-magic-obstruction-frontier) | `0TH-2026-022` | Tier I | `688f23a681` | `688f23a681` | `v1.0.2` | [`success`](https://github.com/0thernes/weyl-magic-obstruction-frontier/actions/runs/46006772796) | `EXACT_PIN_MATCH` |
 | [`weyl-magic-stabilizer-frontier`](https://github.com/0thernes/weyl-magic-stabilizer-frontier) | `0TH-2026-021` | Tier I | `da2aa5d9e4` | `da2aa5d9e4` | `v1.0.0` | [`success`](https://github.com/0thernes/weyl-magic-stabilizer-frontier/actions/runs/45951544806) | `EXACT_PIN_MATCH` |
 | [`xiaomi-17t-pro-lab`](https://github.com/0thernes/xiaomi-17t-pro-lab) | `0TH-BUILD-012` | Tier II | `f1da68b78e` | `87e1e7a952` | `v3.1.0` | [`success`](https://github.com/0thernes/xiaomi-17t-pro-lab/actions/runs/45912330941) | `AHEAD_OF_PIN` |

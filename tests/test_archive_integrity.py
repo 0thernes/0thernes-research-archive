@@ -189,7 +189,7 @@ def test_consolidated_latest_entries_registered() -> None:
     assert len(builds) == 17
     assert builds["0TH-BUILD-004"]["version"] == "v0.5.0"
     assert builds["0TH-BUILD-004"]["lean_verification"]["audited_theorems"] == 69
-    assert builds["0TH-BUILD-007"]["version"] == "v2.10.0"
+    assert builds["0TH-BUILD-007"]["version"] == "v2.11.0"
     assert builds["0TH-BUILD-007"]["lean_verification"]["audited_theorems"] == 103
     assert builds["0TH-BUILD-010"]["slug"] == "noetic-organism-omega"
     assert builds["0TH-BUILD-011"]["slug"] == "asmodensius-native"
