@@ -77,6 +77,33 @@
       ],
       "promotion_status": "CANDIDATE_SEPARATE_FROM_FROZEN_V0.5.0",
       "claim_boundary": "Bounded structural formal results only (66 theorems, 102 audited declarations across 8 domains + 120 curated open-problem dossiers + daily sharded mirror of all 25 Left to Solve programs / 59,396 targets with CC BY-SA carve-out and solved_by_kind disaggregation + zero-drift RAG corpus 3,979 chunks / 821,708 tokens); grand open conjectures remain open."
+    },
+    {
+      "repository": "https://github.com/0thernes/unsolved-mathematics",
+      "release": "v0.8.3",
+      "commit": "5bf015fe9121bd27cdee97e23b7288e70fd63fd8",
+      "ci_run": "https://github.com/0thernes/unsolved-mathematics/actions/runs/46054889500",
+      "release_run": "https://github.com/0thernes/unsolved-mathematics/actions/runs/46054889084",
+      "artifacts": [
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.8.3/Donahue_2026_unsolved_mathematics_atlas-v0.8.3.pdf",
+          "sha256": "b6dd8249b8274648943177f0fe56a74b1bf6666d9c61a44ddb8f6bd42f31dd3c"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.8.3/arxiv_submission-v0.8.3.tar.gz",
+          "sha256": "cc701b1af241d7ac267d6cbd55e4b6758063cc6121778952ecd4d51a4a5bda24"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.8.3/MANIFEST-v0.8.3.sha256",
+          "sha256": "20ff212a3659af125ed8b489768682bcbadff24e4fef9fba9ead1d4e287eb402"
+        },
+        {
+          "path": "builds/0TH-BUILD-004_unsolved-mathematics/releases/v0.8.3/six_kernel_audit-v0.8.3.txt",
+          "sha256": "105d13225241e7711114af453a22392ee1406ffdb87956b15fe280344f16e86b"
+        }
+      ],
+      "promotion_status": "CANDIDATE_SEPARATE_FROM_FROZEN_V0.5.0",
+      "claim_boundary": "Bounded structural formal results only (66 theorems, 102 audited declarations across 8 domains + 120 curated open-problem dossiers with 537/537 1-to-1 verified citation bijection & 0/287 DOIs retracted + daily sharded mirror of all 26 Left to Solve programs / 62,790 targets across 27 shards with CC BY-SA carve-out, 114/120 crosswalk, and 4 unverified third-party agent-claim review signals quarantined with 0 Atlas status flips + zero-drift RAG corpus 3,985 chunks / 822,714 tokens + 95 pytest tests & 10/10 mutants); grand open conjectures remain open."
     }
   ]
 }
