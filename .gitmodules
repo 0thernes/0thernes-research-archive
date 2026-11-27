@@ -112,3 +112,6 @@
 [submodule "repos/weyl-magic-obstruction-frontier"]
 	path = repos/weyl-magic-obstruction-frontier
 	url = https://github.com/0thernes/weyl-magic-obstruction-frontier.git
+[submodule "repos/quantum-latin-spectrum-frontier"]
+	path = repos/quantum-latin-spectrum-frontier
+	url = https://github.com/0thernes/quantum-latin-spectrum-frontier.git
