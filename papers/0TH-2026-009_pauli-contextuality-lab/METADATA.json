@@ -3,23 +3,23 @@
   "slug": "pauli-contextuality-lab",
   "title": "Pauli Contextuality Lab: Unified Lean 4.35.0 Formalization of Spectral Bounds, Disjoint Mermin Configurations, and Sequential Contextuality Evidence",
   "domain": "Quantum Foundations / Quantum Contextuality",
-  "date_released": "2026-11-26",
-  "version": "v3.1.0",
+  "date_released": "2026-11-27",
+  "version": "v3.2.0",
   "peer_review_status": "Consolidated research preprint suite (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 & cross-platform CI verified)",
   "author": "Alexander Stephen Donahue",
   "orcid": "0009-0006-8168-9648",
   "affiliation": "Independent Researcher, Spokane, WA, USA",
   "repository": "https://github.com/0thernes/pauli-contextuality-lab",
   "submodule_path": "repos/pauli-contextuality-lab",
-  "pinned_commit": "3cd387d84cb7408577040627cd8c9c5dc7f982de",
-  "release_url": "https://github.com/0thernes/pauli-contextuality-lab/releases/tag/v3.1.0",
+  "pinned_commit": "9d57651a4a5a5cfd50fc35866db47b23c38e5b9e",
+  "release_url": "https://github.com/0thernes/pauli-contextuality-lab/releases/tag/v3.2.0",
   "pages_url": "https://0thernes.github.io/pauli-contextuality-lab/",
   "pdf_archive_path": "papers/0TH-2026-009_pauli-contextuality-lab/unified-contextuality.pdf",
-  "pdf_sha256": "e3af70d687f404b14bdb721bc0bc5ceda1b899b80124c7d02d688421d444bff0",
+  "pdf_sha256": "4821f27d8ccc2a865bde02fca09cd1c90fbba3a25e20f5bd9233962d27da85b3",
   "arxiv_bundle_url": null,
   "arxiv_bundle_sha256": "N/A (canonical TeX sources in repo papers/spectral-bounds/unified-contextuality.tex & papers/disjoint-mermin/contextuality-tensor.tex)",
   "lean_verification": {
-    "framework": "Lean 4.35.0 / Mathlib v4.35.0 (166 explicit #print axioms including HoggarBound.Stability + 2,206-theorem-constant Lean.collectAxioms audit over the 43 modules imported by VerifyAll.lean (1,175 authored theorem/lemma declarations across all 60 files); 0 Batteries linter errors across 10 modules (HoggarBound.{Moment,Pauli,Bound,Counting,Corollaries,Quadric,Kramers,Stability}, ContextualityTensor, Evidence); 12 headline targets verified across 6 independent kernels via lake comparator --paranoid in Ubuntu CI run 45939143168, Sigstore Rekor logIndex 4141656897)",
+    "framework": "Lean 4.35.0 / Mathlib v4.35.0 (198 explicit #print axioms + 2,306-theorem-constant Lean.collectAxioms audit over the 45 modules imported by VerifyAll.lean [1,203 non-Challenge authored declarations across 64 files]; dedicated parallel CI jobs lean-verify-standalone [VerifyStandalone.lean, 8 standalone Track 1 modules incl. C3Certificate/C3Spectra, 16 explicit, SLSA #73146760] and lean-verify-phase7 [VerifyPhaseSeven.lean, 7-qubit SaturatedPhaseSeven degree 729,344, 5 explicit, SLSA #73122769]; 0 Batteries linter errors across 10 modules; 18 cross-track targets verified across 6 independent kernels via lake comparator --paranoid in Ubuntu CI run 46007131056, SLSA #73132718; Release v3.2.0 run 46016387888 SLSA #73148255)",
     "axiom_allowlist": [
       "propext",
       "Classical.choice",
@@ -29,48 +29,50 @@
     "axiom_audit_file": "lean/VerifyAll.lean",
     "additional_audit_files": [
       "lean/Challenge.lean",
-      "lean/HoggarBound/NonVacuity.lean"
+      "lean/HoggarBound/NonVacuity.lean",
+      "lean/VerifyStandalone.lean",
+      "lean/VerifyPhaseSeven.lean"
     ],
-    "audited_theorems": 2206,
-    "comparator_targets": 12,
-    "explicit_print_axioms": 166
+    "audited_theorems": 2306,
+    "comparator_targets": 18,
+    "explicit_print_axioms": 198
   },
-  "ci_run_url": "https://github.com/0thernes/pauli-contextuality-lab/actions/runs/45939143168",
+  "ci_run_url": "https://github.com/0thernes/pauli-contextuality-lab/actions/runs/46007131056",
   "preservation": {
-    "software_heritage": "swh:1:snp:bcb2b33b31015225ace11d52fa98b2f93c5b4913",
+    "software_heritage": "swh:1:snp:cf9ae7bd108e9556e79d4c0c81c8de92632b91c1",
     "wayback_machine": null,
     "doi": null
   },
-  "core_result": "Consolidates the four archived Pauli/Mermin contextuality repositories (hoggar-bound, hoggar-bound-lab, contextuality-tensor-lab, contextuality-evidence-lab) into one unified Apache-2.0 / CC-BY-4.0 monorepo meeting Build Standard v1.2.0 (100.0%, 68/68 checks, Core 30/30, 10 finding classes, Draft 2020-12 JSON Schema-validated repo.yaml) and Defensible Independent AI Research Playbook v1.3 (ERRATA.md, CRediT & COI disclosures across all 4 manuscripts, 1,900-problem Unsolved Problems Mega-Atlas V2 cross-reference in docs/mega-atlas-cross-reference.md recording 0/1,900 grand problems solved; the results are thematically related to QM-011 (the atlas entry was not checked to list them as sub-cases), BibTeX + Handle + Crossref retraction-free citation audit across 44/44 URLs and 17/17 journal DOIs, 3 negative Lean sanity checks on closed decidable facts, repo-wide CDN sha384 SRI guard, GFM table column-count regression guard, OSF Preprints DOI fallback, and SHA-256-verified gitleaks v8.30.1 + osv-scanner v2.7.1 CI). Ships a single pinned Lean 4.35.0 + Mathlib v4.35.0 workspace (transparent 60-module audit map in lean/README.md; partial Palomar module headers 5/60 files honestly disclosed), deduplicated third-party stack, searchable 27-node / 162-declaration Lean Blueprint (/blueprint/) with MathJax SRI, explicit Sp(2N,2) witness isomorphism verifier plus Qontextium-ready hyperbolic quasi-quadric (135/1,095/75) exports (/exports/hyperbolic-quasi-quadric-135/), 4 zero-overflow Tectonic PDFs (literal 0.00pt max overfull hbox across all 4 PDFs; all 8 2026-11-26 statement-audit manuscript/doc/log errata resolved in place), and 3-OS + 14-engine zero-warning C11 ASan/UBSan CI (run 45939143081). Track 1 formalizes Jonah's universal spectral floor and Kramers floor (prior work, here for arbitrary supports) and proves 5-way saturation equivalences, an infinite non-closed pure-CCZ family |Psi_{3m}> attaining the floor (degree 2016 at m = 2; contextual for m >= 2), lower bounds d(W(7,2))>=1455 and d(Q+(9,2))>=6444 (below the exact values 1575 and 6975 claimed earlier by Jonah), exact four-qubit C3 binary completion optima (368 vs 344) for one sign pair, and strict-law failure for one explicit representative of each of the 9 vertex cases of Jonah's Conjecture E for every N>=4 (case coverage via Jonah's Theorem B4, outside Lean). The finite degrees 75, 480 and 729344 are in modules not compiled at the pinned commit. Track 2 proves exact arbitrary-k disjoint-copy formulas d_k=(7^k-5^k)/2 (squares) and (6^k-4^k)/2 (pentagrams) addressing Muller & Saniga (arXiv:2609.19862v1 Sec. 6; unreviewed preprint) for these two families (with Cabello arXiv:1002.3135 and Sec. 4.2 credited). Track 3 proves finite adaptive-tree sequential evidence bounds and a sharp setting-bias attack on the Peres-Mermin square. Live Ubuntu CI run 45939143168 audited 166 explicit #print axioms (including HoggarBound.Stability) and all 2,206 kernel theorem constants strictly within standard axioms, ran Batteries runLinter with 0 errors across 10 modules, passed 3 negative Lean sanity checks, and verified all 12 cross-track comparator targets across all 6 independent kernels (lean-paranoid, lean4lean, nanoda, con-leche, con-ron, lean-default) with Sigstore/Rekor attestation (Lean logIndex 4141656897; Release v3.1.0 run 45941634786 Rekor logIndex 4141681890; DigiCert RFC 3161 TSA + 3-calendar OpenTimestamps verified via OpenSSL X.509 in CI).",
-  "verification_boundary": "166 explicit headline declarations (including all 6 HoggarBound.Stability theorems) plus an exhaustive 2,206-theorem-constant Lean.collectAxioms audit in VerifyAll.lean (zero sorry, zero native_decide, no Lean elaboration warnings besides Lake module-system import notices, strictly within [propext, Classical.choice, Quot.sound]), 0 Batteries linter errors across 10 modules, 3 negative Lean sanity checks on closed decidable facts (the masked 300s leanchecker --fresh timeout was removed in v3.1.0), and the 12 cross-track Challenge/Solution targets are additionally re-checked by 6 independent kernels; the Saturated*, C3Certificate, C3Spectra, C3Theorem, FlatData and PhaseData modules are not compiled in that CI run; 52 pytest suites (including DigiCert RFC 3161 TSA + OpenTimestamps + SWHID + submission-packet + GFM table column-count checks) (+6 subtests, including repo-wide CDN sha384 SRI guard, Draft 2020-12 repo.yaml schema, 10-class labels, _native.* axiom-rejection & Palomar size guards, Sp(2N,2) witness isomorphism & Qontextium export tests, property, negative, 6-mutant killing, 300-payload fuzz, live C3/Blueprint/explorer/monorepo integrity), 2 Node web-model tests, 7 track exact verifiers, and 14 zero-warning C11 ASan/UBSan engines pass across Linux/macOS/Windows CI. Finite C censuses (540.3M N=9 forms, 42-orbit W(5,2) census), Moonlab/QGTL/QRNG simulations, and exploratory floating-point scripts are explicitly separated from Lean kernel proofs (see CLAIMS.md, LIMITATIONS.md, ERRATA.md, and docs/statement-fidelity.md). No external peer review, hardware experiment, or external DOI is claimed. data/MANIFEST.sha256 is cryptographically timestamped by DigiCert RFC 3161 TSA (.tsr, OpenSSL X.509 Verification: OK in CI) and 3-calendar Bitcoin OpenTimestamps (.ots), and an author-automated Python/Node clean-clone check passed on v2.9.0 (17.7s, no Lean step; external human replication remains open).",
+  "core_result": "Consolidates the four archived Pauli/Mermin contextuality repositories into one unified Apache-2.0 / CC-BY-4.0 monorepo meeting Build Standard v1.2.0 (100.0%, 68/68 checks, Core 30/30) and Playbook v1.3, closing all six remaining formal-code architectural errata in Lean 4.35.0. Ships a pinned Lean 4.35.0 + Mathlib v4.35.0 workspace (64 .lean files; all 9 standalone Track 1 finite-certificate modules now compiled and axiom-audited live in parallel CI via VerifyStandalone.lean and VerifyPhaseSeven.lean), searchable 27-node / 194-declaration Lean Blueprint with MathJax SRI, explicit Sp(2N,2) witness isomorphism verifier & hyperbolic quasi-quadric (135/1,095/75) Qontextium exports, 4 zero-overflow Tectonic PDFs (0.00pt max overfull), and 3-OS + 14-engine C11 ASan/UBSan CI (run 46007131046). Track 1 formalizes Jonah's universal and Kramers spectral floors (arbitrary supports), two-sided asymptotic 1/2 limits (including universal averaging upper bound exists_assignment_violated_le_half and Q+ assignment limit), five-way saturation equivalences, finite flat degrees 75, 480, 2016 and 729344 (live-audited in CI), infinite non-closed pure-CCZ family |Psi_{3m}> (m>=1, contextual m>=2), lower bounds d(W(7,2))>=1455 and d(Q+(9,2))>=6444 (below Jonah's earlier 1575/6975 claims), exact four-qubit C3 binary completion optima (368 vs 344), formal geometric vertex-case membership predicates IsCaseC1-IsCaseC15 (ConjectureECases.lean) + strict-law failure for one representative per case for all N>=4 (whole-case transfer via Jonah's Theorem B4 outside Lean), and 8 kernel-proved perturbed-bound refutations. Track 2 proves exact disjoint-copy degrees d_k=(7^k-5^k)/2 (squares) and (6^k-4^k)/2 (pentagrams) with genuine minimum actualMinViolations, literal 2- and 3-qubit Pauli matrices, 4- and 6-qubit bridges, kernel-decided equality with HS(L(K_{3,3})) and HS(Petersen), and arbitrary-k Support.lean instantiation (SeedSupport.lean), answering Muller & Saniga (arXiv:2609.19862v1 Sec. 6) for squares and pentagrams. Track 3 proves finite adaptive-tree sequential evidence bounds and a sharp Peres-Mermin setting-bias attack. All 3 parallel Lean CI jobs (run 46007131056) passed 100% green: 198 explicit + 2,306 exhaustive axioms, 10-module Batteries linter, 18 targets across 6 independent kernels (SLSA #73132718), VerifyStandalone (SLSA #73146760), VerifyPhaseSeven (SLSA #73122769), Release v3.2.0 (SLSA #73148255), and Software Heritage full snapshot swh:1:snp:cf9ae7bd108e9556e79d4c0c81c8de92632b91c1.",
+  "verification_boundary": "All 64 .lean files in the workspace are live-compiled and axiom-audited strictly within [propext, Classical.choice, Quot.sound] across three parallel Ubuntu CI jobs in run 46007131056: VerifyAll.lean (198 explicit #print axioms + 2,306 kernel theorem constants across 45 modules / 1,203 non-Challenge authored declarations, 0 Batteries linter errors across 10 modules, 18 cross-track Challenge/Solution targets accepted by all 6 independent kernels via lake comparator --paranoid, SLSA #73132718), VerifyStandalone.lean (8 standalone Track 1 modules including C3Certificate/C3Spectra and 4-/5-qubit saturated degrees, 16 explicit, SLSA #73146760), and VerifyPhaseSeven.lean (7-qubit SaturatedPhaseSeven degree 729,344, 5 explicit, SLSA #73122769). 52 pytest suites (+6 subtests), 2 Node tests, 7 exact verifiers, and 14 zero-warning C11 ASan/UBSan engines pass across Linux/macOS/Windows CI (run 46007131046). Remaining outside Lean: whole-case single-orbit transitivity via Jonah's Theorem B4, finite C censuses (540.3M N=9 forms, 42-orbit W(5,2) census), Track 2 general-seed Theorem 5 / heterogeneous Theorem 2 / mixed-family (12) / k>=3 literal matrix bridges, Moonlab/QGTL/QRNG simulations, and exploratory floating-point scripts. No external peer review, hardware experiment, or external DOI is claimed; DigiCert RFC 3161 TSA + 3-calendar OpenTimestamps verified in CI; SWH swh:1:snp:cf9ae7bd108e9556e79d4c0c81c8de92632b91c1.",
   "falsification_command": "cd repos/pauli-contextuality-lab && python scripts/verify_all.py && python scripts/stamp_timestamps.py --verify && python -m pytest -v tests/ && cd lean && lake exe cache get && lake build HoggarBound ContextualityTensor Evidence Solution VerifyAll && lake env lean VerifyAll.lean && lake comparator --config comparator.json --paranoid",
   "component_manuscripts": [
     {
-      "title": "Spectral bounds and their limits in Pauli contextuality: exact configurations and a proof of Jonah's Conjecture E (Track 1, v3.1.0)",
-      "historical_release": "v3.1.0 (consolidated from hoggar-bound-lab v1.9.0)",
+      "title": "Spectral bounds and their limits in Pauli contextuality: exact configurations and a proof of Jonah's Conjecture E (Track 1, v3.2.0)",
+      "historical_release": "v3.2.0 (consolidated from hoggar-bound-lab v1.9.0)",
       "repo_path": "papers/spectral-bounds/unified-contextuality.pdf",
-      "sha256": "e3af70d687f404b14bdb721bc0bc5ceda1b899b80124c7d02d688421d444bff0",
+      "sha256": "4821f27d8ccc2a865bde02fca09cd1c90fbba3a25e20f5bd9233962d27da85b3",
       "note": "Primary archived PDF for 0TH-2026-009; recompiled with Tectonic (literal 0.00pt max overfull hbox) with CRediT, COI, and ERRATA disclosures under CC-BY-4.0."
     },
     {
-      "title": "Cospectral Pauli carriers with different completion spectra: an exact four-qubit C3 certificate (Track 1 companion, v3.1.0)",
-      "historical_release": "v3.1.0 (consolidated from hoggar-bound-lab v0.2.0-c3-certificate)",
+      "title": "Cospectral Pauli carriers with different completion spectra: an exact four-qubit C3 certificate (Track 1 companion, v3.2.0)",
+      "historical_release": "v3.2.0 (consolidated from hoggar-bound-lab v0.2.0-c3-certificate)",
       "repo_path": "papers/spectral-bounds/c3-spectral-counterexample.pdf",
-      "sha256": "d95cf3701b7603c57df6d02876042b865fd1b1edab4c5b0f349224121b418cde",
+      "sha256": "e6c92490eec169aa34489a117fcb6680c0dfcfbcd83d605779a1caa19aa65c31",
       "note": "Track 1 companion C3 certificate PDF archived in papers/0TH-2026-009_pauli-contextuality-lab/c3-spectral-counterexample.pdf (0.00pt max overfull)."
     },
     {
-      "title": "Exact contextuality degrees for disjoint Mermin configurations (Track 2, v3.1.0)",
-      "historical_release": "v3.1.0 (consolidated from contextuality-tensor-lab v0.1.0)",
+      "title": "Exact contextuality degrees for disjoint Mermin configurations (Track 2, v3.2.0)",
+      "historical_release": "v3.2.0 (consolidated from contextuality-tensor-lab v0.1.0)",
       "repo_path": "papers/disjoint-mermin/contextuality-tensor.pdf",
-      "sha256": "737f6ec5181c18379fc074a27809a5ccdd68ba55a32967a5d82d3c7408436ca3",
+      "sha256": "b96a7b58f510b0b1ce23005ff9be2be9c215868bb5122db57c60ca4d03a8f29f",
       "note": "Directly answers Section 6 of Muller & Saniga (arXiv:2609.19862v1); recompiled with Tectonic (literal 0.00pt max overfull hbox) and archived in papers/0TH-2026-009_pauli-contextuality-lab/contextuality-tensor.pdf."
     },
     {
-      "title": "Contextuality Evidence Lab: Exact Sequential Certificates and a Constructive Setting-Bias Attack (Track 3, v3.1.0)",
-      "historical_release": "v3.1.0 (consolidated from contextuality-evidence-lab v1.0.0)",
+      "title": "Contextuality Evidence Lab: Exact Sequential Certificates and a Constructive Setting-Bias Attack (Track 3, v3.2.0)",
+      "historical_release": "v3.2.0 (consolidated from contextuality-evidence-lab v1.0.0)",
       "repo_path": "papers/sequential-evidence/whitepaper.pdf",
-      "sha256": "5167e5a78f8b204de464356a8b5cab8d3dbe916898a122102f80bdc41e02ef1d",
+      "sha256": "d241b43d2909011203e2d4d73a393dcbdc002841c647b443a57a38b4faecd615",
       "note": "Freshly typeset XeLaTeX/Tectonic PDF (0.00pt max overfull) with unified VerifyAll.lean audit text and CRediT/COI/ERRATA disclosures; archived in papers/0TH-2026-009_pauli-contextuality-lab/whitepaper.pdf."
     }
   ]

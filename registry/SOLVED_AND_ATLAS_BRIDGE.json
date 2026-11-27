@@ -31,14 +31,14 @@
       "archive_id": "0TH-2026-004",
       "slug": "kochen-specker-extremal-lab",
       "repository": "https://github.com/0thernes/kochen-specker-extremal-lab",
-      "version": "v2.1.0",
+      "version": "v2.2.0",
       "resolution_class": "PARTIAL_BOUNDED_CASE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
         "QM-011"
       ],
       "target_statement": "Exact minimum Kochen-Specker set sizes inside finite coordinate pools. Lean 4.35.0 (zero Mathlib, six kernels in CI) proves 31 for the 49 rays of B(3,2) (integer entries |c| <= 2) and 18 for the 40 rays of {0,+1,-1}^4. SAT/DRUP certificates, checked by the project's own checker, support 31 for |c| <= 3 and |c| <= 4, 33 for 3D rays with entries 0 or N-th roots of unity (N = 6, 12, 18, 24), and 29 for {0,+1,-1}^5.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0 (--wfail), Lean kernel proofs of 31 (|c|<=2) and 18 (4D) only (62 hand-written theorems, 149 theorem constants axiom-audited) + 3 negative sanity checks + drat-trim/LRAT cross-check for three pools, accepted by the official Lean kernel (default and paranoid) and by lean4lean, nanoda, con-leche, con-ron (CI run 45825147353), Rekor 4126597668, DigiCert RFC 3161 TSA + Bitcoin OTS, SWH swh:1:snp:0f2c39bdae6bd37a98dc53f071bfa2208c1ef4e5.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0 (9/9 Palomar module headers, --wfail), Lean kernel proofs of 31 (|c|<=2) and 18 (4D) plus K1 explicit-basis + 0/1-colouring non-vacuity and K2 kernel-proved refutations (67 hand-written theorems, 35 explicit + 122 audited theorem constants) + HOL4 cake_lpr & drat-trim/LRAT cross-check for 5 of 9 pools (6 UNSAT proofs), 6 targets accepted by all 6 independent kernels (CI run 45947576829, SLSA #72956443; Release #46006997103 SLSA #73120647), DigiCert RFC 3161 TSA + Bitcoin OTS, SWH swh:1:snp:4c421f5d8b6cf9d06c224ed7bfafe88bc3392f4f.",
       "honesty_boundary": "Pool-restricted exact minima only; the unrestricted minimal Kochen-Specker set size in R^3 (QM-011) remains OPEN, and no bound of it is changed. The values 31 (|c|<=2, |c|<=3) and 33 (N=6) were reported earlier by Kernaghan (arXiv:2603.16988), whose v10 of 23 Nov 2026 also proves 31 (|c|<=2) and 33 (N=6) in Lean, 13 days after this repository's v1.0.0."
     },
     {
@@ -74,7 +74,7 @@
       "archive_id": "0TH-2026-009",
       "slug": "pauli-contextuality-lab",
       "repository": "https://github.com/0thernes/pauli-contextuality-lab",
-      "version": "v3.1.0",
+      "version": "v3.2.0",
       "resolution_class": "SOLVED_SUB_CONJECTURE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
@@ -82,9 +82,9 @@
         "QC-037",
         "QC-013"
       ],
-      "target_statement": "Track 2 answers the stacking-limit question of Muller & Saniga (arXiv:2609.19862v1, Sec. 6; unreviewed preprint) for k disjoint Peres-Mermin squares and k Mermin pentagrams: exact degrees (7^k - 5^k)/2 and (6^k - 4^k)/2, so epsilon_k -> 1 (Lean, explicit union-context family; identification with HS(kG) by enumeration). Track 1 proves, for every N >= 4, strict-law failure for one explicit representative of each of the nine vertex cases of Jonah's Conjecture E (unreviewed Zenodo preprint; C1 and C6 were already proved there; coverage of whole cases uses Jonah's Theorem B4, outside Lean), exact binary completion optima 368 and 344 for one four-qubit C3 sign pair, and an infinite family of non-closed 3m-qubit Pauli sets attaining the spectral floor (contextual for m >= 2). Track 3 formalizes a finite-tree hitting bound z/T and the Peres-Mermin setting-bias floor min_c p(c) (success cap 11/12 for one example distribution).",
-      "lean_verification": "Lean 4.35.0 / Mathlib v4.35.0, 166 explicit #print axioms + 2,206 exhaustively audited decls, 12 comparator targets across 6 kernels (CI run 45826042676), Rekor 4126960397, DigiCert RFC 3161 TSA + Bitcoin OTS, SWH swh:1:snp:54b1005a1e5ebde0c4dd89892c1bff4c3e6845ba.",
-      "honesty_boundary": "Answers the stacking-limit question of Muller-Saniga Sec. 6 for squares and pentagrams only (doily copies, mixed unions and the other Sec. 6 outlooks are not treated; identification with HS(kG) is outside Lean). Jonah's preprint is unreviewed and AI-refereed; the Lean case labels are comments and single-orbit transitivity cites Theorem B4 outside Lean. The spectral floor is Jonah's prior result; 1455 and 6444 are below exact values 1575 and 6975 claimed earlier by Jonah. Thematically related to QM-011; grand QM-011/QC-037/QC-013 remain OPEN."
+      "target_statement": "Track 2 answers the stacking-limit question of Muller & Saniga (arXiv:2609.19862v1, Sec. 6; unreviewed preprint) for k disjoint Peres-Mermin squares and k Mermin pentagrams: exact degrees (7^k - 5^k)/2 and (6^k - 4^k)/2 with genuine assignment minimum actualMinViolations so epsilon_k -> 1, literal 2- and 3-qubit Pauli realizations, 4- and 6-qubit bridges, kernel-decided equality with HS(L(K_{3,3})) and HS(Petersen), and arbitrary-k Support.lean instantiation (SeedSupport.lean). Track 1 proves, for every N >= 4, formal geometric vertex-case membership (IsCaseC1-IsCaseC15, ConjectureECases.lean) and strict-law failure for one representative of each of the nine vertex cases of Jonah's Conjecture E (unreviewed Zenodo preprint; C1 and C6 were already proved there; coverage of whole cases uses Jonah's Theorem B4 outside Lean), exact binary completion optima 368 and 344 for one four-qubit C3 sign pair, and an infinite family of non-closed 3m-qubit Pauli sets attaining the spectral floor (contextual for m >= 2). Track 3 formalizes a finite-tree hitting bound z/T and the Peres-Mermin setting-bias floor min_c p(c).",
+      "lean_verification": "Lean 4.35.0 / Mathlib v4.35.0, 198 explicit #print axioms + 2,306 exhaustively audited decls across 64 files, 18 comparator targets across 6 independent kernels (CI run 46007131056, SLSA #73132718) + live parallel CI audits of all 9 standalone Track 1 modules (VerifyStandalone SLSA #73146760; VerifyPhaseSeven SLSA #73122769), Release v3.2.0 SLSA #73148255, DigiCert RFC 3161 TSA + Bitcoin OTS, SWH swh:1:snp:cf9ae7bd108e9556e79d4c0c81c8de92632b91c1.",
+      "honesty_boundary": "Answers the stacking-limit question of Muller-Saniga Sec. 6 for squares and pentagrams only (doily copies, mixed unions, general-seed Theorem 5, and k>=3 literal tensor matrix bridges are outside Lean). Jonah's preprint is unreviewed and AI-refereed; whole-case single-orbit transitivity cites Theorem B4 outside Lean (while geometric membership of the 9 representatives is now proved in ConjectureECases.lean). The spectral floor is Jonah's prior result; 1455 and 6444 are below exact values 1575 and 6975 claimed earlier by Jonah. Thematically related to QM-011; grand QM-011/QC-037/QC-013 remain OPEN."
     },
     {
       "archive_id": "0TH-2026-010",

@@ -2,7 +2,7 @@
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
 **Synced (UTC):** `2026-11-27T14:01:09Z` · **Mode:** `offline`  
-**Tracked Public Repositories:** 47 (`12` exact pin match, `26` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Tracked Public Repositories:** 47 (`12` exact pin match, `24` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -31,7 +31,7 @@
 | [`hoggar-bound`](https://github.com/0thernes/hoggar-bound) | `0TH-2026-001` | Tier I | `c74135c429` | `4dd33138c3` | `v1.0.0` | — | `HISTORICAL_ARCHIVED` |
 | [`hoggar-bound-lab`](https://github.com/0thernes/hoggar-bound-lab) | `0TH-2026-002`, `0TH-DISC-010` | Tier I / Tier III | `eb2d83ef72` | `3ef737d7f0` | `v1.8.0` | [`success`](https://github.com/0thernes/hoggar-bound-lab/actions/runs/45367463693) | `HISTORICAL_ARCHIVED` |
 | [`human-synapse-bouton-lab`](https://github.com/0thernes/human-synapse-bouton-lab) | `0TH-2026-007`, `0TH-2026-008` | Tier I | `06e0dcdd5f` | `4466841943` | `v1.3.0` | [`success`](https://github.com/0thernes/human-synapse-bouton-lab/actions/runs/45914037000) | `AHEAD_OF_PIN` |
-| [`kochen-specker-extremal-lab`](https://github.com/0thernes/kochen-specker-extremal-lab) | `0TH-2026-004` | Tier I | `888ee434e6` | `a433e72a4d` | `v2.2.0` | [`success`](https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/45947576829) | `AHEAD_OF_PIN` |
+| [`kochen-specker-extremal-lab`](https://github.com/0thernes/kochen-specker-extremal-lab) | `0TH-2026-004` | Tier I | `a433e72a4d` | — | `v2.2.0` | — | `OFFLINE_PIN_ONLY` |
 | [`monodromia`](https://github.com/0thernes/monodromia) | `0TH-2026-014` | Tier I | `153792bdae` | `63ea36f338` | `v1.0.0` | [`success`](https://github.com/0thernes/monodromia/actions/runs/45913981647) | `AHEAD_OF_PIN` |
 | [`multinomial-tv-conjecture`](https://github.com/0thernes/multinomial-tv-conjecture) | `0TH-2026-006` | Tier I | `4d8321fde5` | `4d8321fde5` | `v2.6.0` | [`success`](https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/46006642118) | `EXACT_PIN_MATCH` |
 | [`neuralese`](https://github.com/0thernes/neuralese) | `0TH-DISC-003` | Tier III | `2527d67355` | `2527d67355` | `v17.3.0` | — | `EXACT_PIN_MATCH` |
@@ -40,7 +40,7 @@
 | [`octonionica`](https://github.com/0thernes/octonionica) | `0TH-2026-017` | Tier I | `05c41f5769` | `05c41f5769` | `v1.1.0` | [`success`](https://github.com/0thernes/octonionica/actions/runs/45941301632) | `EXACT_PIN_MATCH` |
 | [`omega-triscale-observatory`](https://github.com/0thernes/omega-triscale-observatory) | `0TH-BUILD-014`, `0TH-DISC-012` | Tier II / Tier III | `bbe4da96c5` | `423e45490f` | `v6.7.0` | [`success`](https://github.com/0thernes/omega-triscale-observatory/actions/runs/45915382968) | `AHEAD_OF_PIN` |
 | [`p-vs-np-frontier-lab`](https://github.com/0thernes/p-vs-np-frontier-lab) | `0TH-2026-013` | Tier I | `a70733fc38` | `12cee0ec6a` | `v1.2.0` | [`success`](https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45913353493) | `AHEAD_OF_PIN` |
-| [`pauli-contextuality-lab`](https://github.com/0thernes/pauli-contextuality-lab) | `0TH-2026-009` | Tier I | `3cd387d84c` | `9d57651a4a` | `v3.1.0` | [`success`](https://github.com/0thernes/pauli-contextuality-lab/actions/runs/46007131046) | `AHEAD_OF_PIN` |
+| [`pauli-contextuality-lab`](https://github.com/0thernes/pauli-contextuality-lab) | `0TH-2026-009` | Tier I | `9d57651a4a` | — | `v3.2.0` | — | `OFFLINE_PIN_ONLY` |
 | [`planaria`](https://github.com/0thernes/planaria) | `0TH-BUILD-002` | Tier II | `6979cc1be4` | `be2038b8e2` | `v2.4.0` | [`success`](https://github.com/0thernes/planaria/actions/runs/45911933357) | `AHEAD_OF_PIN` |
 | [`promislow-fracton-amoeba`](https://github.com/0thernes/promislow-fracton-amoeba) | `0TH-2026-015` | Tier I | `c829ab8115` | `660fbf41b5` | `v1.0.0` | [`success`](https://github.com/0thernes/promislow-fracton-amoeba/actions/runs/45917303503) | `AHEAD_OF_PIN` |
 | [`quantum-latin-spectrum-frontier`](https://github.com/0thernes/quantum-latin-spectrum-frontier) | `0TH-2026-023` | Tier I | `c53def9c92` | — | `v1.0.0` | — | `OFFLINE_PIN_ONLY` |
