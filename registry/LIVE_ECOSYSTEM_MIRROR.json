@@ -11,8 +11,8 @@
     "total_entries": 48,
     "unique_public_repositories": 41,
     "pinned_submodules": 35,
-    "exact_pin_match": 5,
-    "ahead_of_pin": 29,
+    "exact_pin_match": 6,
+    "ahead_of_pin": 28,
     "historical_archived": 4,
     "api_errors": 0
   },
@@ -947,21 +947,21 @@
       "tiers": [
         "Tier II"
       ],
-      "pinned_commit": "06461739b0e917e439e9da46e27575cbfac69580",
-      "archived_version": "v1.5.0",
+      "pinned_commit": "77f03245d4a4f59f15504b96b4af9c47cb35546a",
+      "archived_version": "v1.6.0",
       "submodule_path": "repos/ultrametrica",
       "registered_pages_url": null,
       "default_branch": "main",
       "archived": false,
       "live_head_commit": "77f03245d4a4f59f15504b96b4af9c47cb35546a",
-      "latest_release_tag": "v1.5.0",
-      "pushed_at": "2026-11-27T04:36:45Z",
+      "latest_release_tag": "v1.6.0",
+      "pushed_at": "2026-11-27T04:44:35Z",
       "ci_run_id": 45940965936,
       "ci_conclusion": "success",
       "ci_html_url": "https://github.com/0thernes/ultrametrica/actions/runs/45940965936",
       "ci_status_reason": null,
       "pages_url": "https://0thernes.github.io/ultrametrica/",
-      "sync_status": "AHEAD_OF_PIN",
+      "sync_status": "EXACT_PIN_MATCH",
       "error": null
     },
     {

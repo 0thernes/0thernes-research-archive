@@ -1,49 +1,53 @@
 # Build White Paper & Proof Evidence Dossier — `0TH-BUILD-003`
 
-**Title:** ULTRAMETRICA: Exact Non-Archimedean Holography, Recursive Adelic Valuation-Residue Symmetries, Multi-Edge Curved Gauss-Bonnet Curvature, Holographic Strong Subadditivity, and 6-Kernel Lean 4 Verification  
+**Title:** ULTRAMETRICA: Exact Non-Archimedean Holography, Recursive Adelic Valuation-Residue Symmetries, Multi-Edge Curved Gauss-Bonnet Curvature, Graph-Cut Strong Subadditivity, and Lean 4 Checked Model Invariants  
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Mathematical Physics / Non-Archimedean Analysis / Formal Methods  
-**Version / Date:** `v1.5.0` (2026-11-26)
+**Version / Date:** `v1.6.0` (2026-11-26)
 
 ## Cryptographic Identity & Provenance
 
 | Field | Value |
 |---|---|
 | Source Repository | https://github.com/0thernes/ultrametrica |
-| Pinned Git Submodule | `repos/ultrametrica` @ `06461739b0e917e439e9da46e27575cbfac69580` |
+| Pinned Git Submodule | `repos/ultrametrica` @ `77f03245d4a4f59f15504b96b4af9c47cb35546a` |
 | Archived Artifact | `builds/0TH-BUILD-003_ultrametrica/Donahue_2026_Ultrametrica.pdf` (from `dist/Donahue_2026_Ultrametrica.pdf`) |
-| Artifact SHA-256 | `2798f635b4dac66f15b4a6c82b8e288c0f4517efc687b2144a58550e3b956d61` |
+| Artifact SHA-256 | `60a2ed9db43a925ebd0b55d2a2118189f59a5f4de8959062d91b4b5ee0fab11e` |
 | Archived Artifact | `builds/0TH-BUILD-003_ultrametrica/WHITE_PAPER.md` (from `paper/WHITE_PAPER.md`) |
-| Artifact SHA-256 | `2ed204a37af4048778b957ed4ad0c919b1b86d9a93b97ba8dfd0c9c0ede4c534` |
+| Artifact SHA-256 | `8758df8d592b2640fa2b6e0ba000d55493df69b0aa8d2665084b5545ce0d3509` |
 | Archived Artifact | `builds/0TH-BUILD-003_ultrametrica/arxiv_submission.tar.gz` (from `dist/arxiv_submission.tar.gz`) |
-| Artifact SHA-256 | `afbab7c94774d2243df3c45a8021781277cd95d65a6990fb2fa32a7a6d66292b` |
+| Artifact SHA-256 | `a20b5458d7a64d75d477bf80972aab207bc726d5c5d5732b490dc2fa8a305f23` |
 | Archived Artifact | `builds/0TH-BUILD-003_ultrametrica/CLAIMS.md` (from `CLAIMS.md`) |
-| Artifact SHA-256 | `7996c3fd0d7ead129295af304cf839f849f0f5be804f94471f60951fe12790f2` |
+| Artifact SHA-256 | `8ce4a888628c3dbd998ae379f0073dd78a7b1e000ca46423548d9263f5eea6b9` |
+| Archived Artifact | `builds/0TH-BUILD-003_ultrametrica/DEVIATIONS.md` (from `DEVIATIONS.md`) |
+| Artifact SHA-256 | `4be9eb672ea8d6900efd1a2b9197c08fa372a8f480a98f1168106f4e6c121c9c` |
 | Archived Artifact | `builds/0TH-BUILD-003_ultrametrica/MEGA_ATLAS_CROSSCHECK.md` (from `docs/MEGA_ATLAS_CROSSCHECK.md`) |
-| Artifact SHA-256 | `844dab244a02cb6b3c68cf76d9bcc4240a2853cd56ab387fda3edc70bb55e4e6` |
+| Artifact SHA-256 | `b5d3e7d8805fa1d0cb5d6553f942951c81097b619ebd153b6baa9f73914dfb98` |
 | Archived Artifact | `builds/0TH-BUILD-003_ultrametrica/2026-11-25-hardening-cycles.md` (from `docs/reviews/2026-11-25-hardening-cycles.md`) |
 | Artifact SHA-256 | `e84f4416787e90caba737a4e5f77cfb0ca60c37884afb550cff3a1659444eda5` |
+| Archived Artifact | `builds/0TH-BUILD-003_ultrametrica/2026-11-26-hardening-cycles-v160.md` (from `docs/reviews/2026-11-26-hardening-cycles-v160.md`) |
+| Artifact SHA-256 | `ce7a91dd4ce9c2becb508535c64479de41d7a7c46c9751e19da4356fb589eb5d` |
 | Archived Artifact | `builds/0TH-BUILD-003_ultrametrica/AUDIT_AND_CONTRAST_ANALYSIS.md` (from `docs/AUDIT_AND_CONTRAST_ANALYSIS.md`) |
 | Artifact SHA-256 | `76b23fbeac229714254bc9fb4dcbc27d394e9563925cbc3ba77b4f38adbeed28` |
 | Archived Artifact | `builds/0TH-BUILD-003_ultrametrica/lean4-audit.txt` (from `results/lean4-audit.txt`) |
-| Artifact SHA-256 | `6a20de7e66ea15ad0e09098be6f56d1c90a3d456ad7178b599dc531aeaccf364` |
+| Artifact SHA-256 | `ffd68165f24c63c428fe93cefc61f0732054379a810f7542b6611667004d45ad` |
 
 ## Summary
 
-Zero-dependency computational laboratory, responsive WCAG 2.2 AA live GitHub Pages WebGL2 + 48 kHz AudioWorklet observatory (https://0thernes.github.io/ultrametrica/) + interactive strict-CSP Lean 4 Proof Blueprint (https://0thernes.github.io/ultrametrica/web/blueprint.html), Johnson potential-reduced Dijkstra curved-BTZ 1-Wasserstein solver (F35 fix), zero-warning 19-page AMS-LaTeX preprint PDF (5 vector figures, 21/21 refs, 18/18 live Crossref DOIs, 0 retractions), standalone arXiv bundle, 1-to-1 CLAIMS.md falsification ledger, honest 0/1,900 Mega-Atlas cross-check (discrete sub-results on SUB-032), 3-cycle hardening dossier (36 findings F01-F36 across 10 classes), 100.0% (80/80) Build Standard v1.2.0 compliance (0 tsc, 0 ruff, 0 mypy, 0 gitleaks), and 149 pure Lean 4.35.0 Palomar module declarations (139 core theorems across 5 modules incl. first-principles arbitrary-degree multi-edge Kantorovich primal-dual duality for Theorem V-Global and 5 adversarial false-variant refutations + 10 isolated Spec/Challenge/Solution comparator targets) verified across six kernel checks (Lean default/paranoid, lean4lean, nanoda, con-leche, con-ron) via lake check --paranoid & lake comparator --paranoid, paired with exact-rational Fraction/Q(i)/brute-force checks (69 curved trees, 4,352 SSA partitions), git-sealed pre-registered 20-seed Experiment I (4/4 confirmed at p_holm = 0.0004), 27/27 Node suites (8/8 mutants killed, 3,400+ properties & 200 curved-BTZ stress trials, HTTP EIO failure injection), and 1,000+ Python differential oracle checks.
+Zero-dependency computational laboratory for discrete p-adic (Bruhat-Tits tree) holography, live WCAG 2.2 AA GitHub Pages WebGL2 + 48 kHz AudioWorklet observatory (https://0thernes.github.io/ultrametrica/) + interactive strict-CSP Lean 4 Proof Blueprint (https://0thernes.github.io/ultrametrica/web/blueprint.html), Johnson potential-reduced Dijkstra curved-BTZ 1-Wasserstein solver, zero-warning 19-page AMS-LaTeX preprint PDF (5 vector figures, 21/21 refs, 18/18 live Crossref DOIs, 0 retractions), standalone arXiv bundle, 1-to-1 CLAIMS.md falsification ledger, DEVIATIONS.md exploratory-additions log, honest 0/1,900 Mega-Atlas cross-check, 3-cycle v1.6.0 hardening dossier (29 findings F37-F65 across all 10 Build Standard classes, integrating the 2026-11-26 statement audit with full prior-work attribution to Monna 1970 and Headrick-Takayanagi 2007), 100.0% (81/81) Build Standard v1.2.0 compliance (0 tsc, 0 ruff, 0 mypy, 0 gitleaks), and 148 audited pure Lean 4.35.0 Palomar module declarations across 11 modular files all <1,000 lines (104 core theorems & corollaries + 29 zero-Mathlib helper lemmas + 5 adversarial false-variant refutations + 10 isolated Challenge/Solution comparator target bindings, including proved non-negativity and subcritical/supercritical feasibility for both BTZ and multi-edge bridge-edge primal plans) checked by lake check --paranoid and six-kernel lake comparator --paranoid on the 10 comparator targets and their dependency closure, paired with exact-rational Fraction/Q(i)/brute-force checks (69 curved trees, 4,352 SSA partitions), git-sealed pre-registered 20-seed Experiment I (4/4 confirmed at p_holm = 0.0004, Mann-Whitney U p <= 4.8e-7, seeded 95% bootstrap CIs, non-pseudoreplicated K=20 matrix sensitivity p_holm = 7.63e-6), hardware perf benchmarks (495.87x FFT speedup, 0.75 ms coupled BTZ frame), 32/32 Node suites (8/8 true src/engine/*.js source mutants killed, 1,000-case deterministic fuzzer that caught & fixed audio loop DoS F65, B19 HTTP/EIO/AudioWorklet concurrency), and 1,000+ Python differential oracle checks.
 
 ## Embedded Lean 4 Proof Suite Audit
 
-- **Framework:** Pure Lean 4.35.0 (Palomar module headers, zero Mathlib, autoImplicit = false, zero native_decide, 6-kernel lake check --paranoid & lake comparator --paranoid)
-- **Lean Modules / Lines:** 10 files / 3554 lines
-- **Audited Theorems (`#print axioms`):** 149
+- **Framework:** Pure Lean 4.35.0 (Palomar module headers across 11 files all <1,000 lines, zero Mathlib, autoImplicit = false, zero native_decide, sandboxed lake check --paranoid & 6-kernel lake comparator --paranoid on the 10 isolated comparator targets and their dependency closure)
+- **Lean Modules / Lines:** 11 files / 3968 lines
+- **Audited Theorems (`#print axioms`):** 148
 - **Entry Point:** `lean/VerifyAxioms.lean`
 - **Permitted Axioms:** `propext, Classical.choice, Quot.sound`
-- **Live Audit Status:** GitHub Actions CI GREEN (run #45747436539, 6/6 jobs: ubuntu-24.04/macos/windows 27/27 Node tests + 3/3 examples + 1,000+ Python oracle + 86-file sha256sum + 54/54 Blueprint decls + Tectonic zero-warning 19-page PDF/arXiv with 21/21 refs + 18/18 live Crossref DOIs & 0 retractions + 0 tsc / 0 ruff / 0 mypy / 0 gitleaks + 100.0% 80/80 Build Standard v1.2.0 + bubblewrap lake check --paranoid & 6-kernel lake comparator --paranoid PASS, SLSA attestation 72475627, Rekor 4117126869), Pages GREEN (#45747436617 -> Observatory & Interactive Proof Blueprint), Release v1.5.0 SLSA attested (#45747441370, attestation 72474321, Rekor 4116986631); 149/149 audited declarations (139 core theorems across 5 modules incl. 14 multi-edge Kantorovich primal-dual theorems + 5 AdversarialTests negations + 10 isolated Challenge/Solution targets) strictly within [propext, Classical.choice, Quot.sound]
+- **Live Audit Status:** GitHub Actions CI GREEN (run #45940965936, 6/6 jobs: ubuntu/macos/windows 32/32 Node tests incl. 8/8 true src/engine/*.js mutation kills, 1,000-case deterministic fuzz, B19 concurrency & EIO storm + 3/3 examples + 1,000+ Python oracle + 91-file sha256sum + 54/54 Blueprint decls + Tectonic zero-warning 19-page PDF/arXiv with 21/21 refs + 18/18 live Crossref DOIs & 0 retractions + 0 tsc / 0 ruff / 0 mypy / 0 gitleaks + 100.0% 81/81 Build Standard v1.2.0 + bubblewrap lake check --paranoid & 6-kernel lake comparator --paranoid PASS on the 10 isolated comparator targets and dependency closure, SLSA attestation 72943284, Rekor 4141673065), Pages GREEN (#45940965861 -> Observatory & Interactive Proof Blueprint), Release v1.6.0 SLSA attested (#45941700973, attestation 72943503, Rekor 4141703914); 148/148 audited declarations (104 core theorems & corollaries + 29 zero-Mathlib helper lemmas + 5 AdversarialTests negations + 10 isolated Challenge/Solution comparator target bindings) strictly within [propext, Classical.choice, Quot.sound]
 
 ## Verification Boundary
 
-All 149 audited Lean 4.35.0 declarations (139 core theorems across 5 Palomar modules + 10 isolated Challenge/Solution targets; 7 further public helper lemmas are not audited by name) compile cleanly with zero Mathlib, autoImplicit = false, zero native_decide, zero sorry, and strictly [propext, Classical.choice, Quot.sound], verified across all 6 independent kernels via sandboxed lake check --paranoid and lake comparator --paranoid on Ubuntu CI (SLSA attestation 72475627, Rekor 4117126869). Exact-rational Python checks verify 7,033 conjugate Adelic pairs, 45 BTZ horizons, 69 single/multi-edge curved AdS trees, 4,352 exhaustive RT SSA partitions, exact Q(i) solves, and 86 SHA-256 digests; floating-point FFT/PDE/Jacobi/Dijkstra checks, 20-seed Experiment I statistics, and 27 Node suites lie outside the Lean kernel boundary and are separated explicitly in CLAIMS.md, LIMITATIONS.md, and docs/statement-fidelity.md. Claims 0/1,900 full Mega-Atlas solutions and no empirical discovery of new physical laws of nature.
+All 148 audited Lean 4.35.0 declarations (104 core theorems & corollaries + 29 zero-Mathlib helper lemmas + 5 adversarial false-variant refutations + 10 isolated Challenge/Solution comparator target bindings across 11 modular Palomar files all <1,000 lines, 3,968 non-blank / 4,357 total lines; 7 small CInt helpers are transitively checked without individual #print axioms lines) compile cleanly with zero Mathlib, autoImplicit = false, zero native_decide, zero sorry outside isolated Challenge.lean, and strictly [propext, Classical.choice, Quot.sound]. On Ubuntu CI (#45940965936, SLSA attestation 72943284, Rekor 4141673065), bubblewrap lake check --paranoid checks the compiled modules and 6-kernel lake comparator --paranoid checks the 10 isolated Challenge/Solution targets and their dependency closure. The Lean suite verifies discrete algebraic and combinatorial invariants of the repository's own model only (Monna digit reversal is standard from Monna 1970; graph-cut SSA follows Headrick-Takayanagi 2007; BTZ and bridge-edge Wasserstein proofs prove plan non-negativity and optimality for hand-coded 3-class reductions rather than arbitrary finite graphs; Lean does not define the Vladimirov operator, hybrid Hamiltonian H_theta, time evolution, or the O(V) bulk solver). Exact-rational Python checks verify 7,033 conjugate Adelic pairs, 45 BTZ horizons, 69 single/multi-edge curved AdS trees, 4,352 exhaustive RT SSA partitions, exact Q(i) solves, and 91 SHA-256 digests; floating-point FFT/PDE/Jacobi/Dijkstra checks, 20-seed Experiment I statistics (exploratory additions logged in DEVIATIONS.md), and 32 Node suites lie outside the Lean kernel boundary and are separated explicitly in paper/main.tex, CLAIMS.md, LIMITATIONS.md, and docs/statement-fidelity.md. Claims 0/1,900 Mega-Atlas open problems solved and no physical or quantum-gravity result.
 
 ## Independent Reproduction & Falsification Protocol
 
