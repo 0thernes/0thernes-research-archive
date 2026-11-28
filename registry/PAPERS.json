@@ -15,7 +15,7 @@
       "github": "https://github.com/0thernes",
       "website": "https://0thernes.art"
     },
-    "updated_utc": "2026-11-27T22:25:13Z"
+    "updated_utc": "2026-11-28T03:47:14Z"
   },
   "papers": [
     {
@@ -475,7 +475,7 @@
       "domain": "Computational Complexity / Algebraic Complexity / Formal Verification",
       "date_released": "2026-11-24",
       "version": "v1.0.1",
-      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; six kernel runs (five implementations) on Lean 4.35.0 & cross-platform CI verified)",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; LIVE Palomar Registry high-trust PALOMAR-2026-11-26-000004 & Zenodo DOI 10.5281/zenodo.24517198)",
       "author": "Alexander Stephen Donahue",
       "orcid": "0009-0006-8168-9648",
       "affiliation": "Independent Researcher, Spokane, WA, USA",
@@ -507,7 +507,9 @@
       "preservation": {
         "software_heritage": "swh:1:snp:f960eeda6f145e54c0ac52538ace866a16e24085",
         "wayback_machine": null,
-        "doi": "10.5281/zenodo.24517198"
+        "doi": "10.5281/zenodo.24517198",
+        "palomar_id": "PALOMAR-2026-11-26-000004",
+        "palomar_url": "https://palomar-registry.org/entry?id=PALOMAR-2026-11-26-000004&version=1"
       },
       "core_result": "Extends Vinciguerra (arXiv:2609.18692) with new machine-checked results; no question posed in that paper is resolved: (1) proves, under formal-polynomial cleanliness with program constants in F_p, a base-p digit-sum characterisation of two-register passive catalytic programs over every prime field F_p (f in RP^{pass}_{F_p}(2,t) iff s_p(d) <= min(p-1, t-1) for all d >= 2 with alpha_d != 0), showing the characteristic-0 lower bounds do not extend to characteristic p (x^{p^m} in 2 accesses) and that no such program yields the formal polynomial x^d when s_p(d) >= p (e.g., x^3 with F_2 constants; as a function on F_2, x^3 = x), plus sharp F_4 separation (t_min(5)=3, t_min(3)=4, x^7 impossible) and literal commutative-ring/F_4-algebra soundness bridges; (2) proves strictly bilinear 2-access Frobenius collapse x^{2^k} over any char-2 commutative ring in k+1 registers (4k-2 ops, and k+2 registers with strictly distinct operands); (3) improves the 4-register powering exponent bound from log_5 4 ~ 0.861353 to log_13 8 ~ 0.810714 via explicit 3-register programs for x^7..x^15 with t = 5..9 input accesses (t = 8 minimises log_{2t-3} t over integers t >= 4; no upper bound for 3-register programs is proved, so optimality is open), formalizing 4-register passive powering for all N >= 1 over rings where D_8, 12! and (floor(log_13 N)+1)! are invertible (T3h) and algebraic product-ring streaming frequency moments F_D (T3i) in Lean 4.35, while a paper-level (not machine-checked) lift of prog5_x7 gives non-commutative matrix powering in O(N^{log_7 5}) recursive calls; and (4) proves a balanced zero-workspace bilinear multilinear product x_0...x_{d-1} in log_2 d + 2 registers and (7d^2-4)/3 ops. Accompanied by 8/8 strict monotonic-ID verified CaDiCaL 2.1.2 LRAT UNSAT certificates (18,932 steps) contrasting Boolean XAG rigidity, 22/22 pytest suites, 100.0% Build Standard v1.1.0 compliance (62/62), live GitHub Pages SVG Blueprint, DigiCert RFC 3161 TSA, OpenTimestamps, and Sigstore SLSA attestations.",
       "verification_boundary": "All 20 headline theorems, corollaries (including complete 4-register powering T3h and algebraic product-ring streaming pass bound T3i), literal commutative-ring soundness bridges (T1s, T1es), and concrete 0 != 1 non-vacuity witnesses (ModP 2/5/7/11/13, Fin 3 -> ModP 13, GF4, Int) are 100% machine-checked in zero-Mathlib Lean 4.35.0 across 14 module files (8,069 lines, 0 warnings, 0 forbidden tokens, strictly standard axioms) and verified on Ubuntu CI run 45504696131 (head = pinned commit) via lake check --paranoid (lean4lean 59,800 decls, nanoda, con-leche 59,803, con-ron 59,803, leanchecker-paranoid, lean) + Windows CI; exact arithmetic, Corollary 5.4 non-commutative matrix lifts, and 8/8 LRAT UNSAT certificates are verified in Tier-2 Python/CaDiCaL; streaming bit-space accounting (Cor. 5.3) and general non-commutative matrix lifting (Cor. 5.4) remain Tier-3 paper reductions; uniform D_{3,Q}^{pass}(t) = 2t - 3, r >= 4 loops, general F_{p^e} closed form, and Boyar-Find remain Tier-4 open problems. Not peer reviewed; the Zenodo DOI 10.5281/zenodo.24517198 is a self-deposit.",
@@ -1402,7 +1404,53 @@
       "core_result": "Resolves three linked 2026 open frontiers in Quantum Combinatorial Design Theory across 15 machine-checked headline theorems + 7 constructive algebraic-field NonVacuity witnesses + 3 AdversarialTests refutations (25 audited declarations in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound], accepted by all 6 independent proof kernels inside bubblewrap + live tamper-rejection gate on Ubuntu CI run 46047586056, Rekor 4150746681): (I) Closes all 101/101 remaining open cardinality cases in Table 6 of Zhang-Lv-Cao (arXiv:2607.19969v2; building on Das-Kumar arXiv:2608.12607v1) across v in {7, 9, 11, 23} (19+13+68+1 = 101), establishing Spec(QLS(v)) = [v, v^2] \\ {v+1} for every v >= 6 via exact Bjorck B_23 (c=528) and B_7 (c=41), Petrescu P_7(1) (c=45), real O(4) and Z_4-covariant comp(3,4) crystals, punctured arrays D_5(11) and D_5(20), and the general (k+1, k) QLS Bridge theorem; (II) Breaks the n = 2 (mod 4) barrier for MCISQLS(n) (Zhang-Cao arXiv:2609.24653v1) across every residue class mod 4 with exact crystals at n=7 (Q), n=8 ((1/6)Z[i,sqrt(5),sqrt(6)], 9-qubit 1-uniform S(A)=S(B)=S(C)=3 bits in Moonlab), n=9 ((1/6)Z[sqrt(5)] on Z_3 x Z_3), universal parity-free multiplicative closure, and the Eshkol-AD discovery that MCISQLS(7) is a genus-0 rational curve (t(t-1), t-1, t(t+1))/(2t^2 - t + 1) with exact Fubini-Study metric g_tt(t) = 4/(2t^2 - t + 1)^2, vanishing Berry connection A_t = 0, and projective geodesic arc length L = 4*pi/sqrt(7); and (III) Establishes the exact obstruction horizon for MCOQLS Construction 3.2 (Lv-Zhang-Cao arXiv:2609.29070v1): infinite even-cyclic Z_{2k} UNSAT, Lean/DRAT UNSAT across all 9 finite abelian groups of order 3..8 (9/9 CaDiCaL 1.9.5 DRAT proofs verified across 22,903 RUP/RAT steps in Safe Rust #![forbid(unsafe_code)]), and optimal kernel-checked SAT witnesses on F_9 = Z_3 x Z_3 (|span|=81) and Z_11 (|span|=121). Cross-verified across 9 independent engines (Lean 4.35.0, dual-ABI Win64/ELF64 x86-64 NASM ASM + C11 with ASan/UBSan + CBMC + libFuzzer, C++20, Zig 128-bit, Safe Rust DRAT, Eshkol v1.3.6 AD, Moonlab libquantumsim, QGTL, QRNG CHSH S=2.830830 + 10k mutant fuzzer, Python SymPy/Fraction/100-digit mpmath + Hypothesis), 16/16 live HTTP-200 non-retracted citations, 10-page 0.00pt-overfull AMS-LaTeX PDF + clean-room arXiv tarball, live WCAG AA GitHub Pages Blueprint, DigiCert RFC 3161 (.tsr) + Bitcoin OpenTimestamps (.ots), 3 full hardening cycles (47/47 findings resolved across all 10 R7 classes), and 76/76 (100.0%, Core 33/33) Build Standard v1.2.0 compliance.",
       "verification_boundary": "All 25 audited declarations (15 headline theorems, 7 constructive algebraic-field NonVacuity witnesses over Q, Q(i), Q(sqrt(-3)), Q(sqrt(-7)), Q(sqrt(-23)), Q(sqrt(5)), Q(sqrt(5),sqrt(6),i), and 3 AdversarialTests refutations) are machine-checked in zero-Mathlib Lean 4.35.0 strictly within [propext, Classical.choice, Quot.sound] across all 6 independent kernels inside bubblewrap plus a live tamper-rejection gate on Ubuntu CI run 46047586056 (zero sorry outside PalomarChallenge.lean, zero native_decide). MCOQLS C3.2 UNSAT for Z_7, Z_2 x Z_4, and Z_2^3 is certified via CaDiCaL 1.9.5 DRAT proofs independently verified by our #![forbid(unsafe_code)] Rust RUP/RAT checker (9/9 groups of order 3..8, 22,903 steps) rather than inside the Lean kernel. Concrete C solutions for D_5(11)/D_5(20) (80-digit mpmath err <= 6.01e-81), genus-0 Fubini-Study metric g_tt & arc length 4*pi/sqrt(7) (100-digit err 0.0), 9-qubit Moonlab entropies S=3.0 bits, Eshkol AD, QGTL, and QRNG CHSH 10k mutation fuzzing are verified in Tier 3 oracles. Explicitly affirms 0/2,000 overarching Mega-Atlas grand open problems retired; primitive prime MCISQLS(p) for p >= 11 and non-abelian MCOQLS groups remain OPEN. Claims no external peer review or external DOI; Software Heritage Save Code Now awaits manual browser submission past Anubis PoW.",
       "falsification_command": "cd repos/quantum-latin-design-frontier && (cd lean && lake build --wfail && lake env lean VerifyAxioms.lean && lake env leanchecker --fresh Solution && lake comparator --config comparator.json --paranoid) && (cd native/rust && cargo clippy --all-targets -- -D warnings && cargo test --release && cargo run --release) && (cd native/zig && zig build test && zig build run) && python -m qldf.oracle --check-only && pytest && python scripts/check_readme_axioms.py && python scripts/audit_repo_consistency.py"
+    },
+    {
+      "id": "0TH-2026-029",
+      "slug": "barker-hadamard-frontier",
+      "title": "A Zero-Mathlib, Zero-Classical.choice Lean 4.35.0 Six-Kernel Formalization of the Odd-Length Barker Classification, Order-16 Circulant Hadamard Exclusion, and Reduction to Ryser's Conjecture",
+      "domain": "Combinatorics / Number Theory / Coding Theory / Formal Verification",
+      "date_released": "2026-11-27",
+      "version": "v1.0.0",
+      "peer_review_status": "Research preprint (not peer reviewed; AI-assisted under human direction; 6-kernel Lean 4.35.0 & 100% zero Classical.choice verified)",
+      "author": "Alexander Stephen Donahue",
+      "orcid": "0009-0006-8168-9648",
+      "affiliation": "Independent Researcher, Spokane, WA, USA",
+      "repository": "https://github.com/0thernes/barker-hadamard-frontier",
+      "submodule_path": "repos/barker-hadamard-frontier",
+      "pinned_commit": "4d527bdf40574f9a823d0c34d941b2728aa22dc3",
+      "release_url": "https://github.com/0thernes/barker-hadamard-frontier/releases/tag/v1.0.0",
+      "pages_url": null,
+      "pdf_archive_path": "papers/0TH-2026-029_barker-hadamard-frontier/Donahue_2026_barker_hadamard_frontier.pdf",
+      "pdf_sha256": "3e4906ae957cd7f236ac7e3273fd5399c8ebd3d7a039f1ce3d47f3cfc69c58eb",
+      "arxiv_bundle_url": "https://github.com/0thernes/barker-hadamard-frontier/releases/download/v1.0.0/arxiv_submission.tar.gz",
+      "arxiv_bundle_sha256": "d8396de13b50e4c0a3291071afa1d2af9353e821a2693ad721018f7ade5139bb",
+      "lean_verification": {
+        "framework": "Pure Lean 4.35.0 (zero Mathlib, 100% zero Classical.choice: 40/40 audited declarations strictly [propext, Quot.sound] across 210 theorems, 19 Palomar Comparator targets, 7 NonVacuity witnesses, and 14 AdversarialTests refutations; verified across all 6 independent kernels: lean, leanchecker --fresh, leanchecker-paranoid, con-leche --verified, con-ron --verified, nanoda_bin)",
+        "axiom_allowlist": [
+          "propext",
+          "Quot.sound"
+        ],
+        "entry_point": "lean/PalomarSolution.lean",
+        "axiom_audit_file": "lean/VerifyAxioms.lean",
+        "additional_audit_files": [
+          "lean/Challenge.lean",
+          "lean/PalomarChallenge.lean",
+          "lean/BarkerFrontier/FormalConjecturesBridge.lean",
+          "lean/BarkerFrontier/WitnessesAndAdversarial.lean"
+        ],
+        "audited_theorems": 40
+      },
+      "ci_run_url": "https://github.com/0thernes/barker-hadamard-frontier/actions",
+      "preservation": {
+        "software_heritage": null,
+        "wayback_machine": null,
+        "doi": null
+      },
+      "core_result": "Unconditionally classifies all odd-length Barker sequences (n in {1, 3, 5, 7, 11, 13}, T2a-T2f via Turyn-Storer skew-symmetry, doubling law, and Schmidt-Willms run bounds), proves even-length mod-4 elimination, integer Circulant Hadamard reduction M^T M = n I_n, square law n = 4u^2, Turyn 2-coset balance, general d-quotient folding (T1g), and elementary algebraic order-16 Circulant Hadamard impossibility (T1h) pushing the unconditional Barker exclusion to n = 4u^2 >= 36 (refuting all 14 <= n <= 35, T3b), and proves a verbatim biconditional bridge + kernel-checked conditional reduction H_CirculantHadamard -> UpstreamBarkerConjecture (T3a, T3c, T3d) pinned to google-deepmind/formal-conjectures commit 9097e2f90e66, with zero Mathlib and 100% zero Classical.choice (40/40 audited declarations strictly [propext, Quot.sound]).",
+      "verification_boundary": "All 210 theorems and 40 audited declarations (19 Palomar targets, 7 non-vacuity witnesses, 14 adversarial/sharpness refutations) are kernel-checked in zero-Mathlib, zero-Classical.choice Lean 4.35.0 strictly within [propext, Quot.sound], cross-checked against safe Rust, strict ISO C11 (+ 100k fuzzing), and Python/Hypothesis/mutation suites. Does NOT unconditionally prove Ryser's Circulant Hadamard Conjecture (H_CirculantHadamard) or eliminate even Barker lengths n = 4u^2 >= 36 without H_CirculantHadamard. Retires 0/2,000 Mega-Atlas grand problems unconditionally; not peer reviewed.",
+      "falsification_command": "cd repos/barker-hadamard-frontier && (cd lean && lake build && lake env lean VerifyAxioms.lean) && (cd rust && cargo test --release)"
     }
   ],
-  "updated_utc": "2026-11-27T19:05:34Z"
+  "updated_utc": "2026-11-28T03:47:14Z"
 }

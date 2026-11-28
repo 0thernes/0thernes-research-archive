@@ -4,7 +4,7 @@
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA, ORCID [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648))  
 **Domain:** Computational Complexity / Algebraic Complexity / Formal Verification  
 **Version / Date:** `v1.0.1` (2026-11-24)  
-**Status:** Research preprint (not peer reviewed; AI-assisted under human direction; six kernel runs (five implementations) on Lean 4.35.0 & cross-platform CI verified)
+**Status:** Research preprint (not peer reviewed; AI-assisted under human direction; LIVE Palomar Registry high-trust PALOMAR-2026-11-26-000004 & Zenodo DOI 10.5281/zenodo.24517198)
 
 ## Cryptographic Identity & Provenance
 

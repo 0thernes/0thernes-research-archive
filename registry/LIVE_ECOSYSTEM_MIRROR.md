@@ -1,8 +1,8 @@
 # Live Upstream Ecosystem Mirror (`registry/LIVE_ECOSYSTEM_MIRROR.md`)
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
-**Synced (UTC):** `2026-11-27T22:44:49Z` · **Mode:** `live-github-api`  
-**Tracked Public Repositories:** 50 (`23` exact pin match, `23` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Synced (UTC):** `2026-11-27T22:44:49Z` · **Mode:** `offline`  
+**Tracked Public Repositories:** 51 (`22` exact pin match, `23` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -14,6 +14,7 @@
 | [`Asmodensius`](https://github.com/0thernes/Asmodensius) | `0TH-DISC-002` | Tier III | `c72a4ec9a0` | `c72a4ec9a0` | `main` | [`success`](https://github.com/0thernes/Asmodensius/actions/runs/44051073860) | `EXACT_PIN_MATCH` |
 | [`asmodensius-native`](https://github.com/0thernes/asmodensius-native) | `0TH-BUILD-011` | Tier II | `67bedd4abb` | `3397bf9289` | `v1.1.0` | [`success`](https://github.com/0thernes/asmodensius-native/actions/runs/46046843059) | `AHEAD_OF_PIN` |
 | [`autophage`](https://github.com/0thernes/autophage) | `0TH-BUILD-009` | Tier II | `1956c2cc54` | `cd97242228` | `v1.4.0` | [`success`](https://github.com/0thernes/autophage/actions/runs/46045074354) | `AHEAD_OF_PIN` |
+| [`barker-hadamard-frontier`](https://github.com/0thernes/barker-hadamard-frontier) | `0TH-2026-029` | Tier I | `4d527bdf40` | — | `v1.0.0` | — | `OFFLINE_PIN_ONLY` |
 | [`beast-civilization`](https://github.com/0thernes/beast-civilization) | `0TH-BUILD-017` | Tier II | `ccb67a8f60` | `ccb67a8f60` | `v1.0.0` | [`success`](https://github.com/0thernes/beast-civilization/actions/runs/46056427586) | `EXACT_PIN_MATCH` |
 | [`black-hole-simulation-lab`](https://github.com/0thernes/black-hole-simulation-lab) | `0TH-BUILD-006` | Tier II | `050455db86` | `5e49e2ceaf` | `main+research-branch` | [`success`](https://github.com/0thernes/black-hole-simulation-lab/actions/runs/46047521068) | `AHEAD_OF_PIN` |
 | [`catalytic-register-frontiers`](https://github.com/0thernes/catalytic-register-frontiers) | `0TH-2026-010` | Tier I | `4bfeabb05a` | `cc8f237ff8` | `v1.0.1` | [`success`](https://github.com/0thernes/catalytic-register-frontiers/actions/runs/46047660215) | `AHEAD_OF_PIN` |
@@ -50,7 +51,7 @@
 | [`schur-clifford-frontier`](https://github.com/0thernes/schur-clifford-frontier) | `0TH-2026-026` | Tier I | `09ea389f20` | `09ea389f20` | `v1.1.0` | [`success`](https://github.com/0thernes/schur-clifford-frontier/actions/runs/46054378237) | `EXACT_PIN_MATCH` |
 | [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `0TH-2026-011` | Tier I | `6c7f642146` | `6aa891d20d` | `v3.0.1` | [`success`](https://github.com/0thernes/secmesh-pqsi/actions/runs/46054944729) | `AHEAD_OF_PIN` |
 | [`spectral-eclipse-frontier`](https://github.com/0thernes/spectral-eclipse-frontier) | `0TH-2026-024` | Tier I | `780519d24c` | `780519d24c` | `v1.1.0` | [`success`](https://github.com/0thernes/spectral-eclipse-frontier/actions/runs/46054312861) | `EXACT_PIN_MATCH` |
-| [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `add5e5580f` | `add5e5580f` | `v1.8.0` | [`success`](https://github.com/0thernes/ultrametrica/actions/runs/46056989161) | `EXACT_PIN_MATCH` |
+| [`ultrametrica`](https://github.com/0thernes/ultrametrica) | `0TH-BUILD-003` | Tier II | `d538a4e32e` | — | `v1.8.1` | — | `OFFLINE_PIN_ONLY` |
 | [`unsolved-black-hole-problems`](https://github.com/0thernes/unsolved-black-hole-problems) | `0TH-DISC-006` | Tier III | `0686cf9729` | `cfcfd8ebe3` | `main` | [`success`](https://github.com/0thernes/unsolved-black-hole-problems/actions/runs/46047529782) | `AHEAD_OF_PIN` |
 | [`unsolved-mathematics`](https://github.com/0thernes/unsolved-mathematics) | `0TH-BUILD-004`, `0TH-DISC-005` | Tier II / Tier III | `0604df5c70` | `5bf015fe91` | `v0.8.3` | [`success`](https://github.com/0thernes/unsolved-mathematics/actions/runs/46054889539) | `AHEAD_OF_PIN` |
 | [`unsolved-problems-mega-atlas`](https://github.com/0thernes/unsolved-problems-mega-atlas) | `0TH-BUILD-007` | Tier II | `e488704150` | `e488704150` | `v2.11.0` | [`success`](https://github.com/0thernes/unsolved-problems-mega-atlas/actions/runs/46056026679) | `EXACT_PIN_MATCH` |

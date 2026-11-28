@@ -130,3 +130,6 @@
 [submodule "repos/quantum-latin-design-frontier"]
 	path = repos/quantum-latin-design-frontier
 	url = https://github.com/0thernes/quantum-latin-design-frontier.git
+[submodule "repos/barker-hadamard-frontier"]
+	path = repos/barker-hadamard-frontier
+	url = https://github.com/0thernes/barker-hadamard-frontier.git
