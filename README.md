@@ -16,7 +16,7 @@ The single public archive of the research of Alexander Stephen Donahue, an indep
 - **Scope:** **58 public research entries** (`29 Tier I + 17 Tier II + 12 Tier III`) + **45 pinned public Git submodules** (strictly excluding private/proprietary repositories and third-party forks).
 
 <!-- LIVE_ECOSYSTEM_STATUS:START -->
-> **Live Canonical Hub Mirror (`2026-11-28T04:46:56Z`):** Tracking **58 public research entries** (29 Tier I preprints · 17 Tier II builds · 12 Tier III laws/discoveries/atlases) across **51 unique public repositories** and **45 pinned Git submodules** (`3` exact pin matches · `42` active upstream ahead of release pin · `4` archived historical snapshots).  
+> **Live Canonical Hub Mirror (`2026-11-28T04:46:56Z`):** Tracking **58 public research entries** (29 Tier I preprints · 17 Tier II builds · 12 Tier III laws/discoveries/atlases) across **51 unique public repositories** and **45 pinned Git submodules** (`3` exact pin matches · `41` active upstream ahead of release pin · `4` archived historical snapshots).  
 > **Mega-Atlas V2 Cross-Check:** **`0 / 2000` grand open problems retired by this work** · **3 open questions from published preprints answered in Lean 4.35.0** (none peer reviewed; statements and limits in [`RESULTS.md`](RESULTS.md) section A). Full tables: [`registry/LIVE_ECOSYSTEM_MIRROR.md`](registry/LIVE_ECOSYSTEM_MIRROR.md) · [`registry/SOLVED_AND_ATLAS_BRIDGE.md`](registry/SOLVED_AND_ATLAS_BRIDGE.md) · [Live Portal](https://0thernes.github.io/0thernes-research-archive/).
 <!-- LIVE_ECOSYSTEM_STATUS:END -->
 
