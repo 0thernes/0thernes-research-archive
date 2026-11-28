@@ -16,7 +16,7 @@
     "grand_mega_atlas_problems_retired": 0,
     "published_open_subconjectures_proved_in_lean": 2,
     "preprint_conjectures_proved_with_external_citation_caveat": 1,
-    "statement": "0 of the 2,000 catalogued problems in the Unsolved Problems Mega-Atlas are solved by this work. Two entries answer a question that another author stated as open in an arXiv preprint: Conjecture 7.7 of Bani\u0107 and Elezovi\u0107 (arXiv:2610.17046v1) in 0TH-2026-006, and the limit question of Section 6 of Muller and Saniga (arXiv:2609.19862v1) in 0TH-2026-009 Track 2, where the identification of the formal objects with the preprint's hypergraphs rests partly on argument outside Lean. 0TH-2026-009 Track 1 also proves strict-law failure for one representative of each case of Jonah's Conjecture E from an unreviewed Zenodo preprint, with Theorem B4 cited from outside Lean. Neither these sources nor these proofs are peer reviewed. Each row's class follows the strongest kind among its results in RESULTS.md. Of the other 27 rows, 5 are new-theorem suites, 2 bounded or partial cases, 7 formalizations of known results (1 of them a barrier formalization) and 13 invariant suites of software models. Entries without a machine-checked result at their pinned commit have no row; RESULTS.md lists them with the reason.",
+    "statement": "0 of the 2,000 catalogued problems in the Unsolved Problems Mega-Atlas are solved by this work. Two entries answer a question that another author stated as open in an arXiv preprint: Conjecture 7.7 of Banić and Elezović (arXiv:2610.17046v1) in 0TH-2026-006, and the limit question of Section 6 of Muller and Saniga (arXiv:2609.19862v1) in 0TH-2026-009 Track 2, where the identification of the formal objects with the preprint's hypergraphs rests partly on argument outside Lean. 0TH-2026-009 Track 1 also proves strict-law failure for one representative of each case of Jonah's Conjecture E from an unreviewed Zenodo preprint, with Theorem B4 cited from outside Lean. Neither these sources nor these proofs are peer reviewed. Each row's class follows the strongest kind among its results in RESULTS.md. Of the other 27 rows, 5 are new-theorem suites, 2 bounded or partial cases, 7 formalizations of known results (1 of them a barrier formalization) and 13 invariant suites of software models. Entries without a machine-checked result at their pinned commit have no row; RESULTS.md lists them with the reason.",
     "rows_by_class": {
       "BARRIER_FORMALIZATION": 1,
       "FORMAL_INVARIANT_SUITE": 13,
@@ -45,7 +45,7 @@
       "archive_id": "0TH-2026-006",
       "slug": "multinomial-tv-conjecture",
       "repository": "https://github.com/0thernes/multinomial-tv-conjecture",
-      "version": "v2.7.0",
+      "version": "v2.7.1",
       "resolution_class": "SOLVED_SUB_CONJECTURE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [

@@ -130,7 +130,7 @@ def test_consolidated_latest_entries_registered() -> None:
     }
     assert len(papers) == 29
     assert papers["0TH-2026-029"]["slug"] == "barker-hadamard-frontier"
-    assert papers["0TH-2026-006"]["version"] == "v2.7.0"
+    assert papers["0TH-2026-006"]["version"] == "v2.7.1"
     assert papers["0TH-2026-006"]["lean_verification"]["audited_theorems"] == 896
     assert papers["0TH-2026-009"]["version"] == "v3.4.0"
     assert papers["0TH-2026-009"]["lean_verification"]["audited_theorems"] == 2798
