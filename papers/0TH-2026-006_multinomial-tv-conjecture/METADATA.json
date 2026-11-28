@@ -36,7 +36,7 @@
   },
   "ci_run_url": "https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/46048238909",
   "preservation": {
-    "software_heritage": null,
+    "software_heritage": "swh:1:snp:7374ae324967c1eb8c5a11f16bdf58763e6db39a",
     "wayback_machine": null,
     "doi": null
   },

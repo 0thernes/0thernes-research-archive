@@ -2,7 +2,7 @@
 
 **Author:** Alexander Stephen Donahue (Independent Researcher, Spokane, WA, USA) · **ORCID:** [`0009-0006-8168-9648`](https://orcid.org/0009-0006-8168-9648)  
 **Public Embedded Pure Lean 4.35.0 Proofs Audited:** 1167 declarations across 29,332 lines (zero Mathlib, zero `sorry`)  
-**Updated:** `2026-11-27T04:58:00Z`
+**Updated:** `2026-11-28T04:08:35Z`
 
 | ID | Date | Repo / Version | Embedded Lean 4 Proofs | Frozen White Paper / Audit | Dossier |
 |---|---|---|---|---|---|

@@ -15,7 +15,7 @@
       "github": "https://github.com/0thernes",
       "website": "https://0thernes.art"
     },
-    "updated_utc": "2026-11-28T03:47:14Z"
+    "updated_utc": "2026-11-28T04:08:35Z"
   },
   "papers": [
     {
@@ -50,7 +50,7 @@
       },
       "ci_run_url": null,
       "preservation": {
-        "software_heritage": null,
+        "software_heritage": "swh:1:snp:3b6cddfca8423d21206d194e585c241f5fa14464",
         "wayback_machine": null,
         "doi": null
       },
@@ -245,7 +245,7 @@
       },
       "ci_run_url": "https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42814897755",
       "preservation": {
-        "software_heritage": null,
+        "software_heritage": "swh:1:snp:605cb0348709a4542f6992fe770a8b58a92dd476",
         "wayback_machine": null,
         "doi": null
       },
@@ -291,7 +291,7 @@
       },
       "ci_run_url": "https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/46048238909",
       "preservation": {
-        "software_heritage": null,
+        "software_heritage": "swh:1:snp:7374ae324967c1eb8c5a11f16bdf58763e6db39a",
         "wayback_machine": null,
         "doi": null
       },
@@ -555,7 +555,7 @@
       },
       "ci_run_url": "https://github.com/0thernes/secmesh-pqsi/actions/runs/45745957907",
       "preservation": {
-        "software_heritage": null,
+        "software_heritage": "swh:1:snp:eea7aacfbc56dfb0cc50f1602a3e4cbb54fe76f5",
         "wayback_machine": null,
         "doi": null
       },
@@ -672,7 +672,7 @@
       },
       "ci_run_url": "https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45829725341",
       "preservation": {
-        "software_heritage": null,
+        "software_heritage": "swh:1:snp:bd0c8799846460f2c8d552e8a2f1317d37cd43e5",
         "wayback_machine": null,
         "doi": null
       },
@@ -961,7 +961,7 @@
       },
       "ci_run_url": "https://github.com/0thernes/cayley-dickson-terrace-frontier/actions/runs/46055543755",
       "preservation": {
-        "software_heritage": null,
+        "software_heritage": "swh:1:snp:a8698046c6b39a1531cfb5a74c6fa17c36a5d981",
         "wayback_machine": null,
         "doi": null
       },
@@ -1397,7 +1397,7 @@
       },
       "ci_run_url": "https://github.com/0thernes/quantum-latin-design-frontier/actions/runs/46047586056",
       "preservation": {
-        "software_heritage": null,
+        "software_heritage": "swh:1:snp:f247003902278120c8ab10cfdf96b63a541478f5",
         "wayback_machine": null,
         "doi": null
       },

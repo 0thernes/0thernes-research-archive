@@ -38,7 +38,7 @@
   },
   "ci_run_url": "https://github.com/0thernes/cayley-dickson-terrace-frontier/actions/runs/46055543755",
   "preservation": {
-    "software_heritage": null,
+    "software_heritage": "swh:1:snp:a8698046c6b39a1531cfb5a74c6fa17c36a5d981",
     "wayback_machine": null,
     "doi": null
   },

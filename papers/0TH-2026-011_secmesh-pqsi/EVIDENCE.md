@@ -17,7 +17,7 @@
 | Frozen PDF SHA-256 | `75b6bd1e9e49d19ccc6eb50658bd48500e2a9b0141bf6f29d40528363a568207` |
 | arXiv / Source Bundle SHA-256 | `b79c2df49c9777624606138a438b20db57879054529b2a127c1740bca5e5d3fc` |
 | CI Verification Run | https://github.com/0thernes/secmesh-pqsi/actions/runs/45745957907 |
-| Software Heritage SWHID | `Pending manual Save Code Now` |
+| Software Heritage SWHID | `swh:1:snp:eea7aacfbc56dfb0cc50f1602a3e4cbb54fe76f5` |
 | Wayback Machine Snapshot | Not yet captured |
 | External DOI | None claimed |
 

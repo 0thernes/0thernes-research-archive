@@ -17,7 +17,7 @@
 | Frozen PDF SHA-256 | `ca99318ae699d5fb3140e41557a7887558608bf4afc95dc33d9463a3fdf69146` |
 | arXiv / Source Bundle SHA-256 | `dbc49151c74e8e9633828d94a6b256b0454f2e350f40615be2bd0e0369947029` |
 | CI Verification Run | https://github.com/0thernes/cayley-dickson-terrace-frontier/actions/runs/46055543755 |
-| Software Heritage SWHID | `Pending manual Save Code Now` |
+| Software Heritage SWHID | `swh:1:snp:a8698046c6b39a1531cfb5a74c6fa17c36a5d981` |
 | Wayback Machine Snapshot | Not yet captured |
 | External DOI | None claimed |
 

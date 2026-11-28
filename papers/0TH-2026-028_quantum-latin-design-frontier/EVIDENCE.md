@@ -17,7 +17,7 @@
 | Frozen PDF SHA-256 | `112a637cb0dcc0d15ceb4205b0dced27fefc9adc1cf592619b5f2560495148d1` |
 | arXiv / Source Bundle SHA-256 | `8aacadc4e2bcb557c38997c424fb97e9a14599b1ee0235efe89421441ab2cb69` |
 | CI Verification Run | https://github.com/0thernes/quantum-latin-design-frontier/actions/runs/46047586056 |
-| Software Heritage SWHID | `Pending manual Save Code Now` |
+| Software Heritage SWHID | `swh:1:snp:f247003902278120c8ab10cfdf96b63a541478f5` |
 | Wayback Machine Snapshot | Not yet captured |
 | External DOI | None claimed |
 

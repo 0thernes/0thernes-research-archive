@@ -17,7 +17,7 @@
 | Frozen PDF SHA-256 | `8facff1465c45110c58fdbb418db32b83f9cd668d29d26baeb54ba7e0cc34577` |
 | arXiv / Source Bundle SHA-256 | `70b190b6ab1611184ed944adc57d47a933fbfe3407adbff2519fe7006262f185` |
 | CI Verification Run | https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/46048238909 |
-| Software Heritage SWHID | `Pending manual Save Code Now` |
+| Software Heritage SWHID | `swh:1:snp:7374ae324967c1eb8c5a11f16bdf58763e6db39a` |
 | Wayback Machine Snapshot | Not yet captured |
 | External DOI | None claimed |
 

@@ -30,5 +30,10 @@
   },
   "summary": "Source-review catalog PDF (40 pp., 21 October 2026) of 150 external artificial-life entries with an evidence-labelled CQM profile. No formal verification and no Lean; it retires no open problem.",
   "verification_boundary": "Explicitly disclaims sentience or consciousness; documents operational simulation markers and code-to-literature provenance.",
-  "falsification_command": "sha256sum repos/cosmogonic-quantum-mechalogodrom/docs/alife/cqm-alife-audit.pdf (expect 4da32c265babd974cfd66972763feeec1d52e5273af23da750ebb9736bb5705d)"
+  "falsification_command": "sha256sum repos/cosmogonic-quantum-mechalogodrom/docs/alife/cqm-alife-audit.pdf (expect 4da32c265babd974cfd66972763feeec1d52e5273af23da750ebb9736bb5705d)",
+  "preservation": {
+    "software_heritage": null,
+    "wayback_machine": null,
+    "doi": null
+  }
 }

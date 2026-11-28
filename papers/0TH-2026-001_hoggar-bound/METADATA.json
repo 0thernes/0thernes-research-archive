@@ -30,7 +30,7 @@
   },
   "ci_run_url": null,
   "preservation": {
-    "software_heritage": null,
+    "software_heritage": "swh:1:snp:3b6cddfca8423d21206d194e585c241f5fa14464",
     "wayback_machine": null,
     "doi": null
   },

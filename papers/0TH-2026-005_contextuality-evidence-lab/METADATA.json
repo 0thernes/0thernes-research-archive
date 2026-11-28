@@ -30,7 +30,7 @@
   },
   "ci_run_url": "https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42814897755",
   "preservation": {
-    "software_heritage": null,
+    "software_heritage": "swh:1:snp:605cb0348709a4542f6992fe770a8b58a92dd476",
     "wayback_machine": null,
     "doi": null
   },

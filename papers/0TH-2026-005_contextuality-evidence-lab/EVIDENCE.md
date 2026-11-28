@@ -17,7 +17,7 @@
 | Frozen PDF SHA-256 | `8e34d2911a7cc5dc5a02176515364729118fe07cca54d8d9be16e4a818e95743` |
 | arXiv / Source Bundle SHA-256 | `5024173ca403642b8f6d1a46b60ae44e432c2f0616470784d92c0d68f1bf9000` |
 | CI Verification Run | https://github.com/0thernes/contextuality-evidence-lab/actions/runs/42814897755 |
-| Software Heritage SWHID | `Pending manual Save Code Now` |
+| Software Heritage SWHID | `swh:1:snp:605cb0348709a4542f6992fe770a8b58a92dd476` |
 | Wayback Machine Snapshot | Not yet captured |
 | External DOI | None claimed |
 

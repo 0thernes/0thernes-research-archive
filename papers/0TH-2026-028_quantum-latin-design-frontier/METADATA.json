@@ -38,7 +38,7 @@
   },
   "ci_run_url": "https://github.com/0thernes/quantum-latin-design-frontier/actions/runs/46047586056",
   "preservation": {
-    "software_heritage": null,
+    "software_heritage": "swh:1:snp:f247003902278120c8ab10cfdf96b63a541478f5",
     "wayback_machine": null,
     "doi": null
   },

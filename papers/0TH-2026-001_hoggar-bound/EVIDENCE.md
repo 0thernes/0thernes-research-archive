@@ -17,7 +17,7 @@
 | Frozen PDF SHA-256 | `df01bbbd97f9d1d1a270d9e90b7cbbb848c8b449fe6107a54fd5b77bf764a1c3` |
 | arXiv / Source Bundle SHA-256 | `35de9d7084f2e6704246c61070d2f45b8b25ac656abc9c8e01ec7180e4fbaa64` |
 | CI Verification Run | Local verification (see repository) |
-| Software Heritage SWHID | `Pending manual Save Code Now` |
+| Software Heritage SWHID | `swh:1:snp:3b6cddfca8423d21206d194e585c241f5fa14464` |
 | Wayback Machine Snapshot | Not yet captured |
 | External DOI | None claimed |
 

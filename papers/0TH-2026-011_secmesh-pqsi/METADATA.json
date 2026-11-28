@@ -38,7 +38,7 @@
   },
   "ci_run_url": "https://github.com/0thernes/secmesh-pqsi/actions/runs/45745957907",
   "preservation": {
-    "software_heritage": null,
+    "software_heritage": "swh:1:snp:eea7aacfbc56dfb0cc50f1602a3e4cbb54fe76f5",
     "wayback_machine": null,
     "doi": null
   },

@@ -55,5 +55,10 @@
   },
   "summary": "Zero-dependency Node.js ESM, Python 3, and WebGL 2.0 multi-scale Artificial Life cockpit supervising 8 live local endpoints across all 7 public A-Life repositories on 127.0.0.1:8790. Keeps the displayed T1/T2-to-T3/T4 coupling cells fixed at D7RO with strength 0 (preserving #ifdef PICK hit-testing); no code path writing T1/T2 data into Asmodensius was found by inspection, but no automated test checks this, fail-closed loopback HTTP/WebSocket CSRF/CSWSH & path-traversal defenses, bounded 1..1,000,000 bare-metal launch controls, deterministic 112-trait spectral differential with 8-axis cosine coherence, and <= 240-sample omnitemporal ring cap. Verified by 12/12 Node tests (250 prop_check), 5/5 Python tests (120 trials), 6/6 (100%) surgical mutants killed, 8-page zero-overflow AMS-LaTeX PDF (16/16 live refs), SLSA #72484379, and a 72/72 (30/30 Core) Build Standard v1.2.0 artifact-presence checklist.",
   "verification_boundary": "Strictly an orchestration, reverse-proxy, telemetry-metrology, and visualization instrument containing 0 local Lean 4 files; upstream formal proofs live in and are audited by their 6 respective companion repositories. Explicitly discloses that chaosLyapunov is a bounded volatility heuristic (not a maximal Lyapunov exponent), Tier 3 organ meshes are count-driven projections, forwarded Noetic indicators are indicator-only proxies, this preprint is not peer-reviewed, and 0/1,900 overarching Mega-Atlas open problems are retired.",
-  "falsification_command": "cd repos/omega-triscale-observatory && npm test && python3 -m unittest discover -s tests -v && npm run lint && npm run mutate"
+  "falsification_command": "cd repos/omega-triscale-observatory && npm test && python3 -m unittest discover -s tests -v && npm run lint && npm run mutate",
+  "preservation": {
+    "software_heritage": "swh:1:snp:045edd61e0805b3778e40f5230062e8cc245bb60",
+    "wayback_machine": null,
+    "doi": null
+  }
 }

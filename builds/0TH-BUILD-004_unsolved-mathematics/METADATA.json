@@ -65,5 +65,10 @@
   "summary": "Specialist open-mathematics research atlas upgraded to v0.5.0 with an 8-domain zero-Mathlib Lean 4.35.0 structural core (45 theorems + 10 concrete non-vacuity witnesses + 14 adversarial false-variant refutations = 69 audited declarations verified across all 6 independent kernels) covering Collatz, Erdos-Straus, Lonely Runner, Brocard, Primes/Twin Primes, Goldbach, Odd Perfect/Mersenne Primes, and Ramsey R(3,3)=6, paired with a 10-page AMS-LaTeX monograph PDF, standalone arXiv source bundle, FAIR metadata, live GitHub Pages site, and the preserved July 2026 adversarial Collatz multi-model case study.",
   "verification_boundary": "All 69 Lean 4.35.0 declarations compile with zero Mathlib, zero sorry, and strictly standard axioms across 6 independent kernels (CI #45742865067). Explicitly proves ZERO open conjectures (Collatz, Erdos-Straus, Lonely Runner, Brocard, Twin Primes, Goldbach, Odd Perfect Numbers, Mersenne infinitude all remain OPEN); formalizes classical foundations, modular reductions, sharpness bounds, and adversarial refutations only.",
   "falsification_command": "cd repos/unsolved-mathematics/lean && lake build && lake env lean VerifyAxioms.lean && lake comparator --config comparator.json --paranoid",
-  "pages_url": "https://0thernes.github.io/unsolved-mathematics/"
+  "pages_url": "https://0thernes.github.io/unsolved-mathematics/",
+  "preservation": {
+    "software_heritage": "swh:1:snp:c11ec8263dd64b986c52bb400b8c3a85a3e6a254",
+    "wayback_machine": null,
+    "doi": null
+  }
 }

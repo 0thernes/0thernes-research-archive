@@ -38,7 +38,7 @@
   },
   "ci_run_url": "https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45829725341",
   "preservation": {
-    "software_heritage": null,
+    "software_heritage": "swh:1:snp:bd0c8799846460f2c8d552e8a2f1317d37cd43e5",
     "wayback_machine": null,
     "doi": null
   },

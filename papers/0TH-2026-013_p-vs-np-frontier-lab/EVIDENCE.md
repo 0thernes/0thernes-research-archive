@@ -17,7 +17,7 @@
 | Frozen PDF SHA-256 | `c82738df5d755b38bf8cff70e33cd39f589eb4f80b407dc2da987ffb33591983` |
 | arXiv / Source Bundle SHA-256 | `46ab7262d8b5a85266fba751035df028b39c7dc3e87a937b585731c7abe6d0aa` |
 | CI Verification Run | https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45829725341 |
-| Software Heritage SWHID | `Pending manual Save Code Now` |
+| Software Heritage SWHID | `swh:1:snp:bd0c8799846460f2c8d552e8a2f1317d37cd43e5` |
 | Wayback Machine Snapshot | Not yet captured |
 | External DOI | None claimed |
 
