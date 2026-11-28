@@ -2,7 +2,7 @@
 
 **Canonical Hub:** [0thernes/0thernes-research-archive](https://github.com/0thernes/0thernes-research-archive)  
 **Synced (UTC):** `2026-11-28T04:46:56Z` · **Mode:** `offline`  
-**Tracked Public Repositories:** 51 (`3` exact pin match, `43` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
+**Tracked Public Repositories:** 51 (`3` exact pin match, `42` active upstream ahead of release pin, `4` historical archived snapshots, `0` API errors)
 
 > **Privacy Firewall:** Strictly tracks **PUBLIC, non-fork `0thernes/*` repositories** registered in `PAPERS.json`, `BUILD_PAPERS.json`, and `LAWS_AND_DISCOVERIES.json`. Private repositories are never queried, mirrored, or referenced here.
 
@@ -46,7 +46,7 @@
 | [`planaria`](https://github.com/0thernes/planaria) | `0TH-BUILD-002` | Tier II | `6979cc1be4` | `8a294282b8` | `v2.4.0` | [`success`](https://github.com/0thernes/planaria/actions/runs/46054926351) | `AHEAD_OF_PIN` |
 | [`promislow-fracton-amoeba`](https://github.com/0thernes/promislow-fracton-amoeba) | `0TH-2026-015` | Tier I | `c829ab8115` | `9153348c27` | `zenodo-2026-11-28` | [`in_progress`](https://github.com/0thernes/promislow-fracton-amoeba/actions/runs/46108851975) | `AHEAD_OF_PIN` |
 | [`quantum-latin-design-frontier`](https://github.com/0thernes/quantum-latin-design-frontier) | `0TH-2026-028` | Tier I | `c0ba7735c0` | `b5bd085885` | `zenodo-2026-11-28` | [`queued`](https://github.com/0thernes/quantum-latin-design-frontier/actions/runs/46108996410) | `AHEAD_OF_PIN` |
-| [`quantum-latin-spectrum-frontier`](https://github.com/0thernes/quantum-latin-spectrum-frontier) | `0TH-2026-023` | Tier I | `728c1536f9` | `a8b25c84e8` | `zenodo-2026-11-28` | [`in_progress`](https://github.com/0thernes/quantum-latin-spectrum-frontier/actions/runs/46108746666) | `AHEAD_OF_PIN` |
+| [`quantum-latin-spectrum-frontier`](https://github.com/0thernes/quantum-latin-spectrum-frontier) | `0TH-2026-023` | Tier I | `08128d316d` | — | `v2.1.0` | — | `OFFLINE_PIN_ONLY` |
 | [`quantum-phasespace-rigidity`](https://github.com/0thernes/quantum-phasespace-rigidity) | `0TH-2026-020` | Tier I | `a99f327698` | `99f904fe25` | `zenodo-2026-11-28` | [`queued`](https://github.com/0thernes/quantum-phasespace-rigidity/actions/runs/46108869772) | `AHEAD_OF_PIN` |
 | [`schur-clifford-frontier`](https://github.com/0thernes/schur-clifford-frontier) | `0TH-2026-026` | Tier I | `09ea389f20` | `bb2fdd0a4c` | `zenodo-2026-11-28` | [`queued`](https://github.com/0thernes/schur-clifford-frontier/actions/runs/46108955898) | `AHEAD_OF_PIN` |
 | [`secmesh-pqsi`](https://github.com/0thernes/secmesh-pqsi) | `0TH-2026-011` | Tier I | `6c7f642146` | `c54be8996e` | `zenodo-2026-11-28` | [`failure`](https://github.com/0thernes/secmesh-pqsi/actions/runs/46108833345) | `AHEAD_OF_PIN` |
