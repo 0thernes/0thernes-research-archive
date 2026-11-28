@@ -1418,9 +1418,9 @@
       "affiliation": "Independent Researcher, Spokane, WA, USA",
       "repository": "https://github.com/0thernes/barker-hadamard-frontier",
       "submodule_path": "repos/barker-hadamard-frontier",
-      "pinned_commit": "4d527bdf40574f9a823d0c34d941b2728aa22dc3",
+      "pinned_commit": "28f76669473eb86e43056d19465c3d1b35e23ce1",
       "release_url": "https://github.com/0thernes/barker-hadamard-frontier/releases/tag/v1.0.0",
-      "pages_url": null,
+      "pages_url": "https://0thernes.github.io/barker-hadamard-frontier/",
       "pdf_archive_path": "papers/0TH-2026-029_barker-hadamard-frontier/Donahue_2026_barker_hadamard_frontier.pdf",
       "pdf_sha256": "3e4906ae957cd7f236ac7e3273fd5399c8ebd3d7a039f1ce3d47f3cfc69c58eb",
       "arxiv_bundle_url": "https://github.com/0thernes/barker-hadamard-frontier/releases/download/v1.0.0/arxiv_submission.tar.gz",
@@ -1441,7 +1441,7 @@
         ],
         "audited_theorems": 40
       },
-      "ci_run_url": "https://github.com/0thernes/barker-hadamard-frontier/actions",
+      "ci_run_url": "https://github.com/0thernes/barker-hadamard-frontier/actions/runs/46106551162",
       "preservation": {
         "software_heritage": null,
         "wayback_machine": null,

@@ -11,12 +11,12 @@
 | Field | Value |
 |---|---|
 | Source Repository | https://github.com/0thernes/barker-hadamard-frontier |
-| Pinned Git Submodule | `repos/barker-hadamard-frontier` @ `4d527bdf40574f9a823d0c34d941b2728aa22dc3` |
+| Pinned Git Submodule | `repos/barker-hadamard-frontier` @ `28f76669473eb86e43056d19465c3d1b35e23ce1` |
 | GitHub Release | https://github.com/0thernes/barker-hadamard-frontier/releases/tag/v1.0.0 |
 | Frozen Archived PDF | `papers/0TH-2026-029_barker-hadamard-frontier/Donahue_2026_barker_hadamard_frontier.pdf` |
 | Frozen PDF SHA-256 | `3e4906ae957cd7f236ac7e3273fd5399c8ebd3d7a039f1ce3d47f3cfc69c58eb` |
 | arXiv / Source Bundle SHA-256 | `d8396de13b50e4c0a3291071afa1d2af9353e821a2693ad721018f7ade5139bb` |
-| CI Verification Run | https://github.com/0thernes/barker-hadamard-frontier/actions |
+| CI Verification Run | https://github.com/0thernes/barker-hadamard-frontier/actions/runs/46106551162 |
 | Software Heritage SWHID | `Pending manual Save Code Now` |
 | Wayback Machine Snapshot | Not yet captured |
 | External DOI | None claimed |

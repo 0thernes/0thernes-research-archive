@@ -83,7 +83,7 @@
 | `0TH-2026-026` | [schur-clifford-frontier](https://github.com/0thernes/schur-clifford-frontier) | `v1.1.0` | `85ad40a9d20816d917f999f17ecab2fcd3b3ab7b` | **VALID v0.4** (`formalization.yaml`) | [CI](https://github.com/0thernes/schur-clifford-frontier/actions/runs/46054378237) |
 | `0TH-2026-027` | [nonlocal-magic-spectral-frontier](https://github.com/0thernes/nonlocal-magic-spectral-frontier) | `v1.1.0` | `7769e36a04694064e6e760bd1595e09e143c59f4` | Needs v0.4 fix (`lean/formalization.yaml (2 err)`) | [CI](https://github.com/0thernes/nonlocal-magic-spectral-frontier/actions/runs/46055547571) |
 | `0TH-2026-028` | [quantum-latin-design-frontier](https://github.com/0thernes/quantum-latin-design-frontier) | `v1.0.0` | `0e2e1cb7e42e7773ebe28ac12149dc34bfec1228` | Needs v0.4 fix (`lean/formalization.yaml (4 err)`) | [CI](https://github.com/0thernes/quantum-latin-design-frontier/actions/runs/46047586056) |
-| `0TH-2026-029` | [barker-hadamard-frontier](https://github.com/0thernes/barker-hadamard-frontier) | `v1.0.0` | `671ad42100bb2e0f804f66f90c6bba2696e5c63c` | Needs v0.4 fix (`formalization.yaml (2 err), lean/formalization.yaml (2 err)`) | [CI](https://github.com/0thernes/barker-hadamard-frontier/actions) |
+| `0TH-2026-029` | [barker-hadamard-frontier](https://github.com/0thernes/barker-hadamard-frontier) | `v1.0.0` | `28f76669473eb86e43056d19465c3d1b35e23ce1` | **VALID v0.4** (`formalization.yaml, lean/formalization.yaml`) | [CI](https://github.com/0thernes/barker-hadamard-frontier/actions/runs/46106551162) |
 
 ---
 
