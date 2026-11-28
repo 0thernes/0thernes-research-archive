@@ -643,12 +643,12 @@
     {
       "slug": "ultrametrica",
       "repository": "https://github.com/0thernes/ultrametrica",
-      "description": "Discrete p-adic AdS/CFT & Kerr-BTZ holography lab: Radix-p FFT, WebGL2, 48kHz AudioWorklet, 250 audited zero-Mathlib Lean 4 decls (100% coverage, 11 modules, 15 6-kernel targets) & 12/12 real source mutants.",
+      "description": "Discrete p-adic (Bruhat-Tits tree) holography laboratory: Tate-curve BTZ quotients, bridge Ollivier-Ricci invariance, discrete Vladimirov/Kozyrev wavelets, graph-cut SSA & 250 audited pure Lean 4.35.0 declarations (6-kernel comparator)",
       "default_branch": "main",
       "archived": false,
-      "pushed_at": "2026-11-27T19:29:01Z",
+      "pushed_at": "2026-11-28T03:05:05Z",
       "homepage": "https://0thernes.github.io/ultrametrica/",
-      "latest_release": null,
+      "latest_release": "v1.8.1",
       "archive_registered": true,
       "inventory_status": "REGISTERED"
     },

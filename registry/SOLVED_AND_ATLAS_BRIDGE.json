@@ -332,7 +332,7 @@
       "archive_id": "0TH-BUILD-003",
       "slug": "ultrametrica",
       "repository": "https://github.com/0thernes/ultrametrica",
-      "version": "v1.8.0",
+      "version": "v1.8.1",
       "resolution_class": "FORMAL_INVARIANT_SUITE",
       "grand_atlas_problem_retired": false,
       "related_mega_atlas_ids": [
@@ -341,9 +341,9 @@
         "GR-002",
         "GR-003"
       ],
-      "target_statement": "250 pure Lean 4.35.0 declarations (100.0% public theorem coverage, 0 unaudited: 144 core theorems & corollaries + 81 zero-Mathlib helper lemmas + 10 AdversarialTests + 15 isolated comparator target bindings across 17 modular files all <1,000 lines) for discrete p-adic AdS/CFT model invariants: literal (p+2)x(p+2) full-graph BTZ symmetry reduction, operator-level block-diagonality & odd-prime orthogonal doublets over Z[i]^N, bulk gauge-covariant Laplacian T > 0 (m^2 > 0) & exact RatQ tree Schur pivots, finite-graph edge-sum curved Gauss-Bonnet conservation, discrete radial Vladimirov/Kozyrev-Haar eigenfunctions & [D_K, J]=0 parity, curved-tree Kantorovich duality, and weighted-graph RT strong subadditivity.",
-      "lean_verification": "Zero-Mathlib Lean 4.35.0, 250/250 audited decls (100.0% public coverage) across 17 Palomar module files, lake check --paranoid + 6-kernel lake comparator --paranoid on all 15 isolated comparator targets and dependency closure + live negative tamper-rejection gate (CI run 46056989161), SLSA 73254262.",
-      "honesty_boundary": "Discrete non-Archimedean model invariants only; continuum quantum gravity (SUB-032, GR-001..003) remains OPEN. v1.8.0 closes literal (p+2)x(p+2) full-graph BTZ symmetry reduction, operator-level orthogonal doublets over Z[i]^N, and bulk Laplacian T > 0 (m^2 > 0) + RatQ tree Schur pivots in Lean 4 (joining v1.7.0 finite-graph Gauss-Bonnet & discrete Vladimirov/Kozyrev-Haar); operating over exact rings (Z, Z[i], RatQ), Lean still does not formalize the full irrational-root DFT matrix H_theta, continuum PDE evolution, the floating-point JS O(V) solver, or tachyonic negative-mass BF-window positivity; Monna digit reversal (Monna 1970), Kozyrev wavelets (Kozyrev 2002), and graph-cut SSA (Headrick-Takayanagi 2007) are standard prior work."
+      "target_statement": "250 pure Lean 4.35.0 declarations (100.0% public theorem coverage, 0 unaudited: 144 core theorems & corollaries + 81 zero-Mathlib helper lemmas + 10 AdversarialTests + 15 isolated comparator target bindings across 17 modular files all <1,000 lines) for discrete p-adic AdS/CFT model invariants: literal (p+2)x(p+2) full-graph BTZ symmetry reduction, operator-level block-diagonality & odd-prime orthogonal doublets over Z[i]^N, bulk gauge-covariant Laplacian T > 0 (m^2 > 0) & exact RatQ tree Schur pivots, finite-graph edge-sum bridge Ollivier-Ricci subcritical metric-invariance & pinch deficit, discrete radial Vladimirov/Kozyrev-Haar eigenfunctions & [D_K, J]=0 parity, curved-tree Kantorovich duality, and weighted-graph RT strong subadditivity.",
+      "lean_verification": "Zero-Mathlib Lean 4.35.0, 250/250 audited decls (100.0% public coverage) across 17 Palomar module files, lake check --paranoid + 6-kernel lake comparator --paranoid on all 15 isolated comparator targets and dependency closure + live negative tamper-rejection gate (CI run 46101145359).",
+      "honesty_boundary": "Discrete non-Archimedean model invariants only; continuum quantum gravity (SUB-032, GR-001..003) remains OPEN. v1.8.1 withdraws the 'Discrete Gauss-Bonnet Conservation' label for Theorems V/V-Global (documenting local vertex probability-normalization telescoping vs. topological Gauss-Bonnet and verbatim contrast with Gubser et al. 2017 arXiv:1612.09580) and fixes the arXiv ID erratum with a live arXiv API check (11/11 eprints); operating over exact rings (Z, Z[i], RatQ), Lean still does not formalize the full irrational-root DFT matrix H_theta, continuum PDE evolution, the floating-point JS O(V) solver, or tachyonic negative-mass BF-window positivity; Monna digit reversal (Monna 1970), Kozyrev wavelets (Kozyrev 2002), and graph-cut SSA (Headrick-Takayanagi 2007) are standard prior work."
     },
     {
       "archive_id": "0TH-BUILD-004",
