@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/catalytic-register-frontiers/actions/runs/45504696131 |
 | Software Heritage SWHID | `swh:1:snp:f960eeda6f145e54c0ac52538ace866a16e24085` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | 10.5281/zenodo.24517198 |
+| External DOI | 10.5281/zenodo.24618364 |
 
 ## Core Result
 

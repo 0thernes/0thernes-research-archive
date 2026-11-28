@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/schur-clifford-frontier/actions/runs/46054378237 |
 | Software Heritage SWHID | `swh:1:snp:4d16f7077d1ecbc298e024cc6304c83b72d9d422` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618580 |
 
 ## Core Result
 

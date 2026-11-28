@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/quantum-latin-design-frontier/actions/runs/46047586056 |
 | Software Heritage SWHID | `swh:1:snp:f247003902278120c8ab10cfdf96b63a541478f5` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618576 |
 
 ## Core Result
 

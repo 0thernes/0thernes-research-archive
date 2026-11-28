@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/apollonian-sandpile-markov/actions/runs/46054181302 |
 | Software Heritage SWHID | `swh:1:snp:392d116f12dbe6820df783848373d27bbf138c55` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618594 |
 
 ## Core Result
 

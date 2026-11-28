@@ -41,7 +41,7 @@ def validate_file(yaml_path: Path, schema: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     try:
         doc = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
-    except Exception as exc:
+    except (OSError, yaml.YAMLError) as exc:
         return [f"YAML parse error: {exc}"]
     if not isinstance(doc, dict):
         return ["Top-level document must be a YAML mapping"]

@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/promislow-fracton-amoeba/actions/runs/45751946493 |
 | Software Heritage SWHID | `swh:1:snp:3de955e528951f543794d11b7c4ec43d5869e611` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618604 |
 
 ## Core Result
 

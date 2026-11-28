@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/quantum-phasespace-rigidity/actions/runs/46056858766 |
 | Software Heritage SWHID | `swh:1:snp:91466bc3ff5dad44fef051db37afc2dcb91aa57b` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618588 |
 
 ## Core Result
 

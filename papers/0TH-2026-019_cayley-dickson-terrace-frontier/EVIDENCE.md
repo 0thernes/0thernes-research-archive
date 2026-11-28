@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/cayley-dickson-terrace-frontier/actions/runs/46055543755 |
 | Software Heritage SWHID | `swh:1:snp:a8698046c6b39a1531cfb5a74c6fa17c36a5d981` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618590 |
 
 ## Core Result
 

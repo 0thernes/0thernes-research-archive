@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/weyl-magic-obstruction-frontier/actions/runs/46056568188 |
 | Software Heritage SWHID | `swh:1:snp:8c1d97bd8c7f23b45d70d4a5750690b9f74e7b97` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618584 |
 
 ## Core Result
 

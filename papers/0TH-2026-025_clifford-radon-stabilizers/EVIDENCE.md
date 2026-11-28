@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/clifford-radon-stabilizers/actions/runs/46063758501 |
 | Software Heritage SWHID | `swh:1:snp:d8ed231796b86384a1b8ff11c1fcf1d38cd93db2` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618578 |
 
 ## Core Result
 

@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/monodromia/actions/runs/45749048047 |
 | Software Heritage SWHID | `swh:1:snp:c2071e6233ff31c36dab1392682036763a15c851` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618620 |
 
 ## Core Result
 

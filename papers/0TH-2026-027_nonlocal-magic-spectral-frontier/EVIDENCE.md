@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/nonlocal-magic-spectral-frontier/actions/runs/46055547571 |
 | Software Heritage SWHID | `swh:1:snp:de43e715a87ea52ef52400c827cab59313d5a1f9` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618571 |
 
 ## Core Result
 

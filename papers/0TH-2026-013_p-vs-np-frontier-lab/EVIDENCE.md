@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/p-vs-np-frontier-lab/actions/runs/45829725341 |
 | Software Heritage SWHID | `swh:1:snp:bd0c8799846460f2c8d552e8a2f1317d37cd43e5` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618606 |
 
 ## Core Result
 

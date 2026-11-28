@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/secmesh-pqsi/actions/runs/45745957907 |
 | Software Heritage SWHID | `swh:1:snp:eea7aacfbc56dfb0cc50f1602a3e4cbb54fe76f5` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618618 |
 
 ## Core Result
 

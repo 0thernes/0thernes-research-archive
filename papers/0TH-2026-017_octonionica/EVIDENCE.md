@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/octonionica/actions/runs/46056805462 |
 | Software Heritage SWHID | `swh:1:snp:9ff0d3d02f71abe1108d23cc5ea17caf43a517af` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618596 |
 
 ## Core Result
 

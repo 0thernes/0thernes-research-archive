@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/pauli-contextuality-lab/actions/runs/46070500853 |
 | Software Heritage SWHID | `swh:1:snp:cf9ae7bd108e9556e79d4c0c81c8de92632b91c1` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618608 |
 
 ## Core Result
 

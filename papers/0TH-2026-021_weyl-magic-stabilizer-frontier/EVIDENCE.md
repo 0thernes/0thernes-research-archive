@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/weyl-magic-stabilizer-frontier/actions/runs/46055745811 |
 | Software Heritage SWHID | `swh:1:snp:f5d459ee8888a15fc0310532d3c6ba402835c939` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618582 |
 
 ## Core Result
 

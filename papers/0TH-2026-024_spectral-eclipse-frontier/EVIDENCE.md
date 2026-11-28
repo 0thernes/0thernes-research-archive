@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/spectral-eclipse-frontier/actions/runs/46054312867 |
 | Software Heritage SWHID | `swh:1:snp:37fd5b55ad30a2e1cedc2949415bfacf4d5d1efc` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618573 |
 
 ## Core Result
 

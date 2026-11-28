@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/quantum-latin-spectrum-frontier/actions/runs/46057897837 |
 | Software Heritage SWHID | `swh:1:snp:a13ad420f794605f15f7eb1f1c81cb82a38ca0c2` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618586 |
 
 ## Core Result
 

@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/barker-hadamard-frontier/actions/runs/46106551162 |
 | Software Heritage SWHID | `Pending manual Save Code Now` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618540 |
 
 ## Core Result
 

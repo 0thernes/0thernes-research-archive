@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_utc": "2026-11-28T04:08:35Z",
+  "generated_utc": "2026-11-28T04:50:10Z",
   "author": {
     "name": "Alexander Stephen Donahue",
     "orcid": "0009-0006-8168-9648",
@@ -14,7 +14,7 @@
     "total_registered_works": 58,
     "tier_1_swhid_verified": 28,
     "tier_2_swhid_verified": 14,
-    "verified_zenodo_dois": 3,
+    "verified_zenodo_dois": 25,
     "open_erdos_problems_solved": 0,
     "grand_mega_atlas_problems_retired": 0
   },
@@ -33,11 +33,34 @@
       "requires_human_action": "Sign in to ORCID 0009-0006-8168-9648 -> Add works -> Add BibTeX -> upload registry/orcid_works_import.bib"
     },
     "zenodo": {
-      "status": "READY_HUMAN_GITHUB_TOGGLE_REQUIRED",
+      "status": "ACTIVE_25_DOIS_MINTED",
       "portal_url": "https://zenodo.org/account/settings/github/",
       "existing_dois": [
         "10.5281/zenodo.24548051",
-        "10.5281/zenodo.24517198"
+        "10.5281/zenodo.24618364",
+        "10.5281/zenodo.24618540",
+        "10.5281/zenodo.24618571",
+        "10.5281/zenodo.24618573",
+        "10.5281/zenodo.24618574",
+        "10.5281/zenodo.24618576",
+        "10.5281/zenodo.24618578",
+        "10.5281/zenodo.24618580",
+        "10.5281/zenodo.24618582",
+        "10.5281/zenodo.24618584",
+        "10.5281/zenodo.24618586",
+        "10.5281/zenodo.24618588",
+        "10.5281/zenodo.24618590",
+        "10.5281/zenodo.24618594",
+        "10.5281/zenodo.24618596",
+        "10.5281/zenodo.24618602",
+        "10.5281/zenodo.24618604",
+        "10.5281/zenodo.24618606",
+        "10.5281/zenodo.24618608",
+        "10.5281/zenodo.24618610",
+        "10.5281/zenodo.24618614",
+        "10.5281/zenodo.24618618",
+        "10.5281/zenodo.24618620",
+        "10.5281/zenodo.24618624"
       ],
       "requires_human_action": "Sign in to Zenodo, toggle target repos ON under GitHub integration (or supply ZENODO_TOKEN), and attest human depositor review per Zenodo April 2026 policy."
     },
@@ -49,7 +72,7 @@
       "critical_finding": "Audit against official PalomarRegistry/PalomarTemplate (v0.4.schema.json) discovered that existing custom formalization.yaml files omit required v0.4 top-level fields (version: 'v0.4', project.license: 'Apache-2.0', sources[], automation.methods[], review.status). Upgrade formalization.yaml on each target repo using scripts/validate_palomar_v04.py before submitting the 40-char commit SHA via GitHub OAuth at submit.palomar-registry.org."
     },
     "google_deepmind_formal_conjectures": {
-      "status": "HUMAN_CLA_REQUIRED_AND_ZERO_OVERLAP_SOLVED",
+      "status": "CLA_SIGNED_2026-11-27_READY_FOR_MATHLIB_ISSUE",
       "upstream_repo": "https://github.com/google-deepmind/formal-conjectures",
       "cla_url": "https://cla.developers.google.com/",
       "honest_audit": "Requires signed Google CLA (human-only legal execution), opening a coordination issue first, and Mathlib statements in FormalConjectures/. Cross-check of all 62,790 mirrored targets confirms none of 0thernes's proved preprint sub-conjectures currently sits as an open target in formal-conjectures; do not open unauthorized or non-matching PRs."

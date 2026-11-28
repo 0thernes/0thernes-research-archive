@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/zero-error-torus-frontier/actions/runs/45762976065 |
 | Software Heritage SWHID | `swh:1:snp:6794c5e91c92e22925244c886095bc5d12d9fb63` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618602 |
 
 ## Core Result
 

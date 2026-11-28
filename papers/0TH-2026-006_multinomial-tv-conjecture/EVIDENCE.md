@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/multinomial-tv-conjecture/actions/runs/46048238909 |
 | Software Heritage SWHID | `swh:1:snp:7374ae324967c1eb8c5a11f16bdf58763e6db39a` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618574 |
 
 ## Core Result
 

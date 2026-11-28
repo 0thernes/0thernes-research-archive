@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/kochen-specker-extremal-lab/actions/runs/46055062154 |
 | Software Heritage SWHID | `swh:1:snp:4c421f5d8b6cf9d06c224ed7bfafe88bc3392f4f` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618610 |
 
 ## Core Result
 

@@ -19,7 +19,7 @@
 | CI Verification Run | https://github.com/0thernes/coded-pir-mlwe-complexity-lab/actions/runs/46066941475 |
 | Software Heritage SWHID | `swh:1:snp:badfe4328be66ecd30b2e745b31e7dd232fe3aa9` |
 | Wayback Machine Snapshot | Not yet captured |
-| External DOI | None claimed |
+| External DOI | 10.5281/zenodo.24618614 |
 
 ## Core Result
 
